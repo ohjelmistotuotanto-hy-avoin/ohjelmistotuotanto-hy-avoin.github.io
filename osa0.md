@@ -169,7 +169,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
   - [Ketterä ohjelmistokehitys](/osa1#ketterä-ohjelmistokehitys)
   - [Scrum](/osa1#scrum)
 - Harjoitustehtävät
-  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu2019/quiz/1) 
+  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020/quiz/1) 
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat1) 
 
 ### Viikko 2
@@ -179,7 +179,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
   - [Ketterä vaatimusten hallinta](/osa2#user-story)
   - [Sprintin suunnittelu ja hallinta](/osa2#sprintin-suunnittelu)
 - Harjoitustehtävät
-  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu2019/quiz/2) 
+  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020/quiz/2) 
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat2) 
 
 ### Viikko 3
@@ -188,7 +188,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
   - [Laadunhallinnan perusteet](/osa3)
   - [Ketterien menetelmien testauskäytänteet](/osa3#ketterien-menetelmien-testauska%CC%88yta%CC%88nteet)
 - Harjoitustehtävät
-  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu2019/quiz/3)
+  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020/quiz/3)
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat3)
 ### Viikko 4
  
@@ -199,7 +199,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
   - [Arkkitehtuuri ketterissä menetemissä](/osa4#arkkitehtuuri-ketterissä-menetelmissä)
   - [Olio/komponenttisuunnittelu](http://localhost:4000/osa4#olio/komponenttisuunnittelu)
 - Harjoitustehtävät
-  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu2019/quiz/4)
+  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020/quiz/4)
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat4)
 
 ### Viikko 5
@@ -209,7 +209,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
   - [Laajan skaalan ketterä ohjelmistokehitys](/osa5#laajan-skaalan-kettera%CC%88-ohjelmistokehitys)
   - [Ketterien menetelmien käyttö ja hyödyt tutkimuksen valossa](/osa5#ketterien-menetelmien-käyttö-ja-hyödyt-tutkimuksen-valossa)  
 - Harjoitustehtävät
-  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu2019/quiz/5)
+  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020/quiz/5)
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat5)
 
 ### Viikko 6
@@ -218,7 +218,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
   - Vierailuluento Juha Viljanen Smartly (linkki luentovideoon ilmestyy tähän myöhemmin)
   - Vierailuluento Niko Laitinen Nitor (linkki luentovideoon ilmestyy tähän myöhemmin)
 - Harjoitustehtävät
-  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu2019/quiz/6) 
+  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020/quiz/6) 
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat6) 
 
 ### Viikko 7
@@ -227,7 +227,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
   - Vierailuluento Hannu Kokko Elisa (linkki luentovideoon ilmestyy tähän myöhemmin)
   - Vierailuluento Marko Klemetti Eficode (linkki luentovideoon ilmestyy tähän myöhemmin)
 - Harjoitustehtävät
-  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu2019/quiz/6)
+  - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020/quiz/7)
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat7)
 
 ### Viikko 8
