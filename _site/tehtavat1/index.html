@@ -720,6 +720,13 @@ BUILD SUCCESSFUL in 16s
       <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">gradle test</span>
 </code></pre></div></div>
 
+<p><strong>HUOM</strong>: muuta skriptissä olevat <em>gradle</em>-komennot muotoon <em>./gradlew</em> jolloin Circle käyttää (oletusarvoisen Gradlen sijaan) projektiin määriteltyä Gradlea:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">./gradlew dependencies</span>
+      <span class="s">...</span>
+      <span class="pi">-</span> <span class="na">run</span><span class="pi">:</span> <span class="s">./gradlew test</span>
+</code></pre></div></div>
+
 <p>Kohdan <em>build</em> alla määritellään ensin suoritusympäristö (<em>docker</em> ja <em>environment</em>) ja sen jälkeen <em>steps</em> eli mitä toimenpiteitä tarkkailun alla olevalle koodille tehdään. Tärkeimmät askeleet ovat <em>checkout</em>, joka kloonaa projektin koodin, <em>run: gradle dependencies</em>, joka lataa projektin tarvitsemat kirjastot sekä <em>run: gradle test</em>, joka suorittaa testit.</p>
 
 <p>Klikkaamalla buildin tilaa kertovaa vihreää tai punaista palkkia pääset katsomaan tarkemmin mitä kussakin käännösprosessin askeleessa eli stepissä tapahtuu:</p>
@@ -836,10 +843,10 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
         html.enabled true
     }
     afterEvaluate {
-        classDirectories = files(classDirectories.files.collect {
+        classDirectories.setFrom(files(classDirectories.files.collect {
             fileTree(dir: it,
                     exclude: ['main/**'])
-        })
+        }))
     }
 }
 </code></pre></div></div>

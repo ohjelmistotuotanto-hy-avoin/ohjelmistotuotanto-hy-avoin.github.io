@@ -440,6 +440,14 @@ jobs:
       - run: gradle test
 ```
 
+**HUOM**: muuta skriptissä olevat _gradle_-komennot muotoon _./gradlew_ jolloin Circle käyttää (oletusarvoisen Gradlen sijaan) projektiin määriteltyä Gradlea:
+
+```yml
+      - run: ./gradlew dependencies
+      ...
+      - run: ./gradlew test
+```
+
 Kohdan _build_ alla määritellään ensin suoritusympäristö (_docker_ ja _environment_) ja sen jälkeen _steps_ eli mitä toimenpiteitä tarkkailun alla olevalle koodille tehdään. Tärkeimmät askeleet ovat _checkout_, joka kloonaa projektin koodin, _run: gradle dependencies_, joka lataa projektin tarvitsemat kirjastot sekä _run: gradle test_, joka suorittaa testit. 
 
 Klikkaamalla buildin tilaa kertovaa vihreää tai punaista palkkia pääset katsomaan tarkemmin mitä kussakin käännösprosessin askeleessa eli stepissä tapahtuu:
@@ -555,10 +563,10 @@ jacocoTestReport {
         html.enabled true
     }
     afterEvaluate {
-        classDirectories = files(classDirectories.files.collect {
+        classDirectories.setFrom(files(classDirectories.files.collect {
             fileTree(dir: it,
                     exclude: ['main/**'])
-        })
+        }))
     }
 }
 ```
