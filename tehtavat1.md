@@ -13,7 +13,7 @@ Laskarien lopuksi harjoitellaan _riippuvuuksien injektointia_ joka on melko simp
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io/blob/master/tehtavat1.md) tiedostoa GitHubissa.
+Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/tehtavat1.md) tiedostoa GitHubissa.
 
 ### Tehtävien palauttaminen
 
@@ -64,7 +64,7 @@ Tehtävää ei palauteta mitenkään. Voit merkitä tehtävän tehdyksi kun osaa
 
 Jos sinulla ei jostain syystä ole vielä tunnusta [GitHubiin](https://github.com), luo se nyt.
 
-Luo githubiin repositorio nimellä ohtu-2019-viikko1 
+Luo githubiin repositorio nimellä ohtu-2020-viikko1 
 
 * klikkaa yläpalkin oikeassa reunassa olevaa  "Create a new repo"-ikonia 
 * **laita rasti** kohtaan Initialize this repository with a README 
@@ -254,7 +254,7 @@ Gradle on siinä mielessä mielenkiintoinen työkalu, että sitä ei ole pakko a
 
 Suorita projektin juuressa (eli samassa hakemistossa missä tiedosto _build.gradle_ sijaitsee) komento <code>./gradlew build</code> (Linux) <code>gradlew.bat build</code> (Windows). Gradle asentuu koneellesi. Jos edelliset komennot eivät toimi, kokeile komentoa <code>gradle build</code> joka näyttää toimivan ainakin laitoksen koneilla. 
 
-* **HUOM** OSX:llä (eli Macilla) automaattinen asentuminen ei ole ainakaan kaikilla toiminut. Eli OSX-käyttäjien kannattaa aloittaa asentamalla _gradle_ [homebrew:illa](https://gradle.org/install#with-homebrew, ja suorittaa komento muodossa <code>gradle build</code>. Jos et jo käytä [homebrewia](https://brew.sh), kannattaa aloittaa nyt.
+* **HUOM** OSX:llä (eli Macilla) automaattinen asentuminen ei ole ainakaan kaikilla toiminut. Eli OSX-käyttäjien kannattaa aloittaa asentamalla _gradle_ [homebrew:illa](https://gradle.org/install#with-homebrew), ja suorittaa komento muodossa <code>gradle build</code>. Jos et jo käytä [homebrewia](https://brew.sh), kannattaa aloittaa nyt.
 
 Jos mikään yo. komennoista ei päädy ilmoitukseen _BUILD SUCCESSFUL_ on todennäköisesti Javan konfiguraatiossa jotain häikkää. Koneellasi tulee olla _Java Development Kit_ (eli JDK) asennettuna ja ympäristömuuttuja *JAVA_HOME* tulee olla asetettu siten, että sen arvona on JDK:n sijainti, ks. esim. <http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/>. JAVA_PATH:in asettamisen jälkeen komentorivi tulee käynnistää uudelleen. 
 
