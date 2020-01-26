@@ -166,7 +166,7 @@
 
 <h3 id="typoja-tai-epäselvyyksiä-tehtävissä">Typoja tai epäselvyyksiä tehtävissä?</h3>
 
-<p>Tee <a href="/osa0#typoja-materiaalissa">korjausehdotus</a> editoimalla <a href="https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io/blob/master/tehtavat1.md">tätä</a> tiedostoa GitHubissa.</p>
+<p>Tee <a href="/osa0#typoja-materiaalissa">korjausehdotus</a> editoimalla <a href="https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/tehtavat1.md">tätä</a> tiedostoa GitHubissa.</p>
 
 <h3 id="tehtävien-palauttaminen">Tehtävien palauttaminen</h3>
 
@@ -227,7 +227,7 @@
 
 <p>Jos sinulla ei jostain syystä ole vielä tunnusta <a href="https://github.com">GitHubiin</a>, luo se nyt.</p>
 
-<p>Luo githubiin repositorio nimellä ohtu-2019-viikko1</p>
+<p>Luo githubiin repositorio nimellä ohtu-2020-viikko1</p>
 
 <ul>
   <li>klikkaa yläpalkin oikeassa reunassa olevaa  “Create a new repo”-ikonia</li>
@@ -489,7 +489,7 @@ git config --global user.email my.address@gmail.com
 <p>Suorita projektin juuressa (eli samassa hakemistossa missä tiedosto <em>build.gradle</em> sijaitsee) komento <code>./gradlew build</code> (Linux) <code>gradlew.bat build</code> (Windows). Gradle asentuu koneellesi. Jos edelliset komennot eivät toimi, kokeile komentoa <code>gradle build</code> joka näyttää toimivan ainakin laitoksen koneilla.</p>
 
 <ul>
-  <li><strong>HUOM</strong> OSX:llä (eli Macilla) automaattinen asentuminen ei ole ainakaan kaikilla toiminut. Eli OSX-käyttäjien kannattaa aloittaa asentamalla <em>gradle</em> [homebrew:illa](https://gradle.org/install#with-homebrew, ja suorittaa komento muodossa <code>gradle build</code>. Jos et jo käytä <a href="https://brew.sh">homebrewia</a>, kannattaa aloittaa nyt.</li>
+  <li><strong>HUOM</strong> OSX:llä (eli Macilla) automaattinen asentuminen ei ole ainakaan kaikilla toiminut. Eli OSX-käyttäjien kannattaa aloittaa asentamalla <em>gradle</em> <a href="https://gradle.org/install#with-homebrew">homebrew:illa</a>, ja suorittaa komento muodossa <code>gradle build</code>. Jos et jo käytä <a href="https://brew.sh">homebrewia</a>, kannattaa aloittaa nyt.</li>
 </ul>
 
 <p>Jos mikään yo. komennoista ei päädy ilmoitukseen <em>BUILD SUCCESSFUL</em> on todennäköisesti Javan konfiguraatiossa jotain häikkää. Koneellasi tulee olla <em>Java Development Kit</em> (eli JDK) asennettuna ja ympäristömuuttuja <em>JAVA_HOME</em> tulee olla asetettu siten, että sen arvona on JDK:n sijainti, ks. esim. <a href="http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/">http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/</a>. JAVA_PATH:in asettamisen jälkeen komentorivi tulee käynnistää uudelleen.</p>
@@ -732,6 +732,9 @@ BUILD SUCCESSFUL in 16s
 <p>Klikkaamalla buildin tilaa kertovaa vihreää tai punaista palkkia pääset katsomaan tarkemmin mitä kussakin käännösprosessin askeleessa eli stepissä tapahtuu:</p>
 
 <p><img src="http://localhost:4000/images/lh1-7.png" alt="" /></p>
+
+<p><strong>HUOM2</strong>: jotkut Windows-käyttäjät ovat törmänneet siihen, että CircleCI antaa gradlen suorituksessa virheilmoituksen <em>permission denied</em>. Apu ongelmaan löytyy
+<a href="https://discuss.circleci.com/t/gradlew-permission-denied/15346">täältä</a>.</p>
 
 <p>CircleCI-buildien toimintaa onkin mahdollista <a href="https://circleci.com/docs/2.0/configuration-reference/">konfiguroida</a> melko vapaasti.</p>
 

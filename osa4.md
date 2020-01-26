@@ -17,7 +17,7 @@ Tämän osan luvuista ne, joihin on merkitty <span style="color:blue">[viikko 5]
 
 ## Typoja materiaalissa
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io/blob/master/osa4.md) tiedostoa GitHubissa.
+Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/osa4.md) tiedostoa GitHubissa.
 
 ## Ohjelmiston suunnittelu
 

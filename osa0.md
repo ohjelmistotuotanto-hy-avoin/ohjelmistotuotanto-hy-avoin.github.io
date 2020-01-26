@@ -215,8 +215,8 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
 ### Viikko 6
 
 - Teoria
-  - Vierailuluento Juha Viljanen Smartly (linkki luentovideoon ilmestyy tähän myöhemmin)
-  - Vierailuluento Niko Laitinen Nitor (linkki luentovideoon ilmestyy tähän myöhemmin)
+  - Vierailuluento Juha Viljanen Smartly <a href='https://www.youtube.com/watch?v=3ZRPtoU_nKQ'>video</a> <a href='https://github.com/ohjelmistotuotanto-hy/slides/blob/master/vierailuluennot/smartly.pdf'>kalvot</a>
+  - Vierailuluento Niko Laitinen Nitor <a href='https://www.youtube.com/watch?v=dhDusAPpjos'>video</a> <a href='https://github.com/ohjelmistotuotanto-hy/slides/blob/master/vierailuluennot/nitor.pdf'>kalvot</a>
 - Harjoitustehtävät
   - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020/quiz/6) 
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat6) 

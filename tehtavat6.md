@@ -13,7 +13,7 @@ Tämän viikon [monivalintatehtävät](https://study.cs.helsinki.fi/stats/course
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io/blob/master/tehtavat6.md) tiedostoa GitHubissa.
+Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/tehtavat6.md) tiedostoa GitHubissa.
 
 ### Tehtävien palauttaminen
 
