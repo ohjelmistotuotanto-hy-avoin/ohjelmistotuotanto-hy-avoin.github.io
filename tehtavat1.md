@@ -454,6 +454,9 @@ Klikkaamalla buildin tilaa kertovaa vihreää tai punaista palkkia pääset kats
 
 ![]({{ "/images/lh1-7.png" | absolute_url }})
 
+**HUOM2**: jotkut Windows-käyttäjät ovat törmänneet siihen, että CircleCI antaa gradlen suorituksessa virheilmoituksen _permission denied_. Apu ongelmaan löytyy
+[täältä](https://discuss.circleci.com/t/gradlew-permission-denied/15346).
+
 CircleCI-buildien toimintaa onkin mahdollista [konfiguroida](https://circleci.com/docs/2.0/configuration-reference/) melko vapaasti.
 
 * Muuta nyt jotain testiä siten, että testi ei mene läpi ja pushaa koodi GitHubiin
