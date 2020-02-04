@@ -7,7 +7,7 @@ permalink: /selenium_troubleshooting/
 
 ## Selenium troubleshooting
 
-Osalla on ollut ongelmia Seleniumin toiminnan kanssa. Alla muutamia tapoja, miten ongelmat on saatu ratkaisuta. Jos törmäät ongelmaan ja saat sen ratkaistua jollain alla mainitsemattomalla tavalla, lisää ohje dokumenttiin editoimalla [tätä]()
+Osalla on ollut ongelmia Seleniumin toiminnan kanssa. Alla muutamia tapoja, miten ongelmat on saatu ratkaisuta. Jos törmäät ongelmaan ja saat sen ratkaistua jollain alla mainitsemattomalla tavalla, lisää ohje dokumenttiin editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/selenium_troubleshooting.md)
 
 ### Tapa 1: HtmlUnit-driver
 
@@ -64,16 +64,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
     driver.get(URL);
 ```
 
-### Tapa 3: chromedriverin downloadaus
+### Tapa 3: chromedriverin downloadaus (testattu Windows:lla talvella 2020)
 
-**Tätä ja seuraavia tapoja ei ole testattu tämän kurssin aikana**, joten on epäselvää toimivatko nämä, tai jos toimivat niin todennäköisesti vasta jos kirjastojen versiot muutetaan uudempiin. Tee sivulle pull request, jos saat jonkin tavan toimimaan.
-
-Lataa [täältä](https://sites.google.com/a/chromium.org/chromedriver/downloads) ja asenna ChromeDriver.
+Tarkista Chromen versio, lataa ja asenna ChromeDriver [täältä](https://sites.google.com/a/chromium.org/chromedriver/downloads).
 
 Lataaminen ja asentaminen macillä tapahtuu komennolla `brew cask install chromedriver`. Tämän jälkeen pitäisi toimia ilman muuta määrittelyä. (brew pitää olla asennettuna etukäteen)
 
-Tee seuraava määrittely seleniumia käyttävässä tiedostossa:
-
+**Joko** määrittele <code>webdriver.chrome.driver</code> seleniumia käyttävässä tiedostossa:
 ```java
 // windowsissa
 System.setProperty("webdriver.chrome.driver", "oma_polku/chromedriver.exe"); 
@@ -81,10 +78,23 @@ System.setProperty("webdriver.chrome.driver", "oma_polku/chromedriver.exe");
 // macissa ja linuxeissa
 System.setProperty("webdriver.chrome.driver", "oma_polku/chromedriver"); 
 ```
-
 Testejä varten kannattaa määrittely sijoittaa luokan <code>ServerRule</code> metodiin <code>before</code>.
 
+**Tai** vaihtoehtoisesti määrittele <code>webdriver.chrome.driver</code> *build.gradle*-tiedostossa:
+```
+task( browse, dependsOn: jar, type: JavaExec ) {
+    main = 'ohtu.Tester'
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'webdriver.chrome.driver', System.getProperty('webdriver.chrome.driver', 'C:\\Users\\User Name\\Downloads\\chromedriver.exe')
+}
+```
+Tällöin pystyt myös yliajamaan ajurin määrittelyn komentoriviltä.
+```
+gradlew browse -Dwebdriver.chrome.driver='C:\\Users\\All Users\\Tools\\chromedriver.exe'
+```
 ### Tapa 4: WebDriverManager
+
+**Tätä ja seuraavia tapoja ei ole testattu tämän kurssin aikana**, joten on epäselvää toimivatko nämä, tai jos toimivat niin todennäköisesti vasta jos kirjastojen versiot muutetaan uudempiin. Tee sivulle pull request, jos saat jonkin tavan toimimaan.
 
 Lisää projektille riippuvuus _webdrivermanager_:
 
