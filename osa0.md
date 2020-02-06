@@ -224,8 +224,8 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
 ### Viikko 7
 
 - Teoria
-  - Vierailuluento Hannu Kokko Elisa  <a href='https://www.youtube.com/watch?v=kpBlLR10oVs'>video</a>, <a href='https://github.com/ohjelmistotuotanto-hy/slides/blob/master/vierailuluennot/elisa.pdf'>kalvot</a>
-  - Vierailuluento Marko Klemetti Eficode <a href='https://www.youtube.com/watch?v=FipoHtP2IJo'>video</a>, <a href='https://github.com/ohjelmistotuotanto-hy/slides/blob/master/vierailuluennot/eficode.pdf'>kalvot</a>
+  - Vierailuluento Hannu Kokko Elisa  <a href='https://www.youtube.com/watch?v=kpBlLR10oVs'>video</a> <a href='https://github.com/ohjelmistotuotanto-hy/slides/blob/master/vierailuluennot/elisa.pdf'>kalvot</a>
+  - Vierailuluento Marko Klemetti Eficode <a href='https://www.youtube.com/watch?v=FipoHtP2IJo'>video</a> <a href='https://github.com/ohjelmistotuotanto-hy/slides/blob/master/vierailuluennot/eficode.pdf'>kalvot</a>
 - Harjoitustehtävät
   - [monivalintatehtävät](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020/quiz/7)
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat7)
