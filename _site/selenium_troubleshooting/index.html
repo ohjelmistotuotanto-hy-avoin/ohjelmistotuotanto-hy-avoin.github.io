@@ -160,7 +160,7 @@
   <div class="post-content">
     <h2 id="selenium-troubleshooting">Selenium troubleshooting</h2>
 
-<p>Osalla on ollut ongelmia Seleniumin toiminnan kanssa. Alla muutamia tapoja, miten ongelmat on saatu ratkaisuta. Jos törmäät ongelmaan ja saat sen ratkaistua jollain alla mainitsemattomalla tavalla, lisää ohje dokumenttiin editoimalla <a href="">tätä</a></p>
+<p>Osalla on ollut ongelmia Seleniumin toiminnan kanssa. Alla muutamia tapoja, miten ongelmat on saatu ratkaisuta. Jos törmäät ongelmaan ja saat sen ratkaistua jollain alla mainitsemattomalla tavalla, lisää ohje dokumenttiin editoimalla <a href="https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/selenium_troubleshooting.md">tätä</a></p>
 
 <h3 id="tapa-1-htmlunit-driver">Tapa 1: HtmlUnit-driver</h3>
 
@@ -215,26 +215,34 @@
     <span class="n">driver</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">URL</span><span class="o">);</span>
 </code></pre></div></div>
 
-<h3 id="tapa-3-chromedriverin-downloadaus">Tapa 3: chromedriverin downloadaus</h3>
+<h3 id="tapa-3-chromedriverin-downloadaus-testattu-windowslla-talvella-2020">Tapa 3: chromedriverin downloadaus (testattu Windows:lla talvella 2020)</h3>
 
-<p><strong>Tätä ja seuraavia tapoja ei ole testattu tämän kurssin aikana</strong>, joten on epäselvää toimivatko nämä, tai jos toimivat niin todennäköisesti vasta jos kirjastojen versiot muutetaan uudempiin. Tee sivulle pull request, jos saat jonkin tavan toimimaan.</p>
-
-<p>Lataa <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">täältä</a> ja asenna ChromeDriver.</p>
+<p>Tarkista Chromen versio, lataa ja asenna ChromeDriver <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">täältä</a>.</p>
 
 <p>Lataaminen ja asentaminen macillä tapahtuu komennolla <code class="highlighter-rouge">brew cask install chromedriver</code>. Tämän jälkeen pitäisi toimia ilman muuta määrittelyä. (brew pitää olla asennettuna etukäteen)</p>
 
-<p>Tee seuraava määrittely seleniumia käyttävässä tiedostossa:</p>
-
+<p><strong>Joko</strong> määrittele <code>webdriver.chrome.driver</code> seleniumia käyttävässä tiedostossa:</p>
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// windowsissa</span>
 <span class="n">System</span><span class="o">.</span><span class="na">setProperty</span><span class="o">(</span><span class="s">"webdriver.chrome.driver"</span><span class="o">,</span> <span class="s">"oma_polku/chromedriver.exe"</span><span class="o">);</span> 
 
 <span class="c1">// macissa ja linuxeissa</span>
 <span class="n">System</span><span class="o">.</span><span class="na">setProperty</span><span class="o">(</span><span class="s">"webdriver.chrome.driver"</span><span class="o">,</span> <span class="s">"oma_polku/chromedriver"</span><span class="o">);</span> 
 </code></pre></div></div>
-
 <p>Testejä varten kannattaa määrittely sijoittaa luokan <code>ServerRule</code> metodiin <code>before</code>.</p>
 
+<p><strong>Tai</strong> vaihtoehtoisesti määrittele <code>webdriver.chrome.driver</code> <em>build.gradle</em>-tiedostossa:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>task( browse, dependsOn: jar, type: JavaExec ) {
+    main = 'ohtu.Tester'
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperty 'webdriver.chrome.driver', System.getProperty('webdriver.chrome.driver', 'C:\\Users\\User Name\\Downloads\\chromedriver.exe')
+}
+</code></pre></div></div>
+<p>Tällöin pystyt myös yliajamaan ajurin määrittelyn komentoriviltä.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gradlew browse -Dwebdriver.chrome.driver='C:\\Users\\All Users\\Tools\\chromedriver.exe'
+</code></pre></div></div>
 <h3 id="tapa-4-webdrivermanager">Tapa 4: WebDriverManager</h3>
+
+<p><strong>Tätä ja seuraavia tapoja ei ole testattu tämän kurssin aikana</strong>, joten on epäselvää toimivatko nämä, tai jos toimivat niin todennäköisesti vasta jos kirjastojen versiot muutetaan uudempiin. Tee sivulle pull request, jos saat jonkin tavan toimimaan.</p>
 
 <p>Lisää projektille riippuvuus <em>webdrivermanager</em>:</p>
 

@@ -574,7 +574,7 @@ gradle.properties
 
 <h3 id="8-junit">8. JUnit</h3>
 
-<p>Ohjelmistokehityksen ehkä tärkein vaihe on laadunvarmistus, laadunvarmistuksen tärkein keino taas on testaus, joka on syytä automatisoida mahdollisimman pitkälle, sillä ohjelmistoja joudutaan testaamaan paljon. Erityisesti iteratiivisessa/ketterässä ohjelmistokehityksessä samat testit on suoritettava uudelleen aina ohjelman muuttuessa.</p>
+<p>Ohjelmistokehityksen ehkä tärkein vaihe on laadunvarmistus, laadunvarmistuksen tärkein keino taas on testaus, joka on syytä automatisoida mahdollisimman pitkälle, sillä ohjelmistoja joudutaan testaamaan paljon. Erityisesti iteratiivisessa/ketterässä ohjelmistokehityksessä samat testit on suoritettava uudelleen aina ohjelman muuttuessa.</p>
 
 <p>Java-maailmassa automatisoidun testaamisen johtava työkalu on JUnit, johton olet todennäköisesti jo tutustunut kurssilla Ohjelmistotekniikka.</p>
 <ul>
@@ -631,21 +631,21 @@ BUILD SUCCESSFUL in 16s
 
 <h3 id="9-circleci-osa-1">9. CircleCI, osa 1</h3>
 
-<p>Gradlen avulla ohjelmiston käännös ja testien suorittaminen on mahdollista tehdä skriptattavaksi, eli komentoriviltä helposti suoritettavaksi. Käännöksen automatisoinnin jälkeen seuraava askel on suorittaa buildausprosessi, eli ohjelman kääntäminen ja siihen liittyvien testien suoritus, erillisillä <em>build-palvelimella</em> (engl. build server).</p>
+<p>Gradlen avulla ohjelmiston käännös ja testien suorittaminen on mahdollista tehdä skriptattavaksi, eli komentoriviltä helposti suoritettavaksi. Käännöksen automatisoinnin jälkeen seuraava askel on suorittaa buildausprosessi, eli ohjelman kääntäminen ja siihen liittyvien testien suoritus, erillisillä <em>build-palvelimella</em> (engl. build server).</p>
 
-<p>Ideana on, että ohjelmistokehittäjä noudattaa seuraavaa sykliä:</p>
+<p>Ideana on, että ohjelmistokehittäjä noudattaa seuraavaa sykliä:</p>
 <ul>
-  <li>uusin versio koodista haetaan versionhallinnan keskitetystä repositoriosta ohjelmistokehittäjän työasemalle</li>
-  <li>lisäykset ja niitä testaavat testit tehdään paikalliseen kopioon</li>
-  <li>käännös ja testit ajetaan paikalliseen kopioon ohjelmistokehittäjän työasemalla</li>
-  <li>jos kaikki on kunnossa, paikalliset muutokset lähetetään keskitettyyn repositorioon</li>
-  <li>build-palvelin seuraa keskitettyä repositoriota ja kun siellä huomataan muutoksia, kääntää - käännöspalvelin koodin ja suorittaa sille testit</li>
-  <li>build-palvelin raportoi havaituista virheistä</li>
+  <li>uusin versio koodista haetaan versionhallinnan keskitetystä repositoriosta ohjelmistokehittäjän työasemalle</li>
+  <li>lisäykset ja niitä testaavat testit tehdään paikalliseen kopioon</li>
+  <li>käännös ja testit ajetaan paikalliseen kopioon ohjelmistokehittäjän työasemalla</li>
+  <li>jos kaikki on kunnossa, paikalliset muutokset lähetetään keskitettyyn repositorioon</li>
+  <li>build-palvelin seuraa keskitettyä repositoriota ja kun siellä huomataan muutoksia, kääntää - käännöspalvelin koodin ja suorittaa sille testit</li>
+  <li>build-palvelin raportoi havaituista virheistä</li>
 </ul>
 
-<p>Erillisen build-palvelimen avulla varmistetaan, että ohjelmisto toimii muuallakin kuin muutokset tehneen ohjelmistokehittäjän koneella. Tätä käytännettä kutsutaan <em>jatkuvaksi integraatioksi</em> (engl. continuous integration). Palaamme asiaan tarkemmin kurssin <a href="http://localhost:4000/osa3#jatkuva-integraatio">kolmannessa osassa</a></p>
+<p>Erillisen build-palvelimen avulla varmistetaan, että ohjelmisto toimii muuallakin kuin muutokset tehneen ohjelmistokehittäjän koneella. Tätä käytännettä kutsutaan <em>jatkuvaksi integraatioksi</em> (engl. continuous integration). Palaamme asiaan tarkemmin kurssin <a href="http://localhost:4000/osa3#jatkuva-integraatio">kolmannessa osassa</a></p>
 
-<p>Kurssilla käytämme pilvessä toimivaa <a href="https://circleci.com/">CircleCI</a>-nimistä build-palvelinohjelmistoa.</p>
+<p>Kurssilla käytämme pilvessä toimivaa <a href="https://circleci.com/">CircleCI</a>-nimistä build-palvelinohjelmistoa.</p>
 
 <p>Konfiguroidaan seuraavaksi Circle huolehtimaan projektistamme.</p>
 
@@ -747,7 +747,7 @@ BUILD SUCCESSFUL in 16s
 
 <h3 id="11-circleci-osa-3">11. CircleCI, osa 3</h3>
 
-<p>Laita repositiossa olevaan tiedostoon <em>README.md</em> koodin tilasta kertova <a href="https://circleci.com/docs/2.0/status-badges/">Status Badge</a>. Avaa ensin asetussivu saa <em>jobs</em>-näkymästä:</p>
+<p>Laita repositiossa olevaan tiedostoon <em>README.md</em> koodin tilasta kertova <a href="https://circleci.com/docs/2.0/status-badges/">Status Badge</a>. Avaa ensin <em>jobs</em>-näkymästä löytyvä asennussivu:</p>
 
 <p><img src="http://localhost:4000/images/lh1-8.png" alt="" /></p>
 
@@ -885,7 +885,7 @@ viikko3
 
 <p>Tutustumme kurssin aikana muutamiin <em>suunnittelumalleihin</em> (engl. design pattern), eli hyviksi tunnettuihin useisiin erilaisiin tilanteisiin sopiviin ratkaisutapoihin, joiden soveltaminen usein parantaa koodin laatua.</p>
 
-<p>Kurssin ensimmäinen suunnittelumalli <em>riippuvuuksien injektointi</em> (engl. dependency injection), on yksinkertainen periaate, jota noudattamalla koodin automatisoitua testaamista on monissa tilanteissa mahdollista helpottaa ratkaisevalla tavalla.</p>
+<p>Kurssin ensimmäinen suunnittelumalli <em>riippuvuuksien injektointi</em> (engl. dependency injection), on yksinkertainen periaate, jota noudattamalla koodin automatisoitua testaamista on monissa tilanteissa mahdollista helpottaa ratkaisevalla tavalla.</p>
 
 <ul>
   <li>Tutustu riippuvuuksien injektointiin lukemalla <a href="/riippuvuuksien_injektointi/">tämä dokumentti</a></li>
