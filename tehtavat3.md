@@ -462,9 +462,7 @@ Koodin seassa on kutsuttu sopivissa paikoin metodia _sleep_, joka hidastaa selai
 
 **HUOM2:** salasanan varmistuskentän (confirm password) nimi on _passwordConfirmation_
 
-**HUOM3:**
-
-Uuden käyttäjän luomisen kokeilua hankaloittaa se, että käyttäjänimen on oltava uniikki. Kannattanee generoida koodissa satunnaisia käyttäjänimiä esim. seuraavasti:
+**HUOM3:** Uuden käyttäjän luomisen kokeilua hankaloittaa se, että käyttäjänimen on oltava uniikki. Kannattanee generoida koodissa satunnaisia käyttäjänimiä esim. seuraavasti:
 
 ```java
 Random r = new Random();
@@ -473,9 +471,7 @@ element = driver.findElement(By.name("username"));
 element.sendKeys("arto"+r.nextInt(100000));
 ```
 
-**HUOM3:**
-
-Joskus linkin klikkaaminen Seleniumissa aiheuttaa poikkeuksen _StaleElementReferenceException_ 
+**HUOM4:** Joskus linkin klikkaaminen Seleniumissa aiheuttaa poikkeuksen _StaleElementReferenceException_ 
 
 Käytännössä syynä on se, että Selenium yrittää klikata linkkiä "liian aikaisin". Ongelma on mahdollista kiertää klikkaamalla poikkeuksen tapahtuessa linkkiä uudelleen. Jos törmäät ongelmaan, voit ottaa koodiisi seuraavassa olevan apumetodin _clickLinkWithText_, joka suorittaa sopivan määrän uudelleenklikkauksia:
 
