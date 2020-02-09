@@ -233,7 +233,7 @@ Ketterät menetelmät suosivat suunnitteluratkaisujen yksinkertaisuutta:
 
 _Simplicity, the art of maximizing the amount of work not done, is essential_
 
-Arkkitehtuuriin suunnittelu ja dokumentointi taas on perinteisesti ollut melko pitkäkestoinen, ohjelmoinnin aloittamista edeltävä vaihe, eräänlainen _big Design Up Front_. Ketterät menetelmät ja "arkkitehtuurivetoinen" ohjelmistotuotanto ovat siis jossain määrin keskenään ristiriidassa.
+Arkkitehtuuriin suunnittelu ja dokumentointi taas on perinteisesti ollut melko pitkäkestoinen, ohjelmoinnin aloittamista edeltävä vaihe, eräänlainen _Big Design Up Front_. Ketterät menetelmät ja "arkkitehtuurivetoinen" ohjelmistotuotanto ovat siis jossain määrin keskenään ristiriidassa.
  
 Ketterien menetelmien yhteydessä puhutaan usein [inkrementaalisesta suunnittelusta ja arkkitehtuurista](https://www.jamesshore.com/Agile-Book/incremental_design.html). 
 
@@ -241,7 +241,7 @@ Ideana on, että arkkitehtuuri mietitään ja dokumentoidaan riittävällä taso
 
 Melko tyypillinen tapa on aloittaa projektit ns. [nollasprintillä](https://www.infoq.com/news/2008/09/sprint_zero/) jonka aikana luodaan mm. alustava arkkitehtuuri sekä backlog. 
 
-Scrumin varhaisissa artikkeleissa puhuttiin "pre game"-vaiheesta, jonka aikana tehtiin erilaisia kehitystyötä valmistelevia asioita, mm. hahmoteltiin alustava arkkitehtuuri. Sittemmin koko käsite on hävinnyt Scrumista ja toinen Scrumin alkuperäisistä kehittäjistä Ken Schwaber jopa eksplisiittisesti kieltää ja [tyrmää](http://www.scrum.org/assessmentdiscussion/post/1317787) koko "nollasprintin" olemassaolon.
+Scrumin varhaisissa artikkeleissa puhuttiin "pre game"-vaiheesta, jonka aikana tehtiin erilaisia kehitystyötä valmistelevia asioita, mm. hahmoteltiin alustava arkkitehtuuri. Sittemmin koko käsite on hävinnyt Scrumista ja toinen Scrumin alkuperäisistä kehittäjistä Ken Schwaber jopa eksplisiittisesti kieltää ja [tyrmää](https://www.scrum.org/resources/blog/scrubbing-sprint-zero) koko "nollasprintin" olemassaolon.
 
 ### Kävelevä luuranko
 
@@ -760,7 +760,7 @@ public class EuriborKorko implements Korko {
     EuriborLukija lukija;
 
     public EuriborKorko(int kuukausi) {
-        lukija = new EuriborlukijaImpl(kuukausi);
+        lukija = new EuriborLukijaImpl(kuukausi);
     }
 
     public double korko() {
@@ -906,7 +906,7 @@ public class Pankki {
     }
     
     public Tili maaraikaistili(String omistaja, double k){
-        return new MaaraAikaisTili(generoiTilinro(), omistaja, new Tasakorko(k));
+        return new MaaraaikaisTili(generoiTilinro(), omistaja, new Tasakorko(k));
     }    
     
     public Tili euribortili(String omistaja, int kk){
@@ -914,7 +914,7 @@ public class Pankki {
     }        
 
     public Tili maaraaikaisEuribor(String omistaja, int kk){
-        return new MaaraAikaisTili(generoiTilinro(), omistaja, new EuriborKorko(kk));
+        return new MaaraaikaisTili(generoiTilinro(), omistaja, new EuriborKorko(kk));
     } 
 }
 ```
@@ -1128,18 +1128,19 @@ if-hässäkkä näyttää hieman ikävältä. Siitä pääsee kuitenkin helposti
 ``` java
 public class Komentotehdas {
     private HashMap<String, Komento> komennot;
-    private Komento tuntemaaton;
+    private Komento tuntematon;
 
     public Komentotehdas(IO io) {
         komennot = new HashMap<String, Komento>();
         komennot.put("summa", new Summa(io));
         komennot.put("tulo", new Tulo(io));
         komennot.put("nelio", new Nelio(io));
+        komennot.put("lopeta", new Lopeta(io));
         tuntematon = new Tuntematon(io);
     }
 
     public Komento hae(String operaatio) {
-        return komennot.getOrDefault(operaatio, tuntemaaton);
+        return komennot.getOrDefault(operaatio, tuntematon);
     }
 }
 ```
@@ -1254,10 +1255,10 @@ public abstract class BinaariOperaatio extends Komento {
     @Override
     public void suorita() {
         io.print("luku 1: ");
-        int luku1 = io.nextInt();
+        luku1 = io.nextInt();
 
         io.print("luku 2: ");
-        int luku2 = io.nextInt();
+        luku2 = io.nextInt();
 
         io.print("vastaus: "+laske());
     }
@@ -1337,10 +1338,10 @@ public abstract class BinaariOperaatio implements Komento {
     @Override
     public void suorita() {
         io.print("luku 1: ");
-        int luku1 = io.nextInt();
+        luku1 = io.nextInt();
 
         io.print("luku 2: ");
-        int luku2 = io.nextInt();
+        luku2 = io.nextInt();
 
         io.print("vastaus: "+laske());
     }
@@ -1370,7 +1371,7 @@ Template-metodeita voi olla useampiakin kuin yksi eroava osa, tällöin abstrakt
 
 Strategy-suunnittelumalli on osittain samaa sukua template-metodin kanssa, siinä kokonainen algoritmi tai algoritmin osa korvataan erillisessä luokassa toteutetulla toteutuksella. Strategioita voidaan vaihtaa suorituksen aikana, template-metodissa tietty olio toimii samalla tavalla koko elinaikansa.  
 
-Lisää template method -suunnittelumallista [täällä](http://www.oodesign.com/template-method-pattern.html) ja [täällä](http://www.netobjectives.com/PatternRepository/index.php?title=TheTemplateMethodPattern).
+Lisää template method -suunnittelumallista [täällä](http://www.oodesign.com/template-method-pattern.html) ja [täällä](http://www.netobjectives.net/patternrepository/index.php?title=TheTemplateMethodPattern).
 
 ### Koodin laatuattribuutti: toisteettomuus 
 
@@ -1596,9 +1597,9 @@ public List<String> rivitJotkaTayttavatEhdon(Ehto ehto) {
 
 Uusissa Javan versioissa kaikki rajapinnan _Collection_ toteuttavat luokat mahdollistavat alkioidensa käsittelyn _Stream_:ina eli "alkiovirtoina", ks. [API-kuvaus](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html). Kokoelmaluokasta saadaan sitä vastaava alkiovirta kutsumalla kokoelmalle metodia _stream_.
 
-Alkiovirtoja on taas mahdollista käsitellä monin tavoin, nyt meitä kiinnostava metodi on _filter_, jonka avulla streamista voidaan tehdä uusi streami, josta on poistettu ne alkiot, jotka eivät täytä filtterille annettua boolean-arvoista, funktionaalisen rajapinnan _Predicate<String>_ toteuttavaa ehtoa.
+Alkiovirtoja on taas mahdollista käsitellä monin tavoin, nyt meitä kiinnostava metodi on _filter_, jonka avulla streamista voidaan tehdä uusi streami, josta on poistettu ne alkiot, jotka eivät täytä filtterille annettua boolean-arvoista, funktionaalisen rajapinnan _Predicate\<String\>_ toteuttavaa ehtoa.
 
-Määrittelemämme rajapinta _Ehto_ on oikeastaan juuri tarkoitukseen sopiva. Jotta voisimme käyttää rajapintaa, tulee meidän kuitenkin tyyppitarkastusten takia määritellä että rajapintamme laajentaa rajapintaa _Predicate<String>_:
+Määrittelemämme rajapinta _Ehto_ on oikeastaan juuri tarkoitukseen sopiva. Jotta voisimme käyttää rajapintaa, tulee meidän kuitenkin tyyppitarkastusten takia määritellä että rajapintamme laajentaa rajapintaa _Predicate\<String\>_:
 
 ``` java
 import java.util.function.Predicate;
@@ -1668,7 +1669,7 @@ kirja
 
 #### Hyvä vs. paha copypaste <span style="color:blue">[viikko 5]</span>
 
-Vaikka koodin, konfiguraatioiden, tietokantaskeeman yms. toisteettomuus on yleisesti ottaen hyvä asia, voi ajoittain olla järkevää ainakin ensin tehdä nopea copypasteen perustuva ratkaisu ja [refaktoroida](/osa4/refaktorointi) koodi tarvittaessa myöhemmin siistimmäksi. 
+Vaikka koodin, konfiguraatioiden, tietokantaskeeman yms. toisteettomuus on yleisesti ottaen hyvä asia, voi ajoittain olla järkevää ainakin ensin tehdä nopea copypasteen perustuva ratkaisu ja [refaktoroida](/osa4/#refaktorointi) koodi tarvittaessa myöhemmin siistimmäksi. 
 
 Monissa tilanteissa nimittäin copypasten poistamisella on pieni hintansa, se saattaa muuttaa sovellusta monimutkaisemmaksi. Gutenberg-lukijan kohdalla alkuperäinen versio saattaisi olla täysin riittävä käyttöön, ja refaktorointi ei välttämättä olisi vaivan arvoinen. Mutta jos sovellukseen tulisi tarve useimpiin ehtoihin, ei sovelluksen alkuperäinen design siihen kunnolla taipuisi ja copypastea tulisi yhä suuremmat määrät.
 
@@ -1690,7 +1691,7 @@ Esim. c-kielessä on tapana ollut kirjoittaa todella tiivistä koodia, jossa yhd
 Ajat ovat muuttuneet ja nykyisen trendin mukaista on pyrkiä kirjoittamaan koodia, joka jo nimeämiskäytänteiden sekä rakenteen kautta ilmaisee mahdollisimman hyvin sen, mitä koodi tekee.
 
 Selkeän nimennän lisäksi muita luettavan eli "puhtaan" koodin (engl. clean code) tunnusmerkkejä ovat jo monet meille entuudestaan tutut asiat joita on listattu 
-[täällä](www.planetgeek.ch/wp-content/uploads/2011/02/Clean-Code-Cheat-Sheet-V1.3.pdf).
+[täällä](https://www.planetgeek.ch/wp-content/uploads/2011/02/Clean-Code-Cheat-Sheet-V1.3.pdf).
 
 Miksi selkeän koodin kirjoittaminen on niin tärkeää, eikö riitä että koodari ymmärtää itse mistä koodissa on kyse? Tämä ei todellakaan riitä, sillä suurin osa, [joidenkin arvioiden mukaan jopa 90%](https://www.goodreads.com/quotes/835238-indeed-the-ratio-of-time-spent-reading-versus-writing-is)  "ohjelmointiin" kuluvasta ajasta menee olemassa olevan koodin lukemiseen. Koodia, joko itsensä tai jonkun muun kirjoittamaa, on luettava debuggauksen yhteydessä sekä sovellusta laajennettaessa. On kovin tyypillistä että se oma aikoinaan niin selkeä koodi, ei sitten olekaan yhtä selkeää parin kuukauden kuluttua:
 
@@ -1756,7 +1757,7 @@ Refaktoroinnin melkein ehdoton edellytys (poislukien yksinkertaiset automaattise
 
 Refaktoroinnissa kannattaa ehdottomasti edetä pienin askelin eli yksi hallittu muutos kerrallaan. Testit on syytä suorittaa jokaisen refaktorointioperaation jälkeen, jotta mahdollinen regressio, eli aiemmin toimineen koodin hajoaminen huomataan mahdollisimman nopeasti.
 
-Refaktorointia kannattaa tehdä lähes koko ajan. Kun koodin sisäinen laatu säilyy siistinä, on koodin laajentaminen miellyttävää ja pienien refaktorointioperaatioiden tekeminen suhteellisen vaivatonta. Jos koodin sisäinen laatu pääsee rapistumaan, muuttuu sen laajentaminen hitaaksi ja myös refaktoroinnin suorittaminen muuttuu koko ajan työläämmäksi. Monilla ohjelmistokehitystiimeillä onkin _definition of doneen_ kirjattu, että valmiin määritelmä sisältää sen, että koodi on refaktoroitu riittävän siistiksi. Siisteyttä saatetaan valvoa esim. [pull requesteina tehtävänä katselmointina](osa3#koodin-katselmointi-github-ja-pull-requestit).
+Refaktorointia kannattaa tehdä lähes koko ajan. Kun koodin sisäinen laatu säilyy siistinä, on koodin laajentaminen miellyttävää ja pienien refaktorointioperaatioiden tekeminen suhteellisen vaivatonta. Jos koodin sisäinen laatu pääsee rapistumaan, muuttuu sen laajentaminen hitaaksi ja myös refaktoroinnin suorittaminen muuttuu koko ajan työläämmäksi. Monilla ohjelmistokehitystiimeillä onkin _definition of doneen_ kirjattu, että valmiin määritelmä sisältää sen, että koodi on refaktoroitu riittävän siistiksi. Siisteyttä saatetaan valvoa esim. [pull requesteina tehtävänä katselmointina](/osa3#koodin-katselmointi-github-ja-pull-requestit).
 
 Osa refaktoroinneista, esim. metodien tai luokkien uudelleennimeäminen tai pitkien metodien jakaminen pienemmiksi on helppoa. Aina ei näin kuitenkaan ole. Joskus on tarve tehdä suurempien mittaluokkien refaktorointeja, joissa ohjelman rakenne eli arkkitehtuuri muuttuu. Tällaiset refaktoroinnit saattavat kestää päiviä tai jopa viikkoja ja niiden suorittaminen siten, että koodi säilyy koko ajan toimivana on jo kohtuullisen haastavaa.
 
