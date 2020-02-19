@@ -220,7 +220,7 @@ Käytännössä pull-periaatteella toimiva tuotanto saattaa ylläpitää pieni�
 
 #### Kanban ohjelmistotuotannossa
 
-Kanban on otettu laajalti käyttöön myös ketterässä ohjelmistokehityksessä, [osassa 2](/osa2#yht%C3%A4aikaa-teht%C3%A4v%C3%A4n-ty%C3%B6n-rajoittaminen) sivuttiin jo asiaa. Ohjelmistotuotannon kanban on periaatteiltaan hieman erilainen kuin perinteisessä tuotannossa käytetty kanban.
+Kanban on otettu laajalti käyttöön myös ketterässä ohjelmistokehityksessä, [osassa 2](/osa2#yht%C3%A4-aikaa-teht%C3%A4v%C3%A4n-ty%C3%B6n-rajoittaminen) sivuttiin jo asiaa. Ohjelmistotuotannon kanban on periaatteiltaan hieman erilainen kuin perinteisessä tuotannossa käytetty kanban.
 
 Toteutettavaa toiminnallisuutta, esim. user storyä tai jotain sen teknistä taskia vastaa kanban-kortti, joka kulkee eri työvaiheiden kautta.
 
