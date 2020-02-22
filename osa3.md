@@ -36,7 +36,7 @@ Perinteisesti laadunhallinnassa on käytetty kahta erihenkistä tekniikkaa, kats
 _Katselmoinnissa_ (engl. review) käydään läpi ohjelmiston tuotantoprosessin aikana syntyneitä dokumentteja sekä ohjelmakoodia, ja etsitään näistä erilaisia ongelmia.
 
 Tarkastukset taas (engl. inspection) ovat katselmoinnin muodollisempi versio. 
-Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan määritelty agenda ja kokouksen osallistujilla ennalta määritellyt roolit. Tarkastukset kuuluvat vesiputousmallin maailmaan ja eivät ole nykyään suosiossa lukuunottamatta turvallisuuskriittisten järjestelmien kehitystä.
+Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan määritelty agenda ja kokouksen osallistujilla ennalta määritellyt roolit. Tarkastukset kuuluvat vesiputousmallin maailmaan ja eivät ole nykyään suosiossa lukuun ottamatta turvallisuuskriittisten järjestelmien kehitystä.
 
 Katselmointi on _staattinen tekniikka_, suorituskelpoista ohjelmakoodia ei välttämättä tarvita, ja jos katselmoinnin kohteena on ohjelmakoodi, ei ohjelmaa katselmoitaessa yleensä suoriteta.
 
@@ -139,13 +139,13 @@ _Ohjelmointistandardi_ (engl. coding standards) tarkoittaa, että tiimi määrit
 
 Ohjelmistojen osoittaminen virheettömäksi on käytännössä mahdotonta, sillä ohjelmiston mahdollisten käyttöskenaarioiden ja syötteiden kombinaatio on yksinkertaisesti liian suuri. Testauksen tarkoituksena onkin vakuuttaa asiakas ja järjestelmän kehitystiimi siitä, että ohjelmisto on riittävän hyvä käytettäväksi.
 
-Testauksella on kaksi hieman eriävää tavoitetta. Ensinnäkin tulee _osoittaa, että ohjelmisto täyttää sille asetetut vaatimukset_. Käytännössä tämä tarkoittaa vaatimusmäärittelyssä kirjattujen asioiden toteutumisen demonstroimista toteutusta ohjelmista. Toinen tavoite on _löytää ohjelmistosta virheitä_ eli testatessa yritetään ohjelma rikkoa tai saattaa se jollain tavalla epäkonsistenttiin tilaan. Näin havaitut viat pyritään korjaamaan ennen kuin todelliset käyttäjät törmäävät samoihin ongelmiin.
+Testauksella on kaksi hieman eriävää tavoitetta. Ensinnäkin tulee _osoittaa, että ohjelmisto täyttää sille asetetut vaatimukset_. Käytännössä tämä tarkoittaa vaatimusmäärittelyssä kirjattujen asioiden toteutumisen demonstroimista toteutetuista ohjelmista. Toinen tavoite on _löytää ohjelmistosta virheitä_ eli testatessa yritetään rikkoa ohjelma tai saattaa se jollain tavalla epäkonsistenttiin tilaan. Näin havaitut viat pyritään korjaamaan ennen kuin todelliset käyttäjät törmäävät samoihin ongelmiin.
 
 Molemmat näistä tavoitteista tähtäävät ensisijaisesti ohjelman _ulkoisen laadun_ (engl. external quality) eli käyttäjän kokeman laadun varmistamiseen. [Ulkoisella laadulla](http://c2.com/cgi/wiki?InternalAndExternalQuality) tarkoitetaan sitä, onko ohjelmisto sopiva käyttötarkoitukseensa, eli pystyykö käyttäjä tekemään ohjelmistolla haluamansa asiat.
 
 ## Testauksen tasot
 
-Testausta jakaantuu eri _tasoihin_ sen mukaan mukaan, mikä testauksen ensisijaisena kohteena on. Ohjelmiston elinkaarta vesiputousmaisesti kuvaava _testauksen V-malli_ havainnollistaa testauksen eri tasoja.
+Testausta jakaantuu eri _tasoihin_ sen mukaan, mikä testauksen ensisijaisena kohteena on. Ohjelmiston elinkaarta vesiputousmaisesti kuvaava _testauksen V-malli_ havainnollistaa testauksen eri tasoja.
 
 ![]({{ "/images/3-3.png" | absolute_url }}){:height="300px" }
 
@@ -161,7 +161,7 @@ Ohjelmiston tilaaja- tai käyttäjäorganisaation tekemää testausta kutsutaan 
 
 Järjestelmätestauksen tarkoitus on siis varmistaa, että ohjelmisto toimii vaatimusmäärittelyssä kirjatulla tavalla. Sovellusta testataan useimmiten saman rajapinnan kautta, jonka kautta sitä käytetään, eli testaus voi tapahtua esimerkiksi graafisen käyttöliittymän kautta.
 
-Järjestelmätestaus tapahtuu ilman tietoa järjestelmän sisäisestä rakenteesta, tälläistä testauksen tapaa nimitetään _black box_ -testaukseksi.
+Järjestelmätestaus tapahtuu ilman tietoa järjestelmän sisäisestä rakenteesta, tällaistä testauksen tapaa nimitetään _black box_ -testaukseksi.
 
 Yleensä järjestelmätestaus perustuu sovelluksen potentiaalisiin käyttöskenaarioihin. Jos vaatimukset on ilmaistu user storyina, on storyjen hyväksymiskriteereistä melko helppo muotoilla testejä, joiden avulla voidaan varmistaa, että ohjelmistolla on storyjen kuvaamat vaatimukset sekä tyypilliset virheskenaariot.
 
@@ -177,9 +177,9 @@ Järjestelmätestaus tapahtuu pääosin kehittäjäorganisaation toimesta. Joiss
 
 Täysin kattava testaaminen on mahdotonta ja testaus on joka tapauksessa työlästä, eli onkin tärkeää löytää kohtuullisen kokoinen testitapausten joukko, jonka avulla on kuitenkin mahdollista löytää mahdollisimman suuri määrä virheitä.
 
-Yksittäinen _testitapaus_ (engl. test case) testaa järjestelmän toiminnallisuutta jollain syötearvolla, tai arvojen kombinaatiolla jos toiminnallisuus edellyttää usean syötteen antamista. Monet syötteistä ovat järjestelmän toiminnan kannalta samanlaisia. Esimerkiksi, jos henkilötietoja käsittelevä järjestelmä tallettaa henkilön iän, on todennäköistä, että järjestelmän toiminta ei poikkea ollenkaan sen suhteen, onko ikä 20 tai 30, mutta jos ikä taas on 17, saattaa järjestelmän toiminnallisuus olla erilainen kuin iän ollessa vähintään 18. 
+Yksittäinen _testitapaus_ (engl. test case) testaa järjestelmän toiminnallisuutta jollain syötearvolla, tai arvojen kombinaatiolla, jos toiminnallisuus edellyttää usean syötteen antamista. Monet syötteistä ovat järjestelmän toiminnan kannalta samanlaisia. Esimerkiksi, jos henkilötietoja käsittelevä järjestelmä tallettaa henkilön iän, on todennäköistä, että järjestelmän toiminta ei poikkea ollenkaan sen suhteen, onko ikä 20 tai 30, mutta jos ikä taas on 17, saattaa järjestelmän toiminnallisuus olla erilainen kuin iän ollessa vähintään 18. 
 
-Testeissä kannattaakin pyrkiä jakamaan syötteet _ekvivalenssiluokkiin_, eli ryhmiin joihin kuuluvien syötteiden suhteen ohjelma toimii oleellisesti samalla tavalla. Testitapauksia kannattaa tehdä useimmiten ainoastaan yksi tai kaksi kutakin ekvivalenssiluokkaa tai syötteiden ekvivalenssiluokkien kombinaatiota kohti. Ekvivalenssiluokkien edustajiksi kannattaa erityisesti valita ekvivalenssiluokkien _raja-arvoja_, koodissa olevat bugit nimittäin liittyvät erittäin usein toisto- ja ehtolauseiden ehtojen äärimmäisiin arvoihin.
+Testeissä kannattaakin pyrkiä jakamaan syötteet _ekvivalenssiluokkiin_, eli ryhmiin, joihin kuuluvien syötteiden suhteen ohjelma toimii oleellisesti samalla tavalla. Testitapauksia kannattaa tehdä useimmiten ainoastaan yksi tai kaksi kutakin ekvivalenssiluokkaa tai syötteiden ekvivalenssiluokkien kombinaatiota kohti. Ekvivalenssiluokkien edustajiksi kannattaa erityisesti valita ekvivalenssiluokkien _raja-arvoja_, koodissa olevat bugit nimittäin liittyvät erittäin usein toisto- ja ehtolauseiden ehtojen äärimmäisiin arvoihin.
 
 Esimerkiksi henkilötietoja käsittelevässä järjestelmässä iän suhteen ekvivalenssiluokkia olisivat ehkä _alaikäinen_ 0-17 vuotta, _työikäinen_ 18-65 vuotta ja _eläkeläinen_ 66- vuotta. Ekvivalenssiluokkien raja-arvojen järkevä määrittely tosin edellyttää tietoa järjestelmän toiminnallisuudesta. Todennäköisesti työikäisten ja eläkeläisien suhteen ei olisi mahdollista tehdä selkeää jakoa iän perusteella. Jos oletetaan, että edelliset ekvivalenssiluokat olisivat järkeviä, sopivat iän _raja-arvot_ testitapauksia varten olisivat 17, 18, 65 ja 66 vuotta, eli näitä kaikkia kohti voitaisiin tehdä oma testitapauksensa.
 
@@ -195,7 +195,7 @@ Syötteen ekvivalenssiluokkia olisivat ainakin seuraavat:
 - olemassa olevaa sivua vastaavat luvut 
 - validit luvut, jotka eivät vastaa mitään sivua 
 - liian pienet ja liian suuret luvut
-- syötteet, jotka sisältävät kiellettyjä merkkejä esimerkiksi aakkosia
+- syötteet, jotka sisältävät kiellettyjä merkkejä, esimerkiksi aakkosia
 - tyhjä syöte
 
 Jos testeistä halutaan kattavat, olisi jokaisesta ekvivalenssiluokasta hyvä valita ainakin yksi testattava syötearvo.
@@ -206,11 +206,11 @@ Olemassa olevaa sivua vastaavan ekvivalenssin rajatapaukset, eli luvut 100 ja 89
 
 Yksikkötestauksen kohteena siis ovat yksittäiset metodit ja luokat. Yksikkötestauksen hoitavat ohjelmoijat, usein oletetaan että uuteen koodiin tehdään yksikkötestit jo samalla kuin koodi kirjoitetaan. Ohjelmoijien vastuulla olevasta testauksesta, eli yksikkö- ja integraatiotestauksesta käytetään usein nimitystä [developer testing](https://developertesting.rocks/). 
 
-Yksikkötestejä laadittaessa otetaan huomioon testattavan koodin rakenne, esimerkiksi minkälaisia ehtolauseita koodissa on käytetty. Tälläisistä testeistä käytetään usein nimitystä _lasilaatikkotestaus_ (engl. white box testing).
+Yksikkötestejä laadittaessa otetaan huomioon testattavan koodin rakenne, esimerkiksi minkälaisia ehtolauseita koodissa on käytetty. Tällaisistä testeistä käytetään usein nimitystä _lasilaatikkotestaus_ (engl. white box testing).
 
 Yksikkötestauksella ei testata suoranaisesti sitä, täyttääkö ohjelmisto käyttäjän sille asettamat vaatimukset, pikemminkin tavoitteena on ohjelman _sisäisen laadun_ (engl. internal quality) kontrollointi. [Sisäinen laatu](http://c2.com/cgi/wiki?InternalAndExternalQuality) viittaa koodin sisäisen rakenteen hyvyyteen: onko koodia helppo jatkokehittää, onko virheiden jäljitys ja korjaaminen helppoa ja pystytäänkö koodin toiminnallisuuden oikeellisuus varmistamaan muutoksia tehtäessä.
 
-Sisäinen laatu kiinnostaa ensisijaisesti ohjelmistokehittäjiä: jos koodi on sisäiseltä laadultaan heikkoa, on sen parissa työskenteleminen ikävää ja hidasta. Jos koodin sisäinen laatu alkaa rapistua, sovelluksen kehitystahti hidastuu, ja ohjelmistoon alkaa todennäköisesti kertymään enenevissä määrin bugeja jotka näkyvät myös loppukäyttäjälle asti. 
+Sisäinen laatu kiinnostaa ensisijaisesti ohjelmistokehittäjiä: jos koodi on sisäiseltä laadultaan heikkoa, on sen parissa työskenteleminen ikävää ja hidasta. Jos koodin sisäinen laatu alkaa rapistua, sovelluksen kehitystahti hidastuu, ja ohjelmistoon alkaa todennäköisesti kertymään enenevissä määrin bugeja, jotka näkyvät myös loppukäyttäjälle asti. 
 
 Pelkkä sisäisen laadun kontrollimekanismi yksikkötestaus ei siis ole. Kattavilla yksikkötesteillä saadaan parannettua myös ohjelman ulkoista, eli asiakkaan kokemaa laatua. Yksikkötestit voivat eliminoida joitain asiakkaalle näkyviä virheitä, joita järjestelmätestauksen testitapaukset eivät löydä.
 
@@ -227,7 +227,7 @@ Mitä kaikkea ohjelmistosta tulisi testata yksikkötesteillä? Vastaus ei ole he
 > "Do I have to write a test for everything?"
 > "No, just test everything that could reasonably break" 
 
-Jos pyritään kattavaan yksikkötestaukseen, tulisi ainakin testata kaikkien metodien (ja loogisten metodikombinaatioden) toiminta parametrien hyväksyttävillä arvoilla ja virheellisillä parametrien arvoilla.
+Jos pyritään kattavaan yksikkötestaukseen, tulisi ainakin testata kaikkien metodien (ja loogisten metodikombinaatioiden) toiminta parametrien hyväksyttävillä arvoilla ja virheellisillä parametrien arvoilla.
 
 Parametrien mahdolliset arvot kannattaa jakaa ekvivalenssiluokkiin ja jokaisesta luokasta kannattaa  valita ainakin yksi arvo testisyötteeksi, erityisesti ekvivalenssiluokkien raja-arvot kannattaa valita mukaan testattaviin arvoihin.
 
@@ -264,7 +264,7 @@ Näitä kutakin kohti on metodin parametrilla _maara_ omat ekvivalenssiluokkansa
 
 Nollan ja negatiivisen määrän ottamista tuskin kannattaa erikseen testata kaikkien varastotilanteiden suhteen, tosin tämäkin voisi olla riski, jos varaston sisäinen toteutus muutettaisiin täysin.
 
-Huomaamme siis, että jo naurettavan pienen luokan yhden metodin kattava testaaminen vaatii suuren määrän testitapauksia. Useimmissa tapauksissa ei ole kuitenkaan ole realisitista olettaa, että testejä tehdään vastaavalla kattavuudella, aika/hyötysuhde on yksinkertaisesti liian huono. Useimmat softassa olevat ikävät bugit jäävät joka tapauksessa yksikkötestauksen ulottumattomiin.
+Huomaamme siis, että jo naurettavan pienen luokan yhden metodin kattava testaaminen vaatii suuren määrän testitapauksia. Useimmissa tapauksissa ei ole kuitenkaan ole realistista olettaa, että testejä tehdään vastaavalla kattavuudella, aika/hyötysuhde on yksinkertaisesti liian huono. Useimmat softassa olevat ikävät bugit jäävät joka tapauksessa yksikkötestauksen ulottumattomiin.
 
 ### Testauskattavuus
 
@@ -274,13 +274,13 @@ _Rivikattavuudella_ (engl. line coverage) tarkoitetaan kuinka montaa prosenttia 
 
 _Haarautumakattavuudella_ (engl. branch coverage) tarkoitetaan kuinka montaa prosenttia testattavan metodin/luokan sisältävistä ehtolauseiden haaroista testit ovat käyneet läpi.
 
-Monet työkalut, esim. laskareissa käyttämämme JaCoCo mittaavat testien suorituksen yhteydessä testauskattavuuden. Muitakin kattavuuden tyyppejä on olemassa, mm. ehtokattavuus ja polkukattavuus, useat työkalut eivät niitä kuitenkaan tue.
+Monet työkalut, esim. laskareissa käyttämämme JaCoCo, mittaavat testien suorituksen yhteydessä testauskattavuuden. Muitakin kattavuuden tyyppejä on olemassa, mm. ehtokattavuus ja polkukattavuus, useat työkalut eivät niitä kuitenkaan tue.
 
 ![]({{ "/images/3-5.png" | absolute_url }}){:height="350px" }
 
 JaCoCo ilmoittaa sekä rivi- (instruction) että haarautumakattavuuden (branches). Puutteellisesti testattu haarautumiskohta esim. if ilmaistaan keltaisella.
 
-Testauskattavuus toimii siis hyvänä apuvälineenä sen arvioimisessa testataanko sovellusta riittävästi.
+Testauskattavuus toimii siis hyvänä apuvälineenä sen arvioimisessa, testataanko sovellusta riittävästi.
 
 ### Mutaatiotestaus
 
@@ -288,7 +288,7 @@ Pelkkä testikattavuus ei kuitenkaan vielä kerro oikeastaan mitään testien hy
 
 _Mutaatiotestauksen_ (engl. mutation testing) idea on nimenomaan testata testitapausten hyvyyttä generoimalla koodiin systemaattisesti mutantteja eli pieniä "bugeja", ja katsoa havaitsevatko testit koodiin tulleet bugit.
 
-Erilaisia mutanttityyppejä, joita mutaatiotestauksessa generoidaan koodiin on paljon mm.
+Erilaisia mutanttityyppejä, joita mutaatiotestauksessa generoidaan koodiin, on paljon mm.
 
 - manipuloidaan ehtolausetta: <tt>if ( x<0 )</tt> muutetaan muotoon <tt>if (x <= 0)</tt> tai <tt>if ( true ) </tt>
 - vaihdetaan operaattoria: <tt>x += 1</tt> muutetaan muotoon <tt>x -= 1</tt>
@@ -297,7 +297,7 @@ Erilaisia mutanttityyppejä, joita mutaatiotestauksessa generoidaan koodiin on p
 
 Mutaatiotestauksen ongelmana on mutaatioiden suuri määrä ja ns. _ekvivalentit mutantit_, joiden takia mutaatiotestauksen tulos vaatii aina ihmisen tulkintaa.
 
-Ekvivalentti mutantti tarkoittaa sellaista koodiin tehtyä muutosta, joka ei kuitenkaan muuta ohjelman toiminnallisuutta. Eli tälläisen mutantin lisäämistä koodiin ei voi mikään testi havaita. Mutantin toteaminen ekvivalentiksi algoritmisesti on mahdotonta.
+Ekvivalentti mutantti tarkoittaa sellaista koodiin tehtyä muutosta, joka ei kuitenkaan muuta ohjelman toiminnallisuutta. Eli tällaisen mutantin lisäämistä koodiin ei voi mikään testi havaita. Mutantin toteaminen ekvivalentiksi algoritmisesti on mahdotonta.
 
 Lisätietoa mutaatiotestauksesta esim. [wikipediassa](http://en.wikipedia.org/wiki/) ja [pit](http://pitest.org/)-työkalun sivulla.
  
@@ -359,7 +359,7 @@ _Continuous Integration_ eli jatkuva integraatio ja _(continuous delivery)_ eli 
 
 Kaikista edellisistä käytänteistä seurauksena on suuri joukko eritasoisia (eli yksikkö-, integraatio-, järjestelmä-) automatisoituja testejä, joiden avulla tehty regressiotestaus mahdollistaa sen, että ohjelmiston jatkokehityksen aikana voidaan olla turvallisin mielin siitä, että jo toimivia asioita ei pääse hajoamaan. 
 
-Nousevana trendinä on suorittaa uusien ominaisuuksien laadunhallintaa myös siinä vaiheessa kun osa oikeista käyttäjistä on jo ottanut ne käyttöönsä. Tehdään testaus miten kattavasti tahansa, on kuitenkin hyvin tyypillistä, että tiettyjä ongelmia ilmenee vasta todellisessa käytössä. Tuotantokäytössä tapahtuva testaus on suurta kurinalaisuutta vaativa menetelmä, joka vaatii pitkälle kehittynyttä automatisointia ja ohjelmiston sofistikoitunutta monitorointia.
+Nousevana trendinä on suorittaa uusien ominaisuuksien laadunhallintaa myös siinä vaiheessa, kun osa oikeista käyttäjistä on jo ottanut ne käyttöönsä. Tehdään testaus miten kattavasti tahansa, on kuitenkin hyvin tyypillistä, että tiettyjä ongelmia ilmenee vasta todellisessa käytössä. Tuotantokäytössä tapahtuva testaus on suurta kurinalaisuutta vaativa menetelmä, joka vaatii pitkälle kehittynyttä automatisointia ja ohjelmiston sofistikoitunutta monitorointia.
 
 Voimakkaasta automatisointitrendistä huolimatta myös manuaalisesti tehtävällä testauksella on edelleen paikkansa. Tutkiva testaus (engl. exploratory testing) on pääosin manuaalinen järjestelmätestauksen tekniikka, jossa testaaminen tapahtuu ilman tarkkaa etukäteen tehtävää testaussuunnitelmaa. Testaaja luo lennossa uusia testejä edellisten testien antaman palautteen perusteella. Tutkivaa testausta käytetään usein kokonaan uusien ohjelmiston ominaisuuksien testaamiseen.
 
@@ -374,7 +374,7 @@ Alan auktoriteettien kuten Kent Beckin ja Uncle Bob Martinin [määritelmän muk
 3. Jos huomataan koodin rakenteen menneen huonoksi (eli havaitaan koodissa esimerkiksi toisteisuutta tai liian pitkiä metodeja) _refaktoroidaan_ koodin rakenne paremmaksi, ja huolehditaan koko ajan. että testit menevät edelleen läpi. Refaktoroinnilla tarkoitetaan koodin sisäisen rakenteen muuttamista siten, että sen rajapinta ja toiminnallisuus säilyy muuttumattomana.
 4. Jatketaan askeleesta 1
  
-TDD:n etenemisestä käytetään usein nimitystä _red-green-refactor_, eli tehdään testi joka on punaisella, kirjotetaan koodia siten että testit menevät taas vihreäksi ja jos tarvetta, niin refaktoroidaan. Seuraava kuva havainnollistaa syklin etenemistä:
+TDD:n etenemisestä käytetään usein nimitystä _red-green-refactor_, eli tehdään testi, joka on punaisella, kirjotetaan koodia siten että testit menevät taas vihreäksi ja jos tarvetta, niin refaktoroidaan. Seuraava kuva havainnollistaa syklin etenemistä:
 
 ![]({{ "/images/3-6a.png" | absolute_url }}){:height="250px" } 
 
@@ -386,7 +386,7 @@ TDD:ssä perinteisen suunnittelu-toteutus-testaus -syklin voi ajatella kääntyn
 
 TDD:tä tehtäessä korostetaan yleensä lopputuloksen yksinkertaisuutta, tarkoituksena on toteuttaa toiminnallisuutta vain sen verran, mitä testien läpimeno edellyttää. Ei siis toteuteta "varalta" ekstratoiminnallisuutta, sillä sitä ei todennäköisesti tarvita. Tästä yksinkertaisiin ratkaisuihin pyrkivästä käytännöstä käytetään usein nimitystä ["You ain't gonna need it", YAGNI](https://martinfowler.com/bliki/Yagni.html), sama periaate on kirjattuna ketterään manifestiin muodossa _Simplicity – the art of maximizing the amount of work not done – is essential_.
 
-Koodista on vaikea tehdä helposti testattavissa olevaa, jos se ei ole modulaarista ja löyhästi kytketyistä selkeän rajapinnan omaavista komponenteista koostuvaa. Määritelmän mukaisella TDD:llä ohjelmoitaessa taas koodista tulee useimmiten jo lähtökohtaisesti modulaarista ja vähäistä turhilta riippuvuuksiltaan. Tälläisen koodin taas on huomattu olevan laadukasta ylläpidettävyyden ja laajennettavuuden kannalta. Eli eräs argumentti TDD:n puolesta on juuri ollut sen tuottama laajennettavuuden ja jatkokehitettävyyden kannalta edullinen koodin laatu.
+Koodista on vaikea tehdä helposti testattavissa olevaa, jos se ei ole modulaarista ja löyhästi kytketyistä selkeän rajapinnan omaavista komponenteista koostuvaa. Määritelmän mukaisella TDD:llä ohjelmoitaessa taas koodista tulee useimmiten jo lähtökohtaisesti modulaarista ja vähäistä turhilta riippuvuuksiltaan. Tällaisen koodin taas on huomattu olevan laadukasta ylläpidettävyyden ja laajennettavuuden kannalta. Eli eräs argumentti TDD:n puolesta on juuri ollut sen tuottama laajennettavuuden ja jatkokehitettävyyden kannalta edullinen koodin laatu.
 
 Muina TDD:n hyvinä puolina mainitaan, että se rohkaisee ottamaan pieniä askelia kerrallaan ja näin toimimaan fokusoidusti, ja että hyvin kirjoitetut testit toimivat toteutetun komponentin rajapinnan dokumentaationa.
  
@@ -396,7 +396,7 @@ TDD:tä on tutkittu akateemisesti kohtuullisen paljon. Kovin suurta evidenssiä 
 
 Käytettäessä TDD:tä testikoodia tulee paljon, usein suunnilleen saman verran kuin varsinaista koodia. Jos ja kun sovellus muuttuu, tulee testejä myös ylläpitää, sillä monet suuremmat rakenteelliset muutokset rikkovat usein osan testeistä.
 
-TDD:n soveltaminen on haastavaa mm. käyttöliittymä-, tietokantayhteyksistä sekä verkon yli kommunikoinnista huolehtivaa koodia tehtäessä, mahdotonta se ei kuitenkaan ole. Jo olemassa olevan koodin laajentaminen TDD:llä voi myöskin olla erittäin haastavaa erityisesti jos laajennettava koodi on rakenteeltaan vanhan liiton spagettikoodia.
+TDD:n soveltaminen on haastavaa mm. käyttöliittymä-, tietokantayhteyksistä sekä verkon yli kommunikoinnista huolehtivaa koodia tehtäessä, mahdotonta se ei kuitenkaan ole. Jo olemassa olevan koodin laajentaminen TDD:llä voi myöskin olla erittäin haastavaa erityisesti, jos laajennettava koodi on rakenteeltaan vanhan liiton spagettikoodia.
 
 ## Riippuvuuksien hallinta testeissä
 
@@ -434,9 +434,9 @@ User storyn [määritelmän](/osa2#user-story) yhteydessä mainittiin, että use
 
 _tests that convey and document details and that will be used to determine that the story is complete_
 
-Esimerkiksi user storyn _asiakas voi lisätä tuotteen ostoskoriin_ hyväksymiskriteeriejä voisivat olla
-- ollessaan tuotelistauksessa ja valitessaan tuotteen jota on varastossa, menee tuote ostoskoriin ja ostoskorin hinta sekä korissa olevien tuotteiden määrä päivittyy oikein
-- ollessaan tuotelistauksessa ja valitessaan tuotteen jota ei ole varastossa, pysyy ostoskorin tilanne muuttumattomana
+Esimerkiksi user storyn _asiakas voi lisätä tuotteen ostoskoriin_ hyväksymiskriteerejä voisivat olla
+- ollessaan tuotelistauksessa ja valitessaan tuotteen, jota on varastossa, menee tuote ostoskoriin ja ostoskorin hinta sekä korissa olevien tuotteiden määrä päivittyy oikein
+- ollessaan tuotelistauksessa ja valitessaan tuotteen, jota ei ole varastossa, pysyy ostoskorin tilanne muuttumattomana
 
 Optimaalisessa tilanteessa user storyjen hyväksymiskriteereistä saadaan muodostettua suurin osa ohjelmiston järjestelmätason, eli käyttäjän näkökulmasta sovelluksen toiminnallisuuden varmistavista toiminnallisista testeistä.
  
@@ -450,7 +450,7 @@ Automaattisen hyväksymistestauksen on olemassa monia työkaluja, eräs suositui
 
 Automatisoidusta hyväksymistestauksesta käytetään joskus nimitystä [Acceptance test driven development](https://en.wikipedia.org/wiki/Acceptance_test%E2%80%93driven_developmen) (ATDD) tai _[Behavior driven development](https://en.wikipedia.org/wiki/Behavior-driven_development)_ (BDD), erityisesti jos testit toteutetaan jo iteraation alkupuolella, ennen kun storyn toteuttava koodi on valmiina.
 
-ATDD:ssä ja BDD:ssä on kyse lähes samasta asiasta pienin painotuseroin. BDD kiinnittää tarkemmin huomiota käytettävään terminologiaan, BDD ei esimerkiksi puhu ollenkaan testeistä vaan sensijaan kuvailee hyväksymiskriteerit esimerkkikäyttäytymisten (example behavior) avulla. Kurssilla käytämme pääosin BDD:n nimeämiskäytäntöjä, sillä käyttämämme [Cucumber](https://cucumber.io/) on nimenomaan BDD-piirien kehittämä työkalu. 
+ATDD:ssä ja BDD:ssä on kyse lähes samasta asiasta pienin painotuseroin. BDD kiinnittää tarkemmin huomiota käytettävään terminologiaan, BDD ei esimerkiksi puhu ollenkaan testeistä vaan sen sijaan kuvailee hyväksymiskriteerit esimerkkikäyttäytymisten (example behavior) avulla. Kurssilla käytämme pääosin BDD:n nimeämiskäytäntöjä, sillä käyttämämme [Cucumber](https://cucumber.io/) on nimenomaan BDD-piirien kehittämä työkalu. 
 
 Käsite ATDD pitää sisällään aina ainoastaan hyväksymistason testauksen. BDD:llä voidaan tehdä myös muita, kuin hyväksymistason testejä. Rubylle alun perin kehitetty [rspec](https://rspec.info/) sanoo olevansa BDD-kirjasto, rspec sopii hyväksymistestien lisäksi hyvin myös yksikkötestaamiseen. Muille kielille on tehty paljon rspecin tapaan toimivia BDD-henkisiä kirjastoja, kuten Javascript-maailman [mocha](https://mochajs.org/) ja [jest](https://jestjs.io/). Seuraavaksi käsiteltävä Cucumber on kuitenkin nimenomaan hyväksymistestaukseen työväline, yksikkötestaamiseen sitä ei kannata käyttää.
 
@@ -507,7 +507,7 @@ Integraatio on ollut perinteisesti niin ikävä ja hankala vaihe, että sitä ku
 
 90-luvulla alettiin huomaamaan, että riskien minimoimiseksi integraatio kannattaa tehdä useammin kuin vain projektin lopussa. Parhaaksi käytänteeksi alkoi muodostumaan päivittäin tehtävä koko projektin kääntäminen eli _daily build_ ja samassa yhteydessä suoritettava _smoke test_. Nämä käytänteet alkoivat nousta suurempaan tietoisuuteen 90-luvun puolessa välissä erityisesti [Microsoftin](https://stevemcconnell.com/articles/daily-build-and-smoke-test/) Excel ja Windows 95 -tiimien menestysten ansiosta.
 
-Smoke testillä tarkoitetaan kohtuullisen yksinkertaista järjestelmätason testiä, joka kuitenkin testaa järjestelmän kaikkia arkkitehtuurillisia tasoja (käyttöliittymää, sovelluslogiikkaa, tietokantaa), ja havaitsee jos jotain on pahasti pielessä. Smoke test ei siis kata kovin paljoa sovelluksen toiminnallisuudesta, mutta kuitenkin riittävästi havaitakseen jos sovellus hajoaa perustavanlaatuisella tavalla, esimerkiksi jos sovelluslogiikan ja tietokannan välille syntyy epäyhteensopivuus, joka estää kokonaan tietokantayhteyksien muodostamisen.
+Smoke testillä tarkoitetaan kohtuullisen yksinkertaista järjestelmätason testiä, joka kuitenkin testaa järjestelmän kaikkia arkkitehtuurillisia tasoja (käyttöliittymää, sovelluslogiikkaa, tietokantaa), ja havaitsee jos jotain on pahasti pielessä. Smoke test ei siis kata kovin paljoa sovelluksen toiminnallisuudesta, mutta kuitenkin riittävästi havaitakseen, jos sovellus hajoaa perustavanlaatuisella tavalla, esimerkiksi jos sovelluslogiikan ja tietokannan välille syntyy epäyhteensopivuus, joka estää kokonaan tietokantayhteyksien muodostamisen.
 
 Daily buildia ja smoke testiä käytettäessä järjestelmän integraatio tehdään ainakin jollain tarkkuustasolla joka päivä. Komponenttien yhteensopivuusongelmat huomataan nopeasti ja niiden korjaaminen helpottuu. Tiimin moraali myös paranee, kun ohjelmistosta on olemassa päivittäin kasvava ainakin jossain määrin toimiva versio.
 
@@ -579,7 +579,7 @@ Käsitteen kehittäjä [Cam Kaner](http://www.satisfice.com/articles/what_is_et.
 
 _exploratory testing is simultaneous learning, test design and test execution_
 
-Ideana on, että testaaja ohjaa toimintaansa suorittamiensa testien ohjelmassa aiheuttaman reaktion perusteella. Testitapauksia ei suunnitella kattavasti etukäteen, sensijaan testaaja pyrkii kokemuksensa ja suorittamiensa testien ja kokeilujen perusteella löytämään järjestelmästä virheitä.
+Ideana on, että testaaja ohjaa toimintaansa suorittamiensa testien ohjelmassa aiheuttaman reaktion perusteella. Testitapauksia ei suunnitella kattavasti etukäteen, sen sijaan testaaja pyrkii kokemuksensa ja suorittamiensa testien ja kokeilujen perusteella löytämään järjestelmästä virheitä.
 
 Tutkiva testaus ei kuitenkaan etene täysin sattumanvaraisesti, kullekin testisessiolle asetetaan jonkinlainen tavoite, eli mitä osaa tai toiminnallisuuksia sovelluksesta on tarkoitus tutkia ja minkälaisia virheitä tarkoitus etsiä.
 
@@ -639,7 +639,7 @@ _käyttäjätason metriikoita_ (engl. business level metrics). Jos niissä h
 
 Myös canary releasejen yhteydessä testauksen ja kaiken tuotantoon vientiin liittyvän on syytä tapahtua automatisoidusti. 
  
-Nimi canary release periytyy kaivostyöläisten tavasta käyttää kanarialintuja tutkimaan sitä onko kaivoksessa myrkyllisiä kaasuja: jos kaivokseen viety lintu ei kuole, ilma on turvallista. 
+Nimi canary release periytyy kaivostyöläisten tavasta käyttää kanarialintuja tutkimaan sitä, onko kaivoksessa myrkyllisiä kaasuja: jos kaivokseen viety lintu ei kuole, ilma on turvallista. 
 
 ### Tuotannossa testaaminen ja tietokanta
 
@@ -697,7 +697,7 @@ Jatkuvan toimitusvalmiuden (Continuous delivery), jatkuvan käyttöönoton (Cont
 
 Perinteisesti yrityksissä on ollut tarkka erottelu sovelluskehittäjien (developers, dev) ja palvelinympäristöistä vastaavien järjestelmäylläpitäjien (operations, ops) välillä. On erittäin tavallista, että sovelluskehittäjät eivät pääse edes kirjautumaan tuotantopalvelimille ja sovellusten tuotantoon vieminen sekä esim. tuotantotietokantaan tehtävät skeeman päivitykset tapahtuvat ainoastaan ylläpitäjien toimesta.
 
-Tälläisessä ympäristössä esim. continuous deploymentin harjoittaminen on lähes mahdotonta, tilanne ajautuukin helposti siihen, että tuotantopalvelimelle pystytään viemään uusia versioita vain harvoin, esimerkiksi ainoastaan 4 kertaa vuodessa.
+Tällaisessä ympäristössä esim. continuous deploymentin harjoittaminen on lähes mahdotonta, tilanne ajautuukin helposti siihen, että tuotantopalvelimelle pystytään viemään uusia versioita vain harvoin, esimerkiksi ainoastaan 4 kertaa vuodessa.
 
 Joustavammat toimintamallit uusien ominaisuuksien tuotantoon viemisessä vaativatkin täysin erilaista kulttuuria, sellaista, missä kehittäjät (dev) ja ylläpito (ops) työskentelevät tiiviissä yhteistyössä. Esim. sovelluskehittäjille tulee antaa tarvittava pääsy tuotantopalvelimelle tai Scrum-tiimiin tulee sijoittaa palvelinten ylläpidosta ja operoinnista huolehtivia ihmisiä. Toimintamallista missä dev ja ops työskentelevät tiiviisti yhdessä on käyttää nimeä [DevOps](https://en.wikipedia.org/wiki/DevOps). 
 
@@ -728,7 +728,7 @@ Eräs parhaista DevOpsin määritelmistä on [Daniel Storin](http://turnoff.us/g
 
 ![]({{ "/images/3-19.png" | absolute_url }}){:height="750px" }
 
-## Yhteenveto - ketterän testauksen nelikettä
+## Yhteenveto - ketterän testauksen nelikenttä
 
 Ketterän testauksen kenttää voidaan jäsentää alunperin Brian Maric käsialaa olevan [Agile Testing Quadrants](http://lisacrispin.com/2011/11/08/using-the-agile-testing-quadrants/) -kaavion avulla.
 
@@ -742,7 +742,7 @@ Testit ovat suurelta osin automatisoitavissa, mutta esim. tutkiva testaaminen (e
 
 Kaikilla "neljänneksillä" on oma roolinsa ja paikkansa ketterässä ohjelmistokehityksessä, ja on pitkälti kontekstisidonnaista missä suhteessa testaukseen ja laadunhallintaan käytettävissä olevat resurssit kannattaa kuhunkin neljännekseen kohdentaa.
 
-Kaavio on jo hieman vanha, alunperin vuodelta 2003 joten se ei tunne vielä käsitettä tuotannossa testaaminen.
+Kaavio on jo hieman vanha, alun perin vuodelta 2003 joten se ei tunne vielä käsitettä tuotannossa testaaminen.
 
 ## Loppupäätelmiä testauksesta ja laadunhallinnasta
 
@@ -752,7 +752,7 @@ Ketterissä menetelmissä kantavana teemana on arvon tuottaminen asiakkaalle ja 
 
 Testauksen automatisointi ei ole halpaa eikä helppoa. Väärin, väärään aikaan tai väärälle "tasolle" tehdyt automatisoidut testit voivat tuottaa enemmän harmia ja kustannuksia kuin hyötyä, erityisen suuri riski on käyttöliittymän kautta tehtävillä testeillä.
  
-Jos ohjelmistossa on komponentteja, jotka tullaan ehkä poistamaan tai korvaamaan pian, on useimmiten järkevintä olla automatisoimatta niiden testejä. Esimerkiksi osassa 2 esitelty [MVP eli Minimal Viable Product](/osa2#vaatimusm%C3%A4%C3%A4rittely-2010-luvulla) on karsittu toteutus, jonka avulla halutaan nopeasti selvittää, onko jokin ominaisuus ylipäätään käyttäjien kannalta arvokas. Jos MVP:n toteuttama ominaisuus osoittautuu tarpeettomaksi, se poistetaan järjestelmästä. MVP-periaattella tehty ominaisuus on siis useimmiten viisasta tehdä ilman testien automatisointia.
+Jos ohjelmistossa on komponentteja, jotka tullaan ehkä poistamaan tai korvaamaan pian, on useimmiten järkevintä olla automatisoimatta niiden testejä. Esimerkiksi osassa 2 esitelty [MVP eli Minimal Viable Product](/osa2#vaatimusm%C3%A4%C3%A4rittely-2010-luvulla) on karsittu toteutus, jonka avulla halutaan nopeasti selvittää, onko jokin ominaisuus ylipäätään käyttäjien kannalta arvokas. Jos MVP:n toteuttama ominaisuus osoittautuu tarpeettomaksi, se poistetaan järjestelmästä. MVP-periaatteella tehty ominaisuus on siis useimmiten viisasta tehdä ilman testien automatisointia.
 
 Ongelmallista kuitenkin usein on, että kertakäyttöiseksi tarkoitettu komponentti voi jäädä järjestelmään pitkäksikin aikaa, joskus jopa pysyvästi koska sitä "ei ole aikaa" toteuttaa kunnolla.
 
@@ -768,6 +768,6 @@ Automaattisia testejä kannattaa kirjoittaa mahdollisimman paljon etenkin niiden
 
 Testitapausten kannattaa olla mahdollisimman paljon testattavan komponentin oikeiden käyttöskenaarioiden kaltaisia. Pelkkiä testauskattavuutta kasvattavia testejä on turha tehdä.
 
-Testitapauksissa kannattaa käyttää mahdollisimman oikean kaltaista dataa, erityisesti järjestelmätason testeissä. Koodissa nimittäin lähes aina hajoaa jokin kun käytetään oikeaa dataa riippumatta siitä, miten hyvin testaus on suoritettu. Parasta onkin jos staging-ympäristössä on käytössä sama data kuin tuotantoympäristössä. 
+Testitapauksissa kannattaa käyttää mahdollisimman oikean kaltaista dataa, erityisesti järjestelmätason testeissä. Koodissa nimittäin lähes aina hajoaa jokin, kun käytetään oikeaa dataa riippumatta siitä, miten hyvin testaus on suoritettu. Parasta onkin, jos staging-ympäristössä on käytössä sama data kuin tuotantoympäristössä. 
 
-Ehdottomasti kaikkein tärkein asia sovelluksen laadunhallinnan kannalta on mahdollisimman usein tapahtuva tuotantoonvienti. Se taas edellyttää hyvin rakennettua deployment pipelineä, kohtuullista testauksen automatisointia ja helpottuu oleellisesti jos feature branchien sijaan käytetään trunk based development -periaatetta. Suosittelen lämpimästi että tuotantoonvienti tapahtuu niin usein kuin mahdollista, jopa useita kertoja päivässä. Tämä takaa yleensä sen, että pahoja integrointiongelmia ei synny, ja sovellukseen syntyvät regressiot havaitaan ja pystytään korjaamaan mahdollisimman nopeasti.
+Ehdottomasti kaikkein tärkein asia sovelluksen laadunhallinnan kannalta on mahdollisimman usein tapahtuva tuotantoonvienti. Se taas edellyttää hyvin rakennettua deployment pipelineä, kohtuullista testauksen automatisointia ja helpottuu oleellisesti, jos feature branchien sijaan käytetään trunk based development -periaatetta. Suosittelen lämpimästi että tuotantoonvienti tapahtuu niin usein kuin mahdollista, jopa useita kertoja päivässä. Tämä takaa yleensä sen, että pahoja integrointiongelmia ei synny, ja sovellukseen syntyvät regressiot havaitaan ja pystytään korjaamaan mahdollisimman nopeasti.
