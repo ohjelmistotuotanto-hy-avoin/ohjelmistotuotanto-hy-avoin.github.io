@@ -9,13 +9,9 @@ permalink: /miniprojekti/
 
 ### Ajankohtaista
 
-- Kolmannen sprintin [arvosteluperusteet](/miniprojektin_arvosteluperusteet#kolmannen-sprintin-arvosteluperusteet)
-- Loppudemojen [ajanvaraus](https://docs.google.com/document/d/1W4HsdtEnejG4mMY9FRwdRFwnAs8VnpFM9T0um8YVDxI/edit) 
-- [Lopputoimenpiteet](/miniprojektin_arvosteluperusteet#lopputoimenpiteet)
-
 ### Johdanto
 
-- Kurssin viikoilla 4-7 tehdään miniprojekti
+- Kurssin aikana tehdään miniprojekti
 - **Kurssin läpipääsy edellyttää hyväksyttyä osallistumista miniprojektiin** tai sen [hyväksilukemista](/osa0#miniprojektin-hyv%C3%A4ksilukeminen)
 
 - Projekti tehdään noin 4-6 hengen ryhmissä
@@ -28,10 +24,7 @@ permalink: /miniprojekti/
 ### Ryhmän muodostaminen
 
 * Ryhmä muodostetaan "spontaanisti" tai tulemalla paikalle johonkin miniprojektien aloitustilaisuuksista
-  - maanantai 18.11. klo 14-16 C222 Exactum
-  - tiistai 19.11. klo 14-16 A128 Chemicum
-  - keskiviikko 20.11. klo 12-14 C222 Exactum
-  - torstai 21.11. klo 14-16 C222 Exactum
+  - Paikka ja aika TBA
 * Jokaisen _tulee osallistua yhteen tilaisuuteen_. Paikalla on oltava alusta loppuun. Jos olet jo muodostanut miniprojektiryhmän, kaikkien ryhmäläisten tulee osallistua samaan tilaisuuteen.
 * Aloitustilaisuuteen tullessa on syytä tuntea materiaalin osien 1 ja 2 asioista ainakin seuraavat: 
   * scrum
@@ -52,7 +45,7 @@ permalink: /miniprojekti/
 
 ### Työn eteneminen
 
-#### viikko 4 (18-22.11.)
+#### viikko 11 (9-13.3.)
 
 * Ryhmä muodostuvat/muodostetaan
 * Ryhmät tapaavat asiakkaan aloitustilaisuuksista
@@ -64,22 +57,19 @@ permalink: /miniprojekti/
 * Ryhmät varaavat tapaamisen sprinttien 2-3 asiakastapaamisille
   * tapaamisaikojen varaaminen [täältä](https://docs.google.com/document/d/1W4HsdtEnejG4mMY9FRwdRFwnAs8VnpFM9T0um8YVDxI/edit?usp=sharing)
 
-#### viikko 5 (25-29.11.)
+#### viikko 12 (16-20.3.)
 
 * Sprintin 1 katselmointi ja sprintin 2 suunnittelu 
 
-#### viikko 6 (2-6.12.)
+#### viikko 13 (23-27.3.)
 
 * Sprintin 2 katselmointi ja sprintin 3 suunnittelu 
 
-#### viikko 7 (9-10.12.)
+#### viikko 14 (30.3-3.4.)
 
 * Sprintin 3 katselmointi (eli loppudemot)
   * jokainen ryhmä osallistuu yhteen noin 3 h kestoiseen demotilaisuuteen
-  * tilaisuuksia järjestetään kaksi:
-    - maanantai 9.12. klo 14-17 A110 Chemicum
-    - tiistai 10.12. klo 14-17 A110 Chemicum
-  * varaa ryhmällesi aika [täältä](https://docs.google.com/document/d/1W4HsdtEnejG4mMY9FRwdRFwnAs8VnpFM9T0um8YVDxI/edit)
+  * paikka ja aika TBA
 
 ### Toteutettava ohjelmisto
 

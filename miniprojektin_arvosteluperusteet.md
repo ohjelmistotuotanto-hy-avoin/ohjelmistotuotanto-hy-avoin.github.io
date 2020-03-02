@@ -96,8 +96,6 @@ Sprintin maksimi on 2.5 pistettä.
 
 ### Kolmannen sprintin arvosteluperusteet
 
-_Huom: miniprojektit tarkastetaan jossain vaiheessa torstain 12.12. klo 23.59 jälkeen. Sen jälkeen tehtyjä muutoksia ei työssä enää huomioida._ 
-
 #### Pisteytys jakautuu seuraavasti:
 
 * (0.25p) product backlog 
@@ -130,7 +128,7 @@ Sprintin maksimi on 2.5 pistettä.
 #### Vertaispalaute
 
 * Arvosteluperusteiden alussa mainittu henkilökohtainen pisteytys perustuu mm. vertaispalautteeseen
-* Jokaisen ryhmäläisen tulee antaa **vertaispalaute viimeistään lauantaina 21.12. klo 23:59**
+* Jokaisen ryhmäläisen tulee antaa **vertaispalaute viimeistään TBA**
   * vertaispalautteen antaminen on _pakollista_, ilman vertaispalautteen antamista kurssin arvosanaa ei kirjata
 * Vertaispalautteen antaminen tapahtuu [tehtävänpalautussovelluksen](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020) miniproject-tabissa
   * ryhmäläiset eivät näe toistensa vertaispalautteita
@@ -145,7 +143,7 @@ Vertaispalautteen lisäksi ryhmä laatii projektin kulusta pienen raportin (noin
 * jos raportti puuttuu, vähennetään ryhmältä 2 pistettä
 * raportti palautetaan lisäämällä raporttiin linkki projektin GitHubin Readme:hen
 * raportista tulee ilmetä jokaisen projektiin osallistuneen nimi
-* **raportin deadline lauantaina 21.12. klo 23:59**
+* **raportin deadline TBA**
 
 ### Varmista, että commitisi näkyvät githubissa oikein
 
