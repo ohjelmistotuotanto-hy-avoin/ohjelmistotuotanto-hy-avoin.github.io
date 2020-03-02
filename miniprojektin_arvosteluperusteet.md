@@ -54,10 +54,10 @@ Linkit projektin backlogeihin ja muihin dokumentteihin (ja niihin tulee olla kok
   * jokaiseen taskiin on merkitty sen tekijä(t)
   * taskin status on näkyvissä (esim. todo, doing, done)
 * (0.5p) sprintiin 1 valittujen storyjen hyväksymiskriteerit kirjattu
-* (0.5p) testaus
+* (0.25p) testaus
   * toteutettua koodia on yksikkötestattu kohtuullisella tasolla
   * ainakin jossain storyssa hyväksymiskriteerien testausta (cucumber)	
-* (0.5p) jatkuva integraatio
+* (0.25p) jatkuva integraatio
   * koodi githubissa
   * CircleCI (tai jokin muu CI-palvelu) suorttaa ainakin yksikkötestit ja ne menevät läpi
 * (0.5p) toteutus
