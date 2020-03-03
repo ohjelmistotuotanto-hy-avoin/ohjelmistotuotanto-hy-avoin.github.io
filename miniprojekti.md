@@ -74,7 +74,7 @@ permalink: /miniprojekti/
 
 #### viikko 14 (30.3-3.4.)
 
-* Sprintin 3 katselmointi
+* Sprintin 3 katselmointi ja loppudemo
 
 ### Toteutettava ohjelmisto
 
