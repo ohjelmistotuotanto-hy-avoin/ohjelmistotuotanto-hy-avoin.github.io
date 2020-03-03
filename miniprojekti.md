@@ -9,13 +9,17 @@ permalink: /miniprojekti/
 
 ### Ajankohtaista
 
+- Ilmoittaudu miniprojektiin viimeistään pe 6.3. klo 23:59 [täällä](https://study.cs.helsinki.fi/assembler/course/a235e63a-a5d3-43f7-8c53-65ac99c039b3)
+- Voit osallistua minprojektiin siinä vaiheessa kun olet palauttanut vähintään viikkojen 1-3 tehtävät
+- Toinen mahdollisuus miniprojektin suoritukseen käynnistyy 30.3. alkavalla viikolla 
+
 ### Johdanto
 
-- Kurssin aikana tehdään miniprojekti
-- **Kurssin läpipääsy edellyttää hyväksyttyä osallistumista miniprojektiin** tai sen [hyväksilukemista](/osa0#miniprojektin-hyv%C3%A4ksilukeminen)
+- Kurssin suorittaminen [6 opintopisteen](/osa0#kurssin-arvostelu) laajuisena edellyttää hyväksyttyä osallistumista miniprojektiin tai sen [hyväksilukemista](/osa0#miniprojektin-hyv%C3%A4ksilukeminen)
 
 - Projekti tehdään noin 4-6 hengen ryhmissä
 - Projektissa ohjelmoidaan jonkin verran, **pääpaino ei ole ohjelmoinnissa** vaan systemaattisen prosessin (tästä lisää myöhemmin) noudattamisessa.
+- Projekti koostuu kolmesta viikon kestoisesta sprintistä
 - **Jokaisen ryhmän jäsenen on tarkoitus tehdä kunkin sprintin aikana töitä noin 6 tuntia projektin eteen**  
   - Asiakastapaamisiin menevää aikaa ei lasketa viikoittaiseen työaikaan!
 - Ryhmä tekee kussakin sprintissä sen minkä se sprinttiin varatussa ajassa pystyy tekemään, ei enempää eikä vähempää
@@ -23,9 +27,11 @@ permalink: /miniprojekti/
 
 ### Ryhmän muodostaminen
 
-* Ryhmä muodostetaan "spontaanisti" tai tulemalla paikalle johonkin miniprojektien aloitustilaisuuksista
-  - Paikka ja aika TBA
-* Jokaisen _tulee osallistua yhteen tilaisuuteen_. Paikalla on oltava alusta loppuun. Jos olet jo muodostanut miniprojektiryhmän, kaikkien ryhmäläisten tulee osallistua samaan tilaisuuteen.
+* Ilmoittaudu miniprojektiin viimeistään pe 6.3. klo 23:59 [täällä](https://study.cs.helsinki.fi/assembler/course/a235e63a-a5d3-43f7-8c53-65ac99c039b3)
+  * **HUOM** voit osallistua projektiin siinä vaiheessa kun olet palauttanut vähintään viikkojen 1-3 tehtävät!
+* Ryhmä muodostetaan tulemalla paikalle johonkin miniprojektien aloitustilaisuuksista
+  - ajat kerrotaan täällä lauantaina 7.3.
+* Jokaisen _tulee osallistua yhteen tilaisuuteen_. Paikalla on oltava alusta loppuun. 
 * Aloitustilaisuuteen tullessa on syytä tuntea materiaalin osien 1 ja 2 asioista ainakin seuraavat: 
   * scrum
   * sprintti
@@ -40,8 +46,9 @@ permalink: /miniprojekti/
     * luo projektin _create project_ -napista avautuvasta lomakkeesta
     * ja jakaa muille ryhmäläisille luodin projektin id:n
   * **muut ryhmäläiset** kirjautuvat järjestelmään ja liittyvät id:n avulla ryhmään _join project_ -napista avautuvasta lomakkeesta
-* Ryhmä varataa aijan sprinttien 2-3 asiakastapaamisille
+* Ryhmä varataa ajan sprinttien 2-3 asiakastapaamisille
   * tapaamisaikojen varaaminen [täältä](https://docs.google.com/document/d/1W4HsdtEnejG4mMY9FRwdRFwnAs8VnpFM9T0um8YVDxI/edit?usp=sharing)
+  * pääkaupunkiseudun ulkopuolella asuvien on mahdollista osallistua asiakastapaamisiin etänä
 
 ### Työn eteneminen
 
@@ -67,9 +74,7 @@ permalink: /miniprojekti/
 
 #### viikko 14 (30.3-3.4.)
 
-* Sprintin 3 katselmointi (eli loppudemot)
-  * jokainen ryhmä osallistuu yhteen noin 3 h kestoiseen demotilaisuuteen
-  * paikka ja aika TBA
+* Sprintin 3 katselmointi
 
 ### Toteutettava ohjelmisto
 

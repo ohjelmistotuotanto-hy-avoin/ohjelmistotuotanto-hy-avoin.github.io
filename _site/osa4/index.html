@@ -392,7 +392,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p><em>Simplicity, the art of maximizing the amount of work not done, is essential</em></p>
 
-<p>Arkkitehtuuriin suunnittelu ja dokumentointi taas on perinteisesti ollut melko pitkäkestoinen, ohjelmoinnin aloittamista edeltävä vaihe, eräänlainen <em>big Design Up Front</em>. Ketterät menetelmät ja “arkkitehtuurivetoinen” ohjelmistotuotanto ovat siis jossain määrin keskenään ristiriidassa.</p>
+<p>Arkkitehtuuriin suunnittelu ja dokumentointi taas on perinteisesti ollut melko pitkäkestoinen, ohjelmoinnin aloittamista edeltävä vaihe, eräänlainen <em>Big Design Up Front</em>. Ketterät menetelmät ja “arkkitehtuurivetoinen” ohjelmistotuotanto ovat siis jossain määrin keskenään ristiriidassa.</p>
 
 <p>Ketterien menetelmien yhteydessä puhutaan usein <a href="https://www.jamesshore.com/Agile-Book/incremental_design.html">inkrementaalisesta suunnittelusta ja arkkitehtuurista</a>.</p>
 
@@ -400,7 +400,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p>Melko tyypillinen tapa on aloittaa projektit ns. <a href="https://www.infoq.com/news/2008/09/sprint_zero/">nollasprintillä</a> jonka aikana luodaan mm. alustava arkkitehtuuri sekä backlog.</p>
 
-<p>Scrumin varhaisissa artikkeleissa puhuttiin “pre game”-vaiheesta, jonka aikana tehtiin erilaisia kehitystyötä valmistelevia asioita, mm. hahmoteltiin alustava arkkitehtuuri. Sittemmin koko käsite on hävinnyt Scrumista ja toinen Scrumin alkuperäisistä kehittäjistä Ken Schwaber jopa eksplisiittisesti kieltää ja <a href="http://www.scrum.org/assessmentdiscussion/post/1317787">tyrmää</a> koko “nollasprintin” olemassaolon.</p>
+<p>Scrumin varhaisissa artikkeleissa puhuttiin “pre game”-vaiheesta, jonka aikana tehtiin erilaisia kehitystyötä valmistelevia asioita, mm. hahmoteltiin alustava arkkitehtuuri. Sittemmin koko käsite on hävinnyt Scrumista ja toinen Scrumin alkuperäisistä kehittäjistä Ken Schwaber jopa eksplisiittisesti kieltää ja <a href="https://www.scrum.org/resources/blog/scrubbing-sprint-zero">tyrmää</a> koko “nollasprintin” olemassaolon.</p>
 
 <h3 id="kävelevä-luuranko">Kävelevä luuranko</h3>
 
@@ -923,7 +923,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
     <span class="n">EuriborLukija</span> <span class="n">lukija</span><span class="o">;</span>
 
     <span class="kd">public</span> <span class="nf">EuriborKorko</span><span class="o">(</span><span class="kt">int</span> <span class="n">kuukausi</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">lukija</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EuriborlukijaImpl</span><span class="o">(</span><span class="n">kuukausi</span><span class="o">);</span>
+        <span class="n">lukija</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EuriborLukijaImpl</span><span class="o">(</span><span class="n">kuukausi</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="kd">public</span> <span class="kt">double</span> <span class="nf">korko</span><span class="o">()</span> <span class="o">{</span>
@@ -1063,7 +1063,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
     <span class="o">}</span>
     
     <span class="kd">public</span> <span class="n">Tili</span> <span class="nf">maaraikaistili</span><span class="o">(</span><span class="n">String</span> <span class="n">omistaja</span><span class="o">,</span> <span class="kt">double</span> <span class="n">k</span><span class="o">){</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nf">MaaraAikaisTili</span><span class="o">(</span><span class="n">generoiTilinro</span><span class="o">(),</span> <span class="n">omistaja</span><span class="o">,</span> <span class="k">new</span> <span class="n">Tasakorko</span><span class="o">(</span><span class="n">k</span><span class="o">));</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MaaraaikaisTili</span><span class="o">(</span><span class="n">generoiTilinro</span><span class="o">(),</span> <span class="n">omistaja</span><span class="o">,</span> <span class="k">new</span> <span class="n">Tasakorko</span><span class="o">(</span><span class="n">k</span><span class="o">));</span>
     <span class="o">}</span>    
     
     <span class="kd">public</span> <span class="n">Tili</span> <span class="nf">euribortili</span><span class="o">(</span><span class="n">String</span> <span class="n">omistaja</span><span class="o">,</span> <span class="kt">int</span> <span class="n">kk</span><span class="o">){</span>
@@ -1071,7 +1071,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
     <span class="o">}</span>        
 
     <span class="kd">public</span> <span class="n">Tili</span> <span class="nf">maaraaikaisEuribor</span><span class="o">(</span><span class="n">String</span> <span class="n">omistaja</span><span class="o">,</span> <span class="kt">int</span> <span class="n">kk</span><span class="o">){</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nf">MaaraAikaisTili</span><span class="o">(</span><span class="n">generoiTilinro</span><span class="o">(),</span> <span class="n">omistaja</span><span class="o">,</span> <span class="k">new</span> <span class="n">EuriborKorko</span><span class="o">(</span><span class="n">kk</span><span class="o">));</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MaaraaikaisTili</span><span class="o">(</span><span class="n">generoiTilinro</span><span class="o">(),</span> <span class="n">omistaja</span><span class="o">,</span> <span class="k">new</span> <span class="n">EuriborKorko</span><span class="o">(</span><span class="n">kk</span><span class="o">));</span>
     <span class="o">}</span> 
 <span class="o">}</span>
 </code></pre></div></div>
@@ -1277,18 +1277,19 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Komentotehdas</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Komento</span><span class="o">&gt;</span> <span class="n">komennot</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="n">Komento</span> <span class="n">tuntemaaton</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">Komento</span> <span class="n">tuntematon</span><span class="o">;</span>
 
     <span class="kd">public</span> <span class="nf">Komentotehdas</span><span class="o">(</span><span class="n">IO</span> <span class="n">io</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">komennot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Komento</span><span class="o">&gt;();</span>
         <span class="n">komennot</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"summa"</span><span class="o">,</span> <span class="k">new</span> <span class="n">Summa</span><span class="o">(</span><span class="n">io</span><span class="o">));</span>
         <span class="n">komennot</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"tulo"</span><span class="o">,</span> <span class="k">new</span> <span class="n">Tulo</span><span class="o">(</span><span class="n">io</span><span class="o">));</span>
         <span class="n">komennot</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"nelio"</span><span class="o">,</span> <span class="k">new</span> <span class="n">Nelio</span><span class="o">(</span><span class="n">io</span><span class="o">));</span>
+        <span class="n">komennot</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"lopeta"</span><span class="o">,</span> <span class="k">new</span> <span class="n">Lopeta</span><span class="o">(</span><span class="n">io</span><span class="o">));</span>
         <span class="n">tuntematon</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tuntematon</span><span class="o">(</span><span class="n">io</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="kd">public</span> <span class="n">Komento</span> <span class="nf">hae</span><span class="o">(</span><span class="n">String</span> <span class="n">operaatio</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">komennot</span><span class="o">.</span><span class="na">getOrDefault</span><span class="o">(</span><span class="n">operaatio</span><span class="o">,</span> <span class="n">tuntemaaton</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">komennot</span><span class="o">.</span><span class="na">getOrDefault</span><span class="o">(</span><span class="n">operaatio</span><span class="o">,</span> <span class="n">tuntematon</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
@@ -1400,10 +1401,10 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">suorita</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"luku 1: "</span><span class="o">);</span>
-        <span class="kt">int</span> <span class="n">luku1</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+        <span class="n">luku1</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
 
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"luku 2: "</span><span class="o">);</span>
-        <span class="kt">int</span> <span class="n">luku2</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+        <span class="n">luku2</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
 
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"vastaus: "</span><span class="o">+</span><span class="n">laske</span><span class="o">());</span>
     <span class="o">}</span>
@@ -1482,10 +1483,10 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">suorita</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"luku 1: "</span><span class="o">);</span>
-        <span class="kt">int</span> <span class="n">luku1</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+        <span class="n">luku1</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
 
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"luku 2: "</span><span class="o">);</span>
-        <span class="kt">int</span> <span class="n">luku2</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+        <span class="n">luku2</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
 
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"vastaus: "</span><span class="o">+</span><span class="n">laske</span><span class="o">());</span>
     <span class="o">}</span>
@@ -1514,7 +1515,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p>Strategy-suunnittelumalli on osittain samaa sukua template-metodin kanssa, siinä kokonainen algoritmi tai algoritmin osa korvataan erillisessä luokassa toteutetulla toteutuksella. Strategioita voidaan vaihtaa suorituksen aikana, template-metodissa tietty olio toimii samalla tavalla koko elinaikansa.</p>
 
-<p>Lisää template method -suunnittelumallista <a href="http://www.oodesign.com/template-method-pattern.html">täällä</a> ja <a href="http://www.netobjectives.com/PatternRepository/index.php?title=TheTemplateMethodPattern">täällä</a>.</p>
+<p>Lisää template method -suunnittelumallista <a href="http://www.oodesign.com/template-method-pattern.html">täällä</a> ja <a href="http://www.netobjectives.net/patternrepository/index.php?title=TheTemplateMethodPattern">täällä</a>.</p>
 
 <h3 id="koodin-laatuattribuutti-toisteettomuus">Koodin laatuattribuutti: toisteettomuus</h3>
 
@@ -1725,9 +1726,9 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p>Uusissa Javan versioissa kaikki rajapinnan <em>Collection</em> toteuttavat luokat mahdollistavat alkioidensa käsittelyn <em>Stream</em>:ina eli “alkiovirtoina”, ks. <a href="http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html">API-kuvaus</a>. Kokoelmaluokasta saadaan sitä vastaava alkiovirta kutsumalla kokoelmalle metodia <em>stream</em>.</p>
 
-<p>Alkiovirtoja on taas mahdollista käsitellä monin tavoin, nyt meitä kiinnostava metodi on <em>filter</em>, jonka avulla streamista voidaan tehdä uusi streami, josta on poistettu ne alkiot, jotka eivät täytä filtterille annettua boolean-arvoista, funktionaalisen rajapinnan _Predicate<String>_ toteuttavaa ehtoa.</String></p>
+<p>Alkiovirtoja on taas mahdollista käsitellä monin tavoin, nyt meitä kiinnostava metodi on <em>filter</em>, jonka avulla streamista voidaan tehdä uusi streami, josta on poistettu ne alkiot, jotka eivät täytä filtterille annettua boolean-arvoista, funktionaalisen rajapinnan <em>Predicate&lt;String&gt;</em> toteuttavaa ehtoa.</p>
 
-<p>Määrittelemämme rajapinta <em>Ehto</em> on oikeastaan juuri tarkoitukseen sopiva. Jotta voisimme käyttää rajapintaa, tulee meidän kuitenkin tyyppitarkastusten takia määritellä että rajapintamme laajentaa rajapintaa _Predicate<String>_:</String></p>
+<p>Määrittelemämme rajapinta <em>Ehto</em> on oikeastaan juuri tarkoitukseen sopiva. Jotta voisimme käyttää rajapintaa, tulee meidän kuitenkin tyyppitarkastusten takia määritellä että rajapintamme laajentaa rajapintaa <em>Predicate&lt;String&gt;</em>:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.function.Predicate</span><span class="o">;</span>
 
@@ -1793,7 +1794,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <h4 id="hyvä-vs-paha-copypaste-viikko-5">Hyvä vs. paha copypaste <span style="color:blue">[viikko 5]</span></h4>
 
-<p>Vaikka koodin, konfiguraatioiden, tietokantaskeeman yms. toisteettomuus on yleisesti ottaen hyvä asia, voi ajoittain olla järkevää ainakin ensin tehdä nopea copypasteen perustuva ratkaisu ja <a href="/osa4/refaktorointi">refaktoroida</a> koodi tarvittaessa myöhemmin siistimmäksi.</p>
+<p>Vaikka koodin, konfiguraatioiden, tietokantaskeeman yms. toisteettomuus on yleisesti ottaen hyvä asia, voi ajoittain olla järkevää ainakin ensin tehdä nopea copypasteen perustuva ratkaisu ja <a href="/osa4/#refaktorointi">refaktoroida</a> koodi tarvittaessa myöhemmin siistimmäksi.</p>
 
 <p>Monissa tilanteissa nimittäin copypasten poistamisella on pieni hintansa, se saattaa muuttaa sovellusta monimutkaisemmaksi. Gutenberg-lukijan kohdalla alkuperäinen versio saattaisi olla täysin riittävä käyttöön, ja refaktorointi ei välttämättä olisi vaivan arvoinen. Mutta jos sovellukseen tulisi tarve useimpiin ehtoihin, ei sovelluksen alkuperäinen design siihen kunnolla taipuisi ja copypastea tulisi yhä suuremmat määrät.</p>
 
@@ -1815,7 +1816,7 @@ Esim. c-kielessä on tapana ollut kirjoittaa todella tiivistä koodia, jossa yhd
 <p>Ajat ovat muuttuneet ja nykyisen trendin mukaista on pyrkiä kirjoittamaan koodia, joka jo nimeämiskäytänteiden sekä rakenteen kautta ilmaisee mahdollisimman hyvin sen, mitä koodi tekee.</p>
 
 <p>Selkeän nimennän lisäksi muita luettavan eli “puhtaan” koodin (engl. clean code) tunnusmerkkejä ovat jo monet meille entuudestaan tutut asiat joita on listattu 
-<a href="www.planetgeek.ch/wp-content/uploads/2011/02/Clean-Code-Cheat-Sheet-V1.3.pdf">täällä</a>.</p>
+<a href="https://www.planetgeek.ch/wp-content/uploads/2011/02/Clean-Code-Cheat-Sheet-V1.3.pdf">täällä</a>.</p>
 
 <p>Miksi selkeän koodin kirjoittaminen on niin tärkeää, eikö riitä että koodari ymmärtää itse mistä koodissa on kyse? Tämä ei todellakaan riitä, sillä suurin osa, <a href="https://www.goodreads.com/quotes/835238-indeed-the-ratio-of-time-spent-reading-versus-writing-is">joidenkin arvioiden mukaan jopa 90%</a>  “ohjelmointiin” kuluvasta ajasta menee olemassa olevan koodin lukemiseen. Koodia, joko itsensä tai jonkun muun kirjoittamaa, on luettava debuggauksen yhteydessä sekä sovellusta laajennettaessa. On kovin tyypillistä että se oma aikoinaan niin selkeä koodi, ei sitten olekaan yhtä selkeää parin kuukauden kuluttua:</p>
 
@@ -1889,7 +1890,7 @@ Esim. c-kielessä on tapana ollut kirjoittaa todella tiivistä koodia, jossa yhd
 
 <p>Refaktoroinnissa kannattaa ehdottomasti edetä pienin askelin eli yksi hallittu muutos kerrallaan. Testit on syytä suorittaa jokaisen refaktorointioperaation jälkeen, jotta mahdollinen regressio, eli aiemmin toimineen koodin hajoaminen huomataan mahdollisimman nopeasti.</p>
 
-<p>Refaktorointia kannattaa tehdä lähes koko ajan. Kun koodin sisäinen laatu säilyy siistinä, on koodin laajentaminen miellyttävää ja pienien refaktorointioperaatioiden tekeminen suhteellisen vaivatonta. Jos koodin sisäinen laatu pääsee rapistumaan, muuttuu sen laajentaminen hitaaksi ja myös refaktoroinnin suorittaminen muuttuu koko ajan työläämmäksi. Monilla ohjelmistokehitystiimeillä onkin <em>definition of doneen</em> kirjattu, että valmiin määritelmä sisältää sen, että koodi on refaktoroitu riittävän siistiksi. Siisteyttä saatetaan valvoa esim. <a href="osa3#koodin-katselmointi-github-ja-pull-requestit">pull requesteina tehtävänä katselmointina</a>.</p>
+<p>Refaktorointia kannattaa tehdä lähes koko ajan. Kun koodin sisäinen laatu säilyy siistinä, on koodin laajentaminen miellyttävää ja pienien refaktorointioperaatioiden tekeminen suhteellisen vaivatonta. Jos koodin sisäinen laatu pääsee rapistumaan, muuttuu sen laajentaminen hitaaksi ja myös refaktoroinnin suorittaminen muuttuu koko ajan työläämmäksi. Monilla ohjelmistokehitystiimeillä onkin <em>definition of doneen</em> kirjattu, että valmiin määritelmä sisältää sen, että koodi on refaktoroitu riittävän siistiksi. Siisteyttä saatetaan valvoa esim. <a href="/osa3#koodin-katselmointi-github-ja-pull-requestit">pull requesteina tehtävänä katselmointina</a>.</p>
 
 <p>Osa refaktoroinneista, esim. metodien tai luokkien uudelleennimeäminen tai pitkien metodien jakaminen pienemmiksi on helppoa. Aina ei näin kuitenkaan ole. Joskus on tarve tehdä suurempien mittaluokkien refaktorointeja, joissa ohjelman rakenne eli arkkitehtuuri muuttuu. Tällaiset refaktoroinnit saattavat kestää päiviä tai jopa viikkoja ja niiden suorittaminen siten, että koodi säilyy koko ajan toimivana on jo kohtuullisen haastavaa.</p>
 

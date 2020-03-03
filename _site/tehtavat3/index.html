@@ -616,9 +616,7 @@ Elementin nimi on määritelty tiedostossa <em>src/main/resources/templates/logi
 
 <p><strong>HUOM2:</strong> salasanan varmistuskentän (confirm password) nimi on <em>passwordConfirmation</em></p>
 
-<p><strong>HUOM3:</strong></p>
-
-<p>Uuden käyttäjän luomisen kokeilua hankaloittaa se, että käyttäjänimen on oltava uniikki. Kannattanee generoida koodissa satunnaisia käyttäjänimiä esim. seuraavasti:</p>
+<p><strong>HUOM3:</strong> Uuden käyttäjän luomisen kokeilua hankaloittaa se, että käyttäjänimen on oltava uniikki. Kannattanee generoida koodissa satunnaisia käyttäjänimiä esim. seuraavasti:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Random</span> <span class="n">r</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="o">();</span>
     
@@ -626,9 +624,7 @@ Elementin nimi on määritelty tiedostossa <em>src/main/resources/templates/logi
 <span class="n">element</span><span class="o">.</span><span class="na">sendKeys</span><span class="o">(</span><span class="s">"arto"</span><span class="o">+</span><span class="n">r</span><span class="o">.</span><span class="na">nextInt</span><span class="o">(</span><span class="mi">100000</span><span class="o">));</span>
 </code></pre></div></div>
 
-<p><strong>HUOM3:</strong></p>
-
-<p>Joskus linkin klikkaaminen Seleniumissa aiheuttaa poikkeuksen <em>StaleElementReferenceException</em></p>
+<p><strong>HUOM4:</strong> Joskus linkin klikkaaminen Seleniumissa aiheuttaa poikkeuksen <em>StaleElementReferenceException</em></p>
 
 <p>Käytännössä syynä on se, että Selenium yrittää klikata linkkiä “liian aikaisin”. Ongelma on mahdollista kiertää klikkaamalla poikkeuksen tapahtuessa linkkiä uudelleen. Jos törmäät ongelmaan, voit ottaa koodiisi seuraavassa olevan apumetodin <em>clickLinkWithText</em>, joka suorittaa sopivan määrän uudelleenklikkauksia:</p>
 
