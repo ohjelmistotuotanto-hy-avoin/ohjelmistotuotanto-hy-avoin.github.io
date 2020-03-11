@@ -58,8 +58,6 @@ Harjoitustehtävien oletettu kuormittavuus on noin 8 tuntia "viikkojen" 1-3 aika
 
 ### Kurssikoe
 
-Avoimen yliopiston Moodle-järjestelmässä tehtävä kurssikoe keskittyy teoriamateriaalissa oleviin asioihin.
-
 Kurssilla on kolme koeajankohtaa
 - lauantai 14.3.2020
 - lauantai 4.4.2020
@@ -68,6 +66,12 @@ Kurssilla on kolme koeajankohtaa
 Kokeen voi aloittaa mihin aikaan tahansa koepäivänä. Kokeessa on vastausaikaa 3 tuntia. Kokeen voi tehdä mistä tahansa riittävän hyvän internetyhteyden omaavasta paikasta.
 
 Näiden lisäksi järjestetään uusintakoe lauantaina 9.5.2020
+
+Koe keskittyy kurssin teoriamateriaalissa käsiteltäviin asioihin, kokeessa ei kysytä vierailuluentojen sisällöistä eikä niistä teknisistä aihepiireistä (mm versionhallinta) mitä kurssimateriaalin osat 0-5 eivät käsittele.
+
+Koe tehdään avoimen yliopiston [moodlessa](https://moodle.helsinki.fi/course/view.php?id=34070') ja päätäkseni kirjautumaan järjestelmään avoimen yliopiston opiskelijoiden on ilmoittauduttava kurssille viimeistään vuorokautta aiemmin [tänne](https://courses.helsinki.fi/fi/aytkt20006/129239628) ja aktivoitava  [käyttäjätunnuksensa](https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/opinnoissa-alkuun/helsingin-yliopiston-kayttajatunnus).
+
+Koetta tehtäessä internet on käytössä, mutta kaikenlainen yhteistyö on kielletty. Vastaukset on kirjoitettava omin sanoin, tekstin kopioiminen kurssimateriaalista tai muualta internetistä johtaa heti HY:n [plagiointikäytäntöjen](https://guide.student.helsinki.fi/fi/artikkeli/mita-ovat-vilppi-ja-plagiointi) soveltamiseen 
 
 ### Miniprojekti
 
