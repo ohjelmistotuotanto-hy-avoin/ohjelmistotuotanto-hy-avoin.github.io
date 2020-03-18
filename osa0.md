@@ -73,6 +73,8 @@ Koe tehdään avoimen yliopiston [moodlessa](https://moodle.helsinki.fi/course/v
 
 Koetta tehtäessä internet on käytössä, mutta kaikenlainen yhteistyö on kielletty. Vastaukset on kirjoitettava omin sanoin, tekstin kopioiminen kurssimateriaalista tai muualta internetistä johtaa heti HY:n [plagiointikäytäntöjen](https://guide.student.helsinki.fi/fi/artikkeli/mita-ovat-vilppi-ja-plagiointi) soveltamiseen 
 
+Jokainen osallistuja voi osallistua kolmeen koetilaisuuteen. Korkein pistemäärä jää voimaan. Kurssin arvostelu suoritetaan vasta kurssin päättyessä eli 30.4.2020 klo 23:59, joten voit jatkaa kurssin tehtävien tekemistä kokeessa käymisen jälkeenkin.
+
 ### Miniprojekti
 
 Kurssin suorittaminen 6 opintopisteen laajuisena edellyttää _miniprojektiin_ osallistumista. 
