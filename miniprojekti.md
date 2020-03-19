@@ -9,9 +9,10 @@ permalink: /miniprojekti/
 
 ### Ajankohtaista
 
-- Ilmoittaudu miniprojektiin viimeistään pe 6.3. klo 23:59 [täällä](https://study.cs.helsinki.fi/assembler/course/a235e63a-a5d3-43f7-8c53-65ac99c039b3)
 - Voit osallistua minprojektiin siinä vaiheessa kun olet palauttanut vähintään viikkojen 1-3 tehtävät
 - Toinen mahdollisuus miniprojektin suoritukseen käynnistyy 30.3. alkavalla viikolla 
+- Ilmoittautuminen alkaa noin 23.3. lisää tietoa emailitse
+- Miniprojektien asiakastapaamiset järjestetään virtuaalisesti [zoom](https://helpdesk.it.helsinki.fi/ohjeet/yhteydenpito-ja-julkaiseminen/videokokoukset/zoom)-järjestelmän avulla.
 
 ### Johdanto
 

@@ -83,9 +83,9 @@ Miniprojekti on ryhmässä tehtävä pieni harjoitustyö, jonka pääasiallisena
 
 Kukin miniprojektiryhmä koostuu 4-6 opiskelijasta, ryhmillä on myös asiakas, jota ryhmä tapaa viikoittain neljän viikon ajan. Ensimmäisellä viikolla asiakastapaamiseen tulee varata 90 minuuttia, jälkimmäisillä 30 minuuttia. 
 
-Miniprojekteissa työskentelyyn tulee varata yhteensä noin 6 tuntia aikaa viikossa.
+Miniprojektien asiakastapaamiset järjestetään virtuaalisesti [zoom](https://helpdesk.it.helsinki.fi/ohjeet/yhteydenpito-ja-julkaiseminen/videokokoukset/zoom)-järjestelmän avulla.
 
-Jokaisen miniprojektiin osallistuvan tulee osallistua fyysiesti ainakin ensimmäiseen asiakastapaamiseen, joka järjestetään Helsingin yliopiston Kumpulan kampuksella. 
+Miniprojekteissa työskentelyyn tulee varata yhteensä noin 6 tuntia aikaa viikossa.
 
 Miniprojekteja järjestetään sekä maalis- että huhtikuussa. Ensimmäisten asiakastapaamisten ajankohdasta tiedotetaan myöhemmin. 
 
