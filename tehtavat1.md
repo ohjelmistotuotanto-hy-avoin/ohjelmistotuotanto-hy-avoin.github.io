@@ -373,7 +373,7 @@ Ideana on, että ohjelmistokehittäjä noudattaa seuraavaa sykliä:
 - build-palvelin seuraa keskitettyä repositoriota ja kun siellä huomataan muutoksia, kääntää - käännöspalvelin koodin ja suorittaa sille testit
 - build-palvelin raportoi havaituista virheistä
 
-Erillisen build-palvelimen avulla varmistetaan, että ohjelmisto toimii muuallakin kuin muutokset tehneen ohjelmistokehittäjän koneella. Tätä käytännettä kutsutaan _jatkuvaksi integraatioksi_ (engl. continuous integration). Palaamme asiaan tarkemmin kurssin [kolmannessa osassa](http://localhost:4000/osa3#jatkuva-integraatio)
+Erillisen build-palvelimen avulla varmistetaan, että ohjelmisto toimii muuallakin kuin muutokset tehneen ohjelmistokehittäjän koneella. Tätä käytännettä kutsutaan _jatkuvaksi integraatioksi_ (engl. continuous integration). Palaamme asiaan tarkemmin kurssin [kolmannessa osassa](https://ohjelmistotuotanto-hy-avoin.github.io/osa3/#jatkuva-integraatio)
 
 Kurssilla käytämme pilvessä toimivaa [CircleCI](https://circleci.com/)-nimistä build-palvelinohjelmistoa.
 
