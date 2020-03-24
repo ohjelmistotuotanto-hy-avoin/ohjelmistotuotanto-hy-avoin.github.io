@@ -46,11 +46,7 @@ HtmlUnitDriver:in hyvä puoli on nopeus. Voit käyttää sitä myös testeissä.
 
 ### Tapa 2: geckodriver downloadaus (testattu syksyllä 2019)
 
-Lataa ja asenna geckodriver [täällä olevan ensimmäisen vastauksen mukaan](https://askubuntu.com/questions/870530/how-to-install-geckodriver-in-ubuntu)
-
-Korvaa ohjeen kohta 4. tällä: 
-
-_sudo mv geckodriver /usr/local/bin/_
+Lataa ja asenna geckodriver `$ sudo apt-get install -y firefox-geckodriver`
 
 Ota koodissa käyttöön _FirefoxDriver_:
 
