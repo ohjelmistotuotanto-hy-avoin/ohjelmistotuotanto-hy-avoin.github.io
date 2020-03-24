@@ -46,11 +46,7 @@ HtmlUnitDriver:in hyvä puoli on nopeus. Voit käyttää sitä myös testeissä.
 
 ### Tapa 2: geckodriver downloadaus (testattu syksyllä 2019)
 
-Lataa ja asenna geckodriver [täällä olevan ensimmäisen vastauksen mukaan](https://askubuntu.com/questions/870530/how-to-install-geckodriver-in-ubuntu)
-
-Korvaa ohjeen kohta 4. tällä: 
-
-_sudo mv geckodriver /usr/local/bin/_
+Lataa ja asenna geckodriver `$ sudo apt-get install -y firefox-geckodriver`
 
 Ota koodissa käyttöön _FirefoxDriver_:
 
@@ -64,7 +60,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
     driver.get(URL);
 ```
 
-### Tapa 3: chromedriverin downloadaus (testattu Windows:lla talvella 2020)
+### Tapa 3: chromedriverin downloadaus (testattu Ubuntu 19.10:lla keväällä 2020)
+
+Lataa ja asenna chromedriver `$ sudo apt-get install -y chromium-chromedriver`
+
+### Tapa 4: chromedriverin downloadaus (testattu Windows:lla talvella 2020)
 
 Tarkista Chromen versio, lataa ja asenna ChromeDriver [täältä](https://sites.google.com/a/chromium.org/chromedriver/downloads).
 
@@ -92,7 +92,7 @@ Tällöin pystyt myös yliajamaan ajurin määrittelyn komentoriviltä.
 ```
 gradlew browse -Dwebdriver.chrome.driver='C:\\Users\\All Users\\Tools\\chromedriver.exe'
 ```
-### Tapa 4: WebDriverManager
+### Tapa 5: WebDriverManager
 
 **Tätä ja seuraavia tapoja ei ole testattu tämän kurssin aikana**, joten on epäselvää toimivatko nämä, tai jos toimivat niin todennäköisesti vasta jos kirjastojen versiot muutetaan uudempiin. Tee sivulle pull request, jos saat jonkin tavan toimimaan.
 
@@ -132,7 +132,7 @@ public void setUp() {
 }
 ```
 
-### tapa 5: firefox-driver
+### tapa 6: firefox-driver
 
 Kokeile käyttää FirefoxDriveria Chromen sijaan. 
 
