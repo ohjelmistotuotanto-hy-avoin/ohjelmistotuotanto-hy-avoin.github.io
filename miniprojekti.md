@@ -28,10 +28,10 @@ permalink: /miniprojekti/
 
 ### Ryhmän muodostaminen
 
-* Ilmoittaudu miniprojektiin viimeistään pe 6.3. klo 23:59 [täällä](https://study.cs.helsinki.fi/assembler/course/a235e63a-a5d3-43f7-8c53-65ac99c039b3)
+* Ilmoittaudu miniprojektiin viimeistään pe 27.3. klo 23:59 [täällä](https://study.cs.helsinki.fi/assembler/course/e86c2577-4cd1-4f35-9b05-460d80f18520)
   * **HUOM** voit osallistua projektiin siinä vaiheessa kun olet palauttanut vähintään viikkojen 1-3 tehtävät!
 * Ryhmä muodostetaan tulemalla paikalle johonkin miniprojektien aloitustilaisuuksista
-  - ajat kerrotaan täällä lauantaina 7.3.
+  - ajat kerrotaan täällä lauantaina 28.3.
 * Jokaisen _tulee osallistua yhteen tilaisuuteen_. Paikalla on oltava alusta loppuun. 
 * Aloitustilaisuuteen tullessa on syytä tuntea materiaalin osien 1 ja 2 asioista ainakin seuraavat: 
   * scrum
@@ -75,7 +75,7 @@ permalink: /miniprojekti/
 
 #### viikko 14 (30.3-3.4.)
 
-* Sprintin 3 katselmointi ja loppudemo
+* Sprintin 3 katselmointi
 
 ### Toteutettava ohjelmisto
 
