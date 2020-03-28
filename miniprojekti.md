@@ -53,7 +53,7 @@ permalink: /miniprojekti/
 
 ### Työn eteneminen
 
-#### viikko 11 (9-13.3.)
+#### viikko 14 (30.3.-3.4.)
 
 * Ryhmä muodostuvat/muodostetaan
 * Ryhmät tapaavat asiakkaan aloitustilaisuuksista
@@ -65,15 +65,16 @@ permalink: /miniprojekti/
 * Ryhmät varaavat tapaamisen sprinttien 2-3 asiakastapaamisille
   * tapaamisaikojen varaaminen [täältä](https://docs.google.com/document/d/1W4HsdtEnejG4mMY9FRwdRFwnAs8VnpFM9T0um8YVDxI/edit?usp=sharing)
 
-#### viikko 12 (16-20.3.)
+#### viikko 15 ja 16 (6-17.4.)
 
-* Sprintin 1 katselmointi ja sprintin 2 suunnittelu 
+* Sprintin 1 katselmointi ja sprintin 2 suunnittelu
+* Pääsiäisen vuoksi sprintin 2 pituus on poikkeuksellisesti kaksi viikkoa
 
-#### viikko 13 (23-27.3.)
+#### viikko 17 (20-24.4.)
 
 * Sprintin 2 katselmointi ja sprintin 3 suunnittelu 
 
-#### viikko 14 (30.3-3.4.)
+#### viikko 18 (27-30.4.)
 
 * Sprintin 3 katselmointi
 
