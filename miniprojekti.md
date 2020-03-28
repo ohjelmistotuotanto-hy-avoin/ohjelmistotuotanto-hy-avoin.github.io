@@ -13,6 +13,7 @@ permalink: /miniprojekti/
 - Toinen mahdollisuus miniprojektin suoritukseen käynnistyy 30.3. alkavalla viikolla 
 - Ilmoittautuminen alkaa noin 23.3. lisää tietoa emailitse
 - Miniprojektien asiakastapaamiset järjestetään virtuaalisesti [zoom](https://helpdesk.it.helsinki.fi/ohjeet/yhteydenpito-ja-julkaiseminen/videokokoukset/zoom)-järjestelmän avulla.
+- Ohjaajaan Telegram-käyttäjätunnus on @kalleilv. Ohjaajaan voi ottaa suoraan yhteyttä mihin tahansa miniprojektiin liittyvissä kysymyksissä.
 
 ### Johdanto
 
