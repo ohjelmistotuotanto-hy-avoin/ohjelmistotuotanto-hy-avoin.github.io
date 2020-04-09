@@ -198,11 +198,7 @@
 
 <h3 id="tapa-2-geckodriver-downloadaus-testattu-syksyllä-2019">Tapa 2: geckodriver downloadaus (testattu syksyllä 2019)</h3>
 
-<p>Lataa ja asenna geckodriver <a href="https://askubuntu.com/questions/870530/how-to-install-geckodriver-in-ubuntu">täällä olevan ensimmäisen vastauksen mukaan</a></p>
-
-<p>Korvaa ohjeen kohta 4. tällä:</p>
-
-<p><em>sudo mv geckodriver /usr/local/bin/</em></p>
+<p>Lataa ja asenna geckodriver <code class="highlighter-rouge">$ sudo apt-get install -y firefox-geckodriver</code></p>
 
 <p>Ota koodissa käyttöön <em>FirefoxDriver</em>:</p>
 
@@ -215,7 +211,11 @@
     <span class="n">driver</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">URL</span><span class="o">);</span>
 </code></pre></div></div>
 
-<h3 id="tapa-3-chromedriverin-downloadaus-testattu-windowslla-talvella-2020">Tapa 3: chromedriverin downloadaus (testattu Windows:lla talvella 2020)</h3>
+<h3 id="tapa-3-chromedriverin-downloadaus-testattu-ubuntu-1910lla-keväällä-2020">Tapa 3: chromedriverin downloadaus (testattu Ubuntu 19.10:lla keväällä 2020)</h3>
+
+<p>Lataa ja asenna chromedriver <code class="highlighter-rouge">$ sudo apt-get install -y chromium-chromedriver</code></p>
+
+<h3 id="tapa-4-chromedriverin-downloadaus-testattu-windowslla-talvella-2020">Tapa 4: chromedriverin downloadaus (testattu Windows:lla talvella 2020)</h3>
 
 <p>Tarkista Chromen versio, lataa ja asenna ChromeDriver <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">täältä</a>.</p>
 
@@ -240,7 +240,7 @@
 <p>Tällöin pystyt myös yliajamaan ajurin määrittelyn komentoriviltä.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gradlew browse -Dwebdriver.chrome.driver='C:\\Users\\All Users\\Tools\\chromedriver.exe'
 </code></pre></div></div>
-<h3 id="tapa-4-webdrivermanager">Tapa 4: WebDriverManager</h3>
+<h3 id="tapa-5-webdrivermanager">Tapa 5: WebDriverManager</h3>
 
 <p><strong>Tätä ja seuraavia tapoja ei ole testattu tämän kurssin aikana</strong>, joten on epäselvää toimivatko nämä, tai jos toimivat niin todennäköisesti vasta jos kirjastojen versiot muutetaan uudempiin. Tee sivulle pull request, jos saat jonkin tavan toimimaan.</p>
 
@@ -277,7 +277,7 @@
 <span class="o">}</span>
 </code></pre></div></div>
 
-<h3 id="tapa-5-firefox-driver">tapa 5: firefox-driver</h3>
+<h3 id="tapa-6-firefox-driver">tapa 6: firefox-driver</h3>
 
 <p>Kokeile käyttää FirefoxDriveria Chromen sijaan.</p>
 

@@ -81,7 +81,7 @@ Kurssin suorittaminen 6 opintopisteen laajuisena edellyttää _miniprojektiin_ o
 
 Miniprojekti on ryhmässä tehtävä pieni harjoitustyö, jonka pääasiallisena tarkoituksena on projektinhallinnan sekä eräiden laadunhallintatekniikkoiden harjoittelu. 
 
-Kukin miniprojektiryhmä koostuu 4-6 opiskelijasta, ryhmillä on myös asiakas, jota ryhmä tapaa viikoittain neljän viikon ajan. Ensimmäisellä viikolla asiakastapaamiseen tulee varata 90 minuuttia, jälkimmäisillä 30 minuuttia. 
+Kukin miniprojektiryhmä koostuu 4-6 opiskelijasta, ryhmillä on myös asiakas, jota ryhmä tapaa viikoittain kolmen viikon ajan. Ensimmäisellä viikolla asiakastapaamiseen tulee varata 90 minuuttia, jälkimmäisillä 30 minuuttia. 
 
 Miniprojektien asiakastapaamiset järjestetään virtuaalisesti [zoom](https://helpdesk.it.helsinki.fi/ohjeet/yhteydenpito-ja-julkaiseminen/videokokoukset/zoom)-järjestelmän avulla.
 
@@ -89,7 +89,7 @@ Miniprojekteissa työskentelyyn tulee varata yhteensä noin 6 tuntia aikaa viik
 
 Miniprojekteja järjestetään sekä maalis- että huhtikuussa. Ensimmäisten asiakastapaamisten ajankohdasta tiedotetaan myöhemmin. 
 
-Voit osallistua miniprojektiin siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät.
+Voit osallistua miniprojektiin siinä vaiheessa kun olet tehnyt vähintään kurssin kolmen ensimmäisen viikon tehtävät.
 
 #### Miniprojektin hyväksilukeminen
 
@@ -133,7 +133,7 @@ Kaikki monivalitatehtävät ovat joukkoja väittämiä, joista jokainen voi olla
 - jos _oikeatVastaukset/vaittamaLukumaara_ on pienempi tai yhtäsuuri kuin 0.45, on tuloksena 0 mvp:tä. 
 - jos _oikeatVastaukset/vaittamaLukumaara_ on enemmän kuin 0.45, kasvaa mvp-määrä lineaarisesti siten, että kaikki kohdat oikein tuo yhden mvp:n. 
 
-"Teknisistä" harjoitustehtävistä on tarjolla *8 kurssipistettä*. Täysiin kurssipisteisiin edellytetään 90 % normaalien laskareiden tekemistä.
+"Teknisistä" harjoitustehtävistä on tarjolla *8 kurssipistettä*. Täysiin kurssipisteisiin edellytetään 90 % normaalien laskareiden tekemistä. Tehtävien lukumäärä on 61, joten 8 kurssipisteeseen riittävä määrä on 55 tehtävää. Yhteen pisteeseen tarvittava tehtävien määrä on 13, ja tämän jälkeen 6 tehtävän lisäys tuo yhden kurssipisteen.
 
 ### Luennot - laskuharjoitukset - miniprojekti
 
