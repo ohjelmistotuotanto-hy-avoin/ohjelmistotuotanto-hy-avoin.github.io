@@ -128,7 +128,7 @@ Sprintin maksimi on 2.5 pistettä.
 #### Vertaispalaute
 
 * Arvosteluperusteiden alussa mainittu henkilökohtainen pisteytys perustuu mm. vertaispalautteeseen
-* Jokaisen ryhmäläisen tulee antaa **vertaispalaute viimeistään keskiviikkona 8.4. klo 23:59**
+* Jokaisen ryhmäläisen tulee antaa **vertaispalaute viimeistään perjantaina 8.5. klo 23:59**
   * vertaispalautteen antaminen on _pakollista_, ilman vertaispalautteen antamista kurssin arvosanaa ei kirjata
 * Vertaispalautteen antaminen tapahtuu [tehtävänpalautussovelluksen](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020) miniproject-tabissa
   * ryhmäläiset eivät näe toistensa vertaispalautteita
@@ -143,7 +143,7 @@ Vertaispalautteen lisäksi ryhmä laatii projektin kulusta pienen raportin (noin
 * jos raportti puuttuu, vähennetään ryhmältä 2 pistettä
 * raportti palautetaan lisäämällä raporttiin linkki projektin GitHubin Readme:hen
 * raportista tulee ilmetä jokaisen projektiin osallistuneen nimi
-* **raportin deadline on keskiviikko 8.4. klo 23:59**
+* **raportin deadline on perjantai 8.5. klo 23:59**
 
 ### Varmista, että commitisi näkyvät githubissa oikein
 
