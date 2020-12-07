@@ -21,8 +21,6 @@ Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto
 
 ### Viikko 1
 
-###
-
 - [Monivalintatehtävät]({{site.stats_url}}/quiz/1)
 - Ohjelmointi/versionhallinta/konfigurointitehtävät:
   - [Python](/python/tehtavat1)
