@@ -7,7 +7,7 @@ permalink: /selenium_troubleshooting/
 
 ## Selenium troubleshooting
 
-Osalla on ollut ongelmia Seleniumin toiminnan kanssa. Alla muutamia tapoja, miten ongelmat on saatu ratkaisuta. Jos törmäät ongelmaan ja saat sen ratkaistua jollain alla mainitsemattomalla tavalla, lisää ohje dokumenttiin editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/selenium_troubleshooting.md)
+Osalla on ollut ongelmia Seleniumin toiminnan kanssa. Alla muutamia tapoja, miten ongelmat on saatu ratkaisuta. Jos törmäät ongelmaan ja saat sen ratkaistua jollain alla mainitsemattomalla tavalla, lisää ohje dokumenttiin editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io/blob/master/selenium_troubleshooting.md)
 
 ### Tapa 1: HtmlUnit-driver
 
@@ -44,9 +44,31 @@ public class Tester {
 
 HtmlUnitDriver:in hyvä puoli on nopeus. Voit käyttää sitä myös testeissä. Testien debuggaaminen muuttuu hankalammaksi, mutta testit toimivat nopeasti. Testejä debugatessa best practice lienee sivun html-koodin tulostaminen konsoliin.
 
-### Tapa 2: geckodriver downloadaus (testattu syksyllä 2019)
+#### Tapa 2: chromedriverin downloadaus
 
-Lataa ja asenna geckodriver `$ sudo apt-get install -y firefox-geckodriver`
+Kun itse kokeilin tehtävää vuoden tauon jälkeen marraskuussa 2020 uudella koneellani törmäsin seuraavaan virheilmoitukseen
+
+```
+Exception in thread "main" java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
+        at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
+        at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:125)
+        at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+        at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:156)
+        at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:346)
+        at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:91)
+        at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
+        at ohtu.Tester.main(Tester.java:11)
+```
+
+Ongelma ratkasi [täällä](https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver#quick-installation) olevalla ohjeella (oma koneeni Mac). Ohjeista toisen pitäisi toimia TKT:n fuksikannettaville, mutta ne edellyttävät pääkäyttäjän oikeuksia
+
+### Tapa 3: geckodriver downloadaus (testattu syksyllä 2019)
+
+Lataa ja asenna geckodriver [täällä olevan ensimmäisen vastauksen mukaan](https://askubuntu.com/questions/870530/how-to-install-geckodriver-in-ubuntu)
+
+Korvaa ohjeen kohta 4. tällä: 
+
+_sudo mv geckodriver /usr/local/bin/_
 
 Ota koodissa käyttöön _FirefoxDriver_:
 
@@ -60,41 +82,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
     driver.get(URL);
 ```
 
-### Tapa 3: chromedriverin downloadaus (testattu Ubuntu 19.10:lla keväällä 2020)
-
-Lataa ja asenna chromedriver `$ sudo apt-get install -y chromium-chromedriver`
-
-### Tapa 4: chromedriverin downloadaus (testattu Windows:lla talvella 2020)
-
-Tarkista Chromen versio, lataa ja asenna ChromeDriver [täältä](https://sites.google.com/a/chromium.org/chromedriver/downloads).
-
-Lataaminen ja asentaminen macillä tapahtuu komennolla `brew cask install chromedriver`. Tämän jälkeen pitäisi toimia ilman muuta määrittelyä. (brew pitää olla asennettuna etukäteen)
-
-**Joko** määrittele <code>webdriver.chrome.driver</code> seleniumia käyttävässä tiedostossa:
-```java
-// windowsissa
-System.setProperty("webdriver.chrome.driver", "oma_polku/chromedriver.exe"); 
-
-// macissa ja linuxeissa
-System.setProperty("webdriver.chrome.driver", "oma_polku/chromedriver"); 
-```
-Testejä varten kannattaa määrittely sijoittaa luokan <code>ServerRule</code> metodiin <code>before</code>.
-
-**Tai** vaihtoehtoisesti määrittele <code>webdriver.chrome.driver</code> *build.gradle*-tiedostossa:
-```
-task( browse, dependsOn: jar, type: JavaExec ) {
-    main = 'ohtu.Tester'
-    classpath = sourceSets.main.runtimeClasspath
-    systemProperty 'webdriver.chrome.driver', System.getProperty('webdriver.chrome.driver', 'C:\\Users\\User Name\\Downloads\\chromedriver.exe')
-}
-```
-Tällöin pystyt myös yliajamaan ajurin määrittelyn komentoriviltä.
-```
-gradlew browse -Dwebdriver.chrome.driver='C:\\Users\\All Users\\Tools\\chromedriver.exe'
-```
-### Tapa 5: WebDriverManager
-
-**Tätä ja seuraavia tapoja ei ole testattu tämän kurssin aikana**, joten on epäselvää toimivatko nämä, tai jos toimivat niin todennäköisesti vasta jos kirjastojen versiot muutetaan uudempiin. Tee sivulle pull request, jos saat jonkin tavan toimimaan.
+### Tapa 4: WebDriverManager
 
 Lisää projektille riippuvuus _webdrivermanager_:
 
@@ -132,7 +120,7 @@ public void setUp() {
 }
 ```
 
-### tapa 6: firefox-driver
+### tapa 5: firefox-driver
 
 Kokeile käyttää FirefoxDriveria Chromen sijaan. 
 
@@ -140,7 +128,7 @@ Kokeile käyttää FirefoxDriveria Chromen sijaan.
 
 Projektiin oletusarvoisesti määritelty Selenium 2.41.0 tukee ainoastaan Firefoxin versiota 28. Se löytyy [täältä](https://ftp.mozilla.org/pub/firefox/releases/28.0/) kun klikkaat omaa arkkitehtuuriasi. Pura paketti ja ota polku talteen.
 
-#### vaihtoehto 2 (Testattu OSX:llä)
+#### vaihtoehto 2 (Testattu macOS:llä)
 
 Päivitä tiedostossa _build.gradle_ määritelty selenium uudempaan versioon:
 
@@ -186,3 +174,41 @@ public class Tester {
 
 Määrittele <code>FirefoxDriver</code> vastaavalla tavalla testeissä.
  
+### Tapa 6
+
+Linuxin alla ChromeDriverin kutsuma chrome-binääri saattaa oletusarvoisesti haluta käyttää käyttöliittymänsä piirtämiseen väärän alustan taustamoottoria, eikä anna erityisen auttavaista virhetulostetta konsoliin.
+
+```
+$ ./gradlew browse
+
+> Task :browse
+Starting ChromeDriver 86.0.4240.75 (c69c33933bfc72a159aceb4aeca939eb0087416c-refs/branch-heads/4240@{#1149}) on port XYZ
+...
+Exception in thread "main" org.openqa.selenium.WebDriverException: unknown error: Chrome failed to start: crashed.
+  (unknown error: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location /usr/lib64/chromium-browser/chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+...
+```
+
+Vianselvityksessä voi selvitä esim. seuraavaa:
+
+```
+$ /usr/lib64/chromium-browser/chrome
+[1661360:1661360:1116/191311.250169:ERROR:wayland_connection.cc(72)] Failed to connect to Wayland display
+[1661360:1661360:1116/191311.250227:FATAL:ozone_platform_wayland.cc(191)] Failed to initialize Wayland platform
+(core dumped)  /usr/lib64/chromium-browser/chrome
+```
+
+Selain on yrittänyt piirtää itsensä Wayland-protokollaa käyttäen, vaikka olemme X11-istunnossa!
+
+Ongelmaa voi kiertää muokkaamalla ohjelmakoodia esimerkiksi seuraavasti
+
+```java
+...
+import org.openqa.selenium.chrome.ChromeOptions;
+...
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--ozone-platform=x11");
+        //WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(options);
+```

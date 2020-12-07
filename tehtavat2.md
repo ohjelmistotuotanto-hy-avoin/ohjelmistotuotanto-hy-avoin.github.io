@@ -7,17 +7,28 @@ permalink: /tehtavat2/
 
 ## Viikko 2
 
+**HUOM** ilmoittautuminen [miniprojektiin](/miniprojekti) alkanut. Ilmoittaudu [täällä](https://study.cs.helsinki.fi/assembler/course/283df2a6-51e7-434f-a4b6-08514579a9ea). Deadline ilmoittautumiselle perjantai 13.11. klo 23:59
+
+*Alla olevien tehtävien deadline on maanantaina 9.11. klo 23:59*
+
+Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
+
+- Maanantai 14-16 [zoom](https://helsinki.zoom.us/j/63962392550?pwd=RzluTjZWYmNLb0g4bjRxb0ZlckRkUT09)
+- Perjantai 10-12 [zoom](https://helsinki.zoom.us/j/64396759243)
+
+Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/2), joiden deadline on sunnuntaina 8.11. klo 23:59:00.  
+
 Viikon ensimmäisessä tehtävässä tutustutaan tarkemmin gradleen. Toinen ja kolmas tehtävä käsittelevät koodin _staattisen analyysin_ työkalua checkstyleä. Gitiin tutustuminen jatkuu tehtävissä 4-8. Laskarien lopuksi jatketaan _riippuvuuksien injektoinnin_ parissa. 
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/tehtavat2.md) tiedostoa GitHubissa.
+{% include typo_instructions.md path="/tehtavat2.md" %}
 
 ### Tehtävien palauttaminen
 
 Osa git-tehtävistä (tehtävät 4-6) tehdään ainoastaan paikalliseen repositorioon, eli ne eivät näy palautuksessa mitenkään.
 
-Muut tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+Muut tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}>
 
 Tehtävät 2 ja 3 laajentavat viime viikon ensimmäistä tehtäväsarjaa, eli ne palautetaan samaan repositorioon kuin Ohtuvarasto. Muut tehtävät voit palauttaa samaan repositorioon mihin palautit ensimmäisen viikon tehtävät 14-16.
 
@@ -43,7 +54,7 @@ Jos ohjelma lukee syötteitä käyttäjältä, kannattaa se suorittaa komennolla
 
 ### 1. gradlen perusteita
 
-Olemme jo käyttäneet gradlea hyvällä menestyksellä viikon ajan. Tutustutaan nyt gradleen hieman tarkemmin tekemällä [täällä](/gradle/) oleva interaktiivinen "tutoriaali".
+Olemme jo käyttäneet gradlea hyvällä menestyksellä viikon ajan. Tutustutaan nyt gradleen hieman tarkemmin tekemällä [täällä](/gradle) oleva interaktiivinen "tutoriaali".
 
 ### 2. lisää gradlea: koodin staattinen analyysi
 
@@ -53,10 +64,12 @@ Tutustutaan nyt staattisen analyysin työkaluun [checkstyleen](https://checkstyl
 
 Mene nyt viikon 1 tehtävien _Ohtuvarastoon_ liittyvien tehtävien palautusrepositorioosi.
 
-Lisää projektiin checkstyle-plugin [tämän ohjeen mukaan](https://docs.gradle.org/current/userguide/checkstyle_plugin.html), eli lisäämällä konfiguraationtiedoston _build.gradle_ **alkuun**
+Lisää projektiin checkstyle-plugin [tämän ohjeen mukaan](https://docs.gradle.org/current/userguide/checkstyle_plugin.html), eli muuttamalla konfiguraationtiedoston _build.gradle_ alkuosaa seuraavasti:
 
 ```
 plugins {
+    id 'application'
+    id 'jacoco'
     id 'checkstyle'
 }
 ```
@@ -68,30 +81,38 @@ Suoritus epäonnistuu, virheilmoitus kertoo mistä kyse:
 <pre>
 * What went wrong:
 Execution failed for task ':checkstyleMain'.
-> Unable to create Root Module: config {/Users/mluukkai/opetus/ohtu2019/ohtu-2019-viikko1/config/checkstyle/checkstyle.xml}
+> Unable to create Root Module: config {/Users/mluukkai/dev/ohtu-poc/config/checkstyle/checkstyle.xml}, classpath {/Users/mluukkai/dev/ohtu-poc/build/classes/java/main:/Users/mluukkai/dev/ohtu-poc/build/resources/main:/Users/mluukkai/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/29.
 </pre>
 
-Eli kuten [manuaali kertoo](https://docs.gradle.org/current/userguide/checkstyle_plugin.html#sec:checkstyle_project_layout), Gradle olettaa että projektista löytyy checkstylen toiminnan määrittelevä konfiguraatiotiedosto. 
+Eli kuten [manuaali kertoo](https://docs.gradle.org/current/userguide/checkstyle_plugin.html#sec:checkstyle_project_layout), Gradle olettaa että projektista löytyy checkstylen toiminnan määrittelevä konfiguraatiotiedosto _checkstyle.xml_ joka tulee sijoittaa projektin juuren alle tehtävään hakemistoon _config/checkstyle_.
 
-Luo tiedosto ja hae sille sisältö [täältä](https://github.com/ohjelmistotuotanto-hy/syksy2019/blob/master/koodi/viikko2/checkstyle_gradle5.xml) tai [täältä](https://github.com/ohjelmistotuotanto-hy/syksy2019/blob/master/koodi/viikko2/checkstyle.xml) jos käytössäsi on gradlen versio 6.
+Luo tiedosto, ja hae tiedostolle sisältö [täältä](https://github.com/ohjelmistotuotanto-hy/syksy2020/blob/main/koodi/viikko2/checkstyle.xml).
 
-Tiedostoissa on pieni ero, sillä tyylisääntö _LineLength_ pitää määritellä gradle 6:ssa, _TreeWalker_-moduulin ulkopuolella.
 
-Huomaa, että tiedoston tulee olla oikeassa paikassa. Virheilmoitus ja [manuaali](https://docs.gradle.org/current/userguide/checkstyle_plugin.html#sec:checkstyle_project_layout) kertovat oikean sijainnin.
+Huomaa, että tiedoston tulee olla oikeassa paikassa. Virheilmoitus ja [manuaali](https://docs.gradle.org/current/userguide/checkstyle_plugin.html#sec:checkstyle_project_layout) kertovat oikean sijainnin!
 
 Kun nyt suoritat komennon `gradle checkstyleMain`, tulee jälleen virhe, mutta nyt virheen syynä on se, että koodi rikkoo konfiguraatiotiedostossa määriteltyjä tyylisääntöjä. Virheilmoitus kertoo raportin sijainnin:
 
 <pre>
 * What went wrong:
 Execution failed for task ':checkstyleMain'.
-> Checkstyle rule violations were found. See the report at: file:///Users/mluukkai/opetus/ohtu2019/ohtu-2019-viikko1/build/reports/checkstyle/main.html
+> Checkstyle rule violations were found. See the report at: file:///Users/mluukkai/opetus/ohtu2020/ohtu-2020-viikko1/build/reports/checkstyle/main.html
 </pre>
 
 Avaa raportti selaimella. Huomaat, että tuloksena on suuri määrä virheitä. Valitettavasti virheraportti kertoo ainoastaan sen koodirivin, mistä virhe löytyy. Joudut katsomaan vastaavan kohdan koodistasi esim. NetBeansista.
 
 **Toimi nyt seuraavasti**
 
-* Poista checkstylen konfiguraatiotiedostosta kaikki elementin <code>Tree Waker</code> sisällä olevat tarkistukset (gradlen versiota 6 käyttäessäsi poista myös _LineLength_)
+* Poista checkstylen konfiguraatiotiedostosta kaikki määritellyt säännöt siten, että sen sisällöksi jää vain
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+<module name="Checker">
+
+</module>
+```
+
 * Suorita `gradle checkstyleMain` ja varmista, että tarkastus menee läpi
 * Määrittele nyt tiedostoon seuraavat säännöt (ks. kohta checks checkstylen [sivuilta](https://checkstyle.sourceforge.io/checks.html)):
   * metodien pituus max 15 riviä (tämä ja seuraavat säännöt määritellään moduulin tree walker sisälle)
@@ -124,43 +145,17 @@ Avaa raportti selaimella. Huomaat, että tuloksena on suuri määrä virheitä. 
 * Korjaa koodisi ja varmista, että se noudattaa kaikkia sääntöjä
   * pääohjelman koodin voi poistaa tarvittaessa kokonaan, jotta saat koodin säännönmukaiseksi  
 
-### 3. Koodin staattinen analyysi pilvessä
+### 3. Koodin staattinen analyysi ja GitHub Actionit 
 
-Viime viikon [tehtävässä 12](https://github.com/mluukkai/ohjelmistotuotanto2018/blob/master/laskarit/1.md#12-codecov) konfiguroimme <https://codecov.io>-palvelun tarkkailemaan koodin testauskattavuutta.
+Laajenna projektisi GitHub Actionien määritelmää siten, että myös checkstyle-tarkastukset suoritetaan aina kun koodi pushataan GitHubiin.
 
-[Code climate](https://codeclimate.com/) on palvelu, jonka avulla voimme suorittaa helposti staattista analyysiä githubissa olevalle koodille. 
+Varmista, että GitHub huomaa tilanteen, missä koodi rikkoo projektin checkstyle-sääntöjä:
 
-Kirjaudu Code Climateen [täällä](https://codeclimate.com/login/github/join). Valitse _open source_:
+![]({{ "/images/lh2-11.png" | absolute_url }})
 
-![]({{ "/images/lh2-3.png" | absolute_url }})
+Varmista myös, että kun korjaat koodin, kaikki toimii taas moitteettomasti:
 
-ja sitten _add repository_
-
-![]({{ "/images/lh2-4.png" | absolute_url }})
-
-Etsi Ohtuvaraston palautusrepositoriosi listalta ja valitse _add repo_.
-
-Hetken kuluttua koodillesi on tehty ensimmäinen analyysi
-
-![]({{ "/images/lh2-5.png" | absolute_url }})
-
-Välilehden _repo settings_ osasta _maintainability_ näet Code climaten tekemät oletusarvoiset tarkastukset:
-
-![]({{ "/images/lh2-7.png" | absolute_url }})
-
-Konfiguroi Code climate käyttämään checkstyleä [tämän ohjeen](https://docs.codeclimate.com/docs/checkstyle) mukaan. Tiedoston _checkstyle.xml_ sijainti on sovelluksessasi hieman eri kuin ohjeen konfiguraatiossa.
-
-Tee koodiisi jokin checkstylen rikkova virhe, ja varmista että virhe näkyy _issues_-välilehdellä:
-
-![]({{ "/images/lh2-8.png" | absolute_url }})
-
-Code climaten pitäisi tehdä koodillesi analyysi automaattisesti aina, kun pushaat uutta koodia githubiin. Joskus näin ei käy, syy on useimmiten siinä, että konfiguraatio on jollain tavalla hajonnut. Jos näin käy, voit katsoa miten edellisiin committeihin liittyvässä analyysissä on käynyt klikkaamalla edellisen buildin ajankohdasta kertovaa tekstiä
-
-![]({{ "/images/lh2-10.png" | absolute_url }})
-
-Joissain tilanteessa Code climate antaa kohtuullisen hyvän virheilmoituksen
-
-![]({{ "/images/lh2-9.png" | absolute_url }})
+![]({{ "/images/lh2-12.png" | absolute_url }})
 
 ### 4. git: branchit [versionhallinta]
 
@@ -176,28 +171,28 @@ Varsin selkeältä vaikuttaa myös <https://www.atlassian.com/git/tutorials/usin
 
 tee seuraavat paikalliseen git-repositorioosi (kyseessä ei siis tarvitse olla tehtävien palautusrepositorio)
 
-* luo repositorio ja committaa masteriin tiedosto __masteri1.txt__
+* luo repositorio ja committaa mainiin tiedosto __main1.txt__
 * luo branch __eka__, siirry branchiin, luo sinne tiedosto __eka.txt__ ja committaa
-* siirry takaisin __master__-branchiin, tiedoston __eka.txt__ ei pitäisi nyt näkyä
+* siirry takaisin __main__-branchiin, tiedoston __eka.txt__ ei pitäisi nyt näkyä
   * **huom:** muistutus vielä siitä, että kun siirryt branchista toiseen varmista **aina** komennolla _git status_ että kaikki muutokset on committoitu 
-* lisää ja committaa __masteriin__ tiedosto __masteri2.txt__
-* mene branchiin __eka__ ja tarkasta, että __masteriin__ lisätty tiedosto ei ole branchissa
+* lisää ja committaa __mainiin__ tiedosto __maini2.txt__
+* mene branchiin __eka__ ja tarkasta, että __mainiin__ lisätty tiedosto ei ole branchissa
 * lisää branchiin tavaraa, esim. tiedosto __eka2.txt__ ja committaa
-* siirry takaisin __master__-branchiin
-* tarkasta että __eka__-branchiin lisätyt muutokset eivät ole masterissa
+* siirry takaisin __main__-branchiin
+* tarkasta että __eka__-branchiin lisätyt muutokset eivät ole mainissa
 * tarkastele komennolla <code>gitk --all</code> miltä repositorio ja branchit näyttävät (gitk toimii windowsilla ainakin Github for Windowsin Git Shellissä.)
   * gitk ei toimi maceissa, hyvä korvaaja sille on [sourcetree](https://www.sourcetreeapp.com)
-* mergeä branchin __eka__ sisältö __masteriin__
+* mergeä branchin __eka__ sisältö __mainiin__
 * katso jälleen miltä näyttää gitk --all
 
 ### 5. git: branchit ja staging-alue [versionhallinta]
 
-* olet nyt repositoriosi master-haarassa
+* olet nyt repositoriosi main-haarassa
 * luo uusi tiedosto _uusi_tiedosto.txt_, **älä** kuitenkaan lisää ja commitoi tiedostoa
 * komennon _git status_ tulostuksen pitäisi olla seuraava
 
 ```
-On branch master
+On branch main
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
@@ -209,9 +204,9 @@ nothing added to commit but untracked files present (use "git add" to track)
 * siirry nyt branchiin __eka__
 * suorita uudelleen komento _git status_
 * huomaat, että tulostus on edelleen sama, tiedosto ei edelleenkään ole versionhallinnan alla
-* eli vaikka olit master-haarassa kun loit tiedoston, ei master-haara eikä koko git tiedä tiedostosta vielä mitään ennen kuin lisäät sen versionhallinnan alaisuuteen komennolla _git add_
+* eli vaikka olit main-haarassa kun loit tiedoston, ei main-haara eikä koko git tiedä tiedostosta vielä mitään ennen kuin lisäät sen versionhallinnan alaisuuteen komennolla _git add_
 * lisää tiedosto nyt versionhallinnan alaisuuteen ja commitoi se
-* tiedosto menee nykyiseen branchiisi, eli branchiin _eka_, master ei edelleenkään tiedä tiedostosta mitään
+* tiedosto menee nykyiseen branchiisi, eli branchiin _eka_, main ei edelleenkään tiedä tiedostosta mitään
 * luo uusi tiedosto _uusi_tiedosto2.txt_ ja lisää se versionhallintaan, älä kuitenkaan commitoi
 * tarkasta että komennon _git status_ tulos on
 
@@ -224,21 +219,21 @@ Changes to be committed:
 ```
 
 * olet siis branchissa _eka_ ja _uusi_tiedosto2.txt_ on lisätty staging-alueelle, sitä ei kuitenkaan ole vielä committoitu
-* siirry nyt branchiin __master__ 
+* siirry nyt branchiin __main__ 
 * komennon _git status_ tulos on edelleen sama, _uusi_tiedosto2.txt_ on edelleen staging-alueella mutta committoimattomana
 * staging-alue __ei kuulu__ mihinkään branchiin, eli jos staging-alueella on committoimattomia muutoksia ja vaihdat branchia, säilyvät samat asiat stagingissa
 * muutokset siirtyvät stagingista branchiin ainoastaan komennolla _git commit_ 
-* committoi nyt staging-alueen muutokset eli _uusi_tiedosto2.txt_ masteriin
+* committoi nyt staging-alueen muutokset eli _uusi_tiedosto2.txt_ mainiin
 * komennon  _git status_ tulos kertoo nyt että staging-alue on tyhjä:
 
 ```
-On branch master
+On branch main
 nothing to commit, working tree clean
 ```
 
 * siirry jälleen branchiin __eka__ ja huomaat, että _uusi_tiedosto2.txt_ ei ole olemassa
-* mergeä __master__ branchiin __eka__
-* siirry nyt masteriin ja tuhoa branchi __eka__  
+* mergeä __main__ branchiin __eka__
+* siirry nyt mainiin ja tuhoa branchi __eka__  
 * tämän tehtävän ideana oli siis havainnollistaa, että working tree (muutokset joista git ei ole tietoinen) ja staging (gitiin lisättyihin tiedostoihin tehdyt committoimattomat muutokset)
 **eivät liity** mihinkään branchiin, muutokset siirtyvät staging-alueelta branchiin ainoastaan komennon _git commit_ suorituksen seurauksena
 
@@ -246,10 +241,10 @@ nothing to commit, working tree clean
 
 Tee paikalliseen git-repoon seuraavat
 
-* lisää __master__-branchiin tiedosto __tarkea.txt__, kirjota sinne muutama rivi tekstiä ja committaa
+* lisää __main__-branchiin tiedosto __tarkea.txt__, kirjota sinne muutama rivi tekstiä ja committaa
 * tee uusi branchi __toka__, mene branchiin ja editoi tiedoston __tarkea.txt__ loppua (lisää esim loppuun muutama uusi rivi) ja committaa
-* mene takaisin __master__-branchiin, editoi tiedoston __tarkea.txt__ alkua (lisää alkuun muutama rivi) ja committaa
-* mergeä branchin __toka__ sisältö __masteriin__
+* mene takaisin __main__-branchiin, editoi tiedoston __tarkea.txt__ alkua (lisää alkuun muutama rivi) ja committaa
+* mergeä branchin __toka__ sisältö __mainiin__
   * mergeäminen aiheuttaa ns merge-commitin, ja avaa tekstieditorin mihin joudut kirjoittamaan commit-viestin
     * jos et ole määritellyt gitille editoria viime viikon [tehtävän 2](/tehtavat1/) ohjeiden mukaan, avautuu ehkä gitin oletusarvoinen editori [vim](http://www.vim.org)
     * vimistä poistuminen saattaa osoittautua ensikertalaiselle hankalaksi, google auttaa tarvittaessa
@@ -258,7 +253,7 @@ Tee paikalliseen git-repoon seuraavat
 * lisää jotain tiedoston loppuun ja committaa
 * siirry branchiin __toka__
 * lisää jotain tiedoston __tarkea.txt__ loppuun ja committaa
-* mergeä branchin __master__ sisältö branchiin __toka__
+* mergeä branchin __main__ sisältö branchiin __toka__
   * nyt pitäisi aiheutua konflikti, komento aiheuttaa tulostuksen
 ```
 Auto-merging tarkea.txt
@@ -271,7 +266,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 Jotkut editorit, esim [visual studio code](https://code.visualstudio.com) sisältävät sisäänrakennetusti ns. _merge toolin_, joka osaa jossain määrin helpottaa konfliktien ratkaisua:
 
-![](https://github.com/mluukkai/ohjelmistotuotanto2017/raw/master/images/lh2-4a.png)
+![](https://github.com/mluukkai/ohjelmistotuotanto2017/raw/main/images/lh2-4a.png)
 
 ### 7. git: branchit ja GitHub [versionhallinta]
 
@@ -313,23 +308,23 @@ Mene jälleen toiseen kopioon
 Palaa vielä alkuperäiseen lokaaliin repositorioon
 
 * suorita komento <code>git remote show origin</code> 
-* tulostus kertoo, että lokaaleista haaroista ainoastaan _master_ on konfiguroitu komennon _git pull_ osalta, eli on träkkäävä branchi:
+* tulostus kertoo, että lokaaleista haaroista ainoastaan _main_ on konfiguroitu komennon _git pull_ osalta, eli on träkkäävä branchi:
 
 ```
 * remote origin
-  Fetch URL: git@github.com:mluukkai/ohtu-2019-viikko1.git
-  Push  URL: git@github.com:mluukkai/ohtu-2019-viikko1.git
-  HEAD branch: master
+  Fetch URL: git@github.com:mluukkai/ohtu-2020-viikko1.git
+  Push  URL: git@github.com:mluukkai/ohtu-2020-viikko1.git
+  HEAD branch: main
   Remote branches:
     haara1 tracked
     haara2 tracked
-    master tracked
+    main tracked
   Local branch configured for 'git pull':
-    master merges with remote master
+    main merges with remote main
   Local refs configured for 'git push':
     haara1 pushes to haara1 (up to date)
     haara2 pushes to haara2 (up to date)
-    master pushes to master (up to date)
+    main pushes to main (up to date)
 ```
 * suorita _git pull_ branchissä _haara1_
 * komennon tuloste antaa ohjeen, miten saat konfiguroitua _haara1_:n träkkäämään githubissa olevaa haaraa:
@@ -356,7 +351,7 @@ Branchien kanssa työskentely voi aluksi tuntua sekavalta varsinkin jos GitHub:i
 Ohjelmistotiimi voi soveltaa Gitin branchaystä hyvin monella eri tyylillä. Artikkeli
 <https://www.atlassian.com/git/tutorials/comparing-workflows> esittele tähän muutamia vaihtoehtoja. Eräs yleinen tapa branchien käyttöön ovat ns. _featurebranchit_:
 
-> The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the master branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the master branch will never contain broken code, which is a huge advantage for continuous integration environments.
+> The core idea behind the Feature Branch Workflow is that all feature development should take place in a dedicated branch instead of the main branch. This encapsulation makes it easy for multiple developers to work on a particular feature without disturbing the main codebase. It also means the main branch will never contain broken code, which is a huge advantage for continuous integration environments.
 
 Jos kiinnostaa, lue lisää yo. dokumentista.
 
@@ -364,16 +359,16 @@ Jos kiinnostaa, lue lisää yo. dokumentista.
 
 Demonstroidaan usein esiintyvää tilannetta, jossa epäajantasaisen repositorion pushaaminen githubissa olevaan etärepositorioon epäonnistuu.
 
-* mene alkuperäisen repositorion paikallisen kopion __master__ -haaraan, tee joku muutos, commitoi ja pushaa se githubiin
-* mene toisen kopion __master__-haaraan ja  tee sinne joku muutos 
+* mene alkuperäisen repositorion paikallisen kopion __main__ -haaraan, tee joku muutos, commitoi ja pushaa se githubiin
+* mene toisen kopion __main__-haaraan ja  tee sinne joku muutos 
 * commitoi ja pushaa muutos githubiin
 * kaikki ei kuitenkaan mene hyvin, seurauksena on seuraavantyylinen virheilmoitus:
 
 <pre>
 $ git push
-To git@github.com:mluukkai/ohtu-viikko1-2019.git
- ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'git@github.com:mluukkai/ohtu-viikko1-2019.git'
+To git@github.com:mluukkai/ohtu-viikko1-2020.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'git@github.com:mluukkai/ohtu-viikko1-2020.git'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first merge the remote changes (e.g.,
@@ -382,7 +377,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 $ 
 </pre>
 
-Virheen syynä on se, että githubissa oleva __master__-haara oli edellä paikallisen repositorion __master__-haaraa. Ongelma korjaantuu tekemällä ensin <code>git pull</code>, ratkaisemalla mahdolliset konfliktit ja pushaamalla sitten uudelleen
+Virheen syynä on se, että githubissa oleva __main__-haara oli edellä paikallisen repositorion __main__-haaraa. Ongelma korjaantuu tekemällä ensin <code>git pull</code>, ratkaisemalla mahdolliset konfliktit ja pushaamalla sitten uudelleen
 * komennon _git pull_ yhteydessä syntyy merge-commit, ja avautuu tekstieditori mihin joudut kirjoittamaan commit-viestin
 * eli toimi näin ja varmista, että tekemäsi muutokset menevät githubiin
 
@@ -392,7 +387,7 @@ Tutustuimme viime viikon [tehtävissä 14-16](/tehtavat1#14-riippuvuuksien-injek
 
 Jos asia on päässyt unohtumaan, voit kerrata asian lukemalla [tämän](/riippuvuuksien_injektointi/).
 
-Kurssirepositorion hakemistossa [koodi/viikko2/Verkkokauppa1](https://github.com/ohjelmistotuotanto-hy/syksy2019/tree/master/koodi/viikko2/Verkkokauppa1) on yksinkertaisen verkkokaupan ohjelmakoodi
+Kurssirepositorion hakemistossa [koodi/viikko2/Verkkokauppa1](https://github.com/ohjelmistotuotanto-hy/syksy2020/tree/main/koodi/viikko2/Verkkokauppa1) on yksinkertaisen verkkokaupan ohjelmakoodi
 
 * Hae projekti kurssirepositoriosta
   * järkevintä lienee että kloonaat kurssirepositorion paikalliselle koneellesi jos et ole sitä jo tehnyt, jos olet, niin pullaa repositorio ajantasalle
@@ -494,6 +489,4 @@ public static void main(String[] args) {
 
 * Huom: pääohjelma tarvitsee kaupan lisäksi kirjanpito-olioa lopun tulostuksessa, sen saa haltuunsa Springin kontekstilta metodikutsulla _ctx.getBean(Kirjanpito.class)_
 
-### Tehtävien palautus
-
-Pushaa kaikki tekemäsi tehtävät (paitsi ne joissa mainitaan, että tehtävää ei palauteta mihinkään) GitHubiin ja merkkaa tekemäsi tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+{% include submission_instructions.md %}

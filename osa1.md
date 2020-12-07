@@ -19,7 +19,7 @@ Olethan jo lukenut [osan 0](/osa0), missä käydään tarkemmin läpi kurssin j�
 
 ## Typoja materiaalissa
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/osa1.md) tiedostoa GitHubissa.
+{% include typo_instructions.md path="/osa1.md" %}
 
 ## Ohjelmistotuotanto ja sen osa-alueet
 
@@ -124,7 +124,7 @@ Syntyi idea siitä, että _code'n'fix_ -mentaliteetin sijaan ohjelmistojen kehit
 
 Winston Roycen vuonna 1970 julkaisema artikkeli [Management of the development of Large Software](http://www-scf.usc.edu/~csci201/lectures/Lecture11/royce1970.pdf) pohdiskelee isojen ohjelmistojen kehittämiseen liittyvää problematiikkaa. Artikkelin sivulla 2 Royce esittelee yksinkertaisen _prosessimallin_ (eli ohjeiston työvaiheiden jaksottamiseen), jossa ohjelmiston elinkaaren vaiheet suoritetaan lineaarisesti peräkkäin:
 
-![](https://raw.githubusercontent.com/mluukkai/ohjelmistotekniikka-kevat2019/master/web/images/l-1.png)
+![](https://raw.githubusercontent.com/mluukkai/ohjelmistotekniikka-kevat2019/main/web/images/l-1.png)
 
 Roycen versio kuvasta näyttää seuraavalta:
 
@@ -134,7 +134,7 @@ Suoraviivainen lineaarinen malli, jota ruvettiin kutsumaan vesiputousmalliksi, s
 
 Vesiputousmallin suosion taustalla oli osittain se, että Yhdysvaltojen puolustusministeriö (Department of Defence, DoD) joka oli tuohon aikaan eräs maailman suurimmista ohjelmistojen tilaajista, rupesi vaatimaan kaikilta alihankkijoiltaan prosessin noudattamista (Standardi DoD STD 2167). Muutkin ohjelmistoja tuottaneet tahot ajattelivat, että koska DoD vaatii vesiputousmallia, on se hyvä asia ja tapa kannattaa omaksua itselleen.
 
-Vesiputousmalli perustuu vahvasti siihen, että eri vaiheet ovat erillisten tuotantotiimien tekemiä. Joukko analyytikkoja miettii asiakkaan kanssa sovellukselle asetetut vaatimukset, ohjelmistoarkkitehdit saavat vaatimusmääritelmän tulokset ja suunnittelevat ohjelman sen perusteella. Ohjelmoijat toteuttavat sovelluksen arkkitehtien suunnitelman mukaan ja antavat sen testaajille laadunhallintaa varten. Tämä tuntuu luonnolliselta työnjaolta, kutakin erilaista vaihetta tekee kyseessä olevaan vaiheen työskentelymenetelmiin erikoistunut ihmisjoukko. 
+Vesiputousmalli perustuu vahvasti siihen, että eri vaiheet ovat erillisten tuotantotiimien tekemiä. Joukko analyytikkoja miettii asiakkaan kanssa sovellukselle asetetut vaatimukset, ohjelmistoarkkitehdit saavat vaatimusmäärittelyn tulokset ja suunnittelevat ohjelman sen perusteella. Ohjelmoijat toteuttavat sovelluksen arkkitehtien suunnitelman mukaan ja antavat sen testaajille laadunhallintaa varten. Tämä tuntuu luonnolliselta työnjaolta, kutakin erilaista vaihetta tekee kyseessä olevaan vaiheen työskentelymenetelmiin erikoistunut ihmisjoukko. 
 
 Jotta tieto kulkee ohjelmistokehityksen eri vaiheiden välillä, tulee kunkin vaiheen tulokset dokumentoida huolellisesti. Erityisesti asiakkaan kanssa tehtävän vaatimusmäärittelyn on oltava huolellisesti tehty ja hyvin dokumentoitu, sillä kaikki myöhemmät vaiheet olettavat että vaatimukset on kattavasti ja virheettömästi kirjattu.
 
@@ -148,7 +148,7 @@ Vesiputousmallin mukainen ohjelmistotuotanto ei siis ole osoittautunut erityisen
  
 Vesiputousmalli olettaa, että ohjelmistotuotannon vaiheet tapahtuvat peräkkäin ja jokainen vaihe ainakin isoissa projekteissa eri ihmisten toimesta. Tästä koituu useita ongelmia.
 
-Ongelmista keskeisin on se, että tehtiin vaatimusmäärittely miten huolellisesti tahansa, tulevat vaatimukset kuitenkin melkein varmasti muuttumaan matkan varrella. On osoittautunut, että asiakkaat eivät ohjelmistoja tilatessaan tiedä tai osaa sanoa mitä haluavat tai tarvitsevat. Asiakkaan tarpeet nimittäin saattavat muuttua projektin kuluessa. Kilpailutilanne saattaa vaihtua, tulee uusia lainsäädäntöjä, firmat fuusioituvat, maailman taloussuhdanteet vaihtuvat. Mitä pidempi ohjelmiston kehitysprosessi on, sitä varmempaa on, että vaatimukset elävät. 
+Ongelmista keskeisin on se, että tehtiin vaatimusmäärittely miten huolellisesti tahansa, tulevat vaatimukset kuitenkin melkein varmasti muuttumaan matkan varrella. On osoittautunut, että asiakkaat eivät ohjelmistoja tilatessaan tiedä tai osaa sanoa mitä haluavat tai tarvitsevat. Asiakkaan tarpeet nimittäin saattavat muuttua projektin kuluessa. Bisnesympäristö saattaa vaihtua, tulee uusia lainsäädäntöjä, firmat fuusioituvat, maailman taloussuhdanteet vaihtuvat. Mitä pidempi ohjelmiston kehitysprosessi on, sitä varmempaa on, että vaatimukset elävät. 
 
 On myös kerta toisensa jälkeen nähty, että asiakas alkaa haluta muutoksia heti kun näkee valmiin lopputuloksen. Koska ohjelmistot ovat abstrakteja tuotteita, on asiakkaiden hyvin vaikea pystyä etukäteen miettimään kaikkea toiminnallisuutta sillä tasolla, että se voitaisiin lyödä täysin lukkoon kuten vesiputousmalli olettaa.
 
@@ -166,11 +166,11 @@ Vesiputousmalliin perustuvan ohjelmistotuotannon takana on siis pitkälti analog
 
 Vesiputousmallin mukaisessa ohjelmistokehityksessä testaus suoritetaan kun ohjelmisto on valmiina. Vasta lopussa tapahtuva laadunhallinta paljastaa ongelmat kuitenkin aivan liian myöhään. Vikojen korjaaminen saattaa tulla hyvinkin kalliiksi, sillä testaus voi tuoda esiin ongelmia, jotka pakottavat muuttamaan radikaalilla tavalla ohjelmiston rakennetta tai jopa sen vaatimuksia.
 
-Martin Fowlerin artikkeli [The New Methodology]( http://martinfowler.com/articles/newMethodology.html) käsittelee laajalti lineaarisen mallin ongelmia.
+Martin Fowlerin artikkeli [The New Methodology]( http://martinfowler.com/articles/newMethodology.html) käsittelee laajalti vesiputousmallin ongelmia.
 
 #### Royce ja vesiputousmalli
 
-Paradoksaalista kyllä vesiputousmallin isänä pidetty Royce ei suosittele artikkelissaan suoraviivaisen lineaarisen mallin käyttöä. Royce kyllä esittelee lineaarisen vesiputousmallin artikkelin sivulla 2, mutta toteaa että se _ei sovellu_ monimutkaisten ohjelmistoprojektien tekotavaksi.
+Paradoksaalista kyllä vesiputousmallin isänä pidetty Royce _ei suosittele_ artikkelissaan suoraviivaisen lineaarisen mallin käyttöä. Royce kyllä esittelee lineaarisen vesiputousmallin artikkelin sivulla 2, mutta toteaa että se _ei sovellu_ monimutkaisten ohjelmistoprojektien tekotavaksi.
 
 Roycen mukaan sovelluksesta tulee ensin tehdä prototyyppi ja vasta siitä saatujen kokemusten valossa kannattaa suunnitella ja toteuttaa lopullinen ohjelmisto. Royce esitteleekin artikkelin loppupuolella mallin, missä ohjelmisto tehdään kahdessa iteraatiossa, kuva Roycen artikkelista
 
@@ -188,6 +188,8 @@ Jokaisen iteraation aikana määritellään, suunnitellaan, toteutetaan sekä te
 
 Asiakasta tavataan jokaisen iteraation välissä, asiakas näkee sen hetkisen version ohjelmasta ja pystyy vaikuttamaan seuraavien iteraatioiden kulkuun. Ohjelmiston inkrementaalisen kasvamisen takia sen perusversio on mahdollista saada loppukäyttäjien käyttöönkin vielä kehitystyön kuluessa.
 
+Seuraava kuva kuvastaa sitä, että iteratiivisessa mallissa kaikkia ohjelmistoprosessin vaiheita suoritetaan jokaisessa iteraatiossa. Määrittelyllä ja suunnittelulla on alussa suurempi painoarvo, mutta ohjelmiston toteutus ja testaus alkaa jo ensimmäisten iteraatioiden aikana.
+
 ![]({{ "/images/1-4.png" | absolute_url }})
 
 Vesiputousmallin "isä" Royce suositteli siis jo vuonna 1970 juurikin iteratiivista tapaa (kahden iteraation versiota) monimutkaisten ohjelmistojen kehitysmalliksi. Roycen ehdottama menetelmä ei oikeastaan ollut inkrementaalinen, sillä ensimmäisen iteraation aikana rakennettiin ainoastaan prototyyppi, jonka pohjalta varsinainen sovellus määriteltiin, suunniteltiin ja toteutettiin.
@@ -196,7 +198,7 @@ Yhdysvaltojen puolustusministeriön vuonna 2000 julkaisema standardi (MIL-STD-49
 
 > There are two approaches, evolutionary (iterative) and single step (waterfall), to full capability. An evolutionary approach is preferred. ... In this approach, the ultimate capability delivered to the user is divided into two or more blocks, with increasing increments of capability...software development shall follow an iterative spiral development process in which continually expanding software versions are based on learning from earlier development. It can also be done in phases
 
-Itseasiassa iteratiivinen ohjelmistokehitys on paljon vanhempi idea kuin vesiputousmalli. Esimerkiksi NASA:n ensimmäisen amerikkalaisen avaruuteen vieneen Project Mercuryn ohjelmisto kehitettiin 50-luvun lopussa iteratiivisesti. Avaruussukkuloiden ohjelmisto tehtiin vesiputousmallin valtakaudella 70-luvun lopussa, mutta sekin kehitettiin lopulta iteratiivista prosessia käyttäen 8 viikon iteraatioissa, 31 kuukauden aikana. Lisää aiheesta Larmanin ja Basilin erinomaisessa artikkelissa [incremental and iterative development, a brief history](http://www.craiglarman.com/wiki/downloads/misc/history-of-iterative-larman-and-basili-ieee-computer.pdf)
+Itseasiassa iteratiivinen ohjelmistokehitys on paljon vanhempi idea kuin vesiputousmalli. Esimerkiksi NASA:n ensimmäisen amerikkalaisen avaruuteen vieneen Project Mercuryn ohjelmisto kehitettiin 50-luvun lopussa iteratiivisesti. Avaruussukkuloiden ohjelmisto tehtiin vesiputousmallin valtakaudella 70-luvun lopussa, mutta sekin kehitettiin lopulta iteratiivista prosessia käyttäen 8 viikon iteraatioissa, 31 kuukauden aikana. Lisää aiheesta Larmanin ja Basilin erinomaisessa artikkelissa [incremental and iterative development, a brief history](http://www.craiglarman.com/wiki/downloads/misc/history-of-iterative-larman-and-basili-ieee-computer.pdf).
 
 ### Ketterä ohjelmistokehitys
 
@@ -261,7 +263,7 @@ Aiemmin mainittu periaate _Welcome changing requirements..._ siis kuvailee, ett�
 
 > Simplicity – the art of maximizing the amount of work not done – is essential.
 
-Vesiputousmalli ja muut vanhemmat kehitysmenetelmät antoivat suuren painoarvon dokumentaatiolle ja erilaisille "prosessin määräämille" raporteille, joihin käytettiin paljon aikaa ja vaivaa, ilman että ne olisivat kuitenkaan kovin paljoa edistäneet itse tuotteen valmistumista. Ketterissä menetelmissä ideana on eliminoida mahdollisimman pitkälle kaikki mikä ei ole primääristen tavoitteiden kannalta oleellista (_Working software is the primary measure of progress_). Myös ohjelmistokehittäjillä on pyrkimys rakentaa ohjelmistoon tulevaisuuden varalta kaikenlaista ekstraa, myös tällaiseen tulisi ketterässä hengessä suhtautua kriittisesti. 
+Vesiputousmalli ja muut vanhemmat kehitysmenetelmät antoivat suuren painoarvon dokumentaatiolle ja erilaisille "prosessin määräämille" raporteille, joihin käytettiin paljon aikaa ja vaivaa, ilman että ne olisivat kuitenkaan kovin paljoa edistäneet itse tuotteen valmistumista. Ketterissä menetelmissä ideana on eliminoida mahdollisimman pitkälle kaikki mikä ei ole primääristen tavoitteiden kannalta oleellista (_Working software is the primary measure of progress_). Myös ohjelmistokehittäjillä on pyrkimys rakentaa ohjelmistoon tulevaisuuden varalta kaikenlaista ekstraa, myös tälläiseen tulisi ketterässä hengessä suhtautua kriittisesti. 
 
 Viimeiset kaksi periaatetta ovat ne, jotka tahtovat useimmiten unohtua:
 
@@ -270,6 +272,10 @@ Viimeiset kaksi periaatetta ovat ne, jotka tahtovat useimmiten unohtua:
 > Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.
 
 Ketteryys edellyttää että tiimi pystyy muuttamaan tarvittaessa sovelluskehityksen suuntaa uusien tarpeiden noustessa esiin. Tämä taas edellyttää, että tiimin on ylläpidettävä ohjelmiston laatua riittävällä tasolla, jos nimittäin sovellus on sisäiseltä rakenteeltaan huono purkkaviritys, on siitä koko ajan vaikeampi laajentaa uusilla toiminnallisuuksilla, erityisesti sellaisilla, joiden tarvetta ei aiemmin ehkä osattu ennakoida. Eli jos laatuun ei kiinnitetä riittävää huomiota, ketteryys menetetään, ja sovelluksen kehitys muuttuu erittäin hitaaksi.
+
+Tyypillisesti ohjelmistoprojekteihin saatetaan suhtautua deadlinevetoisesti, eli lähellä deadlinea siirrytään paniikinomaiseen ylityömoodiin, jotta toimiva tuote saadaan puristettua kasaan. Tämän jälkeen hengähdetään, mutta pian edessä on taas seuraava tärkeä deadline ja kun vuodet kuluvat loppuunpalamisenkin riski alkaa kasvaa. Kaikesta tästä on usein seurauksena myös huonolaatuista koodia, joka on päivä päivältä hankalammin muokattavaa.
+
+Manifesti kuitenkin muistuttaa, että tällainen oravanpyörä ei ole välttämätön, ja suosittelee että sovellusta kehitettäisiin sellaisella nopeudella, joka on mahdollista ylläpitää vaikkapa ikuisesti.
 
 ### Ketterät menetelmät ja Lean
 
@@ -350,7 +356,7 @@ Scrum määrittelee 3 erilaista _henkilöroolia_: kehittäjän (engl. developer)
 
 Scrumiin kuuluvat _artefaktit_ eli "konkreettiset asiat" ovat _product backlog_ eli projektin kehitysjono, _sprint backlog_ eli sprintin tehtävälista sekä työn alla oleva ohjelmiston osa, englanniksi _potentially releasable increment_.
 
-Scrumissa tekeminen rytmittyy _sprintteihin_ eli 1-4 viikon mittaisiin iteraatioihin. Sprintteihin kuuluu muutamia _standardipalavereja_ (engl. vents): sprintin suunnittelupalaveri, daily scrum -palaverit, sprintin katselmointi sekä retrospektiivi.
+Scrumissa tekeminen rytmittyy _sprintteihin_ eli 1-4 viikon mittaisiin iteraatioihin. Sprintteihin kuuluu muutamia _standardipalavereja_ (engl. events): sprintin suunnittelupalaveri, daily scrum -palaverit, sprintin katselmointi sekä retrospektiivi.
 
 ### Product backlog
 
@@ -382,7 +388,7 @@ Scrum masterin tehtävänä on muun muassa opastaa ryhmää hyvien käytänteide
 
 Scrum masterin ehkä keskeisin rooli on pyrkiä eliminoimaan kehitystyön esteitä. Esteenä on usein jokin tiimistä riippumaton asia, jonka poistamiseksi scrum master joutuu neuvottelemaan yrityksen hallinnon tai muiden ohjelmistotoimittajien kanssa. Tällaisen esteen voi muodostaa myös esimerkiksi se, että sovelluskehitystiimillä ei ole pääsyä tuotantoympäristöön tai edes vastaaviin palvelinympäristöihin, tai jos kehitettävä sovellus on riippuvainen muiden toimittajien vastuulla olevista rajapinnoista, ja ne eivät valmistu ajoissa tai toimi määritelmien mukaan.
 
-"Este" voi myös liittyä ryhmän työskentelytapoihin, tällöin Scrum master opastaa ryhmää toimimaan siten, että tuottavuutta haittaava este poistuu.
+"Este" voi myös liittyä ryhmän työskentelytapoihin, tällöin Scrum master opastaa ryhmää muuttamaan toimintaansa siten, että tuottavuutta haittaava este poistuu.
 
 Scrum masterin roolina on myös taata kehitystiimille työrauha ja suojata tiimiä esim. ulkopuolisten yrityksiltä puuttua sprintin aikaiseen toimintaan.
 

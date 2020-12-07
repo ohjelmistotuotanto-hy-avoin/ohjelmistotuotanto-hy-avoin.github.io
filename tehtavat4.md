@@ -7,31 +7,40 @@ permalink: /tehtavat4/
 
 ## Viikko 4
 
+*Alla olevien tehtävien deadline on maanantaina 23.11. klo 23:59*
+
+Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
+
+- Maanantai 14-16 [zoom](https://helsinki.zoom.us/j/63962392550?pwd=RzluTjZWYmNLb0g4bjRxb0ZlckRkUT09)
+- Perjantai 10-12 [zoom](https://helsinki.zoom.us/j/64396759243)
+
+Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/4), joiden deadline on sunnuntaina 22.11. klo 23:59:00.  
+
 Tehtävissä 1-4 tutustutaan yksikkötestausta helpottavaan Mockito-kirjastoon. Tehtävissä 5 ja 6 refaktoroidaan sisäiseltä laadultaan heikossa kunnossa olevaa koodia.
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/tehtavat4.md) tiedostoa GitHubissa.
+{% include typo_instructions.md path="/tehtavat4.md" %}
 
 ### Tehtävien palauttaminen
 
-Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}>
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
 ### 1. Yksikkötestaus ja riippuvuudet: Mockito, osa 1
 
-Useimmilla luokilla on riippuvuuksia toisiin luokkiin. Esim. [viikon 2](/tehtavat2#9-riippuvuuksien-injektointi-osa-3-verkkokauppa) laskarien verkkokaupan luokka Kauppa riippui Pankista, Varastosta ja Viitegeneraattorista. Riippuvuuksien injektion ja rajapintojen avulla saimme mukavasti purettua riippuvuudet luokkien väliltä.
+Useimmilla luokilla on riippuvuuksia toisiin luokkiin. Esim. [viikon 2](https://ohjelmistotuotanto-hy.github.io/tehtavat2/#9-riippuvuuksien-injektointi-osa-3-verkkokauppa) laskarien verkkokaupan luokka Kauppa riippui Pankista, Varastosta ja Viitegeneraattorista. Riippuvuuksien injektion ja rajapintojen avulla saimme mukavasti purettua riippuvuudet luokkien väliltä.
 
 Vaikka luokilla ei olisikaan riippuvuuksia toisiin luokkiin, on tilanne edelleen se, että luokan oliot käyttävät joidenkin toisten luokkien olioiden palveluita. Tämä tekee yksikkötestauksesta välillä hankalaa. Miten esim. luokkaa _Kauppa_ tulisi testata? Tuleeko kaupan testeissä olla mukana toimivat versiot kaikista sen riippuvuuksista?
 
-Olemme jo muutamaan otteeseen (esim. Nhl-Statsreader-tehtävässä [viikolla 1](/tehtavat1#15-riippuvuuksien-injektointi-osa-2-nhl-tilastot) ratkaisseet asian ohjelmoimalla riippuvuuden korvaavan "tynkäkomponentin". Javalle kuten kaikille muillekin kielille on tarjolla myös valmiita kirjastoja tynkäkomponenttien, toiselta nimeltään _mock-olioiden_ luomiseen.
+Olemme jo muutamaan otteeseen (esim. Nhl-Statsreader-tehtävässä [viikolla 1](https://ohjelmistotuotanto-hy.github.io/tehtavat1#15-riippuvuuksien-injektointi-osa-2-nhl-tilastot) ratkaisseet asian ohjelmoimalla riippuvuuden korvaavan "tynkäkomponentin". Javalle kuten kaikille muillekin kielille on tarjolla myös valmiita kirjastoja tynkäkomponenttien, toiselta nimeltään _mock-olioiden_ luomiseen.
 
 Kuten pian huomaamme, mock-oliot eivät ole pelkkiä "tynkäolioita", mockien avulla voi myös varmistaa, että testattava luokka kutsuu olioiden metodeja asiaankuuluvalla tavalla.
 
 Tutustumme nyt [Mockito-nimiseen](https://site.mockito.org/) mock-kirjastoon. 
 
-Hae [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistossa _koodi/viikko4/MockitoDemo_ oleva projekti. Kyseessä on yksinkertaistettu versio Verkkokauppaesimerkistä.
+Hae [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistossa _koodi/viikko4/MockitoDemo_ oleva projekti. Kyseessä on yksinkertaistettu versio Verkkokauppaesimerkistä.
 
 Kaupan toimintaperiaate on yksinkertainen:
 
@@ -82,7 +91,7 @@ kauppa = new Kauppa(mockPankki, mockViite);
 
 kyseessä eivät ole normaalit oliot vaan normaaleja olioita "matkivat" valeoliot, jotka myös pystyvät tarkastamaan, että niiden metodeja on kutsuttu oikeilla parametreilla. 
 
-Testi tarkastaa, että kaupalle tehdyt metodikutsut aiheuttavat sen, että pankin mock-olion metodia <code>maksa</code> on kutsuttu oikeilla parametreilla. Kolmanteen parametriin eli tilinumeroon ei kiinnitetä huomiota:
+Testi tarkastaa, että kaupalle tehdyt metodikutsut aiheuttavat sen, että pankin mock-olion metodia <code>maksa</code> on kutsuttu oikeilla parametreilla. Kolmanteen parametriin eli viitenumeroon ei kiinnitetä huomiota:
 
 ``` java
 verify(mockPankki).maksa(eq("1111"), eq(10), anyInt());
@@ -127,7 +136,7 @@ Mockiton dokumentaatio löytyy osoitteesta <http://site.mockito.org>
 
 ### 2. Yksikkötestaus ja riippuvuudet: Mockito, osa 2
 
-Hae [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistossa _koodi/viikko4/MaksukorttiMockito_ oleva projekti.
+Hae [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistossa _koodi/viikko4/MaksukorttiMockito_ oleva projekti.
 
 Tässä tehtävässä on tarkoitus testata ja täydentää luokkaa <code>Kassapaate</code>. **Maksukortin koodiin ei tehtävässä saa koskea ollenkaan! Testeissä ei myöskään ole tarkoitus luoda konkreettisia instansseja maksukortista, testien tarvitsemat kortit tulee luoda mockitolla.**
 
@@ -185,7 +194,7 @@ Korjaa kassapäätettä siten, että testit menevät läpi.
 
 Testataan [viikolta 2](/tehtavat2#9-riippuvuuksien-injektointi-osa-3-verkkokauppa) tutun Verkkokaupan luokkaa <code>Kauppa</code>.
 
-- Jos et tehnyt tehtävää, sovellus löytyy [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistossa _koodi/viikko4/Verkkokauppa_.
+- Jos et tehnyt tehtävää, sovellus löytyy [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistossa _koodi/viikko4/Verkkokauppa_.
 
 Kaupalle injektoidaan konstruktorissa Pankki, Viitelaskuri ja Varasto. Tehdään näistä testeissä Mockitolla mockatut versiot.
 
@@ -279,7 +288,7 @@ Mock-oliot saattoivat tuntua hieman monimutkaisilta edellisissä tehtävissä. M
 
 ### 5. IntJoukon testaus ja siistiminen
 
-[Kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistossa _koodi/viikko4/IntJoukkoSovellus_ on aloittelevan ohjelmoijan ratkaisu syksyn 2011 Ohjelmoinnin jatkokurssin [viikon 2 tehtävään 3](http://www.cs.helsinki.fi/u/wikla/ohjelmointi/jatko/s2011/harjoitukset/2/).
+[Kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistossa _koodi/viikko4/IntJoukkoSovellus_ on aloittelevan ohjelmoijan ratkaisu syksyn 2011 Ohjelmoinnin jatkokurssin [viikon 2 tehtävään 3](http://www.cs.helsinki.fi/u/wikla/ohjelmointi/jatko/s2011/harjoitukset/2/).
 
 
 Koodi jättää hieman toivomisen varaa sisäisen laatunsa suhteen. Refaktoroi luokan _IntJoukko_ koodi mahdollisimman siistiksi
@@ -294,7 +303,7 @@ Koodissa on joukko yksikkötestejä, jotka helpottavat refaktorointia.
 
 ### 6. Tenniksen pisteenlaskun refaktorointi
 
-[Kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistossa _koodi/viikko4/Tennis_, löytyy ohjelma, joka on tarkoitettu tenniksen [pisteenlaskentaan](https://github.com/emilybache/Tennis-Refactoring-Kata#tennis-kata).
+[Kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistossa _koodi/viikko4/Tennis_, löytyy ohjelma, joka on tarkoitettu tenniksen [pisteenlaskentaan](https://github.com/emilybache/Tennis-Refactoring-Kata#tennis-kata).
 
 Pisteenlaskennan rajapinta on yksinkertainen. Metodi <code>void getScore()</code> kertoo voimassa olevan tilanteen tenniksessä käytetyn pisteenlaskennan määrittelemän tavan mukaan. Sitä mukaa kun jompi kumpi pelaajista voittaa palloja, kutsutaan metodia  <code>void wonPoint(String player)</code>, jossa parametrina on pallon voittanut pelaaja.
 
@@ -348,6 +357,4 @@ Tehtävä on kenties hauskinta tehdä pariohjelmoiden. Itse tutustuin tehtävä�
 
 Lisää samantapaisia refaktorointitehtäviä löytyy Emily Bachen [GitHubista](https://github.com/emilybache).
 
-### Tehtävien palautus
-
-Pushaa kaikki tekemäsi tehtävät GitHubiin ja merkkaa tekemäsi tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+{% include submission_instructions.md %}

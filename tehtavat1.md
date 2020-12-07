@@ -2,10 +2,19 @@
 layout: page
 title: Viikko 1
 inheader: no
-permalink: /tehtavat1/
+permalink: /tehtavat1
 ---
 
 ## Viikko 1
+
+*Allaolevien tehtävien deadline on maanantaina 2.11. klo 23:59*
+
+Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoomissa:
+
+- Maanantai 14-16 [zoom](https://helsinki.zoom.us/j/63962392550?pwd=RzluTjZWYmNLb0g4bjRxb0ZlckRkUT09) alkaen 2.11
+- Perjantai 10-12 [zoom](https://helsinki.zoom.us/j/64396759243)
+
+Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/1), joiden deadline on sunnuntaina 1.11. klo 23:59:00.  
 
 Tämän viikon tehtävissä harjoitellaan ensin muutaman tärkeän ohjelmistokehityksen työkalun (_komentorivi, versionhallinta, buildin hallinta, automatisoitu testaus, jatkuva integraatio_) käyttöä.
 
@@ -13,13 +22,11 @@ Laskarien lopuksi harjoitellaan _riippuvuuksien injektointia_ joka on melko simp
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/tehtavat1.md) tiedostoa GitHubissa.
+{% include typo_instructions.md path="/tehtavat1.md" %}
 
 ### Tehtävien palauttaminen
 
-Tehtävien palauttamiseen tarvitset Helsingin yliopiston käyttäjätunnuksen. Ohje tunnuksen aktivoimiseen [täällä](https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/opinnoissa-alkuun/helsingin-yliopiston-kayttajatunnus). Huomaa, että aktivoiminen onnistuu vasta ilmoittautumista seuraavana päivänä.
-
-Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>. Käytännössä tällä viikolla tehdään palautusta varten kaksi erillistä GitHub-repositoria, ensimmäinen tehtäviä 2-13 varten ja toinen tehtäviä 14-16 varten. Jos et vielä tiedä mikä on GitHub ja repositorio, niin pian opit.
+Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}>. Käytännössä tällä viikolla tehdään palautusta varten kaksi erillistä GitHub-repositoria, ensimmäinen tehtäviä 2-13 varten ja toinen tehtäviä 14-16 varten. Jos et vielä tiedä mikä on GitHub ja repositorio, niin pian opit.
 
 Tehtävää 1 ei varsinaisesti palauteta minnekään.
 
@@ -73,7 +80,7 @@ Luo githubiin repositorio nimellä ohtu-2020-viikko1
 
 **Jos et ole vielä luonut** koneellesi _ssh-avainta_, tee se nyt
 
-* Ohje avaimen luomiseen esim. [täällä](https://www.howtoforge.com/linux-basics-how-to-install-ssh-keys-on-the-shell). Riittää että teet stepit 1 ja 2 tai kurssin [Ohjelmistotekniikka](https://github.com/mluukkai/ohjelmistotekniikka-syksy-2019/blob/master/tehtavat/viikko1.md#julkinen-avain)-materiaalista
+* Ohje avaimen luomiseen esim. [täällä](https://www.howtoforge.com/linux-basics-how-to-install-ssh-keys-on-the-shell). Riittää että teet stepit 1 ja 2 tai kurssin [Ohjelmistotekniikka](https://github.com/mluukkai/Ohjelmistotekniikka-syksy-2020/blob/main/tehtavat/viikko1.md#julkinen-avain)-materiaalista
 
 Lisää julkinen avain githubiin:
 
@@ -86,7 +93,7 @@ Jos et ole jo aiemmin niin tehnyt, konfiguroi nimesi ja email-osoitteesi paikall
     git config --global user.name "Your Name"
     git config --global user.email my.address@gmail.com
 
-Oletuseditoriksi kannattaa Linuxilla ja OSX:lla (eli Macillä) konfiguroida _nano_
+Oletuseditoriksi kannattaa Linuxilla ja macOS:lla konfiguroida _nano_
 
     git config --global core.editor nano
     
@@ -118,7 +125,7 @@ Olet jo todennäköisesti käyttänyt Gitiä aiemmilla kursseilla. Tässä teht�
 * .gitignore
 
 * Jos et vielä hallitse komentoja, käy läpi kurssin Ohjelmistotekniikka 
-[Git-tutoriaali](https://github.com/mluukkai/ohjelmistotekniikka-syksy-2019/blob/master/tehtavat/viikko1.md#gitin-alkeet). Pelkän lukemisen sijaan kannattanee myös tehdä itse tutoriaalin git-operaatiot.
+[Git-tutoriaali](https://github.com/mluukkai/Ohjelmistotekniikka-syksy-2020/blob/main/tehtavat/viikko1.md#gitin-alkeet). Pelkän lukemisen sijaan kannattanee myös tehdä itse tutoriaalin git-operaatiot.
 
 Lisää git-ohjeita löytyy runsaasti internetistä, esim:
   * [Pro Git -opas](http://git-scm.com/book), kannattaa lukea näin alkuun luku 2
@@ -203,7 +210,7 @@ Valmistaudutaan seuraavaan tehtävään siivoamalla repositoriostamme ylimäär�
 
 Haetaan sitten seuraavissa tehtävissä käytettävä koodi
 
-* hae osoitteesta <https://github.com/ohjelmistotuotanto-hy/syksy2019/blob/master/ohtuvarasto.zip?raw=true> löytyvä zipattu paketti
+* hae osoitteesta <https://github.com/ohjelmistotuotanto-hy/syksy2020/blob/main/ohtuvarasto.zip?raw=true> löytyvä zipattu paketti
 * pura paketti sopivaan paikkaan 
 * siirrä paketin sisällä olevat tiedostot kloonattuun repositorioon siten, että **paketissa olevat tiedostot ja hakemistot tulevat repositorion juureen**
 
@@ -222,6 +229,8 @@ Haetaan sitten seuraavissa tehtävissä käytettävä koodi
 
 ### 7. Gradle
 
+Tämän kurssin ohjelmointitehtävissä käytetään Javaa. Jos koneellasi ei ole vielä Javaa asennettuna, pääset helpoimmalla seuraamalla [ohjelmointikurssien](https://www.mooc.fi/fi/installation/netbeans) ohjeita Javan ja Netbeansin asentamiselle. Kurssin tehtäviä ei kuitenkaan palauteta TMC-liitännäisen avulla, joten se TMCbeans ei ole välttämätön kurssin suorittamiselle, myös muut editorit käyvät.
+
 Ohjelmoinnin peruskursseilla koodi suoritettiin painamalla NetBeansin "vihreää nuolta", ja testit painamalla "mustaa silmää". Ammattimaisessa ohjelmistokehityksessä koodin suorituskelpoiseksi tekemisen ja testaamisen on tapahduttava toistettavalla tavalla, ja siten että operaatiot pystytään suorittamaan millä tahasa koneella, _skriptatusti_ komentoriviltä, eli riippumatta NetBeansin kaltaisista kehitysympäristöistä.
 
 Tähän tarkoitukseen on kehitetty useita _build-ohjelmistoja_. Olet ehkä käyttänyt aikaisemmilla kursseilla [Mavenia](https://maven.apache.org/). Tällä kurssilla käytetään [Gradlea](https://gradle.org), joka on uusissa projekteissa paljolti korvannut Mavenin. Se on Mavenia helpommin konfiguroitava, ja joissain tilanteissa myös tätä nopeampi.
@@ -234,7 +243,7 @@ Gradlen dokumentaatio sisältää seuraavan kuvauksen:
 * tutki gradle-muotoisen projektin hakemistorakennetta esim. antamalla komento <code>tree</code> projektin sisältävän hakemiston juuressa (_tree_ ei ole gradleen liittyvä käsky vaan normaali shell-komento)
   * Windowsissa komennosta käyttökelpoisin muoto on <code>tree /F</code>
   * Jos käytössäsi on Windowsissa _git bash_ komento on muotoa <code>cmd //c tree</code>
-  * HUOM: OSX:ssä ei ole oletusarvoisesti tree-komentoa
+  * HUOM: macOS:ssä ei ole oletusarvoisesti tree-komentoa
   * mikäli koneellasi on [HomeBrew](http://mxcl.github.com/homebrew/) asennettuna, saat tree:n asennettua <code>brew install tree</code>
   * myöskään kaikissa linuxeissa ei komento _tree_ ole  oletusarvoisesti asennettu. debian-pohjaisissa linuxeissa (esim ubuntussa) saat asennettua tree:n komennolla <code>sudo apt-get install tree</code>
 * tarkastele projektin määrittelevän tiedoston _build.gradle_ sisältöä
@@ -252,16 +261,39 @@ Ohjelmakoodin editointi kannattaa tehdä IDE:llä kuten usein myös ohjelman ja 
  
 Gradle on siinä mielessä mielenkiintoinen työkalu, että sitä ei ole pakko asentaa ennen käytön aloittamista. Gradle-projektit sisältävät skriptit _gradlew_ (Linuxille) ja _gradlew.bat_ (Windowsille), jotka osaavat tarvittaessa asentaa Gradlen koneellesi.
 
-Suorita projektin juuressa (eli samassa hakemistossa missä tiedosto _build.gradle_ sijaitsee) komento <code>./gradlew build</code> (Linux) <code>gradlew.bat build</code> (Windows). Gradle asentuu koneellesi. Jos edelliset komennot eivät toimi, kokeile komentoa <code>gradle build</code> joka näyttää toimivan ainakin laitoksen koneilla. 
+Suorita projektin juuressa (eli samassa hakemistossa missä tiedosto _build.gradle_ sijaitsee) komento <code>./gradlew build</code> (Linux) <code>gradlew.bat build</code> (Windows). Gradle asentuu koneellesi. 
 
-* **HUOM** OSX:llä (eli Macilla) automaattinen asentuminen ei ole ainakaan kaikilla toiminut. Eli OSX-käyttäjien kannattaa aloittaa asentamalla _gradle_ [homebrew:illa](https://gradle.org/install#with-homebrew), ja suorittaa komento muodossa <code>gradle build</code>. Jos et jo käytä [homebrewia](https://brew.sh), kannattaa aloittaa nyt.
+Jos edelliset komennot eivät toimi, asenna gradle koneellesi ja käytä suoraan komentoa <code>gradle build</code>. 
+
+Huomaa, että gradlen version tulee olla vähintään 5.6. Esim. laitoksen koneilla valmiina oleva versio on liian vanha. Versio selviää komennolla _gradle -v_, ja tuloksen pitäisi näyttää suunilleen seuraavalta:
+
+````
+$ gradle -v
+
+------------------------------------------------------------
+Gradle 6.7
+------------------------------------------------------------
+
+Build time:   2020-10-14 16:13:12 UTC
+Revision:     312ba9e0f4f8a02d01854d1ed743b79ed996dfd3
+
+Kotlin:       1.3.72
+Groovy:       2.5.12
+Ant:          Apache Ant(TM) version 1.10.8 compiled on May 10 2020
+JVM:          11.0.8 (AdoptOpenJDK 11.0.8+10)
+OS:           Mac OS X 10.14.6 x86_64
+
+➜  repo git:(main)
+```
+
+* **HUOM** macOS:llä automaattinen asentuminen ei ole ainakaan kaikilla toiminut. Eli macOS-käyttäjien kannattaa aloittaa asentamalla _gradle_ [homebrew:illa](https://gradle.org/install#with-homebrew), ja suorittaa komento muodossa <code>gradle build</code>. Jos et jo käytä [homebrewia](https://brew.sh), kannattaa aloittaa nyt.
 
 Jos mikään yo. komennoista ei päädy ilmoitukseen _BUILD SUCCESSFUL_ on todennäköisesti Javan konfiguraatiossa jotain häikkää. Koneellasi tulee olla _Java Development Kit_ (eli JDK) asennettuna ja ympäristömuuttuja *JAVA_HOME* tulee olla asetettu siten, että sen arvona on JDK:n sijainti, ks. esim. <http://www.robertsindall.co.uk/blog/setting-java-home-variable-in-windows/>. JAVA_PATH:in asettamisen jälkeen komentorivi tulee käynnistää uudelleen. 
 
 > Jos saat JDK:n asennuksesta ja *JAVA_HOME*:n asettamisesta ja komentorivin uudelleenkäynnistämisestä  huolimatta virheen _Could not find tools.jar_, tee projektiisi tiedosto _gradle.properties_ ja määrittele sinne JDK:n sijainti seuraavaan tyyliin (polun kohdalle siis tulee oman koneesi JDK:n polku):
 >
 ><pre>
->org.gradle.java.home=C:\\Program Files\\Java\\jdk1.8.0_45
+>org.gradle.java.home=C:\\Program Files\\Java\\jdk1.11.0_45
 ></pre>
 >
 >Lisää tiedostoon _.gitignore_ rivi 
@@ -274,7 +306,7 @@ Jos mikään yo. komennoista ei päädy ilmoitukseen _BUILD SUCCESSFUL_ on toden
 >
 >Jos jouduit tekemään tämän ratkaisun, on todennäköistä, että joudut toimimaan samoin jatkossa kaikkien gradle-projektien kohdalla.
 
-Kun komento <code>./gradlew build</code> (Linux, OSX) tai <code>gradlew.bat build</code> (Windows) tai <code>gradle build</code> toimii, olet valmis siirtymään seuraavaan kohtaan.
+Kun komento <code>./gradlew build</code> (Linux, macOS) tai <code>gradlew.bat build</code> (Windows) tai <code>gradle build</code> toimii, olet valmis siirtymään seuraavaan kohtaan.
 
 **Tee nyt seuraavat toimenpiteet**. Ohjeen kaikissa kohdissa komento on annettu muodossa <code>gradle toimenpide</code>, käytä sitä komennon muotoa joka toimii koneellasi, suositeltavinta on käyttää versiota <code>./gradlew</code>, näin varmistat että käytössäsi on uusin gradlen versio.
 
@@ -315,8 +347,8 @@ Lisätty konfiguraatio kertoo, mikä ohjelman luokista on ns. pääohjelma, eli 
 
 Ohjelmistokehityksen ehkä tärkein vaihe on laadunvarmistus, laadunvarmistuksen tärkein keino taas on testaus, joka on syytä automatisoida mahdollisimman pitkälle, sillä ohjelmistoja joudutaan testaamaan paljon. Erityisesti iteratiivisessa/ketterässä ohjelmistokehityksessä samat testit on suoritettava uudelleen aina ohjelman muuttuessa. 
 
-Java-maailmassa automatisoidun testaamisen johtava työkalu on JUnit, johton olet todennäköisesti jo tutustunut kurssilla Ohjelmistotekniikka. 
-  * Jos JUnit on vieras tai pääsyt unohtumaan kertaa perusteet kurssin Ohjelmistotekniikka [JUnit-ohjeesta](https://github.com/mluukkai/Ohjelmistotekniikka-syksy-2019/blob/master/web/junit.md) 
+Java-maailmassa automatisoidun testaamisen johtava työkalu on JUnit, johon olet todennäköisesti jo tutustunut kurssilla Ohjelmistotekniikka. 
+  * Jos JUnit on vieras tai pääsyt unohtumaan kertaa perusteet kurssin Ohjelmistotekniikka [JUnit-ohjeesta](https://github.com/mluukkai/Ohjelmistotekniikka-syksy-2020/blob/main/web/junit.md) 
 
 Edellisen tehtävän esimerkkisovelluksessa on jo jonkun verran JUnit-testejä, **laajennetaan nyt testejä**.
 
@@ -328,9 +360,13 @@ Muista, että testit suoritetaan komennolla <code>gradle test</code>
   * joudut huomioimaan ainakin tapaukset, joissa varastoon yritetään laittaa liikaa tavaraa ja varastosta yritetään ottaa enemmän kuin siellä on
   * edellinenkään ei vielä riitä
 * testauksen rivikattavuuden saat selville Gradlen [JaCoCo](https://docs.gradle.org/current/userguide/jacoco_plugin.html#gsc.tab=0)-pluginin avulla
-* ota plugin projektissasi käyttöön lisämäällä tiedostoon _build.gradle_ seuraava rivi:
+* ota plugin projektissasi käyttöön muuttamalla tiedoston _build.gradle_ alku muotoo:
+
 ```groovy
-apply plugin: "jacoco" 
+plugins {
+    id 'application'
+    id 'jacoco'
+}
 ```
 ja suorittamalla komento <code>gradle test jacocoTestReport</code>
 * näet html-muodossa olevean testien rivikattavuusraportin avaamalla selaimella tiedoston _build/reports/jacoco/test/html/index.html_
@@ -340,7 +376,7 @@ ja suorittamalla komento <code>gradle test jacocoTestReport</code>
 
 * kun luokan <code>Varasto</code> testien rivikattavuus (line coverage) on 100%, pushaa tekemäsi muutokset GitHubiin
 
-**HUOM** tehtävässä käytettävä _jacoco_-plugin edellyttää toimiakseen gradlen versiota 5.6. Voit tarkistaa käyttämäsi version komennolla _gradle -v_. Cubbli-Linuxien oletusarvoinen versio on 4.4.1. ja sitä käyttäessä (eli komennolla _gradle_) jacoco ei toimi:
+**HUOM** tehtävässä käytettävä _jacoco_-plugin edellyttää toimiakseen riittävän uuden gradlen version Voit tarkistaa käyttämäsi version komennolla _gradle -v_. Cubbli-Linuxien oletusarvoinen versio on 4.4.1. ja sitä käyttäessä (eli komennolla _gradle_) jacoco ei toimi:
 
 ```
 mluukkai@melkki:~/ohtu-2019-viikko1$ gradle test jacocoTestReport
@@ -351,7 +387,7 @@ Exception in thread "main" java.lang.reflect.InvocationTargetException
         at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 ```
 
-Komennolla _./gradlew_ on käytössä projektin lokaali versio 5.6.3 ja sillä projekti toimii.
+Komennolla _./gradlew_ on käytössä projektin lokaali versio 6.7.0. ja sillä projekti toimii.
 
 ```
 mluukkai@melkki:~/ohtu-2019-viikko1$ ./gradlew test jacocoTestReport
@@ -361,127 +397,206 @@ mluukkai@melkki:~/ohtu-2019-viikko1$ ./gradlew test jacocoTestReport
 BUILD SUCCESSFUL in 16s
 ```
 
-### 9. CircleCI, osa 1
+### 9. GitHub Actions, osa 1
 
-Gradlen avulla ohjelmiston käännös ja testien suorittaminen on mahdollista tehdä skriptattavaksi, eli komentoriviltä helposti suoritettavaksi. Käännöksen automatisoinnin jälkeen seuraava askel on suorittaa buildausprosessi, eli ohjelman kääntäminen ja siihen liittyvien testien suoritus, erillisillä _build-palvelimella_ (engl. build server).
+Gradlen avulla ohjelmiston käännös ja testien suorittaminen on mahdollista tehdä skriptattavaksi, eli komentoriviltä helposti suoritettavaksi. Käännöksen automatisoinnin jälkeen seuraava askel on suorittaa buildausprosessi, eli ohjelman kääntäminen ja siihen liittyvien testien suoritus, erillisellä _build-palvelimella_ (engl. build server).
 
 Ideana on, että ohjelmistokehittäjä noudattaa seuraavaa sykliä:
-- uusin versio koodista haetaan versionhallinnan keskitetystä repositoriosta ohjelmistokehittäjän työasemalle
+- uusin versio koodista haetaan versionhallinnan keskitetystä repositoriosta ohjelmistokehittäjän koneelle
 - lisäykset ja niitä testaavat testit tehdään paikalliseen kopioon
 - käännös ja testit ajetaan paikalliseen kopioon ohjelmistokehittäjän työasemalla
 - jos kaikki on kunnossa, paikalliset muutokset lähetetään keskitettyyn repositorioon
-- build-palvelin seuraa keskitettyä repositoriota ja kun siellä huomataan muutoksia, kääntää - käännöspalvelin koodin ja suorittaa sille testit
+- build-palvelin seuraa keskitettyä repositoriota ja kun siellä huomataan muutoksia, hakee ja kääntää build-palvelin muuttuneen koodin ja suorittaa sille testit
 - build-palvelin raportoi havaituista virheistä
 
-Erillisen build-palvelimen avulla varmistetaan, että ohjelmisto toimii muuallakin kuin muutokset tehneen ohjelmistokehittäjän koneella. Tätä käytännettä kutsutaan _jatkuvaksi integraatioksi_ (engl. continuous integration). Palaamme asiaan tarkemmin kurssin [kolmannessa osassa](https://ohjelmistotuotanto-hy-avoin.github.io/osa3/#jatkuva-integraatio)
+Erillisen build-palvelimen avulla varmistetaan, että ohjelmisto toimii muuallakin kuin muutokset tehneen ohjelmistokehittäjän koneella. Tätä käytännettä kutsutaan _jatkuvaksi integraatioksi_ (engl. continuous integration). Palaamme asiaan tarkemmin kurssin [kolmannessa osassa](http://localhost:4000/osa3#jatkuva-integraatio).
 
-Kurssilla käytämme pilvessä toimivaa [CircleCI](https://circleci.com/)-nimistä build-palvelinohjelmistoa.
+Nykyään alkaa olla yleistä, että erillisen build-palvelimen sijaan käytetään jotain verkossa olevaa "build-ohjelmistoa", jolloin softakehittäjien ei tarvitse huolehtia ollenkaan buildaukseen käytettävän palvelimen ja sen ohjelmistojen asentamisesta.
 
-Konfiguroidaan seuraavaksi Circle huolehtimaan projektistamme. 
+Kurssilla käytetään GitHubiin 15.11.2019 julkaistua ja sen jälkeen nopeasti suuren suosion saavuttanutta [Actions](https://github.com/features/actions)-ominaisuutta hoitamaan automatisoitu buildaus.
 
-* mene osoitteeseen <https://circleci.com/> ja valitse _Sign Up_ ja _Sign Up with GitHub_
-* palvelu kysyy käyttölupia, tässä tapauksessa pääsy repositorioihin riittää.
-* avaa palvelun vasemmassa reunasta "add project"-välilehti ja valitse "Set Up Project" repositorion vierestä
+Konfiguroidaan seuraavaksi GitHub Actions huolehtimaan projektistamme. 
 
-Tästä aukeaa ohjeistus, seuraamme sitä, mutta hyppäämme 3. kohdan yli.
+Valitse GitHub-repositoriostasi välilehti _Actions_ ja _Java with Gradle_:
 
-* valitaan configuraatioksi Linux ja Gradle (Java)
-* lisää repositoriosi juureen hakemisto nimeltään _.circleci_
-  * huomaa, että nimen pitää alkaa pisteellä!
-* tee tiedosto _config.yml_ kansion _.circleci_ sisälle ja kopioi sinne CircleCI:n antama _Sample.yml_-tiedoston  sisältö
-* commitoi ja pushaa repositorio GitHubiin
-* paina _Start Building_
+![]({{ "/images/lh1-20.png" | absolute_url }})
 
-nyt Circle alkaa tarkkailla jokaista muutosta, jonka teet repositorioon.
+Valinta avaa actionien konfiguraatiotiedoston. Muuta se seuraavaan muotoon:
 
-* sivulle avautuu näkymä, joka kertoo siitä, että Circle yrittää _buildata_ koodin, jonka repositorio sisältää
+```
+name: Java CI with Gradle
 
-![]({{ "/images/lh1-6.png" | absolute_url }})
+on:
+  push:
+    branches: [ main ]
 
-### 10. CircleCI, osa 2
-
-Mitä Circlessä oikeastaan tapahtuu?
-
-* Kun Circleen rekisteröity projekti pushataan GitHubiin, ilmoittaa GitHub-asiasta Circlelle
-* CircleCI käynnistää [Docker-kontin](https://www.docker.com/resources/what-container) (eri eräänlaisen virtuaalisen suoritusympäristön), jonne se kloonaa muuttuneen repositorion tekemällä komennon _git clone_ 
-* CircleCI lukee repositoriossa olevan konfiguraatiotiedoston _.circleci/config.yml_ ja toimii tiedostossa olevien ohjeiden mukaan.
-* Jos testit menevät läpi on Circlen buildin tila _Success_.
-
-Oletusarvoinen konfiguraatiotiedosto näyttää seuraavalta:
-
-```yml
-version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/openjdk:8-jdk
+  run_tests:
 
-    working_directory: ~/repo
-
-    environment:
-      JVM_OPTS: -Xmx3200m
-      TERM: dumb
+    runs-on: ubuntu-latest
 
     steps:
-      - checkout
-
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "build.gradle" }}
-            - v1-dependencies-
-
-      - run: gradle dependencies
-
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: v1-dependencies-{{ checksum "build.gradle" }}
-
-      - run: gradle test
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.11
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Test with Gradle
+      run: ./gradlew test
 ```
 
-**HUOM**: muuta skriptissä olevat _gradle_-komennot muotoon _./gradlew_ jolloin Circle käyttää (oletusarvoisen Gradlen sijaan) projektiin määriteltyä Gradlea:
+Paina vihreää _Start commit_ -nappia, ja anna sopiva commit-viesti.
 
-```yml
-      - run: ./gradlew dependencies
-      ...
-      - run: ./gradlew test
+Konfiguraatiotiedosto (jonka nimi on oletusarvoisesti _gradle.yml_) tallettuu repositorioosi hakemiston `.github/workflows` alle:
+
+![]({{ "/images/lh1-21.png" | absolute_url }})
+
+GitHub siis committoi uuden tiedoston automaattisesti repositorioosi.
+
+Kun nyt pullaat repositorion koodin omalle koneellesi, näkyy konfiguraatiotiedosto myös siellä, esim. VS Code -editorilla se näyttää seuraavalta:
+
+![]({{ "/images/lh1-22.png" | absolute_url }})
+
+Kun avaan nyt repositorion välilehden _Actions_, huomaat että sinne on ilmestynyt hieman tavaraa:
+
+![]({{ "/images/lh1-23.png" | absolute_url }})
+
+### 10. GitHub Actions, osa 2
+
+Katsotaan hieman tarkemmin mitä GitHub actionien konepellin alla tapahtuu.
+
+GitHub actionit ovat sarjoja erilaisia "toimenpiteitä", joita GitHub voi suorittaa repositoriossa olevalle koodille. Actionin toiminta määritellään hakemiston _.github/workflows_ sijoitettavissa _.yml_-päätteisissä tiedostoissa. 
+
+Tarkastellaan äsken määrittelemäämme tiedostoa:
+
+```
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run_tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.11
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Test with Gradle
+      run: ./gradlew test
 ```
 
-Kohdan _build_ alla määritellään ensin suoritusympäristö (_docker_ ja _environment_) ja sen jälkeen _steps_ eli mitä toimenpiteitä tarkkailun alla olevalle koodille tehdään. Tärkeimmät askeleet ovat _checkout_, joka kloonaa projektin koodin, _run: gradle dependencies_, joka lataa projektin tarvitsemat kirjastot sekä _run: gradle test_, joka suorittaa testit. 
+Kohta [on](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestbranchestags) määrittelee missä tilanteissa actionit suoritetaan. Konfiguraatiomme määrää, että actionit suoritetaan aina kun repositorion päähaaraan pushataan koodia.
 
-Klikkaamalla buildin tilaa kertovaa vihreää tai punaista palkkia pääset katsomaan tarkemmin mitä kussakin käännösprosessin askeleessa eli stepissä tapahtuu:
+Osiossa [jobs](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobs) voidaan määritellä yksi tai useampi "työ", eli useasta askeleesta koostuva tehtäväsarja. Määrittelimme tällä ketaa vain yhden työn, jolle annoimme nimen *run_tests*. Jos töitä olisi useita, suorittaisi GitHub actions ne yhtä aikaa.
 
-![]({{ "/images/lh1-7.png" | absolute_url }})
+Yksittäinen työ koostuu useista askelista, jotka on määritelty työn alla kohdassa [steps](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idsteps).
 
-**HUOM2**: jotkut Windows-käyttäjät ovat törmänneet siihen, että CircleCI antaa gradlen suorituksessa virheilmoituksen _permission denied_. Apu ongelmaan löytyy
-[täältä](https://discuss.circleci.com/t/gradlew-permission-denied/15346).
+GitHub varaa työn askelien suorittamista varten virtuaalikoneen. Kohta [runs-on](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on) määrittelee minkälaisella käyttöjärjestelmällä työn askeleet suoritetaan. Esimerkkimme tapauksessa suoritusympäristö on Ubuntu Linux.
 
-CircleCI-buildien toimintaa onkin mahdollista [konfiguroida](https://circleci.com/docs/2.0/configuration-reference/) melko vapaasti.
+Esimerkkimme tapauksessa työ koostuu neljästä askeleesta. Ensimmäinen askel 
 
-* Muuta nyt jotain testiä siten, että testi ei mene läpi ja pushaa koodi GitHubiin
-* Tarkkaile projektin CircleCI _jobs_-näkymää. Lisätiedot avautuvat painamalla punaista "Failed" painiketta. Lue näkymään alaosassa avautuva loki kokonaisuudessaan läpi.
-* Korjaa testi ja pushaa muutokset uudelleen GitHubiin
-* Tarkkaile jälleen CircleCI-näkymää ja lue loki läpi
+```
+- uses: actions/checkout@v2
+```
 
-### 11. CircleCI, osa 3
+suorittaa valmiiksi määritellyn actionin [checkout](https://github.com/marketplace/actions/checkout), joka dokumentaationsa mukaan tekee seuraavaa
 
-Laita repositiossa olevaan tiedostoon _README.md_ koodin tilasta kertova [Status Badge](https://circleci.com/docs/2.0/status-badges/). Avaa ensin _jobs_-näkymästä löytyvä asennussivu:
+> This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
 
-![]({{ "/images/lh1-8.png" | absolute_url }})
+Eli _checkout_ action siis hakee repositorion koodin askeleet suorittavalle virtuaalikoneelle. 
 
-ja kopioi badgen määrittelevä markdown-koodi
+Toinen askel on action [setup-java](https://github.com/marketplace/actions/setup-java-jdk), joka asentaan työn suorittavalle virtuaalikoneelle Javan.
 
-![]({{ "/images/lh1-9.png" | absolute_url }})
+Molemmat näistä actioneista olivat GitHubin [marketplacesta](https://github.com/marketplace?type=actions) löytyviä valmiita actioneja. Esim. Javan asentaminen työn suorittavalle virtuaalikoneelle on itsessään aika monimutkainen toimenpide, mutta valmiiksi määritelty action tekee sen helpoksi.
 
-Editoi tiedostoa README.md suoraan GitHubissa:
+Kolmas askel on hieman erilainen:
 
-![]({{ "/images/lh1-10.png" | absolute_url }})
+```
+- name: Grant execute permission for gradlew
+  run: chmod +x gradlew
+```
+
+Se suorittaa komentorivillä komennon, joka antaa suoritusoikeuden tiedostoon _gradlew_. 
+
+Neljäs askel on kaikkein tärkein, se suorittaa gradlen avulla projektin testit:
+
+```
+- name: Test with Gradle
+  run: ./gradlew test
+```
+
+Tee nyt koodiin muutos, joka hajottaa testit ja committaa muutos githubiin.
+
+Hetken kuluttua actions-välilehdellä pitäisi näkyä että commiteja on kaksi (kuvassa niitä on vahingossa kolme), ja että viimeisin on tilaltaan "punainen":
+
+![]({{ "/images/lh1-24.png" | absolute_url }})
+
+
+Klikkaamalla rikki mennyttä committia, päästään tarkastelemaan hieman tarkemmin actionin suorituksen etenemistä:
+
+![]({{ "/images/lh1-25.png" | absolute_url }})
+
+Kuten odotettua, testi ei mennyt läpi. Riippuen GitHubin asetuksista, olet myös saattanut saada email-muistutuksen rikki menneestä buildista:
+
+![]({{ "/images/lh1-26.png" | absolute_url }})
+
+Korjaa testi ja pushaa muutokset uudelleen GitHubiin. Tarkkaile jälleen Actions-näkymää ja varmista, että kaikki toimii oikein.
+
+### 11. GitHub Actions, osa 3
+
+Laita repositiossa olevaan tiedostoon _README.md_ koodin tilasta kertova _Status Badge_.  
+
+[Tämän](https://docs.github.com/en/free-pro-team@latest/actions/managing-workflow-runs/adding-a-workflow-status-badge) ohjeen mukaan badgen osoite on muotoa
+
+```
+https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_NAME>/badge.svg
+```
+
+*WORKFLOW_NAME* on määritelty konfiguraatiotiedostossa:
+
+```
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ main ]
+
+  ....
+```
+
+Olemme käyttäneet oletusarvoista nimeä _Java CI with Gradle_, nimi voi kuitenkin olla mikä vaan. Nimessä olevat välilyönnit korvataan osoitteessa merkeillä _%20_.
+
+Esimerkiksi omassa tapauksessani badgelinkki on
+
+```
+https://github.com/mluukkai/ohtu-viikko1-s2020/workflows/Java%20CI%20with%20Gradle/badge.svg
+```
+
+Lisää badge editoimalla tiedostoa README.md suoraan GitHubissa:
+
+![]({{ "/images/lh1-27.png" | absolute_url }})
+
+Oikein toimiva badge näyttää seuraavalta:
+
+![]({{ "/images/lh1-28.png" | absolute_url }})
+
+Badge toimii siis sen indikaattorina onko repositoriossasi oleva koodi testien puolesta kunnossa!
+
 
 Tee nyt jokin muutos koneellasi repositorioon ja yritä pushata koodi GitHubiin. Toimenpiteestä seuraa virhe:
 
 <pre>
-To github.com:mluukkai/ohtu-2019-viikko1.git
+To github.com:mluukkai/ohtu-viikko1-s2020.git
  ! [rejected]        master -> master (fetch first)
 error: failed to push some refs to 'git@github.com:mluukkai/ohtu-2019-viikko1.git'
 hint: Updates were rejected because the remote contains work that you do
@@ -499,12 +614,14 @@ Pullauksen yhteydessä syntyy ns. merge commit ja git avaa oletuseditorisi ja ha
 
 ### 12. Codecov
 
-Tehtävässä 8 määrittelimme projektin testauskattavuuden _JaCoCo:n_ avulla. https://codecov.io -palvelu mahdollistaa projektien koodikattavuuden julkaisemisen verkossa.
+Tehtävässä 8 määrittelimme projektin testauskattavuuden _JaCoCo:n_ avulla. <https://codecov.io> -palvelu mahdollistaa projektien koodikattavuuden julkaisemisen verkossa.
 
 * kirjaudu [Codecoviin](https://codecov.io) (GitHub sign up)
 * lisää repositorio Codecoviin alaisuuteen: 
 
 ![]({{ "/images/lh1-12.png" | absolute_url }})
+
+Saatat joutua odottamaan hetken, ennen kuin codecov löytää repositoriosi. Jos pieni odottelukaan ei auta, voit mennä suoraan repositoriosi codecov-osoitteeseen, joka on muotoa https://codecov.io/gh/githubtunnus/repositorio, omassa tapauksessani siis <https://codecov.io/gh/mluukkai/ohtu-viikko1-s2020>
 
 Saat Codecov:in tarkkailemaan projektisi koodikattavuutta lisäämällä tiedoston _build.gradle_ loppuun seuraava:
 
@@ -517,15 +634,16 @@ jacocoTestReport {
 }
 ```
 
-Sekä lisäämällä tiedoston <code>.circleci/config.yml</code> loppuun seuraavat rivit:
+Sekä lisäämällä tiedoston GitHub actionit konfiguroivan tiedoston loppuun seuraavat rivit:
 
 ```yml
-  - run: ./gradlew check
-  - run: ./gradlew jacocoTestReport
-  - run: bash <(curl -s https://codecov.io/bash)
+    - name: Code coverage rapost
+      run: ./gradlew jacocoTestReport
+    - name: Data to codecov
+      run: bash <(curl -s https://codecov.io/bash)
 ```
 
-**HUOM1** rivit on sisennettävä samalle tasolle kuin muut _run_-komennot.
+**HUOM1** rivit on sisennettävä samalle tasolle kuin muut stepit.
 
 **HUOM2** et tarvitse Codecovin tarjoamaa _upload tokenia_ mihinkään:
 
@@ -539,17 +657,19 @@ Klikkaailemalla sivun alalaidassa olevasta kohdasta _Files_ tiedostojen nimiä, 
 
 ![]({{ "/images/lh1-15.png" | absolute_url }})
 
-Käytännössä pyydämme Circleä suorittamaan onnistuneen buildin (eli komennon <code>gradle check</code>) jälkeen gradle-komennon, joka ensin suorittaa testien kattavuusanalyysin JaCoCo:lla ja sen jälkeen lähettää tiedot Codecoviin.
+Käytännössä pyydämme nyt GitHub actioneja suorittamaan onnistuneen testien suorituksen (eli komennon <code>gradle test</code>) jälkeen gradle-komennon, joka ensin suorittaa testien kattavuusanalyysin JaCoCo:lla ja sen jälkeen lähettää tiedot Codecoviin.
 
-Pushaa nyt muutokset GitHubiin ja seuraa _sekä_ CircleCI-buildin lokia, että repositorion Codecov-sivua.
+GitHub actionien loki näyttää miten askelten suoritus etenee:
 
-Lisää projektin _readme badge_ repositoriosi README.md-tiedostoon. Löydät badgen Codecovin settings-valikosta.
+![]({{ "/images/lh1-29.png" | absolute_url }})
+
+Lisää repositoriosi README.md-tiedostoon myös Codecov-badge. Löydät badgen Codecovin settings-valikosta.
 
 Projektisi GitHub-sivun tulisi lopulta näyttää suunnilleen seuraavalta (poislukien liian alhainen testauskattvuus):
 
-![]({{ "/images/lh1-16.png" | absolute_url }})
+![]({{ "/images/lh1-30.png" | absolute_url }})
 
-Huomaa, että CircleCIn ja Codecovin badget eivät päivity täysin reaaliajassa. Eli vaikka projektin testikattavuus nousisi, kestää hetken, ennen kuin badge näyttää tuoreen tilanteen.
+Huomaa, että GitHub actionin ja Codecovin badget eivät päivity täysin reaaliajassa. Eli vaikka projektin testikattavuus nousisi, kestää hetken, ennen kuin badge näyttää tuoreen tilanteen.
 
 ### 13. Parempi testauskattavuus
 
@@ -557,7 +677,7 @@ Projektin testauskattavuutta häiritsee nyt se, että myös pääohjelma _Main_ 
 
 Voimme määritellä, että joidenkin pakkausten sisältö jätetään huomioimatta kattavuusraportin generoinnissa.
 
-Luo projektiin uusi pakkaus nimeltä _main_ samalle tasolle kuin _ohtu_, siirrä pääohjelma luomaasi pakkaukseen ja muuta _build.gradle_:n _jacocoTestReport_ muotoon:
+Luo projektiin uusi pakkaus nimeltä _paaohjelma_ samalle tasolle kuin _ohtu_, siirrä pääohjelma, eli luokka _Main_ luomaasi pakkaukseen ja muuta _build.gradle_:n _jacocoTestReport_ muotoon:
 
 ```
 jacocoTestReport {
@@ -567,21 +687,24 @@ jacocoTestReport {
     }
     afterEvaluate {
         classDirectories.setFrom(files(classDirectories.files.collect {
-            fileTree(dir: it,
-                    exclude: ['main/**'])
+            fileTree(dir: it, exclude: ['paaohjelma/**'])
         }))
     }
 }
 ```
 
-Muuta myös saman tiedoston muut viitteet pääohjelmaan oikeaan muotoon ja varmista, että 
+Muutoksen jälkeen pakkausrakenteen pitäisi näyttää NetBeansissa seuraavalta
+
+![]({{ "/images/lh1-31.png" | absolute_url }})
+
+Muuta myös tiedoston _build.gradle_  muut viitteet pääohjelmaan oikeaan muotoon ja varmista, että 
 [tehtävässä 7](/tehtavat1#7-gradle) mainitut ohjelman suoritus komennolla _gradle run_ ja generoidun jar-tiedoston suorittaminen edelleen toimivat.
 
 Pushaa koodi Githubiin ja varmista, että Codecov generoi raportin siten, että _Main_ jätetään huomioimatta.
 
 ### Tehtävien palautusrepositoriot
 
-Tehtävät 14-16 kannattaa tehdä *eri repositorioon* kuin mihin teit tehtävät 2-13. Voit käyttää tehtävien 14-16 repositoriota myös seuraavien viikkojen tehtävien palauttamiseen. Nyt  tehtävän repositorion rakenne voi tällöin olla esim. seuraava:
+Tehtävät 14-16 kannattaa tehdä *eri repositorioon* kuin mihin teit tehtävät 2-13. Voit käyttää tehtävien 14-16 repositoriota myös seuraavien viikkojen tehtävien palauttamiseen. Nyt luotavan repositorion rakenne voi tällöin olla esim. seuraava:
 
 ```
 viikko1
@@ -600,7 +723,7 @@ Lisää tehtäviin 2-13 käyttämäsi repositorion README.md-tiedostoon linkki t
 
 Tehtävien 2-13 repositorion README.md-tiedoston tulisi siis näyttää suunnilleen tältä
 
-![]({{ "/images/lh1-11.png" | absolute_url }})
+![]({{ "/images/lh1-32.png" | absolute_url }})
 
 ### 14. riippuvuuksien injektointi osa 1
 
@@ -609,7 +732,7 @@ Tutustumme kurssin aikana muutamiin _suunnittelumalleihin_ (engl. design pattern
 Kurssin ensimmäinen suunnittelumalli _riippuvuuksien injektointi_ (engl. dependency injection), on yksinkertainen periaate, jota noudattamalla koodin automatisoitua testaamista on monissa tilanteissa mahdollista helpottaa ratkaisevalla tavalla. 
 
 * Tutustu riippuvuuksien injektointiin lukemalla [tämä dokumentti](/riippuvuuksien_injektointi/)
-* hae esimerkkiprojekti kurssin [tehtävärepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistosta [koodi/viikko1/RiippuvuuksienInjektointi1](https://github.com/ohjelmistotuotanto-hy/syksy2019/tree/master/koodi/viikko1/RiippuvuuksienInjektointi1) ja kokeile että se toimii
+* hae esimerkkiprojekti kurssin [tehtävärepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistosta [koodi/viikko1/RiippuvuuksienInjektointi1](https://github.com/ohjelmistotuotanto-hy/syksy2020/tree/main/koodi/viikko1/RiippuvuuksienInjektointi1) ja kokeile että se toimii
   * järkevintä lienee että kloonaat repositorion paikalliselle koneellesi
   * **tämän jälkeen kannattaa kopioida projekti tehtävien 14-16 palautukseen käyttämäsi repositorion sisälle**
 
@@ -617,7 +740,7 @@ Tutustu riippuvuuksien injektointiin esimerkin avulla. Saat suoritettua koodin k
 
 ### 15. riippuvuuksien injektointi osa 2: NHL-tilastot
 
-* Kurssin kurssin [tehtävärepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistossa [koodi/viikko1/NHLStatistics1](https://github.com/ohjelmistotuotanto-hy/syksy2019/tree/master/koodi/viikko1/NhlStatistics1) on ohjelma, jonka avulla on mahdollista tutkia <https://nhl.com>-sivulla olevia, kuluvan kauden tilastotietoja
+* Kurssin [tehtävärepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistossa [koodi/viikko1/NHLStatistics1](https://github.com/ohjelmistotuotanto-hy/syksy2020/tree/main/koodi/viikko1/NhlStatistics1) on ohjelma, jonka avulla on mahdollista tutkia <https://nhl.com>-sivulla olevia tilastotietoja (koronan takia NHL:ää ei juuri tällä hetkellä pelata, ja tilastot ovat viime vuodelta)
   * Kopioi projekti edellisen tehtävän repositorion alle omaksi hakemistoksi
 * Ohjelma koostuu kolmesta luokasta.
   * <code>Statistics</code> on palvelun tarjoava luokka, se tarjoaa metodit yhden pelaajan tietojen näyttämiseen, pistepörssin näyttämiseen ja yhden joukkueen pelaajien tietojen näyttämiseen
@@ -641,6 +764,7 @@ Statistics stats = new Statistics( new PlayerReader("https://nhlstatisticsforoht
 
 * tee yksikkötestit luokalle Statistics
   * testien kattavuuden (sekä instructions että branches) tulee Statistics-luokan osalta olla 100% (mittaa kattavuus JaCoCo:lla, ks. [tehtävä 8](/tehtavat1#8-junit))
+    * huomaa, että kattavuusraportti ei generoidu ennen kun sovellukseen on lisätty testejä
   * testit eivät saa käyttää verkkoyhteyttä
   * verkkoyhteyden tarpeen saat eliminoitua luomalla testiä varten rajapinnan Reader-toteuttavan "stubin", jonka sisälle kovakoodaat palautettavan pelaajalistan
   * voit luoda stubin testin sisälle anonyyminä sisäluokkana seuraavasti:
@@ -675,6 +799,4 @@ public class StatisticsTest {
 
 Kun injektoit readerStub-olion testissä Statistics-oliolle, palauttaa se aina saman pelaajalistan.
 
-### Tehtävien palautus
-
-Pushaa kaikki tekemäsi tehtävät (paitsi ne joissa mainitaan, että tehtävää ei palauteta mihinkään) GitHubiin ja merkkaa tekemäsi tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+{% include submission_instructions.md %}

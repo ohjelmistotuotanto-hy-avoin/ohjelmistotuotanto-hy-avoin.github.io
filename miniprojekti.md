@@ -9,19 +9,20 @@ permalink: /miniprojekti/
 
 ### Ajankohtaista
 
-- Voit osallistua minprojektiin siinä vaiheessa kun olet palauttanut vähintään viikkojen 1-3 tehtävät
-- Toinen mahdollisuus miniprojektin suoritukseen käynnistyy 30.3. alkavalla viikolla 
-- Ilmoittautuminen alkaa noin 23.3. lisää tietoa emailitse
-- Miniprojektien asiakastapaamiset järjestetään virtuaalisesti [zoom](https://helpdesk.it.helsinki.fi/ohjeet/yhteydenpito-ja-julkaiseminen/videokokoukset/zoom)-järjestelmän avulla.
-- Ohjaajaan Telegram-käyttäjätunnus on @kalleilv. Ohjaajaan voi ottaa suoraan yhteyttä mihin tahansa miniprojektiin liittyvissä kysymyksissä.
+- loppudemojen ajankohdat:
+  - tiistai 8.12. klo 12-14
+  - torstai 10.12. klo 14-16
+  - perjantai 11.12. klo 14-16 
+- jokainen ryhmä osallistuu yhteen loppudemoon
+- varaa aika [täällä](https://docs.google.com/document/d/1534y8QXwYWRYRXWyFlHMOWBHmkQPGcadN5xLbs_Mrjc/edit?usp=sharing)
 
 ### Johdanto
 
-- Kurssin suorittaminen [6 opintopisteen](/osa0#kurssin-arvostelu) laajuisena edellyttää hyväksyttyä osallistumista miniprojektiin tai sen [hyväksilukemista](/osa0#miniprojektin-hyv%C3%A4ksilukeminen)
+- Kurssin viikoilla 4-7 tehdään miniprojekti
+- **Kurssin läpipääsy edellyttää hyväksyttyä osallistumista miniprojektiin** tai sen [hyväksilukemista](/osa0#miniprojektin-hyv%C3%A4ksilukeminen)
 
-- Projekti tehdään noin 4-6 hengen ryhmissä
+- Projekti tehdään noin 5-6 hengen ryhmissä
 - Projektissa ohjelmoidaan jonkin verran, **pääpaino ei ole ohjelmoinnissa** vaan systemaattisen prosessin (tästä lisää myöhemmin) noudattamisessa.
-- Projekti koostuu kolmesta viikon kestoisesta sprintistä
 - **Jokaisen ryhmän jäsenen on tarkoitus tehdä kunkin sprintin aikana töitä noin 6 tuntia projektin eteen**  
   - Asiakastapaamisiin menevää aikaa ei lasketa viikoittaiseen työaikaan!
 - Ryhmä tekee kussakin sprintissä sen minkä se sprinttiin varatussa ajassa pystyy tekemään, ei enempää eikä vähempää
@@ -29,11 +30,8 @@ permalink: /miniprojekti/
 
 ### Ryhmän muodostaminen
 
-* Ilmoittaudu miniprojektiin viimeistään pe 27.3. klo 23:59 [täällä](https://study.cs.helsinki.fi/assembler/course/e86c2577-4cd1-4f35-9b05-460d80f18520)
-  * **HUOM** voit osallistua projektiin siinä vaiheessa kun olet palauttanut vähintään viikkojen 1-3 tehtävät!
-* Ryhmä muodostetaan tulemalla paikalle johonkin miniprojektien aloitustilaisuuksista
-  - ajat kerrotaan täällä lauantaina 28.3.
-* Jokaisen _tulee osallistua yhteen tilaisuuteen_. Paikalla on oltava alusta loppuun. 
+* Ryhmät muodostetaan lauantaina 14.11. "algoritmisesti", pääasiassa noudattaen [ilmoittautumisessa](https://study.cs.helsinki.fi/assembler/course/283df2a6-51e7-434f-a4b6-08514579a9ea) kerrottuja sopivia työskentelyaikoja
+* Ryhmäsi aloitustilaisuuden ajankohta selviää ilmoittautumissovelluksesta. Kaikkien ryhmäläisten on **pakko osallistua** tilaisuuteen, jonka kesto on noin 2 tuntia
 * Aloitustilaisuuteen tullessa on syytä tuntea materiaalin osien 1 ja 2 asioista ainakin seuraavat: 
   * scrum
   * sprintti
@@ -43,41 +41,47 @@ permalink: /miniprojekti/
   * hyväksymäkriteeri
   * definition of done
 * Tämä dokumentti ja miniprojektin [arvosteluperusteet](/miniprojektin_arvosteluperusteet) on myös syytä lukea huolellisesti ennen aloitustilaisuutta
-* Ryhmä keksii itselleen nimen, luo Github-repositorion ja rekisteröi itsensä palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+* Ryhmä keksii itselleen nimen, luo Github-repositorion ja rekisteröi itsensä palautussovellukseen <{{site.stats_url}}>
   * **yksi ryhmäläinen** kirjautuu järjestelmään, menee välilehdelle _miniprojects_
     * luo projektin _create project_ -napista avautuvasta lomakkeesta
-    * ja jakaa muille ryhmäläisille luodin projektin id:n
+    * ja jakaa muille ryhmäläisille luodun projektin id:n
   * **muut ryhmäläiset** kirjautuvat järjestelmään ja liittyvät id:n avulla ryhmään _join project_ -napista avautuvasta lomakkeesta
-* Ryhmä varataa ajan sprinttien 2-3 asiakastapaamisille
-  * tapaamisaikojen varaaminen [täältä](https://docs.google.com/document/d/1W4HsdtEnejG4mMY9FRwdRFwnAs8VnpFM9T0um8YVDxI/edit?usp=sharing)
-  * pääkaupunkiseudun ulkopuolella asuvien on mahdollista osallistua asiakastapaamisiin etänä
+
 
 ### Työn eteneminen
 
-#### viikko 14 (30.3.-3.4.)
+Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin suunnittelu) tapahtuu saman 2h sisällä missä aloitustilaisuus pidetään. Tilaisuuden kesto on 30 minuuttia. 
+Aika kerrotaan palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject) viimeistään sunnuntaina 22.11.
+
+#### viikko 4 (16-20.11.)
 
 * Ryhmä muodostuvat/muodostetaan
-* Ryhmät tapaavat asiakkaan aloitustilaisuuksista
+* Ryhmät tapaavat asiakkaan aloitustilaisuuksissa
 * Aloitustilaisuudessa pidettävän asiakastapaamisen pohjalta ryhmä tekee alustavan product backlogin ja sopii asiakkaan kanssa ensimmäisen sprintin tavoitteesta
 * Ryhmä suunnittelee ensimmäisen sprintin ja aloittaa työskentelyn
   * sprintin suunnittelun tuloksena ryhmä tekee sprint backlogin
   * backlogien sisällöstä enemmän [täällä](/miniprojekti#tekniset-ja-prosessiin-liittyvät-vaatimukset)
 * Sprintin 1 [arvosteluperusteet](/miniprojektin_arvosteluperusteet#ensimmäisen-sprintin-arvosteluperusteet) kannattaa lukea huolellisesti
-* Ryhmät varaavat tapaamisen sprinttien 2-3 asiakastapaamisille
-  * tapaamisaikojen varaaminen [täältä](https://docs.google.com/document/d/1W4HsdtEnejG4mMY9FRwdRFwnAs8VnpFM9T0um8YVDxI/edit?usp=sharing)
 
-#### viikko 15 ja 16 (6-17.4.)
+#### viikko 5 (23-29.11.)
 
 * Sprintin 1 katselmointi ja sprintin 2 suunnittelu
-* Pääsiäisen vuoksi sprintin 2 pituus on poikkeuksellisesti kaksi viikkoa
+  * asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
-#### viikko 17 (20-24.4.)
+#### viikko 6 (30.11-6.12.)
 
 * Sprintin 2 katselmointi ja sprintin 3 suunnittelu 
+  * asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
-#### viikko 18 (27-30.4.)
+#### viikko 7 (7-13.12.)
 
-* Sprintin 3 katselmointi
+* Sprintin 3 katselmointi (eli loppudemot)
+  - tiistai 8.12. klo 12-14
+  - torstai 10.12. klo 14-16
+  - perjantai 11.12. klo 14-16 
+- jokainen ryhmä osallistuu yhteen loppudemoon
+- varaa aika [täällä](https://docs.google.com/document/d/1534y8QXwYWRYRXWyFlHMOWBHmkQPGcadN5xLbs_Mrjc/edit?usp=sharing)
+
 
 ### Toteutettava ohjelmisto
 
@@ -92,7 +96,7 @@ permalink: /miniprojekti/
     * Työajan ylittävä sankarikoodaus ei ole suositeltavaa, se on jopa kiellettyä
   * Ryhmä sitoutuu ainoastaan niihin storyihin, jotka se kuvittelee kykenevänsä toteuttamaan sprintissä **definition of donen** määrittelemällä laatutasolla. Definition of done on määritelty alla
   * Kannattaa huomata, että storyihin sitoutuminen ei tarkoita sitä, että ne on pakko tehdä valmiiksi. Ohjelmistoja tehdessä sattuu ja tapahtuu ennakoimattomia asioita, ja aina suunnitelmat eivät toteudu. 
-  * Asiakkaalle ei kannata luvata liikaa, ja varsinkin ensimmäisten sprinttien aikana arvioissa on otava varovainen, konfiguroimiseen ja testaamiseen tulee kulumaan ja ryhmän järjestäytymiseen paljon aikaa
+  * Asiakkaalle ei kannata luvata liikaa, ja varsinkin ensimmäisten sprinttien aikana arvioissa on otava varovainen, konfiguroimiseen, testaamiseen ja ryhmän järjestäytymiseen tulee kulumaan paljon aikaa
 * Ryhmä ylläpitää _sprint backlogia_
   * User storyt jaetaan sprintin suunnittelussa teknisen tason tehtäviksi eli _taskeiksi_ jotka sijoitetaan sprint backlogiin
   * Ryhmä tekee päivittäin jäljellä olevan työajan arviointia ja dokumentoi tämän sprintin burndown-käyränä
@@ -101,14 +105,14 @@ permalink: /miniprojekti/
     * taskin tila (esim. aloitettu, ohjelmoitu, testauksessa, valmis)
     * taskin tekijä(t)
 * Ryhmä toteuttaa jatkuvaa integraatiota (continuous integration) 
-  * Oletusarvoisesti kannattaa käyttää laskareista 1 tuttua [CircleCI:tä](https://circleci.com/), muita vaihtoehtoja esim. TravisCI ja Github Actions
+  * Oletusarvoisesti kannattaa käyttää laskareista 1 tuttua Github Actionsia, muita vaihtoehtoja esim. TravisCI
 * Koodi on talletettu GitHub:iin 
-* Projektin Github-repositoriolla on järkevä README.md 
+* Projektin GitHub-repositoriolla on järkevä README.md 
 
 #### Product ja sprint backlog
 
 * Backlogissa vaatimukset ilmaistaan järkevästi muotoiltuna user storyinä
-  * **minprojektissa ei ole tarvetta estimoida user storya**, ainoastaan sprintissä olevien taskien työmäärä estimoidaan
+  * **miniprojektissa ei ole tarvetta estimoida user storya**, ainoastaan sprintissä olevien taskien työmäärä estimoidaan
 * Kuten edellä todettiin sprint backlogista tulee ilmetä kunkin taskin osalta 
   * jäljellä olevan työajan estimaatti
   * taskin tila (esim. aloitettu, ohjelmoitu, testauksessa, valmis)
@@ -122,7 +126,7 @@ permalink: /miniprojekti/
 
 #### Definition of done
 
-Seuraavassa lähtökohta definition donelle. Ryhmän tuleemääritellä github-repositorioon oma, omiin lähtökohtiin sopiva DoD
+Seuraavassa lähtökohta definition donelle. Ryhmän tulee määritellä GitHub-repositorioon oma, omiin lähtökohtiin sopiva DoD
 
 * User storyille tulee määritellä hyväksymiskriteerit, jotka dokumentoidaan [Cucumberin](/cucumber/) featureiksi
   * hyvänä käytänteenä on laittaa README:stä linkki hyväksymäkriteerit määritteleviin tiedostoihin

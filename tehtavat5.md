@@ -7,6 +7,15 @@ permalink: /tehtavat5/
 
 ## Viikko 5
 
+*Alla olevien tehtävien deadline on maanantaina 30.11. klo 23:59*
+
+Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
+
+- Maanantai 14-16 [zoom](https://helsinki.zoom.us/j/63962392550?pwd=RzluTjZWYmNLb0g4bjRxb0ZlckRkUT09)
+- Perjantai 10-12 [zoom](https://helsinki.zoom.us/j/64396759243)
+
+Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/5), joiden deadline on sunnuntaina 29.11. klo 23:59:00.  
+
 Tehtävissä 1-3 jatketaan gitin harjoittelua. Tehtävät 2 ja 3 eivät näy palautuksissa mitenkään.
 
 Tehtävät 4 ja 5 liittyvät materiaalin ohjelmistosuunnittelua käsittelevän [osan 4](/osa4/) niihin lukuihin, joihin on merkitty <span style="color:blue">[viikko 5]</span>.
@@ -15,11 +24,11 @@ Tehtävä 6 käsittelee retrospektiivitekniikoita.
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/tehtavat5.md) tiedostoa GitHubissa.
+{% include typo_instructions.md path="/tehtavat5.md" %}
 
 ### Tehtävien palauttaminen
 
-Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}>
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
@@ -40,7 +49,7 @@ Tee seuraavat samaan repositorioon, mihin palautat tehtäväsi:
 * palaa tagi1:n aikaan, eli anna komento <code>git checkout tagi1</code>
   * varmista, että tagin jälkeisiä muutoksia ei näy
 * palaa nykyaikaan
-  * tämä onnistuu komennolla <code>git checkout master</code>
+  * tämä onnistuu komennolla <code>git checkout main</code>
 * lisää tägi _edelliseen_ committiin
   * operaatio onnistuu komennolla <code>git tag tagi1b HEAD^</code> , eli HEAD^ viittaa nykyistä "headia" eli olinpaikkaa historiassa edelliseen committiin
   * joissain windowseissa muoto <code>HEAD^</code> ei toimi, sen sijasta voit käyttää muotoa <code>HEAD~</code>
@@ -52,7 +61,7 @@ Tagit eivät mene automaattisesti etärepositorioihin. Pushaa koodisi githubiin 
 
 Varmista, että tagit siirtyvät GitHubiin:
 
-![](https://github.com/mluukkai/ohjelmistotuotanto2018/raw/master/images/viikko4-1.png)
+![](https://github.com/mluukkai/ohjelmistotuotanto2018/raw/main/images/viikko4-1.png)
 
 ### 2. git: vahingossa tuhotun tiedoston palautus [versionhallinta]
 
@@ -94,7 +103,7 @@ Voit tehdä tämän ja seuraavan tehtävän mihin tahansa repositorioon, tehtäv
 
 ### 4. Laskin ja komento-oliot
 
-[Kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistoissa _koodi/viikko5/LaskinFXNN_, löytyy hieman modifioitu versio syksyn 2016 Ohjelmoinnin jatkokurssin viikon 5 [tehtävästä](https://www.cs.helsinki.fi/group/java/s16-materiaali/viikko12/#193laskin).
+[Kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistoissa _koodi/viikko5/LaskinFXNN_, löytyy hieman modifioitu versio syksyn 2016 Ohjelmoinnin jatkokurssin viikon 5 [tehtävästä](https://www.cs.helsinki.fi/group/java/s16-materiaali/viikko12/#193laskin).
 
 Koodista on kolme eri versiota, _LaskinFX8_, jonka pitäisi toimia Java8:llä (myös cubbli-linuxeilla, ks. README), _LaskinFX11_, jonka pitäisi toimia Java11:lla ja _LaskinSwing_, jonka pitäisi toimia kaikilla versiolla.
 
@@ -159,21 +168,21 @@ public class Tapahtumankuuntelija implements EventHandler {
     public Tapahtumankuuntelija(TextField tuloskentta, TextField syotekentta, Button plus, Button miinus, Button nollaa, Button undo) {
         this.undo = undo;
         this.sovellus = new Sovelluslogiikka();
-        komennot = new HashMap<>();
-        komennot.put(plus, new Summa(tuloskentta, syotekentta,  nollaa, undo, sovellus) );
-        komennot.put(miinus, new Erotus(tuloskentta, syotekentta, nollaa, undo, sovellus) );
-        komennot.put(nollaa, new Nollaa(tuloskentta, syotekentta,  nollaa, undo, sovellus) );
+        this.komennot = new HashMap<>();
+        this.komennot.put(plus, new Summa(tuloskentta, syotekentta,  nollaa, undo, sovellus) );
+        this.komennot.put(miinus, new Erotus(tuloskentta, syotekentta, nollaa, undo, sovellus) );
+        this.komennot.put(nollaa, new Nollaa(tuloskentta, syotekentta,  nollaa, undo, sovellus) );
     }
     
     @Override
     public void handle(Event event) {
         if ( event.getTarget() != undo ) {
-            Komento komento = komennot.get((Button)event.getTarget());
+            Komento komento = this.komennot.get((Button)event.getTarget());
             komento.suorita();
-            edellinen = komento;
+            this.edellinen = komento;
         } else {
-            edellinen.peru();
-            edellinen = null;
+            this.edellinen.peru();
+            this.edellinen = null;
         }                  
     }
 
@@ -194,8 +203,8 @@ Wikipedian mukaan retrospektiivi on _"a meeting held by a project team at the en
 
 Tutustu [täällä](http://retrospectivewiki.org/index.php?title=Retrospective_Plans) esiteltyihin retrospektiivitekniikoihin [Start, Stop, Continue, More of, Less of Wheel](http://retrospectivewiki.org/index.php?title=Start,_Stop,_Continue,_More_of,_Less_of_Wheel) ja [Glad, Sad, Mad](http://retrospectivewiki.org/index.php?title=Glad,_Sad,_Mad)
 
-Tee aiheesta noin 0.25 sivun (eli noin 125 sanaa) tiivistelmä repositorion juureen sijoitettavaan tiedostoon _retro.md_
+Pidä huoli siitä, että miniprojektitiimisi pitää ensimmäisen sprintin lopussa jompaa kumpaa tekniikkaa noudattavan retrospektiivin!
 
-### Tehtävien palautus
+Tee aiheesta noin 0.25 sivun (eli noin 125 sanaa) tiivistelmä repositorion juureen sijoitettavaan tiedostoon _retro.md_. Tiivistelmän aihe on melko vapaa. Voit kertoa joko parista retrospektiivitekniikasta tai ehkä vielä mielummin kirjoittaa siitä miten piditte miniprojektin retrospektiivin, ja mitä havaintoja siellä syntyi.
 
-Pushaa kaikki tekemäsi tehtävät GitHubiin ja merkitse tekemäsi tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+{% include submission_instructions.md %}

@@ -7,15 +7,25 @@ permalink: /tehtavat6/
 
 ## Viikko 6
 
+*Alla olevien tehtävien deadline on maanantaina 7.12. klo 23:59*
+
+Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
+
+- Maanantai 14-16 [zoom](https://helsinki.zoom.us/j/63962392550?pwd=RzluTjZWYmNLb0g4bjRxb0ZlckRkUT09)
+- Perjantai 10-12 [zoom](https://helsinki.zoom.us/j/64396759243)
+
+
 Tehtävät 2-5 liittyvät materiaalin ohjelmistosuunnittelua käsittelevän [osan 4](/osa4/) niihin lukuihin, joihin on merkitty <span style="color:blue">[viikko 5]</span> tai <span style="color:blue">[viikko 6]</span>.
+
+Tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/6), deadline on poikkeuksellisesti vasta perjantaina 13.12. klo 23:59:00.  
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/tehtavat6.md) tiedostoa GitHubissa.
+{% include typo_instructions.md path="/tehtavat6.md" %}
 
 ### Tehtävien palauttaminen
 
-Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}>
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
@@ -57,7 +67,7 @@ Poista branch haara. Etsi googlaamalla komento jolla saat tuhottua branchin.
 
 ### 2. Kyselykieli NHLStatistics-ohjelmaan, osa 1
 
-[Kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistosta _koodi/viikko6/QueryLanguage_ löytyy jälleen yksi versio tutusta NHL-tilastojen tarkasteluun tarkoitetusta  ohjelmasta.
+[Kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistosta _koodi/viikko6/QueryLanguage_ löytyy jälleen yksi versio tutusta NHL-tilastojen tarkasteluun tarkoitetusta  ohjelmasta.
 
 Tällä kertaa olemme kiinnostuneita tekemään hieman monimutkaisempia "kyselyjä" pelaajatietoihin, esim. _listaa kaikki joukkueen PHI pelaajat joilla on vähintään 5 maalia ja vähintään 5 syöttöä_.
 
@@ -65,7 +75,7 @@ Koodin onkin luotu hieman valmista kalustoa josta pääset liikkeelle. Yllä ole
 
 ``` java
 public static void main(String[] args) {
-    Statistics stats = new Statistics(new PlayerReaderImpl("https://nhl27112019.herokuapp.com/players.txt"));
+    Statistics stats = new Statistics(new PlayerReaderImpl("https://nhlstatisticsforohtu.herokuapp.com/players.txt"));
  
     Matcher m = new And( new HasAtLeast(5, "goals"),
                          new HasAtLeast(5, "assists"),
@@ -79,11 +89,6 @@ public static void main(String[] args) {
 ```
 
 Luokalle _Statistics_ on tehty metodi _matches_, joka palauttaa listan niistä pelaajista, joille parametrina annettu _Matcher_-rajapinnan toteuttava olio palauttaa _true_
-
-HUOM: Tilastotiedot haetaan palvelimelta, josta on olemassa kaksi erillistä versiota.
-- Osoitteesta _https://nhlstatisticsforohtu.herokuapp.com/players.txt_ löytyvät ajantasaiset tilastotiedot
-- Osoitteesta _https://nhl27112019.herokuapp.com/players.txt_ löytyvät 27.11.2019 tiedot 
-- Seuraavassa olevat esimerkkitulostukset ovat marraskuun lopun tilastoista
 
 Tutustu ohjelman rakenteeseen
 
@@ -110,10 +115,14 @@ Matcher m = new And(
 vastauksena pitäisi olla joukkueen _NYR_ pelaajista ne, joilla ei ole vähintään yht maalia, eli *0 maalia tehneet*:
 
 <pre>
-Lias Andersson       NYR           0 +  1 = 1
+Steven Fogarty       NYR           0 +  0 = 0
 Boo Nieves           NYR           0 +  0 = 0
+Libor Hajek          NYR           0 +  5 = 5
 Tim Gettinger        NYR           0 +  1 = 1
-Libor Hajek          NYR           0 +  4 = 4
+Lias Andersson       NYR           0 +  1 = 1
+Henrik Lundqvist     NYR           0 +  0 = 0
+Igor Shesterkin      NYR           0 +  0 = 0
+Alexandar Georgiev   NYR           0 +  0 = 0
 </pre>
 
 Kyselyn
@@ -127,40 +136,50 @@ Matcher m = new And(
 
 tulisi palauttaa täsmälleen sama lista.
 
+Ehdon `All` tulisi siis olla tosi kaikille pelaajille., Voit varmistaa sen toimivuudet kokeilemalla seuraavaa:
+
+```java
+System.out.println(stats.matches(new All()).size());
+```
+
+Komennon tulisi tulostaa kaikkien pelaajien lukumäärä, joka on_964_.
+
+Ehto `All` ei ole yksistään kovin hyödyllinen, mutta tulemme tarvitseman sitä pian.
+
 ### 3. Kyselykieli NHLStatistics-ohjelmaan, osa 2
 
 **Tee** rajapinnan _Matcher_ toteuttava _Or_, joka on tosi silloin jos ainakin yksi sen parametrina saamista ehdoista on tosi.
 
 Kyselyn
 
-```java
-Matcher m = new Or( new HasAtLeast(20, "goals"),
-                    new HasAtLeast(20, "assists")
-);   
+```java       
+Matcher m = new Or( new HasAtLeast(40, "goals"),
+                    new HasAtLeast(60, "assists")
+);  
 ```
 
 tulee palauttaa ne, joilla on vähintään 20 maalia tai syöttöä, eli seuraava lista
 
 ```
-Leon Draisaitl       EDM          16 + 32 = 48
-John Carlson         WSH           8 + 28 = 36
-Jonathan Huberdeau   FLA          10 + 20 = 30
-Connor McDavid       EDM          18 + 29 = 47
-David Pastrnak       BOS          23 + 16 = 39
-Aleksander Barkov    FLA           7 + 22 = 29
-Logan Couture        SJS           5 + 20 = 25
-Brad Marchand        BOS          17 + 25 = 42
+Mika Zibanejad       NYR          41 + 34 = 75
+Artemi Panarin       NYR          32 + 63 = 95
+David Pastrnak       BOS          48 + 47 = 95
+Auston Matthews      TOR          47 + 33 = 80
+Alex Ovechkin        WSH          48 + 19 = 67
+John Carlson         WSH          15 + 60 = 75
+Leon Draisaitl       EDM          43 + 67 = 110
+Connor McDavid       EDM          34 + 63 = 97
 ```
 
 Kyselyn 
 
 ```java
 Matcher m = new And(
-    new HasAtLeast(20, "points"),
+    new HasAtLeast(50, "points"),
     new Or( 
         new PlaysIn("NYR"),
         new PlaysIn("NYI"),
-        new PlaysIn("NJD")
+        new PlaysIn("BOS")
     )
 ); 
 ```
@@ -168,10 +187,15 @@ Matcher m = new And(
 tulee palauttaa kaikki yli 20 pistettä tehneet jotka pelaavat jossain seuraavista joukkueista _NYI_, _NYR_ tai _NJD_. Lista näyttää seuraavalta: 
 
 ```
-Mathew Barzal        NYI           9 + 11 = 20
-Artemi Panarin       NYR          12 + 18 = 30
-Ryan Strome          NYR           6 + 16 = 22
-Taylor Hall          NJD           4 + 17 = 21
+Brock Nelson         NYI          26 + 28 = 54
+Mathew Barzal        NYI          19 + 41 = 60
+Ryan Strome          NYR          18 + 41 = 59
+Mika Zibanejad       NYR          41 + 34 = 75
+Tony DeAngelo        NYR          15 + 38 = 53
+Artemi Panarin       NYR          32 + 63 = 95
+Patrice Bergeron     BOS          31 + 25 = 56
+Brad Marchand        BOS          28 + 59 = 87
+David Pastrnak       BOS          48 + 47 = 95
 ```
 
 Kyselyt perustuvat rakenteeltaan _decorator_-suunnittelumalliin, vastaavasti kuten materiaalin osan 4 esimerkissä [dekoroitu pino](/osa4/#esimerkki-dekoroitu-pino-viikko-6). _And_- ja _OR_-muotoiset kyseltyt on muodostettu myös erään suunnittelumallin, [compositen](https://sourcemaking.com/design_patterns/composite) hengessä, ne ovat _Matcher_-rajapinnan toteuttavia olioita, jotka sisältävät itse monta _Matcher_-olioa. Niiden käyttäjä ei kuitenkaan tiedä sisäisestä rakenteesta mitään.
@@ -188,7 +212,7 @@ Ensin kysely, joka palauttaa jokaisen pelaajan:
 
 ``` java
 public static void main(String[] args) {
-    Statistics stats = new Statistics(new PlayerReaderImpl("https://nhl27112019.herokuapp.com/players.txt"));
+    Statistics stats = new Statistics(new PlayerReaderImpl("https://nhlstatisticsforohtu.herokuapp.com/players.txt"));
     
     QueryBuilder query = new QueryBuilder();
     Matcher m = query.build();
@@ -199,13 +223,13 @@ public static void main(String[] args) {
 }
 ```     
 
-Tässä kyselyssä voi ja kannattaa hyödyntää edellisen tehtävän _All_-matcheria.
+Tässä kyselyssä voi ja kannattaa hyödyntää aiemmin tehtyä _All_-matcheria.
 
 Seuraavaksi kysely, missä tulostetaan pelaajat, joiden joukkue on NYR
 
 ``` java
 public static void main(String[] args) {
-    Statistics stats = new Statistics(new PlayerReaderImpl("https://nhl27112019.herokuapp.com/players.txt"));
+    Statistics stats = new Statistics(new PlayerReaderImpl("https://nhlstatisticsforohtu.herokuapp.com/players.txt"));
  
     QueryBuilder query = new QueryBuilder();
  
@@ -221,7 +245,7 @@ Seuraavaksi kysely, missä tulostetaan pelaajat joiden joukkue on NYR, joilla on
 
 ``` java
 public static void main(String[] args) {
-    Statistics stats = new Statistics(new PlayerReaderImpl("https://nhl27112019.herokuapp.com/players.txt"));
+    Statistics stats = new Statistics(new PlayerReaderImpl("https://nhlstatisticsforohtu.herokuapp.com/players.txt"));
  
     QueryBuilder query = new QueryBuilder();
  
@@ -238,12 +262,11 @@ public static void main(String[] args) {
 Pelaajien lista on seuraava
 
 ```
-Chris Kreider        NYR           6 +  7 = 13
-Tony DeAngelo        NYR           7 + 10 = 17
-Vladislav Namestnikov NYR, OTT      6 +  6 = 12
-Ryan Strome          NYR           6 + 16 = 22
-Kaapo Kakko          NYR           6 +  4 = 10
-Filip Chytil         NYR           7 +  2 = 9
+Greg McKegg          NYR           5 +  4 = 9
+Jacob Trouba         NYR           7 + 20 = 27
+Brendan Lemieux      NYR           6 + 12 = 18
+Adam Fox             NYR           8 + 34 = 42
+Brett Howden         NYR           9 + 10 = 19
 ```
 
 Peräkkäin ketjutetut ehdot siis toimivat "and"-periaatteella. 
@@ -255,12 +278,13 @@ Tässä tehtävässä riittää, että kyselyrakentaja osaa muodostaa _and_-peri
 Laajennetaan kyselyrakentajaa siten, että sen avulla voi muodostaa myös _or_-ehdolla muodostettuja kyselyjä. Or-ehdon sisältävä kysely voi olla muodostettu esim. seuraavasti:
 
 ``` java
+QueryBuilder query = new QueryBuilder();
 Matcher m1 = query.playsIn("PHI")
           .hasAtLeast(10, "assists")
-          .hasFewerThan(8, "goals").build();
+          .hasFewerThan(5, "goals").build();
 
 Matcher m2 = query.playsIn("EDM")
-          .hasAtLeast(20, "points").build();
+          .hasAtLeast(40, "points").build();
 
 Matcher m = query.oneOf(m1, m2).build();
 ```
@@ -268,11 +292,12 @@ Matcher m = query.oneOf(m1, m2).build();
 Pelaajalistan tulisi olla:
 
 <pre>
-Jakub Voracek        PHI           6 + 10 = 16
-Leon Draisaitl       EDM          16 + 32 = 48
-Claude Giroux        PHI           7 + 10 = 17
-Sean Couturier       PHI           7 + 11 = 18
-Connor McDavid       EDM          18 + 29 = 47
+Justin Braun         PHI           3 + 16 = 19
+Robert Hagg          PHI           3 + 10 = 13
+Philippe Myers       PHI           4 + 12 = 16
+Ryan Nugent-Hopkins  EDM          22 + 39 = 61
+Leon Draisaitl       EDM          43 + 67 = 110
+Connor McDavid       EDM          34 + 63 = 97
 </pre>
 
 Tai sama ilman apumuuttujia:
@@ -281,15 +306,39 @@ Tai sama ilman apumuuttujia:
 Matcher m = query.oneOf(
     query.playsIn("PHI")
         .hasAtLeast(10, "assists")
-        .hasFewerThan(8, "goals").build(),
+        .hasFewerThan(5, "goals").build(),
 
     query.playsIn("EDM")
-        .hasAtLeast(20, "points").build()
+        .hasAtLeast(40, "points").build()
 ).build();
 ```
 
-Rakentajasi ei ole pakko toimia metodikutsujen syntaksin osalta samalla tavalla kuin esimerkkikoodin. Riittää, että sillä voi jollain tavalla muodostaa _and_- ja _or_-muotoisia kyselyjä.
+### 6. Pull request ja refaktorointia (tätä tehtävää ei lasketa versionhallintatehtäväksi)
 
-### Tehtävien palautus
+Isoa projektia on vaikea ylläpitää yksin ja vielä vaikeampaa on löytää oikeat ratkaisut jokaiseen ongelmaan, kun ohjelmisto kasvaa. On vaikeaa hallita itse kaikkea ja jotkin osa-alueet eivät välttämättä edes miellytä ja niihin on siksi vaikea paneutua. Saatat löytää itsesi ajattelemasta vaikkapa: "Lukisipa joku tietorakenteiden asiantuntija tämän osuuden läpi ja tsekkaisi, että HashSet on nyt varmasti se tehokkain ratkaisu...". 
 
-Pushaa kaikki tekemäsi tehtävät GitHubiin ja merkkaa tekemäsi tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+Ehkäpä et edes ajatellut asiaa, mutta joku silti näyttää, että binäärihakupuu onkin tilanteessa tehokkaampi ratkaisu, koodaa korjaukset puolestasi lähdekoodiin sekä tekee muutoksista _pull requestin_. Onneksi julkaisit projektisi Open Sourcena!
+
+GitHub on täynnä Open Source -projekteja, jotka kaipaavat panostasi. Mikäs sen kivempaa, kuin käyttää muutama tunti suosikkirepositioriosi lähdekoodin parissa ja korvata sieltä huomaamasi epäelegantti ratkaisu paremmalla. Useilla repositorioilla on valmiit ohjeet muutosehdotusten  tekemiseen repositorion juuresta löytyvässä tiedostossa Contributing.md. Tässä esimerkiksi bluebird.js:än [CONTRIBUTING.md](https://github.com/petkaantonov/bluebird/blob/master/CONTRIBUTING.md).
+
+Tehtävänäsi on harjoitella muutosehdotuksen tekemistä "open source -projektiin" sekä vieraan koodin lukemista ja refaktorointia. 
+
+* Valitse yksi repositorio [miniprojektien](https://study.cs.helsinki.fi/stats/api/courses/ohtu2020/projects/repositories) joukosta
+    - mielellään sellaisen ryhmän repositorio, jolla ei ole jo viittä pull requestia. 
+    - ja luonnollisesti sellainen, jonka koodiin haluat tehdä jotain muutoksia
+* [Forkkaa](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) repositorio
+* Tee forkattuun repositorioon uusi branch nimellä "muutoksia" 
+* Tee luomaasi branchiin "tyhjä" [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request): lisää esimerkiksi yksi tyhjä rivi README.md:hen, pushaa uusi branch GitHubiin ja tee branchista pull request. 
+    - Tyhjän pullrequestin tarkoituksena on varata sinulle paikka kyseisen repositorion muutoksentekijöiden joukosta. Haluamme, että kaikki ryhmät saavat suunilleen tasaisesti pull requesteja, eli jos repositoriossa on niitä jo runsaasti, etsi mielellään jokin muu repositorio.
+* Etsi ryhmän lähdekoodista jotain refaktoroitavaa
+  * kyseessä ei tarvitse olla iso muutos, esimerkiksi muuttujan/metodin uudelleennimeäminenkin riittää
+* Refaktoroi ja committaa
+* Käy katsomassa tekemääsi tyhjää pullrequestia. Mitä tapahtui?
+* Rebeissaa (ks. tämän viikon ensimmäinen tehtävä) luomasi branch paikalliseen master branchin päälle. Pushaa. Tapahtuiko pull requestissa muutoksia?
+* Otsikoi tekemäsi pullrequest niin, että se kuvaa tekemiäsi muutoksia. Tarkenna otsikon alle mitä teit ja miksi.
+* Jos ryhmä pyytää sinua tekemään muutoksia pull requestiisi, tee halutessasi tarvittavat muutokset ja committaa. Päivittyikö pullrequest?
+* Kun ryhmä on hyväksynyt muutoksesi, voit poistaa luomasi branchin
+
+Laita palautusrepositorioosi tiedosto PULL.md ja sen sisällöksi linkki pull requestiin.
+
+{% include submission_instructions.md %}

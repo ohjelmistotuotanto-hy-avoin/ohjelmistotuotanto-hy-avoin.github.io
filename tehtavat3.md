@@ -7,15 +7,26 @@ permalink: /tehtavat3/
 
 ## Viikko 3
 
+**HUOM** ilmoittautuminen [miniprojektiin](/miniprojekti) alkanut. Ilmoittaudu [täällä](https://study.cs.helsinki.fi/assembler/course/283df2a6-51e7-434f-a4b6-08514579a9ea). Deadline ilmoittautumiselle perjantai 13.11. klo 23:59
+
+*Alla olevien tehtävien deadline on maanantaina 16.11. klo 23:59*
+
+Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
+
+- Maanantai 14-16 [zoom](https://helsinki.zoom.us/j/63962392550?pwd=RzluTjZWYmNLb0g4bjRxb0ZlckRkUT09)
+- Perjantai 10-12 [zoom](https://helsinki.zoom.us/j/64396759243)
+
+Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/3), joiden deadline on sunnuntaina 15.11. klo 23:59:00.  
+
 Tehtävissä 1-3 tutustutaan siihen miten gradle-sovelluksiin lisätään ulkoisia kirjastoja riippuvuudeksi, sekä miten riippuvuuksia sisältävästä koodista saadaan generoitua jar-paketti. Loput tehtävät liittyvät storyjen hyväksymistestauksen automatisointiin tarkoitetun Cucumberin, sekä selainsovellusten testaamiseen käytettävän Selenium-kirjaston soveltamiseen. 
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/tehtavat3.md) tiedostoa GitHubissa.
+{% include typo_instructions.md path="/tehtavat3.md" %}
 
 ### Tehtävien palauttaminen
 
-Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}>
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
@@ -39,11 +50,11 @@ Jos ohjelma lukee syötteitä käyttäjältä, kannattaa se suorittaa komennolla
 
 ### 1. lisää gradlea: riippuvuuksien lisääminen
 
-Hae kurssirepositorion <https://github.com/ohjelmistotuotanto-hy/syksy2019> hakemistossa viikko3/nhlreader lähes tyhjä gradle-projektin runko.
+Hae kurssirepositorion <https://github.com/ohjelmistotuotanto-hy/syksy2020> hakemistossa viikko3/nhlreader lähes tyhjä gradle-projektin runko.
 
 * mukana on kohta tarvitsemasi luokka _Player_ 
 
-Tehdään ohjelma, jonka avulla voi hakea <https://nhl.com>-sivulta kuluvan kauden NHL-liigan tilastotietoja. Jos tarkkoja ollaan, niin tilastot haetaan tämän kurssin tarpeisiin rakennetulta palvelimelta, joka hakee todelliset tilastot NHL:n sivulta kerran vuorokaudessa.
+Tehdään ohjelma, jonka avulla voi hakea <https://nhl.com>-sivulta kuluvan kauden NHL-liigan tilastotietoja.  Jos tarkkoja ollaan, niin tilastot haetaan tämän kurssin tarpeisiin rakennetulta palvelimelta, joka hakee todelliset tilastot NHL:n sivulta kerran vuorokaudessa. *Pandemian takia kautta ei ole aloitettu ja tilastot ovat viime vuodelta.*
 
 Näet tilastojen [json](https://en.wikipedia.org/wiki/JSON)-muotoisen raakadatan web-selaimella osoitteesta <https://nhlstatisticsforohtu.herokuapp.com/players>
 
@@ -54,13 +65,14 @@ Ohjelmassa tarvitaan kahta kirjastoa eli _riippuvuutta_:
 * HTTP-pyynnön tekemiseen [Apache HttpClient Fluent API](https://hc.apache.org/httpcomponents-client-ga/tutorial/html/fluent.html)
 * json-muotoisen merkkijonon muuttaminen olioksi [http://code.google.com/p/google-gson/](http://code.google.com/p/google-gson/)
 
-Kertaa nopeasti [viime viikolta](/gradle#riippuvuudet), miten gradle-projektin riippuvuudet määritellään. Tarvittaessa lisää tietoa löytyy [Gradlen manuaalista](https://docs.gradle.org/current/userguide/artifact_dependencies_tutorial.html)
+Kertaa nopeasti [viime viikolta](/gradle#riippuvuudet), miten gradle-projektin riippuvuudet määritellään. Tarvittaessa lisää tietoa löytyy [Gradlen manuaalista](https://docs.gradle.org/current/userguide/artifact_dependencies_tutorial.html).
 
 Liitä projektisi _käännösaikaisiksi_ (compile) riippuvuuksiksi
 
 * _Apache HttpClient Fluent API_ ja _gson_
 * löydät riippuvuuksien tiedot osoitteesta [http://mvnrepository.com/](http://mvnrepository.com/)
 * Ota molemmista uusin versio
+  * Klikkaamalla versionmeroa, avautuu näkymä, mistä voit kopioida suoraan riippuvuuden lisäävän rivin
 
 Voit ottaa projektisi pohjaksi seuraavan tiedoston:
 
@@ -167,19 +179,28 @@ Mistä on kyse? Ohjelman riippuvuuksia eli projekteja Apache HttpClientin ja gso
 
 Saamme generoitua ohjelmasta jar-tiedoston, joka sisältää myös kaikki riippuvuudet gradlen [shadow](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)-pluginin avulla. 
 
-Ota plugin käyttöön lisäämällä seuraava tiedoston _build.gradle_ alkuun:
+Ota plugin käyttöön laajentamalla tiedoston _build.gradle_ pluginien määrittelyä seuraavasti:
 
 ```java
 plugins {
-  id 'com.github.johnrengelman.shadow' version '5.1.0'
+    id 'java'
+    id 'application'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
 }
 ```
-
-**HUOM:** pluginin määrittely on lisättävä tiedoston _build.gradle_ alkuun, muuten koko konfiguraatio hajoaa.
-
 Tutki komennon _gradle tasks_ avulla, miten saat muodostettua riippuvuudet sisältävän jarrin.
 
 Generoi jar ja varmista, että ohjelma toimii komennolla <code>java -jar shadowilla_tehty_jar.jar</code>
+
+**HUOM**: Tässä tehtävässä on pakko käyttää seuraavaa vanhaa tapaa _mainClassin_ määrittelyyn tiedostosssa _build.gradle_ 
+
+
+```
+mainClassName = 'ohtu.Main'
+```
+
+sillä shadowJar-plugin ei osaa uudempaa syntaksia. Jos latasit koodin ennen keskiviikkoa 12.11. saattaa tehtäväpohjassasi olla vanha määrittelytapa käytössä.
+
 
 ### 4. Tutustuminen cucumberiin
 
@@ -187,7 +208,7 @@ Lue [täällä](/cucumber/) oleva Cucumber-johdanto ja tee siihen liittyvät teh
 
 ### 5. Kirjautumisen testit
 
-Hae [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistossa _viikko3/LoginCucumber_ oleva projekti. 
+Hae [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistossa _viikko3/LoginCucumber_ oleva projekti. 
 
 Tutustu ohjelman rakenteeseen. Piirrä ohjelman rakenteesta UML-kaavio.
 
@@ -298,7 +319,7 @@ Määrittelemällä luokkaan _RunCucumberTest_ annotaatiolle _@CucumberOptions_ 
     plugin = "pretty", 
     features = "src/test/resources/ohtu", 
     snippets = SnippetType.CAMELCASE,
-    tags = { "@problem" }
+    tags = "@problem"
 )
 
 public class RunCucumberTest {}
@@ -322,7 +343,7 @@ public void systemWillRespondWith(String expectedOutput) {
 
 ### 7. WebLogin
 
-Tarkastellaan edellisestä tehtävästä tutun toiminnallisuuden tarjoamaa esimerkkiprojektia, joka löytyy [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistossa _viikko3/WebLogin_ oleva projekti. 
+Tarkastellaan edellisestä tehtävästä tutun toiminnallisuuden tarjoamaa esimerkkiprojektia, joka löytyy [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistossa _viikko3/WebLogin_ oleva projekti. 
 
 Sovellus on toteutettu [Spark](http://sparkjava.com)-nimisellä minimalistisella Web-sovelluskehyksellä. Spark on osalle kenties tuttu kurssilta [Tietokantojen perusteet](https://tietokantojen-perusteet.github.io).
 
@@ -462,7 +483,9 @@ Koodin seassa on kutsuttu sopivissa paikoin metodia _sleep_, joka hidastaa selai
 
 **HUOM2:** salasanan varmistuskentän (confirm password) nimi on _passwordConfirmation_
 
-**HUOM3:** Uuden käyttäjän luomisen kokeilua hankaloittaa se, että käyttäjänimen on oltava uniikki. Kannattanee generoida koodissa satunnaisia käyttäjänimiä esim. seuraavasti:
+**HUOM3:**
+
+Uuden käyttäjän luomisen kokeilua hankaloittaa se, että käyttäjänimen on oltava uniikki. Kannattanee generoida koodissa satunnaisia käyttäjänimiä esim. seuraavasti:
 
 ```java
 Random r = new Random();
@@ -471,7 +494,9 @@ element = driver.findElement(By.name("username"));
 element.sendKeys("arto"+r.nextInt(100000));
 ```
 
-**HUOM4:** Joskus linkin klikkaaminen Seleniumissa aiheuttaa poikkeuksen _StaleElementReferenceException_ 
+**HUOM3:**
+
+Joskus linkin klikkaaminen Seleniumissa aiheuttaa poikkeuksen _StaleElementReferenceException_ 
 
 Käytännössä syynä on se, että Selenium yrittää klikata linkkiä "liian aikaisin". Ongelma on mahdollista kiertää klikkaamalla poikkeuksen tapahtuessa linkkiä uudelleen. Jos törmäät ongelmaan, voit ottaa koodiisi seuraavassa olevan apumetodin _clickLinkWithText_, joka suorittaa sopivan määrän uudelleenklikkauksia:
 
@@ -731,8 +756,4 @@ Scenario: user can not login with account that is not successfully created
     Then  ...  
 </pre>
 
-### Tehtävien palautus
-
-Pushaa kaikki tekemäsi tehtävät GitHubiin ja merkkaa tekemäsi tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
-
-Huom! Varmista, että salasanat.txt on lisätty .gitignoreen. Jos ei ole, lisää se sinne. Et halua salasanojesi, edes testeissä käytettävien, päätyvän githubiin.
+{% include submission_instructions.md %}

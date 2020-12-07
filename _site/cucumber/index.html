@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/cucumber/">
-  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2020" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2021" href="/feed.xml">
 
   
 </head>
@@ -24,7 +24,7 @@
   <div class="wrapper">
     
     
-    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2020</a>
+    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2021</a>
     
     
       <nav class="site-nav">
@@ -40,6 +40,9 @@
         </label>
 
         <div class="trigger">
+          
+            
+            
           
             
             
@@ -92,6 +95,9 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/osa5/">Osa 5</a>
             
           
@@ -109,7 +115,31 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/tehtavat/">Tehtävät</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
             
           
             
@@ -168,7 +198,7 @@
 
 <p>Vaikka Cucumber on varsinaisesti tarkoitettu koko ohjelmiston “end-to-end”-testaukseen, tarkastellaan ensin Cucumberin toimintaperiaatteita testaamalla yksittäistä luokkaa.</p>
 
-<p>Hae <a href="https://github.com/ohjelmistotuotanto-hy/syksy2019">kurssirepositorion</a> hakemistossa <em>viikko3/HelloCucumber</em> oleva projekti.</p>
+<p>Hae <a href="https://github.com/ohjelmistotuotanto-hy/syksy2020">kurssirepositorion</a> hakemistossa <em>viikko3/HelloCucumber</em> oleva projekti.</p>
 
 <p>Testattavana on yksinkertainen laskuri:</p>
 
@@ -319,7 +349,9 @@ Scenario: Increment by many
 
 <p>Määrittely on sikäli hämmentävä, että määriteltävä luokka <em>RunCucumberTest</em> ei sisällä mitään koodia, ja kaikki oleellinen määrittely tapahtuu luokkaan liitetyn annotaation <em>@CucumberOptions</em> parametreina.</p>
 
-<p>Testit suoritetaan komennolla <em>gradle test</em>. Huomaa, että testien suorittaminen ei todennäköisesti toimi NetBeansin testinapilla.</p>
+<p><strong>Testit suoritetaan</strong> komennolla <em>gradle test</em>.</p>
+
+<p>Huomaa, että testien suorittaminen ei todennäköisesti toimi NetBeansin testinapilla.</p>
 
 <h3 id="nollaamisen-skenaariot">Nollaamisen skenaariot</h3>
 
@@ -343,13 +375,29 @@ Feature: As a user I want to be able to set the counter to value zero
     Then the value should be 0
 </pre>
 
-<p>Kun nyt suoritat testit, näyttää tulos seuraavalta:</p>
+<p>Kun nyt suoritat testit komennolla <em>gradle test</em> näyttää tulos seuraavalta:</p>
 
-<p><img src="http://localhost:4000/images/lh3-1.png" alt="" height="350px" /></p>
+<p><img src="http://localhost:4000/images/lh3-5.png" alt="" height="350px" /></p>
 
-<p>Cucumber siis ilmoittaa osan stepeistä olevan <em>undefined</em>. Cucumber tulostaa myös valmiin metodirungon, jonka avulla stepin voi toteuttaa.</p>
+<p>Cucumber maalaa stepin <em>And it is reset</em> keltaisella ja kertoo virheestä</p>
 
-<p>Kopioi stepin koodirunko luokkaan <em>Stepdefs</em> ja täydennä se järkevällä tavalla.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>io.cucumber.junit.UndefinedStepException
+</code></pre></div></div>
+
+<p>Cucumber siis ilmoittaa osan stepein olevan määrittelemätön. Avaamalla selaimella virheilmoituksen tarkempi raportti, näyttää Cucumber valmiin metodirungon, jonka avulla stepin voi toteuttaa:</p>
+
+<p><img src="http://localhost:4000/images/lh3-6.png" alt="" height="350px" /></p>
+
+<p>Kopioi stepin koodirunko</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@When</span><span class="o">(</span><span class="s">"it is reset"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">itIsReset</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// Write code here that turns the phrase above into concrete actions</span>
+    <span class="k">throw</span> <span class="k">new</span> <span class="n">io</span><span class="o">.</span><span class="na">cucumber</span><span class="o">.</span><span class="na">java</span><span class="o">.</span><span class="na">PendingException</span><span class="o">();</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>luokkaan <em>Stepdefs</em> ja täydennä se järkevällä tavalla.</p>
 
 <p>Varmista että testit toimivat.</p>
 
@@ -369,7 +417,7 @@ Feature: As a user I want to be able to set the counter to value zero
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
-             Ohjelmistotuotanto avoin yliopisto 2020 
+             Ohjelmistotuotanto avoin yliopisto 2021 
           </li>
           <li>
             <a href="mailto:matti.luukkainen@helsinki.fi">matti.luukkainen@helsinki.fi</a>

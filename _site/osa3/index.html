@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/osa3/">
-  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2020" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2021" href="/feed.xml">
 
   
 </head>
@@ -24,7 +24,7 @@
   <div class="wrapper">
     
     
-    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2020</a>
+    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2021</a>
     
     
       <nav class="site-nav">
@@ -40,6 +40,9 @@
         </label>
 
         <div class="trigger">
+          
+            
+            
           
             
             
@@ -92,6 +95,9 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/osa5/">Osa 5</a>
             
           
@@ -109,7 +115,31 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/tehtavat/">Tehtävät</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
             
           
             
@@ -187,7 +217,7 @@
 <p><em>Katselmoinnissa</em> (engl. review) käydään läpi ohjelmiston tuotantoprosessin aikana syntyneitä dokumentteja sekä ohjelmakoodia, ja etsitään näistä erilaisia ongelmia.</p>
 
 <p>Tarkastukset taas (engl. inspection) ovat katselmoinnin muodollisempi versio. 
-Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan määritelty agenda ja kokouksen osallistujilla ennalta määritellyt roolit. Tarkastukset kuuluvat vesiputousmallin maailmaan ja eivät ole nykyään suosiossa lukuun ottamatta turvallisuuskriittisten järjestelmien kehitystä.</p>
+Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan määritelty agenda ja kokouksen osallistujilla ennalta määritellyt roolit. Tarkastukset kuuluvat vesiputousmallin maailmaan ja eivät ole nykyään suosiossa lukuunottamatta turvallisuuskriittisten järjestelmien kehitystä.</p>
 
 <p>Katselmointi on <em>staattinen tekniikka</em>, suorituskelpoista ohjelmakoodia ei välttämättä tarvita, ja jos katselmoinnin kohteena on ohjelmakoodi, ei ohjelmaa katselmoitaessa yleensä suoriteta.</p>
 
@@ -221,7 +251,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Pilvipalvelut ovat helpottaneet sovelluskehittäjien työtä monissa asioissa, esim. GitHubin ansiosta omaa versionhallintapalvelinta ei ole enää tarvinnut ylläpitää vuosiin.</p>
 
-<p>Pilveen on viime aikoina ilmestynyt myös koodille staattista analyysiä tekeviä palveluita, esimerkiksi viime viikon laskareissa käytetty <a href="https://codeclimate.com/">Codeclimate</a>, joka analysoi koodista mm. seuraavia asioita:</p>
+<p>Pilveen on viime aikoina ilmestynyt myös koodille staattista analyysiä tekeviä palveluita, esimerkiksi <a href="https://codeclimate.com/">Codeclimate</a>, joka analysoi koodista mm. seuraavia asioita:</p>
 <ul>
   <li>liian kompleksiset metodit ja luokat</li>
   <li>copy paste -koodi</li>
@@ -251,7 +281,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 <p>Pull requesteja käytettäessä työn kulku on seuraava:</p>
 <ul>
   <li>Sovelluskehittäjä forkkaa repositorion itselleen, tekee muutokset omaan repositorioon ja tekee pull requestin projektia hallinnoivalle taholle.</li>
-  <li>Hallinnoija, esimerkiksi tiimin “senior developer” tai open source -projektin vastaava tekee katselmoinnin pull requestille.</li>
+  <li>Hallinnoija, esimerkiksi tiimin “senior developer”, open source -projektin vastaava tai joku muu sovelluskehittäjä  tekee katselmoinnin pull requestille.</li>
   <li>Jos koodi ei ole vielä siinä kunnossa, että tehdyt muutokset voidaan liittää repositorioon, kirjoittaa hallinnoija pull requestin tekijälle joukon parannusehdotuksia.</li>
   <li>Muutosten ollessa hyväksyttävästi tehtyjä, pull request mergetään eli yhdistetään päärepositorioon.</li>
 </ul>
@@ -278,7 +308,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Pariohjelmointi parantaa ohjelmoijien kuria ja työhön keskittymistä sekä on erinomainen oppimisen väline: parit oppivat toisiltaan, erityisesti noviisit kokeneemmilta. Jos pariohjelmointia sovelletaan systemaattisesti, ei koodiin jää osa-alueita, jotka ainoastaan yksi ohjelmoija tuntee.</p>
 
-<p>Tutkimuksissa pariohjelmoinnin on todettu vähentävän bugien määrää 15-50%, kokonaisuudessa resurssien kulutus kuitenkin nousee hieman.</p>
+<p>Pariohjelmointia on tutkittu suhteellisen paljon. <a href="https://collaboration.csc.ncsu.edu/laurie/Papers/XPSardinia.PDF">Tutkimuksissa</a> sen on todettu vähentävän bugien määrää jossain määrin, kokonaisuudessa resurssien kulutus kuitenkin nousee hieman. Tutkimukset korostavat pelkkien koodin tasolla näkyvien hyötyjen lisäksi myös pariohjelmoinnin myönteistä vaikutusta tiimidynamiikkaan ja jopa työtyytyväisyyteen.</p>
 
 <p>Vaikka pariohjelmointi tai jopa useamman ihmisen versio siitä, <a href="https://en.wikipedia.org/wiki/Mob_programming">mob-programming</a> on melko suosittua, ei kovin monissa paikoissa kuitenkaan harrasteta systemaattisesti määritelmän mukaista pariohjelmointia ainakaan joka päivä. Hyvin yleistä on, että kehittäjät työskentelevät suurimman osan aikaa yksin, mutta tekevät sopivin paikoin spontaaneja pari- tai mob-ohjelmointisessioita, erityisesti kohdatessaan teknisiä haasteita.</p>
 
@@ -288,13 +318,13 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Yhteisomistajuudessa on omat riskinsä: joku koodia kunnolla tuntematon voi saada huolimattomilla muutoksilla pahaa jälkeä aikaan. XP pyrkii eliminoimaan tästä aiheutuvia riskejä testaukseen liittyvillä käytänteillä, eli käytännössä automatisoiduilla regressiotesteillä.</p>
 
-<p><em>Ohjelmointistandardi</em> (engl. coding standards) tarkoittaa, että tiimi määrittelee koodityylin, johon kaikki ohjelmoijat sitoutuvat. Tyylillä tarkoitetaan nimeämiskäytäntöä, koodin muotoilua ja myös tiettyjä ohjelman rakenteeseen liittyviä seikkoja. Ohjelmointistandardin noudattamista voidaan kontrolloida osittain automaattisesti staattisen analyysin työkaluilla, esimerkiksi Javan Checkstyle sekä Javascript-maailman <a href="https://eslint.org/">eslint</a> ja <a href="https://prettier.io/">prettier</a> ovat työkaluja, joiden avulla voidaan seurata, että koodi seuraa määriteltyä ohjelmointistandardia. Eräs esimerkki suosituksi nousseesta ohjelmointistandardista on <a href="https://github.com/airbnb/javascript">AirBnB</a>:n tyyliopas.</p>
+<p><em>Ohjelmointistandardi</em> (engl. coding standards) tarkoittaa, että tiimi määrittelee koodityylin, johon kaikki ohjelmoijat sitoutuvat. Tyylillä tarkoitetaan nimeämiskäytäntöä, koodin muotoilua ja myös tiettyjä ohjelman rakenteeseen liittyviä seikkoja. Ohjelmointistandardin noudattamista voidaan kontrolloida osittain automaattisesti staattisen analyysin työkaluilla, esimerkiksi Javan Checkstyle sekä Javascript-maailman <a href="https://eslint.org/">eslint</a> ja <a href="https://prettier.io/">prettier</a> ovat työkaluja, joiden avulla voidaan seurata, että koodi seuraa määriteltyä ohjelmointistandardia. Eräs esimerkki suosituksi nousseesta ohjelmointistandardista on <a href="https://airbnb.io/javascript/react/">AirBnB</a>:n tyyliopas.</p>
 
 <h2 id="testaus">Testaus</h2>
 
 <p>Ohjelmistojen osoittaminen virheettömäksi on käytännössä mahdotonta, sillä ohjelmiston mahdollisten käyttöskenaarioiden ja syötteiden kombinaatio on yksinkertaisesti liian suuri. Testauksen tarkoituksena onkin vakuuttaa asiakas ja järjestelmän kehitystiimi siitä, että ohjelmisto on riittävän hyvä käytettäväksi.</p>
 
-<p>Testauksella on kaksi hieman eriävää tavoitetta. Ensinnäkin tulee <em>osoittaa, että ohjelmisto täyttää sille asetetut vaatimukset</em>. Käytännössä tämä tarkoittaa vaatimusmäärittelyssä kirjattujen asioiden toteutumisen demonstroimista toteutetuista ohjelmista. Toinen tavoite on <em>löytää ohjelmistosta virheitä</em> eli testatessa yritetään rikkoa ohjelma tai saattaa se jollain tavalla epäkonsistenttiin tilaan. Näin havaitut viat pyritään korjaamaan ennen kuin todelliset käyttäjät törmäävät samoihin ongelmiin.</p>
+<p>Testauksella on kaksi hieman eriävää tavoitetta. Ensinnäkin tulee <em>osoittaa, että ohjelmisto täyttää sille asetetut vaatimukset</em>. Käytännössä tämä tarkoittaa vaatimusmäärittelyssä kirjattujen asioiden toteutumisen demonstroimista toteutetusta ohjelmistosta. Toinen tavoite on <em>löytää ohjelmistosta virheitä</em> eli testatessa yritetään rikkoa ohjelma tai saattaa se jollain tavalla epäkonsistenttiin tilaan. Näin havaitut viat pyritään korjaamaan ennen kuin todelliset käyttäjät törmäävät samoihin ongelmiin.</p>
 
 <p>Molemmat näistä tavoitteista tähtäävät ensisijaisesti ohjelman <em>ulkoisen laadun</em> (engl. external quality) eli käyttäjän kokeman laadun varmistamiseen. <a href="http://c2.com/cgi/wiki?InternalAndExternalQuality">Ulkoisella laadulla</a> tarkoitetaan sitä, onko ohjelmisto sopiva käyttötarkoitukseensa, eli pystyykö käyttäjä tekemään ohjelmistolla haluamansa asiat.</p>
 
@@ -316,7 +346,9 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Järjestelmätestauksen tarkoitus on siis varmistaa, että ohjelmisto toimii vaatimusmäärittelyssä kirjatulla tavalla. Sovellusta testataan useimmiten saman rajapinnan kautta, jonka kautta sitä käytetään, eli testaus voi tapahtua esimerkiksi graafisen käyttöliittymän kautta.</p>
 
-<p>Järjestelmätestaus tapahtuu ilman tietoa järjestelmän sisäisestä rakenteesta, tällaistä testauksen tapaa nimitetään <em>black box</em> -testaukseksi.</p>
+<p>Järjestelmätestaus tapahtuu ilman tietoa järjestelmän sisäisestä rakenteesta, tälläistä testauksen tapaa nimitetään <em>black box</em> -testaukseksi.</p>
+
+<p>Järjestelmätesteille on tyypillistä että ne tarkastelevat sovelluksen toiminnalisuutta sen kaikilla tasoilla käyttöliittymästä sovelluslogiikkaan ja tietokantaan. Tämän takia järjestelmätestejä kutsutaan usein <em>End to End -testeiksi</em>.</p>
 
 <p>Yleensä järjestelmätestaus perustuu sovelluksen potentiaalisiin käyttöskenaarioihin. Jos vaatimukset on ilmaistu user storyina, on storyjen hyväksymiskriteereistä melko helppo muotoilla testejä, joiden avulla voidaan varmistaa, että ohjelmistolla on storyjen kuvaamat vaatimukset sekä tyypilliset virheskenaariot.</p>
 
@@ -334,9 +366,9 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Täysin kattava testaaminen on mahdotonta ja testaus on joka tapauksessa työlästä, eli onkin tärkeää löytää kohtuullisen kokoinen testitapausten joukko, jonka avulla on kuitenkin mahdollista löytää mahdollisimman suuri määrä virheitä.</p>
 
-<p>Yksittäinen <em>testitapaus</em> (engl. test case) testaa järjestelmän toiminnallisuutta jollain syötearvolla, tai arvojen kombinaatiolla, jos toiminnallisuus edellyttää usean syötteen antamista. Monet syötteistä ovat järjestelmän toiminnan kannalta samanlaisia. Esimerkiksi, jos henkilötietoja käsittelevä järjestelmä tallettaa henkilön iän, on todennäköistä, että järjestelmän toiminta ei poikkea ollenkaan sen suhteen, onko ikä 20 tai 30, mutta jos ikä taas on 17, saattaa järjestelmän toiminnallisuus olla erilainen kuin iän ollessa vähintään 18.</p>
+<p>Yksittäinen <em>testitapaus</em> (engl. test case) testaa järjestelmän toiminnallisuutta jollain syötearvolla, tai arvojen kombinaatiolla jos toiminnallisuus edellyttää usean syötteen antamista. Monet syötteistä ovat järjestelmän toiminnan kannalta samanlaisia. Esimerkiksi, jos henkilötietoja käsittelevä järjestelmä tallettaa henkilön iän, on todennäköistä, että järjestelmän toiminta ei poikkea ollenkaan sen suhteen, onko ikä 20 tai 30, mutta jos ikä taas on 17, saattaa järjestelmän toiminnallisuus olla erilainen kuin iän ollessa vähintään 18.</p>
 
-<p>Testeissä kannattaakin pyrkiä jakamaan syötteet <em>ekvivalenssiluokkiin</em>, eli ryhmiin, joihin kuuluvien syötteiden suhteen ohjelma toimii oleellisesti samalla tavalla. Testitapauksia kannattaa tehdä useimmiten ainoastaan yksi tai kaksi kutakin ekvivalenssiluokkaa tai syötteiden ekvivalenssiluokkien kombinaatiota kohti. Ekvivalenssiluokkien edustajiksi kannattaa erityisesti valita ekvivalenssiluokkien <em>raja-arvoja</em>, koodissa olevat bugit nimittäin liittyvät erittäin usein toisto- ja ehtolauseiden ehtojen äärimmäisiin arvoihin.</p>
+<p>Testeissä kannattaakin pyrkiä jakamaan syötteet <em>ekvivalenssiluokkiin</em>, eli ryhmiin joihin kuuluvien syötteiden suhteen ohjelma toimii oleellisesti samalla tavalla. Testitapauksia kannattaa tehdä useimmiten ainoastaan yksi tai kaksi kutakin ekvivalenssiluokkaa tai syötteiden ekvivalenssiluokkien kombinaatiota kohti. Ekvivalenssiluokkien edustajiksi kannattaa erityisesti valita ekvivalenssiluokkien <em>raja-arvoja</em>, koodissa olevat bugit nimittäin liittyvät erittäin usein toisto- ja ehtolauseiden ehtojen äärimmäisiin arvoihin.</p>
 
 <p>Esimerkiksi henkilötietoja käsittelevässä järjestelmässä iän suhteen ekvivalenssiluokkia olisivat ehkä <em>alaikäinen</em> 0-17 vuotta, <em>työikäinen</em> 18-65 vuotta ja <em>eläkeläinen</em> 66- vuotta. Ekvivalenssiluokkien raja-arvojen järkevä määrittely tosin edellyttää tietoa järjestelmän toiminnallisuudesta. Todennäköisesti työikäisten ja eläkeläisien suhteen ei olisi mahdollista tehdä selkeää jakoa iän perusteella. Jos oletetaan, että edelliset ekvivalenssiluokat olisivat järkeviä, sopivat iän <em>raja-arvot</em> testitapauksia varten olisivat 17, 18, 65 ja 66 vuotta, eli näitä kaikkia kohti voitaisiin tehdä oma testitapauksensa.</p>
 
@@ -353,7 +385,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
   <li>olemassa olevaa sivua vastaavat luvut</li>
   <li>validit luvut, jotka eivät vastaa mitään sivua</li>
   <li>liian pienet ja liian suuret luvut</li>
-  <li>syötteet, jotka sisältävät kiellettyjä merkkejä, esimerkiksi aakkosia</li>
+  <li>syötteet, jotka sisältävät kiellettyjä merkkejä esimerkiksi aakkosia</li>
   <li>tyhjä syöte</li>
 </ul>
 
@@ -365,11 +397,11 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Yksikkötestauksen kohteena siis ovat yksittäiset metodit ja luokat. Yksikkötestauksen hoitavat ohjelmoijat, usein oletetaan että uuteen koodiin tehdään yksikkötestit jo samalla kuin koodi kirjoitetaan. Ohjelmoijien vastuulla olevasta testauksesta, eli yksikkö- ja integraatiotestauksesta käytetään usein nimitystä <a href="https://developertesting.rocks/">developer testing</a>.</p>
 
-<p>Yksikkötestejä laadittaessa otetaan huomioon testattavan koodin rakenne, esimerkiksi minkälaisia ehtolauseita koodissa on käytetty. Tällaisistä testeistä käytetään usein nimitystä <em>lasilaatikkotestaus</em> (engl. white box testing).</p>
+<p>Yksikkötestejä laadittaessa saatetaan ottaa huomioon testattavan koodin rakenne, esimerkiksi minkälaisia ehtolauseita koodissa on käytetty. Jos testeissä huomioidaan testattavan järjestelmän sisäinen rakenne, puhutaan usein <em>lasilaatikkotestauksesta</em> (engl. white box testing).</p>
 
 <p>Yksikkötestauksella ei testata suoranaisesti sitä, täyttääkö ohjelmisto käyttäjän sille asettamat vaatimukset, pikemminkin tavoitteena on ohjelman <em>sisäisen laadun</em> (engl. internal quality) kontrollointi. <a href="http://c2.com/cgi/wiki?InternalAndExternalQuality">Sisäinen laatu</a> viittaa koodin sisäisen rakenteen hyvyyteen: onko koodia helppo jatkokehittää, onko virheiden jäljitys ja korjaaminen helppoa ja pystytäänkö koodin toiminnallisuuden oikeellisuus varmistamaan muutoksia tehtäessä.</p>
 
-<p>Sisäinen laatu kiinnostaa ensisijaisesti ohjelmistokehittäjiä: jos koodi on sisäiseltä laadultaan heikkoa, on sen parissa työskenteleminen ikävää ja hidasta. Jos koodin sisäinen laatu alkaa rapistua, sovelluksen kehitystahti hidastuu, ja ohjelmistoon alkaa todennäköisesti kertymään enenevissä määrin bugeja, jotka näkyvät myös loppukäyttäjälle asti.</p>
+<p>Sisäinen laatu kiinnostaa ensisijaisesti ohjelmistokehittäjiä: jos koodi on sisäiseltä laadultaan heikkoa, on sen parissa työskenteleminen ikävää ja hidasta. Jos koodin sisäinen laatu alkaa rapistua, sovelluksen kehitystahti hidastuu, ja ohjelmistoon alkaa todennäköisesti kertymään enenevissä määrin bugeja jotka näkyvät myös loppukäyttäjälle asti.</p>
 
 <p>Pelkkä sisäisen laadun kontrollimekanismi yksikkötestaus ei siis ole. Kattavilla yksikkötesteillä saadaan parannettua myös ohjelman ulkoista, eli asiakkaan kokemaa laatua. Yksikkötestit voivat eliminoida joitain asiakkaalle näkyviä virheitä, joita järjestelmätestauksen testitapaukset eivät löydä.</p>
 
@@ -388,7 +420,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 “No, just test everything that could reasonably break”</p>
 </blockquote>
 
-<p>Jos pyritään kattavaan yksikkötestaukseen, tulisi ainakin testata kaikkien metodien (ja loogisten metodikombinaatioiden) toiminta parametrien hyväksyttävillä arvoilla ja virheellisillä parametrien arvoilla.</p>
+<p>Jos pyritään kattavaan yksikkötestaukseen, tulisi ainakin testata kaikkien metodien (ja loogisten metodikombinaatioden) toiminta parametrien hyväksyttävillä arvoilla ja virheellisillä parametrien arvoilla.</p>
 
 <p>Parametrien mahdolliset arvot kannattaa jakaa ekvivalenssiluokkiin ja jokaisesta luokasta kannattaa  valita ainakin yksi arvo testisyötteeksi, erityisesti ekvivalenssiluokkien raja-arvot kannattaa valita mukaan testattaviin arvoihin.</p>
 
@@ -426,7 +458,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Nollan ja negatiivisen määrän ottamista tuskin kannattaa erikseen testata kaikkien varastotilanteiden suhteen, tosin tämäkin voisi olla riski, jos varaston sisäinen toteutus muutettaisiin täysin.</p>
 
-<p>Huomaamme siis, että jo naurettavan pienen luokan yhden metodin kattava testaaminen vaatii suuren määrän testitapauksia. Useimmissa tapauksissa ei ole kuitenkaan ole realistista olettaa, että testejä tehdään vastaavalla kattavuudella, aika/hyötysuhde on yksinkertaisesti liian huono. Useimmat softassa olevat ikävät bugit jäävät joka tapauksessa yksikkötestauksen ulottumattomiin.</p>
+<p>Huomaamme siis, että jo naurettavan pienen luokan yhden metodin kattava testaaminen vaatii suuren määrän testitapauksia. Useimmissa tapauksissa ei kuitenkaan ole realistista olettaa, että testejä tehdään vastaavalla kattavuudella, aika/hyötysuhde on yksinkertaisesti liian huono. Useimmat softassa olevat ikävät bugit jäävät joka tapauksessa yksikkötestauksen ulottumattomiin.</p>
 
 <h3 id="testauskattavuus">Testauskattavuus</h3>
 
@@ -436,13 +468,13 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p><em>Haarautumakattavuudella</em> (engl. branch coverage) tarkoitetaan kuinka montaa prosenttia testattavan metodin/luokan sisältävistä ehtolauseiden haaroista testit ovat käyneet läpi.</p>
 
-<p>Monet työkalut, esim. laskareissa käyttämämme JaCoCo, mittaavat testien suorituksen yhteydessä testauskattavuuden. Muitakin kattavuuden tyyppejä on olemassa, mm. ehtokattavuus ja polkukattavuus, useat työkalut eivät niitä kuitenkaan tue.</p>
+<p>Monet työkalut, esim. laskareissa käyttämämme JaCoCo mittaavat testien suorituksen yhteydessä testauskattavuuden. Muitakin kattavuuden tyyppejä on olemassa, mm. ehtokattavuus ja polkukattavuus, useat työkalut eivät niitä kuitenkaan tue.</p>
 
 <p><img src="http://localhost:4000/images/3-5.png" alt="" height="350px" /></p>
 
 <p>JaCoCo ilmoittaa sekä rivi- (instruction) että haarautumakattavuuden (branches). Puutteellisesti testattu haarautumiskohta esim. if ilmaistaan keltaisella.</p>
 
-<p>Testauskattavuus toimii siis hyvänä apuvälineenä sen arvioimisessa, testataanko sovellusta riittävästi.</p>
+<p>Testauskattavuus toimii siis hyvänä apuvälineenä sen arvioimisessa testataanko sovellusta riittävästi.</p>
 
 <h3 id="mutaatiotestaus">Mutaatiotestaus</h3>
 
@@ -450,7 +482,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p><em>Mutaatiotestauksen</em> (engl. mutation testing) idea on nimenomaan testata testitapausten hyvyyttä generoimalla koodiin systemaattisesti mutantteja eli pieniä “bugeja”, ja katsoa havaitsevatko testit koodiin tulleet bugit.</p>
 
-<p>Erilaisia mutanttityyppejä, joita mutaatiotestauksessa generoidaan koodiin, on paljon mm.</p>
+<p>Erilaisia mutanttityyppejä, joita mutaatiotestauksessa generoidaan koodiin on paljon mm.</p>
 
 <ul>
   <li>manipuloidaan ehtolausetta: <tt>if ( x&lt;0 )</tt> muutetaan muotoon <tt>if (x &lt;= 0)</tt> tai <tt>if ( true ) </tt></li>
@@ -461,13 +493,13 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Mutaatiotestauksen ongelmana on mutaatioiden suuri määrä ja ns. <em>ekvivalentit mutantit</em>, joiden takia mutaatiotestauksen tulos vaatii aina ihmisen tulkintaa.</p>
 
-<p>Ekvivalentti mutantti tarkoittaa sellaista koodiin tehtyä muutosta, joka ei kuitenkaan muuta ohjelman toiminnallisuutta. Eli tällaisen mutantin lisäämistä koodiin ei voi mikään testi havaita. Mutantin toteaminen ekvivalentiksi algoritmisesti on mahdotonta.</p>
+<p>Ekvivalentti mutantti tarkoittaa sellaista koodiin tehtyä muutosta, joka ei kuitenkaan muuta ohjelman toiminnallisuutta. Eli tälläisen mutantin lisäämistä koodiin ei voi mikään testi havaita. Mutantin toteaminen ekvivalentiksi algoritmisesti on mahdotonta.</p>
 
 <p>Lisätietoa mutaatiotestauksesta esim. <a href="http://en.wikipedia.org/wiki/">wikipediassa</a> ja <a href="http://pitest.org/">pit</a>-työkalun sivulla.</p>
 
 <h2 id="integraatiotestaus">Integraatiotestaus</h2>
 
-<p>Järjestelmän yksittäiset, erillään yksikkötestatut luokat tulee integroida toimivaksi kokonaisuudeksi. Integroinnin yhteydessä tai sen jälkeen suoritetaan integraatiotestaus, missä painopisteenä on ohjelman komponenttien välisten rajapintojen toimivuuden tutkimisessa sekä komponenttien yhdessä tuottaman toiminnallisuuden oikeellisuuden varmistamisessa.</p>
+<p>Järjestelmän yksittäiset, erillään yksikkötestatut luokat tulee integroida toimivaksi kokonaisuudeksi. Integroinnin yhteydessä tai sen jälkeen suoritetaan integraatiotestaus, missä painopiste on ohjelman komponenttien välisten rajapintojen toimivuuden tutkimisessa sekä komponenttien yhdessä tuottaman toiminnallisuuden oikeellisuuden varmistamisessa.</p>
 
 <p>Järjestelmän integrointi voi edetä joko järjestelmän rakenteeseen perustuen tai järjestelmän toteuttamien ominaisuuksien mukaan.</p>
 
@@ -507,7 +539,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Testauksen rooli ketterissä menetelmissä poikkeaa huomattavasti vesiputousmallisesta ohjelmistotuotannosta. Iteraation/sprintin aikana toteutettavat ominaisuudet integroidaan muuhun koodiin ja testataan yksikkö-, integraatio- sekä järjestelmätasolla. Sykli ominaisuuden määrittelystä siihen, että se on valmis ja testattu on erittäin lyhyt, viikosta kuukauteen.</p>
 
-<p>Testausta tehdäänkin sprintin “ensimmäisestä päivästä” lähtien ja testaus integroitu suunnitteluun ja toteutukseen, eikä ole ketterän näkemyksen mukaan enää oma erillinen vaiheensa.</p>
+<p>Testausta tehdäänkin sprintin “ensimmäisestä päivästä” lähtien ja testaus on integroitu suunnitteluun ja toteutukseen, eikä ole ketterän näkemyksen mukaan enää oma erillinen vaiheensa.</p>
 
 <p>Ketterän kehityksen luonne vaatiikin, että testejä voidaan suorittaa usein ja mahdollisimman vähällä vaivalla, siispä automatisoitu regressiotestaus on avainasemassa.</p>
 
@@ -525,7 +557,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Kaikista edellisistä käytänteistä seurauksena on suuri joukko eritasoisia (eli yksikkö-, integraatio-, järjestelmä-) automatisoituja testejä, joiden avulla tehty regressiotestaus mahdollistaa sen, että ohjelmiston jatkokehityksen aikana voidaan olla turvallisin mielin siitä, että jo toimivia asioita ei pääse hajoamaan.</p>
 
-<p>Nousevana trendinä on suorittaa uusien ominaisuuksien laadunhallintaa myös siinä vaiheessa, kun osa oikeista käyttäjistä on jo ottanut ne käyttöönsä. Tehdään testaus miten kattavasti tahansa, on kuitenkin hyvin tyypillistä, että tiettyjä ongelmia ilmenee vasta todellisessa käytössä. Tuotantokäytössä tapahtuva testaus on suurta kurinalaisuutta vaativa menetelmä, joka vaatii pitkälle kehittynyttä automatisointia ja ohjelmiston sofistikoitunutta monitorointia.</p>
+<p>Nousevana trendinä on suorittaa uusien ominaisuuksien laadunhallintaa myös siinä vaiheessa kun osa oikeista käyttäjistä on jo ottanut ne käyttöönsä. Tehdään testaus miten kattavasti tahansa, on kuitenkin hyvin tyypillistä, että tiettyjä ongelmia ilmenee vasta todellisessa käytössä. Tuotantokäytössä tapahtuva testaus on suurta kurinalaisuutta vaativa menetelmä, joka vaatii pitkälle kehittynyttä automatisointia ja ohjelmiston sofistikoitunutta monitorointia.</p>
 
 <p>Voimakkaasta automatisointitrendistä huolimatta myös manuaalisesti tehtävällä testauksella on edelleen paikkansa. Tutkiva testaus (engl. exploratory testing) on pääosin manuaalinen järjestelmätestauksen tekniikka, jossa testaaminen tapahtuu ilman tarkkaa etukäteen tehtävää testaussuunnitelmaa. Testaaja luo lennossa uusia testejä edellisten testien antaman palautteen perusteella. Tutkivaa testausta käytetään usein kokonaan uusien ohjelmiston ominaisuuksien testaamiseen.</p>
 
@@ -542,7 +574,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
   <li>Jatketaan askeleesta 1</li>
 </ol>
 
-<p>TDD:n etenemisestä käytetään usein nimitystä <em>red-green-refactor</em>, eli tehdään testi, joka on punaisella, kirjotetaan koodia siten että testit menevät taas vihreäksi ja jos tarvetta, niin refaktoroidaan. Seuraava kuva havainnollistaa syklin etenemistä:</p>
+<p>TDD:n etenemisestä käytetään usein nimitystä <em>red-green-refactor</em>, eli tehdään testi joka on punaisella, kirjotetaan koodia siten että testit menevät taas vihreäksi ja jos tarvetta, niin refaktoroidaan. Seuraava kuva havainnollistaa syklin etenemistä:</p>
 
 <p><img src="http://localhost:4000/images/3-6a.png" alt="" height="250px" /></p>
 
@@ -554,7 +586,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>TDD:tä tehtäessä korostetaan yleensä lopputuloksen yksinkertaisuutta, tarkoituksena on toteuttaa toiminnallisuutta vain sen verran, mitä testien läpimeno edellyttää. Ei siis toteuteta “varalta” ekstratoiminnallisuutta, sillä sitä ei todennäköisesti tarvita. Tästä yksinkertaisiin ratkaisuihin pyrkivästä käytännöstä käytetään usein nimitystä <a href="https://martinfowler.com/bliki/Yagni.html">“You ain’t gonna need it”, YAGNI</a>, sama periaate on kirjattuna ketterään manifestiin muodossa <em>Simplicity – the art of maximizing the amount of work not done – is essential</em>.</p>
 
-<p>Koodista on vaikea tehdä helposti testattavissa olevaa, jos se ei ole modulaarista ja löyhästi kytketyistä selkeän rajapinnan omaavista komponenteista koostuvaa. Määritelmän mukaisella TDD:llä ohjelmoitaessa taas koodista tulee useimmiten jo lähtökohtaisesti modulaarista ja vähäistä turhilta riippuvuuksiltaan. Tällaisen koodin taas on huomattu olevan laadukasta ylläpidettävyyden ja laajennettavuuden kannalta. Eli eräs argumentti TDD:n puolesta on juuri ollut sen tuottama laajennettavuuden ja jatkokehitettävyyden kannalta edullinen koodin laatu.</p>
+<p>Koodista on vaikea tehdä helposti testattavissa olevaa, jos se ei ole modulaarista ja löyhästi kytketyistä selkeän rajapinnan omaavista komponenteista koostuvaa. Määritelmän mukaisella TDD:llä ohjelmoitaessa taas koodista tulee useimmiten jo lähtökohtaisesti modulaarista ja vähäistä turhilta riippuvuuksiltaan. Tälläisen koodin taas on huomattu olevan laadukasta ylläpidettävyyden ja laajennettavuuden kannalta. Eli eräs argumentti TDD:n puolesta on juuri ollut sen tuottama laajennettavuuden ja jatkokehitettävyyden kannalta edullinen koodin laatu.</p>
 
 <p>Muina TDD:n hyvinä puolina mainitaan, että se rohkaisee ottamaan pieniä askelia kerrallaan ja näin toimimaan fokusoidusti, ja että hyvin kirjoitetut testit toimivat toteutetun komponentin rajapinnan dokumentaationa.</p>
 
@@ -564,7 +596,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Käytettäessä TDD:tä testikoodia tulee paljon, usein suunnilleen saman verran kuin varsinaista koodia. Jos ja kun sovellus muuttuu, tulee testejä myös ylläpitää, sillä monet suuremmat rakenteelliset muutokset rikkovat usein osan testeistä.</p>
 
-<p>TDD:n soveltaminen on haastavaa mm. käyttöliittymä-, tietokantayhteyksistä sekä verkon yli kommunikoinnista huolehtivaa koodia tehtäessä, mahdotonta se ei kuitenkaan ole. Jo olemassa olevan koodin laajentaminen TDD:llä voi myöskin olla erittäin haastavaa erityisesti, jos laajennettava koodi on rakenteeltaan vanhan liiton spagettikoodia.</p>
+<p>TDD:n soveltaminen on haastavaa mm. käyttöliittymä-, tietokantayhteyksistä sekä verkon yli kommunikoinnista huolehtivaa koodia tehtäessä, mahdotonta se ei kuitenkaan ole. Jo olemassa olevan koodin laajentaminen TDD:llä voi myöskin olla erittäin haastavaa erityisesti jos laajennettava koodi on rakenteeltaan vanhan liiton spagettikoodia.</p>
 
 <h2 id="riippuvuuksien-hallinta-testeissä">Riippuvuuksien hallinta testeissä</h2>
 
@@ -594,7 +626,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Pankkia edustavalle mock-oliolle on asetettu <em>ekspektaatio</em>, eli vaatimus, joka varmistaa että metodia <em>tilisiirto</em> on kutsuttu testin aikana sopivilla parametreilla. Jos tämä vaatimus ei täyty, testi ei mene läpi.</p>
 
-<p>Pääset harjoittelemaan Mockiton käyttöä viikon 3 <a href="/tehtavat3/">laskareissa</a>.</p>
+<p>Pääset harjoittelemaan Mockiton käyttöä viikon 4 <a href="/tehtavat4/">laskareissa</a>.</p>
 
 <h2 id="user-storyjen-testaaminen">User storyjen testaaminen</h2>
 
@@ -604,8 +636,8 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
 
 <p>Esimerkiksi user storyn <em>asiakas voi lisätä tuotteen ostoskoriin</em> hyväksymiskriteerejä voisivat olla</p>
 <ul>
-  <li>ollessaan tuotelistauksessa ja valitessaan tuotteen, jota on varastossa, menee tuote ostoskoriin ja ostoskorin hinta sekä korissa olevien tuotteiden määrä päivittyy oikein</li>
-  <li>ollessaan tuotelistauksessa ja valitessaan tuotteen, jota ei ole varastossa, pysyy ostoskorin tilanne muuttumattomana</li>
+  <li>ollessaan tuotelistauksessa ja valitessaan tuotteen jota on varastossa, menee tuote ostoskoriin ja ostoskorin hinta sekä korissa olevien tuotteiden määrä päivittyy oikein</li>
+  <li>ollessaan tuotelistauksessa ja valitessaan tuotteen jota ei ole varastossa, pysyy ostoskorin tilanne muuttumattomana</li>
 </ul>
 
 <p>Optimaalisessa tilanteessa user storyjen hyväksymiskriteereistä saadaan muodostettua suurin osa ohjelmiston järjestelmätason, eli käyttäjän näkökulmasta sovelluksen toiminnallisuuden varmistavista toiminnallisista testeistä.</p>
@@ -636,7 +668,7 @@ Tarkastus suoritetaan järjestämällä formaali kokous, jolla on tarkkaan mää
   <li><em>user can log in with a valid username/password-combination</em></li>
 </ul>
 
-<p>Cucumberissa jokaisesta user storysta kirjoitetaan oma <em>.feature</em>-päätteinen tiedosto, joka sisältää storyn nimen ja joukon storyyn liittyvä hyväksymiskriteereitä ,joita Cucumber kutsuu <em>skenaarioiksi</em>. Storyn hyväksymiskriteerit eli skenaariot kirjoitetaan <a href="https://cucumber.io/docs/gherkin/reference/">Gherkin</a>-kielellä, seuraavassa muodossa</p>
+<p>Cucumberissa jokaisesta user storysta kirjoitetaan oma <em>.feature</em>-päätteinen tiedosto, joka sisältää storyn nimen ja joukon storyyn liittyvä hyväksymiskriteereitä, joita Cucumber kutsuu <em>skenaarioiksi</em>. Storyn hyväksymiskriteerit eli skenaariot kirjoitetaan <a href="https://cucumber.io/docs/gherkin/reference/">Gherkin</a>-kielellä, seuraavassa muodossa</p>
 
 <p><em>Given [initial context], when [event occurs], then [ensure some outcomes]</em></p>
 
@@ -679,7 +711,7 @@ Metodit kutsuvat ohjelman luokkia simuloiden käyttäjän syötettä varmistaen,
 
 <p>90-luvulla alettiin huomaamaan, että riskien minimoimiseksi integraatio kannattaa tehdä useammin kuin vain projektin lopussa. Parhaaksi käytänteeksi alkoi muodostumaan päivittäin tehtävä koko projektin kääntäminen eli <em>daily build</em> ja samassa yhteydessä suoritettava <em>smoke test</em>. Nämä käytänteet alkoivat nousta suurempaan tietoisuuteen 90-luvun puolessa välissä erityisesti <a href="https://stevemcconnell.com/articles/daily-build-and-smoke-test/">Microsoftin</a> Excel ja Windows 95 -tiimien menestysten ansiosta.</p>
 
-<p>Smoke testillä tarkoitetaan kohtuullisen yksinkertaista järjestelmätason testiä, joka kuitenkin testaa järjestelmän kaikkia arkkitehtuurillisia tasoja (käyttöliittymää, sovelluslogiikkaa, tietokantaa), ja havaitsee jos jotain on pahasti pielessä. Smoke test ei siis kata kovin paljoa sovelluksen toiminnallisuudesta, mutta kuitenkin riittävästi havaitakseen, jos sovellus hajoaa perustavanlaatuisella tavalla, esimerkiksi jos sovelluslogiikan ja tietokannan välille syntyy epäyhteensopivuus, joka estää kokonaan tietokantayhteyksien muodostamisen.</p>
+<p>Smoke testillä tarkoitetaan kohtuullisen yksinkertaista järjestelmätason testiä, joka kuitenkin testaa järjestelmän kaikkia arkkitehtuurillisia tasoja (käyttöliittymää, sovelluslogiikkaa, tietokantaa), ja havaitsee jos jotain on pahasti pielessä. Smoke test ei siis kata kovin paljoa sovelluksen toiminnallisuudesta, mutta kuitenkin riittävästi havaitakseen jos sovellus hajoaa perustavanlaatuisella tavalla, esimerkiksi jos sovelluslogiikan ja tietokannan välille syntyy epäyhteensopivuus, joka estää kokonaan tietokantayhteyksien muodostamisen.</p>
 
 <p>Daily buildia ja smoke testiä käytettäessä järjestelmän integraatio tehdään ainakin jollain tarkkuustasolla joka päivä. Komponenttien yhteensopivuusongelmat huomataan nopeasti ja niiden korjaaminen helpottuu. Tiimin moraali myös paranee, kun ohjelmistosta on olemassa päivittäin kasvava ainakin jossain määrin toimiva versio.</p>
 
@@ -703,19 +735,17 @@ Metodit kutsuvat ohjelman luokkia simuloiden käyttäjän syötettä varmistaen,
 
 <p>Jotta CI-prosessi toimisi riittävän jouhevasti, tulee testien suorittamisen tapahtua suhteellisen nopeasti, maagisena rajana pidetään usein kymmentä minuuttia. Erityisesti käyttöliittymän läpi suoritettavat hyväksymistestit voivat kuitenkin olla yllättävän aikaa vieviä. Jos testien suoritusaika alkaa kasvaa liikaa, voidaan testit konfiguroida ajettavaksi <em>kahdessa vaiheessa</em>. Testien ensimmäisen vaiheen <em>commit buildin</em> läpimeno antaa kehittäjälle riittävän varmuuden pushata uusi koodi versionhallintaan. CI-palvelimella suoritetaan sitten myös hitaammat testit sisältävä <em>secondary build</em>.</p>
 
-<p>Monimutkaisemmissa tilanteissa testaus voidaan jakaa vieläkin useampaan vaiheeseen. Sovellukselle saatetaan tehdä esim. kuormituksen kestoa mittaavia testejä, joiden suorituksessa kestää useita tunteja. Tällaisia testejä ei ole missään nimessä tarkoituksenmukaista suorittaa jokaisen versionhallintaan tapahtuvan koodin muutoksen (eli commitin) yhteydessä, vaan esimerkiksi kerran vuorokaudessa.</p>
+<p>Monimutkaisemmissa tilanteissa testaus voidaan jakaa vieläkin useampaan vaiheeseen. Sovellukselle saatetaan tehdä esim. suuren kuormituksen sietoa mittaavia testejä, joiden suorituksessa kestää useita tunteja. Tällaisia testejä ei ole missään nimessä tarkoituksenmukaista suorittaa jokaisen versionhallintaan tapahtuvan koodin muutoksen (eli commitin) yhteydessä, vaan esimerkiksi kerran vuorokaudessa.</p>
 
-<p>Ensimmäisen viikon laskareissa käytetty <a href="https://circleci.com">CircleCI</a> on yksi monista SaaS-palveluna eli internetissä toimivista CI-ratkaisuista, toinen suosittu vaihtoehto on <a href="https://travis-ci.org/">Travis</a>. Eräs SaaS-palveluina toimivien CI-ratkaisujen suurista eduista on se, että tarvetta oman CI-palvelimen asentamiselle ja ylläpitämiselle ei ole.</p>
+<p>Ensimmäisen viikon laskareissa käytetty <a href="https://github.com/features/actions">GitHub Actions</a> on tällä hetkellä kovimmassa nosteessa oleva SaaS-palveluna eli pilvessä toimiva CI-ratkaisu. Hieman vanhempia, mutta edelleen käyttökelpoisia vaithtoehtoja ovat  <a href="https://circleci.com">CircleCI</a> ja <a href="https://travis-ci.org/">Travis</a>. Eräs SaaS-palveluina toimivien CI-ratkaisujen suurista eduista on se, että tarvetta oman CI-palvelimen asentamiselle ja ylläpitämiselle ei ole.</p>
 
-<p>Circlea ja Travisia paljon vanhempi <a href="https://jenkins.io/">Jenkins</a> lienee edelleen maailmalla eniten käytetty CI-palvelinohjelmisto. Tällä hetkellä ei kuitenkaan ole yhtään ilmaista internetissä palveluna toimivaa Jenkins-palvelua. Jenkinsin käyttö siis edellyttää sen asentamista omalle palvelimelle. Vaikka Jenkins on suosittu ja sillä voi tehdä melkein mitä tahansa on se kuitenkin aika vanhan liiton ohjelmisto verrattuna uudempiin tulokkaisiin, kuten Circleen.</p>
-
-<p>GitHub kertoi loppukesästä julkaisevansa 15.11.2019 <a href="https://www.youtube.com/watch?v=E1OunoCyuhY">actions</a>-toiminnallisuuden, jonka avulla myös jatkuva integraatio voidaan suorittaa suoraan GitHubissa, käyttämättä erillistä palvelua. Tämä on erittäin kiinnostava uutinen, harmi että julkistus tapahtuu tämän kurssin kannalta hieman liian myöhään. Ennakkotiedot ovat kuitenkin olleet sen suuntaisia, että ainakaan ihan lähiaikoina GitHubin actionit eivät ole toiminnallisuudeltaan riittävän joustavia moneen tosielämän jatkuvan integraation tarpeeseen.</p>
+<p>GitHub Actionsia, CirclCI:tä ja Travisia paljon vanhempi <a href="https://jenkins.io/">Jenkins</a> lienee edelleen maailmalla eniten käytetty CI-palvelinohjelmisto. Tällä hetkellä ei kuitenkaan ole yhtään ilmaista internetissä palveluna toimivaa Jenkins-palvelua. Jenkinsin käyttö siis edellyttää sen asentamista omalle palvelimelle. Vaikka Jenkins on suosittu ja sillä voi tehdä melkein mitä tahansa on se kuitenkin aika vanhan liiton ohjelmisto verrattuna uudempiin tulokkaisiin.</p>
 
 <h3 id="jatkuvan-integraation-määritelmä">Jatkuvan integraation määritelmä</h3>
 
 <p>Palataan vielä siihen mitä jatkuva integraatio menetelmän <a href="https://martinfowler.com/articles/continuousIntegration.html">pioneerien</a> mukaan oikeastaan tarkoittaa. Jatkuvan integraation tekemiseen <em>ei riitä</em> että joku on konfiguroinut tiimille CI-palvelimen. Jotta tiimin voidaan sanoa tekevän jatkuvaa integraatiota, tulee sovelluskehittäjien todellakin synkronoida tekemänsä koodi mahdollisimman usein (vähintään päivittäin) yhteisen keskitetyn repositorion koodin kanssa. Tämä taas tarkoittaa sitä, että esimerkiksi jokaisen aamun alussa kaikilla sovelluskehittäjillä tulisi olla päivän työnsä lähtökohtana <em>sama koodi</em>. Kuten jokainen tiimissä sovelluskehitystä tehnyt tietää, kaikkien koodin synkronointi päivittäisellä tasolla ei välttämättä ole helppoa ja se vaatii systemaattista ja kurinalaista työskentelyä.</p>
 
-<p>Nykyään monin paikoin käytössä oleva tapa käyttää useiden päivien tai jopa viikkojen ikäisiä <a href="https://martinfowler.com/bliki/FeatureBranch.html">feature branchejä</a>, eli jokaiselle uudelle toiminnallisuudelle tarkoitettuja omia versionhallinnan haaroja tarkoittaa oikeastaan jo lähtökohtaisesti sitä, että tiimi <a href="https://www.innoq.com/en/blog/continuous-integration-contradicts-feature-branches/">ei harjoita jatkuvaa integraatiota</a>. Palaamme asiaan <a href="/osa3/-feature-branchit-ja-merge-hell">myöhemmin</a> tässä osassa.</p>
+<p>Nykyään monin paikoin käytössä oleva tapa käyttää useiden päivien tai jopa viikkojen ikäisiä <a href="https://martinfowler.com/bliki/FeatureBranch.html">feature branchejä</a>, eli jokaiselle uudelle toiminnallisuudelle tarkoitettuja omia versionhallinnan haaroja tarkoittaa oikeastaan jo lähtökohtaisesti sitä, että tiimi <a href="https://www.innoq.com/en/blog/continuous-integration-contradicts-feature-branches/">ei harjoita jatkuvaa integraatiota</a>. Palaamme asiaan <a href="/osa3/#feature-branchit-ja-merge-hell">myöhemmin</a> tässä osassa.</p>
 
 <h2 id="jatkuva-käyttöönotto-ja-toimitusvalmius">Jatkuva käyttöönotto ja toimitusvalmius</h2>
 
@@ -725,11 +755,11 @@ Metodit kutsuvat ohjelman luokkia simuloiden käyttäjän syötettä varmistaen,
 
 <p>Hyväksymistestauksen jälkeen uusi versio voidaan siirtää tuotantopalvelimelle, eli loppukäyttäjien käyttöön. Parhaassa tapauksessa myös staging-ympäristössä tehtävien hyväksymistestien suoritus on automatisoitu, ja ohjelmisto kulkee koko <em>deployment pipelinen</em> läpi, eli sovelluskehittäjän koneelta CI-palvelimelle, sieltä staging-ympäristöön ja lopulta tuotantoon, automaattisesti.</p>
 
-<p>Termillä <em>deployment pipeline</em> tarkoitetaan niitä ohjelman käännöksen ja testauksen vaiheita, joiden läpikäymistä edellytetään, että ohjelma saadaan siirrettyä tuotantoympäristöön loppukäyttäjien käyttöön.</p>
+<p>Termillä <em>deployment pipeline</em> tarkoitetaan niitä ohjelman käännöksen, testauksen ja muun laadunhallinnan vaiheita, joiden läpikäymistä edellytetään, että ohjelma saadaan siirrettyä tuotantoympäristöön loppukäyttäjien käyttöön.</p>
 
 <p>Jokainen sovelluskehittäjän commit kulkee deployment pipelinen eli käsitteellisen “liukuhihnan” läpi</p>
 <ul>
-  <li>CI-palvelin suorittaa commitille joukon testejä</li>
+  <li>CI-palvelin suorittaa commitille joukon testejä ja mahdollisesti staattista analyysiä</li>
   <li>seuraavassa vaiheessa commitin aikaansaama sovelluksen uusi versio siirtyy staging-ympäristöön</li>
   <li>staging-ympäristössä sovelluksen uudelle versiolle suoritetaan lisää testejä</li>
   <li>lopulta commit siirtyy tuotantoympäristöön</li>
@@ -737,23 +767,27 @@ Metodit kutsuvat ohjelman luokkia simuloiden käyttäjän syötettä varmistaen,
 
 <p><img src="http://localhost:4000/images/3-12.png" alt="" height="280px" /></p>
 
-<p>Käytäntöä, jossa jokainen CI:n läpäisevä ohjelmiston commit, eli versionhallintaan pushattu versio viedään automatisoidusti staging-palvelimelle ja siellä tapahtuvan automatisoidun hyväksymistestauksen jälkeen tuotantoon, nimitetään <em>jatkuvaksi käyttöönotoksi</em> (engl. continuous deployment).</p>
+<p>Käytännöstä, jossa jokainen CI:n läpäisevä ohjelmiston commit, eli versionhallintaan pushattu versio viedään automatisoidusti staging-palvelimelle ja siellä tapahtuvan automatisoidun hyväksymistestauksen jälkeen tuotantoon, nimitetään <em>jatkuvaksi käyttöönotoksi</em> (engl. continuous deployment).</p>
 
 <p>On olemassa tilanteita, missä jokaista commitia ei haluta viedä automaattisesti tuotantoon. Jos viimeinen vaihe, eli tuotantoon vieminen tapahtuukin ainoastaan ihmisen toimesta “nappia painamalla”, puhutaan <em>jatkuvasta toimitusvalmiudesta</em>, (engl. continuous delivery).</p>
 
-<p>Viime aikoina on erityisesti suuren kokoluokan web-palveluissa (esim. Google, Amazon, Netflix, Facebook) ruvettu suosimaan tyyliä, jossa ohjelmistosta julkaistaan uusi versio tuotantoon jopa <a href="https://dzone.com/articles/release-frequency-a-need-for-speed">kymmeniä tai satoja</a> kertoja päivästä.</p>
+<p>Viime aikoina on erityisesti suuren kokoluokan web-palveluissa (esim. Google, Amazon, Netflix, Facebook) ruvettu suosimaan tyyliä, jossa ohjelmistosta julkaistaan uusi versio tuotantoon jopa <a href="https://dzone.com/articles/release-frequency-a-need-for-speed">kymmeniä tai satoja</a> kertoja päivästä. Suomessa tätä käytäntöä harjoittaa mm. monia TKT:n opiskelijoitakin työllistävä <a href="https://www.smartly.io/">Smartly</a>.</p>
 
 <h2 id="tutkiva-testaaminen">Tutkiva testaaminen</h2>
 
 <p>Jotta järjestelmä saadaan niin virheettömäksi, että se voidaan laittaa tuotantoon, on testaus suoritettava erittäin perusteellisesti. Perinteinen tapa järjestelmätestauksen suorittamiseen on perustunut ennen testausta laadittuun perinpohjaiseen testaussuunnitelmaan. Jokaisesta testistä on kirjattu testisyötteet ja odotettu tulos. Testauksen tuloksen kontrolloiminen on suoritettu vertaamalla järjestelmän toimintaa testitapaukseen kirjattuun odotettuun tulokseen.</p>
 
-<p>Automatisoitujen hyväksymistestien luonne on täsmälleen samanlainen, jokaisen testin syötteet sekä odotetut tulokset ovat tarkkaan etukäteen kiinnitettyjä. Jos testaus tapahtuu pelkästään etukäteen mietittyjen testien avulla, ovat ne kuinka tahansa tarkkaan harkittuja, ei kaikkia yllättäviä tilanteita osata ennakoida. Hyvät testaajat ovat kautta aikojen tehneet “virallisen” dokumentoidun testauksen lisäksi epävirallista “ad hoc”-testausta. Viime vuosina “ad hoc”-testaus on saanut virallisen aseman ja sen strukturoitua muotoa on ruvettu kutsumaan nimellä <em>tutkiva testaaminen</em> (engl. exploratory testing).</p>
+<p>Automatisoitujen hyväksymistestien luonne on täsmälleen samanlainen, jokaisen testin syötteet sekä odotetut tulokset ovat tarkkaan etukäteen kiinnitettyjä. Jos testaus tapahtuu pelkästään etukäteen mietittyjen testien avulla, ovat ne kuinka tahansa tarkkaan harkittuja, ei kaikkia yllättäviä tilanteita osata ennakoida.</p>
+
+<p>Hyvät testaajat ovat kautta aikojen tehneet “virallisen” dokumentoidun testauksen lisäksi epävirallista “ad hoc”-testausta. Viime vuosina “ad hoc”-testaus on saanut virallisen aseman ja sen strukturoitua muotoa on ruvettu kutsumaan nimellä <em>tutkiva testaaminen</em> (engl. exploratory testing).</p>
 
 <p>Käsitteen kehittäjä <a href="http://www.satisfice.com/articles/what_is_et.shtml">Cam Kaner</a> määrittelee termin seuraavasti</p>
 
-<p><em>exploratory testing is simultaneous learning, test design and test execution</em></p>
+<blockquote>
+  <p><em>exploratory testing is simultaneous learning, test design and test execution</em></p>
+</blockquote>
 
-<p>Ideana on, että testaaja ohjaa toimintaansa suorittamiensa testien ohjelmassa aiheuttaman reaktion perusteella. Testitapauksia ei suunnitella kattavasti etukäteen, sen sijaan testaaja pyrkii kokemuksensa ja suorittamiensa testien ja kokeilujen perusteella löytämään järjestelmästä virheitä.</p>
+<p>Ideana on, että testaaja ohjaa toimintaansa suorittamiensa testien ohjelmassa aiheuttaman reaktion perusteella. Testitapauksia ei suunnitella kattavasti etukäteen, sensijaan testaaja pyrkii kokemuksensa ja suorittamiensa testien ja kokeilujen perusteella löytämään järjestelmästä virheitä.</p>
 
 <p>Tutkiva testaus ei kuitenkaan etene täysin sattumanvaraisesti, kullekin testisessiolle asetetaan jonkinlainen tavoite, eli mitä osaa tai toiminnallisuuksia sovelluksesta on tarkoitus tutkia ja minkälaisia virheitä tarkoitus etsiä.</p>
 
@@ -776,7 +810,7 @@ https://www.verkkokauppa.com/ostoskori?id=10 voitaisiin yrittää muuttaa käsin
 
 <h3 id="blue-green-deployment">Blue-green-deployment</h3>
 
-<p>Eräs tuotannossa tapahtuvan testaamisen tekniikka on <a href="https://martinfowler.com/bliki/BlueGreenDeployment.html">blue-green-deployment</a>, missä periaatteena on ylläpitää rinnakkain kahta tuotantoympäristöä (tai palvelinta), joista käytetään nimiä blue ja green.</p>
+<p>Eräs tuotannossa tapahtuvan testaamisen tekniikka on <a href="https://martinfowler.com/bliki/BlueGreenDeployment.html">blue-green-deployment</a>, missä periaatteena on ylläpitää rinnakkain kahta tuotantoympäristöä (tai palvelinta), joista käytetään usein nimiä blue ja green.</p>
 
 <p>Tuotantoympäristöistä vain toinen on ohjelmiston käyttäjien aktiivisessa käytössä. Käyttäjien ja tuotantopalvelinten välissä oleva komponentti, esimerkiksi ns. reverse proxyna toimiva web-palvelin (kuvassa router) ohjaa käyttäjien liikenteen aktiivisena olevaan ympäristöön.</p>
 
@@ -815,7 +849,7 @@ https://www.verkkokauppa.com/ostoskori?id=10 voitaisiin yrittää muuttaa käsin
 
 <p>Myös canary releasejen yhteydessä testauksen ja kaiken tuotantoon vientiin liittyvän on syytä tapahtua automatisoidusti.</p>
 
-<p>Nimi canary release periytyy kaivostyöläisten tavasta käyttää kanarialintuja tutkimaan sitä, onko kaivoksessa myrkyllisiä kaasuja: jos kaivokseen viety lintu ei kuole, ilma on turvallista.</p>
+<p>Nimi canary release periytyy kaivostyöläisten tavasta käyttää kanarialintuja tutkimaan sitä onko kaivoksessa myrkyllisiä kaasuja: jos kaivokseen viety lintu ei kuole, ilma on turvallista.</p>
 
 <h3 id="tuotannossa-testaaminen-ja-tietokanta">Tuotannossa testaaminen ja tietokanta</h3>
 
@@ -873,9 +907,9 @@ Feature togglejen holtiton käyttö voi johtaa feature toggle helvettiin, eli su
 
 <p>Perinteisesti yrityksissä on ollut tarkka erottelu sovelluskehittäjien (developers, dev) ja palvelinympäristöistä vastaavien järjestelmäylläpitäjien (operations, ops) välillä. On erittäin tavallista, että sovelluskehittäjät eivät pääse edes kirjautumaan tuotantopalvelimille ja sovellusten tuotantoon vieminen sekä esim. tuotantotietokantaan tehtävät skeeman päivitykset tapahtuvat ainoastaan ylläpitäjien toimesta.</p>
 
-<p>Tällaisessä ympäristössä esim. continuous deploymentin harjoittaminen on lähes mahdotonta, tilanne ajautuukin helposti siihen, että tuotantopalvelimelle pystytään viemään uusia versioita vain harvoin, esimerkiksi ainoastaan 4 kertaa vuodessa.</p>
+<p>Tälläisessä ympäristössä esim. continuous deploymentin harjoittaminen on lähes mahdotonta, tilanne ajautuukin helposti siihen, että tuotantopalvelimelle pystytään viemään uusia versioita vain harvoin, esimerkiksi ainoastaan 4 kertaa vuodessa.</p>
 
-<p>Joustavammat toimintamallit uusien ominaisuuksien tuotantoon viemisessä vaativatkin täysin erilaista kulttuuria, sellaista, missä kehittäjät (dev) ja ylläpito (ops) työskentelevät tiiviissä yhteistyössä. Esim. sovelluskehittäjille tulee antaa tarvittava pääsy tuotantopalvelimelle tai Scrum-tiimiin tulee sijoittaa palvelinten ylläpidosta ja operoinnista huolehtivia ihmisiä. Toimintamallista missä dev ja ops työskentelevät tiiviisti yhdessä käytetään nimeä <a href="https://en.wikipedia.org/wiki/DevOps">DevOps</a>.</p>
+<p>Joustavammat toimintamallit uusien ominaisuuksien tuotantoon viemisessä vaativatkin täysin erilaista kulttuuria, sellaista, missä kehittäjät (dev) ja ylläpito (ops) työskentelevät tiiviissä yhteistyössä. Esim. sovelluskehittäjille tulee antaa tarvittava pääsy tuotantopalvelimelle tai Scrum-tiimiin tulee sijoittaa palvelinten ylläpidosta ja operoinnista huolehtivia ihmisiä. Toimintamallista missä kehittäjät ja ylläpitäjät eli <em>dev-</em> ja <em>ops-ihmiset</em> työskentelevät tiiviisti yhdessä käytetään nimitystä <a href="https://en.wikipedia.org/wiki/DevOps">DevOps</a>.</p>
 
 <p>DevOps on termi, joka on nykyään monin paikoin esillä, esimerkiksi työpaikkailmoituksissa voidaan arvostaa DevOps-taitoja tai jopa etsiä ihmistä DevOps-tiimiin. On myös myynnissä mitä erilaisimpia DevOps-työkaluja. On kuitenkin jossain määrin epäselvää mitä kukin tarkoittaa termillä DevOps.</p>
 
@@ -906,9 +940,9 @@ Feature togglejen holtiton käyttö voi johtaa feature toggle helvettiin, eli su
 
 <p><img src="http://localhost:4000/images/3-19.png" alt="" height="750px" /></p>
 
-<h2 id="yhteenveto---ketterän-testauksen-nelikenttä">Yhteenveto - ketterän testauksen nelikenttä</h2>
+<h2 id="yhteenveto---ketterän-testauksen-nelikettä">Yhteenveto - ketterän testauksen nelikettä</h2>
 
-<p>Ketterän testauksen kenttää voidaan jäsentää alunperin Brian Maric käsialaa olevan <a href="http://lisacrispin.com/2011/11/08/using-the-agile-testing-quadrants/">Agile Testing Quadrants</a> -kaavion avulla.</p>
+<p>Ketterän testauksen kenttää voidaan jäsentää alunperin Brian Maricin käsialaa olevan <a href="http://lisacrispin.com/2011/11/08/using-the-agile-testing-quadrants/">Agile Testing Quadrants</a> -kaavion avulla.</p>
 
 <p><img src="http://localhost:4000/images/3-20.png" alt="" height="400px" /></p>
 
@@ -922,7 +956,7 @@ Feature togglejen holtiton käyttö voi johtaa feature toggle helvettiin, eli su
 
 <p>Kaikilla “neljänneksillä” on oma roolinsa ja paikkansa ketterässä ohjelmistokehityksessä, ja on pitkälti kontekstisidonnaista missä suhteessa testaukseen ja laadunhallintaan käytettävissä olevat resurssit kannattaa kuhunkin neljännekseen kohdentaa.</p>
 
-<p>Kaavio on jo hieman vanha, alun perin vuodelta 2003 joten se ei tunne vielä käsitettä tuotannossa testaaminen.</p>
+<p>Kaavio on jo hieman vanha, alunperin vuodelta 2003 joten se ei tunne vielä käsitettä tuotannossa testaaminen.</p>
 
 <h2 id="loppupäätelmiä-testauksesta-ja-laadunhallinnasta">Loppupäätelmiä testauksesta ja laadunhallinnasta</h2>
 
@@ -932,7 +966,7 @@ Feature togglejen holtiton käyttö voi johtaa feature toggle helvettiin, eli su
 
 <p>Testauksen automatisointi ei ole halpaa eikä helppoa. Väärin, väärään aikaan tai väärälle “tasolle” tehdyt automatisoidut testit voivat tuottaa enemmän harmia ja kustannuksia kuin hyötyä, erityisen suuri riski on käyttöliittymän kautta tehtävillä testeillä.</p>
 
-<p>Jos ohjelmistossa on komponentteja, jotka tullaan ehkä poistamaan tai korvaamaan pian, on useimmiten järkevintä olla automatisoimatta niiden testejä. Esimerkiksi osassa 2 esitelty <a href="/osa2#vaatimusm%C3%A4%C3%A4rittely-2010-luvulla">MVP eli Minimal Viable Product</a> on karsittu toteutus, jonka avulla halutaan nopeasti selvittää, onko jokin ominaisuus ylipäätään käyttäjien kannalta arvokas. Jos MVP:n toteuttama ominaisuus osoittautuu tarpeettomaksi, se poistetaan järjestelmästä. MVP-periaatteella tehty ominaisuus on siis useimmiten viisasta tehdä ilman testien automatisointia.</p>
+<p>Jos ohjelmistossa on komponentteja, jotka tullaan ehkä poistamaan tai korvaamaan pian, on useimmiten järkevintä olla automatisoimatta niiden testejä. Esimerkiksi osassa 2 esitelty <a href="/osa2#vaatimusm%C3%A4%C3%A4rittely-2010-luvulla">MVP eli Minimal Viable Product</a> on karsittu toteutus, jonka avulla halutaan nopeasti selvittää, onko jokin ominaisuus ylipäätään käyttäjien kannalta arvokas. Jos MVP:n toteuttama ominaisuus osoittautuu tarpeettomaksi, se poistetaan järjestelmästä. MVP-periaattella tehty ominaisuus on siis useimmiten viisasta tehdä ilman testien automatisointia.</p>
 
 <p>Ongelmallista kuitenkin usein on, että kertakäyttöiseksi tarkoitettu komponentti voi jäädä järjestelmään pitkäksikin aikaa, joskus jopa pysyvästi koska sitä “ei ole aikaa” toteuttaa kunnolla.</p>
 
@@ -948,9 +982,54 @@ Feature togglejen holtiton käyttö voi johtaa feature toggle helvettiin, eli su
 
 <p>Testitapausten kannattaa olla mahdollisimman paljon testattavan komponentin oikeiden käyttöskenaarioiden kaltaisia. Pelkkiä testauskattavuutta kasvattavia testejä on turha tehdä.</p>
 
-<p>Testitapauksissa kannattaa käyttää mahdollisimman oikean kaltaista dataa, erityisesti järjestelmätason testeissä. Koodissa nimittäin lähes aina hajoaa jokin, kun käytetään oikeaa dataa riippumatta siitä, miten hyvin testaus on suoritettu. Parasta onkin, jos staging-ympäristössä on käytössä sama data kuin tuotantoympäristössä.</p>
+<p>Testitapauksissa kannattaa käyttää mahdollisimman oikean kaltaista dataa, erityisesti järjestelmätason testeissä. Koodissa nimittäin lähes aina hajoaa jokin kun käytetään oikeaa dataa riippumatta siitä, miten hyvin testaus on suoritettu. Parasta onkin jos staging-ympäristössä on käytössä sama data kuin tuotantoympäristössä.</p>
 
-<p>Ehdottomasti kaikkein tärkein asia sovelluksen laadunhallinnan kannalta on mahdollisimman usein tapahtuva tuotantoonvienti. Se taas edellyttää hyvin rakennettua deployment pipelineä, kohtuullista testauksen automatisointia ja helpottuu oleellisesti, jos feature branchien sijaan käytetään trunk based development -periaatetta. Suosittelen lämpimästi että tuotantoonvienti tapahtuu niin usein kuin mahdollista, jopa useita kertoja päivässä. Tämä takaa yleensä sen, että pahoja integrointiongelmia ei synny, ja sovellukseen syntyvät regressiot havaitaan ja pystytään korjaamaan mahdollisimman nopeasti.</p>
+<p>Oma näkemykseni testaukseen on hieman poikkeava ja jopa jossain määrin vastakkainen kuin niin sanottu <a href="https://martinfowler.com/articles/practical-test-pyramid.html#TheTestPyramid">testauspyramidi</a>, eli Mike Cohenin ajatus, siitä että pääosan testeistä tulisi olla yksikkötestejä, sillä niitä on helppo tehdä, ja ne ovat nopeita suorittaa. Järjestelmää kokonaisuudessan testaavat end to end -testit taas ovat hitaita, niitä on hankala tehdä ja ne ovat alttiita hajoamaan pienistä muutoksista, joten niiden määrän tulisi olla mahdollisimman vähäinen:</p>
+
+<p><img src="http://localhost:4000/images/3-23.png" alt="" height="300px" /></p>
+
+<p>Cohenin pyramidi-idea on jo aika vanha, ja läheskään kaikki eivät ole siitä samaa mieltä. Mielipiteitä löytyy <a href="https://laredoute.io/blog/the-traditional-test-pyramid-pitfalls-and-anti-patterns/">laidasta laitaan</a> ja varmasti onkin niin, että yhtä totuutta asiasta ei ole. Kuten jo aiemminkin totesin, väärälle “tasolle” väärään aikaan tehdyt automatisoidut testit ovat suuri riski, ja koska järjestelmätason testien tekeminen on todella työlästä, piilee niissä aina hukkainvestoinnin vaara.</p>
+
+<p>Ehdottomasti kaikkein tärkein asia sovelluksen laadunhallinnan kannalta on mahdollisimman usein tapahtuva tuotantoonvienti. Se taas edellyttää hyvin rakennettua deployment pipelineä, kohtuullista testauksen automatisointia ja helpottuu oleellisesti jos feature branchien sijaan käytetään trunk based development -periaatetta. Suosittelen lämpimästi että tuotantoonvienti tapahtuu niin usein kuin mahdollista, jopa useita kertoja päivässä. Tämä takaa yleensä sen, että pahoja integrointiongelmia ei synny, ja sovellukseen syntyvät regressiot havaitaan ja pystytään korjaamaan mahdollisimman nopeasti.</p>
+
+<h2 id="tieteellinen-evidenssi">Tieteellinen evidenssi</h2>
+
+<p>Edellä esitellyistä jatkuvan julkaisun ja laadunhallinnan käytenteiden toimivuudesta on runsaasti anekdotaalista evidenssiä ja monista osa-aluiesta on tehny myös akateemista tutkimusta. Myös se, että erinomaisesti menestyneet organisaatiot kuten Google, Netflix, Amazon ja Facebook luottavat näihin käytänteisiin, ja ovat jopa paikoin kehittäneet ne, puhuu niiden puolesta</p>
+
+<p>Toistaiseksi vakuuttavimman ja tieteellisesti vakaimmalla pohjalla olevan näkemyksen tarjoaa vuonna 2018 julkaistussa kirjassa
+<a href="https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339">Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations</a> raportoitu vuosina 2013-2017 tehnty laaja, yli 20000 vastaukseen perustuva kyselytutkimus.</p>
+
+<p>Tutkimustulokset on myös julkaistu korkeatasoisilla vertaisarvioiduilla foorumeilla. Tämän osan kannalta oleellisia tuloksia käsittelee esimerkiksi <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2681909">Forsgren, Humble: The Role of Continuous Delivery in IT and Organizational Performance</a>.</p>
+
+<p>Tutkimuksen tuloksia summaa seuraava kaavio:</p>
+
+<p><img src="http://localhost:4000/images/3-24.png" alt="" height="400px" /></p>
+
+<p>Tutkimuksen ytimessä on selvittää mitkä tekijät vaikuttavat edesauttavasti yrityksen tehokkaaseen toimintaan, kuvassa <em>organizational performance</em>. Kyselytutkimuksessa yrtyksen tehokkuutta on mitattu seuraavilla kysymyksillä:</p>
+
+<p><em>Select the number that best indicates degree of conformance to your organization’s goals over the past year. (1=Performed well below, 7 = Performed well above)</em></p>
+<ul>
+  <li>Overall organizational performance</li>
+  <li>Overall organizational profitability</li>
+  <li>Relative market share for primary products</li>
+  <li>Overall productivity of the delivery system Increased number of customers</li>
+  <li>Time to market</li>
+  <li>Quality and performance of applications</li>
+</ul>
+
+<p>Kuvan vasemmassa reunassa taas on yrityksten harjoittamia käytänteitä: versionhallinta, testiautomaatio, jatkuva integraatio ja tuotantoonviennin automatisointi, siis “DevOps”-käytänteet, jotka muodostavat jatkuvan tuotantoonviennin (continuous delivery) ytimen. Myös näiden käyttöä vastaajaorgaisaatioissa on mitattu kyselytutkimuksessa skaalalla 1-7.</p>
+
+<p>Tutkimus löysi merkittävän yhteyden DevOps-käytänteiden käytön ja yrityksen tehokkaan toiminnan välillä. Mielenkiintoisena “sivutuotteena” käytänteiden intensiiviselle harjoittamiselle on myös korkeampi työtyytyväisyys ja vähäisempi määrä loppuunpalaneita työntekijöitä.</p>
+
+<p>Ylläoleva kuva on vuonna 2016 ilmestyneestä artikkelista. Tässä vaiheessa Forsgrenin ja kumppaneiden tutkimus keskittyi siihen, miten tekniset DevOps-käytänteet vaikuttavat yrityksen tehokkuuteen.</p>
+
+<p>Sittemmin tutkimuksen fokus on laajennettu myös firman johtamiskäytänteisiin, useimmat näistä liittyvät Lean-filosofiaan, joka on aiheenamme <a href="/osa5/">osassa 5</a>.</p>
+
+<p>On myös identifioitu lisää organisaatioiden tehokkuuteen liittyviä käytänteitä, mm. trunk based -development ja tuotannossa olevan sovelluksen monitorointi.</p>
+
+<p>Seuraavassa Accelerate-kirjasta lainattu kuva, joka visualisoi miten eri käytänteet edesauttavat yrityksen tehokkuutta:</p>
+
+<p><img src="http://localhost:4000/images/3-26.png" alt="" height="500px" /></p>
 
   </div>
 
@@ -968,7 +1047,7 @@ Feature togglejen holtiton käyttö voi johtaa feature toggle helvettiin, eli su
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
-             Ohjelmistotuotanto avoin yliopisto 2020 
+             Ohjelmistotuotanto avoin yliopisto 2021 
           </li>
           <li>
             <a href="mailto:matti.luukkainen@helsinki.fi">matti.luukkainen@helsinki.fi</a>

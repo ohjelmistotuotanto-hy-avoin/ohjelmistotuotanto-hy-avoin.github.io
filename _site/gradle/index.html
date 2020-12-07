@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Viikko 1</title>
+  <title>Gradle</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/gradle/">
-  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2020" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2021" href="/feed.xml">
 
   
 </head>
@@ -24,7 +24,7 @@
   <div class="wrapper">
     
     
-    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2020</a>
+    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2021</a>
     
     
       <nav class="site-nav">
@@ -40,6 +40,9 @@
         </label>
 
         <div class="trigger">
+          
+            
+            
           
             
             
@@ -92,6 +95,9 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/osa5/">Osa 5</a>
             
           
@@ -109,7 +115,31 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/tehtavat/">Tehtävät</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
             
           
             
@@ -162,20 +192,33 @@
 
 <p>Tehdään nyt gradle-projekti alusta asti itse. Tee <a href="/tehtavat1#teht%C3%A4vien-palautusrepositoriot">palautusrepositorioosi</a> uusi hakemisto ja mene hakemistoon.</p>
 
-<p>Kokeile toimiiko koneessasi komento <code class="highlighter-rouge">gradle</code>. Jos ei, kopioi hakemistoon jostain aiemmasta gradle-projektistasi (edellisen viikon tehtävistä) tiedosto <em>gradlew</em> jos käytät Linux tai OSX tai <em>gradlew.bat</em> jos käytät Windowsia ja käytä jatkossa komentoa <em>./gradlew</em> tai <em>gradlew</em>. Mikäli edelleen ei toimi, kopioi gradlew tiedoston lisäksi <em>hakemisto</em> gradle ja kokeile komentoja uudelleen.</p>
+<p>Kokeile toimiiko koneessasi komento <code class="highlighter-rouge">gradle</code>. Huomaa, että esimerkiksi fuksiläppäreissä on asennettuna erittäin vanha gradlen versio. Komennon suorittaminen näyttää mikä versio on kyseessä</p>
 
-<p>Aloita antamalla komento <em>gradle</em>:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Starting a Gradle Daemon, 1 incompatible Daemon could not be reused, use --status for details
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mluukkai@melkki:~$ gradle
+Starting a Gradle Daemon (subsequent builds will be faster)
 
 &gt; Task :help
 
-Welcome to Gradle 5.6.3.
+Welcome to Gradle 4.4.1.
+</code></pre></div></div>
+
+<p>Jos komento ei toimi <strong>tai versio on vanhempi kuin 6.7</strong>, kopioi hakemistoon jostain aiemmasta gradle-projektistasi (edellisen viikon tehtävistä) tiedosto <em>gradlew</em> jos käytät Linux tai OSX tai <em>gradlew.bat</em> jos käytät Windowsia ja käytä jatkossa komentoa <em>./gradlew</em> tai <em>gradlew</em>. Mikäli edelleen ei toimi voit ottaa lähtökohdaksesi <a href="https://github.com/ohjelmistotuotanto-hy/syksy2020/tree/main/koodi/viikko2/TyhjaProjeki">täällä</a> olevan tyhjän gradle-projektin.</p>
+
+<p>Aloita antamalla komento <em>gradle</em>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; Task :help
+
+Welcome to Gradle 6.7.
 
 To run a build, run gradle &lt;task&gt; ...
 
 To see a list of available tasks, run gradle tasks
 
+To see a list of command-line options, run gradle --help
+
+To see more detail about a task, run gradle help --task &lt;task&gt;
+
+For troubleshooting, visit https://help.gradle.org
 ...
 </code></pre></div></div>
 
@@ -194,20 +237,17 @@ To see a list of available tasks, run gradle tasks
 
 <span class="n">Help</span> <span class="n">tasks</span>
 <span class="p">----------</span>
-<span class="n">buildEnvironment</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">all</span> <span class="n">buildscript</span> <span class="n">dependencies</span> <span class="n">declared</span> <span class="k">in</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'gradle-testi'</span><span class="p">.</span>
-<span class="n">components</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">components</span> <span class="n">produced</span> <span class="n">by</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'gradle-testi'</span><span class="p">.</span> <span class="p">[</span><span class="n">incubating</span><span class="p">]</span>
-<span class="n">dependencies</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">all</span> <span class="n">dependencies</span> <span class="n">declared</span> <span class="k">in</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'gradle-testi'</span><span class="p">.</span>
-<span class="n">dependencyInsight</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">insight</span> <span class="n">into</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">dependency</span> <span class="k">in</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'gradle-testi'</span><span class="p">.</span>
-<span class="n">dependentComponents</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">dependent</span> <span class="n">components</span> <span class="k">of</span> <span class="n">components</span> <span class="k">in</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'gradle-testi'</span><span class="p">.</span> <span class="p">[</span><span class="n">incubating</span><span class="p">]</span>
+<span class="n">buildEnvironment</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">all</span> <span class="n">buildscript</span> <span class="n">dependencies</span> <span class="n">declared</span> <span class="k">in</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'intro_gradle'</span><span class="p">.</span>
+<span class="n">components</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">components</span> <span class="n">produced</span> <span class="n">by</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'intro_gradle'</span><span class="p">.</span> <span class="p">[</span><span class="n">incubating</span><span class="p">]</span>
+<span class="n">dependencies</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">all</span> <span class="n">dependencies</span> <span class="n">declared</span> <span class="k">in</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'intro_gradle'</span><span class="p">.</span>
+<span class="n">dependencyInsight</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">insight</span> <span class="n">into</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">dependency</span> <span class="k">in</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'intro_gradle'</span><span class="p">.</span>
+<span class="n">dependentComponents</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">dependent</span> <span class="n">components</span> <span class="k">of</span> <span class="n">components</span> <span class="k">in</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'intro_gradle'</span><span class="p">.</span> <span class="p">[</span><span class="n">incubating</span><span class="p">]</span>
 <span class="n">help</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">a</span> <span class="n">help</span> <span class="n">message</span><span class="p">.</span>
-<span class="k">model</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">configuration</span> <span class="k">model</span> <span class="k">of</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'gradle-testi'</span><span class="p">.</span> <span class="p">[</span><span class="n">incubating</span><span class="p">]</span>
-<span class="n">projects</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">sub</span><span class="p">-</span><span class="n">projects</span> <span class="k">of</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'gradle-testi'</span><span class="p">.</span>
-<span class="n">properties</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">properties</span> <span class="k">of</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'gradle-testi'</span><span class="p">.</span>
-<span class="n">tasks</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">tasks</span> <span class="n">runnable</span> <span class="k">from</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'gradle-testi'</span><span class="p">.</span>
-
-<span class="k">To</span> <span class="n">see</span> <span class="n">all</span> <span class="n">tasks</span> <span class="k">and</span> <span class="n">more</span> <span class="n">detail</span><span class="p">,</span> <span class="nf">run</span> <span class="n">gradle</span> <span class="n">tasks</span> <span class="p">--</span><span class="n">all</span>
-
-<span class="k">To</span> <span class="n">see</span> <span class="n">more</span> <span class="n">detail</span> <span class="n">about</span> <span class="n">a</span> <span class="n">task</span><span class="p">,</span> <span class="nf">run</span> <span class="n">gradle</span> <span class="n">help</span> <span class="p">--</span><span class="n">task</span> <span class="p">&lt;</span><span class="n">task</span><span class="p">&gt;</span>
+<span class="k">model</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">configuration</span> <span class="k">model</span> <span class="k">of</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'intro_gradle'</span><span class="p">.</span> <span class="p">[</span><span class="n">incubating</span><span class="p">]</span>
+<span class="n">outgoingVariants</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">outgoing</span> <span class="n">variants</span> <span class="k">of</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'intro_gradle'</span><span class="p">.</span>
+<span class="n">projects</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">sub</span><span class="p">-</span><span class="n">projects</span> <span class="k">of</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'intro_gradle'</span><span class="p">.</span>
+<span class="n">properties</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">properties</span> <span class="k">of</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'intro_gradle'</span><span class="p">.</span>
+<span class="n">tasks</span> <span class="p">-</span> <span class="n">Displays</span> <span class="n">the</span> <span class="n">tasks</span> <span class="n">runnable</span> <span class="k">from</span> <span class="n">root</span> <span class="n">project</span> <span class="s1">'intro_gradle'</span><span class="p">.</span>
 </code></pre></div></div>
 
 <p>Komento listaa käytettävissä olevat <em>taskit</em>. Gradlen <a href="https://docs.gradle.org/current/userguide/tutorial_using_tasks.html">dokumentaatio</a> kuvaa taskeja seuraavasti:</p>
@@ -218,19 +258,21 @@ To see a list of available tasks, run gradle tasks
 
 <p>Taskit ovat siis “komentoja”, joita voimme suorittaa gradle-projekteille.</p>
 
-<p>Gradle-projekti määritellään projektihakemiston juureen sijoitettavan tiedoston <em>build.gradle</em> avulla.  Saat luotua tiedoston suorittamalla taskin <em>init</em> (eli antamalla komennon <em>gradle init</em>). Valitse <em>basic</em> (type of project), <em>Groovy</em> (build script DSL) ja anna projektille nimi.</p>
+<p>Gradle-projekti määritellään projektihakemiston juureen sijoitettavan tiedoston <em>build.gradle</em> avulla.</p>
+
+<p><strong>Saat luotua tiedoston</strong> suorittamalla taskin <em>init</em> (eli antamalla komennon <em>gradle init</em>).</p>
+
+<p>Valitse <em>basic</em> (type of project), <em>Groovy</em> (build script DSL) ja anna projektille nimi.</p>
 
 <p>Huomaat että operaation jälkeen hakemistoon on tullut tiedoston <em>build.gradle</em> lisäksi muutakin:</p>
 
 <pre>
 $ ls -la
--rw-r--r--  1 mluukkai  ATKK\hyad-all   103 Oct 31 12:24 .gitignore
-drwxr-xr-x  4 mluukkai  ATKK\hyad-all   136 Oct 31 12:24 .gradle
--rw-r--r--  1 mluukkai  ATKK\hyad-all   200 Oct 31 12:24 build.gradle
-drwxr-xr-x  3 mluukkai  ATKK\hyad-all   102 Oct 31 12:24 gradle
--rwxr-xr-x  1 mluukkai  ATKK\hyad-all  5960 Oct 31 12:24 gradlew
--rw-r--r--  1 mluukkai  ATKK\hyad-all  2942 Oct 31 12:24 gradlew.bat
--rw-r--r--  1 mluukkai  ATKK\hyad-all   360 Oct 31 12:24 settings.gradle
+-rw-r--r--  1 mluukkai  984178727   198 Oct 27 18:00 build.gradle
+drwxr-xr-x  3 mluukkai  984178727    96 Oct 27 18:00 gradle
+-rwxr-xr-x  1 mluukkai  984178727  5766 Oct 27 18:00 gradlew
+-rw-r--r--  1 mluukkai  984178727  2763 Oct 27 18:00 gradlew.bat
+-rw-r--r--  1 mluukkai  984178727   359 Oct 27 18:00 settings.gradle
 </pre>
 
 <p>Näistä hakemisto <em>.gradle</em> kannattaa gitignoroida. Gradle-projekteissa tulee gitignoroida aina myös hakemisto <em>build</em> mihin kaikki gradle-taskien generoimat tiedostot sijoitetaan. Gradle luokin valmiiksi tilanteeseen sopivan gitignore-tiedoston.</p>
@@ -240,7 +282,9 @@ drwxr-xr-x  3 mluukkai  ATKK\hyad-all   102 Oct 31 12:24 gradle
 <p>Otetaan nyt käyttöön java-plugin lisäämällä tiedostoon <em>build.gradle</em> rivi:</p>
 
 <pre>
-apply plugin: 'java'
+plugins {
+    id 'java'
+}
 </pre>
 
 <p>Kun nyt suoritetaan komento <em>gradle tasks</em> huomataan että listalla on uusia, java-pluginin lisäämiä taskeja:</p>
@@ -265,6 +309,8 @@ wrapper - Generates Gradle wrapper files.
 Documentation tasks
 -------------------
 javadoc - Generates Javadoc API documentation for the main source code.
+
+...
 
 Verification tasks
 ------------------
@@ -368,7 +414,7 @@ Description
 
 <p><strong>HUOM</strong> komento <em>gradle</em> tulee suorittaa aina projektihakemiston juuressa, eli hakemistossa missä tiedosto <em>build.gradle</em> sijaitsee.</p>
 
-<p>Määritellään taskia varten <em>pääohjelman sijainti</em> lisäämällä seuraava tiedostoon <em>build.gradle</em>:</p>
+<p>Määritellään taskia varten <em>pääohjelman sijainti</em> lisäämällä seuraava tiedoston <em>build.gradle</em> loppuun:</p>
 
 <pre>
 jar {
@@ -376,6 +422,20 @@ jar {
         attributes 'Main-Class': 'Main'
     }
 }
+</pre>
+
+<p>Huomaa, että tiedoston <em>build.gradle</em> pitää alkaa <em>plugins</em>-määrittelyllä. Jos se ei ole alussa, törmäät seuraavaan virheilmoitukseen:</p>
+
+<pre>
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file '/Users/mluukkai/dev/intro_gradle/build.gradle' line: 7
+
+...
+
+@ line 7, column 1.
+  plugins {
 </pre>
 
 <p>Palaa nyt projektihakemistoon ja suorita jar-tiedoston generoiva task <em>jar</em> (eli anna komento <em>gradle</em> jar).</p>
@@ -389,22 +449,29 @@ Hello gradle!
 
 <h2 id="application-plugin">application-plugin</h2>
 
-<p>Aiemmissa tehtävissä olemme pystyneet suorittamaan koodin myös komennolla <em>gradle run</em>. Komento aiheuttaa kuitenkin nyt virheilmoituksen <em>Task ‘run’ not found in root project</em>.</p>
+<p>Aiemmissa tehtävissä olemme pystyneet suorittamaan koodin myös komennolla <em>gradle run</em>.</p>
 
-<p>Syynä tälle on se, että task <em>run</em> ei ole java-pluginin vaan <a href="https://docs.gradle.org/current/userguide/application_plugin.html">application-pluginin</a> määrittelemä. Otetaan tämä käyttöön  lisäämällä tiedostoon <em>build.gradle</em> rivi</p>
+<p>Komento aiheuttaa kuitenkin nyt virheilmoituksen <em>Task ‘run’ not found in root project</em>.</p>
+
+<p>Syynä tälle on se, että task <em>run</em> ei ole java-pluginin vaan <a href="https://docs.gradle.org/current/userguide/application_plugin.html">application-pluginin</a> määrittelemä. Otetaan tämä käyttöön  muuttamalla tiedoston <em>build.gradle</em> alku muotoon</p>
 
 <pre>
-apply plugin: 'application'
+plugins {
+    id 'java'
+    id 'application'
+}
 </pre>
 
-<p><strong>HUOM</strong> pluginien määrittelyn tulee tapahtua tiedoston alussa ennen muita määrittelyjä!</p>
+<p>Itseasiassa <em>java</em>-pluginin määrittelevää riviä ei nyt edes tarvita, sillä <em>application</em> sisältää myös sen määrittelevät taskit.</p>
 
-<p>Komento aiheuttaa virheen <em>No main class specified</em>.</p>
+<p>Komento  <em>gradle run</em> aiheuttaa nyt virheen <em>No main class specified</em>.</p>
 
 <p>Pluginin <a href="https://docs.gradle.org/current/userguide/application_plugin.html">dokumentaatio</a> kertoo, että pääohjelman sisältävä luokka, eli <em>main class</em> tulee määritellä lisäämällä tiedostoon <em>build.gradle</em> seuraava rivi:</p>
 
 <pre>
-mainClassName = 'Main'
+application {
+    mainClass = 'Main'
+}
 </pre>
 
 <p>Nyt ohjelman suorittaminen taskin avulla toimii:</p>
@@ -443,7 +510,7 @@ Hello gradle!
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>Jos ohjelmasta tehdään <em>jar-tiedosto</em>, toimii se odotetulla tavalla:</p>
+<p>Jos ohjelmasta tehdään <em>jar-tiedosto</em> (suorittamalla komento <em>gradle jar)</em>, toimii se odotetulla tavalla:</p>
 
 <pre>
 $ java -jar build/libs/gradle-test.jar
@@ -465,7 +532,7 @@ FAILURE: Build failed with an exception.
 
 * What went wrong:
 Execution failed for task ':run'.
-&gt; Process 'command '/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/bin/java'' finished with non-zero exit value 1
+&gt; Process 'command '/Library/Java/JavaVirtualMachines/jdk1.11.0_101.jdk/Contents/Home/bin/java'' finished with non-zero exit value 1
 
 </pre>
 
@@ -543,25 +610,25 @@ run {
 $ gradle test
 
 &gt; Task :compileTestJava FAILED
-/Users/mluukkai/opetus/ohtu2019/laskarit/viikko2/gradle-test/src/test/java/ohtu/MultiplierTest.java:3: error: package org.junit does not exist
+/Users/mluukkai/dev/intro_gradle/src/test/java/MultiplierTest.java:3: error: package org.junit does not exist
 import static org.junit.Assert.*;
                        ^
-/Users/mluukkai/opetus/ohtu2019/laskarit/viikko2/gradle-test/src/test/java/ohtu/MultiplierTest.java:4: error: package org.junit does not exist
+/Users/mluukkai/dev/intro_gradle/src/test/java/MultiplierTest.java:4: error: package org.junit does not exist
 import org.junit.Test;
                 ^
-/Users/mluukkai/opetus/ohtu2019/laskarit/viikko2/gradle-test/src/test/java/ohtu/MultiplierTest.java:8: error: cannot find symbol
-  @Test
-   ^
+/Users/mluukkai/dev/intro_gradle/src/test/java/MultiplierTest.java:8: error: cannot find symbol
+    @Test
+     ^
   symbol:   class Test
   location: class MultiplierTest
-/Users/mluukkai/opetus/ohtu2019/laskarit/viikko2/gradle-test/src/test/java/ohtu/MultiplierTest.java:12: error: cannot find symbol
-    assertEquals(1, viisi.multipliedBy(1));
-    ^
+/Users/mluukkai/dev/intro_gradle/src/test/java/MultiplierTest.java:12: error: cannot find symbol
+        assertEquals(5, viisi.multipliedBy(1));
+        ^
   symbol:   method assertEquals(int,int)
   location: class MultiplierTest
-/Users/mluukkai/opetus/ohtu2019/laskarit/viikko2/gradle-test/src/test/java/ohtu/MultiplierTest.java:13: error: cannot find symbol
-    assertEquals(35, viisi.multipliedBy(7));
-    ^
+/Users/mluukkai/dev/intro_gradle/src/test/java/MultiplierTest.java:13: error: cannot find symbol
+        assertEquals(35, viisi.multipliedBy(7));
+        ^
   symbol:   method assertEquals(int,int)
   location: class MultiplierTest
 5 errors
@@ -588,19 +655,27 @@ repositories {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.13'
 }
 </pre>
 
 <p>Ensimmäinen osa <em>repositories</em> kertoo gradlelle mistä sen tulee etsiä riippuvuuksia. <a href="https://bintray.com/bintray/jcenter">jcenter</a> on eräs niistä paikoista, johon on talletettu suuri määrä gradlen ja mavenin käyttämiä kirjastoja. Toinen vaihtoehtoinen paikka riippuvuuksien etsimiseen on <a href="https://search.maven.org">mavenCentral</a>. <em>repositories</em>-osassa voidaan määritellä myös useita paikkoja joista gradle käy etsimässä projektiin määriteltyjä riippuvuuksia.</p>
 
-<p>Toinen osa määrittelee, että <em>testCompile</em>-vaiheeseen otetaan käyttöön JUnit-kirjaston versio 4.12. Käytännössä tämä tarkoittaa, että kääntäessään testien koodia gradle liittää JUnitin <em>classpathiin</em>.</p>
+<p>Toinen osa määrittelee, että <em>testImplementation</em>-vaiheeseen otetaan käyttöön JUnit-kirjaston versio 4.13. Käytännössä tämä tarkoittaa, että kääntäessään testien koodia gradle liittää JUnitin <em>classpathiin</em>.</p>
+
+<p>Lisättävän riippuvuuden erittelevälle riville voidaan käyttää myös vaihtoehtoista syntaksia, missä riippuvuus, ja sen versio ilmaistaan yhtenä merkkijonona:</p>
+
+<pre>
+dependencies {
+    testImplementation 'junit:junit:4.13'
+}
+</pre>
 
 <p>Kun suoritamme uudelleen komennon <em>gradle test</em> kaikki toimii.</p>
 
 <p>Rikotaan vielä testi ja varmistetaan että testit huomaavat virheen.</p>
 
-<p>JUnitin uusi versio <a href="http://junit.org/junit5/">JUnit5</a> on ilmestynyt vuosien odotuksen jälkeen viime vuoden syyskuussa. JUnit5:ssä on monia mielenkiintoisia uudistuksia, mutta valitettavasti työkalutuki on edelleen vielä niin keskeneräinen, että joudumme kurssilla käyttämään vielä vanhaa JUnitia.</p>
+<p>JUnitin uusi versio <a href="http://junit.org/junit5/">JUnit5</a> on ilmestynyt vuosien odotuksen jälkeen jo jonkin aikaa sitten. JUnit5:ssä on monia mielenkiintoisia uudistuksia, mutta valitettavasti työkalutuki on edelleen vielä niin keskeneräinen, että joudumme kurssilla käyttämään vielä vanhaa JUnitia.</p>
 
   </div>
 
@@ -618,7 +693,7 @@ dependencies {
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
-             Ohjelmistotuotanto avoin yliopisto 2020 
+             Ohjelmistotuotanto avoin yliopisto 2021 
           </li>
           <li>
             <a href="mailto:matti.luukkainen@helsinki.fi">matti.luukkainen@helsinki.fi</a>

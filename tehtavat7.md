@@ -7,13 +7,22 @@ permalink: /tehtavat7/
 
 ## Viikko 7
 
+*Alla olevien tehtävien deadline on maanantaina 14.12. klo 23:59*
+
+Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
+
+- Maanantai 14-16 [zoom](https://helsinki.zoom.us/j/63962392550?pwd=RzluTjZWYmNLb0g4bjRxb0ZlckRkUT09)
+- Perjantai 10-12 [zoom](https://helsinki.zoom.us/j/64396759243)
+
+Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/7), joiden deadline on poikkeuksellisesti perjantaina 18.12 klo 23:59:00. 
+
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/tehtavat7.md) tiedostoa GitHubissa.
+{% include typo_instructions.md path="/tehtavat7.md" %}
 
 ### Tehtävien palauttaminen
 
-Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}>
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
@@ -76,7 +85,7 @@ __/
 
 ### 3. ja 4. (kahden rastin tehtävä) KPS yksin- ja kaksinpeli
 
-[Kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2019) hakemistosta _koodi/viikko7/KiviPaperiSakset_ löytyy tutun pelin tietokoneversio. 
+[Kurssirepositorion](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistosta _koodi/viikko7/KiviPaperiSakset_ löytyy tutun pelin tietokoneversio. 
 
 * ohjelmassa on kolme pelimoodia: ihminen vs. ihminen, ihminen vs. yksinkertainen tekoäly ja ihminen vs. monimutkainen tekoäly
 * koodi sisältää runsaat määrät copy pastea, muutenkaan oliosuunnittelun periaatteet eivät ole vielä alkuperäisellä ohjelmoijalla olleet hallussa
@@ -87,10 +96,89 @@ __/
 
 Jos teet tehtävän mielestäsi kaikkien tyylisääntöjen mukaan, merkkaa 2 rastia, jos ratkaisu ei ole kaikin osin tyylikäs, merkkaa yksi rasti.
 
-### 5. Kurssipalaute
+**Muista** että voit suorittaa ohjelman ilman gradlen ikäviä välitulosteita antamalla komennolle _gradle run_ seuraavat lisäoptiot:
 
-Anna kurssipalautetta Moodlessa. Voit antaa palautteen myös kokeen jälkeen. Rasti tähän tehtävään on lupaus että annat palautteen jossain vaiheessa.
+```java
+gradle -q --console=plain run
+```
 
-### Tehtävien palautus
+**Vihje:** eräs tapa lähteä liikkeelle on muodostaa yliluokka `KiviPaperiSakset`, joka sisältää kaikille kolmelle pelityypille yhteisen koodin:
 
-Pushaa kaikki tekemäsi tehtävät GitHubiin ja merkkaa tekemäsi tehtävät palautussovellukseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+```java
+public abstract class KiviPaperiSakset {
+    private static final Scanner scanner = new Scanner(System.in);
+    
+    // tämä on ns template metodi
+    public void pelaa() {
+        Tuomari tuomari = new Tuomari();
+        // ...
+        
+        String ekanSiirto = ensimmaisenSiirto();
+        System.out.print("Toisen pelaajan siirto: ");
+        String tokanSiirto = toisenSiirto();
+        
+        while (onkoOkSiirto(ekanSiirto) && onkoOkSiirto(tokanSiirto)) {
+           // ...
+        }
+
+        System.out.println();
+        System.out.println("Kiitos!");
+        System.out.println(tuomari);
+    }
+    
+    protected String ensimmaisenSiirto() {
+        System.out.print("Ensimmäisen pelaajan siirto: ");
+        return scanner.nextLine();
+    }
+
+    // tämä on abstrakti metodi sillä sen toteutus vaihtelee eri pelityypeissä
+    abstract protected String toisenSiirto();
+    
+    protected static boolean onkoOkSiirto(String siirto) {
+        return "k".equals(siirto) || "p".equals(siirto) || "s".equals(siirto);
+    }
+}
+``` 
+
+Erilliset pelit sitten perivät abstraktin luokan ja erikoistavat sitä tarpidensa mukaan:
+
+```java
+public class KPSPelaajaVsPelaaja extends KiviPaperiSakset {
+
+    // funktio pelaa peritääm
+
+    @Override
+    protected String toisenSiirto() {
+        System.out.print("Toisen pelaajan siirto: ");
+        return scanner.nextLine();  
+    }
+
+    // ...
+}
+```
+
+### 5. Pull requestin mergeäminen (tätä tehtävää ei lasketa versionhallintatehtäväksi)
+
+Mergeä jokin miniprojektillesi tehty pull request (myös toisen miniprojektisi jäsenen tekemän pull requestin mergeäminen käy). Voit tehdä tehtävän yhdessä muiden miniprojektisi ryhmäläisten kanssa. Jos olet jo mergennyt pull requestin miniprojektiisi kurssin aikana, se riittää tämän tehtävä merkkaamiseksi. 
+
+Laita palautusrepositorioosi tiedosto _MERGE.md_ ja sen sisällöksi linkki mergettyyn pullrequestiin. 
+
+**Vaihtoehtoinen tehtävä**
+
+lue joku alla olevista ja tee siitä noin 0.25 sivun referaatti
+
+* <http://www.leanprimer.com/downloads/lean_primer.pdf>
+  * aika pitkä, mutta kuuluu kokeen reading-listalle, joten erittäin hyödyllinen
+* Lauri Suomalaisen kandidaattityö [Ohjelmistotuotantomenetelmien kehittyminen 1950-luvulta nykypäivään](https://www.cs.helsinki.fi/u/mluukkai/ohtu/suomalainen-kandi.pdf)
+* Tero Huomon kandidaattityö [Ohjelmistoarkkitehtuurin sisällyttäminen ketteriin ohjelmistotuotantomenetelmiin](https://www.cs.helsinki.fi/u/mluukkai/ohtu/huomo-kandi.pdf) 
+* Kasper Hirvikosken kandidaattityö [Metriikat käytänteiden tukena ohjelmiston laadun arvioimisessa](https://www.cs.helsinki.fi/u/mluukkai/ohtu/hirvikoski-kandi.pdf)
+* Kenny Heinosen kandidaattityö [Ohjelmistoala ja ryhmätyöskentely](https://www.cs.helsinki.fi/u/mluukkai/ohtu/heinononen-kandi.pdf)
+* Eero Laineen kandidaattityö [Johtaminen perinteisissä ja ketterissä ohjelmistotuotantoprojekteissa](https://www.cs.helsinki.fi/u/mluukkai/ohtu/laine-kandi.pdf)
+* Esa Kortelaisen kandidaattityö [Jatkuva eksperimentointi ohjelmistokehityksen tukena](https://www.cs.helsinki.fi/u/mluukkai/ohtu/kortelainen-kandi.pdf)
+* Kalle Ilveksen kandidaattityö [Scrumban-menetelmän käyttö ketterässä ohjelmistokehityksessä](https://www.cs.helsinki.fi/u/mluukkai/ohtu/ilves-kandi.pdf)
+
+### 6. Kurssipalaute
+
+Anna kurssipalautetta WebOodissa. Voit antaa palautteen myös kokeen jälkeen. Rasti tähän tehtävään on lupaus että annat palautteen jossain vaiheessa.
+
+{% include submission_instructions.md %}

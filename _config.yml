@@ -13,12 +13,15 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ohjelmistotuotanto avoin yliopisto 2020
+title: Ohjelmistotuotanto avoin yliopisto 2021
 email: matti.luukkainen@helsinki.fi
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ohjelmistotuotanto-hy-avoin.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  mluukkai
+repo_url: "https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io"
+repo_branch: "master"
+stats_url: "https://study.cs.helsinki.fi/stats/courses/ohtu2020"
 
 # Build settings
 markdown: kramdown

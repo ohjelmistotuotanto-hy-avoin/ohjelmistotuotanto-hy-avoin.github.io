@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/tehtavat7/">
-  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2020" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2021" href="/feed.xml">
 
   
 </head>
@@ -24,7 +24,7 @@
   <div class="wrapper">
     
     
-    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2020</a>
+    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2021</a>
     
     
       <nav class="site-nav">
@@ -40,6 +40,9 @@
         </label>
 
         <div class="trigger">
+          
+            
+            
           
             
             
@@ -92,6 +95,9 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/osa5/">Osa 5</a>
             
           
@@ -109,7 +115,31 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/tehtavat/">Tehtävät</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
             
           
             
@@ -160,13 +190,24 @@
   <div class="post-content">
     <h2 id="viikko-7">Viikko 7</h2>
 
+<p><em>Alla olevien tehtävien deadline on maanantaina 14.12. klo 23:59</em></p>
+
+<p>Apua tehtävien tekoon kurssin <a href="https://telegram.me/ohjelmistotuotanto">Telegram</a>-kanavalla sekä zoom-pajassa:</p>
+
+<ul>
+  <li>Maanantai 14-16 <a href="https://helsinki.zoom.us/j/63962392550?pwd=RzluTjZWYmNLb0g4bjRxb0ZlckRkUT09">zoom</a></li>
+  <li>Perjantai 10-12 <a href="https://helsinki.zoom.us/j/64396759243">zoom</a></li>
+</ul>
+
+<p>Muista myös tämän viikon <a href="https://study.cs.helsinki.fi/stats/courses/ohtu2020/quiz/7">monivalintatehtävät</a>, joiden deadline on poikkeuksellisesti perjantaina 18.12 klo 23:59:00.</p>
+
 <h3 id="typoja-tai-epäselvyyksiä-tehtävissä">Typoja tai epäselvyyksiä tehtävissä?</h3>
 
 <p>Tee <a href="/osa0#typoja-materiaalissa">korjausehdotus</a> editoimalla <a href="https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/tehtavat7.md">tätä</a> tiedostoa GitHubissa.</p>
 
 <h3 id="tehtävien-palauttaminen">Tehtävien palauttaminen</h3>
 
-<p>Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <a href="https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020">https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020</a></p>
+<p>Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <a href="https://study.cs.helsinki.fi/stats/courses/ohtu2020">https://study.cs.helsinki.fi/stats/courses/ohtu2020</a></p>
 
 <p>Katso tarkempi ohje palautusrepositorioita koskien <a href="/tehtavat1#teht%C3%A4vien-palautusrepositoriot">täältä</a>.</p>
 
@@ -248,7 +289,7 @@ __/
 
 <h3 id="3-ja-4-kahden-rastin-tehtävä-kps-yksin--ja-kaksinpeli">3. ja 4. (kahden rastin tehtävä) KPS yksin- ja kaksinpeli</h3>
 
-<p><a href="https://github.com/ohjelmistotuotanto-hy/syksy2019">Kurssirepositorion</a> hakemistosta <em>koodi/viikko7/KiviPaperiSakset</em> löytyy tutun pelin tietokoneversio.</p>
+<p><a href="https://github.com/ohjelmistotuotanto-hy/syksy2020">Kurssirepositorion</a> hakemistosta <em>koodi/viikko7/KiviPaperiSakset</em> löytyy tutun pelin tietokoneversio.</p>
 
 <ul>
   <li>ohjelmassa on kolme pelimoodia: ihminen vs. ihminen, ihminen vs. yksinkertainen tekoäly ja ihminen vs. monimutkainen tekoäly</li>
@@ -264,13 +305,97 @@ __/
 
 <p>Jos teet tehtävän mielestäsi kaikkien tyylisääntöjen mukaan, merkkaa 2 rastia, jos ratkaisu ei ole kaikin osin tyylikäs, merkkaa yksi rasti.</p>
 
-<h3 id="5-kurssipalaute">5. Kurssipalaute</h3>
+<p><strong>Muista</strong> että voit suorittaa ohjelman ilman gradlen ikäviä välitulosteita antamalla komennolle <em>gradle run</em> seuraavat lisäoptiot:</p>
 
-<p>Anna kurssipalautetta Moodlessa. Voit antaa palautteen myös kokeen jälkeen. Rasti tähän tehtävään on lupaus että annat palautteen jossain vaiheessa.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gradle</span> <span class="o">-</span><span class="n">q</span> <span class="o">--</span><span class="n">console</span><span class="o">=</span><span class="n">plain</span> <span class="n">run</span>
+</code></pre></div></div>
+
+<p><strong>Vihje:</strong> eräs tapa lähteä liikkeelle on muodostaa yliluokka <code class="highlighter-rouge">KiviPaperiSakset</code>, joka sisältää kaikille kolmelle pelityypille yhteisen koodin:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">KiviPaperiSakset</span> <span class="o">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+    
+    <span class="c1">// tämä on ns template metodi</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">pelaa</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Tuomari</span> <span class="n">tuomari</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tuomari</span><span class="o">();</span>
+        <span class="c1">// ...</span>
+        
+        <span class="n">String</span> <span class="n">ekanSiirto</span> <span class="o">=</span> <span class="n">ensimmaisenSiirto</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Toisen pelaajan siirto: "</span><span class="o">);</span>
+        <span class="n">String</span> <span class="n">tokanSiirto</span> <span class="o">=</span> <span class="n">toisenSiirto</span><span class="o">();</span>
+        
+        <span class="k">while</span> <span class="o">(</span><span class="n">onkoOkSiirto</span><span class="o">(</span><span class="n">ekanSiirto</span><span class="o">)</span> <span class="o">&amp;&amp;</span> <span class="n">onkoOkSiirto</span><span class="o">(</span><span class="n">tokanSiirto</span><span class="o">))</span> <span class="o">{</span>
+           <span class="c1">// ...</span>
+        <span class="o">}</span>
+
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Kiitos!"</span><span class="o">);</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">tuomari</span><span class="o">);</span>
+    <span class="o">}</span>
+    
+    <span class="kd">protected</span> <span class="n">String</span> <span class="nf">ensimmaisenSiirto</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Ensimmäisen pelaajan siirto: "</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="c1">// tämä on abstrakti metodi sillä sen toteutus vaihtelee eri pelityypeissä</span>
+    <span class="kd">abstract</span> <span class="kd">protected</span> <span class="n">String</span> <span class="nf">toisenSiirto</span><span class="o">();</span>
+    
+    <span class="kd">protected</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">onkoOkSiirto</span><span class="o">(</span><span class="n">String</span> <span class="n">siirto</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="s">"k"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">siirto</span><span class="o">)</span> <span class="o">||</span> <span class="s">"p"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">siirto</span><span class="o">)</span> <span class="o">||</span> <span class="s">"s"</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">siirto</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Erilliset pelit sitten perivät abstraktin luokan ja erikoistavat sitä tarpidensa mukaan:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">KPSPelaajaVsPelaaja</span> <span class="kd">extends</span> <span class="n">KiviPaperiSakset</span> <span class="o">{</span>
+
+    <span class="c1">// funktio pelaa peritääm</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="n">String</span> <span class="nf">toisenSiirto</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Toisen pelaajan siirto: "</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">scanner</span><span class="o">.</span><span class="na">nextLine</span><span class="o">();</span>  
+    <span class="o">}</span>
+
+    <span class="c1">// ...</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h3 id="5-pull-requestin-mergeäminen-tätä-tehtävää-ei-lasketa-versionhallintatehtäväksi">5. Pull requestin mergeäminen (tätä tehtävää ei lasketa versionhallintatehtäväksi)</h3>
+
+<p>Mergeä jokin miniprojektillesi tehty pull request (myös toisen miniprojektisi jäsenen tekemän pull requestin mergeäminen käy). Voit tehdä tehtävän yhdessä muiden miniprojektisi ryhmäläisten kanssa. Jos olet jo mergennyt pull requestin miniprojektiisi kurssin aikana, se riittää tämän tehtävä merkkaamiseksi.</p>
+
+<p>Laita palautusrepositorioosi tiedosto <em>MERGE.md</em> ja sen sisällöksi linkki mergettyyn pullrequestiin.</p>
+
+<p><strong>Vaihtoehtoinen tehtävä</strong></p>
+
+<p>lue joku alla olevista ja tee siitä noin 0.25 sivun referaatti</p>
+
+<ul>
+  <li><a href="http://www.leanprimer.com/downloads/lean_primer.pdf">http://www.leanprimer.com/downloads/lean_primer.pdf</a>
+    <ul>
+      <li>aika pitkä, mutta kuuluu kokeen reading-listalle, joten erittäin hyödyllinen</li>
+    </ul>
+  </li>
+  <li>Lauri Suomalaisen kandidaattityö <a href="https://www.cs.helsinki.fi/u/mluukkai/ohtu/suomalainen-kandi.pdf">Ohjelmistotuotantomenetelmien kehittyminen 1950-luvulta nykypäivään</a></li>
+  <li>Tero Huomon kandidaattityö <a href="https://www.cs.helsinki.fi/u/mluukkai/ohtu/huomo-kandi.pdf">Ohjelmistoarkkitehtuurin sisällyttäminen ketteriin ohjelmistotuotantomenetelmiin</a></li>
+  <li>Kasper Hirvikosken kandidaattityö <a href="https://www.cs.helsinki.fi/u/mluukkai/ohtu/hirvikoski-kandi.pdf">Metriikat käytänteiden tukena ohjelmiston laadun arvioimisessa</a></li>
+  <li>Kenny Heinosen kandidaattityö <a href="https://www.cs.helsinki.fi/u/mluukkai/ohtu/heinononen-kandi.pdf">Ohjelmistoala ja ryhmätyöskentely</a></li>
+  <li>Eero Laineen kandidaattityö <a href="https://www.cs.helsinki.fi/u/mluukkai/ohtu/laine-kandi.pdf">Johtaminen perinteisissä ja ketterissä ohjelmistotuotantoprojekteissa</a></li>
+  <li>Esa Kortelaisen kandidaattityö <a href="https://www.cs.helsinki.fi/u/mluukkai/ohtu/kortelainen-kandi.pdf">Jatkuva eksperimentointi ohjelmistokehityksen tukena</a></li>
+  <li>Kalle Ilveksen kandidaattityö <a href="https://www.cs.helsinki.fi/u/mluukkai/ohtu/ilves-kandi.pdf">Scrumban-menetelmän käyttö ketterässä ohjelmistokehityksessä</a></li>
+</ul>
+
+<h3 id="6-kurssipalaute">6. Kurssipalaute</h3>
+
+<p>Anna kurssipalautetta WebOodissa. Voit antaa palautteen myös kokeen jälkeen. Rasti tähän tehtävään on lupaus että annat palautteen jossain vaiheessa.</p>
 
 <h3 id="tehtävien-palautus">Tehtävien palautus</h3>
 
-<p>Pushaa kaikki tekemäsi tehtävät GitHubiin ja merkkaa tekemäsi tehtävät palautussovellukseen <a href="https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020">https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020</a></p>
+<p>Pushaa kaikki tekemäsi tehtävät (paitsi ne, joissa mainitaan, että tehtävää ei palauteta mihinkään) GitHubiin ja merkkaa tekemäsi tehtävät palautussovellukseen <a href="https://study.cs.helsinki.fi/stats/courses/ohtu2020">https://study.cs.helsinki.fi/stats/courses/ohtu2020</a></p>
+
 
   </div>
 
@@ -288,7 +413,7 @@ __/
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
-             Ohjelmistotuotanto avoin yliopisto 2020 
+             Ohjelmistotuotanto avoin yliopisto 2021 
           </li>
           <li>
             <a href="mailto:matti.luukkainen@helsinki.fi">matti.luukkainen@helsinki.fi</a>

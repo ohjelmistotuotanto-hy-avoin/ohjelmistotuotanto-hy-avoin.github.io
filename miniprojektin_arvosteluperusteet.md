@@ -33,15 +33,15 @@ Miniprojektista saa maksimissaan 9 kurssipistettä seuraavien kriteereiden ja pe
 
 ### Ensimmäisen sprintin arvosteluperusteet:
 
-Projekti tulee olla rekisteröity osoitteeseen <https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020>
+Projekti tulee olla rekisteröity osoitteeseen <{{site.stats_url}}>
 * **yksi ryhmäläinen** kirjautuu järjestelmään, menee välilehdelle _miniprojects_
   * luo projektin _create project_ -napista avautuvasta lomakkeesta
-  * ja jakaa muille ryhmäläisille luodin projektin id:n
+  * ja jakaa muille ryhmäläisille luodun projektin id:n
 * **muut ryhmäläiset** kirjautuvat järjestelmään ja liittyvät id:n avulla ryhmään _join project_ -napista avautuvasta lomakkeesta
 
 **Jokaisen ryhmäläisen on oltava rekisteröitynyt projektiin viimeistään ensimmäisen sprintin lopuksi pidettävässä asiakastapaamisessa.** 
 
-Linkit projektin backlogeihin ja muihin dokumentteihin (ja niihin tulee olla koko maailmalla lukuoikeus), ja CircleCI:hin (tai muuhun käytössä olevaan CI-palveluun) tulee laittaa projektin githubin README:hen!
+Linkit projektin backlogeihin ja muihin dokumentteihin (ja niihin tulee olla koko maailmalla lukuoikeus), ja GitHub Actionsiin (tai muuhun käytössä olevaan CI-palveluun) tulee laittaa projektin githubin README:hen!
 
 ### Pisteitä kertyy seuraavista asioista
 
@@ -54,12 +54,12 @@ Linkit projektin backlogeihin ja muihin dokumentteihin (ja niihin tulee olla kok
   * jokaiseen taskiin on merkitty sen tekijä(t)
   * taskin status on näkyvissä (esim. todo, doing, done)
 * (0.5p) sprintiin 1 valittujen storyjen hyväksymiskriteerit kirjattu
-* (0.25p) testaus
+* (0.5p) testaus
   * toteutettua koodia on yksikkötestattu kohtuullisella tasolla
   * ainakin jossain storyssa hyväksymiskriteerien testausta (cucumber)	
-* (0.25p) jatkuva integraatio
+* (0.5p) jatkuva integraatio
   * koodi githubissa
-  * CircleCI (tai jokin muu CI-palvelu) suorttaa ainakin yksikkötestit ja ne menevät läpi
+  * GitHub Actions (tai jokin muu CI-palvelu) suorittaa ainakin yksikkötestit ja ne menevät läpi
 * (0.5p) toteutus
   * ainakin _yksi_ sprintin tavoitteeseen sovituista storyista toteutettu _definition of donen_ mukaisella tasolla
 * (0.25p) työtä tehty tasaisesti
@@ -67,7 +67,7 @@ Linkit projektin backlogeihin ja muihin dokumentteihin (ja niihin tulee olla kok
 * (0.25p) GitHub readme:
   * readmesta löytyy linkki backlogeihin
   * definition of done kirjattu eksplisiittisesti 
-  * linkki CircleCI:hin ja sovellukseen jos kyse web-sovelluksesta
+  * linkki sovellukseen jos kyse web-sovelluksesta
   * jos kyse työpöytäsovelluksesta: ohjelman asennus- ja käyttöohje
 
 Sprintin maksimi on 2.5 pistettä.
@@ -95,6 +95,8 @@ Sprintin maksimi on 2.5 pistettä.
 Sprintin maksimi on 2.5 pistettä.
 
 ### Kolmannen sprintin arvosteluperusteet
+
+_Huom: miniprojektit tarkastetaan jossain vaiheessa perjaintain 11.12. klo 23.59 jälkeen. Sen jälkeen tehtyjä muutoksia ei työssä enää huomioida._ 
 
 #### Pisteytys jakautuu seuraavasti:
 
@@ -128,9 +130,9 @@ Sprintin maksimi on 2.5 pistettä.
 #### Vertaispalaute
 
 * Arvosteluperusteiden alussa mainittu henkilökohtainen pisteytys perustuu mm. vertaispalautteeseen
-* Jokaisen ryhmäläisen tulee antaa **vertaispalaute viimeistään perjantaina 8.5. klo 23:59**
+* Jokaisen ryhmäläisen tulee antaa **vertaispalaute viimeistään lauantaina §9.12. klo 23:59**
   * vertaispalautteen antaminen on _pakollista_, ilman vertaispalautteen antamista kurssin arvosanaa ei kirjata
-* Vertaispalautteen antaminen tapahtuu [tehtävänpalautussovelluksen](https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2020) miniproject-tabissa
+* Vertaispalautteen antaminen tapahtuu [tehtävänpalautussovelluksen]({{site.stats_url}}) miniproject-tabissa
   * ryhmäläiset eivät näe toistensa vertaispalautteita
 
 #### Raportti
@@ -143,11 +145,11 @@ Vertaispalautteen lisäksi ryhmä laatii projektin kulusta pienen raportin (noin
 * jos raportti puuttuu, vähennetään ryhmältä 2 pistettä
 * raportti palautetaan lisäämällä raporttiin linkki projektin GitHubin Readme:hen
 * raportista tulee ilmetä jokaisen projektiin osallistuneen nimi
-* **raportin deadline on perjantai 8.5. klo 23:59**
+* **raportin deadline lauantaina 19.12. klo 23:59**
 
 ### Varmista, että commitisi näkyvät githubissa oikein
 
-Koska Githubiin tehtävien commitien määrä (ja laatu) vaikuttaa henkilökohtaisiin pisteisiin, varmista, että olet konfiguroinit email-osoitteesi gitiin (ks. [viikon 1 laskareiden tehtävä 2](/tehtavat1/#2-githubiin-versionhallinta)), ja että commitatessasi ryhmäsi repositorioon tunnuksesi näkyy oikein repositorion commit-listalla, ja että tunnuksesi tulee repositorion [contributors](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/graphs/contributors)-listalle.
+Koska Githubiin tehtävien commitien määrä (ja laatu) vaikuttaa henkilökohtaisiin pisteisiin, varmista, että olet konfiguroinit email-osoitteesi gitiin (ks. [viikon 1 laskareiden tehtävä 2](/tehtavat1/#2-githubiin-versionhallinta)), ja että commitatessasi ryhmäsi repositorioon tunnuksesi näkyy oikein repositorion commit-listalla, ja että tunnuksesi tulee repositorion [contributors](https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io/graphs/contributors)-listalle.
 
 On suositeltavaa, että jokainen tekee (omalta koneeltaan) heti alussa yhden testicommitin ja tarkastaa, että Git on konfiguroitu oikein.
 
@@ -155,12 +157,12 @@ On suositeltavaa, että jokainen tekee (omalta koneeltaan) heti alussa yhden tes
 
 Jos committisi yhteydessä näkyy (gitin email-osoitteen konfiguroinnista huolimatta) harmaa symbooli kuten seuraavista alempi
 
-![](https://github.com/mluukkai/ohtu2017/raw/master/images/commit1.png)
+![](https://raw.githubusercontent.com/mluukkai/ohtu2017/master/images/commit1.png)
 
 Klikkaa harmaan commitin nimeä katso mikä on email-osoite, joka commitiin liittyy mutta mitä github ei tunnista osoitteeksesi.
 
-![](https://github.com/mluukkai/ohtu2017/raw/master/images/commit2.png)
+![](https://raw.githubusercontent.com/mluukkai/ohtu2017/master/images/commit2.png)
 
 Lisää osoite _settings_-valikosta:
 
-![](https://github.com/mluukkai/ohtu2017/raw/master/images/commit3.png)
+![](https://raw.githubusercontent.com/mluukkai/ohtu2017/master/images/commit3.png)

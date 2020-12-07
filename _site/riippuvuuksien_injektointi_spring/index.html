@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/riippuvuuksien_injektointi_spring/">
-  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2020" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2021" href="/feed.xml">
 
   
 </head>
@@ -24,7 +24,7 @@
   <div class="wrapper">
     
     
-    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2020</a>
+    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2021</a>
     
     
       <nav class="site-nav">
@@ -40,6 +40,9 @@
         </label>
 
         <div class="trigger">
+          
+            
+            
           
             
             
@@ -92,6 +95,9 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/osa5/">Osa 5</a>
             
           
@@ -109,7 +115,31 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/tehtavat/">Tehtävät</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
             
           
             
@@ -162,7 +192,7 @@
 
 <p>Jatketaan viime viikolla käsittelemämme <a href="/riippuvuuksien_injektointi/">laskimen</a> tarkastelua. Kertaa tarvittaessa yllä olevan linkin takana oleva teksti.</p>
 
-<p>Alla oleva koodi löytyy gradle-muotoisina projekteina kurssin <a href="https://github.com/ohjelmistotuotanto-hy/syksy2019">tehtävärepositoriosta</a> hakemistosta koodi/viikko2/RiippuvuuksienInjektointiSpring</p>
+<p>Alla oleva koodi löytyy gradle-muotoisina projekteina kurssin <a href="https://github.com/ohjelmistotuotanto-hy/syksy2020">tehtävärepositoriosta</a> hakemistosta koodi/viikko2/RiippuvuuksienInjektointiSpring</p>
 
 <p>Päädyimme siis tilanteeseen, missä Laskin-luokasta on erotettu konkreettinen riippuvuus syötteen lukemiseen ja tulostamiseen. Laskin tuntee ainoastaan <em>rajapinnan</em> <code>IO</code> jonka kautta se hoitaa syötteen käsittelyn ja tulostamisen.</p>
 
@@ -183,11 +213,11 @@
   <p>Spring on laaja ja monikäyttöinen sovelluskehys, jota käytetään yleisesti mm. Javalla tapahtuvassa web-sovelluskehityksessä. Tutustumme kurssilla oikeastaan ainoastaan Springin riippuvuuksien injektointiin.</p>
 </blockquote>
 
-<p>Spring saadaan käyttöön lisäämällä se riippuvuudeksi gradle-projektin <em>build.gradle</em>-tiedostoon, katso tarkemmin <a href="https://github.com/ohjelmistotuotanto-hy/syksy2019/tree/master/koodi/viikko2/RiippuvuuksienInjektointiSpring">täältä</a>.</p>
+<p>Spring saadaan käyttöön lisäämällä se riippuvuudeksi gradle-projektin <em>build.gradle</em>-tiedostoon, katso tarkemmin <a href="https://github.com/ohjelmistotuotanto-hy/syksy2020/tree/main/koodi/viikko2/RiippuvuuksienInjektointiSpring">täältä</a>.</p>
 
 <p>Springissä ideana on siirtää osa sovelluksen olioista ns. <a href="https://docs.spring.io/spring/docs/5.2.0.RELEASE/spring-framework-reference/core.html#beans-basics">Inversion of Control container</a>:in eli eräänlaisen oliosäiliönä toimivan sovelluskontekstin hallinnoitavaksi.</p>
 
-<p>Springissä on kaksi tapaa määritellä sovelluskontekstin kontrolloivat oliot. Käytämme nykyään suositumpaa  <a href="https://docs.spring.io/spring/docs/5.2.0.RELEASE/spring-framework-reference/core.html#beans-annotation-config">annotaatioihin</a> perustuvaa määrittelytapaa.</p>
+<p>Springissä on kaksi tapaa määritellä sovelluskontekstin kontrolloimat oliot. Käytämme nykyään suositumpaa  <a href="https://docs.spring.io/spring/docs/5.2.0.RELEASE/spring-framework-reference/core.html#beans-annotation-config">annotaatioihin</a> perustuvaa määrittelytapaa.</p>
 
 <p>Sovelluskontekstin huolehdittavaksi annettavien olioiden luokat merkitään annotaatiolla  <code>@Component</code>. Luokka <em>KonsoliIO</em> annotoidaan seuraavasti:</p>
 
@@ -274,7 +304,7 @@
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
-             Ohjelmistotuotanto avoin yliopisto 2020 
+             Ohjelmistotuotanto avoin yliopisto 2021 
           </li>
           <li>
             <a href="mailto:matti.luukkainen@helsinki.fi">matti.luukkainen@helsinki.fi</a>

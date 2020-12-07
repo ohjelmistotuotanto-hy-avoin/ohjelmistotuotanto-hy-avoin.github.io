@@ -17,7 +17,7 @@ Tämän osan luvuista ne, joihin on merkitty <span style="color:blue">[viikko 5]
 
 ## Typoja materiaalissa
 
-Tee [korjausehdotus](/osa0#typoja-materiaalissa) editoimalla [tätä](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/osa4.md) tiedostoa GitHubissa.
+{% include typo_instructions.md path="/osa4.md" %}
 
 ## Ohjelmiston suunnittelu
 
@@ -63,11 +63,11 @@ Arkkitehtuuri keskittyy järjestelmän rakenteen tärkeisiin tai keskeisiin peri
 Artikkelissa [Who needs architect](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf) Martin Fowler toteaa seuraavasti _you might end up defining architecture as things that people perceive as hard to change_, eli arkkitehtuurin voisi määritellä niiksi asioiksi, jotka ovat ohjelmistossa vaikeita muuttaa. Järjestelmän tärkeät rakenneperiaatteet voivat myös muuttua ajan myötä, eli arkkitehtuuri [ei ole muuttumaton](http://www.ibm.com/developerworks/rational/library/feb06/eeles/) mutta sen radikaali muuttaminen voi olla haastavaa. 
 
 Melkein sama hieman toisin ilmaistuna oli Krutchtenin määritelmässä mainittu
-_set of significant decisions about the organization of a software system_, eli arkkitehtuuri muodostuu arkkitehtuuristen päätösten, eli joukon ohjelmiston rakenteen ja toiminnan kannalta tehtävien fundamentaalisten valintoja kautta.
+_set of significant decisions about the organization of a software system_, eli arkkitehtuuri muodostuu arkkitehtuuristen päätösten, eli joukon ohjelmiston rakenteen ja toiminnan kannalta tehtävien fundamentaalisten valintojen kautta.
 
 ### Arkkitehtuuriin vaikuttavia tekijöitä
 
-[Osassa 2](/osa2) mainittiin järjestelmän vaatimusten jakautuvat kahteen luokkaan, toiminnallisiin ja ei-toiminnallisiin vaatimuksiin.
+[Osassa 2](/osa2) mainittiin järjestelmän vaatimusten jakautuvan kahteen luokkaan, toiminnallisiin ja ei-toiminnallisiin vaatimuksiin.
 
 Järjestelmälle asetetuilla ei-toiminnallisilla [laatuvaatimuksilla](/osa2#ei-toiminnalliset-vaatimukset) (engl. -ilities) on suuri vaikutus arkkitehtuuriin. Laatuvaatimuksia ovat esimerkiksi käytettävyys, suorituskyky, skaalautuvuus, vikasietoisuus, tiedon ajantasaisuus, tietoturva, ylläpidettävyys, laajennettavuus, testattavuus, hinta, time-to-market, ...
 
@@ -79,7 +79,7 @@ Myös toteutusteknologiat, esimerkiksi toteutuksessa käytettävät sovelluskeh
 
 Arkkitehtuurin suurin merkitys on antaa sovelluksen kehitykselle ja ylläpidolle sellaiset raamit, että sovellus pystyy jatkossakin vastaamaan asiakkaan asettamien toiminnallisten vaatimuksien lisäksi järjestelmälle asetettuihin laatuvaatimuksiin.
 
-Joskus käy niin, että sovellukselle alunperin valittu arkkitehtuuri ei enää palvele tavoitettaan. Näin voi esimerkiksi käydä, jos sovelluksen laatuvaatimukset muuttuvat radikaalisti, esim. jos tulee tarve saada sovellus skaalautumaan huomattavasti suuremmalle käyttäjäjoukolle, mitä alkuperäinen arkkitehtuuri kykenee. Arkkitehtuurin muuttaminen on hankalaa ja kallista, mutta joskus muuta vaihtoehtoa ei ole.
+Joskus käy niin, että sovellukselle alunperin valittu arkkitehtuuri ei enää palvele tavoitettaan. Näin voi esimerkiksi käydä, jos sovelluksen laatuvaatimukset muuttuvat radikaalisti, esim. jos tulee tarve saada sovellus skaalautumaan huomattavasti suuremmalle käyttäjäjoukolle kuin mihin alkuperäinen arkkitehtuuri kykenee. Arkkitehtuurin muuttaminen on hankalaa ja kallista, mutta joskus muuta vaihtoehtoa ei ole.
 
 ### Arkkitehtuurityyli
  
@@ -123,7 +123,7 @@ Koodin tasolla kerrosrakenne näkyy siinä, miten sovelluksen koodi jakautuu pak
 
 ![]({{ "/images/4-2.png" | absolute_url }}){:height="250px" }
 
-Arkkitehtuuria heijasteleva pakkausrakenne voidaan kuvata UML:n [pakkauskaaviolla](https://github.com/mluukkai/ohjelmistotekniikka-kevat2019/blob/master/web/materiaali.md#pakkauskaavio):
+Arkkitehtuuria heijasteleva pakkausrakenne voidaan kuvata UML:n [pakkauskaaviolla](https://github.com/mluukkai/ohjelmistotekniikka-kevat2019/blob/main/web/materiaali.md#pakkauskaavio):
 
 ![]({{ "/images/4-1b.png" | absolute_url }}){:height="200px" }
 
@@ -135,11 +135,13 @@ Käytännössä riippuvuus tarkoittaa sitä, että ylemmän kerroksen koodista k
 
 Kovista yrityksistä huolimatta ohjelmistojen arkkitehtuurien kuvaamiselle ei ole onnistuttu kehittämään mitään yleisesti käytössä olevaa notaatiota. UML:ää käytetään jonkin verran, mutta kovin suosittu ja käyttökelpoinen ei sekään ole. Edellisessä esimerkissä käytettyä  pakkauskaaviota paremmin isompien sovellusten arkkitehtuurien kuvaamiseen sopii [komponenttikaavio](https://en.wikipedia.org/wiki/Component_diagram).
 
-Komponenttikaavio eroaa pakkauskaaviosta lähinnä merkintätavoiltaan ja tuo hieman paremmin esiin eri komponenttien tarjoamat sekä käyttämät rajapinnat. Esimerkiksi alla olevassa kuvassa oleva verkkokaupan sovelluslogiikasta vastaava komponentti _web store_  tarjoaa rajapinnat tuotteiden haulle, ostosten tekemiselle ja käyttäjän hallinnoinnille. Komponentti itsessään jakautuu kolmeen alikomponenttiin, joista _authentication_ tarjoaa sisäisen rajapinnan _shopping chart_ -komponentin käyttöön.
+Komponenttikaavio eroaa pakkauskaaviosta lähinnä merkintätavoiltaan ja tuo hieman paremmin esiin eri komponenttien tarjoamat sekä käyttämät rajapinnat. Esimerkiksi alla olevassa kuvassa oleva verkkokaupan sovelluslogiikasta vastaava komponentti _web store_  tarjoaa rajapinnat tuotteiden haulle, ostosten tekemiselle ja käyttäjän hallinnoinnille. Komponentti itsessään jakautuu kolmeen alikomponenttiin, joista _authentication_ tarjoaa sisäisen rajapinnan _shopping cart_ -komponentin käyttöön.
 
 ![]({{ "/images/4-4.png" | absolute_url }}){:height="450px" }
 
-UML:n sijaan arkkitehtuurin kuvaamiseen käytetään kuitenkin useimmiten epäformaaleja laatikko/nuoli-kaavioita.
+UML:n sijaan arkkitehtuurin kuvaamiseen käytetään kuitenkin useimmiten epäformaaleja laatikko/nuoli-kaavioita. Seuraavassa sivustolta [agilemodeling.com/](http://agilemodeling.com/essays/initialArchitectureModeling.htm) lainattu hyvin tyypilliseltä näyttävä laatikko/nuoli-mallinen arkkitehtuurikuvaus
+
+![]({{ "/images/4-14.jpeg" | absolute_url }}){:height="400px" }
 
 Riippumatta arkkitehtuurin dokumentointitavasta, arkkitehtuurikuvaus kannattaa tehdä useasta _eri näkökulmasta_, sillä eri näkökulmat palvelevat erilaisia tarpeita. Korkean tason kuvauksen avulla voidaan esim. strukturoida vaatimusmäärittelyn aikana käytäviä keskusteluja eri sidosryhmien kanssa. Detaljoidummat kuvaukset taas toimivat ohjeena järjestelmän tarkemmassa suunnittelussa ja ylläpitovaiheen aikaisessa laajentamisessa.
 
@@ -155,7 +157,7 @@ Viime aikoina nopeasti yleistynyt _mikropalveluarkkitehtuuri_ (engl. microservic
 
 ![]({{ "/images/4-6.png" | absolute_url }}){:height="300px" }
 
-Mikropalveluihin perustuvassa sovelluksessa yksittäisistä palveluista pyritään tekemään mahdollisimman _riippumattomia_ ja löyhästi toisiinsa kytkettyjä. Palvelut eivät esimerkiksi käytä yhteistä tietokantaa eivätkä käytä yhteistä koodia. Palvelut eivät kutsu suoraan toistensa metodeja, sen sijaan ne kommunikoivat verkon välityksellä. 
+Mikropalveluihin perustuvassa sovelluksessa yksittäisistä palveluista pyritään tekemään mahdollisimman _riippumattomia_ ja löyhästi toisiinsa kytkettyjä. Palvelut eivät esimerkiksi käytä yhteistä tietokantaa eivätkä jaa yhteistä koodia. Palvelut eivät kutsu suoraan toistensa metodeja, sen sijaan ne kommunikoivat verkon välityksellä. 
 
 Mikropalveluiden on tarkoitus olla suhteellisen pieniä ja huolehtia vain "yhdestä asiasta". Esimerkiksi verkkokaupassa erillisiä mikropalveluja voisivat olla
 
@@ -176,11 +178,9 @@ Mikropalveluiden käyttö mahdollistaa sen, että sovellus voidaan helposti koo
 
 Mikropalvelut siis kommunikoivat keskenään verkon välityksellä. Erilaisia tapoja kommunikointiin on useita. 
 
-Yksinkertainen vaihtoehto on käyttää kommunikointiin HTTP- protokollaa, eli samaa mekanismia, jonka avulla web-selaimet keskustelevat palvelimien kanssa. Tällöin sanotaan, että mikropalvelut tarjoavat kommunikointia varten REST-rajapinnan. Viikon 3 laskareissa haettiin NHL-tilastotietoja JSON-muotoista dataa tarjoavasta REST-rajapinnasta.
+Yksinkertainen vaihtoehto on käyttää kommunikointiin HTTP-protokollaa, eli samaa mekanismia, jonka avulla web-selaimet keskustelevat palvelimien kanssa. Tällöin sanotaan, että mikropalvelut tarjoavat kommunikointia varten REST-rajapinnan. Viikon 3 laskareissa haettiin NHL-tilastotietoja JSON-muotoista dataa tarjoavasta REST-rajapinnasta.
 
-Vaihtoehtoinen, huomattavasti joustavampi kommunikointikeino on ns. _viestinvälityksen_ (message queue/bus) käyttö.
-
-Palvelut eivät lähetä viestejä suoraan toisilleen, vaan käytössä on verkossa toimiva viestinvälityspalvelu, joka hoitaa viestien välityksen eri palveluiden välillä.
+Vaihtoehtoinen, huomattavasti joustavampi kommunikointikeino on ns. _viestinvälityksen_ (message queue/bus) käyttö, joillon palvelut eivät lähetä viestejä suoraan toisilleen, vaan käytössä on verkossa toimiva viestinvälityspalvelu, joka hoitaa viestien välityksen eri palveluiden välillä.
 
 ![]({{ "/images/4-6b.png" | absolute_url }}){:height="400px" }
 
@@ -233,7 +233,7 @@ Ketterät menetelmät suosivat suunnitteluratkaisujen yksinkertaisuutta:
 
 _Simplicity, the art of maximizing the amount of work not done, is essential_
 
-Arkkitehtuuriin suunnittelu ja dokumentointi taas on perinteisesti ollut melko pitkäkestoinen, ohjelmoinnin aloittamista edeltävä vaihe, eräänlainen _Big Design Up Front_. Ketterät menetelmät ja "arkkitehtuurivetoinen" ohjelmistotuotanto ovat siis jossain määrin keskenään ristiriidassa.
+Arkkitehtuurin suunnittelu ja dokumentointi taas on perinteisesti ollut melko pitkäkestoinen, ohjelmoinnin aloittamista edeltävä vaihe, eräänlainen _Big Design Up Front_. Ketterät menetelmät ja "arkkitehtuurivetoinen" ohjelmistotuotanto ovat siis jossain määrin keskenään ristiriidassa.
  
 Ketterien menetelmien yhteydessä puhutaan usein [inkrementaalisesta suunnittelusta ja arkkitehtuurista](https://www.jamesshore.com/Agile-Book/incremental_design.html). 
 
@@ -241,7 +241,13 @@ Ideana on, että arkkitehtuuri mietitään ja dokumentoidaan riittävällä taso
 
 Melko tyypillinen tapa on aloittaa projektit ns. [nollasprintillä](https://www.infoq.com/news/2008/09/sprint_zero/) jonka aikana luodaan mm. alustava arkkitehtuuri sekä backlog. 
 
-Scrumin varhaisissa artikkeleissa puhuttiin "pre game"-vaiheesta, jonka aikana tehtiin erilaisia kehitystyötä valmistelevia asioita, mm. hahmoteltiin alustava arkkitehtuuri. Sittemmin koko käsite on hävinnyt Scrumista ja toinen Scrumin alkuperäisistä kehittäjistä Ken Schwaber jopa eksplisiittisesti kieltää ja [tyrmää](https://www.scrum.org/resources/blog/scrubbing-sprint-zero) koko "nollasprintin" olemassaolon.
+Scrumin varhaisissa artikkeleissa puhuttiin "pre game"-vaiheesta, jonka aikana tehtiin erilaisia kehitystyötä valmistelevia asioita, mm. hahmoteltiin alustava arkkitehtuuri. Sittemmin koko käsite on hävinnyt Scrumista ja toinen Scrumin alkuperäisistä kehittäjistä Ken Schwaber jopa eksplisiittisesti kieltää ja [tyrmää](http://web-old.archive.org/web/20120319122002/http://www.scrum.org/assessmentdiscussion/post/1317787) koko "nollasprintin" olemassaolon, perustellen asiaa seuraavasti
+
+> The only purpose a Sprint 0 serves is to allow delays in progress. By requiring that teams produce some increment of working functionality every Sprint, the team is required to prioritize its work so it doesn't waste time over-building the best environment known to man while its company's competition races ahead in the marketplace.
+>
+> What better way to get familiar with a new technology that by using it to actually build something useful? How can a team realistically size user stories if it hasn't actually worked on any to know how complex they will be? Release plan activities are performed by the PO during the Sprint...he has no data to base a release plan on until at least one Sprint has been completed. Good data doesn't come until after 3-4 Sprints.
+>
+> A Sprint 0 is exactly that, a cop out. Don't let it happen.
 
 ### Kävelevä luuranko
 
@@ -321,7 +327,7 @@ Ohjelmistoalalle vuosien varrella kerääntyneen [kansanviisauden](https://www.a
 - testattavuus
 - selkeys
 
-Tutustutaan nyt näihin laatuattribuutteihin sekä periaatteisiin ja suunnitteluratkaisuihin, joita noudattamalla on mahdollista kirjoittaa ylläpidettävyydeltään laadukasta koodia. Monet näistä hyvän suunnittelun periaatteista on nimetty ja dokumentoitu _suunnittelumalleina_ (engl. design patterns). 
+Tutustutaan nyt näihin laatuattribuutteihin sekä periaatteisiin ja suunnitteluratkaisuihin, joita noudattamalla on mahdollista kirjoittaa ylläpidettävyydeltään laadukasta koodia. Monet näistä hyvän suunnittelun periaatteista on nimetty ja dokumentoitu [suunnittelumalleina](https://en.wikipedia.org/wiki/Software_design_pattern) (engl. design patterns). 
 
 Olemme jo nähneet kurssin aikana muutamia suunnittelumalleja, ainakin seuraavat: _dependency injection_ eli riippuvuuksien injektointi, _singleton_ sekä _data access object_. Suurin osa tällä kurssilla käsiteltävistä suunnittelumalleista on syntynyt olio-ohjelmoinnin parissa. Osa suunnittelumalleista on relevantteja myös muita paradigmoja, kuten funktionaalista ohjelmointia käytettäessä. Muilla paradigmoilla on myös omia suunnittelumalleja, mutta niitä emme kurssilla käsittele.
 
@@ -349,7 +355,7 @@ Koheesioon tulee siis pyrkiä kaikilla ohjelman tasoilla, metodeissa, luokissa j
 
 Tarkastellaan esimerkkinä [Neal Fordin artikkelista](http://www.ibm.com/developerworks/java/library/j-eaed4/index.html) olevaa tietokannasta tietoa hakevaa metodia. Metodin koodi näyttää seuraavalta:
 
-``` java
+```java
 // SQL_SELECT_PARTS on vakio, joka sisältää SQL-kyselyn
 
 public void populate() throws Exception {
@@ -414,7 +420,7 @@ Yksittäiset metodit ovat nyt kaikki samalla abstraktiotasolla toimivia ja kuvaa
 
 #### Koheesio luokkatasolla
 
-Luokkatason koheesiossa pyrkimyksenä on, että luokan _vastuulla_ on vain yksi asia, tämä tunnetaan myös nimellä [single responsibility](https://en.wikipedia.org/wiki/Single_responsibility_principle)-periaate (SRP). Robert Martin määrittelee, että luokalla on yksi vastuu _jos sillä on vain yksi syy muuttua_. 
+Luokkatason koheesiossa pyrkimyksenä on, että luokan _vastuulla_ on vain yksi asia, tämä tunnetaan myös nimellä [single responsibility](https://en.wikipedia.org/wiki/Single_responsibility_principle) -periaate (SRP). Robert Martin määrittelee, että luokalla on yksi vastuu _jos sillä on vain yksi syy muuttua_. 
 
 Kurssin ensimmäisissä laskareissa tarkasteltiin yksinkertaista laskinta:
 
@@ -551,7 +557,7 @@ public class IOStub implements IO {
 
 Parannellun laskimen rakenne luokkakaaviona
 
-![](https://github.com/mluukkai/ohjelmistotuotanto2017/raw/master/images/os-1.png)
+![](https://github.com/mluukkai/ohjelmistotuotanto2017/raw/main/images/os-1.png)
 
 Luokka ei ole vielä kaikin osin laajennettavuuden kannalta optimaalinen. Palaamme asiaan hetken kuluttua.
 
@@ -561,9 +567,14 @@ Koheesio ja _single responsibility_ -periaate eivät ole pelkästään olio-ohje
 
 Koheesion periaate näkyy myös sovelluksen arkkitehtuurien tasolla. Kerrosarkkitehtuurissa kukin sovelluksen kerros keskittyy oman abstraktiotason asioihin, esim. sovelluslogiikka ei ota kantaa käyttöliittymään tai tiedon tallentamisen tapaan. Mikropalveluarkkitehtuureissa koheesio taas näkyy hieman eri tavalla, yksittäinen mikropalvelu keskittyy toteuttamaan yksittäisen liiketoiminnan tason toiminnallisuuden, esim. verkkokaupan suosittelualgoritmin tai laskutuksen.
 
+Vastaava idea näkyy oikeastaan kauttaaltaan tietojenkäsittelyssä: Ohjelmoija voi käyttää korkean tason kieltä, vaikkapa Javaa, ja kääntäjä huolehtii sen kääntämisestä konekielelle. Käyttöjärjestelmän tarkoituksena taas on piilottaa laitteistotason asiat sovellusohjelmilta, sovellusohjelmoijan ei tarvitse huolehtia koneella prosessoriytimien tai muistin määrästä, käyttöjärjestelmä huolehtii niistä. Tietoliikenneprotokollat taas koostuvat joukosta _tasoja_ (engl. layers), joissa matalimmat tasot hoitavat tiedonsiirtoa "bittitasolla" kun taas korkeammat protokollakerrokset keskittyvät tiedon siirtoon esim. HTML-muodossa tai videostreamina ilman että niiden tarvitsee huolehtia bittitasolla tapahtuvista asioista. 
+
+Tästä periaatteesta, missä erilaiset ja eri abstratkiotasoilla tapahtuvat asiat tulee antaa omien yksikköidensä houlehdittavaksi käytetään usein nimitystä 
+[Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns).
+
 ### Riippuvuuksien vähäisyys
 
-Single responsibility -periaatteen hengessä tehty ohjelma koostuu suuresta määrästä oliota/komponentteja, joilla on suuri määrä pieniä metodeja.
+Single responsibility -periaatteen hengessä tehty ohjelma koostuu suuresta määrästä olioita/komponentteja, joilla on suuri määrä pieniä metodeja.
 
 Olioiden on oltava vuorovaikutuksessa toistensa kanssa saadakseen toteutettua ohjelman toiminnallisuuden. _Riippuvuuksien vähäisyyden_ (engl. low coupling) periaate pyrkii eliminoimaan luokkien ja olioiden välisiä riippuvuuksia.
 
@@ -760,7 +771,7 @@ public class EuriborKorko implements Korko {
     EuriborLukija lukija;
 
     public EuriborKorko(int kuukausi) {
-        lukija = new EuriborLukijaImpl(kuukausi);
+        lukija = new EuriborlukijaImpl(kuukausi);
     }
 
     public double korko() {
@@ -906,7 +917,7 @@ public class Pankki {
     }
     
     public Tili maaraikaistili(String omistaja, double k){
-        return new MaaraaikaisTili(generoiTilinro(), omistaja, new Tasakorko(k));
+        return new MaaraAikaisTili(generoiTilinro(), omistaja, new Tasakorko(k));
     }    
     
     public Tili euribortili(String omistaja, int kk){
@@ -914,7 +925,7 @@ public class Pankki {
     }        
 
     public Tili maaraaikaisEuribor(String omistaja, int kk){
-        return new MaaraaikaisTili(generoiTilinro(), omistaja, new EuriborKorko(kk));
+        return new MaaraAikaisTili(generoiTilinro(), omistaja, new EuriborKorko(kk));
     } 
 }
 ```
@@ -1128,19 +1139,18 @@ if-hässäkkä näyttää hieman ikävältä. Siitä pääsee kuitenkin helposti
 ``` java
 public class Komentotehdas {
     private HashMap<String, Komento> komennot;
-    private Komento tuntematon;
+    private Komento tuntemaaton;
 
     public Komentotehdas(IO io) {
         komennot = new HashMap<String, Komento>();
         komennot.put("summa", new Summa(io));
         komennot.put("tulo", new Tulo(io));
         komennot.put("nelio", new Nelio(io));
-        komennot.put("lopeta", new Lopeta(io));
         tuntematon = new Tuntematon(io);
     }
 
     public Komento hae(String operaatio) {
-        return komennot.getOrDefault(operaatio, tuntematon);
+        return komennot.getOrDefault(operaatio, tuntemaaton);
     }
 }
 ```
@@ -1255,10 +1265,10 @@ public abstract class BinaariOperaatio extends Komento {
     @Override
     public void suorita() {
         io.print("luku 1: ");
-        luku1 = io.nextInt();
+        int luku1 = io.nextInt();
 
         io.print("luku 2: ");
-        luku2 = io.nextInt();
+        int luku2 = io.nextInt();
 
         io.print("vastaus: "+laske());
     }
@@ -1338,10 +1348,10 @@ public abstract class BinaariOperaatio implements Komento {
     @Override
     public void suorita() {
         io.print("luku 1: ");
-        luku1 = io.nextInt();
+        int luku1 = io.nextInt();
 
         io.print("luku 2: ");
-        luku2 = io.nextInt();
+        int luku2 = io.nextInt();
 
         io.print("vastaus: "+laske());
     }
@@ -1371,7 +1381,7 @@ Template-metodeita voi olla useampiakin kuin yksi eroava osa, tällöin abstrakt
 
 Strategy-suunnittelumalli on osittain samaa sukua template-metodin kanssa, siinä kokonainen algoritmi tai algoritmin osa korvataan erillisessä luokassa toteutetulla toteutuksella. Strategioita voidaan vaihtaa suorituksen aikana, template-metodissa tietty olio toimii samalla tavalla koko elinaikansa.  
 
-Lisää template method -suunnittelumallista [täällä](http://www.oodesign.com/template-method-pattern.html) ja [täällä](http://www.netobjectives.net/patternrepository/index.php?title=TheTemplateMethodPattern).
+Lisää template method -suunnittelumallista [täällä](http://www.oodesign.com/template-method-pattern.html) ja [täällä](http://www.netobjectives.com/PatternRepository/index.php?title=TheTemplateMethodPattern).
 
 ### Koodin laatuattribuutti: toisteettomuus 
 
@@ -1385,7 +1395,7 @@ Ilmeisin toiston muoto koodissa on juuri copypaste ja se on usein helppo elimino
 
 DRY-periaate menee oikeastaan vielä paljon pelkkää koodissa olevaa toistoa eliminointia pidemmälle. Kirjan [Pragmatic programmer](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) määritelmä _every piece of knowledge must have a single, unambiguous, authoritative representation within a system_ viittaa siihen, että koodin lisäksi periaate tulisi ulottaa koskemaan järjestelmän muitakin osia, kuten tietokantaskeemaa, testejä, build-skriptejä ym.
 
-Pragmatic programmerin määritelmän henkeä ei ei välttämättä pysty tavoittamaan täysin ilman konkreettista esimerkkiä. Oletetaan, että kehittämämme verkkokauppa otettaisiin käyttöön myös sellaisissa maissa, joissa ei käytetä rahayksikkönä euroa. Jos sovellus ei noudata DRY-periaatetta valuutan käsittelyn suhteen, on oletettavaa, että muutos vaatisi muutoksia useisiin eri kohtiin sovellusta. Jos taas valuutan käsittelyllä olisi _single authoritive representation_, esim. se olisi kapseloitu riittävän hyvin luokan _Money_ vastuulle, niin muiden valuuttojen tuen lisääminen ei ehkä edellyttäisi muuta kuin yksittäisen luokan koodin modifiointia.
+Pragmatic programmerin määritelmän henkeä ei välttämättä pysty tavoittamaan täysin ilman konkreettista esimerkkiä. Oletetaan, että kehittämämme verkkokauppa otettaisiin käyttöön myös sellaisissa maissa, joissa ei käytetä rahayksikkönä euroa. Jos sovellus ei noudata DRY-periaatetta valuutan käsittelyn suhteen, on oletettavaa, että muutos vaatisi muutoksia useisiin eri kohtiin sovellusta. Jos taas valuutan käsittelyllä olisi _single authoritive representation_, esim. se olisi kapseloitu riittävän hyvin luokan _Money_ vastuulle, niin muiden valuuttojen tuen lisääminen ei ehkä edellyttäisi muuta kuin yksittäisen luokan koodin modifiointia.
 
 #### Epätriviaalin copypasten poistaminen Strategy-patternin avulla <span style="color:blue">[viikko 5]</span>
 
@@ -1464,7 +1474,7 @@ Luokka on ohjelmoitu "perinteisellä" imperatiivisella tyylillä, kirjan rivejä
 
 Tutustutaan seuraavassa hieman [Java 8:n](http://docs.oracle.com/javase/8/docs/api/) mukanaan tuomiin funktionaalista ohjelmointitapaa helpottaviin piirteisiin, lambda-lausekkeisiin sekä kokoelmien käsittelyyn streameina. Nämä asiat ovat toki monelle tuttuja jo kursseilta Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi.
 
-Voimme korvata listalla olevien merkkijonojen tulostamisen kutsumalla listoilla (tarkemmin sanottuna rajapinnan [Interable](http://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)-toteuttavilla luokilla) olevaa metodia _forEach_, joka mahdollistaa listan alkioiden läpikäynnin "funktionaaliseen" tyyliin. Metodi saa parametrikseen "functional interfacen", eli rajapinnan, joka määrittelee ainoastaan yhden toteutettavan metodin, toteuttavan olion. Tälläisiä ovat uudemmassa Javassa myös ns. _lambda-lausekkeet_ (engl. lambda expression), joka tarkoittaa käytännössä anonyymia mihinkään luokkaan liittymätöntä metodia.  Seuraavassa metodikutsun _rivitJoillaSana("beer")_ palauttavien kirjan rivien tulostus forEachia ja lambdaa käyttäen:
+Voimme korvata listalla olevien merkkijonojen tulostamisen kutsumalla listoilla (tarkemmin sanottuna rajapinnan [Iterable](http://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html)-toteuttavilla luokilla) olevaa metodia _forEach_, joka mahdollistaa listan alkioiden läpikäynnin "funktionaaliseen" tyyliin. Metodi saa parametrikseen "functional interfacen", eli rajapinnan, joka määrittelee ainoastaan yhden toteutettavan metodin, toteuttavan olion. Tälläisiä ovat uudemmassa Javassa myös ns. _lambda-lausekkeet_ (engl. lambda expression), joka tarkoittaa käytännössä anonyymia mihinkään luokkaan liittymätöntä metodia.  Seuraavassa metodikutsun _rivitJoillaSana("beer")_ palauttavien kirjan rivien tulostus forEachia ja lambdaa käyttäen:
 
 ``` java
 public static void main(String[] args) {
@@ -1533,7 +1543,7 @@ ehto.test("Java 13 ilmestyi 17.9.2019");
 
 Ensimmäinen metodikutsuista palauttaisi _true_ ja jälkimmäinen _false_.
 
-Kirjasta voidaan palauttaa oikean ehdon täyttävät sanat lisäämällä luokalle _GutenbergLukija_ metodi:
+Kirjasta voidaan palauttaa oikean ehdon täyttävät rivit lisäämällä luokalle _GutenbergLukija_ metodi:
 
 ``` java
 public List<String> rivitJotkaTayttavatEhdon(Ehto ehto) {
@@ -1597,9 +1607,9 @@ public List<String> rivitJotkaTayttavatEhdon(Ehto ehto) {
 
 Uusissa Javan versioissa kaikki rajapinnan _Collection_ toteuttavat luokat mahdollistavat alkioidensa käsittelyn _Stream_:ina eli "alkiovirtoina", ks. [API-kuvaus](http://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html). Kokoelmaluokasta saadaan sitä vastaava alkiovirta kutsumalla kokoelmalle metodia _stream_.
 
-Alkiovirtoja on taas mahdollista käsitellä monin tavoin, nyt meitä kiinnostava metodi on _filter_, jonka avulla streamista voidaan tehdä uusi streami, josta on poistettu ne alkiot, jotka eivät täytä filtterille annettua boolean-arvoista, funktionaalisen rajapinnan _Predicate\<String\>_ toteuttavaa ehtoa.
+Alkiovirtoja on taas mahdollista käsitellä monin tavoin, nyt meitä kiinnostava metodi on _filter_, jonka avulla streamista voidaan tehdä uusi streami, josta on poistettu ne alkiot, jotka eivät täytä filtterille annettua boolean-arvoista, funktionaalisen rajapinnan _Predicate&lt;String&gt;_ toteuttavaa ehtoa.
 
-Määrittelemämme rajapinta _Ehto_ on oikeastaan juuri tarkoitukseen sopiva. Jotta voisimme käyttää rajapintaa, tulee meidän kuitenkin tyyppitarkastusten takia määritellä että rajapintamme laajentaa rajapintaa _Predicate\<String\>_:
+Määrittelemämme rajapinta _Ehto_ on oikeastaan juuri tarkoitukseen sopiva. Jotta voisimme käyttää rajapintaa, tulee meidän kuitenkin tyyppitarkastusten takia määritellä että rajapintamme laajentaa rajapintaa _Predicate&lt;String&gt;_:
 
 ``` java
 import java.util.function.Predicate;
@@ -1669,7 +1679,7 @@ kirja
 
 #### Hyvä vs. paha copypaste <span style="color:blue">[viikko 5]</span>
 
-Vaikka koodin, konfiguraatioiden, tietokantaskeeman yms. toisteettomuus on yleisesti ottaen hyvä asia, voi ajoittain olla järkevää ainakin ensin tehdä nopea copypasteen perustuva ratkaisu ja [refaktoroida](/osa4/#refaktorointi) koodi tarvittaessa myöhemmin siistimmäksi. 
+Vaikka koodin, konfiguraatioiden, tietokantaskeeman yms. toisteettomuus on yleisesti ottaen hyvä asia, voi ajoittain olla järkevää ainakin ensin tehdä nopea copypasteen perustuva ratkaisu ja [refaktoroida](/osa4/refaktorointi) koodi tarvittaessa myöhemmin siistimmäksi. 
 
 Monissa tilanteissa nimittäin copypasten poistamisella on pieni hintansa, se saattaa muuttaa sovellusta monimutkaisemmaksi. Gutenberg-lukijan kohdalla alkuperäinen versio saattaisi olla täysin riittävä käyttöön, ja refaktorointi ei välttämättä olisi vaivan arvoinen. Mutta jos sovellukseen tulisi tarve useimpiin ehtoihin, ei sovelluksen alkuperäinen design siihen kunnolla taipuisi ja copypastea tulisi yhä suuremmat määrät.
 
@@ -1715,7 +1725,7 @@ Koodihajuja on hyvin monenlaisia ja monentasoisia. Muutamia esimerkkejä helpost
 
 Oikeastaan kaikki näistä ovat merkkejä edellä listaamiemme hyvän koodin laatuattribuutteja heikentävistä ilmiöistä, esim. erittäin pitkä metodi todennäköisesti tarkoittaa, että metodin koheesio on huono, samoin luokka jossa on paljon koodia tai oliomuuttujia tarkoittaa suurella todennäköisyydellä että single responsibility -periaatetta ei noudateta. Jos luokan metodeilla on paljon parametreja, voi se kieliä siitä, että osa tiedoista on väärän luokan vastuulla, tai että metodin kuuluisi mielummin olla jossain toisessa luokassa.
 
-Nykyään koodin [kommentointia](https://medium.com/@fagnerbrack/code-comment-is-a-smell-4e8d78b0415b) on hieman yllättäen alettu pitämään koodihajuna. Kyse on oikeastaan siitä, että koodi pitäisi lähtökohtaisesti kirjoittaa niin selkeäksi ja nimeämiskäytäntöjen osalta kommunikoivaksi, että kommentteja ei tarvita. Eli kommentit tulee säästää vain sellaisiin kohtiin, jossa samaa asiaa ole mahdollista ilmaista koodin muotoilulla ja paremmalla nimeämisellä.
+Nykyään koodin [kommentointia](https://medium.com/@fagnerbrack/code-comment-is-a-smell-4e8d78b0415b) on hieman yllättäen alettu pitämään koodihajuna. Kyse on oikeastaan siitä, että koodi pitäisi lähtökohtaisesti kirjoittaa niin selkeäksi ja nimeämiskäytäntöjen osalta kommunikoivaksi, että kommentteja ei tarvita. Eli kommentit tulee säästää vain sellaisiin kohtiin, jossa samaa asiaa ei ole mahdollista ilmaista koodin muotoilulla ja paremmalla nimeämisellä.
 
 Otetaan pari esimerkkiä hieman vähemmän ilmeisistä koodihajuista.
 
@@ -1757,7 +1767,7 @@ Refaktoroinnin melkein ehdoton edellytys (poislukien yksinkertaiset automaattise
 
 Refaktoroinnissa kannattaa ehdottomasti edetä pienin askelin eli yksi hallittu muutos kerrallaan. Testit on syytä suorittaa jokaisen refaktorointioperaation jälkeen, jotta mahdollinen regressio, eli aiemmin toimineen koodin hajoaminen huomataan mahdollisimman nopeasti.
 
-Refaktorointia kannattaa tehdä lähes koko ajan. Kun koodin sisäinen laatu säilyy siistinä, on koodin laajentaminen miellyttävää ja pienien refaktorointioperaatioiden tekeminen suhteellisen vaivatonta. Jos koodin sisäinen laatu pääsee rapistumaan, muuttuu sen laajentaminen hitaaksi ja myös refaktoroinnin suorittaminen muuttuu koko ajan työläämmäksi. Monilla ohjelmistokehitystiimeillä onkin _definition of doneen_ kirjattu, että valmiin määritelmä sisältää sen, että koodi on refaktoroitu riittävän siistiksi. Siisteyttä saatetaan valvoa esim. [pull requesteina tehtävänä katselmointina](/osa3#koodin-katselmointi-github-ja-pull-requestit).
+Refaktorointia kannattaa tehdä lähes koko ajan. Kun koodin sisäinen laatu säilyy siistinä, on koodin laajentaminen miellyttävää ja pienien refaktorointioperaatioiden tekeminen suhteellisen vaivatonta. Jos koodin sisäinen laatu pääsee rapistumaan, muuttuu sen laajentaminen hitaaksi ja myös refaktoroinnin suorittaminen muuttuu koko ajan työläämmäksi. Monilla ohjelmistokehitystiimeillä onkin _definition of doneen_ kirjattu, että valmiin määritelmä sisältää sen, että koodi on refaktoroitu riittävän siistiksi. Siisteyttä saatetaan valvoa esim. [pull requesteina tehtävänä katselmointina](osa3#koodin-katselmointi-github-ja-pull-requestit).
 
 Osa refaktoroinneista, esim. metodien tai luokkien uudelleennimeäminen tai pitkien metodien jakaminen pienemmiksi on helppoa. Aina ei näin kuitenkaan ole. Joskus on tarve tehdä suurempien mittaluokkien refaktorointeja, joissa ohjelman rakenne eli arkkitehtuuri muuttuu. Tällaiset refaktoroinnit saattavat kestää päiviä tai jopa viikkoja ja niiden suorittaminen siten, että koodi säilyy koko ajan toimivana on jo kohtuullisen haastavaa.
 
@@ -1765,7 +1775,7 @@ Osa refaktoroinneista, esim. metodien tai luokkien uudelleennimeäminen tai pitk
 
 Koodi ei ole aina sisäiseltä laadultaan optimaalista, ja joskus on jopa asiakkaan kannalta tarkoituksenmukaista tehdä vähemmän laadukasta koodia. Huonoa suunnittelua tai/ja ohjelmointia on ruvettu kuvaamaan käsitteellä _tekninen velka_ (engl. technical debt).
 
-Oikoteitä ottamalla tehdyllä ohjelmoinnilla saadaan ehkä nopeasti aikaan jotain toiminnallisuutta, mutta hätäinen ratkaisu tullaan maksamaan korkoineen takaisin myöhemmin _jos_ ohjelmaa on tarkoitus laajentaa. Käytännössä käy siis niin, että koodiin kertyneet sisäisen laadun ongelmat, eli _tekninen velka_ alkaa hidastamaan kehitystyön etenemistä, ja uusien ominaisuuksien toteuttamisesta tulee koko ajan hankalammaksi ja kalliimmaksi. 
+Oikoteitä ottamalla tehdyllä ohjelmoinnilla saadaan ehkä nopeasti aikaan jotain toiminnallisuutta, mutta hätäinen ratkaisu tullaan maksamaan korkoineen takaisin myöhemmin _jos_ ohjelmaa on tarkoitus laajentaa. Käytännössä käy siis niin, että koodiin kertyneet sisäisen laadun ongelmat, eli _tekninen velka_ alkaa hidastamaan kehitystyön etenemistä, ja uusien ominaisuuksien toteuttamisesta tulee koko ajan hankalampaa ja kalliimpaa. 
 
 Toisaalta jos korkojen maksun aikaa ei koskaan tule, eli ohjelma on esimerkiksi pelkkä prototyyppi tai sitä ei koskaan oteta käyttöön, on teknisen velan ottaminen asiakkaan kannalta kannattava ratkaisu.
 
@@ -1784,7 +1794,7 @@ Teknisen velan takana voi siis olla monenlaisia syitä, esim. holtittomuus, osaa
 
 Luokkien 1 ja 2, joista Fowler käyttää termiä _reckless_ eli holtiton tai uhkarohkea, voi ajatella olevan huonoa teknistä velkaa. Toinen syntyy tarkoituksella, eli ajatellen että ei ole aikaa laadulle, toinen taas syntyy osaamattomuuden takia.
 
-Luokat 3 ja 4 ovat harkinnan alla (engl. _prudent_) syntynyttä teknistä velkaa. Luokka 4 on juurikin tilanne, jossa ollaan esim. tekemässä MVP:tä, tai jonkun pakon takia koodi on saatava julkaistua heti ja seuraukset päätetään hoitaa myöhemmin. Luokka 3 on kovin yleinen tilanne, ohjelmistoa suunniteltiin ja rakennettiin parhaiden aikomusten mukaan, mutta vasta paljon myöhemmin, kun arkkitehtuuri ja design on jo lyöty lukkoon vasta opitaan sovelluksen luonteesta sen verran, että tiedetään _kuinka sovellus olisi tullut suunnitella_. Tälläinen tilanne saatetaan päätyä ratkaisemaan refaktoroimalla sovelluksen arkkitehtuuri paremmin tarpeita vastaavaksi. 
+Luokat 3 ja 4 ovat harkinnan alla (engl. _prudent_) syntynyttä teknistä velkaa. Luokka 4 on juurikin tilanne, jossa ollaan esim. tekemässä MVP:tä, tai jonkun pakon takia koodi on saatava julkaistua heti ja seuraukset päätetään hoitaa myöhemmin. Luokka 3 on kovin yleinen tilanne, ohjelmistoa suunniteltiin ja rakennettiin parhaiden aikomusten mukaan, mutta vasta paljon myöhemmin, kun arkkitehtuuri ja design on jo lyöty lukkoon vasta opitaan sovelluksen luonteesta sen verran, että tiedetään _kuinka sovellus olisi kannattanut suunnitella_. Tälläinen tilanne saatetaan päätyä ratkaisemaan refaktoroimalla sovelluksen arkkitehtuuri paremmin tarpeita vastaavaksi. 
 
 ### Lisää suunnittelumalleja <span style="color:blue">[viikko 6]</span>
 
@@ -2000,7 +2010,7 @@ Lisää dekoraattori-suunnittelumallista esim. osoitteessa https://sourcemaking.
 
 #### Pinotehdas <span style="color:blue">[viikko 6]</span>
 
-Eri ominaisuuksilla varustettujen pinojen luominen on käyttäjän kannalta hieman ikävää. Tehdään luomista helpottamaan pinotehtaan:
+Eri ominaisuuksilla varustettujen pinojen luominen on käyttäjän kannalta hieman ikävää. Teemme luomista helpottamaan pinotehtaan:
 
 ``` java
 public class Pinotehdas {
@@ -2054,7 +2064,7 @@ Pinorakentaja rakenna = new Pinorakentaja();
 Pino pino = rakenna.prepaid(10).kryptattu().pino();
 ```
 
-Rakentajan metodinimet ja rakentajan muuttujan nimi on valittu mielenkiinoisella tavalla. On pyritty mahdollisimman luonnollista kieltä muistuttavaan ilmaisuun pinon luonnissa. Kyseessä onkin oikeastaan [DSL](https://martinfowler.com/bliki/DomainSpecificLanguage.html) (enhl. domain specific language) pinojen luomiseen!
+Rakentajan metodinimet ja rakentajan muuttujan nimi on valittu mielenkiinoisella tavalla. On pyritty mahdollisimman luonnollista kieltä muistuttavaan ilmaisuun pinon luonnissa. Kyseessä onkin oikeastaan [DSL](https://martinfowler.com/bliki/DomainSpecificLanguage.html) (engl. domain specific language) pinojen luomiseen!
 
 Luodaan ensin rakentajasta perusversio, joka soveltuu vasta normaalien pinojen luomiseen:
 

@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="http://localhost:4000/osa4/">
-  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2020" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="Ohjelmistotuotanto avoin yliopisto 2021" href="/feed.xml">
 
   
 </head>
@@ -24,7 +24,7 @@
   <div class="wrapper">
     
     
-    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2020</a>
+    <a class="site-title" href="/">Ohjelmistotuotanto avoin yliopisto 2021</a>
     
     
       <nav class="site-nav">
@@ -40,6 +40,9 @@
         </label>
 
         <div class="trigger">
+          
+            
+            
           
             
             
@@ -92,6 +95,9 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/osa5/">Osa 5</a>
             
           
@@ -109,7 +115,31 @@
           
             
             
+          
+            
+            
             <a class="page-link" href="/tehtavat/">Tehtävät</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
             
           
             
@@ -220,11 +250,11 @@ Vesiputousmallissa suunnittelu tapahtuu vaatimusmäärittelyn jälkeen ja ohjelm
 <p>Artikkelissa <a href="https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf">Who needs architect</a> Martin Fowler toteaa seuraavasti <em>you might end up defining architecture as things that people perceive as hard to change</em>, eli arkkitehtuurin voisi määritellä niiksi asioiksi, jotka ovat ohjelmistossa vaikeita muuttaa. Järjestelmän tärkeät rakenneperiaatteet voivat myös muuttua ajan myötä, eli arkkitehtuuri <a href="http://www.ibm.com/developerworks/rational/library/feb06/eeles/">ei ole muuttumaton</a> mutta sen radikaali muuttaminen voi olla haastavaa.</p>
 
 <p>Melkein sama hieman toisin ilmaistuna oli Krutchtenin määritelmässä mainittu
-<em>set of significant decisions about the organization of a software system</em>, eli arkkitehtuuri muodostuu arkkitehtuuristen päätösten, eli joukon ohjelmiston rakenteen ja toiminnan kannalta tehtävien fundamentaalisten valintoja kautta.</p>
+<em>set of significant decisions about the organization of a software system</em>, eli arkkitehtuuri muodostuu arkkitehtuuristen päätösten, eli joukon ohjelmiston rakenteen ja toiminnan kannalta tehtävien fundamentaalisten valintojen kautta.</p>
 
 <h3 id="arkkitehtuuriin-vaikuttavia-tekijöitä">Arkkitehtuuriin vaikuttavia tekijöitä</h3>
 
-<p><a href="/osa2">Osassa 2</a> mainittiin järjestelmän vaatimusten jakautuvat kahteen luokkaan, toiminnallisiin ja ei-toiminnallisiin vaatimuksiin.</p>
+<p><a href="/osa2">Osassa 2</a> mainittiin järjestelmän vaatimusten jakautuvan kahteen luokkaan, toiminnallisiin ja ei-toiminnallisiin vaatimuksiin.</p>
 
 <p>Järjestelmälle asetetuilla ei-toiminnallisilla <a href="/osa2#ei-toiminnalliset-vaatimukset">laatuvaatimuksilla</a> (engl. -ilities) on suuri vaikutus arkkitehtuuriin. Laatuvaatimuksia ovat esimerkiksi käytettävyys, suorituskyky, skaalautuvuus, vikasietoisuus, tiedon ajantasaisuus, tietoturva, ylläpidettävyys, laajennettavuus, testattavuus, hinta, time-to-market, …</p>
 
@@ -236,7 +266,7 @@ Vesiputousmallissa suunnittelu tapahtuu vaatimusmäärittelyn jälkeen ja ohjelm
 
 <p>Arkkitehtuurin suurin merkitys on antaa sovelluksen kehitykselle ja ylläpidolle sellaiset raamit, että sovellus pystyy jatkossakin vastaamaan asiakkaan asettamien toiminnallisten vaatimuksien lisäksi järjestelmälle asetettuihin laatuvaatimuksiin.</p>
 
-<p>Joskus käy niin, että sovellukselle alunperin valittu arkkitehtuuri ei enää palvele tavoitettaan. Näin voi esimerkiksi käydä, jos sovelluksen laatuvaatimukset muuttuvat radikaalisti, esim. jos tulee tarve saada sovellus skaalautumaan huomattavasti suuremmalle käyttäjäjoukolle, mitä alkuperäinen arkkitehtuuri kykenee. Arkkitehtuurin muuttaminen on hankalaa ja kallista, mutta joskus muuta vaihtoehtoa ei ole.</p>
+<p>Joskus käy niin, että sovellukselle alunperin valittu arkkitehtuuri ei enää palvele tavoitettaan. Näin voi esimerkiksi käydä, jos sovelluksen laatuvaatimukset muuttuvat radikaalisti, esim. jos tulee tarve saada sovellus skaalautumaan huomattavasti suuremmalle käyttäjäjoukolle kuin mihin alkuperäinen arkkitehtuuri kykenee. Arkkitehtuurin muuttaminen on hankalaa ja kallista, mutta joskus muuta vaihtoehtoa ei ole.</p>
 
 <h3 id="arkkitehtuurityyli">Arkkitehtuurityyli</h3>
 
@@ -282,7 +312,7 @@ Vesiputousmallissa suunnittelu tapahtuu vaatimusmäärittelyn jälkeen ja ohjelm
 
 <p><img src="http://localhost:4000/images/4-2.png" alt="" height="250px" /></p>
 
-<p>Arkkitehtuuria heijasteleva pakkausrakenne voidaan kuvata UML:n <a href="https://github.com/mluukkai/ohjelmistotekniikka-kevat2019/blob/master/web/materiaali.md#pakkauskaavio">pakkauskaaviolla</a>:</p>
+<p>Arkkitehtuuria heijasteleva pakkausrakenne voidaan kuvata UML:n <a href="https://github.com/mluukkai/ohjelmistotekniikka-kevat2019/blob/main/web/materiaali.md#pakkauskaavio">pakkauskaaviolla</a>:</p>
 
 <p><img src="http://localhost:4000/images/4-1b.png" alt="" height="200px" /></p>
 
@@ -294,11 +324,13 @@ Vesiputousmallissa suunnittelu tapahtuu vaatimusmäärittelyn jälkeen ja ohjelm
 
 <p>Kovista yrityksistä huolimatta ohjelmistojen arkkitehtuurien kuvaamiselle ei ole onnistuttu kehittämään mitään yleisesti käytössä olevaa notaatiota. UML:ää käytetään jonkin verran, mutta kovin suosittu ja käyttökelpoinen ei sekään ole. Edellisessä esimerkissä käytettyä  pakkauskaaviota paremmin isompien sovellusten arkkitehtuurien kuvaamiseen sopii <a href="https://en.wikipedia.org/wiki/Component_diagram">komponenttikaavio</a>.</p>
 
-<p>Komponenttikaavio eroaa pakkauskaaviosta lähinnä merkintätavoiltaan ja tuo hieman paremmin esiin eri komponenttien tarjoamat sekä käyttämät rajapinnat. Esimerkiksi alla olevassa kuvassa oleva verkkokaupan sovelluslogiikasta vastaava komponentti <em>web store</em>  tarjoaa rajapinnat tuotteiden haulle, ostosten tekemiselle ja käyttäjän hallinnoinnille. Komponentti itsessään jakautuu kolmeen alikomponenttiin, joista <em>authentication</em> tarjoaa sisäisen rajapinnan <em>shopping chart</em> -komponentin käyttöön.</p>
+<p>Komponenttikaavio eroaa pakkauskaaviosta lähinnä merkintätavoiltaan ja tuo hieman paremmin esiin eri komponenttien tarjoamat sekä käyttämät rajapinnat. Esimerkiksi alla olevassa kuvassa oleva verkkokaupan sovelluslogiikasta vastaava komponentti <em>web store</em>  tarjoaa rajapinnat tuotteiden haulle, ostosten tekemiselle ja käyttäjän hallinnoinnille. Komponentti itsessään jakautuu kolmeen alikomponenttiin, joista <em>authentication</em> tarjoaa sisäisen rajapinnan <em>shopping cart</em> -komponentin käyttöön.</p>
 
 <p><img src="http://localhost:4000/images/4-4.png" alt="" height="450px" /></p>
 
-<p>UML:n sijaan arkkitehtuurin kuvaamiseen käytetään kuitenkin useimmiten epäformaaleja laatikko/nuoli-kaavioita.</p>
+<p>UML:n sijaan arkkitehtuurin kuvaamiseen käytetään kuitenkin useimmiten epäformaaleja laatikko/nuoli-kaavioita. Seuraavassa sivustolta <a href="http://agilemodeling.com/essays/initialArchitectureModeling.htm">agilemodeling.com/</a> lainattu hyvin tyypilliseltä näyttävä laatikko/nuoli-mallinen arkkitehtuurikuvaus</p>
+
+<p><img src="http://localhost:4000/images/4-14.jpeg" alt="" height="400px" /></p>
 
 <p>Riippumatta arkkitehtuurin dokumentointitavasta, arkkitehtuurikuvaus kannattaa tehdä useasta <em>eri näkökulmasta</em>, sillä eri näkökulmat palvelevat erilaisia tarpeita. Korkean tason kuvauksen avulla voidaan esim. strukturoida vaatimusmäärittelyn aikana käytäviä keskusteluja eri sidosryhmien kanssa. Detaljoidummat kuvaukset taas toimivat ohjeena järjestelmän tarkemmassa suunnittelussa ja ylläpitovaiheen aikaisessa laajentamisessa.</p>
 
@@ -314,7 +346,7 @@ Vesiputousmallissa suunnittelu tapahtuu vaatimusmäärittelyn jälkeen ja ohjelm
 
 <p><img src="http://localhost:4000/images/4-6.png" alt="" height="300px" /></p>
 
-<p>Mikropalveluihin perustuvassa sovelluksessa yksittäisistä palveluista pyritään tekemään mahdollisimman <em>riippumattomia</em> ja löyhästi toisiinsa kytkettyjä. Palvelut eivät esimerkiksi käytä yhteistä tietokantaa eivätkä käytä yhteistä koodia. Palvelut eivät kutsu suoraan toistensa metodeja, sen sijaan ne kommunikoivat verkon välityksellä.</p>
+<p>Mikropalveluihin perustuvassa sovelluksessa yksittäisistä palveluista pyritään tekemään mahdollisimman <em>riippumattomia</em> ja löyhästi toisiinsa kytkettyjä. Palvelut eivät esimerkiksi käytä yhteistä tietokantaa eivätkä jaa yhteistä koodia. Palvelut eivät kutsu suoraan toistensa metodeja, sen sijaan ne kommunikoivat verkon välityksellä.</p>
 
 <p>Mikropalveluiden on tarkoitus olla suhteellisen pieniä ja huolehtia vain “yhdestä asiasta”. Esimerkiksi verkkokaupassa erillisiä mikropalveluja voisivat olla</p>
 
@@ -336,11 +368,9 @@ Vesiputousmallissa suunnittelu tapahtuu vaatimusmäärittelyn jälkeen ja ohjelm
 
 <p>Mikropalvelut siis kommunikoivat keskenään verkon välityksellä. Erilaisia tapoja kommunikointiin on useita.</p>
 
-<p>Yksinkertainen vaihtoehto on käyttää kommunikointiin HTTP- protokollaa, eli samaa mekanismia, jonka avulla web-selaimet keskustelevat palvelimien kanssa. Tällöin sanotaan, että mikropalvelut tarjoavat kommunikointia varten REST-rajapinnan. Viikon 3 laskareissa haettiin NHL-tilastotietoja JSON-muotoista dataa tarjoavasta REST-rajapinnasta.</p>
+<p>Yksinkertainen vaihtoehto on käyttää kommunikointiin HTTP-protokollaa, eli samaa mekanismia, jonka avulla web-selaimet keskustelevat palvelimien kanssa. Tällöin sanotaan, että mikropalvelut tarjoavat kommunikointia varten REST-rajapinnan. Viikon 3 laskareissa haettiin NHL-tilastotietoja JSON-muotoista dataa tarjoavasta REST-rajapinnasta.</p>
 
-<p>Vaihtoehtoinen, huomattavasti joustavampi kommunikointikeino on ns. <em>viestinvälityksen</em> (message queue/bus) käyttö.</p>
-
-<p>Palvelut eivät lähetä viestejä suoraan toisilleen, vaan käytössä on verkossa toimiva viestinvälityspalvelu, joka hoitaa viestien välityksen eri palveluiden välillä.</p>
+<p>Vaihtoehtoinen, huomattavasti joustavampi kommunikointikeino on ns. <em>viestinvälityksen</em> (message queue/bus) käyttö, joillon palvelut eivät lähetä viestejä suoraan toisilleen, vaan käytössä on verkossa toimiva viestinvälityspalvelu, joka hoitaa viestien välityksen eri palveluiden välillä.</p>
 
 <p><img src="http://localhost:4000/images/4-6b.png" alt="" height="400px" /></p>
 
@@ -392,7 +422,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p><em>Simplicity, the art of maximizing the amount of work not done, is essential</em></p>
 
-<p>Arkkitehtuuriin suunnittelu ja dokumentointi taas on perinteisesti ollut melko pitkäkestoinen, ohjelmoinnin aloittamista edeltävä vaihe, eräänlainen <em>Big Design Up Front</em>. Ketterät menetelmät ja “arkkitehtuurivetoinen” ohjelmistotuotanto ovat siis jossain määrin keskenään ristiriidassa.</p>
+<p>Arkkitehtuurin suunnittelu ja dokumentointi taas on perinteisesti ollut melko pitkäkestoinen, ohjelmoinnin aloittamista edeltävä vaihe, eräänlainen <em>Big Design Up Front</em>. Ketterät menetelmät ja “arkkitehtuurivetoinen” ohjelmistotuotanto ovat siis jossain määrin keskenään ristiriidassa.</p>
 
 <p>Ketterien menetelmien yhteydessä puhutaan usein <a href="https://www.jamesshore.com/Agile-Book/incremental_design.html">inkrementaalisesta suunnittelusta ja arkkitehtuurista</a>.</p>
 
@@ -400,7 +430,15 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p>Melko tyypillinen tapa on aloittaa projektit ns. <a href="https://www.infoq.com/news/2008/09/sprint_zero/">nollasprintillä</a> jonka aikana luodaan mm. alustava arkkitehtuuri sekä backlog.</p>
 
-<p>Scrumin varhaisissa artikkeleissa puhuttiin “pre game”-vaiheesta, jonka aikana tehtiin erilaisia kehitystyötä valmistelevia asioita, mm. hahmoteltiin alustava arkkitehtuuri. Sittemmin koko käsite on hävinnyt Scrumista ja toinen Scrumin alkuperäisistä kehittäjistä Ken Schwaber jopa eksplisiittisesti kieltää ja <a href="https://www.scrum.org/resources/blog/scrubbing-sprint-zero">tyrmää</a> koko “nollasprintin” olemassaolon.</p>
+<p>Scrumin varhaisissa artikkeleissa puhuttiin “pre game”-vaiheesta, jonka aikana tehtiin erilaisia kehitystyötä valmistelevia asioita, mm. hahmoteltiin alustava arkkitehtuuri. Sittemmin koko käsite on hävinnyt Scrumista ja toinen Scrumin alkuperäisistä kehittäjistä Ken Schwaber jopa eksplisiittisesti kieltää ja <a href="http://web-old.archive.org/web/20120319122002/http://www.scrum.org/assessmentdiscussion/post/1317787">tyrmää</a> koko “nollasprintin” olemassaolon, perustellen asiaa seuraavasti</p>
+
+<blockquote>
+  <p>The only purpose a Sprint 0 serves is to allow delays in progress. By requiring that teams produce some increment of working functionality every Sprint, the team is required to prioritize its work so it doesn’t waste time over-building the best environment known to man while its company’s competition races ahead in the marketplace.</p>
+
+  <p>What better way to get familiar with a new technology that by using it to actually build something useful? How can a team realistically size user stories if it hasn’t actually worked on any to know how complex they will be? Release plan activities are performed by the PO during the Sprint…he has no data to base a release plan on until at least one Sprint has been completed. Good data doesn’t come until after 3-4 Sprints.</p>
+
+  <p>A Sprint 0 is exactly that, a cop out. Don’t let it happen.</p>
+</blockquote>
 
 <h3 id="kävelevä-luuranko">Kävelevä luuranko</h3>
 
@@ -489,7 +527,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
   <li>selkeys</li>
 </ul>
 
-<p>Tutustutaan nyt näihin laatuattribuutteihin sekä periaatteisiin ja suunnitteluratkaisuihin, joita noudattamalla on mahdollista kirjoittaa ylläpidettävyydeltään laadukasta koodia. Monet näistä hyvän suunnittelun periaatteista on nimetty ja dokumentoitu <em>suunnittelumalleina</em> (engl. design patterns).</p>
+<p>Tutustutaan nyt näihin laatuattribuutteihin sekä periaatteisiin ja suunnitteluratkaisuihin, joita noudattamalla on mahdollista kirjoittaa ylläpidettävyydeltään laadukasta koodia. Monet näistä hyvän suunnittelun periaatteista on nimetty ja dokumentoitu <a href="https://en.wikipedia.org/wiki/Software_design_pattern">suunnittelumalleina</a> (engl. design patterns).</p>
 
 <p>Olemme jo nähneet kurssin aikana muutamia suunnittelumalleja, ainakin seuraavat: <em>dependency injection</em> eli riippuvuuksien injektointi, <em>singleton</em> sekä <em>data access object</em>. Suurin osa tällä kurssilla käsiteltävistä suunnittelumalleista on syntynyt olio-ohjelmoinnin parissa. Osa suunnittelumalleista on relevantteja myös muita paradigmoja, kuten funktionaalista ohjelmointia käytettäessä. Muilla paradigmoilla on myös omia suunnittelumalleja, mutta niitä emme kurssilla käsittele.</p>
 
@@ -584,7 +622,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <h4 id="koheesio-luokkatasolla">Koheesio luokkatasolla</h4>
 
-<p>Luokkatason koheesiossa pyrkimyksenä on, että luokan <em>vastuulla</em> on vain yksi asia, tämä tunnetaan myös nimellä <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility</a>-periaate (SRP). Robert Martin määrittelee, että luokalla on yksi vastuu <em>jos sillä on vain yksi syy muuttua</em>.</p>
+<p>Luokkatason koheesiossa pyrkimyksenä on, että luokan <em>vastuulla</em> on vain yksi asia, tämä tunnetaan myös nimellä <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle">single responsibility</a> -periaate (SRP). Robert Martin määrittelee, että luokalla on yksi vastuu <em>jos sillä on vain yksi syy muuttua</em>.</p>
 
 <p>Kurssin ensimmäisissä laskareissa tarkasteltiin yksinkertaista laskinta:</p>
 
@@ -718,7 +756,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p>Parannellun laskimen rakenne luokkakaaviona</p>
 
-<p><img src="https://github.com/mluukkai/ohjelmistotuotanto2017/raw/master/images/os-1.png" alt="" /></p>
+<p><img src="https://github.com/mluukkai/ohjelmistotuotanto2017/raw/main/images/os-1.png" alt="" /></p>
 
 <p>Luokka ei ole vielä kaikin osin laajennettavuuden kannalta optimaalinen. Palaamme asiaan hetken kuluttua.</p>
 
@@ -728,9 +766,14 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p>Koheesion periaate näkyy myös sovelluksen arkkitehtuurien tasolla. Kerrosarkkitehtuurissa kukin sovelluksen kerros keskittyy oman abstraktiotason asioihin, esim. sovelluslogiikka ei ota kantaa käyttöliittymään tai tiedon tallentamisen tapaan. Mikropalveluarkkitehtuureissa koheesio taas näkyy hieman eri tavalla, yksittäinen mikropalvelu keskittyy toteuttamaan yksittäisen liiketoiminnan tason toiminnallisuuden, esim. verkkokaupan suosittelualgoritmin tai laskutuksen.</p>
 
+<p>Vastaava idea näkyy oikeastaan kauttaaltaan tietojenkäsittelyssä: Ohjelmoija voi käyttää korkean tason kieltä, vaikkapa Javaa, ja kääntäjä huolehtii sen kääntämisestä konekielelle. Käyttöjärjestelmän tarkoituksena taas on piilottaa laitteistotason asiat sovellusohjelmilta, sovellusohjelmoijan ei tarvitse huolehtia koneella prosessoriytimien tai muistin määrästä, käyttöjärjestelmä huolehtii niistä. Tietoliikenneprotokollat taas koostuvat joukosta <em>tasoja</em> (engl. layers), joissa matalimmat tasot hoitavat tiedonsiirtoa “bittitasolla” kun taas korkeammat protokollakerrokset keskittyvät tiedon siirtoon esim. HTML-muodossa tai videostreamina ilman että niiden tarvitsee huolehtia bittitasolla tapahtuvista asioista.</p>
+
+<p>Tästä periaatteesta, missä erilaiset ja eri abstratkiotasoilla tapahtuvat asiat tulee antaa omien yksikköidensä houlehdittavaksi käytetään usein nimitystä 
+<a href="https://en.wikipedia.org/wiki/Separation_of_concerns">Separation of concerns</a>.</p>
+
 <h3 id="riippuvuuksien-vähäisyys">Riippuvuuksien vähäisyys</h3>
 
-<p>Single responsibility -periaatteen hengessä tehty ohjelma koostuu suuresta määrästä oliota/komponentteja, joilla on suuri määrä pieniä metodeja.</p>
+<p>Single responsibility -periaatteen hengessä tehty ohjelma koostuu suuresta määrästä olioita/komponentteja, joilla on suuri määrä pieniä metodeja.</p>
 
 <p>Olioiden on oltava vuorovaikutuksessa toistensa kanssa saadakseen toteutettua ohjelman toiminnallisuuden. <em>Riippuvuuksien vähäisyyden</em> (engl. low coupling) periaate pyrkii eliminoimaan luokkien ja olioiden välisiä riippuvuuksia.</p>
 
@@ -923,7 +966,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
     <span class="n">EuriborLukija</span> <span class="n">lukija</span><span class="o">;</span>
 
     <span class="kd">public</span> <span class="nf">EuriborKorko</span><span class="o">(</span><span class="kt">int</span> <span class="n">kuukausi</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">lukija</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EuriborLukijaImpl</span><span class="o">(</span><span class="n">kuukausi</span><span class="o">);</span>
+        <span class="n">lukija</span> <span class="o">=</span> <span class="k">new</span> <span class="n">EuriborlukijaImpl</span><span class="o">(</span><span class="n">kuukausi</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="kd">public</span> <span class="kt">double</span> <span class="nf">korko</span><span class="o">()</span> <span class="o">{</span>
@@ -1063,7 +1106,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
     <span class="o">}</span>
     
     <span class="kd">public</span> <span class="n">Tili</span> <span class="nf">maaraikaistili</span><span class="o">(</span><span class="n">String</span> <span class="n">omistaja</span><span class="o">,</span> <span class="kt">double</span> <span class="n">k</span><span class="o">){</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nf">MaaraaikaisTili</span><span class="o">(</span><span class="n">generoiTilinro</span><span class="o">(),</span> <span class="n">omistaja</span><span class="o">,</span> <span class="k">new</span> <span class="n">Tasakorko</span><span class="o">(</span><span class="n">k</span><span class="o">));</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MaaraAikaisTili</span><span class="o">(</span><span class="n">generoiTilinro</span><span class="o">(),</span> <span class="n">omistaja</span><span class="o">,</span> <span class="k">new</span> <span class="n">Tasakorko</span><span class="o">(</span><span class="n">k</span><span class="o">));</span>
     <span class="o">}</span>    
     
     <span class="kd">public</span> <span class="n">Tili</span> <span class="nf">euribortili</span><span class="o">(</span><span class="n">String</span> <span class="n">omistaja</span><span class="o">,</span> <span class="kt">int</span> <span class="n">kk</span><span class="o">){</span>
@@ -1071,7 +1114,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
     <span class="o">}</span>        
 
     <span class="kd">public</span> <span class="n">Tili</span> <span class="nf">maaraaikaisEuribor</span><span class="o">(</span><span class="n">String</span> <span class="n">omistaja</span><span class="o">,</span> <span class="kt">int</span> <span class="n">kk</span><span class="o">){</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nf">MaaraaikaisTili</span><span class="o">(</span><span class="n">generoiTilinro</span><span class="o">(),</span> <span class="n">omistaja</span><span class="o">,</span> <span class="k">new</span> <span class="n">EuriborKorko</span><span class="o">(</span><span class="n">kk</span><span class="o">));</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">MaaraAikaisTili</span><span class="o">(</span><span class="n">generoiTilinro</span><span class="o">(),</span> <span class="n">omistaja</span><span class="o">,</span> <span class="k">new</span> <span class="n">EuriborKorko</span><span class="o">(</span><span class="n">kk</span><span class="o">));</span>
     <span class="o">}</span> 
 <span class="o">}</span>
 </code></pre></div></div>
@@ -1277,19 +1320,18 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Komentotehdas</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Komento</span><span class="o">&gt;</span> <span class="n">komennot</span><span class="o">;</span>
-    <span class="kd">private</span> <span class="n">Komento</span> <span class="n">tuntematon</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="n">Komento</span> <span class="n">tuntemaaton</span><span class="o">;</span>
 
     <span class="kd">public</span> <span class="nf">Komentotehdas</span><span class="o">(</span><span class="n">IO</span> <span class="n">io</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">komennot</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Komento</span><span class="o">&gt;();</span>
         <span class="n">komennot</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"summa"</span><span class="o">,</span> <span class="k">new</span> <span class="n">Summa</span><span class="o">(</span><span class="n">io</span><span class="o">));</span>
         <span class="n">komennot</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"tulo"</span><span class="o">,</span> <span class="k">new</span> <span class="n">Tulo</span><span class="o">(</span><span class="n">io</span><span class="o">));</span>
         <span class="n">komennot</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"nelio"</span><span class="o">,</span> <span class="k">new</span> <span class="n">Nelio</span><span class="o">(</span><span class="n">io</span><span class="o">));</span>
-        <span class="n">komennot</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"lopeta"</span><span class="o">,</span> <span class="k">new</span> <span class="n">Lopeta</span><span class="o">(</span><span class="n">io</span><span class="o">));</span>
         <span class="n">tuntematon</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Tuntematon</span><span class="o">(</span><span class="n">io</span><span class="o">);</span>
     <span class="o">}</span>
 
     <span class="kd">public</span> <span class="n">Komento</span> <span class="nf">hae</span><span class="o">(</span><span class="n">String</span> <span class="n">operaatio</span><span class="o">)</span> <span class="o">{</span>
-        <span class="k">return</span> <span class="n">komennot</span><span class="o">.</span><span class="na">getOrDefault</span><span class="o">(</span><span class="n">operaatio</span><span class="o">,</span> <span class="n">tuntematon</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">komennot</span><span class="o">.</span><span class="na">getOrDefault</span><span class="o">(</span><span class="n">operaatio</span><span class="o">,</span> <span class="n">tuntemaaton</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
@@ -1401,10 +1443,10 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">suorita</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"luku 1: "</span><span class="o">);</span>
-        <span class="n">luku1</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+        <span class="kt">int</span> <span class="n">luku1</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
 
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"luku 2: "</span><span class="o">);</span>
-        <span class="n">luku2</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+        <span class="kt">int</span> <span class="n">luku2</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
 
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"vastaus: "</span><span class="o">+</span><span class="n">laske</span><span class="o">());</span>
     <span class="o">}</span>
@@ -1483,10 +1525,10 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
     <span class="nd">@Override</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">suorita</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"luku 1: "</span><span class="o">);</span>
-        <span class="n">luku1</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+        <span class="kt">int</span> <span class="n">luku1</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
 
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"luku 2: "</span><span class="o">);</span>
-        <span class="n">luku2</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+        <span class="kt">int</span> <span class="n">luku2</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
 
         <span class="n">io</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"vastaus: "</span><span class="o">+</span><span class="n">laske</span><span class="o">());</span>
     <span class="o">}</span>
@@ -1515,7 +1557,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p>Strategy-suunnittelumalli on osittain samaa sukua template-metodin kanssa, siinä kokonainen algoritmi tai algoritmin osa korvataan erillisessä luokassa toteutetulla toteutuksella. Strategioita voidaan vaihtaa suorituksen aikana, template-metodissa tietty olio toimii samalla tavalla koko elinaikansa.</p>
 
-<p>Lisää template method -suunnittelumallista <a href="http://www.oodesign.com/template-method-pattern.html">täällä</a> ja <a href="http://www.netobjectives.net/patternrepository/index.php?title=TheTemplateMethodPattern">täällä</a>.</p>
+<p>Lisää template method -suunnittelumallista <a href="http://www.oodesign.com/template-method-pattern.html">täällä</a> ja <a href="http://www.netobjectives.com/PatternRepository/index.php?title=TheTemplateMethodPattern">täällä</a>.</p>
 
 <h3 id="koodin-laatuattribuutti-toisteettomuus">Koodin laatuattribuutti: toisteettomuus</h3>
 
@@ -1529,7 +1571,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p>DRY-periaate menee oikeastaan vielä paljon pelkkää koodissa olevaa toistoa eliminointia pidemmälle. Kirjan <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">Pragmatic programmer</a> määritelmä <em>every piece of knowledge must have a single, unambiguous, authoritative representation within a system</em> viittaa siihen, että koodin lisäksi periaate tulisi ulottaa koskemaan järjestelmän muitakin osia, kuten tietokantaskeemaa, testejä, build-skriptejä ym.</p>
 
-<p>Pragmatic programmerin määritelmän henkeä ei ei välttämättä pysty tavoittamaan täysin ilman konkreettista esimerkkiä. Oletetaan, että kehittämämme verkkokauppa otettaisiin käyttöön myös sellaisissa maissa, joissa ei käytetä rahayksikkönä euroa. Jos sovellus ei noudata DRY-periaatetta valuutan käsittelyn suhteen, on oletettavaa, että muutos vaatisi muutoksia useisiin eri kohtiin sovellusta. Jos taas valuutan käsittelyllä olisi <em>single authoritive representation</em>, esim. se olisi kapseloitu riittävän hyvin luokan <em>Money</em> vastuulle, niin muiden valuuttojen tuen lisääminen ei ehkä edellyttäisi muuta kuin yksittäisen luokan koodin modifiointia.</p>
+<p>Pragmatic programmerin määritelmän henkeä ei välttämättä pysty tavoittamaan täysin ilman konkreettista esimerkkiä. Oletetaan, että kehittämämme verkkokauppa otettaisiin käyttöön myös sellaisissa maissa, joissa ei käytetä rahayksikkönä euroa. Jos sovellus ei noudata DRY-periaatetta valuutan käsittelyn suhteen, on oletettavaa, että muutos vaatisi muutoksia useisiin eri kohtiin sovellusta. Jos taas valuutan käsittelyllä olisi <em>single authoritive representation</em>, esim. se olisi kapseloitu riittävän hyvin luokan <em>Money</em> vastuulle, niin muiden valuuttojen tuen lisääminen ei ehkä edellyttäisi muuta kuin yksittäisen luokan koodin modifiointia.</p>
 
 <h4 id="epätriviaalin-copypasten-poistaminen-strategy-patternin-avulla-viikko-5">Epätriviaalin copypasten poistaminen Strategy-patternin avulla <span style="color:blue">[viikko 5]</span></h4>
 
@@ -1606,7 +1648,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p>Tutustutaan seuraavassa hieman <a href="http://docs.oracle.com/javase/8/docs/api/">Java 8:n</a> mukanaan tuomiin funktionaalista ohjelmointitapaa helpottaviin piirteisiin, lambda-lausekkeisiin sekä kokoelmien käsittelyyn streameina. Nämä asiat ovat toki monelle tuttuja jo kursseilta Ohjelmoinnin perusteet ja Ohjelmoinnin jatkokurssi.</p>
 
-<p>Voimme korvata listalla olevien merkkijonojen tulostamisen kutsumalla listoilla (tarkemmin sanottuna rajapinnan <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html">Interable</a>-toteuttavilla luokilla) olevaa metodia <em>forEach</em>, joka mahdollistaa listan alkioiden läpikäynnin “funktionaaliseen” tyyliin. Metodi saa parametrikseen “functional interfacen”, eli rajapinnan, joka määrittelee ainoastaan yhden toteutettavan metodin, toteuttavan olion. Tälläisiä ovat uudemmassa Javassa myös ns. <em>lambda-lausekkeet</em> (engl. lambda expression), joka tarkoittaa käytännössä anonyymia mihinkään luokkaan liittymätöntä metodia.  Seuraavassa metodikutsun <em>rivitJoillaSana(“beer”)</em> palauttavien kirjan rivien tulostus forEachia ja lambdaa käyttäen:</p>
+<p>Voimme korvata listalla olevien merkkijonojen tulostamisen kutsumalla listoilla (tarkemmin sanottuna rajapinnan <a href="http://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html">Iterable</a>-toteuttavilla luokilla) olevaa metodia <em>forEach</em>, joka mahdollistaa listan alkioiden läpikäynnin “funktionaaliseen” tyyliin. Metodi saa parametrikseen “functional interfacen”, eli rajapinnan, joka määrittelee ainoastaan yhden toteutettavan metodin, toteuttavan olion. Tälläisiä ovat uudemmassa Javassa myös ns. <em>lambda-lausekkeet</em> (engl. lambda expression), joka tarkoittaa käytännössä anonyymia mihinkään luokkaan liittymätöntä metodia.  Seuraavassa metodikutsun <em>rivitJoillaSana(“beer”)</em> palauttavien kirjan rivien tulostus forEachia ja lambdaa käyttäen:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">String</span> <span class="n">osoite</span> <span class="o">=</span> <span class="s">"https://www.gutenberg.org/files/2554/2554-0.txt"</span><span class="o">;</span>
@@ -1668,7 +1710,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <p>Ensimmäinen metodikutsuista palauttaisi <em>true</em> ja jälkimmäinen <em>false</em>.</p>
 
-<p>Kirjasta voidaan palauttaa oikean ehdon täyttävät sanat lisäämällä luokalle <em>GutenbergLukija</em> metodi:</p>
+<p>Kirjasta voidaan palauttaa oikean ehdon täyttävät rivit lisäämällä luokalle <em>GutenbergLukija</em> metodi:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="nf">rivitJotkaTayttavatEhdon</span><span class="o">(</span><span class="n">Ehto</span> <span class="n">ehto</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">palautettavatRivit</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
@@ -1794,7 +1836,7 @@ puitteissa ollenkaan, onneksi Avoimessa yliopistossa on tarjolla sopiva kurssi a
 
 <h4 id="hyvä-vs-paha-copypaste-viikko-5">Hyvä vs. paha copypaste <span style="color:blue">[viikko 5]</span></h4>
 
-<p>Vaikka koodin, konfiguraatioiden, tietokantaskeeman yms. toisteettomuus on yleisesti ottaen hyvä asia, voi ajoittain olla järkevää ainakin ensin tehdä nopea copypasteen perustuva ratkaisu ja <a href="/osa4/#refaktorointi">refaktoroida</a> koodi tarvittaessa myöhemmin siistimmäksi.</p>
+<p>Vaikka koodin, konfiguraatioiden, tietokantaskeeman yms. toisteettomuus on yleisesti ottaen hyvä asia, voi ajoittain olla järkevää ainakin ensin tehdä nopea copypasteen perustuva ratkaisu ja <a href="/osa4/refaktorointi">refaktoroida</a> koodi tarvittaessa myöhemmin siistimmäksi.</p>
 
 <p>Monissa tilanteissa nimittäin copypasten poistamisella on pieni hintansa, se saattaa muuttaa sovellusta monimutkaisemmaksi. Gutenberg-lukijan kohdalla alkuperäinen versio saattaisi olla täysin riittävä käyttöön, ja refaktorointi ei välttämättä olisi vaivan arvoinen. Mutta jos sovellukseen tulisi tarve useimpiin ehtoihin, ei sovelluksen alkuperäinen design siihen kunnolla taipuisi ja copypastea tulisi yhä suuremmat määrät.</p>
 
@@ -1842,7 +1884,7 @@ Esim. c-kielessä on tapana ollut kirjoittaa todella tiivistä koodia, jossa yhd
 
 <p>Oikeastaan kaikki näistä ovat merkkejä edellä listaamiemme hyvän koodin laatuattribuutteja heikentävistä ilmiöistä, esim. erittäin pitkä metodi todennäköisesti tarkoittaa, että metodin koheesio on huono, samoin luokka jossa on paljon koodia tai oliomuuttujia tarkoittaa suurella todennäköisyydellä että single responsibility -periaatetta ei noudateta. Jos luokan metodeilla on paljon parametreja, voi se kieliä siitä, että osa tiedoista on väärän luokan vastuulla, tai että metodin kuuluisi mielummin olla jossain toisessa luokassa.</p>
 
-<p>Nykyään koodin <a href="https://medium.com/@fagnerbrack/code-comment-is-a-smell-4e8d78b0415b">kommentointia</a> on hieman yllättäen alettu pitämään koodihajuna. Kyse on oikeastaan siitä, että koodi pitäisi lähtökohtaisesti kirjoittaa niin selkeäksi ja nimeämiskäytäntöjen osalta kommunikoivaksi, että kommentteja ei tarvita. Eli kommentit tulee säästää vain sellaisiin kohtiin, jossa samaa asiaa ole mahdollista ilmaista koodin muotoilulla ja paremmalla nimeämisellä.</p>
+<p>Nykyään koodin <a href="https://medium.com/@fagnerbrack/code-comment-is-a-smell-4e8d78b0415b">kommentointia</a> on hieman yllättäen alettu pitämään koodihajuna. Kyse on oikeastaan siitä, että koodi pitäisi lähtökohtaisesti kirjoittaa niin selkeäksi ja nimeämiskäytäntöjen osalta kommunikoivaksi, että kommentteja ei tarvita. Eli kommentit tulee säästää vain sellaisiin kohtiin, jossa samaa asiaa ei ole mahdollista ilmaista koodin muotoilulla ja paremmalla nimeämisellä.</p>
 
 <p>Otetaan pari esimerkkiä hieman vähemmän ilmeisistä koodihajuista.</p>
 
@@ -1890,7 +1932,7 @@ Esim. c-kielessä on tapana ollut kirjoittaa todella tiivistä koodia, jossa yhd
 
 <p>Refaktoroinnissa kannattaa ehdottomasti edetä pienin askelin eli yksi hallittu muutos kerrallaan. Testit on syytä suorittaa jokaisen refaktorointioperaation jälkeen, jotta mahdollinen regressio, eli aiemmin toimineen koodin hajoaminen huomataan mahdollisimman nopeasti.</p>
 
-<p>Refaktorointia kannattaa tehdä lähes koko ajan. Kun koodin sisäinen laatu säilyy siistinä, on koodin laajentaminen miellyttävää ja pienien refaktorointioperaatioiden tekeminen suhteellisen vaivatonta. Jos koodin sisäinen laatu pääsee rapistumaan, muuttuu sen laajentaminen hitaaksi ja myös refaktoroinnin suorittaminen muuttuu koko ajan työläämmäksi. Monilla ohjelmistokehitystiimeillä onkin <em>definition of doneen</em> kirjattu, että valmiin määritelmä sisältää sen, että koodi on refaktoroitu riittävän siistiksi. Siisteyttä saatetaan valvoa esim. <a href="/osa3#koodin-katselmointi-github-ja-pull-requestit">pull requesteina tehtävänä katselmointina</a>.</p>
+<p>Refaktorointia kannattaa tehdä lähes koko ajan. Kun koodin sisäinen laatu säilyy siistinä, on koodin laajentaminen miellyttävää ja pienien refaktorointioperaatioiden tekeminen suhteellisen vaivatonta. Jos koodin sisäinen laatu pääsee rapistumaan, muuttuu sen laajentaminen hitaaksi ja myös refaktoroinnin suorittaminen muuttuu koko ajan työläämmäksi. Monilla ohjelmistokehitystiimeillä onkin <em>definition of doneen</em> kirjattu, että valmiin määritelmä sisältää sen, että koodi on refaktoroitu riittävän siistiksi. Siisteyttä saatetaan valvoa esim. <a href="osa3#koodin-katselmointi-github-ja-pull-requestit">pull requesteina tehtävänä katselmointina</a>.</p>
 
 <p>Osa refaktoroinneista, esim. metodien tai luokkien uudelleennimeäminen tai pitkien metodien jakaminen pienemmiksi on helppoa. Aina ei näin kuitenkaan ole. Joskus on tarve tehdä suurempien mittaluokkien refaktorointeja, joissa ohjelman rakenne eli arkkitehtuuri muuttuu. Tällaiset refaktoroinnit saattavat kestää päiviä tai jopa viikkoja ja niiden suorittaminen siten, että koodi säilyy koko ajan toimivana on jo kohtuullisen haastavaa.</p>
 
@@ -1898,7 +1940,7 @@ Esim. c-kielessä on tapana ollut kirjoittaa todella tiivistä koodia, jossa yhd
 
 <p>Koodi ei ole aina sisäiseltä laadultaan optimaalista, ja joskus on jopa asiakkaan kannalta tarkoituksenmukaista tehdä vähemmän laadukasta koodia. Huonoa suunnittelua tai/ja ohjelmointia on ruvettu kuvaamaan käsitteellä <em>tekninen velka</em> (engl. technical debt).</p>
 
-<p>Oikoteitä ottamalla tehdyllä ohjelmoinnilla saadaan ehkä nopeasti aikaan jotain toiminnallisuutta, mutta hätäinen ratkaisu tullaan maksamaan korkoineen takaisin myöhemmin <em>jos</em> ohjelmaa on tarkoitus laajentaa. Käytännössä käy siis niin, että koodiin kertyneet sisäisen laadun ongelmat, eli <em>tekninen velka</em> alkaa hidastamaan kehitystyön etenemistä, ja uusien ominaisuuksien toteuttamisesta tulee koko ajan hankalammaksi ja kalliimmaksi.</p>
+<p>Oikoteitä ottamalla tehdyllä ohjelmoinnilla saadaan ehkä nopeasti aikaan jotain toiminnallisuutta, mutta hätäinen ratkaisu tullaan maksamaan korkoineen takaisin myöhemmin <em>jos</em> ohjelmaa on tarkoitus laajentaa. Käytännössä käy siis niin, että koodiin kertyneet sisäisen laadun ongelmat, eli <em>tekninen velka</em> alkaa hidastamaan kehitystyön etenemistä, ja uusien ominaisuuksien toteuttamisesta tulee koko ajan hankalampaa ja kalliimpaa.</p>
 
 <p>Toisaalta jos korkojen maksun aikaa ei koskaan tule, eli ohjelma on esimerkiksi pelkkä prototyyppi tai sitä ei koskaan oteta käyttöön, on teknisen velan ottaminen asiakkaan kannalta kannattava ratkaisu.</p>
 
@@ -1919,7 +1961,7 @@ Esim. c-kielessä on tapana ollut kirjoittaa todella tiivistä koodia, jossa yhd
 
 <p>Luokkien 1 ja 2, joista Fowler käyttää termiä <em>reckless</em> eli holtiton tai uhkarohkea, voi ajatella olevan huonoa teknistä velkaa. Toinen syntyy tarkoituksella, eli ajatellen että ei ole aikaa laadulle, toinen taas syntyy osaamattomuuden takia.</p>
 
-<p>Luokat 3 ja 4 ovat harkinnan alla (engl. <em>prudent</em>) syntynyttä teknistä velkaa. Luokka 4 on juurikin tilanne, jossa ollaan esim. tekemässä MVP:tä, tai jonkun pakon takia koodi on saatava julkaistua heti ja seuraukset päätetään hoitaa myöhemmin. Luokka 3 on kovin yleinen tilanne, ohjelmistoa suunniteltiin ja rakennettiin parhaiden aikomusten mukaan, mutta vasta paljon myöhemmin, kun arkkitehtuuri ja design on jo lyöty lukkoon vasta opitaan sovelluksen luonteesta sen verran, että tiedetään <em>kuinka sovellus olisi tullut suunnitella</em>. Tälläinen tilanne saatetaan päätyä ratkaisemaan refaktoroimalla sovelluksen arkkitehtuuri paremmin tarpeita vastaavaksi.</p>
+<p>Luokat 3 ja 4 ovat harkinnan alla (engl. <em>prudent</em>) syntynyttä teknistä velkaa. Luokka 4 on juurikin tilanne, jossa ollaan esim. tekemässä MVP:tä, tai jonkun pakon takia koodi on saatava julkaistua heti ja seuraukset päätetään hoitaa myöhemmin. Luokka 3 on kovin yleinen tilanne, ohjelmistoa suunniteltiin ja rakennettiin parhaiden aikomusten mukaan, mutta vasta paljon myöhemmin, kun arkkitehtuuri ja design on jo lyöty lukkoon vasta opitaan sovelluksen luonteesta sen verran, että tiedetään <em>kuinka sovellus olisi kannattanut suunnitella</em>. Tälläinen tilanne saatetaan päätyä ratkaisemaan refaktoroimalla sovelluksen arkkitehtuuri paremmin tarpeita vastaavaksi.</p>
 
 <h3 id="lisää-suunnittelumalleja-viikko-6">Lisää suunnittelumalleja <span style="color:blue">[viikko 6]</span></h3>
 
@@ -2134,7 +2176,7 @@ Esim. c-kielessä on tapana ollut kirjoittaa todella tiivistä koodia, jossa yhd
 
 <h4 id="pinotehdas-viikko-6">Pinotehdas <span style="color:blue">[viikko 6]</span></h4>
 
-<p>Eri ominaisuuksilla varustettujen pinojen luominen on käyttäjän kannalta hieman ikävää. Tehdään luomista helpottamaan pinotehtaan:</p>
+<p>Eri ominaisuuksilla varustettujen pinojen luominen on käyttäjän kannalta hieman ikävää. Teemme luomista helpottamaan pinotehtaan:</p>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Pinotehdas</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="n">Pino</span> <span class="nf">prepaidPino</span><span class="o">(</span><span class="kt">int</span> <span class="n">krediitit</span><span class="o">){</span>
@@ -2185,7 +2227,7 @@ Esim. c-kielessä on tapana ollut kirjoittaa todella tiivistä koodia, jossa yhd
 <span class="n">Pino</span> <span class="n">pino</span> <span class="o">=</span> <span class="n">rakenna</span><span class="o">.</span><span class="na">prepaid</span><span class="o">(</span><span class="mi">10</span><span class="o">).</span><span class="na">kryptattu</span><span class="o">().</span><span class="na">pino</span><span class="o">();</span>
 </code></pre></div></div>
 
-<p>Rakentajan metodinimet ja rakentajan muuttujan nimi on valittu mielenkiinoisella tavalla. On pyritty mahdollisimman luonnollista kieltä muistuttavaan ilmaisuun pinon luonnissa. Kyseessä onkin oikeastaan <a href="https://martinfowler.com/bliki/DomainSpecificLanguage.html">DSL</a> (enhl. domain specific language) pinojen luomiseen!</p>
+<p>Rakentajan metodinimet ja rakentajan muuttujan nimi on valittu mielenkiinoisella tavalla. On pyritty mahdollisimman luonnollista kieltä muistuttavaan ilmaisuun pinon luonnissa. Kyseessä onkin oikeastaan <a href="https://martinfowler.com/bliki/DomainSpecificLanguage.html">DSL</a> (engl. domain specific language) pinojen luomiseen!</p>
 
 <p>Luodaan ensin rakentajasta perusversio, joka soveltuu vasta normaalien pinojen luomiseen:</p>
 
@@ -2326,7 +2368,7 @@ Esim. c-kielessä on tapana ollut kirjoittaa todella tiivistä koodia, jossa yhd
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
-             Ohjelmistotuotanto avoin yliopisto 2020 
+             Ohjelmistotuotanto avoin yliopisto 2021 
           </li>
           <li>
             <a href="mailto:matti.luukkainen@helsinki.fi">matti.luukkainen@helsinki.fi</a>
