@@ -7,9 +7,10 @@ permalink: /tehtavat/
 
 ## Tehtävät
 
-Kurssiin liittyy viikottaiset laskuharjoitukset. Tehtäviä on _kahden tyyppisiä_ 
-- luennoilla ja kurssimateriaalissa läpikäytävää teoriaa kertaavat _viikoittaiset monivalintatehtävät_, joiden deadline on sunnuntaina klo 23:59:00
-- toinen osa tehtävistä käsittelee ohjelmistotuotantoon liittyviä teknisempiä asioita, kuten versionhallintaa, testaamista ja ohjelmistojen konfigurointia, näiden deadline on _maanantaina klo 23:59_
+Kurssiin liittyy viikottaiset laskuharjoitukset. Tehtäviä on _kahden tyyppisiä_:
+
+- Luennoilla ja kurssimateriaalissa läpikäytävää teoriaa kertaavat _viikoittaiset monivalintatehtävät_
+- Toinen osa tehtävistä käsittelee ohjelmistotuotantoon liittyviä teknisempiä asioita, kuten versionhallintaa, testaamista ja ohjelmistojen konfigurointia. Tehtävistä on tarjolla sekä Python-, että Java-ohjelmointikielten versiot. Valitse kurssin aluksi haluamasi ohjelmointikieli ja tee jokaisella viikolla siihen liittyvät tehtävät. Huomaa, että **viikon tehtävät tarvitsee tehdä vain yhden ohjelmointikielen osalta**. Ohjelmointikielen vaihtaminen kesken kurssin ei ole suositeltavaa
 
 Tehtävien vaikutus kurssin arvosteluun selviää [osasta 0](/osa0#kurssin-arvostelu).
 
@@ -20,36 +21,51 @@ Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto
 
 ### Viikko 1
 
-- [monivalintatehtävät]({{site.stats_url}}/quiz/1) deadline sunnuntaina 1.11. klo 23:59:00 
-- [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat1) deadline maanantaina 2.11. klo 23:59 
+###
+
+- [Monivalintatehtävät]({{site.stats_url}}/quiz/1)
+- Ohjelmointi/versionhallinta/konfigurointitehtävät:
+  - [Python](/python/tehtavat1)
+  - [Java](/tehtavat1)
 
 ### Viikko 2
 
-- [monivalintatehtävät]({{site.stats_url}}/quiz/2) deadline sunnuntaina 8.11. klo 23:59:00 
-- [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat2) deadline maanantaina 9.11. klo 23:59 
+- [Monivalintatehtävät]({{site.stats_url}}/quiz/2)
+- Ohjelmointi/versionhallinta/konfigurointitehtävät:
+  - [Python](/python/tehtavat2)
+  - [Java](/tehtavat2)
 
 ### Viikko 3
 
-- [monivalintatehtävät]({{site.stats_url}}/quiz/3) deadline sunnuntaina 15.11. klo 23:59:00 
-- [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat3) deadline maanantaina 16.11. klo 23:59 
+- [Monivalintatehtävät]({{site.stats_url}}/quiz/3)
+- Ohjelmointi/versionhallinta/konfigurointitehtävät:
+  - [Python](/python/tehtavat3)
+  - [Java](/tehtavat3)
 
 ### Viikko 4
 
-- [monivalintatehtävät]({{site.stats_url}}/quiz/4) deadline sunnuntaina 22.11. klo 23:59:00 
-- [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat4) deadline maanantaina 23.11. klo 23:59 
+- [Monivalintatehtävät]({{site.stats_url}}/quiz/4)
+- Ohjelmointi/versionhallinta/konfigurointitehtävät:
+  - [Python](/python/tehtavat4)
+  - [Java](/tehtavat4)
 
 ### Viikko 5
 
-- [monivalintatehtävät]({{site.stats_url}}/quiz/5) deadline maanantaina 30.11. klo 23:59:00 
-- [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat5) deadline maanantaina 30.11. klo 23:59 
+- [Monivalintatehtävät]({{site.stats_url}}/quiz/5)
+- Ohjelmointi/versionhallinta/konfigurointitehtävät:
+  - [Python](/python/tehtavat5)
+  - [Java](/tehtavat5)
 
 ### Viikko 6
 
-- [monivalintatehtävät]({{site.stats_url}}/quiz/6) deadline on perjantaina 11.12 klo 23:59:00 
-- [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat6) deadline maanantaina 7.12. klo 23:59 
-
+- [monivalintatehtävät]({{site.stats_url}}/quiz/6)
+- Ohjelmointi/versionhallinta/konfigurointitehtävät:
+  - [Python](/python/tehtavat6)
+  - [Java](/tehtavat6)
 
 ### Viikko 7
 
-- [monivalintatehtävät]({{site.stats_url}}/quiz/7) deadline on perjantaina 18.12 klo 23:59:00 
-- [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat7) deadline maanantaina 14.12. klo 23:59 
+- [Monivalintatehtävät]({{site.stats_url}}/quiz/7)
+- Ohjelmointi/versionhallinta/konfigurointitehtävät:
+  - [Python](/python/tehtavat7)
+  - [Java](/tehtavat7)
