@@ -22,6 +22,7 @@ github_username:  mluukkai
 repo_url: "https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io"
 repo_branch: "master"
 stats_url: "https://study.cs.helsinki.fi/stats/courses/ohtu2020"
+python_exercise_repo_url: "https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021"
 
 # Build settings
 markdown: kramdown

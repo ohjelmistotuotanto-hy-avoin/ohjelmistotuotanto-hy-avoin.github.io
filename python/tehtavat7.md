@@ -86,7 +86,7 @@ __/
 
 ### 3. ja 4. (kahden rastin tehtävä) KPS yksin- ja kaksinpeli
 
-[Kurssirepositorion](https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021) hakemistosta _koodi/viikko7/kivi-paperi-sakset_ löytyy tutun pelin tietokoneversio.
+[Kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistosta _koodi/viikko7/kivi-paperi-sakset_ löytyy tutun pelin tietokoneversio.
 
 - Ohjelmassa on kolme pelimoodia: ihminen vs. ihminen, ihminen vs. yksinkertainen tekoäly ja ihminen vs. monimutkainen tekoäly
 - Koodi sisältää runsaat määrät copy pastea, muutenkaan oliosuunnittelun periaatteet eivät ole vielä alkuperäisellä ohjelmoijalla olleet hallussa

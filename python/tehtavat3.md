@@ -30,7 +30,7 @@ Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C
 
 ### 1. Poetry ja riippuvuuksien lisääminen
 
-Hae [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021) hakemistossa _koodi/viikko3/nhl-reader_ lähes tyhjä Poetry-projektin runko. Mukana on kohta tarvitsemasi luokka `Player`.
+Hae [kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko3/nhl-reader_ lähes tyhjä Poetry-projektin runko. Mukana on kohta tarvitsemasi luokka `Player`.
 
 Tehdään ohjelma, jonka avulla voi hakea <https://nhl.com>-sivulta kuluvan kauden NHL-liigan tilastotietoja. Jos tarkkoja ollaan, niin tilastot haetaan tämän kurssin tarpeisiin rakennetulta palvelimelta, joka hakee todelliset tilastot NHL:n sivulta kerran vuorokaudessa.
 
@@ -130,7 +130,7 @@ Lue [täällä](/python/robot_framework) oleva Robot Framework -johdanto ja tee 
 
 ### 4. Kirjautumisen testit
 
-Hae [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021) hakemistossa _koodi/viikko3/login-robot_ oleva projekti.
+Hae [kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko3/login-robot_ oleva projekti.
 
 Tutustu ohjelman rakenteeseen. Huomaa, että ohjelman `UserService`-olio ei tallenna suoraan `User`-oliota vaan epäsuorasti `UserRepository`-luokan olion kautta. Mistä on kysymys?
 
@@ -287,7 +287,7 @@ Kun olet lopettanut debuggaamiseen, syötä `exit()` ja ota `breakpoint()`-rivi 
 
 ### 6. WebLogin
 
-Tarkastellaan edellisestä tehtävästä tutun toiminnallisuuden tarjoamaa esimerkkiprojektia, joka löytyy [kurssirepositorion](https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021) hakemistossa _koodi/viikko3/web-login-robot_ oleva projekti. Sovellus on toteutettu [Flask](https://flask.palletsprojects.com/)-nimisellä minimalistisella web-sovelluskehyksellä.
+Tarkastellaan edellisestä tehtävästä tutun toiminnallisuuden tarjoamaa esimerkkiprojektia, joka löytyy [kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko3/web-login-robot_ oleva projekti. Sovellus on toteutettu [Flask](https://flask.palletsprojects.com/)-nimisellä minimalistisella web-sovelluskehyksellä.
 
 Hae projekti, asenna sen riippuvuudet komennollla `poetry install` ja käynnistä se virtuaaliympäristössä komennolla `python3 src/index.py`. Sovelluksen käynnistymisen jälkeet pääset käyttämään sitä avaamalla selaimella osoitteen <http://localhost:5000>
 
@@ -426,7 +426,7 @@ Tiedoston `*** Keywords ***` osiossa on testitapausten käyttämiä avainsanoja:
 - `Set Username`- ja `Set Password`-avainsanat syöttävät annetut arvot tiettyihin kenttiin käyttämällä [Input Text](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Input%20Text)- ja [Input Password](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Input%20Password)-avainsanoja (huomaa, että salasanan kenttä ei ole tavallinen tekstikenttä, vaan salasanakenttä)
 - `Create User And Go To Login Page`-avainsana luo sovellukseen käyttäjän ja avaa kirjautumis-sivun
 
-Testitapauksissa ollaan interaktiossa erilaisten HTML-elementtien, kuten tekstikenttien ja painikkeiden kanssa. Selenium yrittää löytää elementin annettujen argumenttien perusteella käyttäen [tiettyä strategiaa](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Locating%20elements). Esimerkiksi `Click Button foo` löytää seuraavat [button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)-elementit:
+Testitapauksissa ollaan interaktiossa erilaisten HTML-elementtien, kuten tekstikenttien ja painikkeiden kanssa. Selenium yrittää löytää elementin annettujen argumenttien perusteella käyttäen [tiettyä strategiaa](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Locating%20elements). Esimerkiksi <code>Click Button &nbsp;foo</code> löytää seuraavat [button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)-elementit:
 
 ```html
 <button id="foo">Click</button>
@@ -434,13 +434,13 @@ Testitapauksissa ollaan interaktiossa erilaisten HTML-elementtien, kuten tekstik
 <button>foo</button>
 ```
 
-Selenium siis etsii `button`-elementin, jonka `id`-attribuutin arvo, `name`-attribuutin arvo, tai sisältö vastaa annettua argumenttia. Kutsu `Click Button Login` löytää siis seuraavan _src/templates/login.html_-tiedostossa määritellyn painikkeen:
+Selenium siis etsii `button`-elementin, jonka `id`-attribuutin arvo, `name`-attribuutin arvo, tai sisältö vastaa annettua argumenttia. Kutsu <code>Click Button &nbsp;Login</code> löytää siis seuraavan _src/templates/login.html_-tiedostossa määritellyn painikkeen:
 
 ```html
 <button>Login</button>
 ```
 
-Samalla tavoin kutsu `Input Text username kalle` löytää `id`-attribuutin avulla seuraavan `input`-elementin:
+Samalla tavoin kutsu <code>Input Text &nbsp;username &nbsp;kalle</code> löytää `id`-attribuutin avulla seuraavan `input`-elementin:
 
 ```html
 <input type="text" name="username" id="username" />
