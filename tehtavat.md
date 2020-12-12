@@ -56,7 +56,7 @@ Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto
 
 ### Viikko 6
 
-- [monivalintatehtävät]({{site.stats_url}}/quiz/6)
+- [Monivalintatehtävät]({{site.stats_url}}/quiz/6)
 - Ohjelmointi/versionhallinta/konfigurointitehtävät:
   - [Python](/python/tehtavat6)
   - [Java](/tehtavat6)

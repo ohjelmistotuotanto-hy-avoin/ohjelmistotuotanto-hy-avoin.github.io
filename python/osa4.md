@@ -654,7 +654,7 @@ class MaaraaikaisTili(Tili):
         self.nostokielto = False
 
     def siirra_rahaa_tililta(self, tilille, summa):
-        if nostokielto:
+        if self.nostokielto:
             return False
 
         return super().siirra_rahaa_tililta(tilille, summa)
@@ -1051,17 +1051,17 @@ Koska kaksi parametria käyttäjältä kysyvillä komennoilla, kuten summa, tulo
 ```python
 class BinaariOperaatio:
     def __init__(self, io):
-        self.io = io
-        self.luku1 = 0
-        self.luku2 = 0
+        self._io = io
+        self._luku1 = 0
+        self._luku2 = 0
 
     def suorita(self):
-        self.luku1 = int(self.io.lue("Luku 1:"))
-        self.luku2 = int(self.io.lue("Luku 2:"))
+        self._luku1 = int(self._io.lue("Luku 1:"))
+        self._luku2 = int(self._io.lue("Luku 2:"))
 
-        self.io.kirjoita(f"Vastaus: {self.laske()}")
+        self.io.kirjoita(f"Vastaus: {self._laske()}")
 
-    def laske(self):
+    def _laske(self):
         return 0
 ```
 
@@ -1072,15 +1072,15 @@ class Summa(BinaariOperaatio):
     def __init__(self, io):
         super().__init__(io)
 
-    def laske(self):
-        return self.luku1 + self.luku2
+    def _laske(self):
+        return self._luku1 + self._luku2
 
 class Tulo(BinaariOperaatio):
     def __init__(self, io):
         super().__init__(io)
 
-    def laske(self):
-        return self.luku1 * self.luku2
+    def _laske(self):
+        return self._luku1 * self._luku2
 ```
 
 Jos sovellukseen haluttaisiin toteuttaa lisää kaksiparametrisia operaatioita, esimerkiksi erotus, riittäisi erittäin yksinkertainen lisäys:
@@ -1090,8 +1090,8 @@ class Erotus(BinaariOperaatio):
     def __init__(self, io):
         super().__init__(io)
 
-    def laske(self):
-        return self.luku1 - self.luku2
+    def _laske(self):
+        return self._luku1 - self._luku2
 ```
 
 Ja mikä parasta, ainoa muu luokka, jota on koskettava on komentoja luova `Komentotehdas`-luokka.
@@ -1122,25 +1122,25 @@ class BinaariOperaatio:
     # ...
 
     def suorita(self):
-        self.luku1 = int(self.io.lue("Luku 1:"))
-        self.luku2 = int(self.io.lue("Luku 2:"))
+        self._luku1 = int(self._io.lue("Luku 1:"))
+        self._luku2 = int(self._io.lue("Luku 2:"))
 
-        self.io.kirjoita(f"Vastaus: {self.laske()}")
+        self._io.kirjoita(f"Vastaus: {self._laske()}")
 
-    def laske(self):
+    def _laske(self):
         return 0
 ```
 
-Suorituslogiikan vaihtuva osa eli operaation laskun tulos on määritelty metodina `laske`, jota metodi `suorita` kutsuu.
+Suorituslogiikan vaihtuva osa eli operaation laskun tulos on määritelty metodina `_laske`, jota metodi `suorita` kutsuu.
 
-Konkreettiset toteutukset `Summa` ja `Tulo` ylikirjoittavat metodin `laske`, määrittelemällä miten laskenta tietyssä konkreettisessa tilanteessa tapahtuu:
+Konkreettiset toteutukset `Summa` ja `Tulo` ylikirjoittavat metodin `_laske`, määrittelemällä miten laskenta tietyssä konkreettisessa tilanteessa tapahtuu:
 
 ```python
 class Summa(BinaariOperaatio):
     # ...
 
-    def laske(self):
-        return self.luku1 + self.luku2
+    def _laske(self):
+        return self._luku1 + self._luku2
 ```
 
 Luokan metodi `suorita` on _template-metodi_, joka määrittelee suorituksen siten, että suorituksen eroava osa määritellään yliluokan metodina, jonka aliluokat ylikirjoittavat. Template-metodin avulla siis saadaan määriteltyä "geneerinen algoritmirunko", jota voidaan aliluokissa erikoistaa sopivalla tavalla.
@@ -1172,17 +1172,17 @@ Tarkastellaan [Project Gutenbergistä](http://www.gutenberg.org/) löytyvien kir
 ```python
 class GutenbergLukija:
     def __init__(self, osoite):
-        self.rivit = []
+        self._rivit = []
 
         data = request.urlopen(osoite)
 
         for rivi in data:
-            self.rivit.append(rivi.encode("utf-8").strip())
+            self._rivit.append(rivi.encode("utf-8").strip())
 
     def rivit(self):
         palautettavat = []
 
-        for rivi in self.rivit:
+        for rivi in self._rivit:
             palautettavat.append(rivi)
 
         return palautettavat
@@ -1190,7 +1190,7 @@ class GutenbergLukija:
     def rivit_jotka_paattyvat_huutomerkkiin(self):
         ehdot_tayttavat = []
 
-        for rivi in self.rivit:
+        for rivi in self._rivit:
             if rivi.endswith("!"):
                 ehdot_tayttavat.append(rivi)
 
@@ -1199,7 +1199,7 @@ class GutenbergLukija:
     def rivit_joilla_sana(self, sana):
         ehdot_tayttavat = []
 
-        for rivi in self.rivit:
+        for rivi in self._rivit:
             if sana in rivi:
                 ehdot_tayttavat.append(rivi)
 
@@ -1233,10 +1233,10 @@ Toteutetaan valintastrategiasta vastaavat luokat niin, että ne toteuttavat meto
 ```python
 class SisaltaaSanan:
     def __init__(self, sana):
-        self.sana = sana
+        self._sana = sana
 
     def test(self, rivi):
-        return self.sana in rivi
+        return self._sana in rivi
 ```
 
 Ideana on luoda jokaista kirjojen erilaista _hakuehtoa_ kohti oma ehdon tarkistava luokkansa. `SisaltaaSanan`-luokasta voi luoda olion seuraavasti:
@@ -1261,7 +1261,7 @@ Kirjasta voidaan palauttaa oikean ehdon täyttävät sanat lisäämällä luokal
 def rivit_jotka_tayttavat_ehdon(self, ehto):
     palautettavat_rivit = []
 
-    for rivi in self.rivit:
+    for rivi in self._rivit:
         if ehto.test(rivi):
             palautettavat_rivit.append(rivi)
 
@@ -1283,7 +1283,7 @@ Ehdot voidaan esittää luokkien sijaan myös yksinkeritasemma muodossa, esimerk
 def rivit_jotka_tayttavat_ehdon(self, ehto):
     palautettavat_rivit = []
 
-    for rivi in self.rivit:
+    for rivi in self._rivit:
         if ehto(rivi):
             palautettavat_rivit.append(rivi)
 
@@ -1333,7 +1333,7 @@ def __init__(self, osoite):
         request.urlopen(osoite)
     )
 
-    self.rivit = list(rivit_iterator)
+    self._rivit = list(rivit_iterator)
 ```
 
 Huomaa, ettei `map`-funktio palauta listaa, vaan iteraattorin. Iteraattorin voi muuttaa listaksi helposti, [list](https://docs.python.org/3/library/functions.html#func-list)-funktion avulla.
@@ -1344,7 +1344,7 @@ Hyvä käyttökohde `filter`-funktiolle on `GutenbergLukija`-luokan metodi `rivi
 
 ```python
 def rivit_jotka_tayttavat_ehdon(self, ehto):
-    palautettavat_rivit_iterator = filter(ehto, self.rivit)
+    palautettavat_rivit_iterator = filter(ehto, self._rivit)
 
     return list(palautettavat_rivit_iterator)
 ```
@@ -1478,16 +1478,16 @@ Olemme toteuttaneet asiakkaalle pinon:
 ```python
 class Pino:
     def __init__(self):
-        self.alkiot = []
+        self._alkiot = []
 
     def push(self, alkio):
-        self.alkiot.append(alkio)
+        self._alkiot.append(alkio)
 
     def pop(self):
-        return self.alkiot.pop()
+        return self._alkiot.pop()
 
     def empty(self):
-        return len(self.alkiot) == 0
+        return len(self._alkiot) == 0
 
 def main():
     pino = Pino()
@@ -1530,26 +1530,26 @@ Onneksi suunnittelumalli _dekoraattori_ (engl. decorator) sopii juuri tilanteese
 ```python
 class PrepaidPino:
     def __init__(self, pino, krediitteja):
-        self.pino = pino
-        self.krediitteja = krediitteja
-
-    def kuluta_krediitti(self):
-        if self.krediitteja == 0:
-            raise Exception("Pinossa ei ole enää käyttöoikeutta")
-
-        self.krediitteja = self.krediitteja - 1
+        self._pino = pino
+        self._krediitteja = krediitteja
 
     def push(self, alkio):
-        self.kuluta_krediitti()
-        self.pino.push(alkio)
+        self._kuluta_krediitti()
+        self._pino.push(alkio)
 
     def pop(self):
-        self.kuluta_krediitti()
-        return self.pino.pop()
+        self._kuluta_krediitti()
+        return self._pino.pop()
 
     def empty(self):
-        self.kuluta_krediitti()
-        return self.pino.empty()
+        self._kuluta_krediitti()
+        return self._pino.empty()
+
+    def _kuluta_krediitti(self):
+        if self._krediitteja == 0:
+            raise Exception("Pinossa ei ole enää käyttöoikeutta")
+
+        self._krediitteja = self._krediitteja - 1
 ```
 
 `PrepaidPino`-luokka **sisältää** pinon, jonka se saa konstruktoriparametrina. Tätä sisältämäänsä pinoa `PrepaidPino`-luokka käyttää tallettamaan kaikki alkionsa. Eli jokainen `PrepaidPino`-luokan operaatio _delegoi_ operaation toiminnallisuuden toteuttamisen sisältämälleen pinolle.
@@ -1567,9 +1567,18 @@ Kahden muun pinon toteutukset ovat seuraavanlaiset:
 ```python
 class KryptattuPino:
     def __init__(self, pino):
-        self.pino = pino
+        self._pino = pino
 
-    def dekryptaa(self, alkio):
+    def push(self, alkio):
+        self._pino.push(self._kryptaa(alkio))
+
+    def pop(self):
+        return self._dekryptaa(self._pino.pop())
+
+    def empty(self):
+        return self._pino.empty()
+    
+    def _dekryptaa(self, alkio):
         dekryptattu = ""
         merkkijono_alkio = str(alkio)
 
@@ -1578,7 +1587,7 @@ class KryptattuPino:
 
         return dekryptattu
 
-    def kryptaa(self, alkio):
+    def _kryptaa(self, alkio):
         kryptattu = ""
         merkkijono_alkio = str(alkio)
 
@@ -1587,33 +1596,24 @@ class KryptattuPino:
 
         return kryptattu
 
-    def push(self, alkio):
-        self.pino.push(self.kryptaa(alkio))
-
-    def pop(self):
-        return self.dekryptaa(self.pino.pop())
-
-    def empty(self):
-        return self.pino.empty()
-
 class LokiPino:
     def __init__(self, pino, loki):
-        self.pino = pino
-        self.loki = loki
+        self._pino = pino
+        self._loki = loki
 
     def push(self, alkio):
-        self.loki.kirjoita(f"Push: {alkio}")
-        self.pino.push(alkio)
+        self._loki.kirjoita(f"Push: {alkio}")
+        self._pino.push(alkio)
 
     def pop(self):
-        alkio = self.pino.pop()
-        self.loki.kirjoita(f"Pop: {alkio}")
+        alkio = self._pino.pop()
+        self._loki.kirjoita(f"Pop: {alkio}")
 
         return alkio
 
     def empty(self):
-        onko_tyhja = self.pino.empty()
-        self.loki.kirjoita(f"Empty: {onko_tyhja}")
+        onko_tyhja = self._pino.empty()
+        self._loki.kirjoita(f"Empty: {onko_tyhja}")
 
         return onko_tyhja
 ```
@@ -1701,10 +1701,10 @@ Saamme rakentajan ensimmäisen version toimimaan seuraavasti:
 ```python
 class Pinorakentaja:
     def __init__(self):
-        self.pino_olio = Pino()
+        self._pino_olio = Pino()
     
     def pino(self):
-        return self.pino_olio
+        return self._pino_olio
 ```
 
 Eli kun `Pinorakentaja`-olio luodaan, rakentaja luo pinon. Rakentajan "rakennusvaiheen alla" olevan pinon voi pyytää rakentajalta kutsumalla metodia `pino`.
@@ -1722,13 +1722,13 @@ Jotta edellinen menisi kääntäjästä läpi, tulee rakentajalle lisätä metod
 ```python
 class Pinorakentaja:
     def __init__(self, pino = Pino()):
-        self.pino_olio = pino
+        self._pino_olio = pino
     
     def prepaid(self, krediitit):
         # ???
 
     def pino(self):
-        return self.pino_olio
+        return self._pino_olio
 ```
 
 Rakentaja siis pitää oliomuuttujassa rakentumassa olevaa pinoa. Kun kutsumme rakentajalle metodia `prepaid` ideana on, että rakentaja dekoroi rakennuksen alla olevan pinon prepaid-pinoksi. Metodi palauttaa uuden `Pinorakentaja`-olion, jolle se antaa konstruktorin parametrina dekoroidun pinon. Tämä mahdollistaa sen, että metodikutsun jälkeen päästään edelleen käsiksi työn alla olevaan pinoon. Koodi siis seuraavassa:
@@ -1736,13 +1736,13 @@ Rakentaja siis pitää oliomuuttujassa rakentumassa olevaa pinoa. Kun kutsumme r
 ```python
 class Pinorakentaja:
     def __init__(self, pino = Pino()):
-        self.pino_olio = pino
+        self._pino_olio = pino
     
     def prepaid(self, krediitit):
-        return Pinorakentaja(PrepaidPino(self.pino_olio, krediitit))
+        return Pinorakentaja(PrepaidPino(self._pino_olio, krediitit))
 
     def pino(self):
-        return self.pino_olio
+        return self._pino_olio
 ```
 
 Samalla periaatteella lisätään rakentajalle metodit, joiden avulla työn alla oleva pino saadaan dekoroitua lokipinoksi tai kryptaavaksi pinoksi:
@@ -1750,19 +1750,19 @@ Samalla periaatteella lisätään rakentajalle metodit, joiden avulla työn alla
 ```python
 class Pinorakentaja:
     def __init__(self, pino = Pino()):
-        self.pino_olio = pino
+        self._pino_olio = pino
     
     def prepaid(self, krediitit):
-        return Pinorakentaja(PrepaidPino(self.pino_olio, krediitit))
+        return Pinorakentaja(PrepaidPino(self._pino_olio, krediitit))
 
     def kryptattu(self):
-        return Pinorakentaja(KryptattuPino(self.pino_olio))
+        return Pinorakentaja(KryptattuPino(self._pino_olio))
 
     def loggaava(self, loki):
-        return Pinorakentaja(LokiPino(self.pino_olio, loki))
+        return Pinorakentaja(LokiPino(self._pino_olio, loki))
 
     def pino(self):
-        return self.pino_olio
+        return self._pino_olio
 ```
 
 Rakentajan koodi voi vaikuttaa aluksi hieman hämmentävältä.
@@ -1783,7 +1783,7 @@ Vastaavalla tavalla voidaan luoda pinoja muillakin ominaisuuksilla:
 rakentaja = Pinorakentaja()
 
 pino1 = rakentaja.pino();  # luo normaalin pinon
-pino2 = rakentaja.kryptattu().loggaava(loki).prepaid.pino()  # luo sen mitä odottaa saattaa!
+pino2 = rakentaja.kryptattu().loggaava(loki).prepaid().pino()  # luo sen mitä odottaa saattaa!
 ```
 
 Huomaa, että rakentajan metodi-kutsuvat luovat aina uuden rakentajan, joten edellistä rakentajaa ei muokata. Tämä estää potentiaaliset bugit, jotka voisi syntyä esimerkiksi seuraavassa koodissa:

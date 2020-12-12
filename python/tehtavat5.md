@@ -109,35 +109,35 @@ Asenna projektin riippuvuudet komenolla `poetry install` ja käynnistä laskin v
 Sovelluksen avulla pystyy tällä hetkellä tekemään yhteen- ja vähennyslaskuja, sekä nollaamaan laskimen arvon. Laskutoimituksen kumoamista varten on lisätty jo painike "Kumoa", joka ei vielä toistaiseksi tee mitään. Sovelluksen varsinainen toimintalogiikka on luokassa `Kayttoliittyma`. Koodissa on tällä hetkellä hieman ikävä `if`-hässäkkä:
 
 ```python
-def suorita_komento(self, komento):
+def _suorita_komento(self, komento):
     arvo = 0
 
     try:
-        arvo = int(self.syote_kentta.get())
+        arvo = int(self._syote_kentta.get())
     except Exception:
         pass
 
     if komento == Komento.SUMMA:
-        self.sovellus.plus(arvo)
+        self._sovellus.plus(arvo)
     elif komento == Komento.EROTUS:
-        self.sovellus.miinus(arvo)
+        self._sovellus.miinus(arvo)
     elif komento == Komento.NOLLAUS:
-        self.sovellus.nollaa()
+        self._sovellus.nollaa()
     elif komento == Komento.KUMOA:
         pass
 
-    self.kumoa_painike["state"] = constants.NORMAL
+    self._kumoa_painike["state"] = constants.NORMAL
 
-    if self.sovellus.tulos == 0:
-        self.nollaus_painike["state"] = constants.DISABLED
+    if self._sovellus.tulos == 0:
+        self._nollaus_painike["state"] = constants.DISABLED
     else:
-        self.nollaus_painike["state"] = constants.NORMAL
+        self._nollaus_painike["state"] = constants.NORMAL
 
-    self.syote_kentta.delete(0, constants.END)
-    self.tulos_var.set(self.sovellus.tulos)
+    self._syote_kentta.delete(0, constants.END)
+    self._tulos_var.set(self._sovellus.tulos)
 ```
 
-Refaktoroi koodi niin, ettei `suorita_komento`-metodi sisällä pitkää `if`-hässäkkää. Hyödynnä kurssimateriaalin osassa 4 esiteltyä suunnittelumallia [command](/osa4#laskin-ja-komento-olio-viikko-5).
+Refaktoroi koodi niin, ettei `_suorita_komento`-metodi sisällä pitkää `if`-hässäkkää. Hyödynnä kurssimateriaalin osassa 4 esiteltyä suunnittelumallia [command](/osa4#laskin-ja-komento-olio-viikko-5).
 
 Tässä tehtävässä ei tarvitse vielä toteuttaa kumoa-komennon toiminnallisuutta!
 
@@ -153,30 +153,33 @@ class Komento(Enum):
 
 class Kayttoliittyma:
     def __init__(self, sovellus, root):
-        self.kommenot = {
-            Komento.SUMMA: Summa(sovellus, self.lue_syote),
-            Komento.EROTUS: Erotus(sovellus, self.lue_syote),
-            Komento.NOLLAUS: Nollaus(sovellus, self.lue_syote),
-            Komento.KUMOA: Kumoa(sovellus, self.lue_syote)
+        self._sovellus = sovellus
+        self._root = root
+
+        self._kommenot = {
+            Komento.SUMMA: Summa(sovellus, self._lue_syote),
+            Komento.EROTUS: Erotus(sovellus, self._lue_syote),
+            Komento.NOLLAUS: Nollaus(sovellus, self._lue_syote),
+            Komento.KUMOA: Kumoa(sovellus, self._lue_syote)
         }
     
-    def lue_syote(self):
-        return self.syote_kentta.get()
-
-    def suorita_komento(self, komento):
-        komento_olio = self.komennot[komento]
-        komento_olio.suorita()
-        self.kumoa_painike["state"] = constants.NORMAL
-
-        if self.sovellus.tulos == 0:
-            self.nollaus_painike["state"] = constants.DISABLED
-        else:
-            self.nollaus_painike["state"] = constants.NORMAL
-
-        self.syote_kentta.delete(0, constants.END)
-        self.tulos_var.set(self.sovellus.tulos)
-
     # ...
+
+    def _lue_syote(self):
+        return self._syote_kentta.get()
+
+    def _suorita_komento(self, komento):
+        komento_olio = self._komennot[komento]
+        komento_olio.suorita()
+        self._kumoa_painike["state"] = constants.NORMAL
+
+        if self._sovellus.tulos == 0:
+            self._nollaus_painike["state"] = constants.DISABLED
+        else:
+            self._nollaus_painike["state"] = constants.NORMAL
+
+        self._syote_kentta.delete(0, constants.END)
+        self._tulos_var.set(self._sovellus.tulos)
 ```
 
 Komennoilla on nyt siis metodi `suorita` ja ne saavat konstruktorin kautta `Sovellus`-olion ja funktion, jota kutsumalla syötteen voi lukea.

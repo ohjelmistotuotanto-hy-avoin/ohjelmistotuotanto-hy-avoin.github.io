@@ -232,7 +232,7 @@ Jos virheen löytäminen pelkän manuaalisen testauksen avulla ei tuota tulosta,
 ```python
 class UserService:
     def __init__(self, user_repository):
-        self.user_repository = user_repository
+        self._user_repository = user_repository
 
     def check_credentials(self, username, password):
         # pysäytetään ohjelman suoritus tälle riville
@@ -241,7 +241,7 @@ class UserService:
         if not username or not password:
             raise UserInputError("Username and password are required")
 
-        user = self.user_repository.find_by_username(username)
+        user = self._user_repository.find_by_username(username)
 
         if not user or user.password != password:
             raise AuthenticationError("Invalid username or password")
@@ -268,10 +268,10 @@ Kyseessä on interaktiivinen komentorivi, jossa voimme suorittaa koodia. Nuoli (
 (Pdb)
 ```
 
-Annamme siis komentoriville syötteen ja painamme Enter-painiketta. Jatketaan koodin suorittamista antamalla syöte `next()`. Koodi on ohittanut `if`-lauseen (koska muuttujilla oli arvot) ja on seuraavaksi suorittamassa riviä `user = self.user_repository.find_by_username(username)`:
+Annamme siis komentoriville syötteen ja painamme Enter-painiketta. Jatketaan koodin suorittamista antamalla syöte `next()`. Koodi on ohittanut `if`-lauseen (koska muuttujilla oli arvot) ja on seuraavaksi suorittamassa riviä `user = self._user_repository.find_by_username(username)`:
 
 ```
--> user = self.user_repository.find_by_username(username)
+-> user = self._user_repository.find_by_username(username)
 (Pdb)
 ```
 

@@ -102,27 +102,30 @@ Jos teet tehtävän mielestäsi kaikkien tyylisääntöjen mukaan, merkkaa 2 ras
 ```python
 class KPS:
     def __init__(self):
-        self.lue = input
-        self.kirjoita = print
+        self._lue = input
+        self._kirjoita = print
 
     def pelaa(self):
         tuomari = Tuomari()
 
-        ekan_siirto = self.ensimmaisen_siirto()
-        tokan_siirto = self.toisen_siirto(ekan_siirto)
+        ekan_siirto = self._ensimmaisen_siirto()
+        tokan_siirto = self._toisen_siirto(ekan_siirto)
 
-        while self.onko_ok_siirto(ekan_siirto) and self.onko_ok_siirto(tokan_siirto):
+        while self._onko_ok_siirto(ekan_siirto) and self._onko_ok_siirto(tokan_siirto):
             # ...
 
-        self.kirjoita("Kiitos!")
-        self.kirjoita(tuomari)
+        self._kirjoita("Kiitos!")
+        self._kirjoita(tuomari)
+
+    def _ensimmaisen_siirto(self):
+      return self._lue("Ensimmäisen pelaajan siirto: ")
 
     # tämän metodin toteutus vaihtelee eri pelityypeissä
-    def toisen_siirto(self, ekan_siirto):
+    def _toisen_siirto(self, ensimmaisen_siirto):
         # metodin oletustoteutus
         return "k"
 
-    def onko_ok_siirto(self, siirto):
+    def _onko_ok_siirto(self, siirto):
         return siirto == "k" or siirto == "p" or siirto == "s"
 ```
 
@@ -132,8 +135,8 @@ Erilliset pelit sitten perivät luokan ja erikoistavat sitä tarpeidensa mukaan:
 # luokka perii luokan KPS
 class KPSPelaajaVsPelaaja(KPS):
     # toteutetaan metodi pelityypin mukaisesti
-    def toisen_siirto(self, ekan_siirto):
-        tokan_siirto = self.lue("Toisen pelaajan siirto: ")
+    def _toisen_siirto(self, ensimmaisen_siirto):
+        tokan_siirto = self._lue("Toisen pelaajan siirto: ")
 
         return tokan_siirto
 ```
