@@ -101,10 +101,6 @@ Jos teet tehtävän mielestäsi kaikkien tyylisääntöjen mukaan, merkkaa 2 ras
 
 ```python
 class KPS:
-    def __init__(self):
-        self._lue = input
-        self._kirjoita = print
-
     def pelaa(self):
         tuomari = Tuomari()
 
@@ -114,11 +110,11 @@ class KPS:
         while self._onko_ok_siirto(ekan_siirto) and self._onko_ok_siirto(tokan_siirto):
             # ...
 
-        self._kirjoita("Kiitos!")
-        self._kirjoita(tuomari)
+        print("Kiitos!")
+        print(tuomari)
 
     def _ensimmaisen_siirto(self):
-      return self._lue("Ensimmäisen pelaajan siirto: ")
+      return input("Ensimmäisen pelaajan siirto: ")
 
     # tämän metodin toteutus vaihtelee eri pelityypeissä
     def _toisen_siirto(self, ensimmaisen_siirto):
@@ -136,7 +132,7 @@ Erilliset pelit sitten perivät luokan ja erikoistavat sitä tarpeidensa mukaan:
 class KPSPelaajaVsPelaaja(KPS):
     # toteutetaan metodi pelityypin mukaisesti
     def _toisen_siirto(self, ensimmaisen_siirto):
-        tokan_siirto = self._lue("Toisen pelaajan siirto: ")
+        tokan_siirto = input("Toisen pelaajan siirto: ")
 
         return tokan_siirto
 ```
