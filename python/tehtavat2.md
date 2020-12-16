@@ -448,3 +448,5 @@ kauppa = Kauppa(pankki=PankkiStub())
 ```
 
 {% include submission_instructions.md %}
+
+<!-- TODO: puuttuu 2 tehtävää -->

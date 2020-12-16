@@ -124,11 +124,32 @@ Rasmus Ristolainen  BUF   0 +  5 =  5
 - Vinkki 1: voit halutessasi hyödyntää [filter](https://docs.python.org/3/library/functions.html#filter)-funktiota.
 - Vinkki 2: kokeile, mitä `f"{self.name:20}"` tekee merkkijonoesitykselle `Player`-luokan `__str__`-metodissa. Mitä `:20` koodissa tekee? Numeroarvot tulee muuttaa merkkijonomuotoisiksi, jotta lopputulos on oikea. Esimerkiksi `f"{str(self.goals):2}"`.
 
-### 3. Tutustuminen Robot Frameworkkiin
+### 3. Refaktoroitu sovellus
+
+Tällä hetkellä suurin osa pelaajatietoihin liittyvästä koodista on luultavasti `main`-funktiossa. Funktion _koheesion_ aste on melko matala, koska se keskittyy usean toiminallisuuden toteuttamiseen. Koodi kaipaisi siis pientä refaktorointia.
+
+Jaa toiminallisuuden vastuut kahdelle luokkalle: `PlayerReader` ja `Statistics`. `PlayerReader`-luokan vastuulla on hakea JSON-muotoiset pelaajat konstruktorin parametrin kautta annetusta osoitteesta ja muodostaa niistä `Player`-olioita. Tämä voi tapahtua esimerkiksi luokan `get_players`-metodissa. `Statistics`-luokan vastuulla on muodostaa `PlayerReader`-luokan tarjoamien pelaajien perusteella erilaisia tilastoja. Tässä tehtävässä riittää, että luokalla on metodi `top_scorers_by_nationality`, joka palauttaa parametrina annettetun kansalaisuuden pelaajat pisteiden mukaan laskevassa järjestyksessä (suurin pistemäärä ensin).
+
+Refaktoroinnin jälkeen `main`-funktion tulee näyttää suurin piirtein seuraavalta:
+
+```python
+def main():
+    url = "https://nhlstatisticsforohtu.herokuapp.com/players"
+    reader = PlayerReader(url)
+    stats = Statistics(reader)
+    players = stats.top_scorers_by_nationality("FIN")
+
+    for player in players:
+        print(player)
+```
+
+Funktion pitäisi tulostaa samat pelaajat samassa järjestyksessä kuin edellisessä tehtävässä.
+
+### 4. Tutustuminen Robot Frameworkkiin
 
 Lue [täällä](/python/robot_framework) oleva Robot Framework -johdanto ja tee siihen liittyvät tehtävät.
 
-### 4. Kirjautumisen testit
+### 5. Kirjautumisen testit
 
 Hae [kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko3/login-robot_ oleva projekti.
 
@@ -175,7 +196,7 @@ Login With Nonexistent Username
 
 Suorita testitapauksissa sopivat avainsanat, jotta haluttu tapaus tulee testattua.
 
-### 5. Uuden käyttäjän rekisteröitymisen testit
+### 6. Uuden käyttäjän rekisteröitymisen testit
 
 Lisää testihakemistoon uusi testitiedosto _register.robot_. Toteuta tiedostoon user storylle _A new user account can be created if a proper unused username and a proper password are given_ seuraavat testitapaukset:
 
@@ -285,7 +306,7 @@ Suoritetaan rivi syöttämällä uudestaan `next()` ja tulostetaan `user`-muuttu
 
 Kun olet lopettanut debuggaamiseen, syötä `exit()` ja ota `breakpoint()`-rivi pois koodista.
 
-### 6. WebLogin
+### 7. WebLogin
 
 Tarkastellaan edellisestä tehtävästä tutun toiminnallisuuden tarjoamaa esimerkkiprojektia, joka löytyy [kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko3/web-login-robot_ oleva projekti. Sovellus on toteutettu [Flask](https://flask.palletsprojects.com/)-nimisellä minimalistisella web-sovelluskehyksellä.
 
@@ -350,7 +371,7 @@ Koodi tarkistaa käyttäjätunnuksen ja salasan oikeellisuuden kutsumalla `UserS
 
 Tutustu nyt sovelluksen rakenteeseen ja toiminnallisuuteen. Saat sammutettua sovelluksen painamalla komentoriviltä `ctrl+c` tai `ctrl+d`.
 
-### 7. Web-sovelluksen testaaminen osa 1
+### 8. Web-sovelluksen testaaminen osa 1
 
 Jatketaan saman sovelluksen parissa.
 
@@ -455,7 +476,7 @@ Click Register Link
 
 Testitapauksen tulee testata, että "Register"-linkin painaminen avaa rekisteröitymis-sivun. Vinkki: voit käyttää [Click Link](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Click%20Link)-avainsanaa.
 
-### 8. Web-sovelluksen testaaminen osa 2
+### 9. Web-sovelluksen testaaminen osa 2
 
 Jatketaan kirjautumiseen liittyvien hyväksymistestien toteuttamista. Katsotaan sitä ennen pikaisesti, miltä AppLibrary-kirjaston toteutus näyttää. Kirjaston mmärittelevä luokka `AppLibrary` löytyy tiedostosta _src/AppLibrary.py_, jonka sisältö on seuraava:
 
@@ -519,7 +540,7 @@ Login With Nonexistent Username
 # ...
 ```
 
-### 9. Web-sovelluksen testaaminen osa 3
+### 10. Web-sovelluksen testaaminen osa 3
 
 Tehdään seuraavaksi pari muutosta testien suorituksen nopeuttamiseksi. Ensiksi, aseta _resource.robot_-tiedostossa olevan `DELAY`-muuttujan arvoksi `0`. Sen jälkeen, otetaan käyttöön Chrome-selaimen [Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome)-variaatio. "Headless"-selainten käyttö on kätevää esimerkiksi automatisoiduissa testeissä, joissa selaimen käyttöliittymä ei ole tarpeellinen. Suorita testit Headless Chromen avulla asettamalla `BROWSER`-muuttujan arvoksi `headlesschrome`.
 
@@ -548,7 +569,7 @@ Käyttäjätunnus ja salasana noudattavat samoja sääntöjä kuin _tehtäväss�
 
 **Laajenna koodiasi siten, että testit menevät läpi.** Oikea paikka koodiin tuleville muutoksille on <i>src/services/user_service.py</i>-tiedoston `UserService`-luokan metodi `validate`.
 
-### 10. Web-sovelluksen testaaminen osa 4
+### 11. Web-sovelluksen testaaminen osa 4
 
 Tee User storylle _A new user account can be created if a proper unused username and a proper password are given_ vielä seuraavat testitapaukset _register.robot_-tiedostoon:
 
