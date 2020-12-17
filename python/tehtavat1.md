@@ -631,7 +631,7 @@ Tutustumme kurssin aikana muutamiin _suunnittelumalleihin_ (engl. design pattern
 Kurssin ensimmäinen suunnittelumalli _riippuvuuksien injektointi_ (engl. dependency injection), on yksinkertainen periaate, jota noudattamalla koodin automatisoitua testaamista on monissa tilanteissa mahdollista helpottaa ratkaisevalla tavalla.
 
 - Tutustu riippuvuuksien injektointiin lukemalla [tämä dokumentti](/riippuvuuksien_injektointi/)
-- Hae esimerkkiprojekti kurssin [tehtävärepositorion](https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021) hakemistosta [koodi/viikko1/riippuvuuksien-injektointi-1](https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021/tree/main/koodi/viikko1/riippuvuuksien-injektointi-1) ja kokeile että se toimii
+- Hae esimerkkiprojekti kurssin [tehtävärepositorion]({{site.python_exercise_repo_url}}) hakemistosta _koodi/viikko1/riippuvuuksien-injektointi-1_ ja kokeile että se toimii
   - Järkevintä lienee että kloonaat repositorion paikalliselle koneellesi
   - **Tämän jälkeen kannattaa kopioida projekti tehtävien 14-16 palautukseen käyttämäsi repositorion sisälle**
 
@@ -639,7 +639,7 @@ Tutustu riippuvuuksien injektointiin esimerkin avulla. Asenna projektin riippuvu
 
 ### 15. Riippuvuuksien injektointi osa 2: NHL-tilastot
 
-- Kurssin [tehtävärepositorion](https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021) hakemistossa [koodi/viikko1/nhl-statistics-1](https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021/tree/main/koodi/viikko1/nhl-statistics-1) on ohjelma, jonka avulla on mahdollista tutkia <https://nhl.com>-sivulla olevia tilastotietoja (koronan takia NHL:ää ei juuri tällä hetkellä pelata, ja tilastot ovat viime vuodelta)
+- Kurssin [tehtävärepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko1/nhl-statistics-1_ on ohjelma, jonka avulla on mahdollista tutkia <https://nhl.com>-sivulla olevia tilastotietoja (koronan takia NHL:ää ei juuri tällä hetkellä pelata, ja tilastot ovat viime vuodelta)
   - Kopioi projekti edellisen tehtävän repositorion alle omaksi hakemistoksi
   - Asenna projektin riippuvuudet suorittamalla sen juurihakemistossa komento `poetry install`
 - Ohjelma koostuu kolmesta luokasta.
