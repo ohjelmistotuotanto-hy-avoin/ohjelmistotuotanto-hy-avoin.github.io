@@ -32,24 +32,59 @@ Tehtävät 2 ja 3 laajentavat viime viikon ensimmäistä tehtäväsarjaa, eli ne
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
-### 1. Poetryn harjoittelua
+### 1. Poetryn harjoittelua osa 1
 
 Tässä tehtävässä harjoittelemme lisää Poetryn käyttöä ja tutustumme semanttiseen versiointiin. Apua tehtävän tekoon saa mm. Ohjelmistotekniikka-kurssin [Poetry-ohjeesta](https://github.com/ohjelmistotekniikka-hy/python-kevat-2021/blob/master/materiaali/poetry.md) ja [Poetryn dokumentaatiosta](https://python-poetry.org/docs/).
 
 Kuvitellaan tilanne, jossa työskentelet ohjelmistokehittäjänä kehitystiimissä, joka on alkamassa kehittämään web-sovellusta. Olette päätyneet kehittämään sovelluksen Pythonilla ja käyttämään Poetrya riippuvuuksien hallinnassa.
 
+Tee seuraavat toimenpiteet:
+
 - Aluksi Poetry-pohjainen projekti täytyy alustaa. **Alusta projekti nimellä _poetry-web_ tehtävien palautukseen käyttämäsi repositorion sisälle**. Projektin tiedoilla ei ole tämän tehtävän kannalta väliä
 - Etsit Googlettamalla sopivia kirjastoja web-sovellusta varten ja törmäät [Flask](https://pypi.org/project/Flask/)-viitekehykseen. **Asenne Flask projektin riippuvuudeksi Poetryn avulla**
 - Sovelluksessa ilmenee ensimmäinen bugi. Syynä oli luultavasti se, ettei sovellukselle ole toteutettu vielä yhtään testiä. Päädyt käyttämään teestaamisessa [pytest](https://pypi.org/project/pytest/)-viitekehystä. **Asenne pytest projektin _kehityksen aikaiseksi riippuvuudeksi_**
-  - Pohdi itseksi, miksi on hyödyllistä määritellä riippuvuus erikseen kehityksen aikaiseksi riippuvuudeksi
+  - Pohdi itseksesi, miksi on hyödyllistä määritellä riippuvuus erikseen kehityksen aikaiseksi riippuvuudeksi
 - Sovelluksessa käsitellään paljon JSON-muotoista dataa, joten päädyt etsimään sen serialisointiin ja deserialisointiin sopivia kirjastoja. Törmäät tarkoitukseen sopivaan kirjastoon nimeltä [jsonpickle](https://pypi.org/project/jsonpickle/). **Asenna jsonpickle projektin riippuvuudeksi**
-- Huomaat bugin jsonpickle-kirjastossa, joten alat tutkimaan sen GitHub repositorion [issueita](https://github.com/jsonpickle/jsonpickle/issues). Eräässä issuessa kerrotaan, että bugia ei ilmene kirjaston versiossa `1.3.0`. **Asenna jsonpickle-kirjastosta versio `1.3.0`**.
+- Huomaat bugin jsonpickle-kirjastossa, joten alat tutkimaan sen GitHub repositorion [issueita](https://github.com/jsonpickle/jsonpickle/issues). Eräässä issuessa kerrotaan, että löytämäsi bugi ei ilmene kirjaston versiossa `1.3.0`. **Asenna jsonpickle-kirjastosta versio `1.3.0`**.
   - Tutustu _semanttiseen versiontiin_ [täällä](https://semver.org/)
-  - Pohdi itseksi, mitä hyötyjä semanttisesta versioinnista on. Jos kirjasto noudattaa semanttista versiointia, miksi kirjaston version `1.1.2` päivittäminen versioon `2.0.0` saattaa sisältää riskejä? Miksei samoja riskejä luultavasti ole version `1.1.3` kanssa?
-  - Versiovaatimuksissa ilmenee usein `^`-, tai `~`-etuliite. Pohdi itseksi, mitä näillä ilmaistaan. Asiaa käsitellään mm. [Poetryn dokumentaatiossa](https://python-poetry.org/docs/dependency-specification/)
+  - Pohdi itseksesi, mitä hyötyjä semanttisesta versioinnista on. Jos kirjasto noudattaa semanttista versiointia, miksi kirjaston version `1.1.2` päivittäminen versioon `2.0.0` saattaa sisältää riskejä? Miksei samoja riskejä luultavasti ole version `1.1.3` kanssa?
+  - Versiovaatimuksissa ilmenee usein `^`-, tai `~`-etuliite. Pohdi itseksesi, mitä näillä ilmaistaan. Asiaa käsitellään mm. [Poetryn dokumentaatiossa](https://python-poetry.org/docs/dependency-specification/)
 - Päätät, että jsonpickle-kirjastosta on ollut vain harmia ja voit helposti toteuttaa sen tarjoaman toiminallisuuden itse. **Poista jsonpickle projektin riippuvuuksien joukosta**
 
-### 2. Pylint ja koodin staattinen analyysi
+Palautettavasta _poetry-web_-hakemistosta ei tarvitse löytyä muita tiedostoja kuin _pyproject.toml_ ja _poetry.lock_.
+
+### 2. Poetryn harjoittelua osa 2
+
+Ohjelmistokehittäjälle tulee usein vastaan tilanne, jossa pitäisi löytää tiettyyn käyttötarkoitukseen sopiva kirjasto. Harjoittelemme kyseistä tilannetta tässä tehtävässä.
+
+[TOML](https://toml.io/en/) on eräs helppolukuinen tiedon esitysformaatti, jota käytetään usein konfiguraatiotiedostoissa, kuten Poetryn _pyproject.toml_-tiedostossa. Kurssirepositorion hakemistossa [koodi/viikko2/project-reader]({{site.python_exercise_repo_url}}/tree/main/koodi/viikko2/project-reader) on pohja projektille, jonka tarkoituksena on lukea projektin tietoja annetusta osoitteesta löytyvästä _pyproject.toml_-tiedostosta. **Kopioi aluksi projekti tehtävien palautukseen käyttämäsi repositorion sisälle.**
+
+Tehtävänäsi on ensin löytää sopiva kirjasto, jonka avulla TOML-muotoisista merkkijonoista voi muodostaa Pythonin tietorakenteita. Voit hyödyntää tässä esimerkiksi [PyPI](https://pypi.org/)-sivuston hakua tai Googlea. PyPI:ssä eräs hyvä hakusana voisi olla esimerkiksi "toml". Tutustu kirjastojen kuvauksiin ja päättele sen perusteella, sopiiko kirjasto käyttötarkoitukseen. Kun löydät sopivan kirjaston, asenna se projektiin Poetryn avulla.
+
+Ota sen jälkeen kirjasto käyttöön projektin <i>src/project_reader.py</i>-tiedoston `PlayerReader`-luokan metodissa `get_project`. Metodin `content`-muuttujaan on tallennettu tiedoston sisältö:
+
+```python
+def get_project(self):
+    # tiedoston merkkijonomuotoinen sisältö
+    content = request.urlopen(self._url).read().decode("utf-8")
+    print(content)
+
+    # parsi TOML-formaatissa oleva merkkijono ja muodosta Project-olio sen tietojen perusteella
+    return Project("Test name", "Test description", [], [])
+```
+
+Tulosta jokainen välivaihe (tiedoston sisältö ja kirjaston avulla parsittu sisältö) `print`-funktion avulla, jotta tiedät, minkä muotoista data on. Muodosta tämän jälkeen tiedoista `Project`-olio antamalla sille konstruktorin kautta projektin nimi, kuvaus, lista riippuvuuksista ja lista kehityksen aikaisista riippuvuuksista.
+
+Ohjelman voi käynnistää virtuaaliympäristössä komennolla `python3 src/index.py`. Ohjelma kysyy _pyproject.toml_-tiedoston osoitetta ja tulostaa sen jälkeen `get_project`-metodin palauttaman `Project`-olion. Esimerkiksi [tämän](https://raw.githubusercontent.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021/main/koodi/viikko1/nhl-statistics-1/pyproject.toml) osoitteen kanssa tulostuksen tulisi olla seuraava:
+
+```
+Name: nhl-statistics-1
+Description: -
+Dependencies: python
+Development dependencies: pytest, coverage
+```
+
+### 3. Pylint ja koodin staattinen analyysi
 
 Kurssin [kolmannessa osassa](/osa3) teemana on ohjelmien laadun varmistaminen. Eräs ohjelman laatua useimmiten edistävä tekijä on järkevän _koodityylin_ noudattaminen. Koodin tyyliä voidaan tarkkailla automatisoidusti niin sanottujen staattisen analyysin työkaluilla.
 
@@ -86,7 +121,7 @@ Helpoin tapa löytää sääntöjä on hakemalla sopivalla hakusanalla niitä do
 
 Usein _.pylintrc_-konfiguraatiota ei ole järkevää kirjoittaa tyhjästä käsin, vaan käytetään lähtökohtana pylintin suosittelemaa konfiguraatiota. Suoitellun konfiguraation voi tulostaa komentoriville komennolla `pylint --generate-rcfile`.
 
-### 3. Koodin staattinen analyysi ja GitHub Actionit
+### 4. Koodin staattinen analyysi ja GitHub Actionit
 
 Laajenna projektisi GitHub Actionien määritelmää siten, että myös pylint-tarkastukset suoritetaan aina kun koodi pushataan GitHubiin.
 
@@ -98,7 +133,7 @@ Varmista myös, että kun korjaat koodin, kaikki toimii taas moitteettomasti:
 
 ![]({{ "/images/py-lh2-12.png" | absolute_url }})
 
-### 4. Git: branchit [versionhallinta]
+### 5. Git: branchit [versionhallinta]
 
 Lue brancheja käsittelevät osuudet seuraavasta <http://www.ralfebert.de/tutorials/git/>
 
@@ -127,7 +162,7 @@ Tee seuraavat paikalliseen git-repositorioosi (kyseessä ei siis tarvitse olla t
 - Mergeä branchin **eka** sisältö **masteriin**
 - Katso jälleen miltä näyttää `gitk --all`-komennolla
 
-### 5. Git: branchit ja staging-alue [versionhallinta]
+### 6. Git: branchit ja staging-alue [versionhallinta]
 
 - Olet nyt repositoriosi master-haarassa
 - Luo uusi tiedosto _uusi_tiedosto.txt_, **älä** kuitenkaan lisää ja commitoi tiedostoa
@@ -179,7 +214,7 @@ nothing to commit, working tree clean
 - Tämän tehtävän ideana oli siis havainnollistaa, että working tree (muutokset joista git ei ole tietoinen) ja staging (gitiin lisättyihin tiedostoihin tehdyt committoimattomat muutokset)
   **eivät liity** mihinkään branchiin, muutokset siirtyvät staging-alueelta branchiin ainoastaan komennon `git commit` suorituksen seurauksena
 
-### 6. Git: konflikti! [versionhallinta]
+### 7. Git: konflikti! [versionhallinta]
 
 Tee paikalliseen git-repoon seuraavat
 
@@ -212,7 +247,7 @@ Jotkut editorit, esim [Visual Studio Code](https://code.visualstudio.com) sisäl
 
 ![](https://github.com/mluukkai/ohjelmistotuotanto2017/raw/main/images/lh2-4a.png)
 
-### 7. Git: branchit ja GitHub [versionhallinta]
+### 8. Git: branchit ja GitHub [versionhallinta]
 
 Aloita lukemalla ProGit kirjasta luku [Remote Branches](http://git-scm.com/book/en/Git-Branching-Remote-Branches).
 
@@ -300,7 +335,7 @@ Ohjelmistotiimi voi soveltaa Gitin branchaystä hyvin monella eri tyylillä. Art
 
 Jos kiinnostaa, lue lisää yllä olevasta dokumentista.
 
-### 8. Git: epäajantasaisen kopion pushaaminen [versionhallinta]
+### 9. Git: epäajantasaisen kopion pushaaminen [versionhallinta]
 
 Demonstroidaan usein esiintyvää tilannetta, jossa epäajantasaisen repositorion pushaaminen githubissa olevaan etärepositorioon epäonnistuu.
 
@@ -327,7 +362,7 @@ Virheen syynä on se, että githubissa oleva **master**-haara oli edellä paikal
 - Komennon `git pull` yhteydessä syntyy merge-commit, ja avautuu tekstieditori mihin joudut kirjoittamaan commit-viestin
 - Eli toimi näin ja varmista, että tekemäsi muutokset menevät GitHubiin
 
-### 9. Riippuvuuksien injektointi osa 3: Verkkokauppa
+### 10. Riippuvuuksien injektointi osa 3: Verkkokauppa
 
 Tutustuimme viime viikon [tehtävissä 14-16](/tehtavat1#14-riippuvuuksien-injektointi-osa-1) riippuvuuksien injektointiin ja sovelsimme sitä yksikkötestauksen helpottamiseen.
 
@@ -367,7 +402,7 @@ kauppa = Kauppa(
 - Asenna projektin riippuvuudet komennolla `poetry install`
 - Varmista ohjelman toimivuus suorittamalla se virtuaaliympäristössä komennolla `python3 src/index.py`
 
-### 10. Riippuvuuksien injektointi osa 4: ei enää singletoneja verkkokaupassa
+### 11. Riippuvuuksien injektointi osa 4: ei enää singletoneja verkkokaupassa
 
 - Singleton-suunnittelumallia pidetään [osittain ongelmallisena](http://rcardin.github.io/design/programming/2015/07/03/the-good-the-bad-and-the-singleton.html), poistammekin edellisestä tehtävästä singletonit
 - **Poista** kaikista luokista `get_instance`-metodit ja staattinen `__instanssi`-muuttuja
@@ -415,7 +450,7 @@ def generoi_viite():
     return seuraava
 ```
 
-### 11. Riippuvuuksien injektointi osa 5: Verkkokauppa siistiksi
+### 12. Riippuvuuksien injektointi osa 5: Verkkokauppa siistiksi
 
 Edellisen tehtävän päätteeksi huomasimme, että `Kauppa`-luokan olion alustaminen vaatii melko paljon toimenpiteitä:
 
@@ -465,5 +500,3 @@ kauppa = Kauppa(pankki=PankkiStub())
 ```
 
 {% include submission_instructions.md %}
-
-<!-- TODO: puuttuu 1 tehtävä -->
