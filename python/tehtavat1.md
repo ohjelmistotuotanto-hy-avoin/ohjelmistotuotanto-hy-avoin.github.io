@@ -293,7 +293,7 @@ Muista, että testit voi suorittaa projektin juurihakemistossa komennolla `poetr
 - Täydennä varasto-projektin testejä siten, että luokan `Varasto` testien haarautumakattavuudeksi (branch coverage) tulee 100%
   - Joudut huomioimaan ainakin tapaukset, joissa varastoon yritetään laittaa liikaa tavaraa ja varastosta yritetään ottaa enemmän kuin siellä on
   - Edellinenkään ei vielä riitä
-- Testauksen rivikattavuuden saat selville [coverage](https://coverage.readthedocs.io/en/coverage-5.3/)-työkalun avulla. Tutustu työkaluun lukemalla Ohjelmistotekniikka-kurssin [coverage-ohje](https://github.com/ohjelmistotekniikka-hy/python-kevat-2021/blob/master/materiaali/coverage.md)
+- Testauksen rivikattavuuden saat selville [coverage](https://coverage.readthedocs.io/en/coverage-5.3/)-työkalun avulla. Tutustu työkaluun lukemalla Ohjelmistotekniikka-kurssin [Coverage-ohje](https://github.com/ohjelmistotekniikka-hy/python-kevat-2021/blob/master/materiaali/coverage.md)
 - Ota työkalu projektissasi käyttöön asentamalla se projektin _kehityksen aikaiseksi riippuvuudeksi_ komennolla:
 
 ```bash
@@ -601,18 +601,19 @@ Pushaa koodi GitHubiin ja varmista, että Codecov generoi raportin siten, että 
 
 ### Tehtävien palautusrepositoriot
 
-Tehtävät 14-16 kannattaa tehdä _eri repositorioon_ kuin mihin teit tehtävät 2-13. Voit käyttää tehtävien 14-16 repositoriota myös seuraavien viikkojen tehtävien palauttamiseen. Nyt luotavan repositorion rakenne voi tällöin olla esim. seuraava:
+Tehtävät 14-16 kannattaa tehdä _eri repositorioon_ kuin mihin teit tehtävät 2-13. Voit käyttää tehtävien 14-16 repositoriota myös seuraavien viikkojen tehtävien palauttamiseen. Nyt luotavan repositorion rakenne voi tällöin olla esimerkiksi seuraava:
 
 ```
 viikko1
-  tehtavat14-16
+  riippuvuuksien-injektointi-1
+  nhl-statistics-1
 viikko2
-  tehtavat1-4
-  tehtavat5-7
+  poetry-web
+  verkkokauppa-1
 viikko3
-   tehtavat1-2
-   tehtava3
-   tehtavat7-11
+  nhl-reader
+  login-robot
+  web-login-robot
 ...
 ```
 
