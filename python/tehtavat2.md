@@ -57,7 +57,7 @@ Palautettavasta _poetry-web_-hakemistosta ei tarvitse löytyä muita tiedostoja 
 
 Ohjelmistokehittäjälle tulee usein vastaan tilanne, jossa pitäisi löytää tiettyyn käyttötarkoitukseen sopiva kirjasto. Harjoittelemme kyseistä tilannetta tässä tehtävässä.
 
-[TOML](https://toml.io/en/) on eräs helppolukuinen tiedon esitysformaatti, jota käytetään usein konfiguraatiotiedostoissa, kuten Poetryn _pyproject.toml_-tiedostossa. Kurssirepositorion hakemistossa [koodi/viikko2/project-reader]({{site.python_exercise_repo_url}}/tree/main/koodi/viikko2/project-reader) on pohja projektille, jonka tarkoituksena on lukea projektin tietoja annetusta osoitteesta löytyvästä _pyproject.toml_-tiedostosta. **Kopioi aluksi projekti tehtävien palautukseen käyttämäsi repositorion sisälle.**
+[TOML](https://toml.io/en/) on eräs helppolukuinen tiedon esitysformaatti, jota käytetään usein konfiguraatiotiedostoissa, kuten Poetryn _pyproject.toml_-tiedostossa. [Kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko2/project-reader_ on pohja ohjelmalle, jonka tarkoituksena on lukea projektin tietoja annetusta osoitteesta löytyvästä _pyproject.toml_-tiedostosta. **Kopioi aluksi projekti tehtävien palautukseen käyttämäsi repositorion sisälle.**
 
 Tehtävänäsi on ensin löytää sopiva kirjasto, jonka avulla TOML-muotoisista merkkijonoista voi muodostaa Pythonin tietorakenteita. Voit hyödyntää tässä esimerkiksi [PyPI](https://pypi.org/)-sivuston hakua tai Googlea. PyPI:ssä eräs hyvä hakusana voisi olla esimerkiksi "toml". Tutustu kirjastojen kuvauksiin ja päättele sen perusteella, sopiiko kirjasto käyttötarkoitukseen. Kun löydät sopivan kirjaston, asenna se projektiin Poetryn avulla.
 
@@ -368,7 +368,7 @@ Tutustuimme viime viikon [tehtävissä 14-16](/tehtavat1#14-riippuvuuksien-injek
 
 Jos asia on päässyt unohtumaan, voit kerrata asian lukemalla [tämän](/riippuvuuksien_injektointi/).
 
-Kurssirepositorion hakemistossa [koodi/viikko2/verkkokauppa-1]({{site.python_exercise_repo_url}}/tree/main/koodi/viikko2/verkkokauppa-1) on yksinkertaisen verkkokaupan ohjelmakoodi
+[Kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko2/verkkokauppa-1_ on yksinkertaisen verkkokaupan ohjelmakoodi
 
 - Hae projekti kurssirepositoriosta
   - Järkevintä lienee että kloonaat kurssirepositorion paikalliselle koneellesi jos et ole sitä jo tehnyt, jos olet, niin pullaa repositorio ajantasalle

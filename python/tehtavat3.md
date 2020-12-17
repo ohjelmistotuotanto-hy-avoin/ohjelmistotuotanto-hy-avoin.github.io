@@ -28,7 +28,7 @@ Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palaut
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
-### 1. Poetry ja riippuvuuksien hyödyntäminen
+### 1. Pelaajalista
 
 Hae [kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko3/nhl-reader_ lähes tyhjä Poetry-projektin runko. Mukana on kohta tarvitsemasi luokka `Player`.
 
@@ -124,7 +124,7 @@ Rasmus Ristolainen  BUF   0 +  5 =  5
 - Vinkki 1: voit halutessasi hyödyntää [filter](https://docs.python.org/3/library/functions.html#filter)-funktiota.
 - Vinkki 2: kokeile, mitä `f"{self.name:20}"` tekee merkkijonoesitykselle `Player`-luokan `__str__`-metodissa. Mitä `:20` koodissa tekee? Numeroarvot tulee muuttaa merkkijonomuotoisiksi, jotta lopputulos on oikea. Esimerkiksi `f"{str(self.goals):2}"`.
 
-### 3. Refaktoroitu sovellus
+### 3. Pelaajalistan refaktorointi
 
 Tällä hetkellä suurin osa pelaajatietoihin liittyvästä koodista on luultavasti `main`-funktiossa. Funktion _koheesion_ aste on melko matala, koska se keskittyy usean toiminallisuuden toteuttamiseen. Koodi kaipaisi siis pientä refaktorointia.
 
