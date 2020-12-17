@@ -32,7 +32,7 @@ Tehtävät 2 ja 3 laajentavat viime viikon ensimmäistä tehtäväsarjaa, eli ne
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
-### 1. Poetryn harjoittelua osa 1
+### 1. Poetryn harjoittelua
 
 Tässä tehtävässä harjoittelemme lisää Poetryn käyttöä ja tutustumme semanttiseen versiointiin. Apua tehtävän tekoon saa mm. Ohjelmistotekniikka-kurssin [Poetry-ohjeesta](https://github.com/ohjelmistotekniikka-hy/python-kevat-2021/blob/master/materiaali/poetry.md) ja [Poetryn dokumentaatiosta](https://python-poetry.org/docs/).
 
@@ -53,7 +53,7 @@ Tee seuraavat toimenpiteet:
 
 Palautettavasta _poetry-web_-hakemistosta ei tarvitse löytyä muita tiedostoja kuin _pyproject.toml_ ja _poetry.lock_.
 
-### 2. Poetryn harjoittelua osa 2
+### 2. Riippuvuuksien hyödyntäminen
 
 Ohjelmistokehittäjälle tulee usein vastaan tilanne, jossa pitäisi löytää tiettyyn käyttötarkoitukseen sopiva kirjasto. Harjoittelemme kyseistä tilannetta tässä tehtävässä.
 
