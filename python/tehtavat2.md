@@ -57,7 +57,7 @@ Palautettavasta _poetry-web_-hakemistosta ei tarvitse löytyä muita tiedostoja 
 
 Ohjelmistokehittäjälle tulee usein vastaan tilanne, jossa pitäisi löytää tiettyyn käyttötarkoitukseen sopiva kirjasto. Harjoittelemme kyseistä tilannetta tässä tehtävässä.
 
-[TOML](https://toml.io/en/) on eräs helppolukuinen tiedon esitysformaatti, jota käytetään usein konfiguraatiotiedostoissa, kuten Poetryn _pyproject.toml_-tiedostossa. [Kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko2/project-reader_ on pohja ohjelmalle, jonka tarkoituksena on lukea projektin tietoja annetusta osoitteesta löytyvästä _pyproject.toml_-tiedostosta. **Kopioi aluksi projekti tehtävien palautukseen käyttämäsi repositorion sisälle.**
+[TOML](https://toml.io/en/) on eräs helppolukuinen datan esitysformaatti, jota käytetään usein konfiguraatiotiedostoissa, kuten Poetryn _pyproject.toml_-tiedostossa. [Kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko2/project-reader_ on pohja ohjelmalle, jonka tarkoituksena on lukea projektin tietoja annetusta osoitteesta löytyvästä _pyproject.toml_-tiedostosta. **Kopioi aluksi projekti tehtävien palautukseen käyttämäsi repositorion sisälle.**
 
 Tehtävänäsi on ensin löytää sopiva kirjasto, jonka avulla TOML-muotoisista merkkijonoista voi muodostaa Pythonin tietorakenteita. Voit hyödyntää tässä esimerkiksi [PyPI](https://pypi.org/)-sivuston hakua tai Googlea. PyPI:ssä eräs hyvä hakusana voisi olla esimerkiksi "toml". Tutustu kirjastojen kuvauksiin ja päättele sen perusteella, sopiiko kirjasto käyttötarkoitukseen. Kun löydät sopivan kirjaston, asenna se projektiin Poetryn avulla.
 
@@ -69,19 +69,19 @@ def get_project(self):
     content = request.urlopen(self._url).read().decode("utf-8")
     print(content)
 
-    # parsi TOML-formaatissa oleva merkkijono ja muodosta Project-olio sen tietojen perusteella
+    # deserialisoi TOML-formaatissa oleva merkkijono ja muodosta Project-olio sen tietojen perusteella
     return Project("Test name", "Test description", [], [])
 ```
 
-Tulosta jokainen välivaihe (tiedoston sisältö ja kirjaston avulla parsittu sisältö) `print`-funktion avulla, jotta tiedät, minkä muotoista data on. Muodosta tämän jälkeen tiedoista `Project`-olio antamalla sille konstruktorin kautta projektin nimi, kuvaus, lista riippuvuuksista ja lista kehityksen aikaisista riippuvuuksista.
+Tulosta jokainen välivaihe (tiedoston sisältö ja kirjaston avulla deserialisoitu sisältö) `print`-funktion avulla, jotta tiedät, minkä muotoista data on. Muodosta tämän jälkeen tiedoista `Project`-olio antamalla sille konstruktorin kautta projektin nimi, kuvaus, lista riippuvuuksista ja lista kehityksen aikaisista riippuvuuksista.
 
-Ohjelman voi käynnistää virtuaaliympäristössä komennolla `python3 src/index.py`. Ohjelma kysyy _pyproject.toml_-tiedoston osoitetta ja tulostaa sen jälkeen `get_project`-metodin palauttaman `Project`-olion. Esimerkiksi [tämän](https://raw.githubusercontent.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021/main/koodi/viikko1/nhl-statistics-1/pyproject.toml) osoitteen kanssa tulostuksen tulisi olla seuraava:
+Ohjelman voi käynnistää virtuaaliympäristössä komennolla `python3 src/index.py`. Esimerkkinä käytetyn _pyproject.toml_-tiedoston tapauksessa ohjelman tulostuksen tulisi olla seuraava:
 
 ```
-Name: nhl-statistics-1
+Name: web-login-robot
 Description: -
-Dependencies: python
-Development dependencies: pytest, coverage
+Dependencies: python, Flask
+Development dependencies: robotframework, robotframework-seleniumlibrary, requests
 ```
 
 ### 3. Pylint ja koodin staattinen analyysi
