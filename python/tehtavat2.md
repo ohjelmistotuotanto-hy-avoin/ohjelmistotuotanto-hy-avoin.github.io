@@ -148,6 +148,7 @@ Varsin selkeältä vaikuttaa myös <https://www.atlassian.com/git/tutorials/usin
 **Huom:** kun liikut branchien välillä kannattaa pitää working tree ja staging -alue tyhjinä!
 
 Tee seuraavat paikalliseen git-repositorioosi (kyseessä ei siis tarvitse olla tehtävien palautusrepositorio)
+  - Huom: seuraavassa käytetään versionhallinnan päähaarasta gitin oletusarvoista nimeä _master_. GitHubissa päähaarasta käytetään nykyään nimeä _main_, ja jos teet tehtävän palautusrepositorioosi, on päähaarasi nimi todennäköisesti _main_
 
 - Luo repositorio ja committaa masteriin tiedosto **index.py** jonka sisältö on seuraava
 
@@ -452,9 +453,10 @@ Mene GitHub-repon alkuperäiseen paikalliseen kopioon:
 
 - Mene branchiin **haara1** ja pullaa muutokset GitHub:in vastaavasta branchista
   - huom: koska kyseessä ei ole "träkkäävä" branchi, joudut pullaamaan komennolla `git pull origin haara1`
+  - git antaa myös vihjeen miten branchista saa träkäävän
 - Mene branchiin **haara2**, lisää sitten tiedosto, committaa ja pushaa branchi GitHubiin
-  - Koska kyseessä ei ole "träkkäävä" branchi, ei vanhemmilla gitin versiolla komento `git push` riitä vaan joudut määrittelemään branchin jonne push kohdistuu eli antamaan komennon `git push origin haara2`
-  - Uudemmilla gitin versioilla pushaus onnistuu suoraan
+  - Koska kyseessä ei ole "träkkäävä" branchi, ei komento `git push` riitä vaan joudut määrittelemään branchin jonne push kohdistuu eli antamaan komennon `git push origin haara2`
+  - git antaa jälleen vihjeen miten branchista saa träkäävän
 
 Mene jälleen toiseen kopioon:
 
@@ -528,9 +530,9 @@ Demonstroidaan usein esiintyvää tilannetta, jossa epäajantasaisen repositorio
 
 ```
 $ git push
-To git@github.com:mluukkai/ohtu-viikko1-2019.git
+To git@github.com:mluukkai/ohtu-viikko1-20120git
  ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'git@github.com:mluukkai/ohtu-viikko1-2019.git'
+error: failed to push some refs to 'git@github.com:mluukkai/ohtu-viikko1-2020.git'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
 hint: to the same ref. You may want to first merge the remote changes (e.g.,
