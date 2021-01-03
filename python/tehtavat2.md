@@ -61,7 +61,7 @@ Ohjelmistokehittäjälle tulee usein vastaan tilanne, jossa pitäisi löytää t
 
 Tehtävänäsi on ensin löytää sopiva kirjasto, jonka avulla TOML-muotoisista merkkijonoista voi muodostaa Pythonin tietorakenteita. Voit hyödyntää tässä esimerkiksi [PyPI](https://pypi.org/)-sivuston hakua tai Googlea. PyPI:ssä eräs hyvä hakusana voisi olla esimerkiksi "toml". Tutustu kirjastojen kuvauksiin ja päättele sen perusteella, sopiiko kirjasto käyttötarkoitukseen. Kun löydät sopivan kirjaston, asenna se projektiin Poetryn avulla.
 
-Ota sen jälkeen kirjasto käyttöön projektin <i>src/project_reader.py</i>-tiedoston `PlayerReader`-luokan metodissa `get_project`. Metodin `content`-muuttujaan on tallennettu tiedoston sisältö:
+Ota sen jälkeen kirjasto käyttöön projektin <i>src/project_reader.py</i>-tiedoston `ProjectReader`-luokan metodissa `get_project`. Metodin `content`-muuttujaan on tallennettu tiedoston sisältö:
 
 ```python
 def get_project(self):
@@ -108,7 +108,7 @@ Helpoin tapa löytää sääntöjä on hakemalla sopivalla hakusanalla niitä do
 - Määrittele nyt tiedostoon _.pylintrc_ seuraavat säännöt (katso lista säännöistä pylintin [dokumentaatiosta](http://pylint.pycqa.org/en/2.6/technical_reference/features.html)):
   - Rivin pituus on maksimissaan 110 merkkiä
     - Vinkki: sääntö löytyy [Format checker](http://pylint.pycqa.org/en/2.6/technical_reference/features.html#format-checker)-osiosta ja tulee määrittää `[FORMAT]`-osion alle
-  - Ei yli neljää sisäkkäistä lohkoa (esimerkiksi if- tai for-lohkoa) funktion tai metodin sisällä
+  - Ei yli kahta sisäkkäistä lohkoa (esimerkiksi if- tai for-lohkoa) funktion tai metodin sisällä
     - Vinkki: sääntö löytyy [Refactoring checker](http://pylint.pycqa.org/en/2.6/technical_reference/features.html#refactoring-checker) ja tulee määrittää `[REFACTORING]`-osion alle)
   - Funktiossa tai metodissa on enintään 20 lausetta
     - Vinkki: sääntö löytyy [Design checker](http://pylint.pycqa.org/en/2.6/technical_reference/features.html#design-checker)-osiosta
@@ -117,7 +117,7 @@ Helpoin tapa löytää sääntöjä on hakemalla sopivalla hakusanalla niitä do
     - Vinkki: sääntö löytyy _Design checker_-osiosta [tämän](http://pylint.pycqa.org/en/latest/technical_reference/extensions.html#design-checker-documentation) lisäosan avulla. Saat sen käyttöön lisäämällä `[MASTER]`-osioon `load-plugins=pylint.extensions.mccabe`-rivin
 - Muuta koodiasi siten, että saat jokaisen määritellyistä pylint-säännöistä rikkoutumaan
 - Korjaa koodisi ja varmista, että se noudattaa kaikkia sääntöjä
-  - `Varasto`-luokan konstruktori luultavasti rikkoo `too-complex`-sääntöä. Voit esimerkiksi mieittä, miten voisit esittää `tilavuus`-attribuutin arvon if-lauseen sijaan yhdellä [max](https://docs.python.org/3/library/functions.html#max)-funktion kutsulla
+  - `Varasto`-luokan konstruktori luultavasti rikkoo `too-complex`-sääntöä. Voit esimerkiksi mieittä, miten voisit esittää `tilavuus`-attribuutin arvon if-lauseen sijaan jotenkin muuten.
 
 Usein _.pylintrc_-konfiguraatiota ei ole järkevää kirjoittaa tyhjästä käsin, vaan käytetään lähtökohtana pylintin suosittelemaa konfiguraatiota. Suoitellun konfiguraation voi tulostaa komentoriville komennolla `pylint --generate-rcfile`.
 
@@ -132,6 +132,7 @@ Varmista, että GitHub huomaa tilanteen, missä koodi rikkoo projektin pylint-s�
 Varmista myös, että kun korjaat koodin, kaikki toimii taas moitteettomasti:
 
 ![]({{ "/images/py-lh2-12.png" | absolute_url }})
+
 
 ### 5. Git: branchit [versionhallinta]
 
@@ -148,24 +149,94 @@ Varsin selkeältä vaikuttaa myös <https://www.atlassian.com/git/tutorials/usin
 
 Tee seuraavat paikalliseen git-repositorioosi (kyseessä ei siis tarvitse olla tehtävien palautusrepositorio)
 
-- Luo repositorio ja committaa masteriin tiedosto **masteri1.txt**
-- Luo branch **eka**, siirry branchiin, luo sinne tiedosto **eka.txt** ja committaa
-- Siirry takaisin **master**-branchiin, tiedoston **eka.txt** ei pitäisi nyt näkyä
+- Luo repositorio ja committaa masteriin tiedosto **index.py** jonka sisältö on seuraava
+
+```python
+x = int(input("luku 1: "))
+y = int(input("luku 2: "))
+```
+
+- Luo branch **laskut**, siirry branchiin (tämä tapahtuu esim. komennolla `git checkout -b laskut`), luo sinne tiedosto **summa.py** jolla on seuraava sisältö
+
+```python
+def summa(x, y):
+    return x+y
+```
+
+- lisää ja committaa tiedosto versionhallintaan
+
+- Siirry takaisin **master**-branchiin (komennolla`git checkout master`), tiedoston **summa.py** ei pitäisi nyt näkyä
   - **huom:** muistutus vielä siitä, että kun siirryt branchista toiseen varmista **aina** komennolla `git status` että kaikki muutokset on committoitu
-- Lisää ja committaa **masteriin** tiedosto **masteri2.txt**
-- Mene branchiin **eka** ja tarkasta, että **masteriin** lisätty tiedosto ei ole branchissa
-- Lisää branchiin tavaraa, esim. tiedosto **eka2.txt** ja committaa
+- Luo tiedosto **logger.py**, jolla on seuraava sisältä
+
+```python
+from datetime import datetime
+def logger(viesti):
+  print(f"{datetime.now()}: {viesti}")
+```
+
+- Muuta myös tiedostoa  **index.py** seuraavasti:
+
+```python
+from logger import logger
+
+logger("aloitetaan")
+
+x = int(input("luku 1: "))
+y = int(input("luku 2: "))
+
+logger("lopetetaan")
+```
+
+- Committaa nämä muutokset **master**-haaraan
+
+- Mene branchiin **laskut** ja tarkasta, että **masteriin** lisätty tiedosto ei ole branchissa ja että tiedostoon **index.py** tehty muutos ei näy
+- Lisää ja committaa branchiin tiedosto **erotus.py** jolla on seuraava sisältö
+
+```python
+def erotus(x, y):
+    return x-y
+```
+
 - Siirry takaisin **master**-branchiin
-- Tarkasta että **eka**-branchiin lisätyt muutokset eivät ole masterissa
+- Tarkasta että **laskut**-branchiin lisätyt muutokset eivät ole masterissa
 - Tarkastele komennolla `gitk --all` miltä repositorio ja branchit näyttävät (`gitk`-komento toimii Windowsilla ainakin GitHub for Windowsin Git Shellissä.)
   - `gitk`-komento ei toimi maceissa, hyvä korvaaja sille on [sourcetree](https://www.sourcetreeapp.com)
-- Mergeä branchin **eka** sisältö **masteriin**
+- Mergeä branchin **laskut** sisältö **masteriin**  (tämä tapahtuu komennolla`git merge laskut`)
+  - Mergeäminen aiheuttaa ns merge-commitin, ja avaa tekstieditorin mihin joudut kirjoittamaan commit-viestin
+    - Jos et ole määritellyt gitille editoria viime viikon [tehtävän 2](/tehtavat1/) ohjeiden mukaan, avautuu ehkä gitin oletusarvoinen editori [vim](http://www.vim.org)
+    - Vimistä poistuminen saattaa osoittautua ensikertalaiselle hankalaksi, google auttaa tarvittaessa
+- Muuta tiedostoa **index.py** seuraavasti ja commitoi muutos:
+
+```python
+from logger import logger
+from summa import summa
+from erotus import erotus
+
+logger("aloitetaan")
+
+x = int(input("luku 1: "))
+y = int(input("luku 2: "))
+print(f"{summa(x, y)}")
+print(f"{erotus(x, y)}")
+
+logger("lopetetaan")
+```
+
 - Katso jälleen miltä näyttää `gitk --all`-komennolla
 
 ### 6. Git: branchit ja staging-alue [versionhallinta]
 
 - Olet nyt repositoriosi master-haarassa
-- Luo uusi tiedosto _uusi_tiedosto.txt_, **älä** kuitenkaan lisää ja commitoi tiedostoa
+- Luo uusi tiedosto _README.md_, **älä** kuitenkaan lisää ja commitoi tiedostoa versionhallintaan
+- Tiedoston sisällöllä ei ole merkitystä, se voi olla esim. seuraava
+
+```
+## git-harjoituksia
+
+Harjoitellaan branchien käyttöä
+```
+
 - Komennon `git status` tulostuksen pitäisi olla seuraava
 
 ```
@@ -173,34 +244,47 @@ On branch master
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	uusi_tiedosto.txt
+	README.md
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-- Siirry nyt branchiin **eka**
+- Siirry nyt branchiin **laskut**
 - Suorita uudelleen komento `git status`
 - Huomaat, että tulostus on edelleen sama, tiedosto ei edelleenkään ole versionhallinnan alla
 - Eli vaikka olit master-haarassa kun loit tiedoston, ei master-haara eikä koko git tiedä tiedostosta vielä mitään ennen kuin lisäät sen versionhallinnan alaisuuteen komennolla `git add`
 - Lisää tiedosto nyt versionhallinnan alaisuuteen ja commitoi se
-- Tiedosto menee nykyiseen branchiisi, eli branchiin _eka_, master ei edelleenkään tiedä tiedostosta mitään
-- Luo uusi tiedosto _uusi_tiedosto2.txt_ ja lisää se versionhallintaan, älä kuitenkaan commitoi
+- Tiedosto menee nykyiseen branchiisi, eli branchiin _laskut_, master ei edelleenkään tiedä tiedostosta mitään
+- Luo uusi tiedosto _LICENSE_ ja lisää se versionhallintaan (komennolla add), älä kuitenkaan commitoi
+- Tiedoston sisällöllä ei ole merkitystä, se voi olla esim. seuraava
+
+```
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+For more information, please refer to <https://unlicense.org>
+```
+
 - Tarkasta että komennon `git status` tulos on seuraava:
 
 ```
-On branch eka
+On branch laskut
 Changes to be committed:
   (use "git reset HEAD <file>..." to unstage)
 
-	new file:   uusi_tiedosto2.txt
+	new file:   LICENCE
 ```
 
-- Olet siis branchissa _eka_ ja _uusi_tiedosto2.txt_ on lisätty staging-alueelle, sitä ei kuitenkaan ole vielä committoitu
+- Olet siis branchissa _laskut_ ja _README.md_ on lisätty staging-alueelle, sitä ei kuitenkaan ole vielä committoitu
 - Siirry nyt branchiin **master**
-- Komennon `git status`tulos on edelleen sama, _uusi_tiedosto2.txt_ on edelleen staging-alueella mutta committoimattomana
+- Komennon `git status`tulos on edelleen sama, _README.md_ on edelleen staging-alueella mutta committoimattomana
 - Staging-alue **ei kuulu** mihinkään branchiin, eli jos staging-alueella on committoimattomia muutoksia ja vaihdat branchia, säilyvät samat asiat stagingissa
 - Muutokset siirtyvät stagingista branchiin ainoastaan komennolla `git commit`
-- Committoi nyt staging-alueen muutokset eli _uusi_tiedosto2.txt_ masteriin
+- Committoi nyt staging-alueen muutokset eli _README.md_ masteriin
 - Komennon `git status` tulos kertoo nyt että staging-alue on tyhjä:
 
 ```
@@ -208,9 +292,9 @@ On branch master
 nothing to commit, working tree clean
 ```
 
-- Siirry jälleen branchiin **eka** ja huomaat, että _uusi_tiedosto2.txt_ ei ole olemassa
-- Mergeä **master** branchiin **eka**
-- Siirry nyt masteriin ja tuhoa branchi **eka**
+- Siirry jälleen branchiin **laskut** ja huomaat, että _README.md_ ei ole olemassa
+- Mergeä **master** branchiin **laskut**
+- Siirry nyt masteriin ja tuhoa branchi **laskut**
 - Tämän tehtävän ideana oli siis havainnollistaa, että working tree (muutokset joista git ei ole tietoinen) ja staging (gitiin lisättyihin tiedostoihin tehdyt committoimattomat muutokset)
   **eivät liity** mihinkään branchiin, muutokset siirtyvät staging-alueelta branchiin ainoastaan komennon `git commit` suorituksen seurauksena
 
@@ -218,35 +302,133 @@ nothing to commit, working tree clean
 
 Tee paikalliseen git-repoon seuraavat
 
-- Lisää **master**-branchiin tiedosto **tarkea.txt**, kirjota sinne muutama rivi tekstiä ja committaa
-- Tee uusi branchi **toka**, mene branchiin ja editoi tiedoston **tarkea.txt** loppua (lisää esim loppuun muutama uusi rivi) ja committaa
-- Mene takaisin **master**-branchiin, editoi tiedoston **tarkea.txt** alkua (lisää alkuun muutama rivi) ja committaa
-- Mergeä branchin **toka** sisältö **masteriin**
-  - Mergeäminen aiheuttaa ns merge-commitin, ja avaa tekstieditorin mihin joudut kirjoittamaan commit-viestin
-    - Jos et ole määritellyt gitille editoria viime viikon [tehtävän 2](/tehtavat1/) ohjeiden mukaan, avautuu ehkä gitin oletusarvoinen editori [vim](http://www.vim.org)
-    - Vimistä poistuminen saattaa osoittautua ensikertalaiselle hankalaksi, google auttaa tarvittaessa
-  - Katso tiedoston **tarkea.txt**-sisältöä, sen pitäisi sisältää nyt molemmissa brancheissa tehdyt muutokset
+- Muuta **master**-branchin tiedostoa **index.py** seuraavasti:
+
+```py
+# tehdään alussa importit
+
+from logger import logger
+from summa import summa
+from erotus import erotus
+
+logger("aloitetaan")
+
+x = int(input("luku 1: "))
+y = int(input("luku 2: "))
+print(f"{summa(x, y)}")
+print(f"{erotus(x, y)}")
+
+logger("lopetetaan")
+```
+
+- alkuun in siis lisätty kommentti ja tyhjä rivi
+- committaa muutos
+
+- Tee uusi branchi **bugikorjaus**, mene branchiin ja editoi tiedoston **index.py** loppua (esim. seuraavasti ) ja committaa
+
+```py
+# tehdään alussa importit
+
+from logger import logger
+from summa import summa
+from erotus import erotus
+
+logger("aloitetaan")
+
+x = int(input("luku 1: "))
+y = int(input("luku 2: "))
+print(f"{summa(x, y)}")
+print(f"{erotus(x, y)}")
+
+logger("lopetetaan ohjelma")
+print("goodbye!")
+```
+
+- Mene takaisin **master**-branchiin, editoi tiedoston **index.py** alkupuolta esim.seuraavasti (muutos on funktion logger parametrissa) ja committaa muutokset:
+
+```py
+# tehdään alussa importit
+
+from logger import logger
+from summa import summa
+from erotus import erotus
+
+logger("aloitetaan ohjelma")
+
+x = int(input("luku 1: "))
+y = int(input("luku 2: "))
+print(f"{summa(x, y)}")
+print(f"{erotus(x, y)}")
+
+logger("lopetetaan ohjelma")
+print("goodbye!")
+```
+
+- Mergeä branchin **bugikorjaus** sisältö **masteriin**
+  - Katso tiedoston **index.py**-sisältöä, sen pitäisi sisältää nyt molemmissa brancheissa tehdyt muutokset
   - **Huom:** jo tässä vaiheessa saattaa syntyä konflikti jos olet vahingossa muuttanut merkkejä väärästä kohtaa tiedostoa! Toimi tällöin ao. ohjeen mukaan.
-- Lisää jotain tiedoston loppuun ja committaa
-- Siirry branchiin **toka**
-- Lisää jotain tiedoston **tarkea.txt** loppuun ja committaa
-- Mergeä branchin **master** sisältö branchiin **toka**
+
+- Muuta tiedostoa seuraavasti
+
+```py
+# tehdään alussa importit
+
+from logger import logger
+from summa import summa
+from erotus import erotus
+
+logger("aloitetaan ohjelma")
+
+x = int(input("luku 1: "))
+y = int(input("luku 2: "))
+print(f"{x} + {y} = {summa(x, y)}")
+print(f"{x} - {y} = {erotus(x, y)}")
+
+logger("lopetetaan ohjelma")
+print("goodbye!")
+```
+
+- Committoi muutokset
+
+- Siirry branchiin **bugikorjaus**
+- Muuta nyt tiedostoa seuraavasti ja committaa
+
+```py
+# tehdään alussa importit
+
+from logger import logger
+from summa import summa
+from erotus import erotus
+
+logger("aloitetaan ohjelma")
+
+x = int(input("luku 1: "))
+y = int(input("luku 2: "))
+print(f"Lukujen {x} ja {y} summa on {summa(x, y)}")
+print(f"Lukujen {x} ja {y} erotus on {erotus(x, y)}")
+
+logger("lopetetaan ohjelma")
+print("goodbye!")
+```
+
+- Mergeä branchin **master** sisältö branchiin **bugikorjaus**
   - Nyt pitäisi aiheutua konflikti, komento aiheuttaa tulostuksen
 
 ```
-Auto-merging tarkea.txt
-CONFLICT (content): Merge conflict in tarkea.txt
+Auto-merging index.py
+CONFLICT (content): Merge conflict in index.py
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
+- Git ei siis osannut yhdistää tiedostoon tehtyjä muutoksia, koska ne kohdistuvat samoille riveille, seurauksena on konflikti.
+
 - Ratkaise konflikti:
-  - Editoi tiedoston **tarkea.txt** sisältö haluamaksesi
+  - Editoi tiedoston **index.py** sisältö haluamaksesi
   - Ja toimi edellä mainitun artikkelien ohjeen mukaan, eli lisää konfliktoinut tiedosto staging-alueelle ja committoi
 
 Jotkut editorit, esim [Visual Studio Code](https://code.visualstudio.com) sisältävät sisäänrakennetusti niin sanotun _merge toolin_, joka osaa jossain määrin helpottaa konfliktien ratkaisua:
 
-![](https://github.com/mluukkai/ohjelmistotuotanto2017/raw/main/images/lh2-4a.png)
-
+![]({{ "/images/lh2-merge.png" | absolute_url }}){:height="350px" }
 ### 8. Git: branchit ja GitHub [versionhallinta]
 
 Aloita lukemalla ProGit kirjasta luku [Remote Branches](http://git-scm.com/book/en/Git-Branching-Remote-Branches).
@@ -386,7 +568,7 @@ Jos asia on päässyt unohtumaan, voit kerrata asian lukemalla [tämän](/riippu
   - Kauppa --> Varasto
 - **Poista luokan `Kauppa` konkreettiset riippuvuudet** yllä mainittuihin luokkiin
   - Määrittele luokalle `Kauppa` sopiva konstruktori, jotta voit injektoida riippuvuudet
-  - Piippuvuus luokkaan `Ostoskori` voi jäädä, sillä se on ainoastaan luokan Kauppa sisäisesti käyttämä luokka ja täten varsin harmiton
+  - Riippuvuus luokkaan `Ostoskori` voi jäädä, sillä se on ainoastaan luokan Kauppa sisäisesti käyttämä luokka ja täten varsin harmiton
   - Muut riippuvuudet jätetään vielä
 - Älä käytä luokan `Kauppa` sisällä enää konkreettisia luokkia `Varasto`, `Viitegeneraattori` ja `Pankki` vaan ainoastaan niitä vastaavia konstruktorin kautta saatuja olioita!
 - **Muokkaa _index.py_-tiedoston `main`-funktiota**, siten että se luo kaupan seuraavasti:
@@ -394,7 +576,7 @@ Jos asia on päässyt unohtumaan, voit kerrata asian lukemalla [tämän](/riippu
 ```python
 kauppa = Kauppa(
   Varasto.get_instance(),
-  Pankki.get_onstance(),
+  Pankki.get_instance(),
   Viitegeneraattori.get_instance()
 )
 ```
