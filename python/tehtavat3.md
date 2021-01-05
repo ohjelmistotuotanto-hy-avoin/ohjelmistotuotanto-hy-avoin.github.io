@@ -606,4 +606,67 @@ Resource  resource.robot
 Resource  login_resource.robot
 ```
 
+### Web-sovelluksen testien suorittamien CI-palvelimella
+
+**HUOM:** Seuraava osio ei kuulu tehtäviin, eli siinä esitettyjä esimerkkejä ei tarvitse tehdä mihinkään. Ohjeista saattaa kuitenkin olla hyötyä esimerkiksi kurssin [miniprojektissa](/miniprojekti).
+
+Edellisissä tehtävissä luultavasti käynnistit ensin Flask-palvelimen yhdessä terminaali-ikkunassa, jonka jälkeen suoritit testit toisessa terminaali-ikkunassa. Lopuksi, kun testit oli suoritettu, saatoit sammuttaa palvelimen.
+
+Jotta sovelluksen testit pystyisi suorittamaan CI-palvelimella, tulee nämä vaiheet ilmaista komentorivikomennoilla. Tähän tarkoitukseen, voimme käyttää esimerkiksi seuraavaa bash-skriptiä:
+
+```bash
+#!/bin/bash
+
+# käynnistetään Flask-palvelin taustalle (huomaa & komennon lopussa)
+poetry run python3 src/index.py &
+
+# odetetaan, että palvelin on valmiina ottamaan vastaan pyyntöjä,
+# jolloin localhost:5000/ping antaa vastauksen statuskoodilla 200
+while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:5000/ping)" != "200" ]]; 
+  do sleep 1; 
+done
+
+# suoritetaan testit
+poetry run robot src/tests
+
+# pysäytetään Flask-palvelin portissa 5000
+function clean_up {
+  kill $(lsof -t -i:5000)
+}
+
+# suoritetaan clean_up-funktio, kun prosessi lopettaa suorituksen
+trap clean_up EXIT
+```
+
+Skriptin voi lisätä esimerkiksi projektin juurihakemiston <i>run_robot_tests.sh</i>-tiedostoon. Tämän jälkeen sen voi suorittaa projektin juurihakemistossa komennolla `bash run_robot_tests.sh`.
+
+Skriptiä voi hyödyntää CI-palvelimella GitHub Actionsin avulla määrittelemällä sen suorittaminen omana askeleena konfiguraatiossa:
+
+```yaml
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+      - name: Install Poetry
+        run: pip install poetry
+      - name: Install dependencies
+        run: poetry install
+      - name: Run robot tests
+        run: bash run_robot_tests.sh
+```
+
 {% include submission_instructions.md %}
