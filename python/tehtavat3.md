@@ -331,8 +331,9 @@ Koodi muodostaa [Jinja](https://jinja.palletsprojects.com/)-kirjaston avulla _sr
 Sivupohja näyttää seuraavalta:
 
 ```html
-{% raw %}{% extends "layout.html" %} {% block title %} Ohtu Application {%
-endblock %} {% block body %}
+{% raw %}{% extends "layout.html" %}
+{% block title %} Ohtu Application {% endblock %}
+{% block body %}
 <h1>Ohtu Application</h1>
 
 <ul>
