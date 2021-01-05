@@ -73,20 +73,17 @@ Tehtäväpohjassa on valmiina luokan `Player` koodin runko. Edellä esitetyssä 
 Tee `Player`-luokkaan attribuutit kaikille JSON-datassa oleville kentille, joita ohjelmasi tarvitsee. Ohjelmasi voi toimia esimerkiksi niin, että se tulostaisi pelaajat seuraavalla tavalla:
 
 ```
-Players from FIN Wed Nov 06 23:31:32 EET 2019
+Players from FIN 2021-01-04 19:15:32.858661
 
-Henrik Borgstrom team FLA goals 0 assists 0
-Sami Niku team WPG goals 0 assists 0
-Mikael Granlund team NSH goals 2 assists 2
-Miikka Salomaki team NSH goals 1 assists 0
-Roope Hintz team DAL goals 9 assists 2
-Sebastian Aho team CAR goals 5 assists 5
-Erik Haula team CAR goals 8 assists 3
-Miro Heiskanen team DAL goals 4 assists 5
-Markus Granlund team EDM goals 0 assists 1
-Henri Jokiharju team BUF goals 1 assists 4
-Joel Armia team MTL goals 6 assists 4
-Artturi Lehkonen team MTL goals 2 assists 4
+Sami Vatanen team CAR  goals 5 assists 18
+Janne Kuokkanen team NJD  goals 0 assists 0
+Leo Komarov team NYI  goals 4 assists 10
+Otto Koivula team NYI  goals 0 assists 0
+Kaapo Kakko team NYR  goals 10 assists 13
+Juuso Riikola team PIT  goals 1 assists 6
+Urho Vaakanainen team BOS  goals 0 assists 0
+Tuukka Rask team BOS  goals 0 assists 0
+Rasmus Ristolainen team BUF  goals 6 assists 27
 ...
 ```
 
@@ -97,27 +94,20 @@ Tulostusasu ei tässä tehtävässä ole oleellista, eikä edes se mitä pelaaji
 Tulosta suomalaiset pelaajat pisteiden (goals + assists) mukaan järjestettynä. Tarkka tulostusasu ei ole taaskaan oleellinen, mutta se voi esimerkiksi näyttää seuraavalta:
 
 ```
-Players from FIN Wed Nov 06 23:47:11 EET 2019
+Players from FIN 2021-01-04 19:19:40.026464
 
-Aleksander Barkov   FLA   2 + 15 = 17
-Patrik Laine        WPG   3 + 11 = 14
-Mikko Rantanen      COL   5 +  7 = 12
-Teuvo Teravainen    CAR   4 +  8 = 12
-Roope Hintz         DAL   9 +  2 = 11
-Erik Haula          CAR   8 +  3 = 11
-Joel Armia          MTL   6 +  4 = 10
-Sebastian Aho       CAR   5 +  5 = 10
-Kasperi Kapanen     TOR   4 +  6 = 10
-Miro Heiskanen      DAL   4 +  5 =  9
-Joonas Donskoi      COL   5 +  3 =  8
-Sami Vatanen        NJD   4 +  4 =  8
-Artturi Lehkonen    MTL   2 +  4 =  6
-Valtteri Filppula   DET   1 +  5 =  6
-Mikko Koivu         MIN   1 +  5 =  6
-Kaapo Kakko         NYR   3 +  2 =  5
-Henri Jokiharju     BUF   1 +  4 =  5
-Ville Heinola       WPG   1 +  4 =  5
-Rasmus Ristolainen  BUF   0 +  5 =  5
+Sebastian Aho        CAR 38 + 28 = 66
+Patrik Laine         WPG 28 + 35 = 63
+Teuvo Teravainen     CAR 15 + 48 = 63
+Aleksander Barkov    FLA 20 + 42 = 62
+Mikko Rantanen       COL 19 + 22 = 41
+Kasperi Kapanen      TOR 13 + 23 = 36
+Miro Heiskanen       DAL  8 + 27 = 35
+Roope Hintz          DAL 19 + 14 = 33
+Joonas Donskoi       COL 16 + 17 = 33
+Rasmus Ristolainen   BUF  6 + 27 = 33
+Mikael Granlund      NSH 17 + 13 = 30
+Joel Armia           MTL 16 + 14 = 30
 ...
 ```
 
@@ -379,7 +369,7 @@ Jatketaan saman sovelluksen parissa.
 
 [Selenium WebDriver](http://docs.seleniumhq.org/projects/webdriver/) -kirjaston avulla on mahdollista simuloida selaimen käyttöä koodista käsin. Seleniumin käyttö Robot Framework -testeissä onnistuu valmiin, [SeleniumLibrary](https://robotframework.org/SeleniumLibrary/)-kirjaston avulla.
 
-Jotta selainta käyttävien testien suorittamien on mahdollista, täytyy lisäksi asentaa halutun selaimen ajuri. Projektin testit käyttävät Chrome-selainta, jolla testejä voi suorittaa käyttämällä [CromeDriver](https://chromedriver.chromium.org/)-ajuria. Ennen kuin siirrymme testien pariin, asenna ChromeDriver seuraamalla [tätä](./chromedriver_asennusohjeet) ohjetta.
+Jotta selainta käyttävien testien suorittamien on mahdollista, täytyy lisäksi asentaa halutun selaimen ajuri. Projektin testit käyttävät Chrome-selainta, jolla testejä voi suorittaa käyttämällä [CromeDriver](https://chromedriver.chromium.org/)-ajuria. Ennen kuin siirrymme testien pariin, asenna ChromeDriver seuraamalla [tätä](../chromedriver_asennusohjeet) ohjetta.
 
 Kun Chrome-ajuri on asennettu onnistuneesti, suorita projektin testit virtuaaliympäristössä komennolla `robot src/tests`. Komennon pitäisi suorittaa onnistuneesti kaksi testitapausta, `Login With Correct Credentials` ja `Login With Incorrect Password`. Testitapausten suoritusta voi seurata aukeavasta Chrome-selaimen ikkunasta.
 
@@ -467,14 +457,34 @@ Samalla tavoin kutsu <code>Input Text &nbsp;username &nbsp;kalle</code> löytä�
 <input type="text" name="username" id="username" />
 ```
 
-**Toteuta seuraavaksi _login.robot_-tiedostoon seuraava testitapaus:**
+**Tee nyt uusi tiedosto _home.robot_ ja lisää sinne seuraavat testitapaukset:**
 
 ```
+*** Settings ***
+Resource  resource.robot
+Suite Setup  Open And Configure Browser
+Suite Teardown  Close Browser
+Test Setup  Go To Main Page
+
+*** Test Cases ***
+Click Login Link
+    Click Link  Login
+    Login Page Should Be Open
+
 Click Register Link
-# ...
+    Click Link  Register new user
+    Register Page Should Be Open
 ```
 
-Testitapauksen tulee testata, että "Register"-linkin painaminen avaa rekisteröitymis-sivun. Vinkki: voit käyttää [Click Link](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Click%20Link)-avainsanaa.
+Testitapausten tulee siis testata, että "Login"- ja "Register new user"-linkkien painaminen avaa oikean sivun. Linkkien klikkaus tapahtuu käyttämällä valmiiksi määriteltyä [Click Link](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Click%20Link)-avainsanaa.
+
+Toteuta testin käyttämät avainsanat tiedostoon `resource.robot`. Kun suoritat testit, virheilmoitus kertoo mitä avainsanoja on määrittelemättä:
+
+```
+Click Register Link                                                   | FAIL |
+Setup failed:
+No keyword with name 'Go To Main Page' found.
+```
 
 ### 9. Web-sovelluksen testaaminen osa 2
 
@@ -542,7 +552,7 @@ Login With Nonexistent Username
 
 ### 10. Web-sovelluksen testaaminen osa 3
 
-Tehdään seuraavaksi pari muutosta testien suorituksen nopeuttamiseksi. Ensiksi, aseta _resource.robot_-tiedostossa olevan `DELAY`-muuttujan arvoksi `0`. Sen jälkeen, otetaan käyttöön Chrome-selaimen [Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome)-variaatio. "Headless"-selainten käyttö on kätevää esimerkiksi automatisoiduissa testeissä, joissa selaimen käyttöliittymä ei ole tarpeellinen. Suorita testit Headless Chromen avulla asettamalla `BROWSER`-muuttujan arvoksi `headlesschrome`.
+Tehdään seuraavaksi pari muutosta testien suorituksen nopeuttamiseksi. Ensiksi, aseta _resource.robot_-tiedostossa olevan `DELAY`-muuttujan arvoksi `0`. Sen jälkeen, otetaan käyttöön Chrome-selaimen [Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome) -variaatio. "Headless"-selainten käyttö on kätevää esimerkiksi automatisoiduissa testeissä, joissa selaimen käyttöliittymä ei ole tarpeellinen. Suorita testit Headless Chromen avulla asettamalla `BROWSER`-muuttujan arvoksi `headlesschrome`.
 
 **HUOM:** Headless Chrome vaikeuttaa testien debuggaamista, koska selaimen käyttöliittymä ei ole näkyvissä. Jos testitapauksen suorittaminen epäonnistuu, projektin juurihakemistoon ilmestyy tiedosto _selenium-screenshot-\*.png_, josta on nähtävissä selainikkunan sisältö virhetilanteen hetkellä. Jos tämä tieto ei riitä, voit muutta debuggaamista varten `DELAY`- ja `BROWSER`-muuttujien arvoja.
 
@@ -562,10 +572,14 @@ Register With Nonmatching Password And Password Confirmation
 # ...
 ```
 
+**HUOM** tee yksi testitapaus kerrallaan. Testitapausta koodatessa kannattaa suorittaa ainoastaan työn alla olevaa testitapausta [täällä](/python/tehtavat3/#robot-framework--testien-debuggaaminen) olevan ohjeen mukaan, ja kannattanee asettaa `headlesschrome`:n sijaan `chrome` muuttujan `BROWSER` arvkosi jotta näet miten testitapaus etenee.
+
 Käyttäjätunnus ja salasana noudattavat samoja sääntöjä kuin _tehtävässä 5_, eli:
 
 - Käyttäjätunnuksen on oltava merkeistä a-z koostuva vähintään 3 merkin pituinen merkkijono, joka ei ole vielä käytössä
 - Salasanan on oltava pituudeltaan vähintään 8 merkkiä ja se ei saa koostua pelkästään kirjaimista
+
+Valmiiksi määritelty hakusana [Page Should Contain](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Page%20Should%20Contain).
 
 **Laajenna koodiasi siten, että testit menevät läpi.** Oikea paikka koodiin tuleville muutoksille on <i>src/services/user_service.py</i>-tiedoston `UserService`-luokan metodi `validate`.
 

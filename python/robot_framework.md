@@ -52,7 +52,7 @@ Laskurin haluttua toiminnallisuutta kuvaavat seuraavat user storyt
 
 Robot Framework testaamisen ytimessä on niin kutsutut _avainsanat_ (keywords). Avainsana on selkokielinen selitys tehtävästä asiasta. Esimerkiksi laskurin testaamisen kannalta yksi erittäin oleellinen avainsana on `Increase Counter`, jonka avulla laskurin arvoa voidaan kasvattaa. Avainsanoilla voi olla myös _argumentteja_ (arguments), jotka tekevät niistä uudelleenkäytettäviä. Argumenteilla varustettu avainsana voisi olla esimerkiksi `Counter Value Should Be`, joka tarkistaa, että laskurin arvo vastaa argumentin arvoa.
 
-Avainsanoja hyödyntää niin kutsutut _testitapaukset_ (test cases), jotka ovat itse testejä. Testitapauksilla on nimi (kuten avainsanoilla) ja ne suorittavat avainsanoja tietyssä järjestyksessä. Esimerkiksi testitapaus laskurin kasvattamiselle voisi olla seuraava:
+Avainsanoja hyödyntävät niin kutsutut _testitapaukset_ (test cases), jotka ovat itse testejä. Testitapauksilla on nimi (kuten avainsanoilla) ja ne suorittavat avainsanoja tietyssä järjestyksessä. Esimerkiksi testitapaus laskurin kasvattamiselle voisi olla seuraava:
 
 ```
 *** Test Cases ***

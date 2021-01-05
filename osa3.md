@@ -448,11 +448,11 @@ Storyn hyväksymiskriteerit on tarkoituksenmukaista kirjoittaa heti storyn toteu
 
 Ideaalitilanteessa storyjen hyväksymiskriteereistä tehdään automaattisesti suoritettavia. 
 
-Automaattisen hyväksymistestauksen on olemassa monia työkaluja, eräs suosituimmista on suomalainen python-pohjainen [Robot framework](https://robotframework.org/). Käytämme kurssilla kuitenkin useita eri kieliä tukevaa [Cucumberia](https://cucumber.io/). 
+Automaattisen hyväksymistestauksen on olemassa monia työkaluja, eräs suosituimmista on suomalainen Python-pohjainen [Robot framework](https://robotframework.org/), jota käytetään kurssin Python-versiossa. Kurssin Jav-versio taas käyttää käyttää useita eri kieliä tukevaa [Cucumberia](https://cucumber.io/). 
 
 Automatisoidusta hyväksymistestauksesta käytetään joskus nimitystä [Acceptance test driven development](https://en.wikipedia.org/wiki/Acceptance_test%E2%80%93driven_developmen) (ATDD) tai _[Behavior driven development](https://en.wikipedia.org/wiki/Behavior-driven_development)_ (BDD), erityisesti jos testit toteutetaan jo iteraation alkupuolella, ennen kun storyn toteuttava koodi on valmiina.
 
-ATDD:ssä ja BDD:ssä on kyse lähes samasta asiasta pienin painotuseroin. BDD kiinnittää tarkemmin huomiota käytettävään terminologiaan, BDD ei esimerkiksi puhu ollenkaan testeistä vaan sen sijaan kuvailee hyväksymiskriteerit esimerkkikäyttäytymisten (example behavior) avulla. Kurssilla käytämme pääosin BDD:n nimeämiskäytäntöjä, sillä käyttämämme [Cucumber](https://cucumber.io/) on nimenomaan BDD-piirien kehittämä työkalu. 
+ATDD:ssä ja BDD:ssä on kyse lähes samasta asiasta pienin painotuseroin. BDD kiinnittää tarkemmin huomiota käytettävään terminologiaan, BDD ei esimerkiksi puhu ollenkaan testeistä vaan sen sijaan kuvailee hyväksymiskriteerit esimerkkikäyttäytymisten (example behavior) avulla. Kurssin Java versio käyttää pääosin BDD:n nimeämiskäytäntöjä, sillä [Cucumber](https://cucumber.io/) on nimenomaan BDD-piirien kehittämä työkalu. 
 
 Käsite ATDD pitää sisällään aina ainoastaan hyväksymistason testauksen. BDD:llä voidaan tehdä myös muita, kuin hyväksymistason testejä. Rubylle alun perin kehitetty [rspec](https://rspec.info/) sanoo olevansa BDD-kirjasto, rspec sopii hyväksymistestien lisäksi hyvin myös yksikkötestaamiseen. Muille kielille on tehty paljon rspecin tapaan toimivia BDD-henkisiä kirjastoja, kuten Javascript-maailman [mocha](https://mochajs.org/) ja [jest](https://jestjs.io/). Seuraavaksi käsiteltävä Cucumber on kuitenkin nimenomaan hyväksymistestaukseen työväline, yksikkötestaamiseen sitä ei kannata käyttää.
 
@@ -481,7 +481,76 @@ Metodit kutsuvat ohjelman luokkia simuloiden käyttäjän syötettä varmistaen,
 
 ![]({{ "/images/3-10a.png" | absolute_url }}){:height="500px" }
 
-### Websovellusten testauksen automatisointi
+### Robot-framework
+
+Myös [Robot frsmeworkia](https://robotframework.org/) käytettäessä testit kirjoitetaan asiakkaan kielellä.
+
+Esimerkkisovelluksen user storyn  _user can log in with a valid username/password-combination_ robot-testi näyttäisi seuraavalta
+
+```
+Test Setup  Create User And Input Login Command
+
+Login With Correct Credentials
+    Input Credentials  pekka  akkep
+    Output Should Contain  Logged in
+
+Login With Incorrect Password
+    Input Credentials  pekka  wrong
+    Output Should Contain  Invalid username or password
+
+Login With Nonexistent Username
+    Input Credentials  johndoe  whatisthis
+    Output Should Contain  Invalid username or password
+
+```
+
+Myös Robot framework edellyttää että kirjoitetaan koodia, joka määrittelee miten testit suoritetaan. Periaate on hieman kuitenkin hieman erilainen kuin Cucumberissa. Robot-testit koostuvat _avainsanoista_ (engl. keywords). Esimerkissä on käytössä muun muassa avainsana _Input Credentials_, jonka taas on määritelty kahden avainsanan `Input` ja `Run Application` avulla:
+
+```
+Input Credentials
+    [Arguments]  ${username}  ${password}
+    Input  ${username}
+    Input  ${password}
+    Run Application
+```
+
+Määrittely kertoo myös että avainsana _Input Credentials_ saa kaksi parametria, käyttäjätunnuksen ja salasanan.
+
+Osa avainanoista on Robot frameworkin tai jonkin muun kirjaston määrittelemiä. Osa avainsanoista taas määritellään itse koodissa. Seuraavassa katkelma koodia, joka sisältää avainsanat `Input` ja `Run Application` määrittelevän koodin: 
+
+```python 
+class AppLibrary:
+    # testattavan sovelluksen alustus
+    def __init__(self):
+        self._io = StubIO()
+        self._user_service = UserService(self._user_repository)
+
+        self._app = App(
+            self._user_service,
+            self._io
+        )
+
+    # avainsanan Input määrittelevä metodi
+    def input(self, value):
+        self._io.add_input(value)
+
+    # avainsanan Run Application määrittelevä metodi
+    def run_application(self):
+        self._app.run()
+
+    # avainsanan Output Should Contain määrittelevä metodi
+    def output_should_contain(self, value):
+        outputs = self._io.outputs
+
+        if not value in outputs:
+            raise AssertionError(
+                f"Output \"{value}\" is not in {str(outputs)}"
+            )
+```
+
+Älä ole nyt huolissasi yksityiskohdista, jos teet tehtävistä Python-versiot, pääset tutustumaan asiaan tarkemmin myöhemmin!
+
+### Websovellusten testauksen automatisointi 
 
 Olemme jo nähneet ensimmäisen ja toisen viikon laskareissa, miten riippuvuuksien injektoinnin avulla on helppo tehdä komentoriviltä toimivista ohjelmista automatisoidusti testattavia. Myös Java Swing, JavaFX ja muilla käyttöliittymäkirjastoilla sekä web-selaimella käytettävien sovellusten automatisoitu testaaminen on mahdollista. Tutustumme laskareissa web-sovellusten testauksen automatisointiin käytettävään [Selenium 2.0 WebDriver](http://seleniumhq.org/docs/03_webdriver.html) -kirjastoon.
 
@@ -493,7 +562,7 @@ Seuraavassa esimerkki käyttäjätunnuksista ja sisäänkirjautumisesta huolehti
 
 ![]({{ "/images/3-11a.png" | absolute_url }}){:height="500px" }
 
-Cucumberiin ja web-sovellusten testaamiseen tutustutaan tarkemmin viikon 3 laskareissa.
+Robot frameworkia käytettäessä websovellusten testaus onnistuu suurelta olin valmiiksi määriteltyjä avainsanoja käyttämällä, ohjelmoijan on lähinnä huolehdittava testit alustavan koodin kirjoittamisesta.
 
 ## Ohjelmiston integraatio
 
