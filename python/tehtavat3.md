@@ -208,8 +208,8 @@ Register With Valid Username And Long Enough Password Containing Only Letters
 # ...
 ```
 
-- Käyttäjätunnuksen on oltava merkeistä a-z koostuva vähintään 3 merkin pituinen merkkijono, joka ei ole vielä käytössä. Vinkki: [säännölliset lausekkeet](https://docs.python.org/3/library/re.html#module-re) ja [^[a-z]+\$](https://regexr.com/5fslc)
-- Salasanan on oltava pituudeltaan vähintään 8 merkkiä ja se ei saa koostua pelkästään kirjaimista. Vinkki: [säännölliset lausekkeet](https://docs.python.org/3/library/re.html#module-re) ja [[^a-z]](https://regexr.com/5fsll)
+- Käyttäjätunnuksen on oltava merkeistä a-z koostuva vähintään 3 merkin pituinen merkkijono, joka ei ole vielä käytössä. Vinkki: [säännölliset lausekkeet](https://docs.python.org/3/library/re.html#module-re) ja <a href="https://regexr.com/5fslc">^[a-z]+$</a>
+- Salasanan on oltava pituudeltaan vähintään 8 merkkiä ja se ei saa koostua pelkästään kirjaimista. Vinkki: [säännölliset lausekkeet](https://docs.python.org/3/library/re.html#module-re) ja <a href="https://regexr.com/5fsll">[^a-z]</a>
 
 Tee testitapauksista suoritettavia ja **täydennä ohjelmaa siten että testit menevät läpi**. Oikea paikka koodiin tuleville muutoksille on <i>src/services/user_service.py</i>-tiedoston `UserService`-luokan metodi `validate`.
 
@@ -321,8 +321,9 @@ Koodi muodostaa [Jinja](https://jinja.palletsprojects.com/)-kirjaston avulla _sr
 Sivupohja näyttää seuraavalta:
 
 ```html
-{% raw %}{% extends "layout.html" %} {% block title %} Ohtu Application {%
-endblock %} {% block body %}
+{% raw %}{% extends "layout.html" %}
+{% block title %} Ohtu Application {% endblock %}
+{% block body %}
 <h1>Ohtu Application</h1>
 
 <ul>

@@ -30,7 +30,7 @@ Katso tarkempi ohje palautusrepositorioita koskien [täältä](/python/tehtavat1
 
 ### 1. Yksikkötestaus ja riippuvuudet: mock-kirjasto, osa 1
 
-Useimmilla luokilla on riippuvuuksia toisiin luokkiin. Esim. [viikon 2](/python/tehtavat2/#8-riippuvuuksien-injektointi-osa-3-verkkokauppa) laskarien verkkokaupan luokka `Kauppa` riippui `Pankista`-, `Varastosta`- ja `Viitegeneraattori`-luokista. Riippuvuuksien injektion avulla saimme mukavasti purettua riippuvuudet luokkien väliltä.
+Useimmilla luokilla on riippuvuuksia toisiin luokkiin. Esim. [viikon 2](/python/tehtavat2/#8-riippuvuuksien-injektointi-osa-3-verkkokauppa) laskarien verkkokaupan luokka `Kauppa` riippui `Pankki`-, `Varasto`- ja `Viitegeneraattori`-luokista. Riippuvuuksien injektion avulla saimme mukavasti purettua riippuvuudet luokkien väliltä.
 
 Vaikka luokilla ei olisikaan riippuvuuksia toisiin luokkiin, on tilanne edelleen se, että luokan oliot käyttävät joidenkin toisten luokkien olioiden palveluita. Tämä tekee yksikkötestauksesta välillä hankalaa. Miten esim. luokkaa `Kauppa` tulisi testata? Tuleeko kaupan testeissä olla mukana toimivat versiot kaikista sen riippuvuuksista?
 

@@ -18,7 +18,7 @@ Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/5), 
 
 Tehtävissä 1-3 jatketaan gitin harjoittelua. Tehtävät 2 ja 3 eivät näy palautuksissa mitenkään.
 
-Tehtävät 4 ja 5 liittyvät materiaalin ohjelmistosuunnittelua käsittelevän [osan 4](/osa4/) niihin lukuihin, joihin on merkitty <span style="color:blue">[viikko 5]</span>.
+Tehtävät 4 ja 5 liittyvät materiaalin ohjelmistosuunnittelua käsittelevän [osan 4](/python/osa4/) niihin lukuihin, joihin on merkitty <span style="color:blue">[viikko 5]</span>.
 
 Tehtävä 6 käsittelee retrospektiivitekniikoita.
 
@@ -38,7 +38,7 @@ Tutustutaan tässä tehtävässä Gitin tageihin:
 
 > Git has the ability to tag specific points in history as being important. Typically people use this functionality to mark release points (v1.0, and so on)
 
-Lue ensin [http://git-scm.com/book/en/Git-Basics-Tagging](http://git-scm.com/book/en/Git-Basics-Tagging) (voit skipata kohdat 'signed tags' ja 'verifying tags')
+Lue ensin [http://git-scm.com/book/en/Git-Basics-Tagging](http://git-scm.com/book/en/Git-Basics-Tagging) (voit ohittaa kohdat 'signed tags' ja 'verifying tags')
 
 Tee seuraavat samaan repositorioon, mihin palautat tehtäväsi:
 
@@ -137,7 +137,7 @@ def _suorita_komento(self, komento):
     self._tulos_var.set(self._sovellus.tulos)
 ```
 
-Refaktoroi koodi niin, ettei `_suorita_komento`-metodi sisällä pitkää `if`-hässäkkää. Hyödynnä kurssimateriaalin osassa 4 esiteltyä suunnittelumallia [command](/osa4#laskin-ja-komento-olio-viikko-5).
+Refaktoroi koodi niin, ettei `_suorita_komento`-metodi sisällä pitkää `if`-hässäkkää. Hyödynnä kurssimateriaalin osassa 4 esiteltyä suunnittelumallia [command](/python/osa4#laskin-ja-komento-olio-viikko-5).
 
 Tässä tehtävässä ei tarvitse vielä toteuttaa kumoa-komennon toiminnallisuutta!
 
