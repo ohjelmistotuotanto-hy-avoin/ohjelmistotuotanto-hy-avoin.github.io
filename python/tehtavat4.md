@@ -39,7 +39,7 @@ Olemme jo muutamaan otteeseen (esim. NHL-tilastot-tehtävässä [viikolla 1](/py
 
 Kuten pian huomaamme, mock-oliot eivät ole pelkkiä "tynkäolioita", mockien avulla voi myös varmistaa, että testattava metodi tai funktio kutsuu olioiden metodeja asiaankuuluvalla tavalla.
 
-Tutustumme nyt unittest-moduulin [mock](https://docs.python.org/3/library/unittest.mock.html)-kirjastoon. Kirjastosta voidaan tuoda luokka [Mock](https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock). Kasotaan mitä luokalla voi tehdä käynnistämällä interaktiivinen Python-komentorivi komennolla `python3` (virtuaaliympäristölle ei ole tarvetta, koska emme käytä ulkoisia riippuvuuksia):
+Tutustumme nyt unittest-moduulin [mock](https://docs.python.org/3/library/unittest.mock.html)-kirjastoon. Kirjastosta voidaan tuoda luokka [Mock](https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock). Kasotaan mitä luokalla voi tehdä käynnistämällä interaktiivinen Python-terminaali komennolla `python3` (virtuaaliympäristölle ei ole tarvetta, koska emme käytä ulkoisia riippuvuuksia):
 
 ```python
 >>> from unittest.mock import Mock
@@ -48,7 +48,7 @@ Tutustumme nyt unittest-moduulin [mock](https://docs.python.org/3/library/unitte
 <Mock id='4568521696'>
 ```
 
-Anna komentoriville syötteet yksi kerrallaan. Enter-painikkeen painallus suorittaa annetun syötteen. Muuttuja `mock` sisältää siis `Mock`-luokan olion. `Mock`-luokan olioilla on se mielenkiintoinen piirre, että niillä kaikki mahdolliset toteutukset. Mitä tällä tarkoitetaan? Kokeillaan:
+Anna syötteet terminaaliin yksi kerrallaan. Enter-painikkeen painallus suorittaa annetun syötteen. Muuttuja `mock` sisältää siis `Mock`-luokan olion. `Mock`-luokan olioilla on se mielenkiintoinen piirre, että niillä kaikki mahdolliset toteutukset. Mitä tällä tarkoitetaan? Kokeillaan:
 
 ```python
 >>> mock.foo
@@ -95,7 +95,7 @@ AssertionError: Expected 'doo' to have been called.
 
 Voimme siis kutsua tarkasteltavalle metodille [assert_called](https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock.assert_called)-metodia. Huomaa, että `mock.foo.bar`-metodia on kutsuttu, mutta `mock.foo.doo`-metodia sen sijaan ei ole. Voimme myös tarkistaa, että metodia on kutsuttu oikeilla argumenteilla käyttämällä [assert_called_with](https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock.assert_called_with)-metodia.
 
-Kun `Mock`-oliot ovat tulleet tutuksi, voit sulkea komentorivin syöttämällä `exit()`.
+Kun `Mock`-oliot ovat tulleet tutuksi, voit sulkea terminaalin komennolla `exit()`.
 
 Hae seuraavaksi [kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko4/mock-demo_ oleva projekti. Kyseessä on yksinkertaistettu versio verkkokauppaesimerkistä.
 
@@ -146,6 +146,8 @@ kauppa = Kauppa(pankki_mock, viitegeneraattori_mock)
 ```
 
 `Mock`-luokan [konstruktorin](https://docs.python.org/3/library/unittest.mock.html#unittest.mock.Mock) `wraps`-parametrin avulla voimme määritellä, minkä olion `Mock`-olio toteuttaa. Tämä mahdollistaa sen, ettei esimerkiksi `uusi`-metodille tarvitse määritellä toteutusta, vaan voimme käyttää sen oikeaa toteutusta.
+
+Eli nyt viitegeneraattori on olio, jonka metodi `uusi` palauttaa aina arvon 1. 
 
 Testi tarkastaa, että kaupalle tehdyt metodikutsut aiheuttavat sen, että pankin `Mock`-olion metodia `maksa` on kutsuttu oikeilla parametreilla. Kolmanteen parametriin, eli viitenumeroon ei kiinnitetä huomiota:
 
@@ -206,13 +208,17 @@ class TestKassapaate(unittest.TestCase):
         self.kassa = Kassapaate()
 
     def test_kortilta_velotetaan_hinta_jos_rahaa_on(self):
-        maksukortti_mock = Mock(wraps=Maksukortti(10))
+        maksukortti_mock = Mock()
+        maksukortti_mock.saldo = 10
+
         self.kassa.osta_lounas(maksukortti_mock)
 
         maksukortti_mock.osta.assert_called_with(HINTA)
 
     def test_kortilta_ei_veloteta_jos_raha_ei_riita(self):
-        maksukortti_mock = Mock(wraps=Maksukortti(4))
+        maksukortti_mock = Mock()
+        maksukortti_mock.saldo = 4
+
         self.kassa.osta_lounas(maksukortti_mock)
 
         maksukortti_mock.osta.assert_not_called()
