@@ -518,12 +518,6 @@ class StubIO:
         self.outputs.append(teksti)
 ```
 
-Parannellun laskimen rakenne luokkakaaviona:
-
-![](https://github.com/mluukkai/ohjelmistotuotanto2017/raw/main/images/os-1.png)
-
-Luokka ei ole vielä kaikin osin laajennettavuuden kannalta optimaalinen. Palaamme asiaan hetken kuluttua.
-
 #### Koheesio komponenttitasolla
 
 Koheesio ja _single responsibility_ -periaate eivät ole pelkästään olio-ohjelmointiin liittyviä käsitteitä vaan universaaleja hyvän koodin periaatteita. Jos ajatellaan kurssilla [Full stack -websovelluskehitys](https://fullstackopen.com/) käytettävää React-kirjastoa, on siinäkin periaatteena koostaa käyttöliittymä pienistä komponenteista, joista kukin keskittyy yhteen asiaan, esim. yksittäisen napin HTML-koodin renderöintiin. Web-sovelluksen tilan käsittely taas pyritään kapseloimaan Redux-storeen, jonka ainoa vastuu on tilasta ja sen muutoksista huolehtiminen.
@@ -662,10 +656,6 @@ class MaaraaikaisTili(Tili):
         return super().siirra_rahaa_tililta(tilille, summa)
 ```
 
-Ohjelman rakenne näyttää tässä vaiheessa seuraavalta:
-
-![]({{ "/images/4-8.png" | absolute_url }}){:height="120px" }
-
 Seuraavaksi tulee idea _Euribor-korkoa käyttävistä määräaikaistileistä_. Miten nyt kannattaisi tehdä? Osa toiminnallisuudesta on luokassa _MaaraaikaisTili_ ja osa luokassa _EuriborTili_...
 
 Koronmaksun hoitaminen perinnän avulla ei ollutkaan paras ratkaisu, parempi on noudattaa _favor composition over inheritance_ -periaatetta. Eli erotetaan _koronmaksu_ omiksi luokikseen, jotka toteuttavat metodin `get_korko`:
@@ -715,10 +705,6 @@ Erilaisia tilejä luodaan seuraavasti:
 normaali = Tili("1234-1234", "Jami Kousa", Tasakorko(0.04))
 euribor12 = Tili("4422-3355", "Lea Kutvonen", EuriborKorko(12))
 ```
-
-Ohjelman rakenne on nyt seuraava:
-
-![]({{ "/images/4-9.png" | absolute_url }}){:height="120px" }
 
 Muutetaan luokkaa `Tili` vielä siten, että tilejä voidaan luoda ilman konstruktoria:
 
@@ -927,10 +913,6 @@ class Laskin:
 
 Hienona puolena laskimessa on nyt se, että voimme lisätä operaatioita ja luokkaa `Laskin` ei tarvitse muuttaa millään tavalla, ainoa muutosta edellyttävä kohta olemassaolevassa koodissa on luokan `Operaatiotehdas` metodi `luo`.
 
-Sovelluksen rakenne näyttää seuraavalta:
-
-![]({{ "/images/4-10.png" | absolute_url }}){:height="250px" }
-
 #### Laskin ja komento-olio <span style="color:blue">[viikko 5]</span>
 
 Entä jos haluamme laskimelle muunkinlaisia, kuin 2 parametria ottavia operaatioita, esim. neliöjuuren? Muutetaan luokan `Operaatiotehdas` olemusta siten, että siirretään sen huolehdittavaksi myös käyttäjän kanssa tapahtuva kommunikointi.
@@ -1032,10 +1014,6 @@ class Laskin:
             self.komennot.hae(komento).suorita()
 ```
 
-Ohjelman rakenne tässä vaiheessa:
-
-![]({{ "/images/4-11.png" | absolute_url }}){:height="250px" }
-
 #### Suunnittelumalli: command <span style="color:blue">[viikko 5]</span>
 
 Eristimme siis jokaiseen erilliseen laskuoperaatioon liittyvän toiminnallisuuden omaksi oliokseen command-suunnittelumallin ideaa noudattaen, eli siten, että kaikki operaatiot toteuttavat yksinkertaisen rajapinnan, jolla on ainoastaan metodi `suorita`
@@ -1099,8 +1077,6 @@ class Erotus(BinaariOperaatio):
 Ja mikä parasta, ainoa muu luokka, jota on koskettava on komentoja luova `Komentotehdas`-luokka.
 
 Ohjelmasta on näin ollen saatu laajennettavuuden kannalta varsin joustava. Uusia operaatioita on helppo lisätä ja lisäys ei aiheuta muutoksia moneen kohtaan koodia. `Laskin`-luokallahan ei ole riippuvuuksia muualle kuin `Komentotehdas`-luokkaan sekä konstruktorin kautta injektoituun `KonsoliIO`-luokkaan.
-
-![]({{ "/images/4-12.png" | absolute_url }}){:height="300px" }
 
 Hintana joustavuudelle on luokkien määrän kasvu. Nopealla vilkaisulla saattaakin olla vaikea havaita miten ohjelma toimii, varsinkaan jos ei ole vastaavaan tyyliin tottunut, mukaan on nimittäin piilotettu factory- ja command-suunnittelumallien lisäksi suunnittelumalli _template method_ (kaksiparametrisen komennon toteutukseen).
 
