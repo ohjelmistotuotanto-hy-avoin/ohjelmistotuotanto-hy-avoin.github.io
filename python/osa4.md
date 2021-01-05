@@ -126,7 +126,7 @@ Koodin tasolla kerrosrakenne näkyy siinä, miten sovelluksen koodi jakautuu pak
 
 ![]({{ "/images/py-4-2.png" | absolute_url }}){:height="400px" }
 
-Arkkitehtuuria heijasteleva pakkausrakenne voidaan kuvata UML:n [pakkauskaaviolla](https://github.com/ohjelmistotekniikka-hy/python-kevat-2021/tree/master/materiaali/materiaali.md#pakkauskaavio):
+Arkkitehtuuria heijasteleva pakkausrakenne voidaan kuvata UML:n [pakkauskaaviolla](https://github.com/ohjelmistotekniikka-hy/python-kevat-2021/blob/master/materiaali/materiaali.md#pakkauskaavio):
 
 ![]({{ "/images/py-4-1b.png" | absolute_url }}){:height="400px" }
 
