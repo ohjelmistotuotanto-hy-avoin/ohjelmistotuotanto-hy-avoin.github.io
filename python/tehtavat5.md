@@ -102,7 +102,8 @@ Voit tehdä tämän ja seuraavan tehtävän mihin tahansa repositorioon, tehtäv
 
 ### 4. Laskin ja komento-oliot
 
-[Kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistoissa _koodi/viikko5/laskin_, löytyy yksinkertaisen laskimen toteutus. Laskimelle on toteutettu graafinen käyttöliittymä [Tkinter](https://docs.python.org/3/library/tkinter.html)-kirjaston avulla. 
+[Kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistoissa _koodi/viikko5/laskin_, löytyy yksinkertaisen laskimen toteutus. Laskimelle on toteutettu graafinen käyttöliittymä [Tkinter](https://docs.python.org/3/library/tkinter.html)-kirjaston avulla. Jos tarvitte, lue ensin kurssin Ohjelmistotekniikka [materiaalissa](https://github.com/ohjelmistotekniikka-hy/python-kevat-2021/blob/master/materiaali/tkinter.md) oleva tkinter-tutoriaali.
+
 
 Asenna projektin riippuvuudet komenolla `poetry install` ja käynnistä laskin virtuaaliympäristössä komennolla `python3 src/index.py`. Komennon suorittamisen tulisi avata ikkuna, jossa on laskimen käyttöliittymä.
 
@@ -118,23 +119,23 @@ def _suorita_komento(self, komento):
         pass
 
     if komento == Komento.SUMMA:
-        self._sovellus.plus(arvo)
+        self._sovelluslogiikka.plus(arvo)
     elif komento == Komento.EROTUS:
-        self._sovellus.miinus(arvo)
+        self._sovelluslogiikka.miinus(arvo)
     elif komento == Komento.NOLLAUS:
-        self._sovellus.nollaa()
+        self._sovelluslogiikka.nollaa()
     elif komento == Komento.KUMOA:
         pass
 
     self._kumoa_painike["state"] = constants.NORMAL
 
-    if self._sovellus.tulos == 0:
+    if self._sovelluslogiikka.tulos == 0:
         self._nollaus_painike["state"] = constants.DISABLED
     else:
         self._nollaus_painike["state"] = constants.NORMAL
 
     self._syote_kentta.delete(0, constants.END)
-    self._tulos_var.set(self._sovellus.tulos)
+    self._tulos_var.set(self._sovelluslogiikka.tulos)
 ```
 
 Refaktoroi koodi niin, ettei `_suorita_komento`-metodi sisällä pitkää `if`-hässäkkää. Hyödynnä kurssimateriaalin osassa 4 esiteltyä suunnittelumallia [command](/python/osa4#laskin-ja-komento-olio-viikko-5).
@@ -152,15 +153,15 @@ class Komento(Enum):
 
 
 class Kayttoliittyma:
-    def __init__(self, sovellus, root):
-        self._sovellus = sovellus
+    def __init__(self, sovelluslogiikka, root):
+        self._sovelluslogiikka = sovelluslogiikka
         self._root = root
 
         self._kommenot = {
-            Komento.SUMMA: Summa(sovellus, self._lue_syote),
-            Komento.EROTUS: Erotus(sovellus, self._lue_syote),
-            Komento.NOLLAUS: Nollaus(sovellus, self._lue_syote),
-            Komento.KUMOA: Kumoa(sovellus, self._lue_syote)
+            Komento.SUMMA: Summa(sovelluslogiikka, self._lue_syote),
+            Komento.EROTUS: Erotus(sovelluslogiikka, self._lue_syote),
+            Komento.NOLLAUS: Nollaus(sovelluslogiikka, self._lue_syote),
+            Komento.KUMOA: Kumoa(sovelluslogiikka, self._lue_syote)
         }
     
     # ...
@@ -173,20 +174,22 @@ class Kayttoliittyma:
         komento_olio.suorita()
         self._kumoa_painike["state"] = constants.NORMAL
 
-        if self._sovellus.tulos == 0:
+        if self._sovelluslogiikka.tulos == 0:
             self._nollaus_painike["state"] = constants.DISABLED
         else:
             self._nollaus_painike["state"] = constants.NORMAL
 
         self._syote_kentta.delete(0, constants.END)
-        self._tulos_var.set(self._sovellus.tulos)
+        self._tulos_var.set(self._sovelluslogiikka.tulos)
 ```
 
-Komennoilla on nyt siis metodi `suorita` ja ne saavat konstruktorin kautta `Sovellus`-olion ja funktion, jota kutsumalla syötteen voi lukea.
+Komennoilla on nyt siis metodi `suorita` ja ne saavat konstruktorin kautta `Sovelluslogiikka`-olion ja funktion, jota kutsumalla syötteen voi lukea.
 
 ### 5. Komentojen kumoaminen
 
-Toteuta laskimeen myös kumoa-toiminnallisuus. Periaatteena on siis tallettaa `Sovellus`-luokkaan ennen jokaista operaatiota laskimen edellinen tulos. Edellisen tuloksen tulee voida palauttaa kutsumalla `Sovellus`-luokan metodia `kumoa`.
+Toteuta laskimeen myös kumoa-toiminnallisuus. Periaatteena on siis toteuttaa jokaiseen komento-olioon metodi `kumoa`. Olion tulee myös muistaa mikä oli tuloksen arvo ennen komennon suoritusta, jotta se osaa palauttaa laskimen suoritusta edeltävään tilaan.
+
+Jos kumoa-nappia painetaan, suoritetaan sitten edelliseksi suoritetun komento-olion metodi `kumoa`.
 
 Riittää, että ohjelma muistaa edellisen tuloksen, eli kumoa-toimintoa ei tarvitse osata suorittaa kahta tai useampaa kertaa peräkkäin. Tosin tämänkään toiminallisuuden toteutus ei olisi kovin hankalaa, jos edelliset tulokset tallennettaisiin esimerkiksi listaan.
 

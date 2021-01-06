@@ -11,9 +11,9 @@ permalink: /osa4/
   />
 </a>
 
-**Osan Python-versio löytyy [täältä](/python/osa4).**
-
 Olemme nyt käsitelleet ohjelmiston elinkaaren vaiheista vaatimusmäärittelyä ja laadunhallintaa. Tässä osassa aiheena on ohjelmiston suunnittelu ja toteutus.
+
+Osa sisältää paljon koodiesimerkkejä. Tällä sivulla esimerkit ovat Java. **Osan Python-versio löytyy [täältä](/python/osa4).**
 
 Tämän osan luvuista ne, joihin on merkitty <span style="color:blue">[viikko 5]</span> tai  <span style="color:blue">[viikko 6]</span> liittyvät myöhempien viikkojen laskareihin, eli voit ohittaa ne viikolla 4.
 
@@ -354,6 +354,8 @@ _Koheesiolla_ (engl. cohesion) tarkoitetaan sitä, kuinka pitkälle metodissa, l
 Koheesioon tulee siis pyrkiä kaikilla ohjelman tasoilla, metodeissa, luokissa ja komponenteissa.
 
 #### Koheesio metoditasolla
+
+Luet nyt tämän osan Java-versiota. **Osan Python-versio löytyy [täältä](/python/osa4).**
 
 Tarkastellaan esimerkkinä [Neal Fordin artikkelista](http://www.ibm.com/developerworks/java/library/j-eaed4/index.html) olevaa tietokannasta tietoa hakevaa metodia. Metodin koodi näyttää seuraavalta:
 

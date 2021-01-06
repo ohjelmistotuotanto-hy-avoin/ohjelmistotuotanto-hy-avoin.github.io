@@ -11,9 +11,9 @@ permalink: /python/osa4/
   />
 </a>
 
-**Osan Java-versio löytyy [täältä](/osa4).**
-
 Olemme nyt käsitelleet ohjelmiston elinkaaren vaiheista vaatimusmäärittelyä ja laadunhallintaa. Tässä osassa aiheena on ohjelmiston suunnittelu ja toteutus.
+
+Osa sisältää paljon koodiesimerkkejä. Tällä sivulla esimerkit ovat Pythonia. **Osan Java-versio löytyy [täältä](/osa4).**
 
 Tämän osan luvuista ne, joihin on merkitty <span style="color:blue">[viikko 5]</span> tai <span style="color:blue">[viikko 6]</span> liittyvät myöhempien viikkojen laskareihin, eli voit ohittaa ne viikolla 4.
 
@@ -347,7 +347,10 @@ Koheesioon tulee siis pyrkiä kaikilla ohjelman tasoilla, metodeissa, luokissa j
 
 #### Koheesio metoditasolla
 
-Tarkastellaan esimerkkinä tietokannasta tietoa hakevaa metodia. Metodin koodi näyttää seuraavalta:
+Luet nyt tämän osan Python-versiota. **Osan Java-versio löytyy [täältä](/osa4).**
+
+Tarkastellaan esimerkkinä [Neal Fordin artikkelista](http://www.ibm.com/developerworks/java/library/j-eaed4/index.html) olevaa tietokannasta tietoa hakevaa metodia (artikkelissa koodi on Javaa). Metodin koodi näyttää seuraavalta:
+
 
 ```python
 # SQL_SELECT_PARTS on vakio, joka sisältää SQL-kyselyn
@@ -451,7 +454,7 @@ Luokka rikkoo single responsibility -periaatetta. Miksi? Periaate sanoo, että l
 - Luokalle halutaan toteuttaa uusia laskutoimituksia
 - Kommunikointi käyttäjän kanssa halutaan hoitaa jotenkin muuten kuin konsolin välityksellä
 
-Eriyttämällä käyttäjän kanssa kommunikointi omaan luokkaan ja eristämällä se rajapinnan taakse eli _kapseloimalla kommunikoinnin toteutustapa_, saadaan luokan Laskin vastuita vähennettyä:
+Eriyttämällä käyttäjän kanssa kommunikointi omaan luokkaan joka luovaan luokan ulkopuolelle, eli _kapseloimalla kommunikoinnin toteutustapa_, saadaan luokan Laskin vastuita vähennettyä:
 
 ```python
 class Laskin:
@@ -478,11 +481,11 @@ class Laskin:
         return luku1 + luku2
 ```
 
-Nyt kommunikointitavan muutos ei edellytä luokkaan mitään muutoksia edellyttäen että uusikin kommunikointitapa toteuttaa rajapinnan, jonka kautta `Laskin`-luokka hoitaa kommunikoinnin.
+Nyt kommunikointitavan muutos ei edellytä luokkaan mitään muutoksia edellyttäen että uusikin kommunikointitapa toteuttaa samalaisen _rajapinnan_ (eli tarjoaa samannimiset, samalla tavalla ulospäin toimivat metodit), jonka kautta `Laskin`-luokka hoitaa kommunikoinnin.
 
 Vaikka luokka `Laskin` siis toteuttaakin edelleen käyttäjänsä näkökulmasta samat asiat kuin aiemmin, ei se hoida kaikkea itse vaan _delegoi_ osan vastuistaan muualle.
 
-Kommunikointirajapinta voidaan toteuttaa esim. seuraavasti:
+Kommunikointi voidaan toteuttaa esim. seuraavasti:
 
 ```python
 class KonsoliIO:
@@ -536,6 +539,14 @@ Riippuvuuden kannattaa kohdistua asiaan, joka ei muutu herkästi, eli joko rajap
 
 - Program to an interface, not to an implementation
 - Depend on abstractions, not on concrete implementation
+
+Python ei kielenä tunne rajapinnan käsitettä samalla tavalla kuin esimerkisi Java. Pythonin yhteydessä voidaankin ajatella, että kaksi luokkaa ovat rajapinnaltaan yhteensopivia tietyn niitä käyttävän luokan kanssa, jos ne tarjoavat molemmat joukon samoin nimettyjä, samantyyppiset parametrit omaavia, samoin ulospäin käyttäytyviä metodeja.
+
+Edellä olleessa esimerkissä voidaan ajatella, että luokka `Laskin` tarvitsee kommunikoinnin hoitamiseen rajapinnan, jolla on metodit
+- `lue(kehote: str): str`
+- `kirjoita(teksti: str)`
+
+Voidaan ajatella, että luokat `ConsoleIO` ja `StubIO` "toteuttavat" tämän rajapinnan, sillä molemmat sisältävät sopivat metodit.
 
 Konkreettisen riippuvuuden eliminointi onnistuu antamalla oliolle riippuvuuksien toteutukset esimerkiksi konstruktorin, tai metodikutsun kautta. Olemme tehneet näin kurssilla usein, mm. Verkkokaupan konkreettiset riippuvuudet Varastoon, Pankkiin ja Viitegeneraattoriin korvattiin luokan konstruktorin kautta annetuilla olioilla. Riippuvuuksien injektointi -suunnittelumalli toimi usein apuvälineenä konkreettisen riippuvuuksien eliminoinnissa.
 
@@ -601,7 +612,7 @@ class EuribolTili(Tili):
         self.saldo = self.saldo * (1 + self.get_korko())
 ```
 
-Huomaamme, että `EuriborTili`-luokka rikkoo _single responsibility_ -periaatetta, sillä luokka sisältää normaalin tiliin liittyvän toiminnan lisäksi koodia, joka hakee tavaraa internetistä. Vastuut kannattaa selkeyttää ja korkoprosentin haku eriyttää omaan rajapinnan takana olevaan luokkaan:
+Huomaamme, että `EuriborTili`-luokka rikkoo _single responsibility_ -periaatetta, sillä luokka sisältää normaalin tiliin liittyvän toiminnan lisäksi koodia, joka hakee tavaraa internetistä. Vastuut kannattaa selkeyttää ja korkoprosentin haku eriyttää omaan luokkaan:
 
 ```python
 class EuriborLukija:
@@ -646,7 +657,7 @@ class MaaraaikaisTili(Tili):
         super().__init__(tilinumero, omistaja, korkoprosentti)
         self.nostokielto = True
 
-    def salli_nosto():
+    def salli_nosto(salf):
         self.nostokielto = False
 
     def siirra_rahaa_tililta(self, tilille, summa):
@@ -656,7 +667,7 @@ class MaaraaikaisTili(Tili):
         return super().siirra_rahaa_tililta(tilille, summa)
 ```
 
-Seuraavaksi tulee idea _Euribor-korkoa käyttävistä määräaikaistileistä_. Miten nyt kannattaisi tehdä? Osa toiminnallisuudesta on luokassa _MaaraaikaisTili_ ja osa luokassa _EuriborTili_...
+Seuraavaksi tulee idea _Euribor-korkoa käyttävistä määräaikaistileistä_. Miten nyt kannattaisi tehdä? Osa toiminnallisuudesta on luokassa `MaaraaikaisTili` ja osa luokassa `EuriborTili`...
 
 Koronmaksun hoitaminen perinnän avulla ei ollutkaan paras ratkaisu, parempi on noudattaa _favor composition over inheritance_ -periaatetta. Eli erotetaan _koronmaksu_ omiksi luokikseen, jotka toteuttavat metodin `get_korko`:
 
