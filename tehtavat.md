@@ -16,7 +16,7 @@ Tehtävien vaikutus kurssin arvosteluun selviää [osasta 0](/osa0#kurssin-arvos
 
 Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoomissa:
 
-- xx ss-ee [zoom]()
+- TODO
 
 Kurssin kaikilla tehtävillä on ainoastaan yksi deadline, 30.4.2021 klo 23:59
 

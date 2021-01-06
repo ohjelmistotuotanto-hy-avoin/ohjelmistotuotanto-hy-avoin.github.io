@@ -45,7 +45,7 @@ Kuuden opintopisteen laajuinen suoritus edellyttää _miniprojektiin_ osallistum
 
 ### Teoria
 
-Kurssin kirjallisessa materiaalissa sekä niihin liittyvissä syksyllä 2020 nauhoitetussa kymmenessä luennossa käydään läpi ohjelmistotuotantoon liittyvää käsitteistöä ja teoriaa. Teoriamateriaalia täydentää neljä videoitua ohjelmistoalan asiantuntijaluentoa.
+Kurssin kirjallisessa materiaalissa sekä niihin liittyvissä syksyllä 2020 nauhoitetulla kymmenellä luennolla käydään läpi ohjelmistotuotantoon liittyvää käsitteistöä ja teoriaa. Teoriamateriaalia täydentää neljä videoitua ohjelmistoalan asiantuntijaluentoa.
 
 ### Harjoitustehtävät
 
@@ -128,7 +128,7 @@ Viiden opintopisteen suorituksessa pisteitä on jaossa 31 pistettä: harjoitukse
 
 Läpipääsy edellyttää vähintään puolia kokeen pisteistä.
 
-#### Laskarien pisteytysperusteet
+#### Harjoitustehtävien pisteytysperusteet
 
 Viikoittaisista monivalintatehtävistä on siis tarjolla *3 kurssipistettä*. Täysiin kurssipisteisiin riittää 90% _monivalintakysymyspisteistä (mvp)_. 
 
@@ -252,7 +252,7 @@ Voit osallistua miniprojektiin siinä vaiheessa kun olet tehnyt vähintään kur
 ## Typoja materiaalissa
 
 Kun huomaat kurssimateriaalissa kirjoitusvirheitä, tee korjausehdotus. Kurssimateriaali on repositoriossa
-[https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io](https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io ) tiedostoissa [osa0.md](https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io/blob/master/osa0.md) jne.
+[https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io) tiedostoissa [osa0.md](https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io/blob/master/osa0.md) jne.
 
 Muutosehdotuksen tekeminen aloitetaan painamalla tiedoston _kynä-symbolia_:
 
