@@ -7,16 +7,11 @@ permalink: /tehtavat2/
 
 ## Viikko 2
 
-**HUOM** ilmoittautuminen [miniprojektiin](/miniprojekti) alkanut. Ilmoittaudu [täällä](https://study.cs.helsinki.fi/assembler/course/283df2a6-51e7-434f-a4b6-08514579a9ea). Deadline ilmoittautumiselle perjantai 13.11. klo 23:59
-
-*Alla olevien tehtävien deadline on maanantaina 9.11. klo 23:59*
+Viikon 2 tehtävien Python-versiot löytyvät [täältä](/python/tehtavat2)
 
 Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
 
-- Maanantai 14-16 [zoom](https://helsinki.zoom.us/j/63962392550?pwd=RzluTjZWYmNLb0g4bjRxb0ZlckRkUT09)
-- Perjantai 10-12 [zoom](https://helsinki.zoom.us/j/64396759243)
-
-Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/2), joiden deadline on sunnuntaina 8.11. klo 23:59:00.  
+Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/2).
 
 Viikon ensimmäisessä tehtävässä tutustutaan tarkemmin gradleen. Toinen ja kolmas tehtävä käsittelevät koodin _staattisen analyysin_ työkalua checkstyleä. Gitiin tutustuminen jatkuu tehtävissä 4-8. Laskarien lopuksi jatketaan _riippuvuuksien injektoinnin_ parissa. 
 

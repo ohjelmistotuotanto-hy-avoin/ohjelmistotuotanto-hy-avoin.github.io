@@ -7,17 +7,14 @@ permalink: /tehtavat6/
 
 ## Viikko 6
 
-*Alla olevien tehtävien deadline on maanantaina 7.12. klo 23:59*
+Viikon 6 tehtävien Python-versiot löytyvät [täältä](/python/tehtavat6)
 
 Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
-
-- Maanantai 14-16 [zoom](https://helsinki.zoom.us/j/63962392550?pwd=RzluTjZWYmNLb0g4bjRxb0ZlckRkUT09)
-- Perjantai 10-12 [zoom](https://helsinki.zoom.us/j/64396759243)
 
 
 Tehtävät 2-5 liittyvät materiaalin ohjelmistosuunnittelua käsittelevän [osan 4](/osa4/) niihin lukuihin, joihin on merkitty <span style="color:blue">[viikko 5]</span> tai <span style="color:blue">[viikko 6]</span>.
 
-Tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/6), deadline on poikkeuksellisesti vasta perjantaina 13.12. klo 23:59:00.  
+Tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/6).  
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
@@ -158,7 +155,7 @@ Matcher m = new Or( new HasAtLeast(40, "goals"),
 );  
 ```
 
-tulee palauttaa ne, joilla on vähintään 20 maalia tai syöttöä, eli seuraava lista
+tulee palauttaa ne, joilla on vähintään 40 maalia tai 60 syöttöä, eli seuraava lista
 
 ```
 Mika Zibanejad       NYR          41 + 34 = 75

@@ -7,15 +7,9 @@ permalink: /python/tehtavat7/
 
 ## Viikko 7
 
-_Alla olevien tehtävien deadline on maanantaina 16.12. klo 23:59_
+Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa
 
-Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä pajassa
-
-- ke 14-16 B221
-
-Maanantain pajaa ei tällä viikolla pidetä.
-
-Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/7), joiden deadline on poikkeuksellisesti perjantaina 20.12 klo 23:59:00. Tehtävät ilmestyvät ke 12.12. klo 23 mennessä.
+Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/7).
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 

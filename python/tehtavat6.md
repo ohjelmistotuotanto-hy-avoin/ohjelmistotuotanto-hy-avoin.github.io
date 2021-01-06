@@ -7,16 +7,11 @@ permalink: /python/tehtavat6/
 
 ## Viikko 6
 
-_Alla olevien tehtävien deadline on maanantaina 9.12. klo 23:59_
-
-Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä pajassa
-
-- ma 14-16 B221
-- ke 14-16 B221
+Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa
 
 Tehtävät 2-5 liittyvät materiaalin ohjelmistosuunnittelua käsittelevän [osan 4](/python/osa4) niihin lukuihin, joihin on merkitty <span style="color:blue">[viikko 5]</span> tai <span style="color:blue">[viikko 6]</span>.
 
-Tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/6), deadline on poikkeuksellisesti vasta perjantaina 13.12. klo 23:59:00.
+Tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/6).
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
@@ -100,20 +95,18 @@ Tutustu ohjelman rakenteeseen.
 - Not (parameetrina olevan ehdon negaatio)
 - HasFewerThan (HasAtLeast-komennon negaatio eli, esim. on vähemmän kuin 10 maalia)
 
-**HUOM:** `not` on Pythonissa niin kutsuttu avainsana, jonkä käyttö esimerkiksi importissa `from matchers.not import Not` ei onnistu. Tiedostosta kannattaakin käyttää esimeerkiksi nimeä <i>not_matcher.py</i> (kuten <i>and_matcher.py</i>-tiedoston nimen kanssa on tehty).
-
 Kaikille pelaajille tosi ehto _all_ ei ole vielä tämän tehtävän kannalta kovin mielenkiintoinen, sitä pystyy kuitenkin hyödyntämään neljännessä tehtävässä.
 
 Voit tarkistaa toteutuksesi toimivuuden tekemällä kyselyn:
 
 ```python
-matcher = new And(
+matcher = And(
     Not(HasAtLeast(1, "goals")),
     PlaysIn("NYR")
 )
 ```
 
-Vastauksena pitäisi olla joukkueen _NYR_ pelaajista ne, joilla ei ole vähintään yht maalia, eli _0 maalia tehneet_:
+Vastauksena pitäisi olla joukkueen _NYR_ pelaajista ne, joilla ei ole vähintään yhtä maalia, eli _0 maalia tehneet_:
 
 <pre>
 Steven Fogarty       NYR           0 +  0 = 0
@@ -145,12 +138,12 @@ Kyselyn:
 
 ```python
 matcher = Or(
-    HasAtLeast(20, "goals"),
-    HasAtLeast(20, "assists")
+    HasAtLeast(40, "goals"),
+    HasAtLeast(60, "assists")
 )
 ```
 
-Tulee palauttaa ne, joilla on vähintään 20 maalia tai syöttöä, eli seuraava lista:
+Tulee palauttaa ne, joilla on vähintään 40 maalia tai 60 syöttöä, eli seuraava lista:
 
 ```
 Mika Zibanejad       NYR          41 + 34 = 75
@@ -244,11 +237,7 @@ def main():
 
     query = QueryBuilder()
 
-    matcher = query
-        .playsIn("NYR")
-        .hasAtLeast(5, "goals")
-        .hasFewerThan(10, "goals")
-        .build()
+    matcher = query.playsIn("NYR").hasAtLeast(5, "goals").hasFewerThan(10, "goals") .build()
 
     for player in stats.matches(matcher):
         print(player)
@@ -268,23 +257,47 @@ Peräkkäin ketjutetut ehdot siis toimivat "and"-periaatteella.
 
 Tässä tehtävässä riittää, että kyselyrakentaja osaa muodostaa _and_-periaatteella yhdistettyjä ehtoja.
 
+Pitkät metodikutsuketjut, esim. 
+
+```python
+matcher = query.playsIn("NYR").hasAtLeast(5, "goals").hasFewerThan(10, "goals") .build()
+```
+
+ovat luettavuudeltaan hieman ikäviä, jos ne kirjoitetaan monelle riville. Usein ne onkin tapana jakaa "kutsu per rivi"-periaatteella:
+
+```python
+    matcher = (
+      query  
+        .playsIn("NYR")  
+        .hasAtLeast(5, "goals")  
+        .hasFewerThan(10, "goals")  
+        .build()
+    )
+```
+
+Python ikävä kyllä edellyttää tässä "ylimääräisten" sulkujen käyttöä.
+
 ### 5. Parannettu kyselykieli, osa 2
 
 Laajennetaan kyselyrakentajaa siten, että sen avulla voi muodostaa myös _or_-ehdolla muodostettuja kyselyjä. Or-ehdon sisältävä kysely voi olla muodostettu esim. seuraavasti:
 
 ```python
-m1 = query
+m1 = (
+  query
     .playsIn("PHI")
     .hasAtLeast(10, "assists")
-    .hasFewerThan(8, "goals")
+    .hasFewerThan(5, "goals")
     .build()
+)
 
-m2 = query
+m2 = (
+  query
     .playsIn("EDM")
-    .hasAtLeast(20, "points")
+    .hasAtLeast(40, "points")
     .build()
+)
 
-m = query
+matcher = query
     .oneOf(m1, m2)
     .build()
 ```
@@ -303,20 +316,20 @@ Connor McDavid       EDM          34 + 63 = 97
 Tai sama ilman apumuuttujia:
 
 ```python
-m = query
+matcher = (
+  query
     .oneOf(
       query.playsIn("PHI")
           .hasAtLeast(10, "assists")
-          .hasFewerThan(8, "goals")
+          .hasFewerThan(5, "goals")
           .build(),
       query.playsIn("EDM")
-          .hasAtLeast(20, "points")
+          .hasAtLeast(40, "points")
           .build()
     )
     .build()
+)
 ```
-
-Rakentajasi ei ole pakko toimia metodikutsujen syntaksin osalta samalla tavalla kuin esimerkkikoodin. Riittää, että sillä voi jollain tavalla muodostaa _and_- ja _or_-muotoisia kyselyjä.
 
 ### 6. Pull request ja refaktorointia (tätä tehtävää ei lasketa versionhallintatehtäväksi)
 
