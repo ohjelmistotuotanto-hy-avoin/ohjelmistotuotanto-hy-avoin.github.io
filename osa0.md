@@ -61,11 +61,11 @@ Harjoitustehtävistä on olemassa versiot Javalla ja Pythonilla, voit valita its
 ### Kurssikoe
 
 Kurssilla on kolme koeajankohtaa
-- TODO
+- torstai 25.3.201 
+- torstai 29.4.2021
+- perjantai 4.6.2021
 
 Kokeen voi aloittaa mihin aikaan tahansa koepäivänä. Kokeessa on vastausaikaa 3 tuntia. Kokeen voi tehdä mistä tahansa riittävän hyvän internetyhteyden omaavasta paikasta.
-
-Näiden lisäksi järjestetään uusintakoe TODO
 
 Koe keskittyy kurssin teoriamateriaalissa käsiteltäviin asioihin, kokeessa ei kysytä vierailuluentojen sisällöistä eikä niistä teknisistä aihepiireistä (mm versionhallinta) mitä kurssimateriaalin osat 0-5 eivät käsittele.
 
@@ -87,7 +87,7 @@ Miniprojektien asiakastapaamiset järjestetään virtuaalisesti [zoom](https://h
 
 Miniprojekteissa työskentelyyn tulee varata yhteensä noin 6 tuntia aikaa viikossa. Miniprojektin kesto on kolme viikkoa.
 
-Miniprojekteja järjestetään sekä maalis- että huhtikuussa. Ensimmäisten asiakastapaamisten ajankohdasta tiedotetaan myöhemmin. 
+Miniprojekti järjestetään kahtena eri ajankohtana 22.2.-15.3. ja 29.3.-26.4.
 
 Voit osallistua miniprojektiin siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät.
 
@@ -246,7 +246,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
 
 ### Miniprojekti
 
-Voit osallistua miniprojektiin siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät. Tietoa miniprojektien järjestämisestä tulossa myöhemmin.
+Voit osallistua <a href='/miniprojekti'>miniprojektiin </a> siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät.  Miniprojekti järjestetään kahtena eri ajankohtana 22.2.-15.3. ja 29.3.-26.4.
 
 
 ## Typoja materiaalissa

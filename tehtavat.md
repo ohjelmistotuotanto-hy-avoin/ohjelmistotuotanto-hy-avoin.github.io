@@ -14,12 +14,9 @@ Kurssiin liittyy viikottaiset laskuharjoitukset. Tehtäviä on _kahden tyyppisi�
 
 Tehtävien vaikutus kurssin arvosteluun selviää [osasta 0](/osa0#kurssin-arvostelu).
 
-Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoomissa:
-
-- TODO
-
 Kurssin kaikilla tehtävillä on ainoastaan yksi deadline, 30.4.2021 klo 23:59
 
+{% include guidance_info.md %}
 ### Viikko 1
 
 - [Monivalintatehtävät]({{site.stats_url}}/quiz/1)
