@@ -275,6 +275,33 @@ Ohjelmakoodin editointi kannattaa tehdä järkevällä editorilla, esim. Visual 
 - Suorita testit komennolla `poetry run pytest`
   - Testien suorittamista varten on käytössä [pytest](https://docs.pytest.org/en/stable/)-sovelluskehys
 
+**HUOM** jos törmäät seuraavaan virheilmoitukseen
+
+```
+Python 2.7 will no longer be supported in the next feature release of Poetry (1.2).
+You should consider updating your Python version to a supported one.
+
+Note that you will still be able to manage Python 2.7 projects by using the env command.
+See https://python-poetry.org/docs/managing-environments/ for more information.
+
+The currently activated Python version 2.7.16 is not supported by the project (^3.6).
+Trying to find and use a compatible version.
+```
+
+eräs tapa korjata tilanne Macilla ja ehkä myös Linuxilla on editoida tiedoston `~/.poetry.bin/poetry` ensimmäisellä rivillä mainittu pythonin polku. Oletusarvoinen polku on todennäköisesti seuraava
+
+```
+#!/usr/bin/python
+```
+
+Polku tulee Macilla muuttaa (todennäköisesti) muotoon
+
+```
+#!/usr/local/bin/python3
+```
+
+Oikea polku kannattaa varmistaa komennolla `which python3`.
+
 ### 8. Unittest
 
 Ohjelmistokehityksen ehkä tärkein vaihe on laadunvarmistus, laadunvarmistuksen tärkein keino taas on testaus, joka on syytä automatisoida mahdollisimman pitkälle, sillä ohjelmistoja joudutaan testaamaan paljon. Erityisesti iteratiivisessa/ketterässä ohjelmistokehityksessä samat testit on suoritettava uudelleen aina ohjelman muuttuessa.
