@@ -657,7 +657,7 @@ class MaaraaikaisTili(Tili):
         super().__init__(tilinumero, omistaja, korkoprosentti)
         self.nostokielto = True
 
-    def salli_nosto(salf):
+    def salli_nosto(self):
         self.nostokielto = False
 
     def siirra_rahaa_tililta(self, tilille, summa):
