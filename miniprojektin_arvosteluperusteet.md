@@ -71,7 +71,7 @@ Pisteitä kertyy seuraavista asioista:
   - Definition of done kirjattu eksplisiittisesti
   - Linkki sovellukseen jos kyse web-sovelluksesta
   - Jos kyse työpöytäsovelluksesta: ohjelman asennus- ja käyttöohje
-- (0.25p) sprintin katselmointiin on valmistuttu asiallisesti
+- (0.25p) sprintin katselmointiin on valmistauduttu asiallisesti
   - Katselmoinnin pitäjä on sovittu ja tarvittavat esivalmistelut on tehty etukäteen
   - Katselmoinnin aikana asiakkaalle näytetään, että jokainen sprinttiin valittu user story on toteutettu hyväksymiskriteerien mukaisesti
 
@@ -96,7 +96,7 @@ Pisteitä kertyy seuraavista asioista:
 - (0.5p) suurin osa sprintin user storyistä toteutettu definition of donen mukaisella tasolla
 - (0.25p) toimivasta, demossa näytettävästä versiosta on luotu GitHubiin [release](https://help.github.com/articles/creating-releases/).
   - Jos kyseessä on konsolisovellus, releaseen liitetään projektin ajettava jar-tiedosto
-- (0.25p) sprintin katselmointiin on valmistuttu asiallisesti
+- (0.25p) sprintin katselmointiin on valmistauduttu asiallisesti
   - Katselmoinnin pitää eri henkilö, kuin edellisessä katselmoinnissa
   - Katselmoinnin pitäjä on sovittu ja tarvittavat esivalmistelut on tehty etukäteen
   - Katselmoinnin aikana asiakkaalle näytetään, että jokainen sprinttiin valittu user story on toteutettu hyväksymiskriteerien mukaisesti
