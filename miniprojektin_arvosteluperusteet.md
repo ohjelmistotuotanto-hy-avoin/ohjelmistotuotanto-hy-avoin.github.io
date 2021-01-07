@@ -110,7 +110,7 @@ Pisteitä kertyy seuraavista asioista:
 - (0.25p) product backlog
   - Backlog on DEEP (storyjä ei tarvitse estimoida)
   - Backlogiin ei jää sinne kuulumatonta roskaa, storyjen statukset on kirjattu oikein, jne...
-- (0.25p) sprintiin 3 valittujen storyjen hyväksymisehdot kirjattu Cucumber- tai Robot Framework -tiedostoon
+- (0.25p) sprintiin 3 valittujen storyjen hyväksymisehdot kirjattu Cucumber- tai Robot Framework -tiedostoihin
   - Hyväksymisehtoja ei kirjoteta erikseen backlogiin, vaan backlogista on linkki hyväksymistestin tiedostoon
 - (0.25p) sprintin 3 backlog
   - Vaatimukset kuten edellisissä sprinteissä
