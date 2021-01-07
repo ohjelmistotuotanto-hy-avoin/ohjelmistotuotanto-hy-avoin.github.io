@@ -54,7 +54,7 @@ permalink: /miniprojekti/
 
 Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin suunnittelu) tapahtuu samana viikon päivänä, saman kahden tunnin sisällä, missä aloitustilaisuus pidetään. Tilaisuuden kesto on 30 minuuttia. Tapaamisen tarkka aika ja sen zoom-linkki kerrotaan palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject) viimeistään tapaamista edeltävänä sunnuntaina.
 
-#### viikko 4 (16-20.11.)
+#### Viikko 8 (22-28.2.)
 
 - Ryhmä muodostuvat/muodostetaan
 - Ryhmät tapaavat asiakkaan aloitustilaisuuksissa
@@ -64,17 +64,17 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
   - backlogien sisällöstä enemmän [täällä](/miniprojekti#tekniset-ja-prosessiin-liittyvät-vaatimukset)
 - Sprintin 1 [arvosteluperusteet](/miniprojektin_arvosteluperusteet#ensimmäisen-sprintin-arvosteluperusteet) kannattaa lukea huolellisesti
 
-#### viikko 5 (23-29.11.)
+#### Viikko 9 (1-7.3.)
 
 - Sprintin 1 katselmointi ja sprintin 2 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
-#### viikko 6 (30.11-6.12.)
+#### Viikko 10 (8-14.3.)
 
 - Sprintin 2 katselmointi ja sprintin 3 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
-#### viikko 7 (7-13.12.)
+#### Viikko 11 (15-21.3.)
 
 - Sprintin 3 katselmointi (eli loppudemot)
   - Aikataulu ilmoitetaan myöhemmin
