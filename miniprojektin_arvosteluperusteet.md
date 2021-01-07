@@ -47,7 +47,7 @@ Linkit projektin backlogeihin ja muihin dokumentteihin (ja niihin tulee olla kok
 
 Pisteitä kertyy seuraavista asioista:
 
-- (0.5p) product backlog
+- (0.25p) product backlog
   - Backlog on DEEP (storyjä ei tarvitse estimoida)
 - (0.5p) sprintin 1 backlog
   - Sprintiin valitut user storyt jaettu teknisen tason taskeiksi
@@ -55,7 +55,7 @@ Pisteitä kertyy seuraavista asioista:
   - Burndown-käyrä olemassa
   - Jokaiseen taskiin on merkitty sen tekijä(t)
   - Taskin status on näkyvissä (esim. todo, doing, done)
-- (0.5p) sprintiin 1 valittujen storyjen hyväksymiskriteerit kirjattu
+- (0.25p) sprintiin 1 valittujen storyjen hyväksymiskriteerit kirjattu
 - (0.5p) testaus
   - Toteutettua koodia on yksikkötestattu kohtuullisella tasolla
   - Ainakin jossain storyssa hyväksymiskriteerien testausta (cucumber)
