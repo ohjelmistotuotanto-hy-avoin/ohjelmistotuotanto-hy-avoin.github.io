@@ -58,7 +58,7 @@ Pisteitä kertyy seuraavista asioista:
 - (0.25p) sprintiin 1 valittujen storyjen hyväksymiskriteerit kirjattu
 - (0.5p) testaus
   - Toteutettua koodia on yksikkötestattu kohtuullisella tasolla
-  - Ainakin jossain storyssa hyväksymiskriteerien testausta (cucumber)
+  - Ainakin jossain storyssa hyväksymiskriteerien testausta (Cucumber tai Robot Framework)
 - (0.25p) jatkuva integraatio
   - Koodi GitHubissa
   - GitHub Actions (tai jokin muu CI-palvelu) suorittaa ainakin yksikkötestit ja ne menevät läpi
@@ -110,8 +110,8 @@ Pisteitä kertyy seuraavista asioista:
 - (0.25p) product backlog
   - Backlog on DEEP (storyjä ei tarvitse estimoida)
   - Backlogiin ei jää sinne kuulumatonta roskaa, storyjen statukset on kirjattu oikein, jne...
-- (0.25p) sprintiin 3 valittujen storyjen hyväksymisehdot kirjattu cucumber-featureina
-  - Hyväksymisehtoja ei kirjoteta erikseen backlogin, backlogista linkki cucumber-featureen
+- (0.25p) sprintiin 3 valittujen storyjen hyväksymisehdot kirjattu Cucumber- tai Robot Framework -tiedostoon
+  - Hyväksymisehtoja ei kirjoteta erikseen backlogiin, vaan backlogista on linkki hyväksymistestin tiedostoon
 - (0.25p) sprintin 3 backlog
   - Vaatimukset kuten edellisissä sprinteissä
 - (0.5p) kattavahko testaus yksikkö- ja storytasolla
