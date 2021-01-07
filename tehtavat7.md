@@ -7,7 +7,7 @@ permalink: /tehtavat7/
 
 ## Viikko 7
 
-Viikon74 tehtävien Python-versiot löytyvät [täältä](/python/tehtavat7)
+Viikon7 tehtävien Python-versiot löytyvät [täältä](/python/tehtavat7)
 
 {% include guidance_info.md %}
 
