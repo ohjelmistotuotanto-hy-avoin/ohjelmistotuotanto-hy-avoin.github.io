@@ -9,7 +9,7 @@ permalink: /tehtavat5/
 
 Viikon 5 tehtävien Python-versiot löytyvät [täältä](/python/tehtavat5)
 
-Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
+{% include guidance_info.md %}
 
 Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/5).  
 

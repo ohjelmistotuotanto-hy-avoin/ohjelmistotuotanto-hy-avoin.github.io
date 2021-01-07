@@ -9,8 +9,7 @@ permalink: /tehtavat6/
 
 Viikon 6 tehtävien Python-versiot löytyvät [täältä](/python/tehtavat6)
 
-Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
-
+{% include guidance_info.md %}
 
 Tehtävät 2-5 liittyvät materiaalin ohjelmistosuunnittelua käsittelevän [osan 4](/osa4/) niihin lukuihin, joihin on merkitty <span style="color:blue">[viikko 5]</span> tai <span style="color:blue">[viikko 6]</span>.
 
