@@ -7,8 +7,7 @@ permalink: /python/tehtavat3/
 
 ## Viikko 3
 
-Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
-
+{% include guidance_info.md %}
 
 Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/3).
 

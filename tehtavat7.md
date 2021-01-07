@@ -9,8 +9,7 @@ permalink: /tehtavat7/
 
 Viikon74 tehtävien Python-versiot löytyvät [täältä](/python/tehtavat7)
 
-Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
-
+{% include guidance_info.md %}
 
 Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/7). 
 

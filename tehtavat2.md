@@ -9,7 +9,7 @@ permalink: /tehtavat2/
 
 Viikon 2 tehtävien Python-versiot löytyvät [täältä](/python/tehtavat2)
 
-Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
+{% include guidance_info.md %}
 
 Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/2).
 

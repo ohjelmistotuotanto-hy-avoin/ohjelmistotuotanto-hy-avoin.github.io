@@ -9,7 +9,7 @@ permalink: /tehtavat1
 
 Viikon 1 tehtävien Python-versiot löytyvät [täältä](/python/tehtavat1)
 
-Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoomissa:
+{% include guidance_info.md %}
 
 Muista myös tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/1)
 
