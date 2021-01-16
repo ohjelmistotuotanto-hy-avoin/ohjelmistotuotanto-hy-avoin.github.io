@@ -61,7 +61,7 @@ Harjoitustehtävistä on olemassa versiot Javalla ja Pythonilla, voit valita its
 ### Kurssikoe
 
 Kurssilla on kolme koeajankohtaa
-- torstai 25.3.201 
+- torstai 25.3.2021 
 - torstai 29.4.2021
 - perjantai 4.6.2021
 
