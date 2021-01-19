@@ -158,6 +158,6 @@ voidaan testatessa injektoida pelille versio satunnaisgeneraattorista, jonka arp
 
 ```python
 class Arpa:
-    def nextint(self):
+    def randint(self, a, b):
         return 1
-``` 
+```
