@@ -88,6 +88,7 @@ class Laskin:
         return luku1 + luku2
 
 ```
+
 Sovellus käynnistetään nyt siten, että sille _injektoidaan_ kommunikaation hoitava olio konstruktorin parametrina:
 
 ```python
