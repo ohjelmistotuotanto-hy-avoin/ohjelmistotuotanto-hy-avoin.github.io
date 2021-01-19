@@ -9,7 +9,7 @@ permalink: /riippuvuuksien_injektointi_python/
 
 Lue ensin <http://jamesshore.com/Blog/Dependency-Injection-Demystified.html>
 
-Alla oleva koodi löytyy gradle-muotoisina projekteina kurssin [tehtävärepositoriosta](https://github.com/ohjelmistotuotanto-hy/syksy2020) hakemistosta koodi/viikko1/RiippuvuuksienInjektointi1
+Alla oleva koodi löytyy poetry-muotoisena projektina kurssin [tehtävärepositoriosta](https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021) hakemistosta koodi/viikko1/riippuvuuksien-injektointi-1
 
 Seuraavassa yksinkertainen laskin:
 
