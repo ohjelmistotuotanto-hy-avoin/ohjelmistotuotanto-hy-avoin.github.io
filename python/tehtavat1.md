@@ -674,7 +674,7 @@ Tutustu riippuvuuksien injektointiin esimerkin avulla. Asenna projektin riippuvu
 
 **Itse tehtävä:**
 
-- Muokkaa ohjelman rakennetta siten, että `Statictics`-luokka saa konstruktoriparametrina `PlayerReader`-luokan olion.
+- Muokkaa ohjelman rakennetta siten, että `Statistics`-luokka saa konstruktoriparametrina `PlayerReader`-luokan olion.
 - Muokkaa pääohjelma siten, että se injektoi `Statistics`-oliolle `PlayerReader`-luokan olion ja kokeile että ohjelma toimii edelleen:
 
 ```python
