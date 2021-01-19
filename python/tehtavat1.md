@@ -324,7 +324,7 @@ poetry add coverage --dev
 
 - Lisää projektin juurihakemistoon konfiguraatiotiedosto _.coveragerc_, jossa kerrotaan, mistä projektin tiedostoista testikattavuutta kerätään. Tiedoston sisällön tulee olla seuraava:
 
-```
+```text
 [run]
 source = src
 ```
