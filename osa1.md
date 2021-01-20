@@ -321,7 +321,7 @@ Aloitetaan nyt tutustuminen Scrumiin, joka on tällä hetkellä selvästi suosit
 
 Termi Scrum ja osa sen taustalla olevista periaatteista löytyvät ensimmäistä kertaa 1986 julkaistusta artikkelista [The new new product development game](http://www.agilepractice.eu/wp-content/uploads/2016/09/Product-Development-Scrum-1986.pdf), missä japanilaiset professorit Takeuchi ja Nonaka kuvailevat mitä yhteisiä toimintaperiaatteita joukolla menestyneitä yrityksiä (mm. Fuji-Xerox, Canon, Honda, NEC, Epson, Brother, 3M, Xerox, Hewlett-Packard) on.
 
-Tänä päivänä tuntemamme alun perin ohjelmistokehitykseen suunnatun Scrumin kehittivät Ken Schwaber ja Jeff Sutherland 1990-luvun puolivälissä. Scrumin perussisällön määrittelee [The Scrum guide](https://scrumguides.org/), vajaa 20 sivua pitkä dokumentti, joka päivittyy säännöllisin väliajoin. Edellinen versio on vuodelta 2017.
+Tänä päivänä tuntemamme alun perin ohjelmistokehitykseen suunnatun Scrumin kehittivät Ken Schwaber ja Jeff Sutherland 1990-luvun puolivälissä. Scrumin perussisällön määrittelee [The Scrum guide](https://scrumguides.org/), vajaa 20 sivua pitkä dokumentti, joka päivittyy säännöllisin väliajoin. Edellinen versio on vuodelta 2020.
 
 Kehittäjiensä sanoin
 
