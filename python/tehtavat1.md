@@ -479,7 +479,7 @@ Se suorittaa komentorivillä komennon, joka asentaa Poetryn.
 
 Neljäs askel asentaa projektin riippuvuudet `poetry install`-komennolla.
 
-Viides askel on kaikkein tärkein, se suorittaa gradlen avulla projektin testit ja kerää testikattavuuden:
+Viides askel on kaikkein tärkein, se suorittaa poetryn avulla projektin testit ja kerää testikattavuuden:
 
 ```yml
 - name: Run tests
