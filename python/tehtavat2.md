@@ -275,12 +275,12 @@ Changes to be committed:
 	new file:   LICENCE
 ```
 
-- Olet siis branchissa _laskut_ ja _README.md_ on lisätty staging-alueelle, sitä ei kuitenkaan ole vielä committoitu
+- Olet siis branchissa _laskut_ ja _LICENSE_ on lisätty staging-alueelle, sitä ei kuitenkaan ole vielä committoitu
 - Siirry nyt branchiin **master**
-- Komennon `git status`tulos on edelleen sama, _README.md_ on edelleen staging-alueella mutta committoimattomana
+- Komennon `git status`tulos on edelleen sama, _LICENSE_ on edelleen staging-alueella mutta committoimattomana
 - Staging-alue **ei kuulu** mihinkään branchiin, eli jos staging-alueella on committoimattomia muutoksia ja vaihdat branchia, säilyvät samat asiat stagingissa
 - Muutokset siirtyvät stagingista branchiin ainoastaan komennolla `git commit`
-- Committoi nyt staging-alueen muutokset eli _README.md_ masteriin
+- Committoi nyt staging-alueen muutokset eli _LICENSE_ masteriin
 - Komennon `git status` tulos kertoo nyt että staging-alue on tyhjä:
 
 ```
@@ -288,7 +288,7 @@ On branch master
 nothing to commit, working tree clean
 ```
 
-- Siirry jälleen branchiin **laskut** ja huomaat, että _README.md_ ei ole olemassa
+- Siirry jälleen branchiin **laskut** ja huomaat, että _LICENSE_ ei ole olemassa
 - Mergeä **master** branchiin **laskut**
 - Siirry nyt masteriin ja tuhoa branchi **laskut**
 - Tämän tehtävän ideana oli siis havainnollistaa, että working tree (muutokset joista git ei ole tietoinen) ja staging (gitiin lisättyihin tiedostoihin tehdyt committoimattomat muutokset)
