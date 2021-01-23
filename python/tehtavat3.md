@@ -113,7 +113,7 @@ Joel Armia           MTL 16 + 14 = 30
 
 Tällä hetkellä suurin osa pelaajatietoihin liittyvästä koodista on luultavasti `main`-funktiossa. Funktion _koheesion_ aste on melko matala, koska se keskittyy usean toiminallisuuden toteuttamiseen. Koodi kaipaisi siis pientä refaktorointia.
 
-Jaa toiminallisuuden vastuut kahdelle luokkalle: `PlayerReader` ja `Statistics`. `PlayerReader`-luokan vastuulla on hakea JSON-muotoiset pelaajat konstruktorin parametrin kautta annetusta osoitteesta ja muodostaa niistä `Player`-olioita. Tämä voi tapahtua esimerkiksi luokan `get_players`-metodissa. `Statistics`-luokan vastuulla on muodostaa `PlayerReader`-luokan tarjoamien pelaajien perusteella erilaisia tilastoja. Tässä tehtävässä riittää, että luokalla on metodi `top_scorers_by_nationality`, joka palauttaa parametrina annettetun kansalaisuuden pelaajat pisteiden mukaan laskevassa järjestyksessä (suurin pistemäärä ensin).
+Jaa toiminallisuuden vastuut kahdelle luokkalle: `PlayerReader` ja `PlayerStats`. `PlayerReader`-luokan vastuulla on hakea JSON-muotoiset pelaajat konstruktorin parametrin kautta annetusta osoitteesta ja muodostaa niistä `Player`-olioita. Tämä voi tapahtua esimerkiksi luokan `get_players`-metodissa. `PlayerStats`-luokan vastuulla on muodostaa `PlayerReader`-luokan tarjoamien pelaajien perusteella erilaisia tilastoja. Tässä tehtävässä riittää, että luokalla on metodi `top_scorers_by_nationality`, joka palauttaa parametrina annettetun kansalaisuuden pelaajat pisteiden mukaan laskevassa järjestyksessä (suurin pistemäärä ensin).
 
 Refaktoroinnin jälkeen `main`-funktion tulee näyttää suurin piirtein seuraavalta:
 
@@ -121,7 +121,7 @@ Refaktoroinnin jälkeen `main`-funktion tulee näyttää suurin piirtein seuraav
 def main():
     url = "https://nhlstatisticsforohtu.herokuapp.com/players"
     reader = PlayerReader(url)
-    stats = Statistics(reader)
+    stats = PlayerStats(reader)
     players = stats.top_scorers_by_nationality("FIN")
 
     for player in players:
