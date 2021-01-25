@@ -306,7 +306,7 @@ Kriteerin _Independent_ mukaan user storyjen pitäisi olla toisistaan mahdollisi
 
 On toki tilanteita, joissa storyjen keskinäistä riippuvuutta ei voi välttää, esimerkiksi verkkokaupan storyjen _lisää tuote ostoskoriin_ ja _poista tuote ostoskorista_ tapauksessa.
 
-Kuten tulemme myöhemmin [tässä osassa](/osa2#user-story-ja-epiikki) toteamaan, user storyjen ei kannata olla koko aikaa _hyvän storyn_ INVEST-kriteerien mukaista. Kriteeristö koskeekin kokonaisuudessa oikeastaan vain korkean prioriteetin user storyjä eli sellaisia, jotka tullaan toteuttamaan lähitulevaisuudessa. Matalamman prioriteetin storyt voivat aivan hyvin olla vielä isompia ja testattavuudenltaan sekä työmääräarvioiltaan epämääräisempiä. Storyt tulee jakaa ja saattaa INVEST-kriteerien mukaiseksi viimeistään siinä vaiheessa kun story nousee lähemmäs prioriteettijärjestyksen huippua.
+Kuten tulemme myöhemmin [tässä osassa](/osa2#user-story-ja-epiikki) toteamaan, user storyjen ei kannata olla koko aikaa _hyvän storyn_ INVEST-kriteerien mukaista. Kriteeristö koskeekin kokonaisuudessa oikeastaan vain korkean prioriteetin user storyjä eli sellaisia, jotka tullaan toteuttamaan lähitulevaisuudessa. Matalamman prioriteetin storyt voivat aivan hyvin olla vielä isompia ja testattavuudeltaan sekä työmääräarvioiltaan epämääräisempiä. Storyt tulee jakaa ja saattaa INVEST-kriteerien mukaiseksi viimeistään siinä vaiheessa kun story nousee lähemmäs prioriteettijärjestyksen huippua.
 
 ## Alustava product backlog
 
