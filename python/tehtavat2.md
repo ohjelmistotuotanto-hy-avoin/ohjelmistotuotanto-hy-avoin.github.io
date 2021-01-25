@@ -112,7 +112,7 @@ Helpoin tapa löytää sääntöjä on hakemalla sopivalla hakusanalla niitä do
     - Vinkki: sääntö löytyy _Design checker_-osiosta [tämän](http://pylint.pycqa.org/en/latest/technical_reference/extensions.html#design-checker-documentation) lisäosan avulla. Saat sen käyttöön lisäämällä `[MASTER]`-osioon `load-plugins=pylint.extensions.mccabe`-rivin
 - Muuta koodiasi siten, että saat jokaisen määritellyistä pylint-säännöistä rikkoutumaan
 - Korjaa koodisi ja varmista, että se noudattaa kaikkia sääntöjä
-  - `Varasto`-luokan konstruktori luultavasti rikkoo `too-complex`-sääntöä. Voit esimerkiksi mieittä, miten voisit esittää `tilavuus`-attribuutin arvon if-lauseen sijaan jotenkin muuten.
+  - `Varasto`-luokan konstruktori luultavasti rikkoo `too-complex`-sääntöä. Voit esimerkiksi miettiä, miten voisit esittää `tilavuus`-attribuutin arvon if-lauseen sijaan jotenkin muuten.
 
 Usein _.pylintrc_-konfiguraatiota ei ole järkevää kirjoittaa tyhjästä käsin, vaan käytetään lähtökohtana pylintin suosittelemaa konfiguraatiota. Suoitellun konfiguraation voi tulostaa komentoriville komennolla `pylint --generate-rcfile`.
 
