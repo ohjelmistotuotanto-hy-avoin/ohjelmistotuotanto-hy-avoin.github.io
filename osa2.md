@@ -437,7 +437,7 @@ Näistä ominaisuuksista _estimated_ ja _prioritized_ ovat meille tuttuja: story
 Hyvä backlog on myös _detailed appropriately_ eli sopivan detaljoitu. Backlogin prioriteeteiltaan korkeimpien eli pian toteutettavaksi tulevien user storyjen tulee olla suhteellisen pieniä, niiden hyväksymiskriteerit tulee olla suunnilleen selvillä ja vaaditusta työmäärästä pitäisi olla kohtuullisen hyvä kuva. 
 
 Alemman prioriteetin user storyt voivat vielä olla isompia ja karkeammin estimoituja. Itse asiassa alemman prioriteetin storyjä ei edes kannata määritellä kovin tarkasti, sillä kestää vielä kauan ennen kuin ne otetaan toteutettavaksi johonkin sprinttiin. Usein käy vieläpä niin, että alemman prioriteetin storyjä ei lopulta toteuteta koskaan, sillä niiden määrittelemä toiminnallisuus havaitaankin tarpeettomaksi. Alhaisen prioriteetin storyihin ei siis todellakaan kannata investoida spekulatiivisesti liikaa aikaa.
-   
+
 _Emergent_ kuvaa backlogin [muuttuvaa luonnetta](https://www.romanpichler.com/blog/make-the-product-backlog-deep/) :
 
 > The product backlog has an organic quality. It evolves, and its contents change frequently. New items emerge based on customer and user feedback, and they are added to the product backlog. Existing items are modified, reprioritized, refined, or removed on an ongoing basis.
