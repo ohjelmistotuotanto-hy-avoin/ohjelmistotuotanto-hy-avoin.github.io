@@ -306,7 +306,7 @@ Kriteerin _Independent_ mukaan user storyjen pitäisi olla toisistaan mahdollisi
 
 On toki tilanteita, joissa storyjen keskinäistä riippuvuutta ei voi välttää, esimerkiksi verkkokaupan storyjen _lisää tuote ostoskoriin_ ja _poista tuote ostoskorista_ tapauksessa.
 
-Kuten tulemme myöhemmin [tässä osassa](/osa2#user-story-ja-epiikki) toteamaan, user storyjen ei kannata olla koko aikaa _hyvän storyn_ INVEST-kriteerien mukaista. Kriteeristö koskeekin kokonaisuudessa oikeastaan vain korkean prioriteetin user storyjä eli sellaisia, jotka tullaan toteuttamaan lähitulevaisuudessa. Matalamman prioriteetin storyt voivat aivan hyvin olla vielä isompia ja testattavuudenltaan sekä työmääräarvioiltaan epämääräisempiä. Storyt tulee jakaa ja saattaa INVEST-kriteerien mukaiseksi viimeistään siinä vaiheessa kun story nousee lähemmäs prioriteettijärjestyksen huippua.
+Kuten tulemme myöhemmin [tässä osassa](/osa2#user-story-ja-epiikki) toteamaan, user storyjen ei kannata olla koko aikaa _hyvän storyn_ INVEST-kriteerien mukaista. Kriteeristö koskeekin kokonaisuudessa oikeastaan vain korkean prioriteetin user storyjä eli sellaisia, jotka tullaan toteuttamaan lähitulevaisuudessa. Matalamman prioriteetin storyt voivat aivan hyvin olla vielä isompia ja testattavuudeltaan sekä työmääräarvioiltaan epämääräisempiä. Storyt tulee jakaa ja saattaa INVEST-kriteerien mukaiseksi viimeistään siinä vaiheessa kun story nousee lähemmäs prioriteettijärjestyksen huippua.
 
 ## Alustava product backlog
 
@@ -437,14 +437,14 @@ Näistä ominaisuuksista _estimated_ ja _prioritized_ ovat meille tuttuja: story
 Hyvä backlog on myös _detailed appropriately_ eli sopivan detaljoitu. Backlogin prioriteeteiltaan korkeimpien eli pian toteutettavaksi tulevien user storyjen tulee olla suhteellisen pieniä, niiden hyväksymiskriteerit tulee olla suunnilleen selvillä ja vaaditusta työmäärästä pitäisi olla kohtuullisen hyvä kuva. 
 
 Alemman prioriteetin user storyt voivat vielä olla isompia ja karkeammin estimoituja. Itse asiassa alemman prioriteetin storyjä ei edes kannata määritellä kovin tarkasti, sillä kestää vielä kauan ennen kuin ne otetaan toteutettavaksi johonkin sprinttiin. Usein käy vieläpä niin, että alemman prioriteetin storyjä ei lopulta toteuteta koskaan, sillä niiden määrittelemä toiminnallisuus havaitaankin tarpeettomaksi. Alhaisen prioriteetin storyihin ei siis todellakaan kannata investoida spekulatiivisesti liikaa aikaa.
-   
+
 _Emergent_ kuvaa backlogin [muuttuvaa luonnetta](https://www.romanpichler.com/blog/make-the-product-backlog-deep/) :
 
 > The product backlog has an organic quality. It evolves, and its contents change frequently. New items emerge based on customer and user feedback, and they are added to the product backlog. Existing items are modified, reprioritized, refined, or removed on an ongoing basis.
 
 Backlog ei siis pysy muuttumattomana vaan elää koko ajan. Uusia storyjä tulee, olemassa olevia storyjä tarkennetaan ja pilkotaan, tarpeettomia storyjä poistetaan. Työmääräarvioita ja prioriteetteja uudelleenmääritellään.
 
-Tämä kaikki ei tietenkään tapahdu itsestään, vaan backlogia tulee aktiivisesti hoitaa (engl. backlog grooming tai backlog refinement) projektin edetessä. [Scrum guide](https://scrumguides.org/scrum-guide.html#artifacts-productbacklog) mainitsee että backlogin groomausta tulee tapahtua läpi sprintin yhteistyössä product ownerin ja kehitystiimin kesken. 
+Tämä kaikki ei tietenkään tapahdu itsestään, vaan backlogia tulee aktiivisesti hoitaa (engl. backlog grooming tai backlog refinement) projektin edetessä. [Scrum guide](https://scrumguides.org/scrum-guide.html#product-backlog) mainitsee että backlogin groomausta tulee tapahtua läpi sprintin yhteistyössä product ownerin ja kehitystiimin kesken.
 
 Ideana on siis pitää backlog koko ajan DEEP-tilassa, joka taas helpottaa oleellisesti ennen jokaista uutta sprinttiä tehtävää sprintin suunnittelua. Jos backlog on huonossa kunnossa (prioriteetit miten sattuu, tärkeät storyt epämääräisessä tilassa, uusia tunnistettuja tarpeita vastaavia storyjä ei ole lisätty backlogille) sprintin suunnittelua tehtäessä, menee kaikkien aikaa hukkaan.  
 
@@ -452,7 +452,7 @@ Ideana on siis pitää backlog koko ajan DEEP-tilassa, joka taas helpottaa oleel
 
 ## User story ja epiikki
 
-Aiemmin mainitsimme, että hyvän user storyn tuntomerkki on, että se noudataa INVEST-kriteeristöä, eli story on _independent, negotiable, valuable, small, testable_. Eräänä kriteerinä on siis storyn pienuus, user storyn tulee olla toteutettavissa yhdessä sprintissä. Backlokin DEEP-kriteeristö taas sanoo, että backlogin pitää olla _sopivan detaljoitu_, erityisesti alhaisen prioriteetin storyja ei kannata tehdä liian tarkasti. INVEST-kriteeristö päteekin nimenomaan korkean prioriteetin storyihin, eli ennen kuin story voidaan ottaa toteutettavaksi, tulee sen olla tarpeeksi pieni, hyvin estimoitu ja testattavissa, eli storyn hyväksymiskriteerien tulee olla selkeitä. 
+Aiemmin mainitsimme, että hyvän user storyn tuntomerkki on, että se noudataa INVEST-kriteeristöä, eli story on _independent, negotiable, valuable, estimable, small, testable_. Eräänä kriteerinä on siis storyn pienuus, user storyn tulee olla toteutettavissa yhdessä sprintissä. Backlokin DEEP-kriteeristö taas sanoo, että backlogin pitää olla _sopivan detaljoitu_, erityisesti alhaisen prioriteetin storyja ei kannata tehdä liian tarkasti. INVEST-kriteeristö päteekin nimenomaan korkean prioriteetin storyihin, eli ennen kuin story voidaan ottaa toteutettavaksi, tulee sen olla tarpeeksi pieni, hyvin estimoitu ja testattavissa, eli storyn hyväksymiskriteerien tulee olla selkeitä.
 
 Backlogin alaosissa olevat storyt taas voivat olla isoja, jopa sellaisia että niitä ei missään nimessä lopulta pystytä edes toteuttamaan yhdessä sprintissä, vaan ne tulee ennen mahdollista toteuttamista jakaa pienempiin, rajatumpiin storyihin. Tämän kaltaisia isoja storyja nimitetään usein _epiikeiksi_ (engl. epic). 
 
