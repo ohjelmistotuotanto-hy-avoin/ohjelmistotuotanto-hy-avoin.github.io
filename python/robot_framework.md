@@ -176,7 +176,7 @@ Lisää _src/tests_-hakemistoon tiedosto <i>reset_counter.robot</i>, joka sisäl
 
 **Lisää tiedostoon seuraavat testitapaukset:**
 
-```
+```text
 *** Settings ***
 Resource  resource.robot
 
@@ -198,7 +198,7 @@ Reset Counter After Several Increments
 
 Siirry virtuaaliympäristöön komennolla `poetry shell` ja suorita siellä komento `robot src/tests`. Testit eivät mene läpi ja tulosteessa on seuraava virhe:
 
-```
+```text
 No keyword with name 'Reset Counter' found.
 ```
 
