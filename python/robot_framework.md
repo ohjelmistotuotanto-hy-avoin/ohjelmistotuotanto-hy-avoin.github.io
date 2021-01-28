@@ -192,6 +192,7 @@ Reset Counter After Several Increments
     Counter Value Should Be  0
     Increment Counter By  5
     Counter Value Should Be  5
+    Reset Counter
     Counter Value Should Be  0
 ```
 
