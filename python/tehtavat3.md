@@ -233,16 +233,20 @@ Komennolle `robot` annetaan siis `-t`-optionin kautta suoritettavan testitapauks
 
 #### Ohjelman suorituksen seuraaminen
 
-Jos virheen löytäminen pelkän manuaalisen testauksen avulla ei tuota tulosta, kannattaa alkaa tutkimaan miten ohjelman suoritus etenee. Ensin on jollain tavalla rajattava, missä ongelma saattaisi olla. Jos esimerkiksi `Login With Correct Credentials`-testitapaus epäonnistuu, on ongelma luultavasti `UserSerivce`-luokan metodissa `check_credentials`. Voimme pysäyttää ohjelman suorituksen halutulle riville käyttämällä globaalia [breakpoint](https://docs.python.org/3/library/pdb.html)-funktiota:
+Jos virheen löytäminen pelkän manuaalisen testauksen avulla ei tuota tulosta, kannattaa alkaa tutkimaan miten ohjelman suoritus etenee. Ensin on jollain tavalla rajattava, missä ongelma saattaisi olla. Jos esimerkiksi `Login With Correct Credentials`-testitapaus epäonnistuu, on ongelma luultavasti `UserSerivce`-luokan metodissa `check_credentials`. Voimme pysäyttää ohjelman suorituksen halutulle riville hyödyntämällä [pdb](https://docs.python.org/3/library/pdb.html)-moduulia:
 
 ```python
+# ...
+# debugattavaan tiedostoon tulee tuoda tarvittavat moduulit
+import sys, pdb
+
 class UserService:
     def __init__(self, user_repository):
         self._user_repository = user_repository
 
     def check_credentials(self, username, password):
         # pysäytetään ohjelman suoritus tälle riville
-        breakpoint()
+        pdb.Pdb(stdout=sys.__stdout__).set_trace()
 
         if not username or not password:
             raise UserInputError("Username and password are required")
@@ -256,6 +260,8 @@ class UserService:
 
     # ...
 ```
+
+Ohjelman suorituksen pysäyttäminen onnistuu siis kutsumalla `Pdb`-luokan metodia `set_trace`. Jotta tulosteet tulisivat näkyviin testien suorituksen aikana, tulee luokan konstruktorin `stdout` argumentin arvoksi asettaa `sys.__stdout__`. Tätä varten debugattavaan tiedostoon tulee tuoda `pdb`-moduulin lisäksi `sys`-moduuli, joka tapahtuu esimerkissä `import sys, pdb`-rivillä.
 
 Käynnistä nyt ohjelma uudelleen, jotta muutokset koodiin astuvat voimaan. Suorita sen jälkeen pelkästään `Login With Correct Credentials`-testitapaus edellä mainitun ohjeen mukaisesti. Kun testitapauksen suoritus saavuttaa `check_credentials`-metodin kutsun, koodin suoritus pysähtyy ja palvelinta suorittavalle komentoriville ilmestyy seuraavanlainen komentorivi:
 
@@ -289,7 +295,7 @@ Suoritetaan rivi syöttämällä uudestaan `next()` ja tulostetaan `user`-muuttu
 <entities.user.User object at 0x10f7a55e0>
 ```
 
-Kun olet lopettanut debuggaamiseen, syötä `exit()` ja ota `breakpoint()`-rivi pois koodista.
+Kun olet lopettanut debuggaamiseen, syötä `exit()` ja poista koodista `set_trace`-metodin kutsu.
 
 ### 7. WebLogin
 
