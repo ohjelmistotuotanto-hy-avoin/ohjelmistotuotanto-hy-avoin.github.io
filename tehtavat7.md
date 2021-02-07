@@ -142,11 +142,10 @@ Erilliset pelit sitten perivät abstraktin luokan ja erikoistavat sitä tarpiden
 ```java
 public class KPSPelaajaVsPelaaja extends KiviPaperiSakset {
 
-    // funktio pelaa peritääm
+    // funktio pelaa peritään
 
     @Override
     protected String toisenSiirto() {
-        System.out.print("Toisen pelaajan siirto: ");
         return scanner.nextLine();  
     }
 
