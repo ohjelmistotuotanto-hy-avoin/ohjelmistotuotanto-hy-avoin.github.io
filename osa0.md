@@ -122,7 +122,7 @@ Läpipääsy edellyttää vähintään puolia kokeen pisteistä.
 
 Jos hyväksiluet miniprojektin skaalataan harjoitusten ja kokeen pistemäärän summa kertomalla se 40/31:llä.
 
-#### 5 opintopisteen suoritua
+#### 5 opintopisteen suoritus
 
 Viiden opintopisteen suorituksessa pisteitä on jaossa 31 pistettä: harjoitukset 11 ja koe 20 pistettä. Näin saatu pistemäärä kerrotaan 40/31:llä, ja arvosana määräytyy samoin kuin 6 opintopisteen suorituksessa.
 
