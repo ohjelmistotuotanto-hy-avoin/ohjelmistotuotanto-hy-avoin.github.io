@@ -28,7 +28,6 @@ Kurssille ilmoittaudutaan [avoimen yliopiston](https://courses.helsinki.fi/fi/ay
 
 Kurssin kokeen sekä tehtävien tekeemiseen/palauttamiseen tarvitset Helsingin yliopiston käyttäjätunnuksen. Ohje tunnuksen aktivoimiseen [täällä](https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/opinnoissa-alkuun/helsingin-yliopiston-kayttajatunnus). Huomaa, että aktivoiminen onnistuu vasta ilmoittautumista seuraavana päivänä.
 
-
 ## Kurssin suorittaminen ja arvostelu
 
 Kurssi alkaa 15.1. ja päättyy 30.4. Kurssin suoritusnopeus on vapaa, mutta kurssi on suunniteltu suoritettavaksi seitsemässä viikossa, jolloin viikoittain edellytettävä työmäärä on noin 10-15 tuntia.
@@ -58,6 +57,7 @@ Tehtäviä harjoituksissa on kahden tyyppisiä:
 Harjoitustehtävien oletettu kuormittavuus on noin 8 tuntia "viikkojen" 1-3 aikana ja sen jälkeen 4 tuntia "viikossa". Monivalintatehtäviin vastaaminen on suhteellisen nopeaa, mutta järkevästi vastaaminen edellyttää materiaalin huolellista lukemista.
 
 Harjoitustehtävistä on olemassa versiot Javalla ja Pythonilla, voit valita itse kumpaa kieltä käytät.
+
 ### Kurssikoe
 
 Kurssilla on kolme koeajankohtaa
@@ -106,6 +106,7 @@ Jos hyväksiluet miniprojektin työkokemuksella, kerro asiasta välittömästi
 ### Kurssin arvostelu
 
 Kurssin voi siis suorittaa joko 5 tai 6 opintopisteen laajuisena. 
+
 #### 6 opintopisteen suoritus
 
 Kuuden opintopisteen suorituksessa on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien kesken seuraavasti
@@ -122,7 +123,7 @@ Läpipääsy edellyttää vähintään puolia kokeen pisteistä.
 
 Jos hyväksiluet miniprojektin skaalataan harjoitusten ja kokeen pistemäärän summa kertomalla se 40/31:llä.
 
-#### 5 opintopisteen suoritua
+#### 5 opintopisteen suoritus
 
 Viiden opintopisteen suorituksessa pisteitä on jaossa 31 pistettä: harjoitukset 11 ja koe 20 pistettä. Näin saatu pistemäärä kerrotaan 40/31:llä, ja arvosana määräytyy samoin kuin 6 opintopisteen suorituksessa.
 
@@ -204,7 +205,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat3)
 
 ### Viikko 4
- 
+
 - Teoria (osa [3](/osa3) kohdasta _Tuotannossa tapahtuva laadunhallinta_ alkaen, osa [4](/osa4))
   - [Tuotannossa tapahtuva laadunhallinta](/osa3#tuotannossa-tapahtuva-testaaminen-ja-laadunhallinta)
   - [DevOps](/osa3#devops) 
@@ -214,6 +215,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
 - Harjoitustehtävät
   - [monivalintatehtävät]({{site.stats_url}}/quiz/4)
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat4)
+
 ### Viikko 5
 
 - Teoria (osa [5](/osa5))
@@ -223,7 +225,9 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
 - Harjoitustehtävät
   - [monivalintatehtävät]({{site.stats_url}}/quiz/5)
   - [ohjelmointi/versionhallinta/konfigurointitehtävät](/tehtavat5)
+
 ### Viikko 6
+
 - Teoria
   - Vierailuluento Juha Viljanen Smartly <a href='https://www.youtube.com/watch?v=3ZRPtoU_nKQ'>video</a> <a href='https://github.com/ohjelmistotuotanto-hy/slides/blob/master/vierailuluennot/smartly.pdf'>kalvot</a>
   - Vierailuluento Niko Laitinen Nitor <a href='https://www.youtube.com/watch?v=dhDusAPpjos'>video</a> <a href='https://github.com/ohjelmistotuotanto-hy/slides/blob/master/vierailuluennot/nitor.pdf'>kalvot</a>
@@ -247,7 +251,6 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
 ### Miniprojekti
 
 Voit osallistua <a href='/miniprojekti'>miniprojektiin </a> siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät.  Miniprojekti järjestetään kahtena eri ajankohtana 22.2.-15.3. ja 29.3.-26.4.
-
 
 ## Typoja materiaalissa
 
