@@ -57,7 +57,7 @@ Tee ohjelma, joka listaa _suomalaisten pelaajien_ tilastot.
 
 Ohjelmassa tarvitaan kahta kirjastoa eli _riippuvuutta_:
 
-* HTTP-pyynnön tekemiseen [Apache HttpClient Fluent API](https://hc.apache.org/httpcomponents-client-ga/tutorial/html/fluent.html)
+* HTTP-pyynnön tekemiseen [Apache HttpClient Fluent API](https://hc.apache.org/httpcomponents-client-5.0.x/current/httpclient5-fluent/apidocs/)
 * json-muotoisen merkkijonon muuttaminen olioksi [http://code.google.com/p/google-gson/](http://code.google.com/p/google-gson/)
 
 Kertaa nopeasti [viime viikolta](/gradle#riippuvuudet), miten gradle-projektin riippuvuudet määritellään. Tarvittaessa lisää tietoa löytyy [Gradlen manuaalista](https://docs.gradle.org/current/userguide/artifact_dependencies_tutorial.html).
