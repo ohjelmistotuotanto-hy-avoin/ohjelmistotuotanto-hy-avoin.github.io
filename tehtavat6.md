@@ -180,7 +180,7 @@ Matcher m = new And(
 ); 
 ```
 
-tulee palauttaa kaikki yli 20 pistettä tehneet jotka pelaavat jossain seuraavista joukkueista _NYI_, _NYR_ tai _NJD_. Lista näyttää seuraavalta: 
+Tulee palauttaa kaikki vähintään 50 pistettä tehneet pelaajat, jotka pelaavat jossain seuraavista joukkueista: _NYR_, _NYI_ tai _BOS_. Lista näyttää seuraavalta: 
 
 ```
 Brock Nelson         NYI          26 + 28 = 54
