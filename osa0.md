@@ -33,7 +33,7 @@ Kurssin kokeen sekä tehtävien tekeemiseen/palauttamiseen tarvitset Helsingin y
 Kurssi alkaa 15.1. ja päättyy 30.4. Kurssin suoritusnopeus on vapaa, mutta kurssi on suunniteltu suoritettavaksi seitsemässä viikossa, jolloin viikoittain edellytettävä työmäärä on noin 10-15 tuntia.
 
 Kurssi koostuu neljästä komponentista:
-- ohjelmotuotannon teoriaa käsittelevästä kirjallinen materiaali sekä videot
+- ohjelmistotuotannon teoriaa käsittelevästä kirjallinen materiaali sekä videot
 - harjoitustehtävät
 - miniprojekti
 - kurssikoe
@@ -210,7 +210,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
   - [Tuotannossa tapahtuva laadunhallinta](/osa3#tuotannossa-tapahtuva-testaaminen-ja-laadunhallinta)
   - [DevOps](/osa3#devops) 
   - [Arkkitehtuurisuunnittelu](/osa4#ohjelmiston-arkkitehtuuri)
-  - [Arkkitehtuuri ketterissä menetemissä](/osa4#arkkitehtuuri-ketterissä-menetelmissä)
+  - [Arkkitehtuuri ketterissä menetelmissä](/osa4#arkkitehtuuri-ketterissä-menetelmissä)
   - [Olio/komponenttisuunnittelu](http://localhost:4000/osa4#olio/komponenttisuunnittelu)
 - Harjoitustehtävät
   - [monivalintatehtävät]({{site.stats_url}}/quiz/4)
