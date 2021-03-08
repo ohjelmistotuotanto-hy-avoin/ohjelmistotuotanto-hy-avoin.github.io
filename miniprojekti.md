@@ -77,10 +77,8 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
 
 #### Viikko 11 (15-21.3.)
 
-- Sprintin 3 katselmointi (eli loppudemot)
-  - Aikataulu ilmoitetaan myöhemmin
-- Jokainen ryhmä osallistuu yhteen loppudemoon
-- Varaa aika [täällä](#) <!-- TODO: linkki -->
+- Sprintin 3 katselmointi (eli loppudemot) järjestetään **keskiviikkona 17.3. klo 15 - 16**
+- Jokaisen ryhmäläisen tulee olla mukana loppudemossa. Zoom-linkki loppudemoon löytyy palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
 ### Toteutettava ohjelmisto
 
