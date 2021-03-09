@@ -10,10 +10,10 @@ permalink: /miniprojekti/
 ### Ajankohtaista
 
 - Voit osallistua minprojektiin siinä vaiheessa kun olet palauttanut vähintään viikkojen 1-3 tehtävät
-- Ensimmäinen mahdollisuus miniprojektin suoritukseen käynnistyy **maanantaina 22.2.**
-  - Ilmoittautuminen alkaa **maanantaina 15.2.** ja päättyy **perjantaina 19.2. klo 23:59**
+- Toinen mahdollisuus miniprojektin suoritukseen käynnistyy **maanantaina 29.3.**
+  - Ilmoittautuminen alkaa **maanantaina 22.3.** ja päättyy **perjantaina 26.3. klo 23:59**
   - Ilmoittautuminen tapahtuu [ryhmäytymissovelluksessa]({{site.miniproject_enrollment_url}})
-  - Miniprojektin **pakollisen** aloitustilaisuuden ajankohta ja zoom-linkki ilmoitetaan [ryhmäytymissovelluksessa]({{site.miniproject_enrollment_url}}) lauantain 20.2. aikana
+  - Miniprojektin **pakollisen** aloitustilaisuuden ajankohta ja zoom-linkki ilmoitetaan [ryhmäytymissovelluksessa]({{site.miniproject_enrollment_url}}) lauantain 27.3. aikana
 - Miniprojektien asiakastapaamiset järjestetään virtuaalisesti [zoom](https://helpdesk.it.helsinki.fi/ohjeet/yhteydenpito-ja-julkaiseminen/videokokoukset/zoom)-järjestelmän avulla.
 - Ohjaajaan Telegram-käyttäjätunnus on @kalleilv. Ohjaajaan voi ottaa suoraan yhteyttä mihin tahansa miniprojektiin liittyvissä kysymyksissä
 
@@ -33,7 +33,7 @@ permalink: /miniprojekti/
 
 ### Ryhmän muodostaminen
 
-- Ilmoittaudu miniprojektiin viimeistään **perjantaina 19.2. klo 23:59** [täällä]({{site.miniproject_enrollment_url}})
+- Ilmoittaudu miniprojektiin viimeistään **perjantaina 26.3. klo 23:59** [täällä]({{site.miniproject_enrollment_url}})
 - Ilmoittautumistietojen perusteella ryhmät muodotostetaan "algoritmisesti", pääasiassa noudattaen ilmoittautumisessa kerrottuja sopivia työskentelyaikoja
 - Ryhmäsi aloitustilaisuuden ajankohta selviää ilmoittautumissovelluksesta. Kaikkien ryhmäläisten on **pakko osallistua** tilaisuuteen, jonka kesto on noin 2 tuntia
 - Aloitustilaisuuteen tullessa on syytä tuntea materiaalin osien 1 ja 2 asioista ainakin seuraavat:
