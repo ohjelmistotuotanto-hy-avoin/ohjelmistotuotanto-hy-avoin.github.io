@@ -587,6 +587,7 @@ Koska korkean koheesion periaatteen nojalla olioita on paljon, tulee riippuvuuks
 Riippuvuuden kannattaa kohdistua asiaan, joka ei muutu herkästi, eli joko rajapintaan tai abstraktiin luokkaan. Sama idea kulkee parilla eri nimellä
 - program to an interface, not to an implementation 
 - depend on abstractions, not on concrete implementation
+- depedency inversion principle (DIP)
  
 Konkreettisen riippuvuuden eliminointi voidaan tehdä rajapintojen (tai abstraktien luokkien) avulla. Olemme tehneet näin kurssilla usein, mm. Verkkokaupan riippuvuus Varastoon, Pankkiin ja Viitegeneraattoriin korvattiin rajapinnoilla. Riippuvuuksien injektointi -suunnittelumalli toimi usein apuvälineenä konkreettisen riippuvuuksien eliminoinnissa.
 
