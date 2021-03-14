@@ -55,7 +55,7 @@ Olemme jo käyttäneet gradlea hyvällä menestyksellä viikon ajan. Tutustutaan
 
 Kurssin [kolmannessa osassa](/osa3) teemana on ohjelmien laadun varmistaminen. Eräs ohjelman laatua useimmiten edistävä tekijä on järkevän _koodityylin_ noudattaminen.  Koodin tyyliä voidaan tarkkailla automatisoidusti ns. staattisen analyysin työkaluilla.
 
-Tutustutaan nyt staattisen analyysin työkaluun [checkstyleen](https://checkstyle.sourceforge.net/), jonka käyttäminen on suhteellisen vaivatonta gradlen [checkstyle-pluginin](https://docs.gradle.org/current/userguide/checkstyle_plugin.html) avulla.
+Tutustutaan nyt staattisen analyysin työkaluun [checkstyleen](https://checkstyle.sourceforge.io/), jonka käyttäminen on suhteellisen vaivatonta gradlen [checkstyle-pluginin](https://docs.gradle.org/current/userguide/checkstyle_plugin.html) avulla.
 
 Mene nyt viikon 1 tehtävien _Ohtuvarastoon_ liittyvien tehtävien palautusrepositorioosi.
 
