@@ -7,7 +7,7 @@ permalink: /python/chromedriver_asennusohjeet/
 
 ## Typoja materiaalissa
 
-{% include typo_instructions.md path="/python/chromedriver_asennusohjeet.md" %}
+{% include typo_instructions.md %}
 
 ## ChromeDriver-asennusohjeet
 

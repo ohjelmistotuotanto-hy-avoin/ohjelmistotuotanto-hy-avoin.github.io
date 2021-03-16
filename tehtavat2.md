@@ -17,7 +17,7 @@ Viikon ensimmäisessä tehtävässä tutustutaan tarkemmin gradleen. Toinen ja k
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-{% include typo_instructions.md path="/tehtavat2.md" %}
+{% include typo_instructions.md %}
 
 ### Tehtävien palauttaminen
 

@@ -19,7 +19,7 @@ Laskarien lopuksi harjoitellaan _riippuvuuksien injektointia_ joka on melko simp
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-{% include typo_instructions.md path="/tehtavat1.md" %}
+{% include typo_instructions.md %}
 
 ### Tehtävien palauttaminen
 

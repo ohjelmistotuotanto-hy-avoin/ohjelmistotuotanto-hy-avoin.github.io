@@ -15,7 +15,7 @@ Tehtävissä 1-2 tutustutaan siihen, miten Poetry-sovelluksiin lisätään ulkoi
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-{% include typo_instructions.md path="/python/tehtavat3.md" %}
+{% include typo_instructions.md %}
 
 ### Tehtävien palauttaminen
 

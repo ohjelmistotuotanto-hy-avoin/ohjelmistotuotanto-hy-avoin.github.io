@@ -7,7 +7,7 @@ permalink: /python/robot_framework/
 
 ## Typoja materiaalissa
 
-{% include typo_instructions.md path="/python/robot_framework.md" %}
+{% include typo_instructions.md %}
 
 ## Robot Framework
 

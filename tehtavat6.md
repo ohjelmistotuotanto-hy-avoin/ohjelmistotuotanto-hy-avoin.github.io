@@ -17,7 +17,7 @@ Tämän viikon [monivalintatehtävät]({{site.stats_url}}/quiz/6).
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-{% include typo_instructions.md path="/tehtavat6.md" %}
+{% include typo_instructions.md %}
 
 ### Tehtävien palauttaminen
 

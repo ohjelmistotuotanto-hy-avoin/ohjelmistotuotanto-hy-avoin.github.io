@@ -17,7 +17,7 @@ Tehtävissä 1-4 tutustutaan yksikkötestausta helpottavaan Mockito-kirjastoon. 
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-{% include typo_instructions.md path="/tehtavat4.md" %}
+{% include typo_instructions.md %}
 
 ### Tehtävien palauttaminen
 

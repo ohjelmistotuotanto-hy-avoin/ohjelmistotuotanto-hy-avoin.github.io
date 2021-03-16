@@ -21,7 +21,7 @@ Tehtävä 6 käsittelee retrospektiivitekniikoita.
 
 ### Typoja tai epäselvyyksiä tehtävissä?
 
-{% include typo_instructions.md path="/tehtavat5.md" %}
+{% include typo_instructions.md %}
 
 ### Tehtävien palauttaminen
 
