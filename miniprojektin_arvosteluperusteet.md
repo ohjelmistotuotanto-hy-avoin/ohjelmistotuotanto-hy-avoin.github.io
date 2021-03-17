@@ -137,7 +137,7 @@ Sprintin maksimi on 2.5 pistettä.
 #### Vertaispalaute
 
 - Arvosteluperusteiden alussa mainittu henkilökohtainen pisteytys perustuu mm. vertaispalautteeseen
-- Jokaisen ryhmäläisen tulee antaa **vertaispalaute viimeistään sunnuntaina 21.3. klo 23:59**
+- Jokaisen ryhmäläisen tulee antaa **vertaispalaute viimeistään keskiviikkona 24.3. klo 23:59**
   - Vertaispalautteen antaminen on _pakollista_. Jos vertaispalaute puuttuu, ovat miniprojektin henkilökohtaiset pisteet -1.5p
 - Vertaispalautteen antaminen tapahtuu [tehtävänpalautussovelluksen]({{site.stats_url}}) miniproject-tabissa
   - Ryhmäläiset eivät näe toistensa vertaispalautteita
@@ -152,7 +152,7 @@ Vertaispalautteen lisäksi ryhmä laatii projektin kulusta pienen raportin (noin
 - Jos raportti puuttuu, vähennetään ryhmältä 2 pistettä
 - Raportti palautetaan lisäämällä raporttiin linkki projektin GitHubin README:hen
 - Raportista tulee ilmetä jokaisen projektiin osallistuneen nimi
-- **raportin deadline sunnuntaina 21.3. klo 23:59**
+- **raportin deadline keskiviikkona 24.3. klo 23:59**
 
 ### Varmista, että commitisi näkyvät githubissa oikein
 
