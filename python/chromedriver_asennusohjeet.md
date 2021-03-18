@@ -11,7 +11,7 @@ permalink: /python/chromedriver_asennusohjeet/
 
 ## ChromeDriver-asennusohjeet
 
-Jos tietokoneellesi ei ole asennettu Chrome-selainta, aloita asentamalla sen viimeisin versio [täältä](https://www.google.com/chrome/). Lataa sen jälkeen käyttöjärjestelmällesi ja Chrome-versiollesi sopiva _chromedriver_-binääri [täältä](https://chromedriver.chromium.org/downloads). Pura ladattu paketti ja noudata sen jälkeen käyttöjärjestelmäkohtaisia ohjeita.
+Jos tietokoneellesi ei ole asennettu Chrome-selainta, aloita asentamalla sen viimeisin versio [täältä](https://www.google.com/chrome/). HUOM: vaikka Chromium-selain on käytännössä Chrome, sen käyttäminen vaatii lisätyötä, joten on suositeltavaa käyttää Chromea. Lataa sen jälkeen käyttöjärjestelmällesi ja Chrome-versiollesi sopiva _chromedriver_-binääri [täältä](https://chromedriver.chromium.org/downloads). Pura ladattu paketti ja noudata sen jälkeen käyttöjärjestelmäkohtaisia ohjeita.
 
 ### macOS ja Linux
 
