@@ -44,3 +44,5 @@ Edellisten vuosien kokeita on nähtävillä vanhoilla kurssisivuilla, esim.
 - [syksy 2018](https://github.com/mluukkai/ohjelmistotuotanto2017)
 - [kevät 2017](https://github.com/mluukkai/ohtu2017)
 - [kevät 2017](https://github.com/mluukkai/ohtu2016)
+
+Kurssilla seurataan Helsingin yliopiston opintokäytäntöjä. Plagiarismi ja opintovilppi, eli esimerkiksi kurssimateriaalin, netissä olevien tai kaverilta saatujen vastausten kopiointi ja niiden palauttaminen omana työnä on kiellettyä. Todettu opintovilppi johtaa kurssisuorituksen hylkäämiseen ja toistuva opintovilppi voi johtaa opinto-oikeuden määräaikaiseen menettämiseen. Lue lisää osoitteessa https://guide.student.helsinki.fi/fi/artikkeli/mita-ovat-vilppi-ja-plagiointi
