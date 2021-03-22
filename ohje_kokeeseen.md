@@ -5,7 +5,12 @@ inheader: no
 permalink: /ohje_kokeeseen/
 ---
 
-Kurssikoe pidetään torstaina 17.12. klo 17-20
+Kurssin kokeet pidetään
+- torstai 25.3.2021 
+- torstai 29.4.2021
+- perjantai 4.6.2021
+
+Kokeet pidetään [moodlessa](https://moodle.helsinki.fi/course/view.php?id=34070) kokeet ovat tehtävissä koko vuorokauden ajan. Kokeen tekemiseen on aikaa 3 tuntia siitä hetkestä kun kokeen aloittaa. Huomaa, että koetta ei kannata aloittaa klo 21 jälkeen, koe sulkeutuu vuorokauden vaihtuessa.
 
 Kurssilta on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien kesken seuraavasti
 
@@ -32,12 +37,10 @@ Koealueena kurssimateriaalin osat 1-5 sekä laskarit, paitsi
 
 Vierailuluennot eivät kuulu koealueeseen.
 
-**Kokeessa on sallittu yhden A4:n kokoinen käsin, itse kynällä kirjoitettu lunttilappu.**
-
 Edellisten vuosien kokeita on nähtävillä vanhoilla kurssisivuilla, esim.
+- [syksy 2020](https://ohjelmistotuotanto-hy.github.io/koe)
+- [syksy 2019](https://github.com/mluukkai/ohjelmistotuotanto2019)
 - [syksy 2018](https://github.com/mluukkai/Ohjelmistotuotanto2018)
 - [syksy 2018](https://github.com/mluukkai/ohjelmistotuotanto2017)
 - [kevät 2017](https://github.com/mluukkai/ohtu2017)
 - [kevät 2017](https://github.com/mluukkai/ohtu2016)
-
-**Myös uusintakoetta ja erilliskokeita koskevat samat ohjeet mitä kurssikoetta**
