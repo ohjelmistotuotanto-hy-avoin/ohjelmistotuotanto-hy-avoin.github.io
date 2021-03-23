@@ -27,13 +27,19 @@ Läpipääsy edellyttää lisäksi miniprojektin hyväksyttyä suoritusta (tai h
 Koealueena kurssimateriaalin osat 1-5 sekä laskarit, paitsi
 
 - Git
-- Gradle 
-- CircleCI
-- CodeClimate 
-- JUnit 
-- Mockito 
-- Cucumber 
+- GitHub Actions
+- CodeClimate
 - Selenium
+- Java-version teknologiat:
+  - Gradle
+  - JUnit
+  - Mockito
+  - Cucumber
+- Python-version teknologiat:
+  - Poetry
+  - Unittest ja pytest
+  - Mock
+  - Robot Framework
 
 Vierailuluennot eivät kuulu koealueeseen.
 
@@ -45,4 +51,4 @@ Edellisten vuosien kokeita on nähtävillä vanhoilla kurssisivuilla, esim.
 - [kevät 2017](https://github.com/mluukkai/ohtu2017)
 - [kevät 2017](https://github.com/mluukkai/ohtu2016)
 
-Kurssilla seurataan Helsingin yliopiston opintokäytäntöjä. Plagiarismi ja opintovilppi, eli esimerkiksi kurssimateriaalin, netissä olevien tai kaverilta saatujen vastausten kopiointi ja niiden palauttaminen omana työnä on kiellettyä. Todettu opintovilppi johtaa kurssisuorituksen hylkäämiseen ja toistuva opintovilppi voi johtaa opinto-oikeuden määräaikaiseen menettämiseen. Lue lisää osoitteessa https://guide.student.helsinki.fi/fi/artikkeli/mita-ovat-vilppi-ja-plagiointi
+Kurssilla seurataan Helsingin yliopiston opintokäytäntöjä. Plagiarismi ja opintovilppi, eli esimerkiksi kurssimateriaalin, netissä olevien tai kaverilta saatujen vastausten kopiointi ja niiden palauttaminen omana työnä on kiellettyä. Todettu opintovilppi johtaa kurssisuorituksen hylkäämiseen ja toistuva opintovilppi voi johtaa opinto-oikeuden määräaikaiseen menettämiseen. Lue lisää [täältä](https://guide.student.helsinki.fi/fi/artikkeli/mita-ovat-vilppi-ja-plagiointi).
