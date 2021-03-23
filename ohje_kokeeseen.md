@@ -38,7 +38,7 @@ Koealueena kurssimateriaalin osat 1-5 sekä laskarit, paitsi
 Vierailuluennot eivät kuulu koealueeseen.
 
 Edellisten vuosien kokeita on nähtävillä vanhoilla kurssisivuilla, esim.
-- [syksy 2020](https://ohjelmistotuotanto-hy.github.io/koe)
+- [syksy 2020](https://ohjelmistotuotanto-hy.github.io/koe2020/)
 - [syksy 2019](https://github.com/mluukkai/ohjelmistotuotanto2019)
 - [syksy 2018](https://github.com/mluukkai/Ohjelmistotuotanto2018)
 - [syksy 2018](https://github.com/mluukkai/ohjelmistotuotanto2017)
