@@ -10,7 +10,7 @@ Kurssin kokeet pidetään
 - torstai 29.4.2021
 - perjantai 4.6.2021
 
-Kokeet pidetään [moodlessa](https://moodle.helsinki.fi/course/view.php?id=34070) kokeet ovat tehtävissä koko vuorokauden ajan. Kokeen tekemiseen on aikaa 3 tuntia siitä hetkestä kun kokeen aloittaa. Huomaa, että koetta ei kannata aloittaa klo 21 jälkeen, koe sulkeutuu vuorokauden vaihtuessa.
+Kokeet pidetään [moodlessa](https://moodle.helsinki.fi/course/view.php?id=39238) kokeet ovat tehtävissä koko vuorokauden ajan. Kokeen tekemiseen on aikaa 3 tuntia siitä hetkestä kun kokeen aloittaa. Huomaa, että koetta ei kannata aloittaa klo 21 jälkeen, koe sulkeutuu vuorokauden vaihtuessa.
 
 Kurssilta on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien kesken seuraavasti
 
