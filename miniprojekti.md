@@ -67,15 +67,19 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
 
 #### Viikko 14 (5-11.4.)
 
+- Pääsiäistauko
+
+#### Viikko 15 (12-18.4.)
+
 - Sprintin 1 katselmointi ja sprintin 2 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
-#### Viikko 15 (12-18.4.)
+#### Viikko 16 (19-25.4.)
 
 - Sprintin 2 katselmointi ja sprintin 3 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
-#### Viikko 16 (19-25.4.)
+#### Viikko 17 (26.4.-2.5.)
 
 - Sprintin 3 katselmointi (eli loppudemot). Loppudemon tarkempi aikataulu ilmoitetaan myöhemmin
 - Jokaisen ryhmäläisen tulee olla mukana loppudemossa. Zoom-linkki loppudemoon löytyy palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
