@@ -9,6 +9,7 @@ permalink: /miniprojekti/
 
 ### Ajankohtaista
 
+- Loppudemot järjestetään **tiistaina 27.4. klo 16 - 18**. Jokaisen ryhmäläisen tulee olla mukana loppudemossa. Zoom-linkki loppudemoon löytyy palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 - Voit osallistua minprojektiin siinä vaiheessa kun olet palauttanut vähintään viikkojen 1-3 tehtävät
 - Toinen mahdollisuus miniprojektin suoritukseen käynnistyy **maanantaina 29.3.**
   - Ilmoittautuminen alkaa **maanantaina 22.3.** ja päättyy **perjantaina 26.3. klo 23:59**
@@ -81,7 +82,7 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
 
 #### Viikko 17 (26.4.-2.5.)
 
-- Sprintin 3 katselmointi (eli loppudemot). Loppudemon tarkempi aikataulu ilmoitetaan myöhemmin
+- Sprintin 3 katselmointi (eli loppudemot). Loppudemot järjestetään **tiistaina 27.4. klo 16 - 18**
 - Jokaisen ryhmäläisen tulee olla mukana loppudemossa. Zoom-linkki loppudemoon löytyy palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
 ### Toteutettava ohjelmisto
