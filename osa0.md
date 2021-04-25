@@ -165,8 +165,6 @@ Kaikki monivalitatehtävät ovat joukkoja väittämiä, joista jokainen voi olla
 
 Normaaleista laskareista on tarjolla *8 kurssipistettä*. Täysiin kurssipisteisiin edellytetään 90 % normaalien laskareiden tekemistä.
 
-Normaaleista laskareista on tarjolla *8 kurssipistettä*. Täysiin kurssipisteisiin edellytetään 90 % normaalien laskareiden tekemistä.
-
 Pisteet tulevat seuraavan kaavan mukaan:
 
 |tehtäviä  |kurssipisteitä| 
