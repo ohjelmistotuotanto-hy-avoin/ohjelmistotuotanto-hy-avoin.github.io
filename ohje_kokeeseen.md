@@ -22,7 +22,7 @@ Kurssilta on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien k
 
 Arvosanaan 1 riittää 20 pistettä, arvosanaan 5 tarvitaan 36 pistettä. 
 
-Läpipääsy edellyttää lisäksi miniprojektin hyväksyttyä suoritusta (tai hyväksilukua) ja **vähintään puolia kokeen pisteistä**.
+Läpipääsy edellyttää lisäksi **vähintään puolia kokeen pisteistä** ja 6 opintopisteen laajuisessa suorituksessa myös miniprojektin hyväksyttyä suoritusta (tai hyväksilukua).
 
 Koealueena kurssimateriaalin osat 1-5 sekä laskarit, paitsi
 
