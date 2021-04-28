@@ -153,6 +153,8 @@ lue joku alla olevista ja tee siitä noin 0.25 sivun referaatti
 
 ### 6. Kurssipalaute
 
-Anna kurssipalautetta [täällä](https://study.cs.helsinki.fi/palaute/targets/7/feedback).. Voit antaa palautteen myös kokeen jälkeen. Rasti tähän tehtävään on lupaus että annat palautteen jossain vaiheessa.
+Anna kurssipalautetta [täällä](https://study.cs.helsinki.fi/palaute/targets/7/feedback).. Voit antaa palautteen myös kokeen jälkeen. Rasti tähän tehtävään on lupaus että annat palautteen jossain vaiheessa. 
+
+Huom: kurssipalautejärjestlmä on tällä hetkellä koekäytössä, jos havaitset sen toiminnassa puutteita, lähetä sähköpostia.
 
 {% include submission_instructions.md %}
