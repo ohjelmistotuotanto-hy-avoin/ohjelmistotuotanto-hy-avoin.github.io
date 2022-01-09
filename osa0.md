@@ -97,7 +97,7 @@ Kriteerit selviävät [täältä](https://studies.helsinki.fi/ohjeet/artikkeli/k
 
 Toisin kuin Ohjelmistotuotantoprojektin hyväksilukuun, miniprojektin hyväksilukuun vaaditaan ainoastaan _neljän kuukauden työkokemus_.
 
-Jos hyväksiluet miniprojektin työkokemuksella, kerro asiasta välittömästi emailitse.
+Jos hyväksiluet miniprojektin työkokemuksella, kerro asiasta emailitse (matti.luukkainen@helsinki.fi) siinä vaiheessa kun olet ensimmäisen viikon tehtävät.
 
 ### Kurssin arvostelu
 
@@ -189,7 +189,7 @@ Projektissa 5-6 hengen opiskelijatiimit toteuttavat ketterien menetelmien parhai
 
 Opintojakso järjestetään 16.5.-1.7. Osallistuminen edellyttää päivittäistä noin 6 tunnin työskentelyä.
 
-Projektiin osallistujilla tulee olla ennen projektin alkua suoritettuna tämän kurssin lisäksi kurssi [Full stack -websovelluskehitys](https://fullstackopen.com/) vähintään viiden opintopisteen laajuisena.
+Projektiin osallistujilla tulee olla ennen projektin alkua suoritettuna tämän kurssin lisäksi joko kaksi aineopintojen harjoitustyötä **tai** kurssi [Full stack -websovelluskehitys](https://fullstackopen.com/) vähintään viiden opintopisteen laajuisena.
 
 Projektiin otetaan enintään 30 avoimen yliopiston opiskelijaa. Jos pääsyvaatimukset täyttäviä halukkaita on enemmän, käytetään valinnan kriteerinä kaikkien avoimen yliopiston kautta suoritettujen tietojenkäsittelytieteen opintojen määrää.
 
