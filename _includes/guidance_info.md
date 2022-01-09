@@ -1,3 +1,3 @@
-Apua tehtävien tekoon kurssin [Telegram](https://telegram.me/ohjelmistotuotanto)-kanavalla sekä zoom-pajassa:
+Apua tehtävien tekoon kurssin [Discord](https://study.cs.helsinki.fi/discord/join/ohtu)-kanavalla sekä zoom-pajassa:
 
-- Torstaisin klo 14-16 21.1. alkaen [tällä](https://helsinki.zoom.us/j/66703488751?pwd=YldCSVdwWDBHUjZPWFFaOWFScWVMQT09) linkillä
+- TODO: paja-aika [tällä]() linkillä

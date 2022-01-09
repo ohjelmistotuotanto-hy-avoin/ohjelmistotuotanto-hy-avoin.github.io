@@ -14,54 +14,54 @@ Kurssiin liittyy viikottaiset laskuharjoitukset. Tehtäviä on _kahden tyyppisi�
 
 Tehtävien vaikutus kurssin arvosteluun selviää [osasta 0](/osa0#kurssin-arvostelu).
 
-Kurssin kaikilla tehtävillä on ainoastaan yksi deadline, 30.4.2021 klo 23:59
+Kurssin kaikilla tehtävillä on ainoastaan yksi deadline, 30.4.2022 klo 23:59
 
 {% include guidance_info.md %}
 ### Viikko 1
 
 - [Monivalintatehtävät]({{site.stats_url}}/quiz/1)
 - Ohjelmointi/versionhallinta/konfigurointitehtävät:
-  - [Python](/python/tehtavat1)
-  - [Java](/tehtavat1)
+  - [Python](/tehtavat1)
+  - [Java](/java/tehtavat1)
 
 ### Viikko 2
 
 - [Monivalintatehtävät]({{site.stats_url}}/quiz/2)
 - Ohjelmointi/versionhallinta/konfigurointitehtävät:
-  - [Python](/python/tehtavat2)
-  - [Java](/tehtavat2)
+  - [Python](/tehtavat2)
+  - [Java](/java/tehtavat2)
 
 ### Viikko 3
 
 - [Monivalintatehtävät]({{site.stats_url}}/quiz/3)
 - Ohjelmointi/versionhallinta/konfigurointitehtävät:
-  - [Python](/python/tehtavat3)
-  - [Java](/tehtavat3)
+  - [Python](/tehtavat3)
+  - [Java](/java/tehtavat3)
 
 ### Viikko 4
 
 - [Monivalintatehtävät]({{site.stats_url}}/quiz/4)
 - Ohjelmointi/versionhallinta/konfigurointitehtävät:
-  - [Python](/python/tehtavat4)
-  - [Java](/tehtavat4)
+  - [Python](/tehtavat4)
+  - [Java](/java/tehtavat4)
 
 ### Viikko 5
 
 - [Monivalintatehtävät]({{site.stats_url}}/quiz/5)
 - Ohjelmointi/versionhallinta/konfigurointitehtävät:
-  - [Python](/python/tehtavat5)
-  - [Java](/tehtavat5)
+  - [Python](/tehtavat5)
+  - [Java](/java/tehtavat5)
 
 ### Viikko 6
 
 - [Monivalintatehtävät]({{site.stats_url}}/quiz/6)
 - Ohjelmointi/versionhallinta/konfigurointitehtävät:
-  - [Python](/python/tehtavat6)
-  - [Java](/tehtavat6)
+  - [Python](/tehtavat6)
+  - [Java](/java/tehtavat6)
 
 ### Viikko 7
 
 - [Monivalintatehtävät]({{site.stats_url}}/quiz/7)
 - Ohjelmointi/versionhallinta/konfigurointitehtävät:
-  - [Python](/python/tehtavat7)
-  - [Java](/tehtavat7)
+  - [Python](/tehtavat7)
+  - [Java](/java/tehtavat7)

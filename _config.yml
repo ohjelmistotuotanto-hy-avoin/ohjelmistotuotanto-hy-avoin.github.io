@@ -1,19 +1,4 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Ohjelmistotuotanto avoin yliopisto 2021
+title: Ohjelmistotuotanto avoin yliopisto 2022
 email: matti.luukkainen@helsinki.fi
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -21,8 +6,9 @@ url: "https://ohjelmistotuotanto-hy-avoin.github.io/" # the base hostname & prot
 github_username:  mluukkai
 repo_url: "https://github.com/ohjelmistotuotanto-hy-avoin/ohjelmistotuotanto-hy-avoin.github.io"
 repo_branch: "master"
-stats_url: "https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2021"
-python_exercise_repo_url: "https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2021"
+stats_url: "https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2022"
+python_exercise_repo_url: "https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2022"
+java_exercise_repo_url: "https://github.com/ohjelmistotuotanto-hy-avoin/java-kevat-2022"
 miniproject_enrollment_url: "https://study.cs.helsinki.fi/assembler/course/8f40ed1e-34b0-4669-acca-2842c91cd9e6"
 
 # Build settings

@@ -24,7 +24,7 @@ Hieman tarkemmin eriteltynä, suoritettuaan kurssin opiskelija
 
 ## Ilmoittautuminen
 
-Kurssille ilmoittaudutaan [avoimen yliopiston](https://courses.helsinki.fi/fi/aytkt20006/135891626) sivuilla. Kurssi on kaikille maksuton.
+Kurssille ilmoittaudutaan [avoimen yliopiston](https://studies.helsinki.fi/opintotarjonta/cur/otm-4716b91b-b901-45f4-b1cf-8484bddda5f2/_Ohjelmistotuotanto_) sivuilla. Kurssi on kaikille maksuton.
 
 Kurssin kokeen sekä tehtävien tekeemiseen/palauttamiseen tarvitset Helsingin yliopiston käyttäjätunnuksen. Ohje tunnuksen aktivoimiseen [täällä](https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/opinnoissa-alkuun/helsingin-yliopiston-kayttajatunnus). Huomaa, että aktivoiminen onnistuu vasta ilmoittautumista seuraavana päivänä.
 
@@ -38,13 +38,9 @@ Kurssi koostuu neljästä komponentista:
 - miniprojekti
 - kurssikoe
 
-Kurssin voi suorittaa joko 5 tai 6 opintopisteen laajuisena. 
-
-Kuuden opintopisteen laajuinen suoritus edellyttää _miniprojektiin_ osallistumista. 
-
 ### Teoria
 
-Kurssin kirjallisessa materiaalissa sekä niihin liittyvissä syksyllä 2020 nauhoitetulla kymmenellä luennolla käydään läpi ohjelmistotuotantoon liittyvää käsitteistöä ja teoriaa. Teoriamateriaalia täydentää neljä videoitua ohjelmistoalan asiantuntijaluentoa.
+Kurssin kirjallisessa materiaalissa sekä niihin liittyvissä syksyllä 2021 nauhoitetulla kymmenellä luennolla käydään läpi ohjelmistotuotantoon liittyvää käsitteistöä ja teoriaa. Teoriamateriaalia täydentää neljä videoitua ohjelmistoalan asiantuntijaluentoa.
 
 ### Harjoitustehtävät
 
@@ -58,26 +54,9 @@ Harjoitustehtävien oletettu kuormittavuus on noin 8 tuntia "viikkojen" 1-3 aika
 
 Harjoitustehtävistä on olemassa versiot Javalla ja Pythonilla, voit valita itse kumpaa kieltä käytät.
 
-### Kurssikoe
-
-Kurssilla on kolme koeajankohtaa
-- torstai 25.3.2021 
-- torstai 29.4.2021
-- perjantai 4.6.2021
-
-Kokeen voi aloittaa mihin aikaan tahansa koepäivänä. Kokeessa on vastausaikaa 3 tuntia. Kokeen voi tehdä mistä tahansa riittävän hyvän internetyhteyden omaavasta paikasta.
-
-Koe keskittyy kurssin teoriamateriaalissa käsiteltäviin asioihin, kokeessa ei kysytä vierailuluentojen sisällöistä eikä niistä teknisistä aihepiireistä (mm versionhallinta) mitä kurssimateriaalin osat 0-5 eivät käsittele.
-
-Koe tehdään avoimen yliopiston [moodlessa](https://moodle.helsinki.fi/course/view.php?id=39238) ja päätäkseni kirjautumaan järjestelmään avoimen yliopiston opiskelijoiden on ilmoittauduttava kurssille viimeistään vuorokautta aiemmin [tänne](https://courses.helsinki.fi/fi/aytkt20006/129239628) ja aktivoitava  [käyttäjätunnuksensa](https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/opinnoissa-alkuun/helsingin-yliopiston-kayttajatunnus).
-
-Koetta tehtäessä internet on käytössä, mutta kaikenlainen yhteistyö on kielletty. Vastaukset on kirjoitettava omin sanoin, tekstin kopioiminen kurssimateriaalista tai muualta internetistä johtaa heti HY:n [plagiointikäytäntöjen](https://guide.student.helsinki.fi/fi/artikkeli/mita-ovat-vilppi-ja-plagiointi) soveltamiseen 
-
-Jokainen osallistuja voi osallistua kolmeen koetilaisuuteen. Korkein pistemäärä jää voimaan. Kurssin arvostelu suoritetaan vasta kurssin päättyessä eli 30.4.2021 klo 23:59, joten voit jatkaa kurssin tehtävien tekemistä kokeessa käymisen jälkeenkin.
-
 ### Miniprojekti
 
-Kurssin suorittaminen 6 opintopisteen laajuisena edellyttää _miniprojektiin_ osallistumista. 
+Kurssin suorittaminen  edellyttää _miniprojektiin_ osallistumista. 
 
 Miniprojekti on ryhmässä tehtävä pieni harjoitustyö, jonka pääasiallisena tarkoituksena on projektinhallinnan sekä eräiden laadunhallintatekniikkoiden harjoittelu. 
 
@@ -87,11 +66,28 @@ Miniprojektien asiakastapaamiset järjestetään virtuaalisesti [zoom](https://h
 
 Miniprojekteissa työskentelyyn tulee varata yhteensä noin 6 tuntia aikaa viikossa. Miniprojektin kesto on kolme viikkoa.
 
-Miniprojekti järjestetään kahtena eri ajankohtana 22.2.-15.3. ja 29.3.-26.4.
+TODO: Miniprojekti järjestetään kahtena eri ajankohtana 22.2.-15.3. ja 29.3.-26.4.
 
 Voit osallistua miniprojektiin siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät.
 
 Lisää tietoa miniprojekteihin osallistumisesta on tulossa lähempänä miniprojektien alkua.
+
+### Kurssikoe
+
+Kurssilla on kolme koeajankohtaa
+- perjantai 25.3.2022
+- torstai 28.4.2022
+- TODO: x.6.2022
+
+Kokeen voi aloittaa mihin aikaan tahansa koepäivänä. Kokeessa on vastausaikaa 3 tuntia. Kokeen voi tehdä mistä tahansa riittävän hyvän internetyhteyden omaavasta paikasta.
+
+Koe keskittyy kurssin teoriamateriaalissa käsiteltäviin asioihin, kokeessa ei kysytä vierailuluentojen sisällöistä eikä niistä teknisistä aihepiireistä (mm versionhallinta) mitä kurssimateriaalin osat 0-5 eivät käsittele.
+
+Koe tehdään avoimen yliopiston [moodlessa](https://moodle.helsinki.fi/course/view.php?id=46773) ja päätäkseni kirjautumaan järjestelmään avoimen yliopiston opiskelijoiden on ilmoittauduttava kurssille viimeistään vuorokautta aiemmin [tänne](https://studies.helsinki.fi/opintotarjonta/cur/otm-4716b91b-b901-45f4-b1cf-8484bddda5f2/_Ohjelmistotuotanto_) ja aktivoitava  [käyttäjätunnuksensa](https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/opinnoissa-alkuun/helsingin-yliopiston-kayttajatunnus).
+
+Koetta tehtäessä internet on käytössä, mutta kaikenlainen yhteistyö on kielletty. Vastaukset on kirjoitettava omin sanoin, tekstin kopioiminen kurssimateriaalista tai muualta internetistä johtaa heti HY:n [plagiointikäytäntöjen](https://guide.student.helsinki.fi/fi/artikkeli/mita-ovat-vilppi-ja-plagiointi) soveltamiseen 
+
+Jokainen osallistuja voi osallistua kolmeen koetilaisuuteen. Korkein pistemäärä jää voimaan. Kurssin arvostelu suoritetaan vasta kurssin päättyessä eli 30.4.2022 klo 23:59, joten voit jatkaa kurssin tehtävien tekemistä kokeessa käymisen jälkeenkin.
 
 #### Miniprojektin hyväksilukeminen
 
@@ -105,11 +101,8 @@ Jos hyväksiluet miniprojektin työkokemuksella, kerro asiasta välittömästi
 
 ### Kurssin arvostelu
 
-Kurssin voi siis suorittaa joko 5 tai 6 opintopisteen laajuisena. 
 
-#### 6 opintopisteen suoritus
-
-Kuuden opintopisteen suorituksessa on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien kesken seuraavasti
+Kurssilla jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien kesken seuraavasti
 
 - harjoitukset 11 pistettä
   - monivalintatehtävät 3 pistettä 
@@ -130,12 +123,6 @@ Arvosana muodostuu seuraavasti:
 Läpipääsy edellyttää vähintään puolia kokeen pisteistä.
 
 Jos hyväksiluet miniprojektin skaalataan harjoitusten ja kokeen pistemäärän summa kertomalla se 40/31:llä.
-
-#### 5 opintopisteen suoritus
-
-Viiden opintopisteen suorituksessa pisteitä on jaossa 31 pistettä: harjoitukset 11 ja koe 20 pistettä. Näin saatu pistemäärä kerrotaan 40/31:llä, ja arvosana määräytyy samoin kuin 6 opintopisteen suorituksessa.
-
-Läpipääsy edellyttää vähintään puolia kokeen pisteistä.
 
 #### Harjoitustehtävien pisteytysperusteet
 
@@ -196,11 +183,11 @@ Kuten kohta tulemme näkemään, ohjelmistotuotanto kattaa suuren kirjon erilais
 
 ## Ohjelmistotuotantoprojekti 10 op
 
-Kurssin suoritettuasi voit osallistua normaalisti ainoastaan Tietojenkäsittelytieteen pääaineopiskelijoille tarkoitettuun opintojaksoon [Ohjelmistotuotantoprojekti](https://courses.helsinki.fi/fi/aytkt20007/), joka järjestetään myös avoimen yliopiston toteutuksena.
+Kurssin suoritettuasi voit osallistua normaalisti ainoastaan Tietojenkäsittelytieteen pääaineopiskelijoille tarkoitettuun opintojaksoon [Ohjelmistotuotantoprojekti](https://studies.helsinki.fi/opintotarjonta/cu/hy-CU-118025059-2020-08-01), joka järjestetään myös avoimen yliopiston toteutuksena.
 
 Projektissa 5-6 hengen opiskelijatiimit toteuttavat ketterien menetelmien parhaita käytänteitä soveltaen ohjelmiston ulkoiselle asiakkaalle. Projekti pyrkii simuloimaan mahdollisimman realistisesti oikeassa työelämässä tapahtuvaa sovelluskehitystä.
 
-Opintojakso järjestetään 17.5.-2.7. Osallistuminen edellyttää päivittäistä noin 6 tunnin työskentelyä.
+Opintojakso järjestetään 16.5.-1.7. Osallistuminen edellyttää päivittäistä noin 6 tunnin työskentelyä.
 
 Projektiin osallistujilla tulee olla ennen projektin alkua suoritettuna tämän kurssin lisäksi kurssi [Full stack -websovelluskehitys](https://fullstackopen.com/) vähintään viiden opintopisteen laajuisena.
 
@@ -289,7 +276,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
 
 ### Miniprojekti
 
-Voit osallistua <a href='/miniprojekti'>miniprojektiin </a> siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät.  Miniprojekti järjestetään kahtena eri ajankohtana 22.2.-15.3. ja 29.3.-26.4.
+Voit osallistua <a href='/miniprojekti'>miniprojektiin </a> siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät.  TODO: Miniprojekti järjestetään kahtena eri ajankohtana 22.2.-15.3. ja 29.3.-26.4.
 
 ## Typoja materiaalissa
 
