@@ -23,7 +23,7 @@ Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palaut
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/python/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
-### 1. Git: rebase [versionhallinta]
+### 1. Git: rebase
 
 _Tätä tehtävää ei palauteta mihinkään!_
 

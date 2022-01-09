@@ -21,7 +21,7 @@ Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palaut
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
-### 1. git: rebase [versionhallinta]
+### 1. git: rebase
 
 _Tätä tehtävää ei palauteta mihinkään!_
 

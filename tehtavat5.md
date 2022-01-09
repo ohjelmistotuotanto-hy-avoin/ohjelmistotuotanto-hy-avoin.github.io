@@ -25,7 +25,7 @@ Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palaut
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
-### 1. git: vahingossa tuhotun tiedoston palautus [versionhallinta]
+### 1. git: vahingossa tuhotun tiedoston palautus
 
 Edellisessä tehtävässä palasimme jo menneisyyteen checkouttaamalla tagillä merkittyyn kohtaan. Katsotaan nyt miten voimme palauttaa jonkun menneisyydessä olevan tilanteen uudelleen voimaan.
 
@@ -55,7 +55,7 @@ Voit tehdä tämän ja seuraavan tehtävän mihin tahansa repositorioon, tehtäv
 
 - Täsmälleen samalla tavalla onnistuu olemassa olevan tiedoston vanhan version palauttaminen.
 
-### 2. Git: commitin muutosten kumoaminen [versionhallinta]
+### 2. Git: commitin muutosten kumoaminen
 
 - Huomaamme, että juuri tehty commit oli virhe, kumotaan se sanomalla <code>git revert HEAD --no-edit</code>
   - HEAD siis viittaa siihen committiin minkä kohdalla nyt ollaan

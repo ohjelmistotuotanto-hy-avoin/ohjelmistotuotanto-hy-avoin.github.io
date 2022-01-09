@@ -21,7 +21,7 @@ Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palaut
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/python/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
-### 1. Git: stash [versionhallinta]
+### 1. Git: stash
 
 _Tehtävien 1 ja 2 ei tarvitse näkyä palautuksessa, riittää kun teet tehtävät_
 
@@ -58,7 +58,7 @@ Changes not staged for commit:
   - Kuten huomaat, staging-alueelle jo lisätty muutos ei palaa staging-alueelle, vaan joudut lisäämään sen uudelleen
   - Jos edellisessä komento olisi annettu muodossa <code>git stash apply --index</code>, olisi tilanne palautunut täysin ennalleen
 
-### 2. Git: branchin "siirtäminen" [versionhallinta]
+### 2. Git: branchin "siirtäminen"
 
 _Tehtävien 1 ja 2 ei tarvitse näkyä palautuksessa, riittää kun teet tehtävät_
 

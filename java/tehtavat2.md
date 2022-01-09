@@ -146,7 +146,7 @@ Varmista myös, että kun korjaat koodin, kaikki toimii taas moitteettomasti:
 
 ![]({{ "/images/lh2-12.png" | absolute_url }})
 
-### 4. git: branchit [versionhallinta]
+### 4. git: branchit
 
 lue brancheja käsittelevät osuudet seuraavasta <https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging>
 * jos haluat lukea hieman perusteellisemman selityksen asiasta, lue <https://git-scm.com/book/en/v2:n luku kolme kokonaisuudessaan
@@ -173,7 +173,7 @@ tee seuraavat paikalliseen git-repositorioosi (kyseessä ei siis tarvitse olla t
 * mergeä branchin __eka__ sisältö __mainiin__
 * katso jälleen miltä näyttää gitk --all
 
-### 5. git: branchit ja staging-alue [versionhallinta]
+### 5. git: branchit ja staging-alue
 
 * olet nyt repositoriosi main-haarassa
 * luo uusi tiedosto _uusi_tiedosto.txt_, **älä** kuitenkaan lisää ja commitoi tiedostoa
@@ -225,7 +225,7 @@ nothing to commit, working tree clean
 * tämän tehtävän ideana oli siis havainnollistaa, että working tree (muutokset joista git ei ole tietoinen) ja staging (gitiin lisättyihin tiedostoihin tehdyt committoimattomat muutokset)
 **eivät liity** mihinkään branchiin, muutokset siirtyvät staging-alueelta branchiin ainoastaan komennon _git commit_ suorituksen seurauksena
 
-### 6. git: konflikti! [versionhallinta]
+### 6. git: konflikti!
 
 Tee paikalliseen git-repoon seuraavat
 
@@ -256,7 +256,7 @@ Jotkut editorit, esim [visual studio code](https://code.visualstudio.com) sisäl
 
 ![](https://github.com/mluukkai/ohjelmistotuotanto2017/raw/main/images/lh2-4a.png)
 
-### 7. git: branchit ja GitHub [versionhallinta]
+### 7. git: branchit ja GitHub
 
 Aloita lukemalla ProGit kirjasta luku [Remote Branches](http://git-scm.com/book/en/Git-Branching-Remote-Branches)
 
@@ -343,7 +343,7 @@ Ohjelmistotiimi voi soveltaa Gitin branchaystä hyvin monella eri tyylillä. Art
 
 Jos kiinnostaa, lue lisää yo. dokumentista.
 
-### 8. git: epäajantasaisen kopion pushaaminen [versionhallinta]
+### 8. git: epäajantasaisen kopion pushaaminen
 
 Demonstroidaan usein esiintyvää tilannetta, jossa epäajantasaisen repositorion pushaaminen githubissa olevaan etärepositorioon epäonnistuu.
 

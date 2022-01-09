@@ -581,7 +581,7 @@ Koodissa on joukko yksikkötestejä, jotka helpottavat refaktorointia.
 
 *HUOM* suorita refaktorointi mahdollisimman pienin askelin, pidä koodi koko ajan toimivana. Suorita testit jokaisen refaktorointiaskeleen jälkeen! 
 
-### 7. git: tägit [versionhallinta]
+### 7. git: tägit
 
 Tutustutaan tässä tehtävässä Gitin tageihin:
 

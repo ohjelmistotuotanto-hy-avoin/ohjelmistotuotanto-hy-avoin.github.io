@@ -130,7 +130,7 @@ Varmista myös, että kun korjaat koodin, kaikki toimii taas moitteettomasti:
 
 ![]({{ "/images/py-lh2-12.png" | absolute_url }})
 
-### 5. Git: branchit [versionhallinta]
+### 5. Git: branchit
 
 Lue brancheja käsittelevät osuudet seuraavasta <https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging>
 
@@ -222,7 +222,7 @@ logger("lopetetaan")
 
 - Katso jälleen miltä näyttää `gitk --all`-komennolla
 
-### 6. Git: branchit ja staging-alue [versionhallinta]
+### 6. Git: branchit ja staging-alue
 
 - Olet nyt repositoriosi master-haarassa
 - Luo uusi tiedosto _README.md_, **älä** kuitenkaan lisää ja commitoi tiedostoa versionhallintaan
@@ -295,7 +295,7 @@ nothing to commit, working tree clean
 - Tämän tehtävän ideana oli siis havainnollistaa, että working tree (muutokset joista git ei ole tietoinen) ja staging (gitiin lisättyihin tiedostoihin tehdyt committoimattomat muutokset)
   **eivät liity** mihinkään branchiin, muutokset siirtyvät staging-alueelta branchiin ainoastaan komennon `git commit` suorituksen seurauksena
 
-### 7. Git: konflikti! [versionhallinta]
+### 7. Git: konflikti!
 
 Tee paikalliseen git-repoon seuraavat
 
@@ -425,7 +425,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 Jotkut editorit, esim [Visual Studio Code](https://code.visualstudio.com) sisältävät sisäänrakennetusti niin sanotun _merge toolin_, joka osaa jossain määrin helpottaa konfliktien ratkaisua:
 
 ![]({{ "/images/lh2-merge.png" | absolute_url }}){:height="350px" }
-### 8. Git: branchit ja GitHub [versionhallinta]
+### 8. Git: branchit ja GitHub
 
 Aloita lukemalla ProGit kirjasta luku [Remote Branches](http://git-scm.com/book/en/Git-Branching-Remote-Branches).
 
@@ -514,7 +514,7 @@ Ohjelmistotiimi voi soveltaa Gitin branchaystä hyvin monella eri tyylillä. Art
 
 Jos kiinnostaa, lue lisää yllä olevasta dokumentista.
 
-### 9. Git: epäajantasaisen kopion pushaaminen [versionhallinta]
+### 9. Git: epäajantasaisen kopion pushaaminen
 
 Demonstroidaan usein esiintyvää tilannetta, jossa epäajantasaisen repositorion pushaaminen githubissa olevaan etärepositorioon epäonnistuu.
 
