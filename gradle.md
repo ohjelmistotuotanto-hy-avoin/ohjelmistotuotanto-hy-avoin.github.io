@@ -474,7 +474,7 @@ Tarvittava määrittely on seuraava:
 
 <pre>
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -482,7 +482,7 @@ dependencies {
 }
 </pre>
 
-Ensimmäinen osa _repositories_ kertoo gradlelle mistä sen tulee etsiä riippuvuuksia. [jcenter](https://bintray.com/bintray/jcenter) on eräs niistä paikoista, johon on talletettu suuri määrä gradlen ja mavenin käyttämiä kirjastoja. Toinen vaihtoehtoinen paikka riippuvuuksien etsimiseen on [mavenCentral](https://search.maven.org). _repositories_-osassa voidaan määritellä myös useita paikkoja joista gradle käy etsimässä projektiin määriteltyjä riippuvuuksia.
+Ensimmäinen osa _repositories_ kertoo gradlelle mistä sen tulee etsiä riippuvuuksia. [mavenCentral](https://search.maven.org/) on eräs niistä paikoista, johon on talletettu suuri määrä gradlen ja mavenin käyttämiä kirjastoja. _repositories_-osassa voidaan määritellä myös useita paikkoja joista gradle käy etsimässä projektiin määriteltyjä riippuvuuksia.
 
 Toinen osa määrittelee, että _testImplementation_-vaiheeseen otetaan käyttöön JUnit-kirjaston versio 4.13. Käytännössä tämä tarkoittaa, että kääntäessään testien koodia gradle liittää JUnitin _classpathiin_.
 
