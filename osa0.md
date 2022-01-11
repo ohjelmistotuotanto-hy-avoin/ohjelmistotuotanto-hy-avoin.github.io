@@ -146,7 +146,7 @@ Pisteet tulevat seuraavan kaavan mukaan:
 | 3.55	| 0.25 | 
 | 3.3	| 0 | 
 
-Kaikki monivalitatehtävät ovat joukkoja väittämiä, joista jokainen voi olla oikein tai väärin. Jokaisen viikon monivalintakysymyksistä on tarjolla yksi _mvp_, joka lasketaan seuraavan kaavan mukaan: 
+Kaikki monivalintatehtävät ovat joukkoja väittämiä, joista jokainen voi olla oikein tai väärin. Jokaisen viikon monivalintakysymyksistä on tarjolla yksi _mvp_, joka lasketaan seuraavan kaavan mukaan: 
 - jos _oikeatVastaukset/vaittamaLukumaara_ on pienempi tai yhtäsuuri kuin 0.45, on tuloksena 0 mvp:tä. 
 - jos _oikeatVastaukset/vaittamaLukumaara_ on enemmän kuin 0.45, kasvaa mvp-määrä lineaarisesti siten, että kaikki kohdat oikein tuo yhden mvp:n. 
 
