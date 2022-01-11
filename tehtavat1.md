@@ -239,7 +239,7 @@ Asennusohjeista löytyy myös ohjeet Visual Studio Code -editorin asentamiselle.
 
 Ohjelmoinnin peruskursseilla olet saattanut suorittaa koodia painamalla VS Coden nuoli-painiketta, ja testejä painamalla silmä-painiketta. Ammattimaisessa ohjelmistokehityksessä koodin suorittaminen ja testaamisen on tapahduttava toistettavalla tavalla, ja siten että operaatiot pystytään suorittamaan millä tahansa koneella, _skriptatusti_ komentoriviltä, eli riippumatta VS Coden kaltaisista kehitysympäristöistä.
 
-Koodin suorittaminen komentoriviltä `python3`-komennolla ei itsessään ole kovin hankalaa. Ongelmia alkaa syntyä vasta, kun projekti tarvitsee ulkoisia _riippuvuuksia_ erilaisten asennettavien kirjastojen muodossa. Kirjastojen asennukseen ja hallintaan tarvitaan erilisiä työkaluja. Pythonin kohdalla suosituin komentorivityökaluja tähän tarkoitukseen on [pip](https://pypi.org/project/pip/).
+Koodin suorittaminen komentoriviltä `python3`-komennolla ei itsessään ole kovin hankalaa. Ongelmia alkaa syntyä vasta, kun projekti tarvitsee ulkoisia _riippuvuuksia_ erilaisten asennettavien kirjastojen muodossa. Kirjastojen asennukseen ja hallintaan tarvitaan erilisiä työkaluja. Pythonin kohdalla suosituin komentorivityökalu tähän tarkoitukseen on [pip](https://pypi.org/project/pip/).
 
 Jotta samalla tietokoneella olevien projektien riippuvuuksissa ei syntyisi ristiriitoja, on käytössä usein niin kutsuttuja projektikohtaisia _virtuaaliympäristöjä_. Näitä virtuaaliympäristöjä luodaan ja käytetään [venv](https://docs.python.org/3/library/venv.html)-moduulin kautta. Jotta saisimme helposti käyttöömme pipin ja virtuaaliympäristön tuomat edut, voimme käyttää [Poetry](https://python-poetry.org/)-komentorivityökalua. Poetryn dokumentaation antama kuvaus on seuraava:
 
