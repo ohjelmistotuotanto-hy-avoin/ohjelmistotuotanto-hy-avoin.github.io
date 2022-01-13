@@ -262,7 +262,7 @@ Jotta samalla tietokoneella olevien projektien riippuvuuksissa ei syntyisi risti
 
 Ohjelmakoodin editointi kannattaa tehdä järkevällä editorilla, esim. Visual Studio Codella, mutta Poetry-komentojen suorittaminen onnistuu helpoiten komentoriviltä. Ennen siirtymistä tehtävien pariin, tutustu Poetryn asennus- ja käyttöohjeisiin lukemalla Ohjelmistotekniikka-kurssin [Poetry-ohje](https://github.com/ohjelmistotekniikka-hy/python-kevat-2021/blob/master/materiaali/poetry.md).
 
-**Tee nyt seuraavat toimenpiteet**. Ohjeen kaikissa kohdissa Poetry-komennot on annettu muodossa `poetry <komento>`. Jos et ole asentanut Poetrya globaalisti, joudut antamaan komennot muodossa `python3 -m poetry <komento>`.
+**Tee nyt seuraavat toimenpiteet**. Ohjeen kaikissa kohdissa Poetry-komennot on annettu muodossa `poetry <komento>`.
 
 - Asenna varasto-projektin riippuvuudet suorittamalla sen juurihakemistossa komento `poetry install`
 - Käynnistä sovellus komennolla `poetry run python3 src/index.py`
