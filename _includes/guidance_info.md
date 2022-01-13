@@ -1,3 +1,3 @@
 Apua tehtävien tekoon kurssin [Discord](https://study.cs.helsinki.fi/discord/join/ohtu)-kanavalla sekä zoom-pajassa:
 
-- TODO: paja-aika [tällä]() linkillä
+- Torstaisin klo 14-16 [tällä](https://helsinki.zoom.us/j/64474124104?pwd=QUhjYk1WamlUdkpGV1lDeWtGMlc0UT09) linkillä
