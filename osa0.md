@@ -66,7 +66,7 @@ Miniprojektien asiakastapaamiset järjestetään virtuaalisesti [zoom](https://h
 
 Miniprojekteissa työskentelyyn tulee varata yhteensä noin 6 tuntia aikaa viikossa. Miniprojektin kesto on kolme viikkoa.
 
-TODO: Miniprojekti järjestetään kahtena eri ajankohtana 22.2.-15.3. ja 29.3.-26.4.
+Miniprojekti järjestetään kahtena eri ajankohtana 21.2.-14.3. ja 28.3.-25.4.
 
 Voit osallistua miniprojektiin siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät.
 
@@ -276,7 +276,7 @@ Kurssin suoritusnopeus on siis vapaa, ja ainoa deadline harjoitustehtäville on 
 
 ### Miniprojekti
 
-Voit osallistua <a href='/miniprojekti'>miniprojektiin </a> siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät.  TODO: Miniprojekti järjestetään kahtena eri ajankohtana 22.2.-15.3. ja 29.3.-26.4.
+Voit osallistua <a href='/miniprojekti'>miniprojektiin </a> siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät. Miniprojekti järjestetään kahtena eri ajankohtana 21.2.-14.3. ja 28.3.-25.4.
 
 ## Typoja materiaalissa
 
