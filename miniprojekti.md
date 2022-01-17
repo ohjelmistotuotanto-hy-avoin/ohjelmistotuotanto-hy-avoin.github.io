@@ -1,26 +1,19 @@
 ---
 layout: page
 title: Miniprojekti
-inheader: no
+inheader: yes
 permalink: /miniprojekti/
+order: 2
 ---
 
 ## Miniprojekti
 
 ### Ajankohtaista
 
-- Loppudemot järjestetään **tiistaina 27.4. klo 16 - 18**. Jokaisen ryhmäläisen tulee olla mukana loppudemossa. Zoom-linkki loppudemoon löytyy palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
-- Voit osallistua minprojektiin siinä vaiheessa kun olet palauttanut vähintään viikkojen 1-3 tehtävät
-- Toinen mahdollisuus miniprojektin suoritukseen käynnistyy **maanantaina 29.3.**
-  - Ilmoittautuminen alkaa **maanantaina 22.3.** ja päättyy **perjantaina 26.3. klo 23:59**
-  - Ilmoittautuminen tapahtuu [ryhmäytymissovelluksessa]({{site.miniproject_enrollment_url}})
-  - Miniprojektin **pakollisen** aloitustilaisuuden ajankohta ja zoom-linkki ilmoitetaan [ryhmäytymissovelluksessa]({{site.miniproject_enrollment_url}}) lauantain 27.3. aikana
-- Miniprojektien asiakastapaamiset järjestetään virtuaalisesti [zoom](https://helpdesk.it.helsinki.fi/ohjeet/yhteydenpito-ja-julkaiseminen/videokokoukset/zoom)-järjestelmän avulla.
-- Ohjaajaan Telegram-käyttäjätunnus on @kalleilv. Ohjaajaan voi ottaa suoraan yhteyttä mihin tahansa miniprojektiin liittyvissä kysymyksissä
-
+- Miniprojekti järjestetään kahtena eri ajankohtana 21.2.-14.3. ja 28.3.-25.4.
 ### Johdanto
 
-- Kurssin suorittaminen [6 opintopisteen](/osa0#kurssin-arvostelu) laajuisena edellyttää hyväksyttyä osallistumista miniprojektiin tai sen [hyväksilukemista](/osa0#miniprojektin-hyv%C3%A4ksilukeminen)
+- Kurssin suorittaminen  edellyttää hyväksyttyä osallistumista miniprojektiin tai sen [hyväksilukemista](/osa0#miniprojektin-hyv%C3%A4ksilukeminen)
 - Projekti tehdään noin 4-6 hengen ryhmissä
 - Projektissa ohjelmoidaan jonkin verran, **pääpaino ei ole ohjelmoinnissa** vaan systemaattisen prosessin (tästä lisää myöhemmin) noudattamisessa.
 - Projekti koostuu kolmesta viikon kestoisesta sprintistä
@@ -29,12 +22,12 @@ permalink: /miniprojekti/
 - Ryhmä tekee kussakin sprintissä sen minkä se sprinttiin varatussa ajassa pystyy tekemään, ei enempää eikä vähempää
   - Kuuden tunnin työajan reilu ylittäminen siis **ei ole** järkevää, se on suorastaan kiellettyä
 - Miniprojektin voi aloittaa kahtena ajankohtana:
-  - Ensimmäinen mahdollisuus käynnistyy **maanantaina 22.2.**
-  - Toinen mahdollisuus käynnistyy **maanantaina 29.3.**
+  - Ensimmäinen mahdollisuus käynnistyy **maanantaina 21.2.**
+  - Toinen mahdollisuus käynnistyy **maanantaina 28.3.**
 
 ### Ryhmän muodostaminen
 
-- Ilmoittaudu miniprojektiin viimeistään **perjantaina 26.3. klo 23:59** [täällä]({{site.miniproject_enrollment_url}})
+- Ilmoittaudu miniprojektiin noin viikkoa ennen miniprojekti käymmistymistä
 - Ilmoittautumistietojen perusteella ryhmät muodotostetaan "algoritmisesti", pääasiassa noudattaen ilmoittautumisessa kerrottuja sopivia työskentelyaikoja
 - Ryhmäsi aloitustilaisuuden ajankohta selviää ilmoittautumissovelluksesta. Kaikkien ryhmäläisten on **pakko osallistua** tilaisuuteen, jonka kesto on noin 2 tuntia
 - Aloitustilaisuuteen tullessa on syytä tuntea materiaalin osien 1 ja 2 asioista ainakin seuraavat:
@@ -45,7 +38,7 @@ permalink: /miniprojekti/
   - sprint backlog
   - hyväksymäkriteeri
   - definition of done
-- Tämä dokumentti ja miniprojektin [arvosteluperusteet](/miniprojektin_arvosteluperusteet) on myös syytä lukea huolellisesti ennen aloitustilaisuutta
+- Tämä dokumentti ja miniprojektin [arvosteluperusteet]() on myös syytä lukea huolellisesti ennen aloitustilaisuutta
 - Ryhmä keksii itselleen nimen, luo Github-repositorion ja rekisteröi itsensä palautussovellukseen <{{site.stats_url}}>
   - **Yksi ryhmäläinen** kirjautuu järjestelmään, menee välilehdelle _miniprojects_
     - Luo projektin _create project_ -napista avautuvasta lomakkeesta
@@ -56,7 +49,7 @@ permalink: /miniprojekti/
 
 Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin suunnittelu) tapahtuu samana viikon päivänä, saman kahden tunnin sisällä, missä aloitustilaisuus pidetään. Tilaisuuden kesto on 30 minuuttia. Tapaamisen tarkka aika ja sen zoom-linkki kerrotaan palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject) viimeistään tapaamista edeltävänä sunnuntaina.
 
-#### Viikko 13 (29.3.-4.4.)
+#### Viikko 1 (21-27.2.)
 
 - Ryhmä muodostuvat/muodostetaan
 - Ryhmät tapaavat asiakkaan aloitustilaisuuksissa
@@ -66,28 +59,24 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
   - backlogien sisällöstä enemmän [täällä](/miniprojekti#tekniset-ja-prosessiin-liittyvät-vaatimukset)
 - Sprintin 1 [arvosteluperusteet](/miniprojektin_arvosteluperusteet#ensimmäisen-sprintin-arvosteluperusteet) kannattaa lukea huolellisesti
 
-#### Viikko 14 (5-11.4.)
-
-- Pääsiäistauko
-
-#### Viikko 15 (12-18.4.)
+#### Viikko 2 (28.2.-3.3.)
 
 - Sprintin 1 katselmointi ja sprintin 2 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
-#### Viikko 16 (19-25.4.)
+#### Viikko 3 (4-10.3)
 
 - Sprintin 2 katselmointi ja sprintin 3 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
-#### Viikko 17 (26.4.-2.5.)
+#### Viikko 4 (11-17.3.)
 
-- Sprintin 3 katselmointi (eli loppudemot). Loppudemot järjestetään **tiistaina 27.4. klo 16 - 18**
+- Sprintin 3 katselmointi (eli loppudemot). Loppudemot järjestetään myöhemmin ilmoitettavana ajankohtana
 - Jokaisen ryhmäläisen tulee olla mukana loppudemossa. Zoom-linkki loppudemoon löytyy palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
 ### Toteutettava ohjelmisto
 
-- [Aiheen kuvaus](/speksi)
+- [Aiheen kuvaus]()
 
 ### Tekniset ja prosessiin liittyvät vaatimukset
 
@@ -124,7 +113,7 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
   - <http://www.mountaingoatsoftware.com/scrum/sprint-backlog> (tämä on sikäli huono, että siitä eivät ilmene taskin tekijät)
 - Backlogit voi tehdä Google Docsin sijaan myös johonkin backlogien ylläpitämiseen tarkoitettuun työkaluun
   - Kannattaa varmistaa, että työkalu kuitenkin tulee edellä lueteltuja vaatimuksia
-  - Eesim. <https://trello.com> ei tue scrum-tyylisiä backlogeja oikeastaan ollenkaan, ja **Trelloa kannattaakin välttää tässä projektissa**
+  - Esim. <https://trello.com> ei tue scrum-tyylisiä backlogeja oikeastaan ollenkaan, ja **Trelloa kannattaakin välttää tässä projektissa**
 
 #### Definition of done
 
@@ -165,4 +154,4 @@ README:ssa tulee löytyä ainakin seuraavat asiat:
 
 ### Työn arvostelu
 
-Arvosteluperusteet löytyvät [täältä](/miniprojektin_arvosteluperusteet/)
+Arvosteluperusteet löytyvät [täältä](/)
