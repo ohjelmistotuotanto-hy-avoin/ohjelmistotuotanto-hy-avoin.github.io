@@ -16,7 +16,7 @@ Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palaut
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
-### 1. git: stash
+### 1. git: stash [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 _tehtävien 1 ja 2 ei tarvitse näkyä palautuksessa, riittää kun teet tehtävät_
 
@@ -53,7 +53,7 @@ Changes not staged for commit:
   * kuten huomaat, staging-alueelle jo lisätty muutos ei palaa staging-alueelle, vaan joudut lisäämään sen uudelleen
   * jos edellisessä komento olisi annettu muodossa <code>git stash apply --index</code>, olisi tilanne palautunut täysin ennalleen
 
-### 2. git: branchin "siirtäminen"
+### 2. git: branchin "siirtäminen" [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 _tehtävien 1 ja 2 ei tarvitse näkyä palautuksessa, riittää kun teet tehtävät_
 

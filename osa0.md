@@ -165,8 +165,6 @@ Pisteet tulevat seuraavan kaavan mukaan:
 | 8	| 1 | 
 | 5	| 0.5 | 
 
-Saat bonuksena suoritusmerkinnän opintojaksolta _Versionhallinta 1 op_ tekemällä _kaikki_ tämän kurssin versiohallintatehtävät ja suorittamalla hyväksytysti miniprojektin.
-
 ### Luennot - laskuharjoitukset - miniprojekti
 
 Kurssi siis sisältää kolme pääkomponenttia, luennot, viikoittaiset laskuharjoitukset sekä miniprojektin. Komponentit ovat luonteeltaan melko erilaisia, ja se on joskus aiheuttanut hämmennystä opiskelijoiden keskuudessa.
@@ -180,6 +178,10 @@ Miniprojektin ideana taas on yhdistää luentojen teoria ja laskareissa käsitel
 Kokeessa suurin paino tulee olemaan teoriassa ja sen soveltamisessa käytäntöön. Laskareiden teknisimpiä asioita, kuten versionhallintaa ei kokeessa tulla kysymään. Tarkemmin kokeesta ja siihen valmistautumisesta kurssin viimeisellä luennolla.
 
 Kuten kohta tulemme näkemään, ohjelmistotuotanto kattaa suuren kirjon erilaisia asioita alkaen ihmisten johtamisesta aina teknisimpiin komentoriviltä suoritettaviin operaatioihin asti. Sama heijastuu myös kurssin rakenteessa, kurssilla on eri henkisiä komponentteja, näistä yksikään ei ole muita tärkeämpi, kullakin on oma painoarvonsa kurssin arvostelussa. Teoria-asioita arvioidaan koemenestyksen perusteella, käytännöllisimpiä asioita taas "jatkuvana arviona" laskareista kertyvien pisteiden ja miniprojektissa suoriutumisen perusteella.
+
+## Versionhallinta 1 op
+ 
+Saat bonuksena suoritusmerkinnän opintojaksolta _Versionhallinta 1 op_ tekemällä _kaikki_ tämän kurssin versiohallintatehtävät (merkattu tehtävän yhteyteen) ja suorittamalla hyväksytysti miniprojektin (tai hyväksilukemalla sen).
 
 ## Ohjelmistotuotantoprojekti 10 op
 

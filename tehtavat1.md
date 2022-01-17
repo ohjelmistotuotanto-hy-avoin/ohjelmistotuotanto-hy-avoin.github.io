@@ -59,7 +59,7 @@ Tulet tarvitsemaan komentorivin käyttötaitoja tällä kurssilla ja muutenkin o
 
 Tehtävää ei palauteta mitenkään. Voit merkitä tehtävän tehdyksi kun osaat yllä luetellut asiat.
 
-### 2. GitHubiin
+### 2. GitHubiin [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 Jos sinulla ei jostain syystä ole vielä tunnusta [GitHubiin](https://github.com), luo se nyt.
 
@@ -113,7 +113,7 @@ missä komennon `git clone`parametrina on repositoriosi sivulla näkyvä merkkij
 
 Nyt paikalliselle koneellesi syntynyt hakemisto _ohtu-2021-viikko1_ (hakemiston nimi on sama kuin repositoriosi), joka on on GitHubissa olevan repositorion klooni.
 
-### 3. Gitin alkeet
+### 3. Gitin alkeet [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 Olet jo todennäköisesti käyttänyt Gitiä aiemmilla kursseilla. Tässä tehtävässä harjoitellaan seuraavia komentoja:
 
@@ -161,7 +161,7 @@ Lisää git-ohjeita löytyy runsaasti internetistä, esim:
 
 komennolla `man git add` saat lisätietoa optiosta ja mm. vastausvaihtoehtojen selitykset.
 
-### 4. Tiedostojen lisääminen GitHubiin
+### 4. Tiedostojen lisääminen GitHubiin [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 Tehtävässä 2 tehtiin GitHubiin repositorio, joka liitettiin paikalliselle koneelle luotuun repositorioon "remote repositoryksi". Synkronoidaan paikallisen repositorion ja githubin tilanne:
 
@@ -172,7 +172,7 @@ GitHubissa pitäisi näyttää suunilleen seuraavalta
 
 ![]({{ "/images/lh1-3.png" | absolute_url }})
 
-### 5. Monta kloonia samasta repositoriosta
+### 5. Monta kloonia samasta repositoriosta [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 Yleensä on tapana pitää GitHubissa olevaa repositorioa tiedostojen "keskitettynä" sijoituspaikkana ja liittää paikallisella koneella oleva repositorio GitHubissa olevan repositorion etärepositorioksi, kuten teimme tehtävässä 1.
 
@@ -195,7 +195,7 @@ Luodaan nyt harjoituksen vuoksi paikalliselle koneelle repositoriosta toinen klo
 - Lisää alkuperäiseen kopioon joitain tiedostoja ja pushaa ne GitHubiin
 - Mene jälleen kloonattuun kopioon ja pullaa
 
-### 6. Repositorion siivous
+### 6. Repositorion siivous [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 Valmistaudutaan seuraavaan tehtävään siivoamalla repositoriostamme ylimääräiset tiedostot
 

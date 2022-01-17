@@ -173,7 +173,7 @@ tee seuraavat paikalliseen git-repositorioosi (kyseessä ei siis tarvitse olla t
 * mergeä branchin __eka__ sisältö __mainiin__
 * katso jälleen miltä näyttää gitk --all
 
-### 5. git: branchit ja staging-alue
+### 5. git: branchit ja staging-alue [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 * olet nyt repositoriosi main-haarassa
 * luo uusi tiedosto _uusi_tiedosto.txt_, **älä** kuitenkaan lisää ja commitoi tiedostoa
@@ -225,7 +225,7 @@ nothing to commit, working tree clean
 * tämän tehtävän ideana oli siis havainnollistaa, että working tree (muutokset joista git ei ole tietoinen) ja staging (gitiin lisättyihin tiedostoihin tehdyt committoimattomat muutokset)
 **eivät liity** mihinkään branchiin, muutokset siirtyvät staging-alueelta branchiin ainoastaan komennon _git commit_ suorituksen seurauksena
 
-### 6. git: konflikti!
+### 6. git: konflikti! [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 Tee paikalliseen git-repoon seuraavat
 
@@ -256,7 +256,7 @@ Jotkut editorit, esim [visual studio code](https://code.visualstudio.com) sisäl
 
 ![](https://github.com/mluukkai/ohjelmistotuotanto2017/raw/main/images/lh2-4a.png)
 
-### 7. git: branchit ja GitHub
+### 7. git: branchit ja GitHub [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 Aloita lukemalla ProGit kirjasta luku [Remote Branches](http://git-scm.com/book/en/Git-Branching-Remote-Branches)
 
@@ -343,7 +343,7 @@ Ohjelmistotiimi voi soveltaa Gitin branchaystä hyvin monella eri tyylillä. Art
 
 Jos kiinnostaa, lue lisää yo. dokumentista.
 
-### 8. git: epäajantasaisen kopion pushaaminen
+### 8. git: epäajantasaisen kopion pushaaminen [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 Demonstroidaan usein esiintyvää tilannetta, jossa epäajantasaisen repositorion pushaaminen githubissa olevaan etärepositorioon epäonnistuu.
 
@@ -369,7 +369,7 @@ Virheen syynä on se, että githubissa oleva __main__-haara oli edellä paikalli
 * komennon _git pull_ yhteydessä syntyy merge-commit, ja avautuu tekstieditori mihin joudut kirjoittamaan commit-viestin
 * eli toimi näin ja varmista, että tekemäsi muutokset menevät githubiin
 
-### 9. riippuvuuksien injektointi osa 3: Verkkokauppa
+### 9. riippuvuuksien injektointi osa 3: Verkkokauppa [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
 Tutustuimme viime viikon [tehtävissä 14-16](/tehtavat1#14-riippuvuuksien-injektointi-osa-1) riippuvuuksien injektointiin ja sovelsimme sitä yksikkötestauksen helpottamiseen.
 
