@@ -13,20 +13,20 @@ permalink: /osa0/
 
 Kurssi on jo ohjelmointia hallitseville tarkoitettu johdanto _ohjelmistotuotantoon_, eli systemaattiseen tapaan tehdä hieman laajempia ohjelmistoja useamman hengen tiimissä ulkoiselle asiakkaalle. Erityinen paino kurssilla on niin sanotuissa ketterissä ohjelmistotuotantomenetelmissä. 
 
-Kurssin suoritettuaan opiskelijan tulisi omata riittävät tiedolliset ja tekniset valmiudet toimia juniorikehittäjän roolissa pienessä ohjelmistotiimissä, esimerkiksi Tietojenkäsittelytieteen osaston opintojaksolla [ohjelmistotuotantoprojekti](https://github.com/HY-TKTL/TKT20007-Ohjelmistotuotantoprojekti).
+Kurssin suoritettuaan opiskelijalla pitäisi olla riittävät tiedolliset ja tekniset valmiudet toimia juniorikehittäjän roolissa pienessä ohjelmistotiimissä, esimerkiksi Tietojenkäsittelytieteen osaston opintojaksolla [ohjelmistotuotantoprojekti](https://github.com/HY-TKTL/TKT20007-Ohjelmistotuotantoprojekti).
 
-Hieman tarkemmin eriteltynä, suoritettuaan kurssin opiskelija
-- tuntee ohjelmistoprosessin vaiheet (vaatimusmäärittely, suunnittelu, toteutus ja laadunhallinta) 
-- tietää miten vaatimuksia hallitaan ketterässä ohjelmistotuotantoprosessissa
-- ymmärtää suunnittelun, toteutuksen ja testauksen vastuut ja luonteen ketterässä ohjelmistotuotannossa
-- ymmärtää ohjelmiston laadunhallinnan perusteet
-- osaa toimia ympäristössä, jossa ohjelmistokehitys tapahtuu hallitusti ja toistettavalla tavalla
+Hieman tarkemmin eriteltynä, suoritettuaan kurssin opiskelija:
+- Tuntee ohjelmistoprosessin vaiheet (vaatimusmäärittely, suunnittelu, toteutus ja laadunhallinta).
+- Tietää miten vaatimuksia hallitaan ketterässä ohjelmistotuotantoprosessissa.
+- Ymmärtää suunnittelun, toteutuksen ja testauksen vastuut sekä luonteen ketterässä ohjelmistotuotannossa.
+- Ymmärtää ohjelmiston laadunhallinnan perusteet.
+- Osaa toimia ympäristössä, jossa ohjelmistokehitys tapahtuu hallitusti ja toistettavalla tavalla.
 
 ## Ilmoittautuminen
 
 Kurssille ilmoittaudutaan [avoimen yliopiston](https://studies.helsinki.fi/opintotarjonta/cur/otm-4716b91b-b901-45f4-b1cf-8484bddda5f2/_Ohjelmistotuotanto_) sivuilla. Kurssi on kaikille maksuton.
 
-Kurssin kokeen sekä tehtävien tekeemiseen/palauttamiseen tarvitset Helsingin yliopiston käyttäjätunnuksen. Ohje tunnuksen aktivoimiseen [täällä](https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/opinnoissa-alkuun/helsingin-yliopiston-kayttajatunnus). Huomaa, että aktivoiminen onnistuu vasta ilmoittautumista seuraavana päivänä.
+Kurssin kokeen sekä tehtävien tekemiseen/palauttamiseen tarvitset Helsingin yliopiston käyttäjätunnuksen. Ohje tunnuksen aktivoimiseen [täällä](https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/opinnoissa-alkuun/helsingin-yliopiston-kayttajatunnus). Huomaa aktivoimisen onnistuvan vasta ilmoittautumista seuraavana päivänä.
 
 ## Kurssin suorittaminen ja arvostelu
 
