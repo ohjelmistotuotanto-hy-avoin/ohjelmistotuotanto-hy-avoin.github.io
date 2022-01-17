@@ -101,7 +101,6 @@ Jos hyväksiluet miniprojektin työkokemuksella, kerro asiasta emailitse (matti
 
 ### Kurssin arvostelu
 
-
 Kurssilla jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien kesken seuraavasti
 
 - harjoitukset 11 pistettä
@@ -122,7 +121,7 @@ Arvosana muodostuu seuraavasti:
 
 Läpipääsy edellyttää vähintään puolia kokeen pisteistä.
 
-Jos hyväksiluet miniprojektin skaalataan harjoitusten ja kokeen pistemäärän summa kertomalla se 40/31:llä.
+Jos hyväksiluet miniprojektin, kokeen ja laskarien pistemääräsi skaalataan kertomalla 40/31:llä ja arvosana määritellään skaalatun pistemäärän perusteella.
 
 #### Harjoitustehtävien pisteytysperusteet
 
