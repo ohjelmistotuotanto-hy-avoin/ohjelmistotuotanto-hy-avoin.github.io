@@ -61,7 +61,7 @@ class KonsoliIO:
         print(teksti)
 ```
 
-Muokataan luokkaa  <code>Laskin</code> siten, että se saa konstruktorin parametrina olion, jonka kautta se hoitaa käyttäjän kanssa tapahtuvan kommunkioinnin:
+Muokataan luokkaa  <code>Laskin</code> siten, että se saa konstruktorin parametrina olion, jonka kautta se hoitaa käyttäjän kanssa tapahtuvan kommunikoinnin:
 
 ```python
 class Laskin:
@@ -136,7 +136,7 @@ class TestLaskin(unittest.TestCase):
 
 Riippuvuuksien injektointi on siis oikeastaan äärimmäisen simppeli tekniikka, moni on varmaan sitä käyttänytkin jo ohjelmoinnin peruskursseilla.
 
-Jos ajatellaan vaikkapa tietokonepelejä, joiden toiminta riippuu usein satunnaisluvuista. Jos peli on koodattu seuraavasti, on automatisoitu testaus erittäin vaikeaa:
+Ajatellaan vaikka tietokonepelejä, joiden toiminta riippuu usein satunnaisluvuista. Jos peli on koodattu seuraavasti, on automatisoitu testaus erittäin vaikeaa:
 
 ```python
 class Peli: 
@@ -155,7 +155,7 @@ class Peli:
     suunta = self._arpa.randint(0, 8)
 ```
 
-voidaan testatessa injektoida pelille versio satunnaisgeneraattorista, jonka arpomia lukuja voidaan kontrolloida testeistä käsin. Esimerkiksi seuraavassa sellainen versio satunnaislukugeneraattorista, joka palauttaa aina luvun 1 kutsuttaessa metodia _randint_:
+voidaan testatessa injektoida pelille versio satunnaisgeneraattorista, jonka arpomia lukuja voidaan kontrolloida testeistä käsin. Alla esimerkki satunnaislukugeneraattorista, joka palauttaa aina luvun 1 kutsuttaessa metodia _randint_:
 
 ```python
 class Arpa:
