@@ -417,7 +417,7 @@ Sprintin aikana Scrum-tiimi toteuttaa itseorganisoidusti sprinttiin valitut ohje
 
 Scrumissa periaatteena on, että jokaisen sprintin lopuksi tuotteesta on oltava olemassa _toimiva versio_ (engl. potentially shippable product increment), eli sprintin aikana on tarkoitus saada aikaan käyttöön valmiita ominaisuuksia, ei ainoastaan kasaa melkein toimivaa koodia.
 
-Sprintin aikana tiimille ei esitetä uusia vaatimuksia. Ccrum master on vastuussa tiimin suojelemisesta, jos joku ulkopuolinen yrittää saada kehitystiimin tekemään sprintin aikana muuta kuin siihen sovittuja backlogilta otettuja vaatimuksia.
+Sprintin aikana tiimille ei esitetä uusia vaatimuksia. Scrum master on vastuussa tiimin suojelemisesta, jos joku ulkopuolinen yrittää saada kehitystiimin tekemään sprintin aikana muuta kuin siihen sovittuja backlogilta otettuja vaatimuksia.
 
 ### Definition of done
  
