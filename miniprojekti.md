@@ -11,6 +11,7 @@ order: 2
 ### Ajankohtaista
 
 - Miniprojekti järjestetään kahtena eri ajankohtana 21.2.-14.3. ja 28.3.-25.4.
+
 ### Johdanto
 
 - Kurssin suorittaminen  edellyttää hyväksyttyä osallistumista miniprojektiin tai sen [hyväksilukemista](/osa0#miniprojektin-hyv%C3%A4ksilukeminen)
