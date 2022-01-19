@@ -572,7 +572,7 @@ Samme muodostettua Codecovin ymm채rt채m채n testikattavuusraportin k채ytt채m채ll�
 - name: Coverage report
   run: poetry run coverage xml
 - name: Coverage report to Codecov
-  run: bash <(curl -s https://codecov.io/bash)
+  uses: codecov/codecov-action@v2
 ```
 
 **HUOM1** rivit on sisennett채v채 samalle tasolle kuin muut stepit.
@@ -581,7 +581,7 @@ Samme muodostettua Codecovin ymm채rt채m채n testikattavuusraportin k채ytt채m채ll�
 
 ![]({{ "/images/lh1-13.png" | absolute_url }})
 
-Kun seuraavan kerran pushaamme koodin GitHubiin, ilmestyy Codecoviin koodin testikattavuusraportti:
+K채yt채mme raportin l채hett채misess채 Codecoviin actionia [codecov-action](https://github.com/codecov/codecov-action). Kun seuraavan kerran pushaamme koodin GitHubiin, ilmestyy Codecoviin koodin testikattavuusraportti:
 
 ![]({{ "/images/py-lh1-14.png" | absolute_url }})
 
