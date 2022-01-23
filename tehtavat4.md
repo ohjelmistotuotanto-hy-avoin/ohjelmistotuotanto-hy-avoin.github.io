@@ -147,7 +147,7 @@ Testi tarkastaa, että kaupalle tehdyt metodikutsut aiheuttavat sen, että panki
 pankki_mock.maksa.assert_called_with("1111", 10, ANY)
 ```
 
-Kuten edellisissä esimerkeissä tuli ilmi, `Mock`-olioille tehtyjen metodikutsujen paluuarvot on mahdollista määrittää. Seuraavassa määritellään, että viitegeneraattori palauttaa arvon `55` kun sen metodia `uusi` kutsutaan:
+Kuten edellisissä esimerkeissä tuli ilmi, `Mock`-olioille tehtyjen metodikutsujen paluuarvot on mahdollista määrittää. Seuraavassa määritellään, että viitegeneraattori_mock palauttaa arvon `55` kun sen metodia `uusi` kutsutaan:
 
 ```python
 def test_kaytetaan_maksussa_palautettua_viitetta(self):
