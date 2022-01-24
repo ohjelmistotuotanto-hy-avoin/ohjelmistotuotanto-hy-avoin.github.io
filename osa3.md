@@ -483,7 +483,7 @@ Metodit kutsuvat ohjelman luokkia simuloiden käyttäjän syötettä varmistaen,
 
 ### Robot-framework
 
-Myös [Robot frsmeworkia](https://robotframework.org/) käytettäessä testit kirjoitetaan asiakkaan kielellä.
+Myös [Robot frameworkia](https://robotframework.org/) käytettäessä testit kirjoitetaan asiakkaan kielellä.
 
 Esimerkkisovelluksen user storyn  _user can log in with a valid username/password-combination_ robot-testi näyttäisi seuraavalta
 
