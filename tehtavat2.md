@@ -116,7 +116,7 @@ Helpoin tapa löytää sääntöjä on hakemalla sopivalla hakusanalla niitä do
 - Korjaa koodisi ja varmista, että se noudattaa kaikkia sääntöjä
   - `Varasto`-luokan konstruktori luultavasti rikkoo `too-complex`-sääntöä. Voit esimerkiksi miettiä, miten voisit esittää `tilavuus`-attribuutin arvon if-lauseen sijaan jotenkin muuten.
 
-Usein _.pylintrc_-konfiguraatiota ei ole järkevää kirjoittaa tyhjästä käsin, vaan käytetään lähtökohtana pylintin suosittelemaa konfiguraatiota. Suoitellun konfiguraation voi tulostaa komentoriville komennolla `pylint --generate-rcfile`.
+Usein _.pylintrc_-konfiguraatiota ei ole järkevää kirjoittaa tyhjästä käsin, vaan käytetään lähtökohtana pylintin suosittelemaa konfiguraatiota. Suositellun konfiguraation voi tulostaa komentoriville komennolla `pylint --generate-rcfile`.
 
 ### 4. Koodin staattinen analyysi ja GitHub Actionit
 
@@ -132,13 +132,9 @@ Varmista myös, että kun korjaat koodin, kaikki toimii taas moitteettomasti:
 
 ### 5. Git: branchit [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
-Lue brancheja käsittelevät osuudet seuraavasta <https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging>
+Lue brancheja käsittelevät osuudet kirjasta [Pro Git](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging). Jos haluat hieman perusteellisemman selityksen asiasta, lue kirjan [Pro Git luku kolme](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) kokonaan.
 
-* jos haluat lukea hieman perusteellisemman selityksen asiasta, lue <https://git-scm.com/book/en/v2:n luku kolme kokonaisuudessaan
-
-Kannattaa huomioida myös erittäin hyvä brancheja käsittelevä visuaalinen materiaali osoitteessa <https://learngitbranching.js.org/>
-
-Varsin selkeältä vaikuttaa myös <https://www.atlassian.com/git/tutorials/using-branches>
+Kannattaa huomioida myös erittäin hyvä brancheja käsittelevä visuaalinen materiaali osoitteessa <https://learngitbranching.js.org/> ja varsin selkeältä vaikuttaa myös <https://www.atlassian.com/git/tutorials/using-branches>.
 
 **Huom:** kun liikut branchien välillä kannattaa pitää working tree ja staging -alue tyhjinä!
 
