@@ -638,7 +638,7 @@ viikko3
 ...
 ```
 
-Lisää tehtäviin 2-13 käyttämäsi repositorion _README.md_-tiedostoon linkki tehtävien 14-16 palautusrepositorioosi.
+Tehtävien 2-13 repositorio (johon lisäsit esim. coverage-badgen) toimii pääpalautusrepositoriona. Lisää sen README.md-tiedostoon tehtävien 14-16 repositorion linkki.
 
 Tehtävien 2-13 repositorion _README.md_-tiedoston tulisi siis näyttää suunnilleen tältä (poislukien liian alhainen testikattavuus):
 
