@@ -61,7 +61,7 @@ Jos uuden sovelluksen on tarkoitus korvata olemassa oleva työskentelyprosessi, 
 
 Vaatimusten keräämisen lisäksi vaatimuksia täytyy _analysoida_. Onko vaatimuksissa keskinäisiä ristiriitoja ja ovatko ne riittävän kattavat, eli ottavatko ne huomioon kaikki mahdolliset käyttöskenaariot. On myös oleellista varmistaa, että vaatimusten toteutuminen on ylipäätään mahdollista ja taloudellisesti järkevää. 
 
-Usein on myös hyvä varmistaa vaatimuksen olevan _todennettavissa_ eli valmiista järjestelmästä pystyttävän toteamaan noudattaako järjestelmä tätä vaatimusta. Esim. vaatimus _järjestelmä on helppokäyttöinen_ ei ole hyvä, koska helppokäyttöisyys voidaan käsittää monella tavalla ja näin sen testaaminen on vaikeaa. Käytettävyyteenkin liittyviä vaatimuksia on mahdollista määritellä [todennettavalla tavalla](http://www.pcuf.fi/sytyke/lehti/kirj/st20093/ST093-18A.pdf).
+Usein on myös hyvä varmistaa vaatimuksen olevan _todennettavissa_ eli valmiista järjestelmästä pystyttävän toteamaan noudattaako järjestelmä tätä vaatimusta. Esim. vaatimus _järjestelmä on helppokäyttöinen_ ei ole hyvä, koska helppokäyttöisyys voidaan käsittää monella tavalla ja näin sen testaaminen on vaikeaa. Käytettävyyteenkin liittyviä vaatimuksia on mahdollista määritellä [todennettavalla tavalla](https://web.archive.org/web/20160407033706/http://www.pcuf.fi/sytyke/lehti/kirj/st20093/ST093-18A.pdf).
  
 Kartoitetut vaatimukset on myös pakko _dokumentoida_ muodossa tai toisessa. Ennen koodaamaan ryhtymistä sovelluskehittäjä tarvitsee "speksin", eli kuvauksen siitä miten sovelluksen tai sen osan tulee toimia. Myös testaamista varten tarvitaan kuvaus sille, miten testattavan ohjelman halutaan toimivan.
 
