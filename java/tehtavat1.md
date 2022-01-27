@@ -7,7 +7,7 @@ permalink: /java/tehtavat1
 
 {% include java.md %}
 
-Viikon 1 tehtävien Python-versiot löytyvät [täältä](/python/tehtavat1)
+Viikon 1 tehtävien Python-versiot löytyvät [täältä](/tehtavat1)
 
 {% include guidance_info.md %}
 

@@ -72,7 +72,7 @@ Luo githubiin repositorio nimellä ohtu-2022-viikko1
 
 **Jos et ole vielä luonut** koneellesi _ssh-avainta_, tee se nyt
 
-- Ohje avaimen luomiseen esim. [täällä](https://www.howtoforge.com/linux-basics-how-to-install-ssh-keys-on-the-shell). Riittää että teet stepit 1 ja 2 tai kurssin [Ohjelmistotekniikka](https://ohjelmistotekniikka-hy.github.io/python/viikko1#julkinen-avain)-materiaalista
+- Ohje avaimen luomiseen esim. [täällä](https://www.howtoforge.com/linux-basics-how-to-install-ssh-keys-on-the-shell). Riittää että teet stepit 1 ja 2 tai kurssin [Ohjelmistotekniikka](https://ohjelmistotekniikka-hy.github.io/python/viikko1#tehtävä-13-julkinen-avain)-materiaalista
 
 Lisää julkinen avain githubiin:
 
@@ -124,7 +124,7 @@ Olet jo todennäköisesti käyttänyt Gitiä aiemmilla kursseilla. Tässä teht�
 - `git reset HEAD`
 
 - Jos et vielä hallitse komentoja, käy läpi kurssin Ohjelmistotekniikka
-  [Git-tutoriaali](https://ohjelmistotekniikka-hy.github.io/python/viikko1#gitin-alkeet). Pelkän lukemisen sijaan kannattanee myös tehdä itse tutoriaalin git-operaatiot.
+  [Git-tutoriaali](https://ohjelmistotekniikka-hy.github.io/python/viikko1#versionhallinta). Pelkän lukemisen sijaan kannattanee myös tehdä itse tutoriaalin git-operaatiot.
 
 Lisää git-ohjeita löytyy runsaasti internetistä, esim:
 
@@ -256,7 +256,7 @@ Jotta samalla tietokoneella olevien projektien riippuvuuksissa ei syntyisi risti
 - Tarkastele juurihakemistossa olevan _poetry.lock_-tiedoston sisältöä
   - Tiedoston sisällön ei ole tarkoitus olla ihmisluettava, _eikä sitä pitäisikään missään nimessä muokata_. Tiedosto on täysin Poetryn ylläpitämä. Poetry tallentaa tiedostoon projektiin asennettujen riippuvuuksien versiot, jotta jokaisen asennuksen yhteydessä riippuvuuksista voidaan asentaa juuri oikeat versiot
 
-Ohjelmakoodin editointi kannattaa tehdä järkevällä editorilla, esim. Visual Studio Codella, mutta Poetry-komentojen suorittaminen onnistuu helpoiten komentoriviltä. Ennen siirtymistä tehtävien pariin, tutustu Poetryn asennus- ja käyttöohjeisiin lukemalla Ohjelmistotekniikka-kurssin [Poetry-ohje](https://ohjelmistotekniikka-hy.github.io/python/poetry).
+Ohjelmakoodin editointi kannattaa tehdä järkevällä editorilla, esim. Visual Studio Codella, mutta Poetry-komentojen suorittaminen onnistuu helpoiten komentoriviltä. Ennen siirtymistä tehtävien pariin, tutustu Poetryn asennus- ja käyttöohjeisiin lukemalla Ohjelmistotekniikka-kurssin [Poetry-ohje](https://ohjelmistotekniikka-hy.github.io/python/viikko2#poetry-ja-riippuvuuksien-hallinta).
 
 **Tee nyt seuraavat toimenpiteet**. Ohjeen kaikissa kohdissa Poetry-komennot on annettu muodossa `poetry <komento>`.
 
