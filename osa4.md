@@ -895,7 +895,7 @@ class Operaatiotehdas:
         return Erotus()
 ```
 
-Staattisen tehdasmetodin `luo` avulla voidaan luoda laskuoperaatioita vastaavia olioita. Laskuoperaatioista vastaavien luokkien tulee toteuttaa metodi `laske`, jolla kaksi parametria.Laskuoperaatioita vastaavat luokat on määritelty seuraavasti:
+Staattisen tehdasmetodin `luo` avulla voidaan luoda laskuoperaatioita vastaavia olioita. Laskuoperaatioista vastaavien luokkien tulee toteuttaa metodi `laske`, jolla on kaksi parametria. Laskuoperaatioita vastaavat luokat on määritelty seuraavasti:
 
 ```python
 class Summa:
