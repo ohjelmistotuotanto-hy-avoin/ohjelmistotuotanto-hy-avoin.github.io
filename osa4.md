@@ -967,7 +967,7 @@ class Komentotehdas:
 
 Komentotehdas siis palauttaa `hae`-metodin merkkijonoparametria vastaavan komennon. Koska vastuu käyttäjän kanssa kommunikoinnista on siirretty Komento-olioille, annetaan niille `IO`-olio konstruktorin pararametrina.
 
-if-hässäkkä näyttää hieman ikävältä. Siitä pääsee kuitenkin helposti eroon tallentamalla erilliset komennon dictionaryyn:
+if-hässäkkä näyttää hieman ikävältä. Siitä pääsee kuitenkin helposti eroon tallentamalla erilliset komennot dictionaryyn:
 
 ```python
 class Komentotehdas:
