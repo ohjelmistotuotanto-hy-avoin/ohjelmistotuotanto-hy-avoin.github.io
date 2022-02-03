@@ -104,14 +104,14 @@ Tosin jos olet vimin käyttäjä, voit jättää edellisen tekemättä.
 Kloonaa nyt githubiin tehty repositorio **paikalliselle koneelle**. Tämä tapahtuu antamalla komentoriviltä komento:
 
 ```bash
-git clone git@github.com:omatunnustahan/ohtu-2021-viikko1.git
+git clone git@github.com:omatunnustahan/ohtu-2022-viikko1.git
 ```
 
 missä komennon `git clone`parametrina on repositoriosi sivulla näkyvä merkkijono (huomaa, että formaatin on oltava SSH):
 
 ![]({{ "/images/lh1-2.png" | absolute_url }})
 
-Nyt paikalliselle koneellesi syntynyt hakemisto _ohtu-2021-viikko1_ (hakemiston nimi on sama kuin repositoriosi), joka on on GitHubissa olevan repositorion klooni.
+Nyt paikalliselle koneellesi syntynyt hakemisto _ohtu-2022-viikko1_ (hakemiston nimi on sama kuin repositoriosi), joka on on GitHubissa olevan repositorion klooni.
 
 ### 3. Gitin alkeet [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
