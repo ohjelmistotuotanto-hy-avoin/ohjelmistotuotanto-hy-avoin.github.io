@@ -498,7 +498,7 @@ Samalla tavoin kutsu <code>Input Text &nbsp;username &nbsp;kalle</code> löytä�
 Resource  resource.robot
 Suite Setup  Open And Configure Browser
 Suite Teardown  Close Browser
-Test Setup  Go To Main Page
+Test Setup  Go To Home Page
 
 *** Test Cases ***
 Click Login Link
@@ -517,7 +517,7 @@ Toteuta testin käyttämät avainsanat tiedostoon `resource.robot`. Kun suoritat
 ```
 Click Register Link                                                   | FAIL |
 Setup failed:
-No keyword with name 'Go To Main Page' found.
+No keyword with name 'Go To Home Page' found.
 ```
 
 ### 9. Web-sovelluksen testaaminen osa 2
