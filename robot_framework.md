@@ -153,7 +153,7 @@ Increase Counter Three Times
 
 Testihakemiston <i>increase_counter.robot</i>-tiedoston `*** Settings ***`-osiosta löytyy rivi `Resource resource.robot`. Mistä on kyse?
 
-Useammissa testeissä uudelleenkäytettävät avainsanat ja asetukset kannattaa siirtää omiin tiedostoihinsa, joita kutsutaan _resursseiksi_ (resource). Resurssitiedostot voi tuoda muihin tiedostoihin `Resource`-asetuksen kautta:
+Useammissa testeissä uudelleenkäytettävät avainsanat ja asetukset kannattaa siirtää omiin tiedostoihinsa, joita kutsutaan _resursseiksi_ (engl. resource). Resurssitiedostot voi tuoda muihin tiedostoihin `Resource`-asetuksen kautta:
 
 ```
 *** Settings ***

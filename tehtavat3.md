@@ -242,7 +242,7 @@ Komennolle `robot` annetaan siis `-t`-optionin kautta suoritettavan testitapauks
 
 #### Ohjelman suorituksen seuraaminen
 
-Jos virheen löytäminen pelkän manuaalisen testauksen avulla ei tuota tulosta, kannattaa alkaa tutkimaan miten ohjelman suoritus etenee. Ensin on jollain tavalla rajattava, missä ongelma saattaisi olla. Jos esimerkiksi `Login With Correct Credentials`-testitapaus epäonnistuu, on ongelma luultavasti `UserSerivce`-luokan metodissa `check_credentials`. Voimme pysäyttää ohjelman suorituksen halutulle riville hyödyntämällä [pdb](https://docs.python.org/3/library/pdb.html)-moduulia:
+Jos virheen löytäminen pelkän manuaalisen testauksen avulla ei tuota tulosta, kannattaa alkaa tutkimaan miten ohjelman suoritus etenee. Ensin on jollain tavalla rajattava, missä ongelma saattaisi olla. Jos esimerkiksi `Login With Correct Credentials`-testitapaus epäonnistuu, on ongelma luultavasti `UserService`-luokan metodissa `check_credentials`. Voimme pysäyttää ohjelman suorituksen halutulle riville hyödyntämällä [pdb](https://docs.python.org/3/library/pdb.html)-moduulia:
 
 ```python
 # ...
@@ -316,7 +316,7 @@ Hae projekti, asenna sen riippuvuudet komennollla `poetry install` ja käynnist�
 
 Sovellus siis toimii _localhostilla_ eli paikallisella koneellasi _portissa_ 5000.
 
-Sovelluksen rakenne on suunnilleen sama kuin tehtävien 4-5 ohjelmassa. Poikkeuksen muodostaa pääohjelma, joka sisältää selaimen tekemät HTTP-pyynnöt. Tässä vaiheessa ei ole tarpeen tuntea HTTP-pyyntöjä käsittelevää koodia kovin tarkasti. Katsotaan kuitenkin pintapuolisesti mistä on kysymys.
+Sovelluksen rakenne on suunnilleen sama kuin tehtävien 4-5 ohjelmassa. Poikkeuksen muodostaa pääohjelma, joka käsittelee selaimen tekemät HTTP-pyynnöt. Tässä vaiheessa ei ole tarpeen tuntea HTTP-pyyntöjä käsittelevää koodia kovin tarkasti. Katsotaan kuitenkin pintapuolisesti mistä on kysymys.
 
 Polulle "/" eli sovelluksen juureen, osoitteeseen <http://localhost:5000> tulevat pyynnöt käsittelee mainista seuraava koodinpätkä:
 
