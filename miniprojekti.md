@@ -97,7 +97,7 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
     - taskin tila (esim. aloitettu, ohjelmoitu, testauksessa, valmis)
     - taskin tekijä(t)
 - Ryhmä toteuttaa jatkuvaa integraatiota (continuous integration)
-  - Oletusarvoisesti kannattaa käyttää laskareista 1 tuttua Github Actionsia, muita vaihtoehtoja esim. TravisCI
+  - Oletusarvoisesti kannattaa käyttää laskareista 1 tuttua GitHub Actionsia, muita vaihtoehtoja esim. TravisCI
 - Koodi on talletettu GitHub:iin
 - Projektin GitHub-repositoriolla on järkevä README.md
 
@@ -118,7 +118,7 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
 
 #### Definition of done
 
-Seuraavassa lähtökohta definition donelle. Ryhmän tulee määritellä GitHub-repositorioon oma, omiin lähtökohtiin sopiva DoD
+Seuraavassa lähtökohta definition of donelle. Ryhmän tulee määritellä GitHub-repositorioon oma, omiin lähtökohtiin sopiva DoD
 
 - User storyille tulee määritellä hyväksymiskriteerit, jotka dokumentoidaan [Cucumberin](/cucumber/) featureiksi
   - Hyvänä käytänteenä on laittaa README:stä linkki hyväksymäkriteerit määritteleviin tiedostoihin
@@ -131,7 +131,7 @@ Seuraavassa lähtökohta definition donelle. Ryhmän tulee määritellä GitHub-
 
 #### Repositorio ja README
 
-README:ssa tulee löytyä ainakin seuraavat asiat:
+README:sta tulee löytyä ainakin seuraavat asiat:
 
 - Linkit backlogeihin (backlogeista tulee olla luettavissa olevat versiot julkisessa internetissä)
 - Linkki CI-palveluun
