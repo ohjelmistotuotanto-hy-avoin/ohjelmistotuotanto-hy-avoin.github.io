@@ -40,7 +40,7 @@ Tarkkaa ja raskasta ennen ohjelmointia tapahtuvaa suunnittelua, josta käytetä�
 
 ## Ohjelmiston arkkitehtuuri
 
-Käsite _ohjelmiston arkkitehtuuri_ (engl. software architecture) on ollut olemassa jo vuosikymmeniä. Termi on vakiintunut yleiseen käyttöön 2000-luvun aikana ja on siirtynyt mm. riviohjelmoijaa kokeneempaa työntekijää tarkoittavaksi nimikkeeksi _ohjelmistoarkkitehti_ engl. software architech.
+Käsite _ohjelmiston arkkitehtuuri_ (engl. software architecture) on ollut olemassa jo vuosikymmeniä. Termi on vakiintunut yleiseen käyttöön 2000-luvun aikana ja on siirtynyt mm. riviohjelmoijaa kokeneempaa työntekijää tarkoittavaksi nimikkeeksi _ohjelmistoarkkitehti_ (engl. software architech).
 
 Useimmilla alan ihmisillä on jonkinlainen kuva siitä, mitä ohjelmiston arkkitehtuurilla tarkoitetaan. Termiä ei ole kuitenkaan yrityksistä huolimatta onnistuttu määrittelemään siten, että kaikki olisivat määritelmästä yksimielisiä.
 
@@ -62,26 +62,26 @@ Vaikka arkkitehtuurin määritelmät hieman vaihtelevat, löytyy määritelmist
 
 Arkkitehtuuri keskittyy järjestelmän rakenteen tärkeisiin tai keskeisiin periaatteisiin. Se ei siis kuvaa järjestelmää tarkalla detaljitasolla, vaan on isoihin linjoihin keskittyvä _abstraktio_.
 
-Artikkelissa [Who needs architect](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf) Martin Fowler toteaa seuraavasti _you might end up defining architecture as things that people perceive as hard to change_, eli arkkitehtuurin voisi määritellä niiksi asioiksi, jotka ovat ohjelmistossa vaikeita muuttaa. Järjestelmän tärkeät rakenneperiaatteet voivat myös muuttua ajan myötä, eli arkkitehtuuri [ei ole muuttumaton](http://www.ibm.com/developerworks/rational/library/feb06/eeles/) mutta sen radikaali muuttaminen voi olla haastavaa.
+Artikkelissa [Who needs architect](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf) Martin Fowler toteaa seuraavasti _you might end up defining architecture as things that people perceive as hard to change_, eli arkkitehtuurin voisi määritellä asioiksi, jotka ovat ohjelmistossa vaikeita muuttaa. Järjestelmän tärkeät rakenneperiaatteet voivat myös muuttua ajan myötä. Toisin sanoen, arkkitehtuuri [ei ole muuttumaton](http://www.ibm.com/developerworks/rational/library/feb06/eeles/), mutta sen radikaali muuttaminen voi olla haastavaa.
 
 Melkein sama hieman toisin ilmaistuna oli Krutchtenin määritelmässä mainittu
 _set of significant decisions about the organization of a software system_, eli arkkitehtuuri muodostuu arkkitehtuuristen päätösten, eli joukon ohjelmiston rakenteen ja toiminnan kannalta tehtävien fundamentaalisten valintoja kautta.
 
 ### Arkkitehtuuriin vaikuttavia tekijöitä
 
-[Osassa 2](/osa2) mainittiin järjestelmän vaatimusten jakautuvat kahteen luokkaan, toiminnallisiin ja ei-toiminnallisiin vaatimuksiin.
+[Osassa 2](/osa2) mainittiin järjestelmän vaatimusten jakautuvan kahteen luokkaan, toiminnallisiin ja ei-toiminnallisiin vaatimuksiin.
 
-Järjestelmälle asetetuilla ei-toiminnallisilla [laatuvaatimuksilla](/osa2#ei-toiminnalliset-vaatimukset) (engl. -ilities) on suuri vaikutus arkkitehtuuriin. Laatuvaatimuksia ovat esimerkiksi käytettävyys, suorituskyky, skaalautuvuus, vikasietoisuus, tiedon ajantasaisuus, tietoturva, ylläpidettävyys, laajennettavuus, testattavuus, hinta, time-to-market, ...
+Järjestelmälle asetetuilla ei-toiminnallisilla [laatuvaatimuksilla](/osa2#ei-toiminnalliset-vaatimukset) (engl. -ilities) on suuri vaikutus arkkitehtuuriin. Laatuvaatimuksia ovat esimerkiksi käytettävyys, suorituskyky, skaalautuvuus, vikasietoisuus, tiedon ajantasaisuus, tietoturva, ylläpidettävyys, laajennettavuus, testattavuus, hinta, time-to-market, ja niin edelleen.
 
 Jotkut laatuvaatimuksista ovat keskenään ristiriidassa, joten arkkitehdin tulee hakea niiden suhteen kaikkia sidosryhmiä tyydyttävä kompromissi. Esimerkiksi time-to-market, eli kuinka nopeasti sovellus saadaan loppukäyttäjille ja alhainen hinta, lienevät ristiriidassa lähes kaikkien laatuvaatimusten kanssa.
 
-Tiedon ajantasaisuus, skaalautuvuus ja vikasietoisuus ovat myös piirteitä, joiden suhteen on pakko tehdä kompromisseja, on jopa todistettu matemaattisesti olevan tilanteita, missä kaikkia ei voida saavuttaa (ks. [CAP-teoreema](http://en.wikipedia.org/wiki/CAP_theorem)).
+Tiedon ajantasaisuus, skaalautuvuus ja vikasietoisuus ovat myös piirteitä, joiden suhteen on pakko tehdä kompromisseja. On jopa todistettu matemaattisesti olevan tilanteita, missä kaikkia ei voida saavuttaa (ks. [CAP-teoreema](http://en.wikipedia.org/wiki/CAP_theorem)).
 
-Myös toteutusteknologiat, esimerkiksi toteutuksessa käytettävät sovelluskehykset ja integraatio olemassaoleviin järjestelmiin sekä järjestelmän toimintaympäristö esim. lääketieteen ja ilmailualan säädökset sekä edellytetyt toimintastandardit, vaikuttavat arkkitehtuuriin.
+Myös toteutusteknologiat, esimerkiksi toteutuksessa käytettävät sovelluskehykset ja integraatio olemassaoleviin järjestelmiin sekä järjestelmän toimintaympäristö -- vaikkapa lääketieteen ja ilmailualan säädökset sekä edellytetyt toimintastandardit -- vaikuttavat arkkitehtuuriin.
 
 Arkkitehtuurin suurin merkitys on antaa sovelluksen kehitykselle ja ylläpidolle sellaiset raamit, että sovellus pystyy jatkossakin vastaamaan asiakkaan asettamien toiminnallisten vaatimuksien lisäksi järjestelmälle asetettuihin laatuvaatimuksiin.
 
-Joskus käy niin, että sovellukselle alunperin valittu arkkitehtuuri ei enää palvele tavoitettaan. Näin voi esimerkiksi käydä, jos sovelluksen laatuvaatimukset muuttuvat radikaalisti, esim. jos tulee tarve saada sovellus skaalautumaan huomattavasti suuremmalle käyttäjäjoukolle, mitä alkuperäinen arkkitehtuuri kykenee. Arkkitehtuurin muuttaminen on hankalaa ja kallista, mutta joskus muuta vaihtoehtoa ei ole.
+Joskus käy niin, että sovellukselle alunperin valittu arkkitehtuuri ei enää palvele tavoitettaan. Näin voi esimerkiksi käydä sovelluksen laatuvaatimusten muuttuessa radikaalisti, kun syntyy tarve saada sovellus skaalautumaan huomattavasti alkuperäisen arkkitehtuurin sallimaa suuremmalle käyttäjäjoukolle. Arkkitehtuurin muuttaminen on hankalaa ja kallista, mutta joskus muuta vaihtoehtoa ei ole.
 
 ### Arkkitehtuurityyli
 
@@ -134,7 +134,7 @@ Pakkauksina kuvattujen kerroksien välille on merkitty riippuvuudet katkoviivall
 
 Käytännössä riippuvuus tarkoittaa sitä, että ylemmän kerroksen koodista kutsutaan jotain alemman kerroksen koodin metodia. Kerrosarkkitehtuurin hengen mukaisesti riippuvuuksia on vain ylhäältä alas, eli esim. sovelluslogiikkakerroksen koodi ei kutsu käyttöliittymäkerroksen koodia.
 
-Sekä sovelluslogiikka, että tallennuspalvelut käyttävät pakkauksen _entities_-olioita. Vaikka kyseinen pakkaus kuuluu loogisesti ajatelleen tallennuspalveluita ylempään "bisneslogiikkakerrokseen", ohjelmakoodin tasolla alempana oleva tallennuskerros on riippuvainen pakkauksesta sillä se käsittelee pakkauksen luokkien koodia.
+Sekä sovelluslogiikka, että tallennuspalvelut käyttävät pakkauksen _entities_-olioita. Vaikka kyseinen pakkaus kuuluu loogisesti ajatellen tallennuspalveluita ylempään "bisneslogiikkakerrokseen", ohjelmakoodin tasolla alempana oleva tallennuskerros on riippuvainen pakkauksesta sillä se käsittelee pakkauksen luokkien koodia.
 
 ### Arkkitehtuurin kuvaamisesta
 
@@ -150,7 +150,7 @@ Seuraavassa esimerkki oman [sovelluskehitystiimini](https://toska.dev/) valkotau
 
 ![]({{ "/images/arkkit3.png" | absolute_url }}){:height="450px" }
 
-Riippumatta arkkitehtuurin dokumentointitavasta, arkkitehtuurikuvaus kannattaa tehdä useasta _eri näkökulmasta_, sillä eri näkökulmat palvelevat erilaisia tarpeita. Korkean tason kuvauksen avulla voidaan esim. strukturoida vaatimusmäärittelyn aikana käytäviä keskusteluja eri sidosryhmien kanssa. Detaljoidummat kuvaukset taas toimivat ohjeena järjestelmän tarkemmassa suunnittelussa ja ylläpitovaiheen aikaisessa laajentamisessa.
+Riippumatta arkkitehtuurin dokumentointitavasta, arkkitehtuurikuvaus kannattaa tehdä useasta _eri näkökulmasta_, sillä eri näkökulmat palvelevat erilaisia tarpeita. Korkean tason kuvauksen avulla voidaan esim. strukturoida vaatimusmäärittelyn aikana käytäviä keskusteluja eri sidosryhmien kanssa. Yksityiskohtaisemmat kuvaukset taas toimivat ohjeena järjestelmän tarkemmassa suunnittelussa ja ylläpitovaiheen aikaisessa laajentamisessa.
 
 Kannattaa huomata, että arkkitehtuurikuvaus ei suinkaan ole pelkkä kuva, mm. komponenttien vastuut tulee tarkentaa sekä niiden väliset rajapinnat ja kommunikaation muodot määritellä. Jos näin ei tehdä, kasvaa riski sille että arkkitehtuuria ei noudateta.
 
@@ -186,13 +186,13 @@ Mikropalvelut siis kommunikoivat keskenään verkon välityksellä. Erilaisia ta
 
 Yksinkertainen vaihtoehto on käyttää kommunikointiin HTTP-protokollaa, eli samaa mekanismia, jonka avulla web-selaimet keskustelevat palvelimien kanssa. Tällöin sanotaan, että mikropalvelut tarjoavat kommunikointia varten REST-rajapinnan. Viikon 3 laskareissa haettiin NHL-tilastotietoja JSON-muotoista dataa tarjoavasta REST-rajapinnasta.
 
-Vaihtoehtoinen, huomattavasti joustavampi kommunikointikeino on ns. _viestinvälityksen_ (message queue/bus) käyttö.
+Vaihtoehtoinen, huomattavasti joustavampi kommunikointikeino on ns. _viestinvälityksen_ (engl. message queue/bus) käyttö.
 
 Palvelut eivät lähetä viestejä suoraan toisilleen, vaan käytössä on verkossa toimiva viestinvälityspalvelu, joka hoitaa viestien välityksen eri palveluiden välillä.
 
 ![]({{ "/images/4-6b.png" | absolute_url }}){:height="400px" }
 
-Periaatteena viestinvälityksessä on se, että palvelut _julkaisevat_ (publish) viestejä viestinvälityspalveluun. Viesteillä on tyypillisesti joku _aihe_ (topic) ja sen lisäksi _datasisältö_, esimerkiksi:
+Periaatteena viestinvälityksessä on se, että palvelut _julkaisevat_ (engl. publish) viestejä viestinvälityspalveluun. Viesteillä on tyypillisesti joku _aihe_ (engl. topic) ja sen lisäksi _datasisältö_, esimerkiksi:
 
 ```json
 {
@@ -206,7 +206,7 @@ Periaatteena viestinvälityksessä on se, että palvelut _julkaisevat_ (publish)
 }
 ```
 
-Palvelut voivat _tilata_ (subscribe) viestipalvelusta niihin aiheisiin liittyvät viestit joista ne ovat kiinnostuneita. Esimerkiksi käyttäjähallinnasta vastaava palvelu todennäköisesti tilaa viestit, joiden aihe on _new_user_. Viestinvälityspalvelu välittää vastaanottamansa viestit edelleen kaikille palveluille, jotka ovat kyseisen aiheen tilanneet.
+Palvelut voivat _tilata_ (engl. subscribe) viestipalvelusta niihin aiheisiin liittyvät viestit, joista ne ovat kiinnostuneita. Esimerkiksi käyttäjähallinnasta vastaava palvelu todennäköisesti tilaa viestit, joiden aihe on _new_user_. Viestinvälityspalvelu välittää vastaanottamansa viestit edelleen kaikille palveluille, jotka ovat kyseisen aiheen tilanneet.
 
 Kaikki viestien välitys tapahtuu siis viestinvälityspalvelun kautta, eli palvelut eivät kommunikoi suoraan toistensa kanssa. Näin mikropalveluista tulee erittäin löyhästi kytkettyjä, ja muutokset yhdessä palvelussa eivät vaikuta mihinkään muualle, niin kauan kuin viestit säilyvät entisen muotoisina.
 
@@ -218,7 +218,7 @@ Asynkronisten viestien (joita kutsutaan usein myös _eventeiksi_) välitykseen p
 
 Monista eduistaan huolimatta mikropalveluarkkitehtuurin soveltaminen tuo mukanaan koko joukon uusia haasteita. Ensinnäkin sovelluksen jakaminen järkeviin mikropalveluihin on haastavaa. Vääränlainen jako palveluihin voi tuottaa sovelluksen, jossa jokainen palvelu joutuu keskustelemaan verkon yli pahimmassa tapauksessa kymmenien palvelujen kesken ja näin sovelluksen suorituskyky kärsii.
 
-Useista palveluista koostetun sovelluksen debuggaaminen ja testaaminen on huomattavasti hankalampaa kuin monoliittisen, erityisesti näin on jos mikropalvelut käyttävät viestinvälitystä.
+Useista palveluista koostetun sovelluksen debuggaaminen ja testaaminen on huomattavasti hankalampaa kuin monoliittisen -- erityisesti, jos mikropalvelut käyttävät viestinvälitystä.
 
 Kymmenistä tai jopa sadoista mikropalveluista koostuvan ohjelmiston operoiminen eli käynnistäminen ja suorittaminen tuotantopalvelimilla on haastavaa ja vaatii pitkälle menevää automatisointia. Sama koskee sovelluskehitysympäristöä ja jatkuvaa integraatiota.
 Mikropalveluiden menestyksekäs soveltaminen edellyttääkin vahvaa DevOps-kulttuuria.
@@ -240,7 +240,7 @@ Ketterät menetelmät suosivat suunnitteluratkaisujen yksinkertaisuutta:
 
 _Simplicity, the art of maximizing the amount of work not done, is essential_
 
-Arkkitehtuuriin suunnittelu ja dokumentointi taas on perinteisesti ollut melko pitkäkestoinen, ohjelmoinnin aloittamista edeltävä vaihe, eräänlainen _big Design Up Front_. Ketterät menetelmät ja "arkkitehtuurivetoinen" ohjelmistotuotanto ovat siis jossain määrin keskenään ristiriidassa.
+Arkkitehtuurin suunnittelu ja dokumentointi taas on perinteisesti ollut melko pitkäkestoinen, ohjelmoinnin aloittamista edeltävä vaihe, eräänlainen _big Design Up Front_. Ketterät menetelmät ja "arkkitehtuurivetoinen" ohjelmistotuotanto ovat siis jossain määrin keskenään ristiriidassa.
 
 Ketterien menetelmien yhteydessä puhutaan usein [inkrementaalisesta suunnittelusta ja arkkitehtuurista](https://www.jamesshore.com/Agile-Book/incremental_design.html).
 
@@ -270,11 +270,11 @@ Eli heti projektin alussa, mielellään jo ensimmäisessä sprintissä on tarkoi
 
 Tätä luurankoa sitten kasvatetaan pikkuhiljaa projektin edetessä, kun sovelluksen toiminnallisuus kasvaa.
 
-Walking skeleton ei ole pelkästään poisheitettävää koodia, vaan sovelluksen koodi rakentuu sen ympärille, eli skeletoinia rakennettaessa on jo tarkoituksenmukaisin osin syytä ohjelmoida tuotantokoodin edellyttämällä laadulla, eli projektin definition of donea noudattaen.
+Walking skeleton ei ole pelkästään poisheitettävää koodia, vaan sovelluksen koodi rakentuu sen ympärille. Jo skeletoinia rakennettaessa on tarkoituksenmukaisin osin syytä ohjelmoida tuotantokoodin edellyttämällä laadulla, eli projektin definition of donea noudattaen.
 
 ### Inkrementaalisen arkkitehtuurin etuja
 
-Perinteisesti, esimerkiksi vesiputousmallia käytettäessä arkkitehtuurista on vastannut ohjelmistoarkkitehti ja ohjelmoijat ovat olleet velvoitettuja noudattamaan sovellukselle määriteltyä arkkitehtuuria.
+Perinteisesti, esimerkiksi vesiputousmallia käytettäessä, arkkitehtuurista on vastannut ohjelmistoarkkitehti ja ohjelmoijat ovat olleet velvoitettuja noudattamaan sovellukselle määriteltyä arkkitehtuuria.
 
 Ketterissä menetelmissä ei suosita erillistä arkkitehdin roolia, esimerkiksi Scrum käyttää kaikista ryhmän jäsenistä nimikettä developer. Ketterien menetelmien ideaalina on, että kehitystiimi luo arkkitehtuurin yhdessä, tämä on myös yksi ketterän manifestin periaatteista:
 
@@ -288,7 +288,7 @@ Tiimin kesken suunnitteleman arkkitehtuurin dokumentointi voi olla kevyt ja info
 
 Ketterissä menetelmissä oletuksena on, että parasta mahdollista arkkitehtuuria ei pystytä suunnittelemaan projektin alussa, kun vaatimuksia, toimintaympäristöä ja toteutusteknologioita ei vielä tunneta. Jo tehtyjä arkkitehtonisia ratkaisuja on järkevä muuttaa, jos ajan myötä huomataan että aiemmin tehdyt valinnat eivät tue parhaalla tavalla ohjelmiston kehittämistä.
 
-Eli kuten vaatimusmäärittelyn suhteen, myös arkkitehtuurin suunnittelussa ketterät menetelmät pyrkii välttämään liian aikaisin tehtävää ja myöhemmin todennäköisesti turhaksi osoittautuvaa työtä.
+Eli kuten vaatimusmäärittelyn suhteen, myös arkkitehtuurin suunnittelussa ketterät menetelmät pyrkivät välttämään liian aikaisin tehtävää ja myöhemmin todennäköisesti turhaksi osoittautuvaa työtä.
 
 ### Inkrementaalisen arkkitehtuurin riskit
 
@@ -300,7 +300,7 @@ Inkrementaalinen lähestymistapa arkkitehtuurin muodostamiseen edellyttää kood
 >
 > In its common usage, incremental design is a disaster. The design ends up being the aggregation of a bunch of ad-hoc tactical decisions, each of which makes the code harder to alter.
 
-Fowlerin havaintojen mukaan inkrementaalisen arkkitehtuurin ja suunnittelun ihanne toteutuu vain harvoin, useimmiten sovelluskehittäjien huolimattomuus, aikataulupaineet ym. syyt johtavat siihen, että ohjelmiston sisäinen laatu alkaa ajan myötä heikentyä ja lopulta ohjelmisto on muodoton kasa spagettikoodia, eli [big ball of mud](http://www.laputan.org/mud/) jonka ylläpitäminen ja jatkokehittäminen muuttuu erittäin haastavaksi.
+Fowlerin havaintojen mukaan inkrementaalisen arkkitehtuurin ja suunnittelun ihanne toteutuu vain harvoin. Useimmiten sovelluskehittäjien huolimattomuus, aikataulupaineet ym. syyt johtavat ohjelmiston sisäisen laadun heikkenemiseen ajan myötä ja lopulta ohjelmisto on muodoton kasa spagettikoodia, [big ball of mud](http://www.laputan.org/mud/), jonka ylläpitäminen ja jatkokehittäminen muuttuu erittäin haastavaksi.
 
 ## Olio- ja komponenttisuunnittelu
 
@@ -312,13 +312,13 @@ Ohjelmiston suunnittelussa pyritään ennen kaikkia maksimoimaan [koodin sisäin
 
 Ylläpidettävyyden ja laajennettavuuden kannalta tärkeitä seikkoja ovat mm. seuraavat
 
-- Koodin tulee olla luettavuudeltaan selkeää, ja sen tulee kertoa esim. nimeämisellä mahdollisimman selkeästi mitä koodi tekee, ja tuoda esiin koodin alla oleva "design"
-- Yhtä paikkaa pitää pystyä muuttamaan siten, ettei muutoksesta aiheudu sivuvaikutuksia sellaisiin kohtiin koodia, jota muutoksen tekijä ei pysty ennakoimaan
-- Jos ohjelmaan tulee tehdä laajennus tai bugikorjaus, tulee olla helposti selvitettävissä mihin kohtaan koodia muutos tulee tehdä
-- Jos ohjelmasta muutetaan "yhtä asiaa", tulee kaikkien muutosten tapahtua vain yhteen kohtaan koodia (metodiin, luokkaan tai komponenttiin)
-- Muutosten ja laajennusten jälkeen tulee olla helposti tarkastettavissa ettei muutos aiheuta sivuvaikutuksia muualle järjestelmään
+- Koodin tulee olla luettavuudeltaan selkeää, ja sen tulee kertoa esim. nimeämisellä mahdollisimman selkeästi mitä koodi tekee, ja tuoda esiin koodin alla oleva "design".
+- Yhtä paikkaa pitää pystyä muuttamaan siten, ettei muutoksesta aiheudu sivuvaikutuksia sellaisiin kohtiin koodia, jota muutoksen tekijä ei pysty ennakoimaan.
+- Jos ohjelmaan tulee tehdä laajennus tai bugikorjaus, tulee olla helposti selvitettävissä mihin kohtaan koodia muutos tulee tehdä.
+- Jos ohjelmasta muutetaan "yhtä asiaa", tulee kaikkien muutosten tapahtua vain yhteen kohtaan koodia (metodiin, luokkaan tai komponenttiin).
+- Muutosten ja laajennusten jälkeen tulee olla helposti tarkastettavissa, ettei muutos aiheuta sivuvaikutuksia muualle järjestelmään.
 
-Ohjelmistoalalle vuosien varrella kerääntyneen [kansanviisauden](https://www.amazon.com/Software-Development-Principles-Practices-Paperback/dp/B011DBKELY) mukaan ylläpidettävyyden ja laajennettavuuden kannalta hyvällä koodilla on joukko yhteneviä ominaisuuksia, tai _laatuattribuutteja_, joita ovat esim. seuraavat:
+Ohjelmistoalalle vuosien varrella kerääntyneen [kansanviisauden](https://www.amazon.com/Software-Development-Principles-Practices-Paperback/dp/B011DBKELY) mukaan ylläpidettävyyden ja laajennettavuuden kannalta hyvällä koodilla on joukko yhteneviä ominaisuuksia tai _laatuattribuutteja_, joita ovat esim. seuraavat:
 
 - Kapselointi
 - Korkea koheesion aste
@@ -339,7 +339,7 @@ Ohjelmoinnin peruskurssilla _kapselointi_ (engl. encapsulation) määriteltiin m
 
 Määritelmä ei ole nykyisellä kurssilla sanatarkkaan sama, mutta aloitteleva ohjelmoija assosioi kapseloinnin nykyäänkin seuraavaan periaatteeseen: _oliomuuttujat tulee määritellä privaateiksi ja niille tulee tehdä tarvittaessa setterit ja getterit_. Javalla ohjelmonnissa periaate oli hyvin korostuneesti käytössä, Pythonissa vähemmän, vaikkakin asiaa käsitellään myös [Ohjelmoinnin jatkokurssin nykyisessä versiossa](https://ohjelmointi-21.mooc.fi/osa-9/3-kapselointi).
 
-Tämä on kuitenkin melko kapea näkökulma kapselointiin. Olion sisäisen tilan lisäksi kapseloinnin kohde voi olla mm. käytettävän olion tyyppi, käytetty algoritmi, olioiden luomisen tapa, käytettävän komponentin rakenne, jne...
+Tämä on kuitenkin melko kapea näkökulma kapselointiin. Olion sisäisen tilan lisäksi kapseloinnin kohde voi olla mm. käytettävän olion tyyppi, käytetty algoritmi, olioiden luomisen tapa, käytettävän komponentin rakenne, ja niin edelleen.
 
 Monissa suunnittelumalleissa on kyse juuri eritasoisten asioiden kapseloinnista, ja tulemme pian näkemään esimerkkejä asiasta.
 
@@ -422,7 +422,7 @@ Yksittäiset metodit ovat nyt kaikki samalla abstraktiotasolla toimivia ja kuvaa
 
 #### Koheesio luokkatasolla
 
-Luokkatason koheesiossa pyrkimyksenä on, että luokan _vastuulla_ on vain yksi asia, tämä tunnetaan myös nimellä [single responsibility](https://en.wikipedia.org/wiki/Single_responsibility_principle) -periaate (SRP). Robert Martin määrittelee, että luokalla on yksi vastuu _jos sillä on vain yksi syy muuttua_.
+Luokkatason koheesiossa pyrkimyksenä on, että luokan _vastuulla_ on vain yksi asia. Tämä tunnetaan myös nimellä [single responsibility](https://en.wikipedia.org/wiki/Single_responsibility_principle) -periaate (SRP). Robert Martin määrittelee, että luokalla on yksi vastuu _jos sillä on vain yksi syy muuttua_.
 
 Kurssin ensimmäisissä laskareissa tarkasteltiin yksinkertaista laskinta:
 
@@ -780,9 +780,9 @@ Staattinen tehdasmetodi ei ole testauksen kannalta erityisen hyvä ratkaisu, esi
 
 Lisätietoa factory-suunnittelumallista esim. [täältä](https://sourcemaking.com/design_patterns/factory_method) ja [täältä](http://www.oodesign.com/factory-method-pattern.html).
 
-Tehdasmetodien avulla voimme siis kapseloida luokan todellisen tyypin. Jamin tilihän on määräaikaistili, se kuitenkin pyydetään `Tili`-luokassa sijaitsevalta factoryltä, olion oikea tyyppi on piilotettu tarkoituksella käyttäjältä. Määräaikaistilin käyttäjällä ei siis ole enää konkreettista riippuvuutta luokkaan `MaaraaikaisTili`.
+Tehdasmetodien avulla voimme siis kapseloida luokan todellisen tyypin. Jamin tilihän on määräaikaistili, mutta se kuitenkin pyydetään `Tili`-luokassa sijaitsevalta factoryltä ja olion oikea tyyppi on näin piilotettu tarkoituksella käyttäjältä. Määräaikaistilin käyttäjällä ei siis ole enää konkreettista riippuvuutta luokkaan `MaaraaikaisTili`.
 
-Teimme myös metodin jonka avulla tilin korkoa voi muuttaa. Jamin tasakorkoinen määräaikaistili on helppo muuttaa lennossa kolmen kuukauden Euribor-tiliksi:
+Teimme myös metodin, jonka avulla tilin korkoa voi muuttaa. Jamin tasakorkoinen määräaikaistili on helppo muuttaa lennossa kolmen kuukauden Euribor-tiliksi:
 
 ```java
 maaraaikais.vaihda_korkoa(EuriborKorko(3))
@@ -792,9 +792,9 @@ Eli luopumalla perinnästä oliorakenne selkeytyy huomattavasti ja saavutetaan s
 
 #### Suunnittelumalli: strategy <span style="color:blue">[viikko 5]</span>
 
-Tekniikka jolla koronmaksu hoidetaan on myöskin suunnittelumalli, nimeltään _strategia_ (engl. strategy).
+Tekniikka, jolla koronmaksu hoidetaan on myös suunnittelumalli, nimeltään _strategia_ (engl. strategy).
 
-Strategyn avulla voidaan hoitaa tilanne, jossa eri olioiden käyttäytyminen on muuten sama, mutta tietyissä kohdissa on käytössä eri "algoritmi". Esimerkissämme tämä algoritmi oli korkoprosentin määrittely. Sama tilanne voidaan hoitaa usein myös perinnän avulla käyttämättä erillisiä olioita, strategy kuitenkin mahdollistaa huomattavasti dynaamisemman ratkaisun, sillä strategia-olioa on mahdollista vaihtaa ajoaikana. Strategyn käyttö ilmentää hienosti "favour composition over inheritance"-periaatetta
+Strategyn avulla voidaan hoitaa tilanne, jossa eri olioiden käyttäytyminen on muuten sama, mutta tietyissä kohdissa on käytössä eri "algoritmi". Esimerkissämme tämä algoritmi oli korkoprosentin määrittely. Vaikka sama tilanne voidaan hoitaa usein myös perinnän avulla käyttämättä erillisiä olioita, strategy mahdollistaa huomattavasti dynaamisemman ratkaisun sallimalla strategia-olion vaihtamisen ajoaikana. Strategyn käyttö ilmentää hienosti "favour composition over inheritance"-periaatetta.
 
 Lisätietoa strategia-suunnittelumallista [täällä](http://www.oodesign.com/strategy-pattern.html) ja [täällä](https://sourcemaking.com/design_patterns/strategy).
 
@@ -837,7 +837,7 @@ Eli tilin luojan ei enää tarvitse huolehtia tilinumeroiden generoinnista.
 
 Jokaisesta tehdasmetodista on siis tehty luokan oman staattisen metodin sijaan toiseen luokkaan sijoitettu oliometodi.
 
-Luokkien vastuut ovat selkeytyneet, `Tili` vastaa yhteen tiliin liittyvistä asioista, kuten saldosta. Tili myös tuntee olion, jonka hallinnassa on tieto tiliin liittyvästä korosta. `Pankki` taas hallinnoi kaikkia tilejään, sen avulla myös generoidaan tilinumerot tilien luomisen yhteydessä.
+Luokkien vastuut ovat selkeytyneet, `Tili` vastaa yhteen tiliin liittyvistä asioista, kuten saldosta. Tili myös tuntee olion, jonka hallinnassa on tieto tiliin liittyvästä korosta. `Pankki` taas hallinnoi kaikkia tilejään ja sen avulla myös generoidaan tilinumerot tilien luomisen yhteydessä.
 
 ### Toiminnallisuuden kapselointi: laskin ja strategia <span style="color:blue">[viikko 5]</span>
 
@@ -967,7 +967,7 @@ class Komentotehdas:
 
 Komentotehdas siis palauttaa `hae`-metodin merkkijonoparametria vastaavan komennon. Koska vastuu käyttäjän kanssa kommunikoinnista on siirretty Komento-olioille, annetaan niille `IO`-olio konstruktorin pararametrina.
 
-if-hässäkkä näyttää hieman ikävältä. Siitä pääsee kuitenkin helposti eroon tallentamalla erilliset komennot dictionaryyn:
+Nyt if-hässäkkä näyttää hieman ikävältä. Siitä pääsee kuitenkin helposti eroon tallentamalla erilliset komennot dictionaryyn:
 
 ```python
 class Komentotehdas:
@@ -1046,7 +1046,7 @@ Ohjelman rakenne tässä vaiheessa:
 
 #### Suunnittelumalli: command <span style="color:blue">[viikko 5]</span>
 
-Eristimme siis jokaiseen erilliseen laskuoperaatioon liittyvän toiminnallisuuden omaksi oliokseen command-suunnittelumallin ideaa noudattaen, eli siten, että kaikki operaatiot toteuttavat yksinkertaisen rajapinnan, jolla on ainoastaan metodi `suorita`
+Eristimme siis jokaiseen erilliseen laskuoperaatioon liittyvän toiminnallisuuden omaksi oliokseen command-suunnittelumallin ideaa noudattaen. Kaikki operaatiot toteuttavat yksinkertaisen rajapinnan, jolla on ainoastaan metodi `suorita`.
 
 Ohjelman edellisessä versiossa sovelsimme strategia-suunnittelumallia, missä erilliset laskuoperaatiot oli toteutettu omina olioinaan. Command-suunnittelumalli eroaa siinä, että olemme nyt kapseloineet koko komennon suorituksen, myös käyttäjän kanssa käytävän kommunikoinnin omiin olioihin. Komento-olioiden rajapinta on yksinkertainen, niillä on ainoastaan yksi metodi, `suorita`. Strategia-suunnittelumallissa taas strategia-olioiden rajapinta vaihtelee tilanteen mukaan.
 
@@ -1104,7 +1104,7 @@ class Erotus(BinaariOperaatio):
         return self.luku1 - self.luku2
 ```
 
-Ja mikä parasta, ainoa muu luokka, jota on koskettava on komentoja luova `Komentotehdas`-luokka.
+Ja mikä parasta, ainoa muu luokka, jota on koskettava, on komentoja luova `Komentotehdas`-luokka.
 
 Ohjelmasta on näin ollen saatu laajennettavuuden kannalta varsin joustava. Uusia operaatioita on helppo lisätä ja lisäys ei aiheuta muutoksia moneen kohtaan koodia. `Laskin`-luokallahan ei ole riippuvuuksia muualle kuin `Komentotehdas`-luokkaan sekä konstruktorin kautta injektoituun `KonsoliIO`-luokkaan.
 
@@ -1165,15 +1165,15 @@ Lisää template method -suunnittelumallista [täällä](http://www.oodesign.com
 
 Olemme käsitelleet koodin laatuattribuuteista _kapselointia, koheesiota_ ja _riippuvuuksien vähäisyyttä_, seuraavana vuorossa redundanssi eli toisteisuus.
 
-Aloittelevaa ohjelmoijaa pelotellaan toisteisuuden vaaroista uran ensiaskelista alkaen, varmaan jokainen on kuullut varoituksen: _älä copypastaa koodia_!
+Aloittelevaa ohjelmoijaa pelotellaan toisteisuuden vaaroista uran ensiaskelista alkaen. Varmaan jokainen on kuullut varoituksen: _Älä copypastaa koodia_!
 
 Alan piireissä toisteisuudesta varoittava periaate kuuluu [don't repeat yourself](http://c2.com/cgi/wiki?DontRepeatYourself) ja siihen viitataan usein lyhenteellä _DRY_.
 
-Ilmeisin toiston muoto koodissa on juuri copypaste ja se on usein helppo eliminoida esimerkiksi fuktioiden tai metodien avulla. Kaikki toisteisuus ei ole yhtä ilmeistä ja monissa suunnittelumalleissa on kyse juuri hienovaraisempien toisteisuuden muotojen eliminoinnista, edellisessä esimerkissä template method -suunnittelumallia käyttävän luokan `BinaariOperaatio` motivaationa oli oikeastaan se, että sama käyttäjän interaktion hoitava koodi toistui luokissa `Summa` ja `Tulo`.
+Ilmeisin toiston muoto koodissa on juuri copypaste ja se on usein helppo eliminoida esimerkiksi fuktioiden tai metodien avulla. Kaikki toisteisuus ei ole yhtä ilmeistä ja monissa suunnittelumalleissa on kyse juuri hienovaraisempien toisteisuuden muotojen eliminoinnista. Edellisessä esimerkissä template method -suunnittelumallia käyttävän luokan `BinaariOperaatio` motivaationa oli oikeastaan se, että sama käyttäjän interaktion hoitava koodi toistui luokissa `Summa` ja `Tulo`.
 
 DRY-periaate menee oikeastaan vielä paljon pelkkää koodissa olevaa toistoa eliminointia pidemmälle. Kirjan [Pragmatic programmer](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) määritelmä _every piece of knowledge must have a single, unambiguous, authoritative representation within a system_ viittaa siihen, että koodin lisäksi periaate tulisi ulottaa koskemaan järjestelmän muitakin osia, kuten tietokantaskeemaa, testejä, build-skriptejä ym.
 
-Pragmatic programmerin määritelmän henkeä ei ei välttämättä pysty tavoittamaan täysin ilman konkreettista esimerkkiä. Oletetaan, että kehittämämme verkkokauppa otettaisiin käyttöön myös sellaisissa maissa, joissa ei käytetä rahayksikkönä euroa. Jos sovellus ei noudata DRY-periaatetta valuutan käsittelyn suhteen, on oletettavaa, että muutos vaatisi muutoksia useisiin eri kohtiin sovellusta. Jos taas valuutan käsittelyllä olisi _single authoritive representation_, esim. se olisi kapseloitu riittävän hyvin luokan `Money` vastuulle, niin muiden valuuttojen tuen lisääminen ei ehkä edellyttäisi muuta kuin yksittäisen luokan koodin modifiointia.
+Pragmatic programmerin määritelmän henkeä ei välttämättä pysty tavoittamaan täysin ilman konkreettista esimerkkiä. Oletetaan, että kehittämämme verkkokauppa otettaisiin käyttöön myös sellaisissa maissa, joissa ei käytetä rahayksikkönä euroa. Jos sovellus ei noudata DRY-periaatetta valuutan käsittelyn suhteen, on oletettavaa, että muutos vaatisi muutoksia useisiin eri kohtiin sovellusta. Jos taas valuutan käsittelyllä olisi _single authoritive representation_, esim. se olisi kapseloitu riittävän hyvin luokan `Money` vastuulle, niin muiden valuuttojen tuen lisääminen ei ehkä edellyttäisi muuta kuin yksittäisen luokan koodin modifiointia.
 
 #### Epätriviaalin copypasten poistaminen Strategy-patternin avulla <span style="color:blue">[viikko 5]</span>
 
@@ -1234,7 +1234,7 @@ if __name__ == "__main__":
 
 Luokka on ohjelmoitu "perinteisellä" imperatiivisella tyylillä, kirjan rivejä käydään läpi for-lauseella ja kunkin rivin kohdalla tarkastetaan ehtolauseella onko rivi kyseisen metodin kriteerit täyttävä, esim. huutomerkkiin loppuva.
 
-Luokan `GutenbergLukija` tarjoamat kolme kirjan sisällön hakemiseen tarkoitettua metodia ovat selvästi rakenteeltaan hyvin samantapaisia. Kaikki käyvät jokaisen kirjan rivin läpi ja palauttavat niistä osan (tai kaikki) metodin kutsujalle. Metodit eroavat sen suhteen _mitä kirjan riveistä ne palauttavat_. Metodit ovat siis lähes copypastea, ne kuitenkin eroavat sen verran toisistaan, että copypasten eliminoiminen ei ole täysin suoraviivaista.
+Luokan `GutenbergLukija` tarjoamat kolme kirjan sisällön hakemiseen tarkoitettua metodia ovat selvästi rakenteeltaan hyvin samantapaisia. Kaikki käyvät jokaisen kirjan rivin läpi ja palauttavat niistä osan (tai kaikki) metodin kutsujalle. Metodit eroavat sen suhteen _mitä kirjan riveistä ne palauttavat_. Vaikka metodit ovat siis lähes copypastea, ne kuitenkin eroavat sen verran toisistaan, että copypasten eliminoiminen ei ole täysin suoraviivaista.
 
 Jos mietitään metodien toimintaa, niin voidaan ajatella, että jokaisessa metodissa on oma _strategiansa_ rivien palauttamiseen, ja strategiaa lukuunottamatta kaikki muu on samaa. Tämä onkin erinomainen paikka strategy-suunnittelumallin soveltamiseen. Jos eriytämme rivien valintastrategian omaksi luokakseen, voidaan selvitä ainoastaan yhdellä rivien läpikäynnin hoitavalla metodilla.
 
@@ -1332,7 +1332,7 @@ Huomaa, kuinka kyseissä esimerkissä funktio `rakenna_sisaltaa_sanan` muistutta
 
 Refaktoroidaan vielä `GutenbergLukija` luokkaa hyödyntämällä Pythonin funktionaalisen ohjelmoinnin työkalupakkia. Koska luokan metodeissa käsitellään paljon listoja, voimme hyödyntää funktiota [map](https://docs.python.org/3/library/functions.html#map) ja [filter](https://docs.python.org/3/library/functions.html#filter).
 
-Funktiota `map` voi hyödyntää listan (tai minkä tahansa muun iteraattorin) alkioiden muokkaamiseen. Funktiolla on kaksi parametria. Ensimmäinen parametri on lambda (tai vastaava kutsuttavissa oleva arvo), joka saa parametriksi iteraattorin alkion ja palauttaa alkion uuden arvon. Toinen parametri on iteraattori, jonka alkioista muodostetaan lambdan avulla uusi iteraattori. `map`-funktio ei siis muuta parametrina saatua iteraattoris, vaan palauttaa uuden iteraattorin, johon on tehty halutut muokkaukset.
+Funktiota `map` voi hyödyntää listan (tai minkä tahansa muun iteraattorin) alkioiden muokkaamiseen. Funktiolla on kaksi parametria. Ensimmäinen parametri on lambda (tai vastaava kutsuttavissa oleva arvo), joka saa parametriksi iteraattorin alkion ja palauttaa alkion uuden arvon. Toinen parametri on iteraattori, jonka alkioista muodostetaan lambdan avulla uusi iteraattori. `map`-funktio ei siis muuta parametrina saatua iteraattoria, vaan palauttaa uuden iteraattorin, johon on tehty halutut muokkaukset.
 
 Voimme hyödyntää `map`-funktiota esimerkiksi `GutenbergLukija`-luokan konstruktorissa:
 
@@ -1348,7 +1348,7 @@ def __init__(self, osoite):
 
 Huomaa, ettei `map`-funktio palauta listaa, vaan iteraattorin. Iteraattorin voi muuttaa listaksi helposti, [list](https://docs.python.org/3/library/functions.html#func-list)-funktion avulla.
 
-Toinen hyödyllinen funktio listojen käsittelyyn on `filter`-funktio, jonka avulla listan (tai minkä tahansa muun iteraattorin) alkioita voidaan suodattaa. Funktiolla on kaksi parametria. Ensimmäinen paramateri on lambda (tai vastaava kutsuttavissa oleva arvo), joka saa parametriksi iteraattorin alkion ja palauttaa `True`, jos alkiota halutaan sisällyttää suodatettuun iteraattoriin, muutoin `False`. Toinen parametri on iteraattori, jonka alkioita suodatetaan. Kuten `map`-funktio, `filter`-funktio ei muuta parametrina saatua iteraattoria vaan palauttaa uuden iteraation, jonka alkiot on suodatettu annetulla ehdolla.
+Toinen hyödyllinen funktio listojen käsittelyyn on `filter`-funktio, jonka avulla listan (tai minkä tahansa muun iteraattorin) alkioita voidaan suodattaa. Funktiolla on kaksi parametria. Ensimmäinen parametri on lambda (tai vastaava kutsuttavissa oleva arvo), joka saa parametriksi iteraattorin alkion ja palauttaa `True`, jos alkiota halutaan sisällyttää suodatettuun iteraattoriin, muutoin `False`. Toinen parametri on iteraattori, jonka alkioita suodatetaan. Kuten `map`-funktio, `filter`-funktio ei muuta parametrina saatua iteraattoria vaan palauttaa uuden iteraation, jonka alkiot on suodatettu annetulla ehdolla.
 
 Hyvä käyttökohde `filter`-funktiolle on `GutenbergLukija`-luokan metodi `rivit_jotka_tayttavat_ehdon`:
 
@@ -1407,7 +1407,7 @@ Koodihajuja on hyvin monenlaisia ja monentasoisia. Muutamia esimerkkejä helpost
 - Epäselkeät muuttujien, metodien tai luokkien nimet
 - Kommentit
 
-Oikeastaan kaikki näistä ovat merkkejä edellä listaamiemme hyvän koodin laatuattribuutteja heikentävistä ilmiöistä, esim. erittäin pitkä metodi todennäköisesti tarkoittaa, että metodin koheesio on huono, samoin luokka jossa on paljon koodia tai oliomuuttujia tarkoittaa suurella todennäköisyydellä että single responsibility -periaatetta ei noudateta. Jos luokan metodeilla on paljon parametreja, voi se kieliä siitä, että osa tiedoista on väärän luokan vastuulla, tai että metodin kuuluisi mielummin olla jossain toisessa luokassa.
+Oikeastaan kaikki näistä ovat merkkejä edellä listaamiemme hyvän koodin laatuattribuutteja heikentävistä ilmiöistä. Esimerkiksi erittäin pitkä metodi todennäköisesti tarkoittaa metodin koheesion olevan huono ja luokka, jossa on paljon koodia tai oliomuuttujia, tarkoittaa suurella todennäköisyydellä single responsibility -periaatetteen jääneen noudattamatta. Jos luokan metodeilla on paljon parametreja, voi se kieliä siitä, että osa tiedoista on väärän luokan vastuulla, tai että metodin kuuluisi mieluummin olla jossain toisessa luokassa.
 
 Nykyään koodin [kommentointia](https://medium.com/@fagnerbrack/code-comment-is-a-smell-4e8d78b0415b) on hieman yllättäen alettu pitämään koodihajuna. Kyse on oikeastaan siitä, että koodi pitäisi lähtökohtaisesti kirjoittaa niin selkeäksi ja nimeämiskäytäntöjen osalta kommunikoivaksi, että kommentteja ei tarvita. Eli kommentit tulee säästää vain sellaisiin kohtiin, jossa samaa asiaa ole mahdollista ilmaista koodin muotoilulla ja paremmalla nimeämisellä.
 
@@ -1439,14 +1439,14 @@ Melko monissa ei niin suoraviivaisissa refaktorointioperaatioissa, epäoptimaali
 
 Aiemmissa esimerkeissä näimme tämän kaltaisia refaktorointeja, esim.
 
-- Tilien koronmaksustrategia [replace conditional with polymorfism](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html)
-- Tilien luominen [replace constructor with factory method](https://refactoring.com/catalog/replaceConstructorWithFactoryFunction.html)
-- Laskimen komennot [replace method with method object](https://refactoring.com/catalog/replaceFunctionWithCommand.html)
-- Laskimen binäärioperaatiot [form template method](https://sourcemaking.com/refactoring/form-template-method).
+- Tilien koronmaksustrategia: [replace conditional with polymorfism](https://refactoring.com/catalog/replaceConditionalWithPolymorphism.html).
+- Tilien luominen: [replace constructor with factory method](https://refactoring.com/catalog/replaceConstructorWithFactoryFunction.html).
+- Laskimen komennot: [replace method with method object](https://refactoring.com/catalog/replaceFunctionWithCommand.html).
+- Laskimen binäärioperaatiot: [form template method](https://sourcemaking.com/refactoring/form-template-method).
 
-Refaktoroinnin melkein ehdoton edellytys (poislukien yksinkertaiset automaattisesti suoritettavat refaktoroinnit, kuten _rename variable_) on kattavien testien olemassaolo. Refaktoroinnissa on tarkoitus ainoastaan parantaa luokan tai komponentin sisäistä rakennetta, ulospäin näkyvän toiminnallisuuden pitäisi pysyä muuttumattomana, ja tästä varmistuminen ilman testejä on erittäin haastavaa.
+Refaktoroinnin melkein ehdoton edellytys -- poislukien yksinkertaiset automaattisesti suoritettavat refaktoroinnit, kuten _rename variable_ -- on kattavien testien olemassaolo. Koska refaktoroinnissa on tarkoitus ainoastaan parantaa luokan tai komponentin sisäistä rakennetta, ulospäin näkyvän toiminnallisuuden pitäisi pysyä muuttumattomana, minkä varmistaminen ilman testejä on erittäin haastavaa.
 
-Refaktoroinnissa kannattaa ehdottomasti edetä pienin askelin eli yksi hallittu muutos kerrallaan. Testit on syytä suorittaa jokaisen refaktorointioperaation jälkeen, jotta mahdollinen regressio, eli aiemmin toimineen koodin hajoaminen huomataan mahdollisimman nopeasti.
+Refaktoroinnissa kannattaa ehdottomasti edetä pienin askelin eli yksi hallittu muutos kerrallaan. Testit on syytä suorittaa jokaisen refaktorointioperaation jälkeen, jotta mahdollinen regressio, eli aiemmin toimineen koodin hajoaminen, huomataan mahdollisimman nopeasti.
 
 Refaktorointia kannattaa tehdä lähes koko ajan. Kun koodin sisäinen laatu säilyy siistinä, on koodin laajentaminen miellyttävää ja pienien refaktorointioperaatioiden tekeminen suhteellisen vaivatonta. Jos koodin sisäinen laatu pääsee rapistumaan, muuttuu sen laajentaminen hitaaksi ja myös refaktoroinnin suorittaminen muuttuu koko ajan työläämmäksi. Monilla ohjelmistokehitystiimeillä onkin _definition of doneen_ kirjattu, että valmiin määritelmä sisältää sen, että koodi on refaktoroitu riittävän siistiksi. Siisteyttä saatetaan valvoa esim. [pull requesteina tehtävänä katselmointina](osa3#koodin-katselmointi-github-ja-pull-requestit).
 
@@ -1456,7 +1456,7 @@ Osa refaktoroinneista, esim. metodien tai luokkien uudelleennimeäminen tai pitk
 
 Koodi ei ole aina sisäiseltä laadultaan optimaalista, ja joskus on jopa asiakkaan kannalta tarkoituksenmukaista tehdä vähemmän laadukasta koodia. Huonoa suunnittelua tai/ja ohjelmointia on ruvettu kuvaamaan käsitteellä _tekninen velka_ (engl. technical debt).
 
-Oikoteitä ottamalla tehdyllä ohjelmoinnilla saadaan ehkä nopeasti aikaan jotain toiminnallisuutta, mutta hätäinen ratkaisu tullaan maksamaan korkoineen takaisin myöhemmin _jos_ ohjelmaa on tarkoitus laajentaa. Käytännössä käy siis niin, että koodiin kertyneet sisäisen laadun ongelmat, eli _tekninen velka_ alkaa hidastamaan kehitystyön etenemistä, ja uusien ominaisuuksien toteuttamisesta tulee koko ajan hankalammaksi ja kalliimmaksi.
+Oikoteitä ottamalla tehdyllä ohjelmoinnilla saadaan ehkä nopeasti aikaan jotain toiminnallisuutta, mutta hätäinen ratkaisu tullaan maksamaan korkoineen takaisin myöhemmin, _jos_ ohjelmaa on tarkoitus laajentaa. Käytännössä siis koodiin kertyneet sisäisen laadun ongelmat, eli _tekninen velka_, alkaa hidastamaan kehitystyön etenemistä. Näin uusien ominaisuuksien toteuttamisesta tulee koko ajan hankalammaksi ja kalliimmaksi.
 
 Toisaalta jos korkojen maksun aikaa ei koskaan tule, eli ohjelma on esimerkiksi pelkkä prototyyppi tai sitä ei koskaan oteta käyttöön, on teknisen velan ottaminen asiakkaan kannalta kannattava ratkaisu.
 
@@ -1464,7 +1464,7 @@ Toisaalta jos korkojen maksun aikaa ei koskaan tule, eli ohjelma on esimerkiksi 
 
 Lyhytaikaisen teknisen velan ottaminen voi joskus olla jopa välttämätöntä. Esimerkiksi markkinatilanteen takia saattaa olla oleellista saada tuote kuluttajille mahdollisimman nopeasti tai muuten tilaisuus saattaa mennä kokonaan ohi. Startup-yrityksillä tilanne voi olla se, että firma joutuu valitsemaan teknisen velan ja varman rahojen loppumisen välillä, eli tekemällä jotain nopeasti huonolla sisäisellä laadulla, firma saattaa pystyä keräämään riittävästi rahoitusta jatkaakseen toimintaansa. Tämänkaltaisissa tilanteissa otetaan tietoisesti teknistä velkaa ja sovelluksen koodin huonosta laadusta ja testauksen puuttumisesta huolehditaan myöhemmin.
 
-Tekninen velka ei siis ole pelkästään paha asia, vaan strategisesti käytettynä hyväkin väline, aivan kuten esim. asuntolaina, ilman lainaa kaikilla ei ole varaa omistusasuntoon. On kuitenkin oleellista mitoittaa lainan määrä oikein, muuten seurauksena saattaa olla luottokelpoisuuden menetys.
+Tekninen velka ei siis ole pelkästään paha asia, vaan strategisesti käytettynä hyväkin väline, aivan kuten esim. asuntolaina, sillä ilman lainaa kaikilla ei ole varaa omistusasuntoon. On kuitenkin oleellista mitoittaa lainan määrä oikein, muuten seurauksena saattaa olla luottokelpoisuuden menetys.
 
 Teknisen velan takana voi siis olla monenlaisia syitä, esim. holtittomuus, osaamattomuus, tietämättömyys tai tarkoituksella tehty päätös. Martin Fowler [jakaa](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html) teknisen velan neljään eri luokkaan:
 
@@ -1475,7 +1475,7 @@ Teknisen velan takana voi siis olla monenlaisia syitä, esim. holtittomuus, osaa
 
 Luokkien 1 ja 2, joista Fowler käyttää termiä _reckless_ eli holtiton tai uhkarohkea, voi ajatella olevan huonoa teknistä velkaa. Toinen syntyy tarkoituksella, eli ajatellen että ei ole aikaa laadulle, toinen taas syntyy osaamattomuuden takia.
 
-Luokat 3 ja 4 ovat harkinnan alla (engl. _prudent_) syntynyttä teknistä velkaa. Luokka 4 on juurikin tilanne, jossa ollaan esim. tekemässä MVP:tä, tai jonkun pakon takia koodi on saatava julkaistua heti ja seuraukset päätetään hoitaa myöhemmin. Luokka 3 on kovin yleinen tilanne, ohjelmistoa suunniteltiin ja rakennettiin parhaiden aikomusten mukaan, mutta vasta paljon myöhemmin, kun arkkitehtuuri ja design on jo lyöty lukkoon vasta opitaan sovelluksen luonteesta sen verran, että tiedetään _kuinka sovellus olisi tullut suunnitella_. Tälläinen tilanne saatetaan päätyä ratkaisemaan refaktoroimalla sovelluksen arkkitehtuuri paremmin tarpeita vastaavaksi.
+Luokat 3 ja 4 ovat harkinnan alla (engl. _prudent_) syntynyttä teknistä velkaa. Luokka 4 on juurikin tilanne, jossa ollaan esim. tekemässä MVP:tä, tai jonkun pakon takia koodi on saatava julkaistua heti ja seuraukset päätetään hoitaa myöhemmin. Luokka 3 on kovin yleinen tilanne, ohjelmistoa suunniteltiin ja rakennettiin parhaiden aikomusten mukaan, mutta vasta paljon myöhemmin, kun arkkitehtuuri ja design on jo lyöty lukkoon vasta, opitaan sovelluksen luonteesta sen verran, että tiedetään _kuinka sovellus olisi tullut suunnitella_. Tälläinen tilanne saatetaan päätyä ratkaisemaan refaktoroimalla sovelluksen arkkitehtuuri paremmin tarpeita vastaavaksi.
 
 ### Lisää suunnittelumalleja <span style="color:blue">[viikko 6]</span>
 
