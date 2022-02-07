@@ -25,7 +25,7 @@ _Verifioinnissa_ pyritään varmistamaan ohjelmiston toteuttavan vaatimusmääri
 
 Validointi taas pyrkii varmistamaan, että ohjelmisto täyttää käyttäjän odotukset ja tarpeet. Vaatimusmäärittelyn aikana kirjatut ohjelmiston vaatimukset eivät ole aina se mitä käyttäjä todella tarvitsee. Validointiin liittyvä oleellinen kysymys onkin _are we building the right product_ eli ollaanko ylipäätään tekemässä oikeaa järjestelmää kulloiseenkin käyttötarkoitukseen.
 
-Verifioinnin ja validoinnin tavoitteena on varmistaa, että ohjelma on "riittävän hyvä" siihen käyttötarkoitukseen, mihin ohjelma on tarkoitettu. Hyvyys on suhteellista ja riippuu ohjelman käyttötarkoituksesta. Ohjelman ei tarvitse yleensä olla täysin virheetön ollakseen kuitenkin riittävän hyvä käyttötarkoitukseensa.
+Verifioinnin ja validoinnin tavoitteena on varmistaa, että ohjelma on "riittävän hyvä" siihen käyttötarkoitukseen, johon ohjelma on tarkoitettu. Hyvyys on suhteellista ja riippuu ohjelman käyttötarkoituksesta. Ohjelman ei tarvitse yleensä olla täysin virheetön ollakseen kuitenkin riittävän hyvä käyttötarkoitukseensa.
 
 Verifioinnin ja validoinnin suorittamista käytetään yleisesti nimitystä _laadunhallinta_ (engl. quality assurance, QA). Jos laadunhallinta on erillisen tiimin vastuulla, käytetään tästä usein nimitystä QA-tiimi.
  
@@ -58,7 +58,7 @@ On ilmeistä, että ketterän mallin käyttämä vaatimusten validointitapa toim
 
 ## Koodin katselmointi
 
-Koodin katselmointi eli koodin lukeminen jonkun muun, kuin ohjelmoijan toimesta on havaittu erittäin tehokkaaksi keinoksi koodin laadun parantamisessa. Katselmoinnin avulla voidaan havaita koodista ongelmia, joita on vaikea havaita testaamalla, esim. noudattaako koodi sovittua tyyliä ja onko koodi ylläpidettävää.
+Koodin katselmointi eli koodin lukeminen jonkun muun kuin ohjelmoijan toimesta on havaittu erittäin tehokkaaksi keinoksi koodin laadun parantamisessa. Katselmoinnin avulla voidaan havaita koodista ongelmia, joita on vaikea havaita testaamalla, esim. noudattaako koodi sovittua tyyliä ja onko koodi ylläpidettävää.
 
 Koodin katselmoinnissa on perinteisesti käyty koodia läpi varmistaen, että koodista ei löydy erilaisissa "checklisteissä" lueteltuja riskialttiita piirteitä. Esimerkiksi eräs c-kielisten ohjelmien katselmoinnin checklist löytyy [täältä](http://www.oualline.com/talks/ins/inspection/c_check.html). Joissakin kielissä, esim. Javassa kääntäjän tekemät tarkastukset tekevät osan linkin takana olevan listan tarkistuksista turhaksi.
 
@@ -270,9 +270,9 @@ Yksikkötestien (ja toki myös muunlaisten testien) hyvyyttä voidaan mitata _te
 
 _Rivikattavuudella_ (engl. line coverage) tarkoitetaan kuinka montaa prosenttia ohjelman koodiriveistä testitapausten suorittaminen käy läpi. Vaikka rivikattavuus olisi 100% ei tämä tietenkään tarkoita, että kaikki oleellinen toiminnallisuus olisi tutkittu.
 
-_Haarautumakattavuudella_ (engl. branch coverage) tarkoitetaan kuinka montaa prosenttia testattavan metodin/luokan sisältävistä ehtolauseiden haaroista testit ovat käyneet läpi.
+_Haarautumakattavuudella_ (engl. branch coverage) tarkoitetaan kuinka monta prosenttia testattavan metodin/luokan sisältävistä ehtolauseiden haaroista testit ovat käyneet läpi.
 
-Monet työkalut, esim. laskareissa käyttämämme JaCoCo mittaavat testien suorituksen yhteydessä testauskattavuuden. Muitakin kattavuuden tyyppejä on olemassa, mm. ehtokattavuus ja polkukattavuus, mutta useat työkalut eivät niitä kuitenkaan tue.
+Monet työkalut, esim. laskareissa käyttämämme JaCoCo, mittaavat testien suorituksen yhteydessä testauskattavuuden. Muitakin kattavuuden tyyppejä on olemassa, mm. ehtokattavuus ja polkukattavuus, mutta useat työkalut eivät niitä kuitenkaan tue.
 
 ![]({{ "/images/3-5.png" | absolute_url }}){:height="350px" }
 
@@ -301,7 +301,7 @@ Lisätietoa mutaatiotestauksesta esim. [wikipediassa](http://en.wikipedia.org/wi
  
 ## Integraatiotestaus
 
-Järjestelmän yksittäiset, erillään yksikkötestatut luokat tulee integroida toimivaksi kokonaisuudeksi. Integroinnin yhteydessä tai sen jälkeen suoritetaan integraatiotestaus, missä painopiste on ohjelman komponenttien välisten rajapintojen toimivuuden tutkimisessa sekä komponenttien yhdessä tuottaman toiminnallisuuden oikeellisuuden varmistamisessa.
+Järjestelmän yksittäiset, erillään yksikkötestatut luokat tulee integroida toimivaksi kokonaisuudeksi. Integroinnin yhteydessä tai sen jälkeen suoritetaan integraatiotestaus, jossa painopiste on ohjelman komponenttien välisten rajapintojen toimivuuden tutkimisessa sekä komponenttien yhdessä tuottaman toiminnallisuuden oikeellisuuden varmistamisessa.
 
 Järjestelmän integrointi voi edetä joko järjestelmän rakenteeseen perustuen tai järjestelmän toteuttamien ominaisuuksien mukaan.
 
@@ -347,7 +347,7 @@ Testaajan rooli muuttuu virheiden etsijästä virheiden estäjään: testaa
 
 Käymme tässä luvussa läpi joukon ketterien menetelmien suosimia testauskäytäntöjä.
  
-_Test driven development_ eli TDD on kehitysmenetelmä, missä testit tehdään jo ennen koodin kirjoittamista. Nimestään huolimatta kyseessä tosin on enemmän suunnittelu- ja toteutustason tekniikka, jonka sivutuotteena syntyy kattava joukko automaattisesti suoritettavia testejä.
+_Test driven development_ eli TDD on kehitysmenetelmä, jossa testit tehdään jo ennen koodin kirjoittamista. Nimestään huolimatta kyseessä tosin on enemmän suunnittelu- ja toteutustason tekniikka, jonka sivutuotteena syntyy kattava joukko automaattisesti suoritettavia testejä.
 
 User storyjen tasolla tapahtuva automatisoitu testaus, joka kulkee nimillä _acceptance test driven development_ ja _behavior driven development_.
 
@@ -361,7 +361,7 @@ Voimakkaasta automatisointitrendistä huolimatta myös manuaalisesti tehtäväll
 
 ## Test driven development 
 
-[Test driven development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) eli TDD (suomeksi testivetoinen kehitys) on yksi [eXtreme Programmingin](http://www.extremeprogramming.org/) käytänteistä, missä siis testit on tarkoitus tehdä ennen varsinaisen koodin kirjoittamista.
+[Test driven development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) eli TDD (suomeksi testivetoinen kehitys) on yksi [eXtreme Programmingin](http://www.extremeprogramming.org/) käytänteistä, jossa siis testit on tarkoitus tehdä ennen varsinaisen koodin kirjoittamista.
 
 Alan auktoriteettien kuten Kent Beckin ja Uncle Bob Martinin [määritelmän mukainen](http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd) TDD etenee seuraavasti
 
@@ -448,7 +448,7 @@ Automatisoidusta hyväksymistestauksesta käytetään joskus nimitystä [Accepta
 
 ATDD:ssä ja BDD:ssä on kyse lähes samasta asiasta pienin painotuseroin. BDD kiinnittää tarkemmin huomiota käytettävään terminologiaan, BDD ei esimerkiksi puhu ollenkaan testeistä vaan sen sijaan kuvailee hyväksymiskriteerit esimerkkikäyttäytymisten (engl. example behavior) avulla. Kurssin Java-versio käyttää pääosin BDD:n nimeämiskäytäntöjä, sillä [Cucumber](https://cucumber.io/) on nimenomaan BDD-piirien kehittämä työkalu.
 
-Käsite ATDD pitää sisällään aina ainoastaan hyväksymistason testauksen. BDD:llä voidaan tehdä myös muita, kuin hyväksymistason testejä. Rubylle alun perin kehitetty [rspec](https://rspec.info/) sanoo olevansa BDD-kirjasto ja se sopii hyväksymistestien lisäksi hyvin myös yksikkötestaamiseen. Muille kielille on tehty paljon rspecin tapaan toimivia BDD-henkisiä kirjastoja, kuten Javascript-maailman [mocha](https://mochajs.org/) ja [jest](https://jestjs.io/). Seuraavaksi käsiteltävä Cucumber on kuitenkin nimenomaan hyväksymistestaukseen työväline, yksikkötestaamiseen sitä ei kannata käyttää.
+Käsite ATDD pitää sisällään aina ainoastaan hyväksymistason testauksen. BDD:llä voidaan tehdä myös muita kuin hyväksymistason testejä. Rubylle alun perin kehitetty [rspec](https://rspec.info/) sanoo olevansa BDD-kirjasto ja se sopii hyväksymistestien lisäksi hyvin myös yksikkötestaamiseen. Muille kielille on tehty paljon rspecin tapaan toimivia BDD-henkisiä kirjastoja, kuten Javascript-maailman [mocha](https://mochajs.org/) ja [jest](https://jestjs.io/). Seuraavaksi käsiteltävä Cucumber on kuitenkin nimenomaan hyväksymistestaukseen työväline, yksikkötestaamiseen sitä ei kannata käyttää.
 
 ### Cucumber
 
@@ -628,9 +628,9 @@ Jokainen sovelluskehittäjän commit kulkee deployment pipelinen eli käsitteell
 
 Käytännöstä, jossa jokainen CI:n läpäisevä ohjelmiston commit, eli versionhallintaan pushattu versio viedään automatisoidusti staging-palvelimelle ja siellä tapahtuvan automatisoidun hyväksymistestauksen jälkeen tuotantoon, nimitetään _jatkuvaksi käyttöönotoksi_ (engl. continuous deployment).
 
-On olemassa tilanteita, missä jokaista commitia ei haluta viedä automaattisesti tuotantoon. Jos viimeinen vaihe, eli tuotantoon vieminen tapahtuukin ainoastaan ihmisen toimesta "nappia painamalla", puhutaan _jatkuvasta toimitusvalmiudesta_, (engl. continuous delivery). 
+On olemassa tilanteita, joissa jokaista commitia ei haluta viedä automaattisesti tuotantoon. Jos viimeinen vaihe, eli tuotantoon vieminen tapahtuukin ainoastaan ihmisen toimesta "nappia painamalla", puhutaan _jatkuvasta toimitusvalmiudesta_, (engl. continuous delivery). 
 
-Viime aikoina on erityisesti suuren kokoluokan web-palveluissa (esim. Google, Amazon, Netflix, Facebook) ruvettu suosimaan tyyliä, jossa ohjelmistosta julkaistaan uusi versio tuotantoon jopa [kymmeniä tai satoja](https://dzone.com/articles/release-frequency-a-need-for-speed) kertoja päivästä. Suomessa tätä käytäntöä harjoittaa mm. monia TKT:n opiskelijoitakin työllistävä [Smartly](https://www.smartly.io/).
+Viime aikoina on erityisesti suuren kokoluokan web-palveluissa (esim. Google, Amazon, Netflix, Facebook) ruvettu suosimaan tyyliä, jossa ohjelmistosta julkaistaan uusi versio tuotantoon jopa [kymmeniä tai satoja](https://dzone.com/articles/release-frequency-a-need-for-speed) kertoja päivässä. Suomessa tätä käytäntöä harjoittaa mm. monia TKT:n opiskelijoitakin työllistävä [Smartly](https://www.smartly.io/).
 
 ## Tutkiva testaaminen
  
@@ -661,13 +661,13 @@ Tutkiva testaaminen siis ei missään tapauksessa ole vaihtoehto normaaleille ta
 
 ## Tuotannossa tapahtuva testaaminen ja laadunhallinta
 
-Perinteisesti on ajateltu, että ohjelmiston laadunhallintaan liittyvä testaus tulee suorittaa ennen kuin ohjelmisto tai sen uudet toiminnallisuudet on otettu käyttöön eli viety tuotantoympäristöön. Viime aikoina erityisesti web-sovellusten kehityksessä on noussut esiin suuntaus, missä osa laadunhallinnasta tapahtuu monitoroimalla tuotannossa olevaa ohjelmistoa.
+Perinteisesti on ajateltu, että ohjelmiston laadunhallintaan liittyvä testaus tulee suorittaa ennen kuin ohjelmisto tai sen uudet toiminnallisuudet on otettu käyttöön eli viety tuotantoympäristöön. Viime aikoina erityisesti web-sovellusten kehityksessä on noussut esiin suuntaus, jossa osa laadunhallinnasta tapahtuu monitoroimalla tuotannossa olevaa ohjelmistoa.
 
 ![]({{ "/images/3-13.png" | absolute_url }}){:height="330px" }
 
 ### Blue-green-deployment
 
-Eräs tuotannossa tapahtuvan testaamisen tekniikka on [blue-green-deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html), missä periaatteena on ylläpitää rinnakkain kahta tuotantoympäristöä (tai palvelinta), joista käytetään usein nimiä blue ja green.
+Eräs tuotannossa tapahtuvan testaamisen tekniikka on [blue-green-deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html), jossa periaatteena on ylläpitää rinnakkain kahta tuotantoympäristöä (tai palvelinta), joista käytetään usein nimiä blue ja green.
 
 Tuotantoympäristöistä vain toinen on ohjelmiston käyttäjien aktiivisessa käytössä. Käyttäjien ja tuotantopalvelinten välissä oleva komponentti, esimerkiksi ns. reverse proxyna toimiva web-palvelin (kuvassa router) ohjaa käyttäjien liikenteen aktiivisena olevaan ympäristöön. 
 
@@ -737,22 +737,22 @@ Suuret internetpalvelut kuten Facebook, Netflix, Google ja Flickr soveltavat laa
 
 ### Feature branchit ja merge hell
 
-Edellisessä luvussa mainittiin [feature branchit](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). Kyseessä on siis käytäntö, missä uudet ominaisuudet, esimerkiksi user storyn vaatima toiminnallisuus toteutetaan ensin omaan versionhallinnan haaraansa (branch) ja ominaisuuden valmistuttua haara mergetään pääkehityshaaraan (esim. masteriin).
+Edellisessä luvussa mainittiin [feature branchit](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). Kyseessä on siis käytäntö, jossa uudet ominaisuudet, esimerkiksi user storyn vaatima toiminnallisuus, toteutetaan ensin omaan versionhallinnan haaraansa (branch) ja ominaisuuden valmistuttua haara mergetään pääkehityshaaraan (esim. masteriin).
 
 Monet pitävät feature brancheja versionhallinnan käytön best practicena. Viime aikoina on kuitenkin monissa piireissä ruvettu pitämään feature branchaystä ikävänä käytänteenä, sillä se johtaa helposti pahoihin merge-konflikteihin, erityisesti jos branchit ovat pitkäikäisiä.
 
-Seurauksena pienimuotoinen integraatiohelvetti, _merge hell_ ja kehitystiimin normipäivä erityisesti sprintin lopussa alkaa muistuttaa seuraavaa
+Seurauksena pienimuotoinen integraatiohelvetti, _merge hell_, ja kehitystiimin normipäivä erityisesti sprintin lopussa alkaa muistuttaa seuraavaa
 
 ![]({{ "/images/3-18.png" | absolute_url }}){:height="80px" }
  
-Viime aikaisena suuntauksena on noussut esiin [trunk based development](https://trunkbaseddevelopment.com/) missä pitkäikäisiä feature brancheja ei käytetä ollenkaan.
+Viime aikaisena suuntauksena on noussut esiin [trunk based development](https://trunkbaseddevelopment.com/), jossa pitkäikäisiä feature brancheja ei käytetä ollenkaan.
 
 Kaikki muutokset tehdään suoraan pääkehityshaaraan, josta käytetään nimitystä _trunk_. Pääkehityshaara voi olla master tai joku erillinen branch käytännöistä riippuen. Ohjelmiston kustakin julkaistusta versiosta saatetaan tarvittaessa tehdä oma _release branch_.
 
 Trunk-pohjainen kehitys pakottaa sovelluskehittäjät tekemään pieniä, nopeasti päähaaraan mergettäviä muutoksia. Trunk-pohjainen kehitys yhdistetään usein feature toggleihin, näin puolivalmiina olevia ominaisuuksia voidaan helposti ohjelmoida suoraan päähaaraan ja viedä tuotantoympäristöön ilman sovelluksen olemassa olevan toiminnallisuuden sotkemista.
 
 Trunk-pohjainen kehitysmalli edellyttää sovelluskehittäjiltä erityisen suurta kuria ja systemaattisuutta. Feature brancheihin perustuva työskentely onkin aloittelijoiden tai vähemmän kurinalaisten kehittäjien kanssa turvallisempi toimintatapa kaikista ongelmistaan huolimatta.
-Feature togglejen holtiton käyttö voi johtaa feature toggle helvettiin, eli suunnittelua ja systemaattisuutta todellakin tarvitaan. 
+Feature togglejen holtiton käyttö voi johtaa feature toggle -helvettiin, eli suunnittelua ja systemaattisuutta todellakin tarvitaan. 
 
 Trunk-pohjaista kehitysmallia noudattavat monet maailman suurimmista internetpalveluista, esim. Google, Facebook ja Netflix.
 
@@ -762,9 +762,9 @@ Jatkuvan toimitusvalmiuden (engl. continuous delivery), jatkuvan käyttöönoton
 
 Perinteisesti yrityksissä on ollut tarkka erottelu sovelluskehittäjien (engl. developers, dev) ja palvelinympäristöistä vastaavien järjestelmäylläpitäjien (engl. operations, ops) välillä. On erittäin tavallista, että sovelluskehittäjät eivät pääse edes kirjautumaan tuotantopalvelimille ja sovellusten tuotantoon vieminen sekä esim. tuotantotietokantaan tehtävät skeeman päivitykset tapahtuvat ainoastaan ylläpitäjien toimesta.
 
-Tälläisessä ympäristössä esim. continuous deploymentin harjoittaminen on lähes mahdotonta. Helposti ajaudutaankin tilanteeseen, missä tuotantopalvelimelle pystytään viemään uusia versioita vain harvoin, esimerkiksi ainoastaan 4 kertaa vuodessa.
+Tälläisessä ympäristössä esim. continuous deploymentin harjoittaminen on lähes mahdotonta. Helposti ajaudutaankin tilanteeseen, jossa tuotantopalvelimelle pystytään viemään uusia versioita vain harvoin, esimerkiksi ainoastaan 4 kertaa vuodessa.
 
-Joustavammat toimintamallit uusien ominaisuuksien tuotantoon viemisessä vaativatkin täysin erilaista kulttuuria, sellaista, missä kehittäjät (dev) ja ylläpito (ops) työskentelevät tiiviissä yhteistyössä. Esim. sovelluskehittäjille tulee antaa tarvittava pääsy tuotantopalvelimelle tai Scrum-tiimiin tulee sijoittaa palvelinten ylläpidosta ja operoinnista huolehtivia ihmisiä. Toimintamallista missä kehittäjät ja ylläpitäjät eli *dev-* ja *ops-ihmiset* työskentelevät tiiviisti yhdessä käytetään nimitystä [DevOps](https://en.wikipedia.org/wiki/DevOps). 
+Joustavammat toimintamallit uusien ominaisuuksien tuotantoon viemisessä vaativatkin täysin erilaista kulttuuria, sellaista, jossa kehittäjät (dev) ja ylläpito (ops) työskentelevät tiiviissä yhteistyössä. Esim. sovelluskehittäjille tulee antaa tarvittava pääsy tuotantopalvelimelle tai Scrum-tiimiin tulee sijoittaa palvelinten ylläpidosta ja operoinnista huolehtivia ihmisiä. Toimintamallista jossa kehittäjät ja ylläpitäjät eli *dev-* ja *ops-ihmiset* työskentelevät tiiviisti yhdessä käytetään nimitystä [DevOps](https://en.wikipedia.org/wiki/DevOps). 
 
 DevOps on termi, joka on nykyään monin paikoin esillä, esimerkiksi työpaikkailmoituksissa voidaan arvostaa DevOps-taitoja tai jopa etsiä ihmistä DevOps-tiimiin. On myös myynnissä mitä erilaisimpia DevOps-työkaluja. On kuitenkin jossain määrin epäselvää mitä kukin tarkoittaa termillä DevOps.
 
@@ -807,7 +807,7 @@ Testit ovat suurelta osin automatisoitavissa, mutta esim. tutkiva testaaminen (e
 
 Kaikilla "neljänneksillä" on oma roolinsa ja paikkansa ketterässä ohjelmistokehityksessä, ja on pitkälti kontekstisidonnaista missä suhteessa testaukseen ja laadunhallintaan käytettävissä olevat resurssit kannattaa kuhunkin neljännekseen kohdentaa.
 
-Kaavio on jo hieman vanha, alunperin vuodelta 2003 joten se ei tunne vielä käsitettä tuotannossa testaaminen.
+Kaavio on jo hieman vanha, alunperin vuodelta 2003, joten se ei tunne vielä käsitettä tuotannossa testaaminen.
 
 ## Loppupäätelmiä testauksesta ja laadunhallinnasta
 
@@ -817,7 +817,7 @@ Ketterissä menetelmissä kantavana teemana on arvon tuottaminen asiakkaalle ja 
 
 Testauksen automatisointi ei ole halpaa eikä helppoa. Väärin, väärään aikaan tai väärälle "tasolle" tehdyt automatisoidut testit voivat tuottaa enemmän harmia ja kustannuksia kuin hyötyä, erityisen suuri riski on käyttöliittymän kautta tehtävillä testeillä.
  
-Jos ohjelmistossa on komponentteja, jotka tullaan ehkä poistamaan tai korvaamaan pian, on useimmiten järkevintä olla automatisoimatta niiden testejä. Esimerkiksi osassa 2 esitelty [MVP eli Minimal Viable Product](/osa2#vaatimusm%C3%A4%C3%A4rittely-2010-luvulla) on karsittu toteutus, jonka avulla halutaan nopeasti selvittää, onko jokin ominaisuus ylipäätään käyttäjien kannalta arvokas. Jos MVP:n toteuttama ominaisuus osoittautuu tarpeettomaksi, se poistetaan järjestelmästä. MVP-periaattella tehty ominaisuus on siis useimmiten viisasta tehdä ilman testien automatisointia.
+Jos ohjelmistossa on komponentteja, jotka tullaan ehkä poistamaan tai korvaamaan pian, on useimmiten järkevintä olla automatisoimatta niiden testejä. Esimerkiksi osassa 2 esitelty [MVP eli Minimal Viable Product](/osa2#vaatimusm%C3%A4%C3%A4rittely-2010-luvulla) on karsittu toteutus, jonka avulla halutaan nopeasti selvittää, onko jokin ominaisuus ylipäätään käyttäjien kannalta arvokas. Jos MVP:n toteuttama ominaisuus osoittautuu tarpeettomaksi, se poistetaan järjestelmästä. MVP-periaatteella tehty ominaisuus on siis useimmiten viisasta tehdä ilman testien automatisointia.
 
 Ongelmallista kuitenkin usein on, että kertakäyttöiseksi tarkoitettu komponentti voi jäädä järjestelmään pitkäksikin aikaa, joskus jopa pysyvästi koska sitä "ei ole aikaa" toteuttaa kunnolla.
 
@@ -845,10 +845,10 @@ Ehdottomasti kaikkein tärkein asia sovelluksen laadunhallinnan kannalta on mahd
 
 ## Tieteellinen evidenssi
 
-Edellä esitellyistä jatkuvan julkaisun ja laadunhallinnan käytenteiden toimivuudesta on runsaasti anekdotaalista evidenssiä ja monista osa-aluiesta on tehny myös akateemista tutkimusta. Myös se, että erinomaisesti menestyneet organisaatiot kuten Google, Netflix, Amazon ja Facebook luottavat näihin käytänteisiin, ja ovat jopa paikoin kehittäneet ne, puhuu niiden puolesta 
+Edellä esitellyistä jatkuvan julkaisun ja laadunhallinnan käytänteiden toimivuudesta on runsaasti anekdotaalista evidenssiä ja monista osa-aluiesta on tehny myös akateemista tutkimusta. Myös se, että erinomaisesti menestyneet organisaatiot kuten Google, Netflix, Amazon ja Facebook luottavat näihin käytänteisiin, ja ovat jopa paikoin kehittäneet ne, puhuu niiden puolesta.
 
 Toistaiseksi vakuuttavimman ja tieteellisesti vakaimmalla pohjalla olevan näkemyksen tarjoaa vuonna 2018 julkaistussa kirjassa
-[Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339) raportoitu vuosina 2013-2017 tehnty laaja, yli 20000 vastaukseen perustuva kyselytutkimus.
+[Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339) raportoitu vuosina 2013–2017 tehty laaja, yli 20000 vastaukseen perustuva kyselytutkimus.
 
 Tutkimustulokset on myös julkaistu korkeatasoisilla vertaisarvioiduilla foorumeilla. Tämän osan kannalta oleellisia tuloksia käsittelee esimerkiksi [Forsgren, Humble: The Role of Continuous Delivery in IT and Organizational Performance](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2681909).
 
@@ -866,7 +866,7 @@ _Select the number that best indicates degree of conformance to your organizatio
 - Time to market
 - Quality and performance of applications
 
-Kuvan vasemmassa reunassa taas on yrityksten harjoittamia käytänteitä: versionhallinta, testiautomaatio, jatkuva integraatio ja tuotantoonviennin automatisointi, siis "DevOps"-käytänteet, jotka muodostavat jatkuvan tuotantoonviennin (continuous delivery) ytimen. Myös näiden käyttöä vastaajaorgaisaatioissa on mitattu kyselytutkimuksessa skaalalla 1-7. 
+Kuvan vasemmassa reunassa taas on yrityksen harjoittamia käytänteitä: versionhallinta, testiautomaatio, jatkuva integraatio ja tuotantoonviennin automatisointi, siis "DevOps"-käytänteet, jotka muodostavat jatkuvan tuotantoonviennin (continuous delivery) ytimen. Myös näiden käyttöä vastaajaorgaisaatioissa on mitattu kyselytutkimuksessa skaalalla 1-7. 
 
 Tutkimus löysi merkittävän yhteyden DevOps-käytänteiden käytön ja yrityksen tehokkaan toiminnan välillä. Mielenkiintoisena "sivutuotteena" käytänteiden intensiiviselle harjoittamiselle on myös korkeampi työtyytyväisyys ja vähäisempi määrä loppuunpalaneita työntekijöitä.
 
@@ -874,7 +874,7 @@ Ylläoleva kuva on vuonna 2016 ilmestyneestä artikkelista. Tässä vaiheessa Fo
 
 Sittemmin tutkimuksen fokus on laajennettu myös firman johtamiskäytänteisiin, useimmat näistä liittyvät Lean-filosofiaan, joka on aiheenamme [osassa 5](/osa5/).
 
-On myös identifioitu lisää organisaatioiden tehokkuuteen liittyviä käytänteitä, mm. trunk based -development ja tuotannossa olevan sovelluksen monitorointi. 
+On myös identifioitu lisää organisaatioiden tehokkuuteen liittyviä käytänteitä, mm. trunk based development ja tuotannossa olevan sovelluksen monitorointi. 
 
 Seuraavassa Accelerate-kirjasta lainattu kuva, joka visualisoi miten eri käytänteet edesauttavat yrityksen tehokkuutta:
 
