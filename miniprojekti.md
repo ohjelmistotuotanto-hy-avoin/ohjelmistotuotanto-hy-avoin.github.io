@@ -61,17 +61,17 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
   - backlogien sisällöstä enemmän [täällä](/miniprojekti#tekniset-ja-prosessiin-liittyvät-vaatimukset)
 - Sprintin 1 [arvosteluperusteet](/miniprojektin_arvosteluperusteet#ensimmäisen-sprintin-arvosteluperusteet) kannattaa lukea huolellisesti
 
-#### Viikko 2 (28.2.-3.3.)
+#### Viikko 2 (28.2.-6.3.)
 
 - Sprintin 1 katselmointi ja sprintin 2 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
-#### Viikko 3 (4-10.3)
+#### Viikko 3 (7-13.3)
 
 - Sprintin 2 katselmointi ja sprintin 3 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 
-#### Viikko 4 (11-17.3.)
+#### Viikko 4 (14-20.3.)
 
 - Sprintin 3 katselmointi (eli loppudemot). Loppudemot järjestetään myöhemmin ilmoitettavana ajankohtana
 - Jokaisen ryhmäläisen tulee olla mukana loppudemossa. Zoom-linkki loppudemoon löytyy palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
@@ -156,4 +156,4 @@ README:sta tulee löytyä ainakin seuraavat asiat:
 
 ### Työn arvostelu
 
-Arvosteluperusteet löytyvät [täältä](/)
+Arvosteluperusteet löytyvät [täältä](/).
