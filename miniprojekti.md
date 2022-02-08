@@ -10,6 +10,7 @@ order: 2
 
 ### Ajankohtaista
 
+- Ilmoittautuminen 21.2. alkavaan miniprojektiin on alkanut. Ilmoittaudu miniprojektiin <a href="{{site.miniproject_enrollment_url}}">ilmoittautumisjärjestelmässä</a>. Ilmoittautuminen päättyy torstaina 17.2. klo 23:59 ja aloitustilaisuuden ajankohta julkaistaan perjantain 18.2. aikana.
 - Miniprojekti järjestetään kahtena eri ajankohtana 21.2.-14.3. ja 28.3.-25.4.
 
 ### Johdanto
