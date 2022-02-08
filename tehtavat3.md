@@ -382,6 +382,8 @@ Jatketaan saman sovelluksen parissa.
 
 Jotta selainta käyttävien testien suorittamien on mahdollista, täytyy lisäksi asentaa halutun selaimen ajuri. Projektin testit käyttävät Chrome-selainta, jolla testejä voi suorittaa käyttämällä [ChromeDriver](https://chromedriver.chromium.org/)-ajuria. Ennen kuin siirrymme testien pariin, asenna ChromeDriver seuraamalla [tätä](https://ohjelmistotuotanto-hy.github.io/chromedriver_asennusohjeet/) ohjetta.
 
+ChromeDriverin kanssa voi käyttää myös Chromium-selainta, mutta se vaatii yhden lisäaskeleen testitiedostossa. Vaadittava lisäys mainitaan alempana.
+
 Kun Chrome-ajuri on asennettu onnistuneesti, **avaa uusi terminaali-ikkuna** ja suorita projektin testit virtuaaliympäristössä komennolla `robot src/tests`. Huomaa, että web-sovelluksen tulee olla käynnissä toisessa terminaali-ikkunassa. Komennon pitäisi suorittaa onnistuneesti kaksi testitapausta, `Login With Correct Credentials` ja `Login With Incorrect Password`. Testitapausten suoritusta voi seurata aukeavasta Chrome-selaimen ikkunasta.
 
 **HUOM:** Windows 10 / WSL2 -käyttäjänä saatat törmätä seuraavaan virheilmoitukseen:
@@ -445,6 +447,7 @@ Tiedostossa on myös ennestään tuntematon `*** Variables ***`-osio. Kuten osio
 `*** Keywords ***`-osiossa on määritelty yleiskäyttöisiä avainsanoja:
 
 - `Open And Configure Browser` -avainsana käynnistää selaimen käyttämällä SeleniumLibrary-kirjaston [Open Browser](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Open%20Browser) -avainsanaa antaen `browser`-argumentin arvoksi `BROWSER`-muuttujan arvon, joka on `chrome`. Lisäksi avainsana asettaa viiveeksi Selenium-komentojen välille `DELAY`-muuttujan arvon käyttämällä [Set Selenium Speed](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Set%20Selenium%20Speed) -avainsanaa. Pidempi viive helpottaa testien suorituksen seuraamista
+    - Jos haluat käyttää Chromiumia Chromen sijaan, tähän kohtaan pitää lisätä sopiva `options`-osio: `Open Browser  browser=${BROWSER} options=binary_location="/polku/chromiumin/sijaintiin"`
 - `Login Page Should Be Open` - ja `Main Page Should Be Open` -avainsanojen tarkoitus on tarkistaa, että käyttäjä on oikealla sivulla. Ne käyttävät [Title Should Be](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Title%20Should%20Be) -avainsanaa, joka tarkistaa HTML-sivun [title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)-elementin arvon. Title-elementin arvon sijaan voisimme esimerkiksi tarkistaa, että sivulta löytyy tietty teksti käyttämällä [Page Should Contain](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Page%20Should%20Contain) -avainsanaa
 - `Go To Login Page` -avainsana käyttää [Go To](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Go%20To) -avainsanaa avatakseen selaimessa kirjautumis-sivun, jonka URL on tallennettu `LOGIN URL`-muuttujaan
 
