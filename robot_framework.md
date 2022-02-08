@@ -62,7 +62,7 @@ Testitapaukset listataan `*** Test Cases ***`-osion alle. Avainsanojen ja testit
 
 ### Testien suorituskelpoiseksi tekeminen
 
-Avainsanojen, kuten `Increase Counter` taustalla on avainsanan tekninen toteutus. Nämä toteutukset tuottavat niin kutsutut _kirjastot_ (libraries). _hello-robot_-projektin _src_-hakemistosta löytyy tiedosto _CounterLibrary.py_. Tiedosto määrittelee luokan `CounterLibrary`:
+Avainsanojen, kuten `Increase Counter`, taustalla on avainsanan tekninen toteutus. Nämä toteutukset tuottavat niin kutsutut _kirjastot_ (libraries). _hello-robot_-projektin _src_-hakemistosta löytyy tiedosto _CounterLibrary.py_. Tiedosto määrittelee luokan `CounterLibrary`:
 
 ```python
 from counter import Counter
@@ -96,7 +96,7 @@ def increment_counter_by(self, amount):
     self._counter.increment(int_amount)
 ```
 
-Huomaa, että kaikki metodit, joiden nimessä ei ole <i>\_</i>-etuliitettä muodostavat avainsanan toteutuksen. Jos haluat tehdä kirjastoon metodin, josta et halua avainsanaa, nimeä se <i>\_</i>-etuliitteellä:
+Huomaa, että kaikki metodit, joiden nimessä ei ole <i>\_</i>-etuliitettä, muodostavat avainsanan toteutuksen. Jos haluat tehdä kirjastoon metodin, josta et halua avainsanaa, nimeä se <i>\_</i>-etuliitteellä:
 
 ```python
 from counter import Counter
