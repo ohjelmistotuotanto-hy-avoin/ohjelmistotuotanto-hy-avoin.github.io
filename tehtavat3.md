@@ -109,9 +109,9 @@ Joel Armia           MTL 16 + 14 = 30
 
 ### 3. Pelaajalistan refaktorointi
 
-Tällä hetkellä suurin osa pelaajatietoihin liittyvästä koodista on luultavasti `main`-funktiossa. Funktion _koheesion_ aste on melko matala, koska se keskittyy usean toiminallisuuden toteuttamiseen. Koodi kaipaisi siis pientä refaktorointia.
+Tällä hetkellä suurin osa pelaajatietoihin liittyvästä koodista on luultavasti `main`-funktiossa. Funktion _koheesion_ aste on melko matala, koska se keskittyy usean toiminnallisuuden toteuttamiseen. Koodi kaipaisi siis pientä refaktorointia.
 
-Jaa toiminallisuuden vastuut kahdelle luokkalle: `PlayerReader` ja `PlayerStats`. `PlayerReader`-luokan vastuulla on hakea JSON-muotoiset pelaajat konstruktorin parametrin kautta annetusta osoitteesta ja muodostaa niistä `Player`-olioita. Tämä voi tapahtua esimerkiksi luokan `get_players`-metodissa. `PlayerStats`-luokan vastuulla on muodostaa `PlayerReader`-luokan tarjoamien pelaajien perusteella erilaisia tilastoja. Tässä tehtävässä riittää, että luokalla on metodi `top_scorers_by_nationality`, joka palauttaa parametrina annettetun kansalaisuuden pelaajat pisteiden mukaan laskevassa järjestyksessä (suurin pistemäärä ensin).
+Jaa toiminnallisuuden vastuut kahdelle luokalle: `PlayerReader` ja `PlayerStats`. `PlayerReader`-luokan vastuulla on hakea JSON-muotoiset pelaajat konstruktorin parametrin kautta annetusta osoitteesta ja muodostaa niistä `Player`-olioita. Tämä voi tapahtua esimerkiksi luokan `get_players`-metodissa. `PlayerStats`-luokan vastuulla on muodostaa `PlayerReader`-luokan tarjoamien pelaajien perusteella erilaisia tilastoja. Tässä tehtävässä riittää, että luokalla on metodi `top_scorers_by_nationality`, joka palauttaa parametrina annetun kansalaisuuden pelaajat pisteiden mukaan laskevassa järjestyksessä (suurin pistemäärä ensin).
 
 Refaktoroinnin jälkeen `main`-funktion tulee näyttää suurin piirtein seuraavalta:
 
@@ -378,7 +378,7 @@ Jatketaan saman sovelluksen parissa.
 
 **Käynnistä web-sovellus edellisen tehtävän tapaan komentoriviltä.** Varmista selaimella, että sovellus on päällä.
 
-[Selenium WebDriver](http://docs.seleniumhq.org/projects/webdriver/) -kirjaston avulla on mahdollista simuloida selaimen käyttöä koodista käsin. Seleniumin käyttö Robot Framework -testeissä onnistuu valmiin, [SeleniumLibrary](https://robotframework.org/SeleniumLibrary/)-kirjaston avulla.
+[Selenium WebDriver](http://docs.seleniumhq.org/projects/webdriver/) -kirjaston avulla on mahdollista simuloida selaimen käyttöä koodista käsin. Seleniumin käyttö Robot Framework -testeissä onnistuu valmiin [SeleniumLibrary](https://robotframework.org/SeleniumLibrary/)-kirjaston avulla.
 
 Jotta selainta käyttävien testien suorittamien on mahdollista, täytyy lisäksi asentaa halutun selaimen ajuri. Projektin testit käyttävät Chrome-selainta, jolla testejä voi suorittaa käyttämällä [ChromeDriver](https://chromedriver.chromium.org/)-ajuria. Ennen kuin siirrymme testien pariin, asenna ChromeDriver seuraamalla [tätä](https://ohjelmistotuotanto-hy.github.io/chromedriver_asennusohjeet/) ohjetta.
 
@@ -463,7 +463,7 @@ Test Setup  Create User And Go To Login Page
 
 Osiossa on käytössä ennestään tuntemattomat `Suite Setup`-, `Suite Teardown`- ja `Test Setup`-asetukset. Niiden merkitykset ovat seuraavat:
 
-- `Suite Setup`-asetuksen avulla voimme suorittaa avainsanan ennen tiedoston esimmäistä testitapausta (`Test Setup` sen sijaan suoritetaan ennen _jokaista_ testitapausta)
+- `Suite Setup`-asetuksen avulla voimme suorittaa avainsanan ennen tiedoston ensimmäistä testitapausta (`Test Setup` sen sijaan suoritetaan ennen _jokaista_ testitapausta)
 - `Suite Teardown`-asetuksen avulla voimme suorittaa avainsanan tiedoston viimeisen testitapauksen jälkeen (`Test Teardown` sen sijaan suoritetaan _jokaisen_ testitapauksen jälkeen)
 
 Tiedoston `*** Keywords ***` osiossa on testitapausten käyttämiä avainsanoja:
@@ -550,7 +550,7 @@ class AppLibrary:
         requests.post(f"{self._base_url}/register", data=data)
 ```
 
-Kirjaston toteutus eroaa jonkin verran edellisestä, komentoriviä hyödyntävän projektin kirjaston toteutuksesta. Erona on, että tässä projektissa testit ja itse sovellus suoritetaan eri prosesseissa, joten testit eivät voi suoraan muuttaa sovelluksen tilaa. Voimme kuitenkin muutta sovelluksen tilaa HTTP-kutsujen avulla jo tutuksi tulleen requests-kirjaston avulla.
+Kirjaston toteutus eroaa jonkin verran edellisestä, komentoriviä hyödyntävän projektin kirjaston toteutuksesta. Erona on, että tässä projektissa testit ja itse sovellus suoritetaan eri prosesseissa, joten testit eivät voi suoraan muuttaa sovelluksen tilaa. Voimme kuitenkin muuttaa sovelluksen tilaa HTTP-kutsujen avulla jo tutuksi tulleen requests-kirjaston avulla.
 
 Metodi `reset_application` lähettää _POST_-tyyppisen pyynnön sovelluksen polkuun "/tests/reset". Pyynnön käsittelee seuraava funktio:
 
