@@ -151,6 +151,6 @@ lue joku alla olevista ja tee siitä noin 0.25 sivun referaatti
 
 ### 6. Kurssipalaute
 
-Anna kurssipalautetta [täällä](https://coursefeedback.helsinki.fi/targets/4589434/feedback). Voit antaa palautteen myös kokeen jälkeen. Rasti tähän tehtävään on lupaus että annat palautteen jossain vaiheessa. Palautetta voi antaa välillä 15.12.2021 - 29.12.2021
+Anna kurssipalautetta [täällä](https://coursefeedback.helsinki.fi/targets/4589434/feedback). Voit antaa palautteen myös kokeen jälkeen. Rasti tähän tehtävään on lupaus että annat palautteen jossain vaiheessa. Palautetta voi antaa välillä 25.3.2022 - 15.5.2022
 
 {% include submission_instructions.md %}
