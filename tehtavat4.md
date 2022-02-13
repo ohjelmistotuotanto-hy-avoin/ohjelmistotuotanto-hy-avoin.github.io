@@ -27,7 +27,7 @@ Useimmilla luokilla on riippuvuuksia toisiin luokkiin. Esim. [viikon 2](/tehtava
 Vaikka luokilla ei olisikaan riippuvuuksia toisiin luokkiin, luokan oliot käyttävät yhä joidenkin toisten luokkien olioiden palveluita. Tämä tekee yksikkötestauksesta hankalaa. Miten esim. luokkaa `Kauppa` tulisi testata? Tuleeko kaupan testeissä olla mukana toimivat versiot kaikista sen riippuvuuksista?
 
 
-Olemme jo muutamaan otteeseen -- esimerkiksi NHL-tilastot-tehtävässä [viikolla 1](/tehtavat1#15-riippuvuuksien-injektointi-osa-2-nhl-tilastot) -- ratkaismeet asian ohjelmoimalla riippuvuuden korvaavan "tynkäkomponentin". Pythonille kuten kaikille muillekin kielille on tarjolla myös valmiita kirjastoja tynkäkomponenttien, toiselta nimeltään _mock-olioiden_ luomiseen.
+Olemme jo muutamaan otteeseen -- esimerkiksi NHL-tilastot-tehtävässä [viikolla 1](/tehtavat1#15-riippuvuuksien-injektointi-osa-2-nhl-tilastot) -- ratkaisseet asian ohjelmoimalla riippuvuuden korvaavan "tynkäkomponentin". Pythonille kuten kaikille muillekin kielille on tarjolla myös valmiita kirjastoja tynkäkomponenttien, toiselta nimeltään _mock-olioiden_, luomiseen.
 
 Kuten pian huomaamme, mock-oliot eivät ole pelkkiä "tynkäolioita", mockien avulla voi myös varmistaa, että testattava metodi tai funktio kutsuu olioiden metodeja asiaankuuluvalla tavalla.
 
@@ -104,7 +104,7 @@ kauppa.lisaa_ostos(7)
 kauppa.maksa("1111")
 ```
 
-Ostokset aloitetaan tekemällä metodikutsu `aloita_ostokset`. Tämän jälkeen "ostoskoriin" lisätään tuotteita, joiden hinta kerrotaan metodin `lisaa_ostos` parametrina. Ostokset lopetetaan kutsumalla metodia `maksa`, joka saa parametriksi tilinumeron miltä summa veloitetaan.
+Ostokset aloitetaan tekemällä metodikutsu `aloita_ostokset`. Tämän jälkeen "ostoskoriin" lisätään tuotteita, joiden hinta kerrotaan metodin `lisaa_ostos` parametrina. Ostokset lopetetaan kutsumalla metodia `maksa`, joka saa parametriksi tilinumeron, jolta summa veloitetaan.
 
 Kauppa tekee veloituksen käyttäen tuntemaansa luokan `Pankki` oliota. Viitenumerona käytetään luokan `Viitegeneraattori` generoimaa numeroa.
 
@@ -141,7 +141,7 @@ kauppa = Kauppa(pankki_mock, viitegeneraattori_mock)
 
 Eli nyt viitegeneraattori_mock on olio, jonka metodi `uusi` palauttaa arvot 1, 2, 3... 
 
-Testi tarkastaa kaupalle tehtyjen metodikutsujen aiheuttavan pankin `Mock`-olion metodin `maksa` on kutsumisen oikeilla parametreilla. Kolmanteen parametriin, eli viitenumeroon ei kiinnitetä huomiota:
+Testi tarkastaa kaupalle tehtyjen metodikutsujen aiheuttavan pankin `Mock`-olion metodin `maksa` kutsumisen oikeilla parametreilla. Kolmanteen parametriin, eli viitenumeroon, ei kiinnitetä huomiota:
 
 ```python
 pankki_mock.maksa.assert_called_with("1111", 10, ANY)
@@ -184,7 +184,7 @@ Voit tutusta aiheeseen tarkemmin lukemalla mock-kirjaston [dokumentaatiota](http
 
 **Hae seuraavaksi [kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko4/maksukortti-mock_ oleva projekti.**
 
-Tässä tehtävässä on testataan ja täydennetään luokkaa `Kassapaate`. **Maksukortin koodiin ei tehtävässä saa koskea ollenkaan! Testeissä ei myöskään ole tarkoitus luoda konkreettisia instansseja maksukortista, testien tarvitsemat kortit tulee luoda mock-kirjaston avulla.**
+Tässä tehtävässä testataan ja täydennetään luokkaa `Kassapaate`. **Maksukortin koodiin ei tehtävässä saa koskea ollenkaan! Testeissä ei myöskään ole tarkoitus luoda konkreettisia instansseja maksukortista, testien tarvitsemat kortit tulee luoda mock-kirjaston avulla.**
 
 Projektissa on valmiina kaksi testiä:
 
@@ -216,7 +216,7 @@ class TestKassapaate(unittest.TestCase):
         maksukortti_mock.osta.assert_not_called()
 ```
 
-Ensimmäisessä testissä varmistetaan, että jos kortilla on riittävästi rahaa, kassapäätteen metodin `osta_lounas` kutsuminen velottaa summan kortilta.
+Ensimmäisessä testissä varmistetaan, että jos kortilla on riittävästi rahaa, kassapäätteen metodin `osta_lounas` kutsuminen veloittaa summan kortilta.
 
 Testi ottaa siis kantaa ainoastaan siihen miten kassapääte kutsuu maksukortin metodeja. Maksukortin saldoa ei erikseen tarkasteta, sillä oletuksena on, että maksukortin omat testit varmistavat kortin toiminnan.
 
@@ -434,7 +434,7 @@ Luokkia `Tuote` ja `Ostos` ei tässä tehtävässä tarvitse muuttaa ollenkaan.
 
 *Lisää ja commitoi muutokset repositorioon jokaisen vaiheen jälkeen, anna kuvaava commit-viesti.*
 
-#### 1. Luodun ostoskorin hinta ja tavaroiden määrä määrä on 0.
+#### 1. Luodun ostoskorin hinta ja tavaroiden määrä on 0.
 
 Tehtäväpohjassa on yksi valmis testi
 
