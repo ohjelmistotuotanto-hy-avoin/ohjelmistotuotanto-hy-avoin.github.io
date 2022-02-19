@@ -70,7 +70,7 @@ _Jatkuva parantaminen_ määrittelee pohjimmiltaan koko Toyotan toimintakulttuur
 
 _The root of the Toyota Way is to be dissatisfied with the status quo; you have to ask constantly, "Why are we doing this?"._
 
-Jatkuvaan oppimiseen ja toiminnan parantamiseen kannustava ilmapiiri taas on mahdollista ainoastaan, jos kaikki toiminta perustuu _ihmisten kunnioittamiseen_. Joka taas tarkoittaa monia konkreettisia asioita, esim. työntekijöiden kuuntelemista, vastuuttamista ja mentorointia, työympäristön mielekkyyttä ja turvallisuutta. Toyota laajentaa periaatteen kattamaan myös alihankkijat ja loppuasiakkaat, esimerkiksi alihankkijoiden kanssa Toyota rakentaa aitoja partneriuksia, joista molemmat hyötyvät sekä opettaa alihankkijoille lean-ajattelua.  
+Jatkuvaan oppimiseen ja toiminnan parantamiseen kannustava ilmapiiri taas on mahdollista ainoastaan, jos kaikki toiminta perustuu _ihmisten kunnioittamiseen_. Joka taas tarkoittaa monia konkreettisia asioita, esim. työntekijöiden kuuntelemista, vastuuttamista ja mentorointia, työympäristön mielekkyyttä ja turvallisuutta. Toyota laajentaa periaatteen kattamaan myös alihankkijat ja loppuasiakkaat, esimerkiksi alihankkijoiden kanssa Toyota rakentaa aitoja kumppanuuksia, joista molemmat hyötyvät sekä opettaa alihankkijoille lean-ajattelua.  
 
 Kaikki tämä kuulostaa abstraktilta, ja asia toivon mukaan konkretisoituu hieman kun käsittelemme hetken päästä leanin tavoitteeseen ja peruspilareihin nojaavia _lean-periaatteita_ (engl. lean principles), jotka ohjaavat konkreettisemmin leania toimintaa.
 
