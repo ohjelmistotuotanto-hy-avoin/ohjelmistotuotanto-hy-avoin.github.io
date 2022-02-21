@@ -5,8 +5,6 @@ inheader: no
 permalink: /tehtavat7/
 ---
 
-{% include poetry_fix.md %}
-
 {% include guidance_info.md %}
 
 ### Typoja tai epäselvyyksiä tehtävissä?
