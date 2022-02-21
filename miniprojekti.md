@@ -41,7 +41,7 @@ order: 2
   - sprint backlog
   - hyväksymäkriteeri
   - definition of done
-- Tämä dokumentti ja miniprojektin [arvosteluperusteet]() on myös syytä lukea huolellisesti ennen aloitustilaisuutta
+- Tämä dokumentti ja miniprojektin [arvosteluperusteet](/miniprojektin_arvosteluperusteet) on myös syytä lukea huolellisesti ennen aloitustilaisuutta
 - Ryhmä keksii itselleen nimen, luo Github-repositorion ja rekisteröi itsensä palautussovellukseen <{{site.stats_url}}>
   - **Yksi ryhmäläinen** kirjautuu järjestelmään, menee välilehdelle _miniprojects_
     - Luo projektin _create project_ -napista avautuvasta lomakkeesta
@@ -66,20 +66,23 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
 
 - Sprintin 1 katselmointi ja sprintin 2 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
+- Sprintin 2 [arvosteluperusteet](/miniprojektin_arvosteluperusteet#toisen-sprintin-arvosteluperusteet) kannattaa lukea huolellisesti
 
 #### Viikko 3 (7-13.3)
 
 - Sprintin 2 katselmointi ja sprintin 3 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
+- Sprintin 3 [arvosteluperusteet](/miniprojektin_arvosteluperusteet#kolmannen-sprintin-arvosteluperusteet) kannattaa lukea huolellisesti
 
 #### Viikko 4 (14-20.3.)
 
 - Sprintin 3 katselmointi (eli loppudemot). Loppudemot järjestetään myöhemmin ilmoitettavana ajankohtana
 - Jokaisen ryhmäläisen tulee olla mukana loppudemossa. Zoom-linkki loppudemoon löytyy palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
+- Miniprojektin [lopputoimenpiteisiin](/miniprojektin_arvosteluperusteet#lopputoimenpiteet) liittyvät vaatimukset kannattaa lukea huolellisesti
 
 ### Toteutettava ohjelmisto
 
-- [Aiheen kuvaus]()
+- [Aiheen kuvaus](/speksi)
 
 ### Tekniset ja prosessiin liittyvät vaatimukset
 
@@ -157,4 +160,4 @@ README:sta tulee löytyä ainakin seuraavat asiat:
 
 ### Työn arvostelu
 
-Arvosteluperusteet löytyvät [täältä](/).
+Arvosteluperusteet löytyvät [täältä](/miniprojektin_arvosteluperusteet).

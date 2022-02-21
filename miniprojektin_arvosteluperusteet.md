@@ -32,7 +32,7 @@ Miniprojektista saa maksimissaan 9 kurssipistettä seuraavien kriteereiden ja pe
 
 Perusteeton osallistumattomuus johonkin sprinttiin johtaa miniprojektisuorituksen hylkäämiseen.
 
-### Ensimmäisen sprintin arvosteluperusteet
+## Ensimmäisen sprintin arvosteluperusteet
 
 Projekti tulee olla rekisteröity osoitteeseen <{{site.stats_url}}>.
 
@@ -56,13 +56,13 @@ Pisteitä kertyy seuraavista asioista:
   - Jokaiseen taskiin on merkitty sen tekijä(t)
   - Taskin status on näkyvissä (esim. todo, doing, done)
 - (0.25p) sprintiin 1 valittujen storyjen hyväksymiskriteerit kirjattu
-- (0.5p) testaus
+- (0.25p) testaus
   - Toteutettua koodia on yksikkötestattu kohtuullisella tasolla
   - Ainakin jossain storyssa hyväksymiskriteerien testausta (Cucumber tai Robot Framework)
 - (0.25p) jatkuva integraatio
   - Koodi GitHubissa
   - GitHub Actions (tai jokin muu CI-palvelu) suorittaa ainakin yksikkötestit ja ne menevät läpi
-- (0.5p) toteutus
+- (0.25p) toteutus
   - Ainakin _yksi_ sprintin tavoitteeseen sovituista storyista toteutettu _definition of donen_ mukaisella tasolla
 - (0.25p) työtä tehty tasaisesti
   - Kaikki työ ei saa olla yhtenä päivänä tehty
@@ -92,9 +92,10 @@ Pisteitä kertyy seuraavista asioista:
 - (0.25p) kattavahko testaus yksikkö- ja storytasolla
 - (0.25p) jatkuva integraatio
   - CI-palvelu suorittaa testit
-- (0.25p) GitHubin README:stä linkki testikattavuusraporttiin
+- (0.125p) GitHubin README:stä linkki testikattavuusraporttiin
+- (0.25p) projektille määritelty järkevät Pylint- tai checkstylesäännöt jotka tarkistetaan CI:n toimesta
 - (0.5p) suurin osa sprintin user storyistä toteutettu definition of donen mukaisella tasolla
-- (0.25p) toimivasta, demossa näytettävästä versiosta on luotu GitHubiin [release](https://help.github.com/articles/creating-releases/).
+- (0.125p) toimivasta, demossa näytettävästä versiosta on luotu GitHubiin [release](https://help.github.com/articles/creating-releases/).
   - Jos kyseessä on konsolisovellus, releaseen liitetään projektin ajettava jar-tiedosto
 - (0.25p) sprintin katselmointiin on valmistauduttu asiallisesti
   - Katselmoinnin pitää eri henkilö, kuin edellisessä katselmoinnissa
@@ -137,7 +138,7 @@ Sprintin maksimi on 2.5 pistettä.
 #### Vertaispalaute
 
 - Arvosteluperusteiden alussa mainittu henkilökohtainen pisteytys perustuu mm. vertaispalautteeseen
-- Jokaisen ryhmäläisen tulee antaa **vertaispalaute viimeistään tiistaina 4.5. klo 23:59**
+- Jokaisen ryhmäläisen tulee antaa **vertaispalaute viimeistään sunnuntaina 20.3. klo 23:59**
   - Vertaispalautteen antaminen on _pakollista_. Jos vertaispalaute puuttuu, ovat miniprojektin henkilökohtaiset pisteet -1.5p
 - Vertaispalautteen antaminen tapahtuu [tehtävänpalautussovelluksen]({{site.stats_url}}) miniproject-tabissa
   - Ryhmäläiset eivät näe toistensa vertaispalautteita
@@ -152,9 +153,9 @@ Vertaispalautteen lisäksi ryhmä laatii projektin kulusta pienen raportin (noin
 - Jos raportti puuttuu, vähennetään ryhmältä 2 pistettä
 - Raportti palautetaan lisäämällä raporttiin linkki projektin GitHubin README:hen
 - Raportista tulee ilmetä jokaisen projektiin osallistuneen nimi
-- **raportin deadline tiistaina 4.5. klo 23:59**
+- **Raportin deadline sunnuntaina 20.3. klo 23:59**
 
-### Varmista, että commitisi näkyvät githubissa oikein
+### Varmista, että commitisi näkyvät GitHubissa oikein
 
 Koska Githubiin tehtävien commitien määrä (ja laatu) vaikuttaa henkilökohtaisiin pisteisiin, varmista, että olet konfiguroinit email-osoitteesi gitiin (ks. [viikon 1 laskareiden tehtävä 2](/tehtavat1/#2-githubiin-versionhallinta)), ja että commitatessasi ryhmäsi repositorioon tunnuksesi näkyy oikein repositorion commit-listalla, ja että tunnuksesi tulee repositorion [contributors](https://github.com/ohjelmistotuotanto-hy/ohjelmistotuotanto-hy.github.io/graphs/contributors)-listalle.
 
