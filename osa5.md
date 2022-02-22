@@ -225,7 +225,7 @@ Toteutettavaa toiminnallisuutta, esim. user storyä tai jotain sen teknistä tas
 
 Virtaus, eli yksittäisen storyn nopea valmistuminen, saadaan aikaan rajoittamalla tietyissä työvaiheissa kesken olevan työn määrää asettamalla _work in progress_ (WIP) -rajoitteilla.
 
-Allaolevassa kuvassa oleva kanban-taulu on jaettu kolmeen työvaiheeseen, _analysis_, _develop_ ja test_, joille kullekin on asetettu WIP-rajoite. Työvaiheiden väliin on myös sijoitettu välivarastoja, _dev ready_ ja _build ready_, joilla myös on WIP-rajoitteet. 
+Allaolevassa kuvassa oleva kanban-taulu on jaettu kolmeen työvaiheeseen, _analysis_, _develop_ ja _test_, joille kullekin on asetettu WIP-rajoite. Työvaiheiden väliin on myös sijoitettu välivarastoja, _dev ready_ ja _build ready_, joilla myös on WIP-rajoitteet. 
 
 ![]({{ "/images/5-3.png" | absolute_url }}){:height="400px" }
 
