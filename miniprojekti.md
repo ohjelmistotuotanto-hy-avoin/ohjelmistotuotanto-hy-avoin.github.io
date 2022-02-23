@@ -15,7 +15,7 @@ order: 2
 
 ### Johdanto
 
-- Kurssin suorittaminen  edellyttää hyväksyttyä osallistumista miniprojektiin tai sen [hyväksilukemista](/osa0#miniprojektin-hyv%C3%A4ksilukeminen)
+- Kurssin suorittaminen edellyttää hyväksyttyä osallistumista miniprojektiin tai sen [hyväksilukemista](/osa0#miniprojektin-hyv%C3%A4ksilukeminen)
 - Voit osallistua miniprojektiin siinä vaiheessa kun olet tehnyt vähintään kurssin neljän ensimmäisen viikon tehtävät
 - Projekti tehdään noin 4-6 hengen ryhmissä
 - Projektissa ohjelmoidaan jonkin verran, **pääpaino ei ole ohjelmoinnissa** vaan systemaattisen prosessin (tästä lisää myöhemmin) noudattamisessa.
@@ -102,14 +102,14 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
     - taskin tila (esim. aloitettu, ohjelmoitu, testauksessa, valmis)
     - taskin tekijä(t)
 - Ryhmä toteuttaa jatkuvaa integraatiota (continuous integration)
-  - Oletusarvoisesti kannattaa käyttää laskareista 1 tuttua GitHub Actionsia, muita vaihtoehtoja esim. TravisCI
+  - Oletusarvoisesti kannattaa käyttää laskareista 1 tuttua Github Actionsia, muita vaihtoehtoja esim. TravisCI
 - Koodi on talletettu GitHub:iin
 - Projektin GitHub-repositoriolla on järkevä README.md
 
 #### Product ja sprint backlog
 
 - Backlogissa vaatimukset ilmaistaan järkevästi muotoiltuna user storyinä
-  - **Miniprojektissa ei ole tarvetta estimoida user storya**, ainoastaan sprintissä olevien taskien työmäärä estimoidaan
+  - **miniprojektissa ei ole tarvetta estimoida user storya**, ainoastaan sprintissä olevien taskien työmäärä estimoidaan
 - Kuten edellä todettiin sprint backlogista tulee ilmetä kunkin taskin osalta
   - Jäljellä olevan työajan estimaatti
   - Taskin tila (esim. aloitettu, ohjelmoitu, testauksessa, valmis)
@@ -118,25 +118,25 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
   - Erään ohtuprojektin [backlogit](https://docs.google.com/spreadsheets/d/13RzIZI2NFFuV0zdRjrrfoC-CrootK8AZNuHS571Wlxo/edit#gid=1)
   - <http://www.mountaingoatsoftware.com/scrum/sprint-backlog> (tämä on sikäli huono, että siitä eivät ilmene taskin tekijät)
 - Backlogit voi tehdä Google Docsin sijaan myös johonkin backlogien ylläpitämiseen tarkoitettuun työkaluun
-  - Kannattaa varmistaa, että työkalu kuitenkin tulee edellä lueteltuja vaatimuksia
+  - Kannattaa varmistaa, että työkalu kuitenkin tukee edellä lueteltuja vaatimuksia
   - Esim. <https://trello.com> ei tue scrum-tyylisiä backlogeja oikeastaan ollenkaan, ja **Trelloa kannattaakin välttää tässä projektissa**
 
 #### Definition of done
 
-Seuraavassa lähtökohta definition of donelle. Ryhmän tulee määritellä GitHub-repositorioon oma, omiin lähtökohtiin sopiva DoD
+Seuraavassa lähtökohta definition donelle. Ryhmän tulee määritellä GitHub-repositorioon oma, omiin lähtökohtiin sopiva DoD
 
-- User storyille tulee määritellä hyväksymiskriteerit, jotka dokumentoidaan [Cucumberin](/cucumber/) featureiksi, tai [Robot Frameworkin](/robot_framework) testitapauksiksi
+- User storyille tulee määritellä hyväksymiskriteerit, jotka dokumentoidaan [Cucumberin](/cucumber/) tai [Robot Frameworkin](/robot_framework/) syntaksilla
   - Hyvänä käytänteenä on laittaa README:stä linkki hyväksymäkriteerit määritteleviin tiedostoihin
 - Toteutetun koodin testikattavuuden tulee olla kohtuullinen (esim. noin 70% muiden paitsi triviaalin koodin, kuten gettereiden/settereiden osalta)
 - Asiakas pääsee näkemään koko ajan koodin ja testien tilanteen CI-palvelusta
 - Koodin ylläpidettävyyden tulee olla mahdollisimman hyvä
   - Järkevä nimeäminen
   - Järkevä/selkeä ja perusteltu arkkitehtuuri
-  - Yhtenäinen koodityyli
+  - Yhtenäinen koodityyli (noudattaa pylintin tai checkstylen avulla määriteltyjä sääntöjä)
 
 #### Repositorio ja README
 
-README:sta tulee löytyä ainakin seuraavat asiat:
+README:ssa tulee löytyä ainakin seuraavat asiat:
 
 - Linkit backlogeihin (backlogeista tulee olla luettavissa olevat versiot julkisessa internetissä)
 - Linkki CI-palveluun
