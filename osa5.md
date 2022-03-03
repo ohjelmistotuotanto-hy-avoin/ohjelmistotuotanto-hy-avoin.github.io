@@ -105,7 +105,7 @@ Ohjelmistojen ylimääräisten toiminnallisuuksien voidaan ajatella olevan ylitu
 
 #### Välivarastointi (engl. in-process inventory)
 
-Tähän kategoriaan kuuluu osittain tehty työ ja sen säilöminen, eli esim. komponentit joille ei vielä ole käyttöä. Ongelmat ovat samat kuin ylituotannossa.
+Tähän kategoriaan kuuluu osittain tehty työ ja sen säilöminen. Esimerkiksi komponentit, joille ei vielä ole käyttöä. Ongelmat ovat samat kuin ylituotannossa.
 
 Ohjelmistokehityksessä välivarastointia ovat esim. liian tarkkaan tehty vaatimusmäärittely sellaisille ominaisuuksille, joita ei vielä hetkeen toteuteta, valmis koodi jota ei ole vielä testattu tai otettu käyttöön tai koodi, joka toteuttaa asiakkaan ehkä tulevaisuudessa haluamia toiminnallisuuksia.
 
@@ -143,13 +143,13 @@ Ohjelmistokehityksessä tuotteeseen tulee lähes väistämättä vikoja, ja on k
 
 Nämä alkuperäiset vuosikymmeniä sitten autonvalmistuksen kontekstiin sovitetut 7 muda-hukkaa on tulkittu uudelleen yhä uusiin konteksteihin, kuten ohjelmistokehitykseen. 
 
-Vuosien varrella on ehdotettu myös uusia hukan muotoja, näistä _ihmisten potentiaalin alihyödyntäminen_ on jossain määrin jo vakiintunut. Englanniksi tätä hukan muotoa kuvaillaan seuraavasti: _Under-realizing people’s potential and varied skill, insight, ideas, suggestion._
+Vuosien varrella on ehdotettu myös uusia hukan muotoja, näistä _ihmisten potentiaalin alihyödyntäminen_ on jossain määrin jo vakiintunut. Englanniksi tätä hukan muotoa kuvaillaan seuraavasti: _Under-realizing people’s potential and varied skill, insight, ideas, suggestions._
  
 #### Muri- ja mura-tyyppinen hukka
 
 Äsken käsitelty _muda_-tyyppinen hukka eri muodoissaan on eniten esillä oleva leanin hukan muodoista, ja joissain lähteissä ei muita kahta hukkatyyppiä eli _muraa_ ja _muria_ välttämättä edes mainita.
 
-_Mura_-tyyppinen hukka on epäsäännöllisyyttä tai epäyhdenmukaisuutta (engl. unevenness, non-uniformity, irregularity), työtavoissa tai työstettävässä tuotteessa. 
+_Mura_-tyyppinen hukka on epäsäännöllisyyttä tai epäyhdenmukaisuutta (engl. unevenness, non-uniformity, irregularity) työtavoissa tai työstettävässä tuotteessa.
 
 Ohjelmistokehityksessä esim. toteutettavien user storyjen suuresti vaihteleva koko on mura-tyyppistä hukkaa, jonka seurauksena saattaa olla _muda_-tyyppinen hukka, eli esimerkiksi välivarastoinnin tarve. Tämä taas heikentää arvon läpivirtausta, eli aikaa, joka user storyltä kestää backlogille asettamisesta valmiiksi tuotteen osaksi.  
 
@@ -162,9 +162,9 @@ Jatkuvassa parantamisessa on siis tarkoitus optimoida toimintaa eliminoimalla as
 > As a mindset, it suggests "My work is to do my work and to improve my work" and "continuously improve for its own sake."
 
 Kaizen on myös konkreettinen tapa toimia:
-- valitaan jokin tekniikka/työskentelytapa ja sitoudutaan sen suorittamiseen joksikin aikaa
-- kun toiminta on stabiloitunut, tarkastellaan valitun työskentelytavan toimivuutta ja optimoidaan sitä havaittujen epäkohtien suhteen ja luodaan näin uusi työnteon standarditapa
-- toistetaan tätä sykliä ikuisesti...
+- Valitaan jokin tekniikka/työskentelytapa ja sitoudutaan sen suorittamiseen joksikin aikaa.
+- Toiminnan vakiinnuttua tarkastellaan valitun työskentelytavan toimivuutta ja optimoidaan sitä havaittujen epäkohtien suhteen ja luodaan näin uusi työnteon standarditapa.
+- Ja toistetaan tätä sykliä ikuisesti.
 
 Kaizeniin liittyvä syklinen parannusprosessiin liittyy usein tasaisin väliajoin pidettävät tilaisuudet, eli "kaizen event":it. Scrumin retrospektiivit ovat klassinen esimerkki kaizen eventeistä.
  
@@ -199,9 +199,9 @@ Itse asiassa olisi ollut hyvä kysyä ainakin yksi _miksi_ lisää. Perimmäisen
 
 Leanissa on siis tarkoituksena optimoida aikaa, joka kuluu tuotteen tilaamisesta sen asiakkaalle toimittamiseen. Arvo pyritään saamaan _virtaamaan_ (engl. flow) asiakkaalle ilman turhia viiveitä ja työvaiheita. Äsken esitelty value stream map siis visualisoi nimenomaan arvon virtausta.
 
-Leanin mekanismi virtauksen optimointiin on _pull-systeemien_ käyttö. Pull-systeemillä tarkoitetaan tuotannonohjaustapaa, jossa tuotteita tai tuotteiden tarvitsemia komponentteja tehdään ainoastaan asiakkaan tilauksen niitä edellyttäessä. Tämän vastakohta on _push-systeemi_, jossa tuotteita ja komponentteja tehdään etukäteen varastoon ja toivotaan sitten että tuotteet ja komponentit menevät kaupaksi.
+Leanin mekanismi virtauksen optimointiin on _pull-systeemien_ käyttö. Pull-systeemillä tarkoitetaan tuotannonohjaustapaa, jossa tuotteita tai tuotteiden tarvitsemia komponentteja tehdään ainoastaan asiakkaan tilauksen niitä edellyttäessä. Tämän vastakohta on _push-systeemi_, jossa tuotteita ja komponentteja tehdään etukäteen varastoon sekä toivotaan sitten tuotteiden ja komponenttien menevän kaupaksi.
 
-Esimerkiksi pizzeriat toimivat pull-periaatteen mukaan, pizza valmistetaan vasta kun asiakas tilaa sen. Unicafe taas on push-systeemi, lounaita tehdään varastoon ja toivotaan että ne menevät kaupaksi asiakkaille.
+Esimerkiksi pizzeriat toimivat pull-periaatteen mukaan: Pizza valmistetaan vasta asiakkaan tilatessa sen. Unicafe taas on push-systeemi: Lounaita tehdään varastoon ja toivotaan niiden menevän kaupaksi asiakkaille.
 
 Leanin taustaa käsitelleessä [luvussa](/osa5#taustaa) puhutiin Just in time (JIT)-tuotantomallista. Käytännössä pull-systeemi on mekanismi JIT-tuotantomallin toteuttamiseen.
 
@@ -211,7 +211,7 @@ Pull-systeemi toteutetaan usein _kanbanin_ avulla. Japaninkielinen sana kanban t
 
 Kun asiakas tilaa tuotteen, viedään tilausta vastaava kanban-kortti tehtaalle. Jos tuotteen valmistaminen edellyttää esim. viittä eri komponenttia, "tilataan" komponentit niitä valmistavilta työpisteiltä viemällä niihin kunkin komponentin tilausta vastaava kanban-kortti. Jos komponenttien valmistus edellyttää jotain muita komponentteja, tilataan nekin samalla periaatteella. Kun komponentti on valmis, viedään se tilaajalle, samalla kanban-kortti palautetaan tulevien tilauksien tekemistä varten.
 
-Kanban-kortteja on käytössä vain rajallinen määrä, tällä kontrolloidaan sitä, että liikaa työtä ei pääse kasautumaan mihinkään tuotannon vaiheeseen. Näin kanbanin avulla "vedetään" (pull) tarvittavat komponentit, sen sijaan että komponentteja olisi etukäteen valmistettu varalta suuret määrät varastoon.
+Kanban-kortteja on käytössä vain rajallinen määrä, tällä kontrolloidaan sitä, että liikaa työtä ei pääse kasautumaan mihinkään tuotannon vaiheeseen. Näin kanbanin avulla "vedetään" (engl. pull) tarvittavat komponentit, sen sijaan että komponentteja olisi etukäteen valmistettu varalta suuret määrät varastoon.
 
 Kuten on jo mainittu, välivarastoon tehdyt komponentit ovat eräs leanin hukan muoto. Varastoidut komponentit sitovat pääomaa, ja jos tilauksia ei tulisi tarpeeksi, niitä ei välttämättä tarvita koskaan. Välivarastointi saattaa myös viivästyttää vikojen ilmituloa: jos komponenteissa olisi valmistusvika, saattaisi kestää kauan ennen kuin vika paljastuisi ja viallisia komponentteja olisi ehkä ehditty valmistamaan varastoon suuret  määrät.
 
@@ -239,7 +239,7 @@ Leanin ideaalin mukaista olisi toteuttaa ns. _one piece flow_, eli toimia siten 
  
 Jotta pull-järjestelmä toimisi hyvin, eli asiakkaan arvo virtaisi tasaisesti, olisi edullista, jos eri työvaiheiden kestoon ei liittyisi liikaa varianssia, tähän liittyy leanin periaate *level the work*. Yksi kolmesta leanin hukan muodoista olikin _mura_ eli epäsäännöllisyys tai epäyhdenmukaisuus. Työvaiheiden keston tai ohjelmistokehityksen kontekstissa toteutettavien user storyjen koon suuri varianssi on eräs tämän ilmentymistä. 
 
-Eräs varianssin aiheuttaja ovat viat. Leanin periaatteita ovatkin _Stop and fix_ ja _build quality in_.
+Eräs varianssin aiheuttaja ovat viat. Leanin periaatteita ovatkin _stop and fix_ ja _build quality in_.
 
 *Stop and fix* viittaa Toyotan vanhaan periaatteeseen, jossa kuka tahansa on velvollinen pysäyttämään tuotantolinjan havaitessaan vian, esimerkiksi vaurioituneen komponentin.
 
@@ -269,11 +269,11 @@ Edellä mainittujen periaatteiden soveltaminen näkyy selkeästi ketterässä oh
 
 Alhaisen prioriteetin user storyja ei ole määritelty kovin tarkkaan. Kun product owner valitsee storyn seuraavaan sprinttiin toteutettavaksi, määritellään storyn hyväksymäkriteerit ja suunnitellaan se toteutuksen osalta. Tarkkoja vaatimuksia ei siis määritellä spekulatiivisesti vaan _at the last responsible moment_. Sprinttiin valitut storyt toteutetaan valmiiksi sprintin aikana, eli _deliver as fast as possible_.
 
-Scrum voidaankin nähdä leanin mukaisena _pull-systeeminä_, jossa jokaiseen sprinttiin otetaan kerrallaan asiakkaan edustajan viime hetkellä (eli viimeistään sprint planningissa) määrittelemät tilaukset, jotka toteutetaan mahdollisimman nopeasti, eli sprintin aikana. Arvo, eli toimivaksi asti toteutetut uudet toiminnallisuudet, virtaavat asiakkaalle sprinttien määrittelemässä rytmissä.
+Scrum voidaankin nähdä leanin mukaisena _pull-systeeminä_, jossa jokaiseen sprinttiin otetaan kerrallaan asiakkaan edustajan viime hetkellä -- viimeistään sprintin suunnittelussa -- määrittelemät tilaukset, jotka toteutetaan mahdollisimman nopeasti, eli sprintin aikana. Arvo, eli toimivaksi asti toteutetut uudet toiminnallisuudet, virtaavat asiakkaalle sprinttien määrittelemässä rytmissä.
  
 Ketterässä ohjelmistotuotannossa on viime aikoina ruvettu tehostamaan arvon virtausta usein eri menetelmin. Alunperin ja osin vieläkin Scrumin pyrkimys on viedä uusia ominaisuuksia tuotantoon sprinteittäin, eli muutaman viikon välein. Viime aikojen trendinä on ollut tihentää sykliä, [jatkuva käyttöönotto](/osa3#jatkuva-k%C3%A4ytt%C3%B6%C3%B6notto-ja-toimitusvalmius) eli _continuous deployment_ voi tarkoittaa, että jopa jokainen commit johtaa uuden ohjelman uuden version julkaisuun, eli ohjelmistosta voi ilmestyä uutta arvoa tuottavia ominaisuuksia jopa kymmeniä kertoja päivässä.
 
-Scrum rajoittaa kesken olevan työn määrää (joka on siis eräs leanin hukka) siten, että sprinttiin otetaan vain tiimin velositeetin verran user storyja. Kaikissa konteksteissa, esimerkiksi jatkuvaa käyttöönottoa sovellettaessa, aikarajoitettu sprintti ei ole mielekäs. 
+Scrum rajoittaa kesken olevan työn määrää, joka on siis eräs leanin hukka, siten, että sprinttiin otetaan vain tiimin velositeetin verran user storyja. Kaikissa konteksteissa, esimerkiksi jatkuvaa käyttöönottoa sovellettaessa, aikarajoitettu sprintti ei ole mielekäs.
 
 Paikoin onkin siirrytty "puhtaampaan" pull-systeemiin, jossa user storyja toteutetaan yksi (tai joku hieman suurempi määrä) kerrallaan niin nopeasti kuin mahdollista. Kun story valmistuu eli tuotantokapasiteettia vapautuu, valitsee product owner seuraavaksi tärkeimmän storyn, joka sitten määritellään, suunnitellaan ja toteutetaan välittömästi alusta loppuun. Virtaus varmistetaan sillä, että yhtä aikaa työn alla ei ole kuin yksi tai korkeintaan muutama user story. [Osassa 2](/osa2#lean-waste-ja-scrumban) mainittu Scrumban-menetelmä toimii pitkälti juuri näin.
  
@@ -297,9 +297,9 @@ Scrum masterin rooli on osin leanin johtajuuden ideaalien mukainen. Tosin useimp
 
 Sovellettaessa leania _tuotantoon_ (engl. production), pääasiallisena fokuksena on toiminnan parantaminen hukkaa eliminoimalla.
 
-Sovellettaessa leania tuotannon optimoinnin sijaan _tuotekehitykseen_ (development), esim. kokonaan uusien automallien suunnitteluun, nousee esiin kokonaan uusia periaatteita. Kantavana ideana Toyotan tuotekehityksessä on _out-learn the competitors through generating more useful knowledge and using and remembering it effectively._ 
+Sovellettaessa leania tuotannon optimoinnin sijaan _tuotekehitykseen_ (engl. development), esim. kokonaan uusien automallien suunnitteluun, nousee esiin kokonaan uusia periaatteita. Kantavana ideana Toyotan tuotekehityksessä on _out-learn the competitors through generating more useful knowledge and using and remembering it effectively._
 
-Leanissa tuotekehityksessä fokukseen nouseekin toiminnan tehostamisen lisäksi _oppimisen kiihdyttäminen_ (engl. *amplify learning*). Kannattaa pyrkiä mahdollisimman _arvokkaaseen tietoon_ (engl. *high-value information*) mm. kiinnittämällä huomio asioihin, joihin sisältyy paljon epävarmuutta (*focus on uncertain things*). Epävarmat ja suuren teknisen riskin sisältävät ideat kannattaa toteuttaa/testata nopeasti, niiden suhteen viivästyneellä tiedolla on korkea hinta (*cost of delay*).
+Leanissa tuotekehityksessä fokukseen nouseekin toiminnan tehostamisen lisäksi _oppimisen kiihdyttäminen_ (engl. *amplify learning*). Kannattaa pyrkiä mahdollisimman _arvokkaaseen tietoon_ (engl. *high-value information*) mm. kiinnittämällä huomio asioihin, joihin sisältyy paljon epävarmuutta (engl. *focus on uncertain things*). Epävarmat ja suuren teknisen riskin sisältävät ideat kannattaa toteuttaa/testata nopeasti, niiden suhteen viivästyneellä tiedolla on korkea hinta (*engl. cost of delay*).
 
 Eräs leanin tuotekehityksen mekanismi oppimisen nopeuttamiseen on _set based concurrent development_. Jos tarkoituksena on kehittää esim. uusi moottorin jäähdytysjärjestelmä, aletaan yhtä aikaa kehittämään useita vaihtoehtoisia ratkaisuja eri tiimien toimesta. Tasaisin väliajoin kehitettäviä ratkaisuja vertaillaan ja osa niistä karsitaan. Lopulta parhaaksi osoittautuva ratkaisu valitaan käytettäväksi lopputuotteessa.
 
@@ -333,7 +333,7 @@ Perusperiaatteena on edelleen pitää tiimit pieninä, mutta kasvattaa tuotantok
 
 ### Scrum of Scrums
 
-Jo kauan käytetty tapa Scrumin skaalaamiseen on niin sanottu _Scrum of Scrums_, jossa ideana on muodostaa koordinoiva tiimi, johon kuuluu yksi tai tarvittaessa useampikin jäsen jokaisesta Scrum-tiimistä. Perinteisin tapa lienee koostaa koordinointitiimi Scrum mastereista. Joissain tilanteissa parempi henkilö koordinointiin voi kuitenkin olla ns. lead developer, eli Scrum-tiimin kokeneempi sovelluskehittäjä. Scrum of Scrums -tiimi voi tavata joka päivä tai jos se ei ole tarpeen niin esimerkiksi viikoittain.
+Jo kauan käytetty tapa Scrumin skaalaamiseen on niin sanottu _Scrum of Scrums_, jossa ideana on muodostaa koordinoiva tiimi, johon kuuluu yksi tai tarvittaessa useampikin jäsen jokaisesta Scrum-tiimistä. Perinteisin tapa lienee koostaa koordinointitiimi Scrum mastereista. Joissain tilanteissa parempi henkilö koordinointiin voi kuitenkin olla ns. lead developer, eli Scrum-tiimin kokeneempi sovelluskehittäjä. Scrum of Scrums -tiimi voi tavata joka päivä tai, jos se ei ole tarpeen, niin esimerkiksi viikoittain.
 
 Scrum of Scrums -periaate on jo hyvin vanha. Artikkelissa [Agile Can Scale: Inventing and Reinventing SCRUM in Five Companies](https://www.researchgate.net/publication/290823579_Agile_Can_Scale_Inventing_and_Reinventing_SCRUM_in_Five_Companies) toinen Scrumin kehittäjistä Jeff Sutherland kertoo käyttäneensä Scrum of Scrumia jo vuonna 1996.
 
@@ -366,7 +366,7 @@ SAFe tarjoaa myös neljä erikokoista valmiiksi räätälöityä konfiguraatio
 
 Sovelluskehityksen ytimessä (löydätkö sen kuvasta?) on SAFen hieman modifioima Scrum, johon on liitetty joukko XP:n periaatteita.
 
-Tiimien koordinointia hallitaan ylhäältä päin (engl. top down) kokoamalla yhdestä tuotteesta vastaavien tiimien joukko käsitteen _toimitusjuna_ (engl. release train) alle. Release trainin Scrum-tiimit toimivat synkronissa toistensa kanssa tuottaen yhdessä isompia toiminnallisia useammasta sprintistä koostuvan _product increment_ -jakson aikana.
+Tiimien koordinointia hallitaan ylhäältä päin (engl. top down) kokoamalla yhdestä tuotteesta vastaavien tiimien joukko käsitteen _toimitusjuna_ (engl. release train) alle. Release trainin Scrum-tiimit toimivat samassa tahdissa toistensa kanssa tuottaen yhdessä isompia toiminnallisia useammasta sprintistä koostuvan _product increment_ -jakson aikana.
 
 Product incrementtejä ja niitä toteuttavia release traineja taas ohjaillaan yhä korkeammalta organisaatiosta erilaisten henkilöroolien toimesta. SAFe tarjoaa tähänkin paljon tukea käsitteistön ja määrittämiensä roolien kautta.
 
@@ -402,18 +402,18 @@ LeSS korostaa, että kyseessä _ei_ ole erillinen Scrumin päälle lisätty hall
 
 ![]({{ "/images/5-5.png" | absolute_url }}){:height="440px" }
 
-Periaatteet ovat lähes samat kuin SAFe:ssa, yksi periaatteista tekee kuitenkin selvää eroa menetelmien välille, esitetään se tässä suorana sitaattina [dokumentaatiosta](https://less.works/less/framework/introduction.html#LeSSPrinciples):
+Periaatteet ovat lähes samat kuin SAFe:ssa. Mutta, yksi periaatteista tekee kuitenkin selvää eroa menetelmien välille, joten esitetään se tässä suorana sitaattina [dokumentaatiosta](https://less.works/less/framework/introduction.html#LeSSPrinciples):
 
 *More with less:*
 
-- We don’t want more roles because more roles leads to less responsibility to Teams
-- We don’t want more artifacts because more artifacts leads to a greater distance between Teams and customers
-- We don’t want more process because that leads to less learning and team ownership of process, instead we want more responsible Teams by having less (fewer) roles
-- We want more customer-focused Teams building useful products by having less artifacts
-- We want more Team ownership of process and more meaningful work by having less defined processes
-- *We want more with less*
+- We don’t want more roles because more roles leads to less responsibility to Teams.
+- We don’t want more artifacts because more artifacts leads to a greater distance between Teams and customers.
+- We don’t want more process because that leads to less learning and team ownership of process, instead we want more responsible Teams by having less (fewer) roles.
+- We want more customer-focused Teams building useful products by having less artifacts.
+- We want more Team ownership of process and more meaningful work by having less defined processes.
+- *We want more with less*.
 
-Eli minimoimalla prosessin, roolien ja artefaktien määrää pyritään siihen että tiimit ottavat itse omistajuuden tuotteen kehittämisestä ja asiakkaan kanssa käytävästä kommunikaatiosta.
+Eli minimoimalla prosessin, roolien ja artefaktien määrää pyritään saamaan tiimit ottamaan itse omistajuuden tuotteen kehittämisestä ja asiakkaan kanssa käytävästä kommunikaatiosta.
 
 Lisää periaatteista [LeSS:in](https://less.works/less/framework/introduction.html) dokumentaatiossa.
 
@@ -432,23 +432,23 @@ Myös artefaktit ovat samat kuin normaalissa Scrumissa. Product backlogeja on yk
 
 Sprintin suunnittelu eli sprint planning on normaalista Scrumista poiketen kaksiosainen.
 
-Ensimmäisessä osassa product owner ja kaikkien tiimien edustajat valitsevat product backlogilta eri tiimille seuraavan sprintin aikana toteutettavan user storyt.
+Ensimmäisessä osassa product owner ja kaikkien tiimien edustajat valitsevat product backlogilta eri tiimeille seuraavan sprintin aikana toteutettavan user storyt.
 
-Suunnittelun toinen osa on tiimikohtainen. Kukin tiimi muodostaa oman sprint backlogin, jonka avulla sprintin sisäinen toiminta hallitaan normaalin scrumin tapaan. Tarpeen vaatiessa tosin useampikin tiimi voi toimia sprintin aikana synkronissa, käyttäen yhteistä sprint backlogia.
+Suunnittelun toinen osa on tiimikohtainen. Kukin tiimi muodostaa oman sprint backlogin, jonka avulla sprintin sisäinen toiminta hallitaan normaalin scrumin tapaan. Tarpeen vaatiessa tosin useampikin tiimi voi toimia sprintin aikana samassa tahdissa, käyttäen yhteistä sprint backlogia.
  
 ![]({{ "/images/5-7.png" | absolute_url }}){:height="350px" }
 
-Kaikkien tiimien yhteinen aikaansaannos (one shippable product increment) katselmoidaan yhdessä. Retrospektiivi taas on kaksitasoinen, ensin pidetään normaalin scrumin tapaan tiimikohtainen retrospektiivi ja tämän jälkeen koko tuotteen valmistusprosessia tarkasteleva overall-retrospektiivi, jossa on edustus kaikista tiimeistä ja mahdollisesti yrityksen johdosta.
+Kaikkien tiimien yhteinen aikaansaannos (engl. one shippable product increment) katselmoidaan yhdessä. Retrospektiivi taas on kaksitasoinen, ensin pidetään normaalin scrumin tapaan tiimikohtainen retrospektiivi ja tämän jälkeen koko tuotteen valmistusprosessia tarkasteleva overall-retrospektiivi, jossa on edustus kaikista tiimeistä ja mahdollisesti yrityksen johdosta.
 
 ![]({{ "/images/5-8.png" | absolute_url }}){:height="350px" }
 
 #### Muu tiimien välinen koordinointi
 
-Kaikille tiimeille yhteisen sprintin suunnittelun ensimmäisen osan, sprint review'n ja overall-retrospektiivin lisäksi LeSS ei edellytä muita tiimien väliseen koordinaatioon tarkoitettuja yhteisiä tapaamisia, vaan toteaa että tiimit päättävät keskenään miten koordinaatio tapahtuu.
+Kaikille tiimeille yhteisen sprintin suunnittelun ensimmäisen osan, sprint review'n ja overall-retrospektiivin lisäksi LeSS ei edellytä muita tiimien väliseen koordinaatioon tarkoitettuja yhteisiä tapaamisia, vaan toteaa tiimien päättävän keskenään miten koordinaatio tapahtuu.
 
 LeSS antaa joukon aiheeseen liittyviä ohjeita ja suosituksia:
-- prefer decentralized and informal coordination over centralized coordination
-- Emphasize _just talk_ and informal networks via communicate in code, cross-team meetings, component mentors, travelers, scouts, and open spaces
+- Prefer decentralized and informal coordination over centralized coordination.
+- Emphasize _just talk_ and informal networks via communicate in code, cross-team meetings, component mentors, travelers, scouts, and open spaces.
 
 Periaate _just talk_ korostaa suoran kommunikoinnin tärkeyttä, _communicate in code_ tarkoittaa ryhmien välistä työskentelyä helpottavaa ohjelmointitapaa, esimerkiksi yhteisiä koodikäytänteitä sekä jatkuvaa integraatiota. _Scouteilla_ tarkoitetaan muiden tiimien daily scrumissa vierailemista.
 
@@ -476,7 +476,7 @@ On erittäin mielenkiintoista että molemmat SAFe ja LeSS ovat pitkälti syntyne
 
 Molempien menetelmien kanssa työskennelleiden konsulttien Aki Tikka ja Ran Nyman kirjoittama [menetelmien vertailu](https://gosei.fi/blog/less-safe-comparison/) kannattaa lukea.
 
-Kuten aiemmin todettiin, SAFe on suosittu yritysjohdon keskuudessa, mutta saanut paljon kritiikkiä arvovaltaisten ketterän kehityksen edustajien toimesta, en myöskään itse ole kuullut kenenkään sovelluskehittäjän kehuvan SAFea.
+Kuten aiemmin todettiin, SAFe on suosittu yritysjohdon keskuudessa, mutta saanut paljon kritiikkiä arvovaltaisten ketterän kehityksen edustajien toimesta, enkä itsekään ole kuullut kenenkään sovelluskehittäjän kehuvan SAFea.
 
 En tiedä kuvastaako se mitään menetelmien pitkän tähtäimen toimivuudesta, mutta SAFe:n kotia Nokia Mobile Phonesia ei enää ole olemassakaan, Nokia (Siemens) Networks taas on nykyinen Nokia ja soveltaa edelleen LeSS-menetelmää.
 
@@ -484,7 +484,7 @@ En tiedä kuvastaako se mitään menetelmien pitkän tähtäimen toimivuudesta, 
 
 Henrik Knibergin 2012 ilmestynyt artikkeli [Scaling Agile @ Spotify](https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf) kertoi suurelle yleisölle miten ruotsalainen musiikkistreamauspalvelu Spotify onnistui skaalaamaan toimintansa noin neljän vuoden aikana muutamasta sovelluskehittäjästä useaan sataan eri kaupungeissa työskentelevään softakehittäjään säilyttäen toiminnassaan startupmaisen ketteryyden.
 
-Spotifyn "malli" on melko yksinkertainen: se organisoi kehittäjät _tiimeihin_ (squad) jotka taas jakautuvat eri _heimoihin_ (tribe). Tiimi-/heimorakenteen lisäksi malli sisältää myös hieman toisenlaisen jaottelun, jossa firman ihmiset jaotellaan heimojen sisällä _jaostoihin_ (chapter) sekä heimorajat ylittäviin _kiltoihin_ (guild):
+Spotifyn "malli" on melko yksinkertainen: se organisoi kehittäjät _tiimeihin_ (engl. squad) jotka taas jakautuvat eri _heimoihin_ (engl. tribe). Tiimi-/heimorakenteen lisäksi malli sisältää myös hieman toisenlaisen jaottelun, jossa firman ihmiset jaotellaan heimojen sisällä _jaostoihin_ (engl. chapter) sekä heimorajat ylittäviin _kiltoihin_ (engl. guild):
 
 ![]({{ "/images/5-17.png" | absolute_url }}){:height="380px" }
 
@@ -496,7 +496,7 @@ Käydään nyt hieman tarkemmalla tasolla läpi Spotifyn mallia, tai sitä milt�
 
 Spotifyn mallin ytimessä on noin 5–10 hengen tiimi, josta käytetään englanninkielistä termiä _squad_, joka lienee suomeksi joukkue tai ryhmä. Puhumme tässä kuitenkin tiimistä sillä se lienee squadeista yleisimmin suomeksi käytetty termi.
 
-Tiimit ovat ketterän ideaalin tapaan _cross-functional_, eli ne sisältävät kaiken tietotaidon vastuullaan olevien ohjelmiston osien saamisesta aina ideasta tuotantoympäristöön asti. Tiimit ovat täysin itseorganisoituvia ja päättävät vapaasti omista työnteon käytänteistään. Tiimit voivat esim. käyttää sisäisesti Scrumia, Kanbania, Scrumbania tai mitä tahansa muuta työskentelytapaa. Koko tiimi työskentelee samassa työtilassa.
+Tiimit ovat ketterän ideaalin tapaan _cross-functional_, eli ne sisältävät kaiken tietotaidon vastuullaan olevien ohjelmiston osien saattamisesta ideasta lähtien tuotantoympäristöön asti. Tiimit ovat täysin itseorganisoituvia ja päättävät vapaasti omista työnteon käytänteistään. Tiimit voivat esim. käyttää sisäisesti Scrumia, Kanbania, Scrumbania tai mitä tahansa muuta työskentelytapaa. Koko tiimi työskentelee samassa työtilassa.
 
 ![]({{ "/images/5-18.png" | absolute_url }}){:height="250px" }
 
