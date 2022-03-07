@@ -58,11 +58,11 @@ Otetaan esimerkiksi pari muutakin määritelmää.
 
 > The software architecture of a system or a collection of systems consists of all the important design decisions about the software structures and the interactions between those structures that comprise the systems. _The design decisions support a desired set of qualities that the system should support to be successful_. The design decisions provide a conceptual basis for system development, support, and maintenance.
 
-Vaikka arkkitehtuurin määritelmät hieman vaihtelevat, löytyy määritelmistä joukko samoja teemoja. Jokaisen määritelmän mukaan arkkitehtuuri määrittelee ohjelmiston rakenteen, eli jakautumisen erillisiin osiin sekä osien väliset rajapinnat. Arkkitehtuuri ottaa kantaa rakenteen lisäksi myös käyttäytymiseen, se määrittelee arkkitehtuuritason rakenneosien vastuut ja niiden keskinäisen kommunikoinnin muodot.
+Vaikka arkkitehtuurin määritelmät hieman vaihtelevat, löytyy määritelmistä joukko samoja teemoja. Jokaisen määritelmän mukaan arkkitehtuuri määrittelee ohjelmiston rakenteen, eli jakautumisen erillisiin osiin sekä osien väliset rajapinnat. Arkkitehtuuri ottaa kantaa rakenteen lisäksi myös käyttäytymiseen, sillä se määrittelee arkkitehtuuritason rakenneosien vastuut ja niiden keskinäisen kommunikoinnin muodot.
 
 Arkkitehtuuri keskittyy järjestelmän rakenteen tärkeisiin tai keskeisiin periaatteisiin. Se ei siis kuvaa järjestelmää tarkalla detaljitasolla, vaan on isoihin linjoihin keskittyvä _abstraktio_.
 
-Artikkelissa [Who needs architect](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf) Martin Fowler toteaa seuraavasti _you might end up defining architecture as things that people perceive as hard to change_, eli arkkitehtuurin voisi määritellä asioiksi, jotka ovat ohjelmistossa vaikeita muuttaa. Järjestelmän tärkeät rakenneperiaatteet voivat myös muuttua ajan myötä. Toisin sanoen, arkkitehtuuri [ei ole muuttumaton](http://www.ibm.com/developerworks/rational/library/feb06/eeles/), mutta sen radikaali muuttaminen voi olla haastavaa.
+Artikkelissa [Who needs architect](https://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf) Martin Fowler toteaa "_you might end up defining architecture as things that people perceive as hard to change_". Arkkitehtuurin voisi siis määritellä asioiksi, jotka ovat ohjelmistossa vaikeita muuttaa. Järjestelmän tärkeät rakenneperiaatteet voivat myös muuttua ajan myötä. Toisin sanoen, arkkitehtuuri [ei ole muuttumaton](http://www.ibm.com/developerworks/rational/library/feb06/eeles/), mutta sen radikaali muuttaminen voi olla haastavaa.
 
 Melkein sama hieman toisin ilmaistuna oli Krutchtenin määritelmässä mainittu
 _set of significant decisions about the organization of a software system_, eli arkkitehtuuri muodostuu arkkitehtuuristen päätösten, eli joukon ohjelmiston rakenteen ja toiminnan kannalta tehtävien fundamentaalisten valintoja kautta.
@@ -422,7 +422,7 @@ Yksittäiset metodit ovat nyt kaikki samalla abstraktiotasolla toimivia ja kuvaa
 
 #### Koheesio luokkatasolla
 
-Luokkatason koheesiossa pyrkimyksenä on, että luokan _vastuulla_ on vain yksi asia. Tämä tunnetaan myös nimellä [single responsibility](https://en.wikipedia.org/wiki/Single_responsibility_principle) -periaate (SRP). Robert Martin määrittelee, että luokalla on yksi vastuu _jos sillä on vain yksi syy muuttua_.
+Luokkatason koheesiossa pyrkimyksenä on, että luokan _vastuulla_ on vain yksi asia. Tämä tunnetaan myös nimellä [single responsibility](https://en.wikipedia.org/wiki/Single_responsibility_principle) -periaate (SRP). Robert Martin määrittelee luokalla olevan yksi vastuu, _jos sillä on vain yksi syy muuttua_.
 
 Kurssin ensimmäisissä laskareissa tarkasteltiin yksinkertaista laskinta:
 
@@ -454,8 +454,8 @@ class Laskin:
 
 Luokka rikkoo single responsibility -periaatetta. Miksi? Periaate sanoo, että luokalla saa olla vain yksi vastuu eli syy muuttua. Nyt luokalla on kuitenkin useita syitä muuttua:
 
-- Luokalle halutaan toteuttaa uusia laskutoimituksia
-- Kommunikointi käyttäjän kanssa halutaan hoitaa jotenkin muuten kuin konsolin välityksellä
+- Luokalle halutaan toteuttaa uusia laskutoimituksia.
+- Kommunikointi käyttäjän kanssa halutaan hoitaa jotenkin muuten kuin konsolin välityksellä.
 
 Eriyttämällä käyttäjän kanssa kommunikointi omaan luokkaan ja eristämällä se rajapinnan taakse eli _kapseloimalla kommunikoinnin toteutustapa_, saadaan luokan Laskin vastuita vähennettyä:
 
@@ -546,10 +546,10 @@ Koska korkean koheesion periaatteen nojalla olioita on paljon, tulee riippuvuuks
 
 Riippuvuuden kannattaa kohdistua asiaan, joka ei muutu herkästi, eli joko rajapintaan tai abstraktiin luokkaan. Sama idea kulkee parilla eri nimellä:
 
-- Program to an interface, not to an implementation
-- Depend on abstractions, not on concrete implementation
+- Program to an interface, not to an implementation.
+- Depend on abstractions, not on concrete implementation.
 
-Toisin kuin Javassa ja monessa muussa stattisesti tyypitetyssä kielessä, ei Pythonissa ole selkeää rajapinnan tai abstraktin luokan käsitettä. Sama ajattelu voidaan laajentaa myös Pythoniin, olettamalla että rajapinnalla tarkoitetaan ainoastaan tietoa siitä minkälaisia metodeja riippuvuutena käytettävällä luokalla on.
+Toisin kuin Javassa ja monessa muussa staattisesti tyypitetyssä kielessä, ei Pythonissa ole selkeää rajapinnan tai abstraktin luokan käsitettä. Sama ajattelu voidaan laajentaa myös Pythoniin, olettamalla että rajapinnalla tarkoitetaan ainoastaan tietoa siitä minkälaisia metodeja riippuvuutena käytettävällä luokalla on.
 
 Konkreettisen riippuvuuden eliminointi onnistuu antamalla oliolle riippuvuuksien toteutukset esimerkiksi konstruktorin tai metodikutsun kautta. Olemme tehneet näin kurssilla usein, mm. Verkkokaupan konkreettiset riippuvuudet Varastoon, Pankkiin ja Viitegeneraattoriin korvattiin luokan konstruktorin kautta annetuilla olioilla. Riippuvuuksien injektointi -suunnittelumalli toimi usein apuvälineenä konkreettisen riippuvuuksien eliminoinnissa.
 
