@@ -10,7 +10,7 @@ order: 2
 
 ### Ajankohtaista
 
-- Ilmoittautuminen 21.2. alkavaan miniprojektiin on päättynyt. Aloistustapaamisen ajankohta ja linkki Zoom-tapaamiseen löytyy <a href="{{site.miniproject_enrollment_url}}/usergroup">ilmoittautumisjärjestelmästä</a>. Huomaa, että aloitustapaamiseen osallistuminen <i>on pakollista</i>
+- Miniprojektin demotilaisuus järjestetään [zoomissa](https://helsinki.zoom.us/j/63958549119?pwd=RStJZHMvY1NqQ2JMaGIycmMwNTdlZz09) keskiviikkona 16.3. klo 10:00 - 11:00
 - Miniprojekti järjestetään kahtena eri ajankohtana 21.2.-14.3. ja 28.3.-25.4.
 
 ### Johdanto
