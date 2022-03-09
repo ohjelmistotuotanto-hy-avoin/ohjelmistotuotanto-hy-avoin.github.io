@@ -19,7 +19,7 @@ Tehtävä 6 käsittelee retrospektiivitekniikoita.
 
 ### Tehtävien palauttaminen
 
-Tehtävät palautetaan GitHubiin, sekä merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}>.
+Tehtävät palautetaan GitHubiin ja merkitsemällä tehdyt tehtävät palautussovellukseen <{{site.stats_url}}>.
 
 Katso tarkempi ohje palautusrepositorioita koskien [täältä](/tehtavat1#teht%C3%A4vien-palautusrepositoriot).
 
@@ -29,38 +29,36 @@ Edellisessä tehtävässä palasimme jo menneisyyteen checkouttaamalla tagillä 
 
 Voit tehdä tämän ja seuraavan tehtävän mihin tahansa repositorioon, tehtävät eivät näy palautuksissa.
 
-- Tee jokin tiedosto, esim. nimeltään _xxx_, lisää ja committaa se
-- Poista tiedosto ja committaa
-- Tee jotain muutoksia johonkin tiedostoon ja committaa
-- Historiasi näyttää seuraavalta
+- Tee jokin tiedosto, esim. nimeltään _xxx_, lisää ja committaa se.
+- Poista tiedosto ja committaa.
+- Tee jotain muutoksia johonkin _muuhun_ tiedostoon ja committaa.
+- Historiasi näyttää seuraavalta:
 
 ```
 (1) - (2) - (3)
 ```
 
-- Nykyhetki eli HEAD on (3). Commitissa (1) tiedosto _xxx_ on olemassa nykyhetkellä ja (2):ssa xxx:ää ei ole.
-  - Huom: komennolla <code>gitk</code> voit tutkia historiaa
-- Haluamme palauttaa tiedoston
-- Selvitä sen commitin id, jossa tiedosto vielä on olemassa, tämä onnistuu gitk:lla tai <code>git log</code> -komennolla
-- Anna komento <code>git checkout 3290b03cea08af987ee7ea57bb98a4886b97efe0 -- xxx</code>, jossa pitkä merkkijono on siis kyseisen commitin id
-  - varmista että tiedosto on ilmestynyt staging-alueelle komennolla <code>git status</code>
-- Tee commit
-- _xxx_ on palannut!
-- Huom: koko id:tä ei komennossa tarvitse antaa, riittää antaa alusta niin monta merkkiä, että niiden perusteella id voidaan päätellä yksikäsitteisesti repositoriosi historiassa
+- Nykyhetki eli HEAD on (3). Commitissa (1) tiedosto _xxx_ on olemassa nykyhetkellä ja (2):ssa xxx:ää ei ole. Historiaa voit tutkia komennoilla <code>git log</code> ja <code>gitk</code>.
+- Seuraavaksi palautetaan tiedosto _xxx_.
+- Aloita selvittämällä sen commitin id, jossa tiedosto _xxx_ vielä on olemassa. Tämä onnistuu gitk:lla tai <code>git log</code> -komennolla (tai jos haluaa päästä helpolla, komennolla <code>git log --pretty=oneline --name-status</code>).
+- Jatka palauttamalla tiedosto _xxx_ komennolla <code>git checkout id -- xxx</code>, jossa <code>id</code> on edellisessä vaiheessa selvittämäsi commitin id.
+- Varmista lopuksi tiedoston _xxx_ ilmestyneen staging-alueelle komennolla <code>git status</code>.
+- Lisää vielä tiedoston palauttamisen jälkeen muuttunut tilanne versiohistoriaan komennoilla <code>git add</code> ja <code>git commit</code>.
 
-  - "Generally, eight to ten characters are more than enough to be unique within a project. For example, as of October 2017, the Linux kernel (which is a fairly sizable project) has over 700,000 commits and almost six million objects, with no two objects whose SHA-1s are identical in the first 11 characters." [7.1 Git Tools - Revision Selection
-    ](https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#Short-SHA-1)
+Huom: Koko id:tä ei komennossa tarvitse antaa. Voit antaa alusta niin monta merkkiä, että niiden perusteella id voidaan päätellä yksikäsitteisesti repositoriosi historiassa:
 
-- Täsmälleen samalla tavalla onnistuu olemassa olevan tiedoston vanhan version palauttaminen.
+"Generally, eight to ten characters are more than enough to be unique within a project. For example, as of October 2017, the Linux kernel (which is a fairly sizable project) has over 700,000 commits and almost six million objects, with no two objects whose SHA-1s are identical in the first 11 characters." [7.1 Git Tools - Revision Selection](https://git-scm.com/book/en/v2/Git-Tools-Revision-Selection#Short-SHA-1)
+
+Samalla tavalla onnistuu olemassa olevan tiedoston vanhan version palauttaminen.
 
 ### 2. Git: commitin muutosten kumoaminen [(versionhallinta)](/osa0/#versionhallinta-1-op)
 
-- Huomaamme, että juuri tehty commit oli virhe, kumotaan se sanomalla <code>git revert HEAD --no-edit</code>
-  - HEAD siis viittaa siihen committiin, jonka kohdalla nyt ollaan
-- Syntyy uusi commit, jossa edellisessä tehdyt muutokset on kumottu
-  - Ilman optiota **no-edit** pääset editoimaan kumoamiseen liittyvään commitiin tulevaa viestiä
-  - Huom: sanomalla <code>git checkout HEAD^</code> pääsemme takaisin kumottuun tilanteeseen, eli mitään ei ole lopullisesti kadotettu
-- Vastaavalla tavalla voidaan revertata mikä tahansa commit, eli: <code>git revert kumottavancommitinid</code>
+- Huomaamme, että juuri tehty commit oli virhe, joten kumotaan se sanomalla <code>git revert HEAD --no-edit</code>. Komennossa <code>HEAD</code> viittaa committiin, jonka kohdalla nyt ollaan (ns. "nykytilanne" versiohistoriassa).
+- Syntyy uusi commit, jossa edellisessä tehdyt muutokset on kumottu.
+
+Ilman komentorivivalitsinta **--no-edit** pääset muokkaamaan kumoamiseen liittyvään commitiin tulevaa viestiä. Ja komennolla <code>git checkout HEAD^</code> pääsemme takaisin kumottuun tilanteeseen, eli mitään ei ole lopullisesti kadotettu.
+
+Vastaavalla tavalla voidaan revertata mikä tahansa commit, eli: <code>git revert id/code>, jossa <code>id</code> on kumottavan commit:n id.
 
 ### 3. Tenniksen pisteenlaskun refaktorointi
 
@@ -213,9 +211,9 @@ Riittää, että ohjelma muistaa edellisen tuloksen, eli kumoa-toimintoa ei tarv
 
 Wikipedian mukaan retrospektiivi on _"a meeting held by a project team at the end of a project or process (often after an iteration) to discuss what was successful about the project or time period covered by that retrospective, what could be improved, and how to incorporate the successes and improvements in future iterations or projects."_
 
-Tutustu [täällä](http://retrospectivewiki.org/index.php?title=Retrospective_Plans) esiteltyihin retrospektiivitekniikoihin [Start, Stop, Continue, More of, Less of Wheel](http://retrospectivewiki.org/index.php?title=Start,_Stop,_Continue,_More_of,_Less_of_Wheel) ja [Glad, Sad, Mad](http://retrospectivewiki.org/index.php?title=Glad,_Sad,_Mad)
+Tutustu [täällä](http://retrospectivewiki.org/index.php?title=Retrospective_Plans) esiteltyihin retrospektiivitekniikoihin [Start, Stop, Continue, More of, Less of Wheel](http://retrospectivewiki.org/index.php?title=Start,_Stop,_Continue,_More_of,_Less_of_Wheel) ja [Glad, Sad, Mad](http://retrospectivewiki.org/index.php?title=Glad,_Sad,_Mad).
 
-Tee aiheesta noin 0.25 sivun (eli noin 125 sanaa) tiivistelmä repositorion juureen sijoitettavaan tiedostoon _retro.md_
+Tee aiheesta noin 0.25 sivun (eli noin 125 sanaa) tiivistelmä repositorion juureen sijoitettavaan tiedostoon _retro.md_.
 
 Pidä huoli siitä, että miniprojektitiimisi pitää ensimmäisen sprintin lopussa jompaakumpaa tekniikkaa noudattavan retrospektiivin!
 
