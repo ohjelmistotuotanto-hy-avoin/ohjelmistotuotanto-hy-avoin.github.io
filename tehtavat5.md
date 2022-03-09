@@ -58,7 +58,7 @@ Samalla tavalla onnistuu olemassa olevan tiedoston vanhan version palauttaminen.
 
 Ilman komentorivivalitsinta **--no-edit** pääset muokkaamaan kumoamiseen liittyvään commitiin tulevaa viestiä. Ja komennolla <code>git checkout HEAD^</code> pääsemme takaisin kumottuun tilanteeseen, eli mitään ei ole lopullisesti kadotettu.
 
-Vastaavalla tavalla voidaan revertata mikä tahansa commit, eli: <code>git revert id/code>, jossa <code>id</code> on kumottavan commit:n id.
+Vastaavalla tavalla voidaan revertata mikä tahansa commit, eli: <code>git revert id</code>, jossa <code>id</code> on kumottavan commit:n id.
 
 ### 3. Tenniksen pisteenlaskun refaktorointi
 
