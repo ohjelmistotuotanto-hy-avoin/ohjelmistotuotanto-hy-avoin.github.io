@@ -64,7 +64,7 @@ Poista branch haara. Etsi googlaamalla komento, jolla saat tuhottua branchin.
 
 Tällä kertaa olemme kiinnostuneita tekemään hieman monimutkaisempia "kyselyjä" pelaajatietoihin, esim. _listaa kaikki joukkueen PHI pelaajat, joilla on vähintään 5 maalia ja vähintään 5 syöttöä_.
 
-Koodin onkin luotu hieman valmista kalustoa, josta pääset liikkeelle. Yllä olevan kyselyn voi suorittaa seuraavasti:
+Koodiin onkin luotu hieman valmista kalustoa, josta pääset liikkeelle. Yllä olevan kyselyn voi suorittaa seuraavasti:
 
 ```python
 def main():
@@ -86,16 +86,16 @@ Luokalle `Statistics` on tehty metodi `matches`, joka palauttaa listan niistä p
 
 Tutustu ohjelman rakenteeseen.
 
-- Huomioi miten `HasAtLeast`-luokan metodi `matches` käyttää funktiota [getattr](https://docs.python.org/3/library/functions.html#getattr) saadakseen parametrina annetun attribuutin arvon
-- Toinen huomioinarvoinen piirre on `And`-luokan konstruktorissa käytetty vaihtuvamittainen parametrilista, jonka tunnista `*`-etuliitteestä. Syntaksin avulla `*matchers` sisältää listan konstruktorille annetuista argumenteista
+- Huomioi miten `HasAtLeast`-luokan metodi `matches` käyttää funktiota [getattr](https://docs.python.org/3/library/functions.html#getattr) saadakseen parametrina annetun attribuutin arvon.
+- Toinen huomioinarvoinen piirre on `And`-luokan konstruktorissa käytetty vaihtuvamittainen parametrilista, jonka tunnistat `*`-etuliitteestä. Syntaksin avulla `*matchers` sisältää listan konstruktorille annetuista argumenteista.
 
 **Toteuta `matches`-metodin toteuttavat luokat, joiden avulla voit tehdä seuraavat operaatiot:**
 
-- All (tosi kaikille pelaajille)
-- Not (parametrina olevan ehdon negaatio)
-- HasFewerThan (HasAtLeast-komennon negaatio eli esim. on vähemmän kuin 10 maalia)
+- All (tosi kaikille pelaajille).
+- Not (parametrina olevan ehdon negaatio).
+- HasFewerThan (HasAtLeast-komennon negaatio eli esim. on vähemmän kuin 10 maalia).
 
-Kaikille pelaajille tosi ehto _all_ ei ole vielä tämän tehtävän kannalta kovin mielenkiintoinen, sitä pystyy kuitenkin hyödyntämään neljännessä tehtävässä.
+Vaikka kaikille pelaajille tosi ehto _all_ ei ole vielä tämän tehtävän kannalta kovin mielenkiintoinen, sitä pystyy kuitenkin hyödyntämään neljännessä tehtävässä.
 
 Voit tarkistaa toteutuksesi toimivuuden tekemällä kyselyn:
 
