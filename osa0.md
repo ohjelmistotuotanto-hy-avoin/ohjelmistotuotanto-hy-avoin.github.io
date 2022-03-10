@@ -81,11 +81,11 @@ Kurssilla on kolme koeajankohtaa
 
 Kokeen voi aloittaa mihin aikaan tahansa koepäivänä. Kokeessa on vastausaikaa 3 tuntia. Kokeen voi tehdä mistä tahansa riittävän hyvän internetyhteyden omaavasta paikasta.
 
-Koe keskittyy kurssin teoriamateriaalissa käsiteltäviin asioihin, kokeessa ei kysytä vierailuluentojen sisällöistä eikä niistä teknisistä aihepiireistä (mm versionhallinta) mitä kurssimateriaalin osat 0-5 eivät käsittele.
+Koe keskittyy kurssin teoriamateriaalissa käsiteltäviin asioihin. Kokeessa ei kysytä vierailuluentojen sisällöistä eikä niistä teknisistä aihepiireistä (mm. versionhallinta), joita kurssimateriaalin osat 0-5 eivät käsittele.
 
-Koe tehdään avoimen yliopiston [moodlessa](https://moodle.helsinki.fi/course/view.php?id=46773) ja päätäkseni kirjautumaan järjestelmään avoimen yliopiston opiskelijoiden on ilmoittauduttava kurssille viimeistään vuorokautta aiemmin [tänne](https://studies.helsinki.fi/opintotarjonta/cur/otm-4716b91b-b901-45f4-b1cf-8484bddda5f2/_Ohjelmistotuotanto_) ja aktivoitava  [käyttäjätunnuksensa](https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/opinnoissa-alkuun/helsingin-yliopiston-kayttajatunnus).
+Koe tehdään avoimen yliopiston [moodlessa](https://moodle.helsinki.fi/course/view.php?id=46773). Päästäkseen kirjautumaan järjestelmään avoimen yliopiston opiskelijoiden on ilmoittauduttava kurssille viimeistään vuorokautta aiemmin [tänne](https://studies.helsinki.fi/opintotarjonta/cur/otm-4716b91b-b901-45f4-b1cf-8484bddda5f2/_Ohjelmistotuotanto_) ja aktivoitava  [käyttäjätunnuksensa](https://www.helsinki.fi/fi/avoin-yliopisto/opiskelu/opinnoissa-alkuun/helsingin-yliopiston-kayttajatunnus).
 
-Koetta tehtäessä internet on käytössä, mutta kaikenlainen yhteistyö on kielletty. Vastaukset on kirjoitettava omin sanoin, tekstin kopioiminen kurssimateriaalista tai muualta internetistä johtaa heti HY:n [plagiointikäytäntöjen](https://guide.student.helsinki.fi/fi/artikkeli/mita-ovat-vilppi-ja-plagiointi) soveltamiseen 
+Koetta tehtäessä internet on käytössä, mutta kaikenlainen yhteistyö on kielletty. Vastaukset on kirjoitettava omin sanoin, tekstin kopioiminen kurssimateriaalista tai muualta internetistä johtaa heti HY:n [plagiointikäytäntöjen](https://guide.student.helsinki.fi/fi/artikkeli/mita-ovat-vilppi-ja-plagiointi) soveltamiseen.
 
 Jokainen osallistuja voi osallistua kolmeen koetilaisuuteen. Korkein pistemäärä jää voimaan. Kurssin arvostelu suoritetaan vasta kurssin päättyessä eli 30.4.2022 klo 23:59, joten voit jatkaa kurssin tehtävien tekemistä kokeessa käymisen jälkeenkin.
 
@@ -93,15 +93,15 @@ Jokainen osallistuja voi osallistua kolmeen koetilaisuuteen. Korkein pistemäär
 
 Miniprojektiin osallistuminen ei ole välttämätöntä, jos täytät työkokemuksen perusteella tapahtuvan ohjelmistotuotantoprojektin hyväksiluvun edellyttävät kriteerit.
 
-Kriteerit selviävät [täältä](https://studies.helsinki.fi/ohjeet/artikkeli/koulutusohjelmasi-harjoitteluohjeet) kohdasta _Laaja suoritus: Ohjelmistotuotantoprojekti_
+Kriteerit selviävät [täältä](https://studies.helsinki.fi/ohjeet/artikkeli/koulutusohjelmasi-harjoitteluohjeet), kohdasta "_Laaja suoritus: Ohjelmistotuotantoprojekti_".
 
 Toisin kuin Ohjelmistotuotantoprojektin hyväksilukuun, miniprojektin hyväksilukuun vaaditaan ainoastaan _neljän kuukauden työkokemus_.
 
-Jos hyväksiluet miniprojektin työkokemuksella, kerro asiasta sähköpostitse (matti.luukkainen@helsinki.fi) siinä vaiheessa kun olet tehnyt ensimmäisen viikon tehtävät.
+Jos hyväksiluet miniprojektin työkokemuksella, kerro asiasta sähköpostitse (matti.luukkainen@helsinki.fi) tehtyäsi ensimmäisen viikon tehtävät.
 
 ### Kurssin arvostelu
 
-Kurssilla on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien kesken seuraavasti
+Kurssilla on jaossa yhteensä 40 pistettä, jotka jakautuvat eri komponenttien kesken seuraavasti:
 
 - harjoitukset 11 pistettä
   - monivalintatehtävät 3 pistettä 
@@ -166,7 +166,7 @@ Pisteet tulevat seuraavan kaavan mukaan:
 
 ### Luennot - laskuharjoitukset - miniprojekti
 
-Kurssi siis sisältää kolme pääkomponenttia, luennot, viikoittaiset laskuharjoitukset sekä miniprojektin. Komponentit ovat luonteeltaan melko erilaisia, ja se on joskus aiheuttanut hämmennystä opiskelijoiden keskuudessa.
+Kurssi siis sisältää kolme pääkomponenttia, luennot, viikoittaiset laskuharjoitukset sekä miniprojektin. Komponentit ovat luonteeltaan melko erilaisia, mikä on joskus aiheuttanut hämmennystä opiskelijoiden keskuudessa.
 
 Kurssin luennoilla keskitytään pääosin ohjelmistokehityksen teoriaan ja käsitteistöön. Laskareista monivalintatehtävät liittyvät kunkin viikon luentoihin. 
 
@@ -176,7 +176,7 @@ Miniprojektin ideana taas on yhdistää luentojen teoria ja laskareissa käsitel
 
 Kokeessa suurin paino tulee olemaan teoriassa ja sen soveltamisessa käytäntöön. Laskareiden teknisimpiä asioita, kuten versionhallintaa ei kokeessa tulla kysymään. Tarkemmin kokeesta ja siihen valmistautumisesta kurssin viimeisellä luennolla.
 
-Kuten kohta tulemme näkemään, ohjelmistotuotanto kattaa suuren kirjon erilaisia asioita alkaen ihmisten johtamisesta aina teknisimpiin komentoriviltä suoritettaviin operaatioihin asti. Sama heijastuu myös kurssin rakenteessa, kurssilla on eri henkisiä komponentteja, näistä yksikään ei ole muita tärkeämpi, kullakin on oma painoarvonsa kurssin arvostelussa. Teoria-asioita arvioidaan koemenestyksen perusteella, käytännöllisimpiä asioita taas "jatkuvana arviona" laskareista kertyvien pisteiden ja miniprojektissa suoriutumisen perusteella.
+Kuten kohta tulemme näkemään, ohjelmistotuotanto kattaa suuren kirjon erilaisia asioita alkaen ihmisten johtamisesta aina teknisimpiin komentoriviltä suoritettaviin operaatioihin asti. Sama heijastuu myös kurssin rakenteessa: Kurssilla on erihenkisiä komponentteja, eikä näistä yksikään ole muita tärkeämpi, vaan kullakin on oma painoarvonsa kurssin arvostelussa. Teoria-asioita arvioidaan koemenestyksen perusteella, käytännöllisimpiä asioita taas "jatkuvana arviona" laskareista kertyvien pisteiden ja miniprojektissa suoriutumisen perusteella.
 
 ## Versionhallinta 1 op
  
