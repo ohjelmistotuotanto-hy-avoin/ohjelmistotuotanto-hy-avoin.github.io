@@ -327,7 +327,7 @@ Kun alustava lista user storyistä on kerätty, ne _priorisoidaan_ ja niiden vaa
 
 Product backlog on siis _priorisoitu lista user storyjä_. 
 
-Kuten todettiin [Scrumin esittelyn yhteydessä](/osa1 #scrum) priorisoinnista vastaa _product owner_. Prioriteetti määrää järjestyksen, jossa ohjelmistokehittäjät toteuttavat backlogilla olevia toiminnallisuuksia. 
+Kuten todettiin [Scrumin esittelyn yhteydessä](/osa1#scrum) priorisoinnista vastaa _product owner_. Prioriteetti määrää järjestyksen, jossa ohjelmistokehittäjät toteuttavat backlogilla olevia toiminnallisuuksia. 
 
 Priorisoinnin motivaationa on pyrkiä maksimoimaan asiakkaan kehitettävästä ohjelmistosta saama hyöty/arvo. Tärkeimmät asiat halutaan toteuttaa mahdollisimman nopeasti ja näin saada tuotteesta alustava versio markkinoille niin pian kuin mahdollista.
  
