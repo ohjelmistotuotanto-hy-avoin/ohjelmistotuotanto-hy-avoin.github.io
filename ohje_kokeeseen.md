@@ -9,7 +9,7 @@ Kurssin kokeet
 
 - perjantai 25.3.2022
 - torstai 29.4.2022
-- kesäkuun alussa
+- perjantai 3.6.2022
 
 Kokeet pidetään [Moodlessa](https://moodle.helsinki.fi/course/view.php?id=46773) kokeet ovat tehtävissä koko vuorokauden ajan. Kokeen tekemiseen on aikaa 3 tuntia siitä hetkestä kun kokeen aloittaa. Koetta ei kannata aloittaa klo 21 jälkeen, koe sulkeutuu vuorokauden vaihtuessa.
 
