@@ -9,7 +9,7 @@ repo_branch: "master"
 stats_url: "https://study.cs.helsinki.fi/stats/courses/ohtu-avoin-2022"
 python_exercise_repo_url: "https://github.com/ohjelmistotuotanto-hy-avoin/python-kevat-2022"
 java_exercise_repo_url: "https://github.com/ohjelmistotuotanto-hy-avoin/java-kevat-2022"
-miniproject_enrollment_url: "https://study.cs.helsinki.fi/assembler/course/eb3f75d0-675f-484b-88ac-ab2df8e91f2f"
+miniproject_enrollment_url: "https://study.cs.helsinki.fi/assembler/course/725fb26a-9fda-48e6-80cd-6a01cb9db2c9"
 
 # Build settings
 markdown: kramdown
