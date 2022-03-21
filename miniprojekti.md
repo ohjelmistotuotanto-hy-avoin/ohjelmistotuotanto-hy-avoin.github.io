@@ -10,7 +10,6 @@ order: 2
 
 ### Ajankohtaista
 
-- Miniprojektin demotilaisuus järjestetään [zoomissa](https://helsinki.zoom.us/j/63958549119?pwd=RStJZHMvY1NqQ2JMaGIycmMwNTdlZz09) keskiviikkona 16.3. klo 10:00 - 11:00
 - Miniprojekti järjestetään kahtena eri ajankohtana 21.2.-14.3. ja 28.3.-25.4.
 
 ### Johdanto
@@ -52,7 +51,7 @@ order: 2
 
 Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin suunnittelu) tapahtuu samana viikon päivänä, saman kahden tunnin sisällä, missä aloitustilaisuus pidetään. Tilaisuuden kesto on 30 minuuttia. Tapaamisen tarkka aika ja sen zoom-linkki kerrotaan palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject) viimeistään tapaamista edeltävänä sunnuntaina.
 
-#### Viikko 1 (21-27.2.)
+#### Viikko 1 (28.3.-3.4.)
 
 - Ryhmä muodostuvat/muodostetaan
 - Ryhmät tapaavat asiakkaan aloitustilaisuuksissa
@@ -62,19 +61,19 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
   - backlogien sisällöstä enemmän [täällä](/miniprojekti#tekniset-ja-prosessiin-liittyvät-vaatimukset)
 - Sprintin 1 [arvosteluperusteet](/miniprojektin_arvosteluperusteet#ensimmäisen-sprintin-arvosteluperusteet) kannattaa lukea huolellisesti
 
-#### Viikko 2 (28.2.-6.3.)
+#### Viikko 2 (4-10.4.)
 
 - Sprintin 1 katselmointi ja sprintin 2 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 - Sprintin 2 [arvosteluperusteet](/miniprojektin_arvosteluperusteet#toisen-sprintin-arvosteluperusteet) kannattaa lukea huolellisesti
 
-#### Viikko 3 (7-13.3)
+#### Viikko 3 (11-17.4)
 
 - Sprintin 2 katselmointi ja sprintin 3 suunnittelu
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 - Sprintin 3 [arvosteluperusteet](/miniprojektin_arvosteluperusteet#kolmannen-sprintin-arvosteluperusteet) kannattaa lukea huolellisesti
 
-#### Viikko 4 (14-20.3.)
+#### Viikko 4 (25.3.-1.5.)
 
 - Sprintin 3 katselmointi (eli loppudemot). Loppudemot järjestetään myöhemmin ilmoitettavana ajankohtana
 - Jokaisen ryhmäläisen tulee olla mukana loppudemossa. Zoom-linkki loppudemoon löytyy palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
