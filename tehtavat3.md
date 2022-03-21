@@ -27,7 +27,7 @@ Tehdään ohjelma, jonka avulla voi hakea <https://nhl.com>-sivulta edellisen ka
 
 Näet tilastojen [JSON](https://en.wikipedia.org/wiki/JSON)-muotoisen raakadatan web-selaimella osoitteesta <https://nhlstatisticsforohtu.herokuapp.com/players>
 
-Tee ohjelma, joka listaa _suomalaisten pelaajien_ tilastot. Tarvitset ohjelmassa yhtä kirjastoa, eli riippuvuutta. Kyseinen kirjasto on [requests](https://requests.readthedocs.io/en/master/)-kirjasto, jonka avulla voi tehdä HTTP-pyyntöjä. Huomaa, että Pythonilla on myös valmiita moduleeja tähän tarkoitukseen, mutta requests-kirjaston käyttö on huomattavasti näitä moduuleja helpompaa.
+Tee ohjelma, joka listaa _suomalaisten pelaajien_ tilastot. Tarvitset ohjelmassa yhtä kirjastoa, eli riippuvuutta. Kyseinen kirjasto on [requests](https://requests.readthedocs.io/en/master/)-kirjasto, jonka avulla voi tehdä HTTP-pyyntöjä. Huomaa, että Pythonilla on myös valmiita moduuleja tähän tarkoitukseen, mutta requests-kirjaston käyttö on huomattavasti näitä moduuleja helpompaa.
 
 Kertaa nopeasti Ohjelmistotekniikka-kurssin [Poetry-ohjeesta](https://ohjelmistotekniikka-hy.github.io/python/viikko2#poetry-ja-riippuvuuksien-hallinta), miten Poetrylla asennetaan riippuvuuksia. Asenna sen jälkeen requests-kirjasto projektin riippuvuuksiksi. Käytä kirjastosta uusinta versiota (jonka Poetry asentaa automaattisesti).
 
@@ -308,7 +308,7 @@ Kun olet lopettanut debuggaamiseen, syötä `exit()` ja poista koodista `set_tra
 
 Tarkastellaan edellisestä tehtävästä tutun toiminnallisuuden tarjoamaa esimerkkiprojektia, joka löytyy [kurssirepositorion]({{site.python_exercise_repo_url}}) hakemistossa _koodi/viikko3/web-login-robot_ oleva projekti. Sovellus on toteutettu [Flask](https://flask.palletsprojects.com/)-nimisellä minimalistisella web-sovelluskehyksellä.
 
-Hae projekti, asenna sen riippuvuudet komennollla `poetry install` ja käynnistä se virtuaaliympäristössä komennolla `python3 src/index.py`. Sovelluksen käynnistymisen jälkeet pääset käyttämään sitä avaamalla selaimella osoitteen <http://localhost:5000>
+Hae projekti, asenna sen riippuvuudet komennollla `poetry install` ja käynnistä se virtuaaliympäristössä komennolla `python3 src/index.py`. Sovelluksen käynnistymisen jälkeen pääset käyttämään sitä avaamalla selaimella osoitteen <http://localhost:5000>
 
 ![]({{ "/images/py-lh3-2.png" | absolute_url }}){:height="200px" }
 
@@ -378,7 +378,7 @@ Jatketaan saman sovelluksen parissa.
 
 [Selenium WebDriver](http://docs.seleniumhq.org/projects/webdriver/) -kirjaston avulla on mahdollista simuloida selaimen käyttöä koodista käsin. Seleniumin käyttö Robot Framework -testeissä onnistuu valmiin [SeleniumLibrary](https://robotframework.org/SeleniumLibrary/)-kirjaston avulla.
 
-Jotta selainta käyttävien testien suorittamien on mahdollista, täytyy lisäksi asentaa halutun selaimen ajuri. Projektin testit käyttävät Chrome-selainta, jolla testejä voi suorittaa käyttämällä [ChromeDriver](https://chromedriver.chromium.org/)-ajuria. Ennen kuin siirrymme testien pariin, asenna ChromeDriver seuraamalla [tätä](https://ohjelmistotuotanto-hy.github.io/chromedriver_asennusohjeet/) ohjetta.
+Jotta selainta käyttävien testien suorittaminen on mahdollista, täytyy lisäksi asentaa halutun selaimen ajuri. Projektin testit käyttävät Chrome-selainta, jolla testejä voi suorittaa käyttämällä [ChromeDriver](https://chromedriver.chromium.org/)-ajuria. Ennen kuin siirrymme testien pariin, asenna ChromeDriver seuraamalla [tätä](https://ohjelmistotuotanto-hy.github.io/chromedriver_asennusohjeet/) ohjetta.
 
 ChromeDriverin kanssa voi käyttää myös Chromium-selainta, mutta se vaatii yhden lisäaskeleen testitiedostossa. Vaadittava lisäys mainitaan alempana.
 
@@ -466,7 +466,7 @@ Osiossa on käytössä ennestään tuntemattomat `Suite Setup`-, `Suite Teardown
 
 Tiedoston `*** Keywords ***` osiossa on testitapausten käyttämiä avainsanoja:
 
-- `Login Should Succeed` -avainsana tarkastaa, että käyttäjä on siirtynyt oikealla sivulle onnistuneen kirjautumisen jälkeen
+- `Login Should Succeed` -avainsana tarkastaa, että käyttäjä on siirtynyt oikealle sivulle onnistuneen kirjautumisen jälkeen
 - `Login Should Fail With Message` -avainsana tarkastaa, että käyttäjä on kirjautumissivulla ja että sivulta löytyy tietty virheviesti. Tarkastuksessa käytetään [Page Should Contain](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Page%20Should%20Contain)-avainsanaa, joka tarkistaa, että sivulta löytyy haluttu teksti
 - `Submit Credentials` -avainsana painaa "Login"-painiketta käyttämällä [Click Button](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Click%20Button)-avainsanaa
 - `Set Username`- ja `Set Password` -avainsanat syöttävät annetut arvot tiettyihin kenttiin käyttämällä [Input Text](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Input%20Text)- ja [Input Password](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Input%20Password)-avainsanoja (huomaa, että salasanan kenttä ei ole tavallinen tekstikenttä, vaan salasanakenttä)
@@ -561,7 +561,7 @@ def reset_tests():
 
 Funktio poistaa kaikki sovelluksen käyttäjät ja näin nollaa sovelluksen tilan.
 
-Metodi `create_user` lähettää samankaltaisesti _POST_-tyyppisen pyynnön sovelluksen polkuun "/register". Pynnön käsittelevä funktio luo uuden käyttäjän, jos se on validi:
+Metodi `create_user` lähettää samankaltaisesti _POST_-tyyppisen pyynnön sovelluksen polkuun "/register". Pyynnön käsittelevä funktio luo uuden käyttäjän, jos se on validi:
 
 ```python
 @app.route("/register", methods=["POST"])
@@ -630,7 +630,7 @@ Login After Failed Registration
 # ...
 ```
 
-Ensimmäisessä testitapauksessa tulee testata, että käyttäjä _voi kirjautua sisään_ onnistuneen rekisteröitymisen jälkeen. Toisessa testitapauksessa taas tulee testata, että käyttäjä _ei voi kirjautua sisään_ epäonnistumiseen rekisteröitymisen jälkeen.
+Ensimmäisessä testitapauksessa tulee testata, että käyttäjä _voi kirjautua sisään_ onnistuneen rekisteröitymisen jälkeen. Toisessa testitapauksessa taas tulee testata, että käyttäjä _ei voi kirjautua sisään_ epäonnistuneen rekisteröitymisen jälkeen.
 
 Vinkki: voit halutessasi toteuttaa <i>login_resource.robot</i>-tiedoston, joka määrittelee kirjautumiseen käytettäviä avainsanoja. Voit hyödyntää tämän tiedoston avainsanoja sekä <i>login.robot</i>-, että <i>register.robot</i>-tiedostossa lisäämällä `*** Settings ***`-osioon uuden resurssin:
 
@@ -640,7 +640,7 @@ Resource  resource.robot
 Resource  login_resource.robot
 ```
 
-### Web-sovelluksen testien suorittamien CI-palvelimella
+### Web-sovelluksen testien suorittaminen CI-palvelimella
 
 **HUOM:** Seuraava osio ei kuulu tehtäviin, eli siinä esitettyjä esimerkkejä ei tarvitse tehdä mihinkään. Ohjeista saattaa kuitenkin olla hyötyä esimerkiksi kurssin [miniprojektissa](/miniprojekti).
 
@@ -654,7 +654,7 @@ Jotta sovelluksen testit pystyisi suorittamaan CI-palvelimella, tulee nämä vai
 # käynnistetään Flask-palvelin taustalle
 poetry run python3 src/index.py &
 
-# odetetaan, että palvelin on valmiina ottamaan vastaan pyyntöjä
+# odotetaan, että palvelin on valmiina ottamaan vastaan pyyntöjä
 while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' localhost:5000/ping)" != "200" ]]; 
   do sleep 1; 
 done
