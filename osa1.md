@@ -431,7 +431,7 @@ Jotta vallitsisi yksimielisyys siitä, minkälaisella laatutasolla ohjelmistoa o
 
 Valmiiksi tehty määritellään useimmiten tarkoittamaan sitä, että vaatimus on analysoitu, suunniteltu, ohjelmoitu, testattu, testaus automatisoitu, dokumentoitu, integroitu muuhun ohjelmistoon ja viety tuotantoympäristöön.
 
-Eli kun sprintin lopussa tavoitteena on olla toimiva ohjelma, tarkoitetaan sillä nimenomaan definition of donen tasolla toimivia ja valmiiksi tehtyjä vaatimuksia. Jos joitain ohjelman osia on tehty puutteellisesti, scrum master hylkää ne ja siirtää toteutettavaksi seuraavaan sprinttiin.
+Eli kun sprintin lopussa tavoitteena on olla toimiva ohjelma, tarkoitetaan sillä nimenomaan definition of donen tasolla toimivia ja valmiiksi tehtyjä vaatimuksia. Jos joitain ohjelman osia on tehty puutteellisesti, product owner hylkää ne ja siirtää toteutettavaksi seuraavaan sprinttiin.
 
 Jos sprintin aikana osoittautuu että tiimi ei ehdi toteuttamaan kaikkea mihin se sitoutui, ei ole hyväksyttävää tinkiä laadusta, vaan osa vaatimuksista jätetään seuraavaan sprinttiin.
 
