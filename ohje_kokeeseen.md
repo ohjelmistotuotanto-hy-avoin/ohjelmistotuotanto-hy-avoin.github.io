@@ -13,6 +13,8 @@ Kurssin kokeet
 
 Kokeet pidetään [Moodlessa](https://moodle.helsinki.fi/course/view.php?id=46773) kokeet ovat tehtävissä koko vuorokauden ajan. Kokeen tekemiseen on aikaa 4 tuntia siitä hetkestä kun kokeen aloittaa. Koetta ei kannata aloittaa klo 20 jälkeen, koe sulkeutuu vuorokauden vaihtuessa.
 
+Moodleen päästäksesi tarvitset [ilmoittautumisen](https://www.avoin.helsinki.fi/palvelut/esittely.aspx?s=otm-4716b91b-b901-45f4-b1cf-8484bddda5f2) kurssille sekä HY:n käyttäjätunnuksen.
+
 Huomaa, että yliopiston [plagiointiin ja vilppiin](https://studies.helsinki.fi/ohjeet/artikkeli/mita-ovat-vilppi-ja-plagiointi) liittyvät käytänteet ovat voimassa, ja niitä valvotaan erityisen tarkasti nyt kun koe on verkossa.
 
 Eli **jos copy/pasteat** kurssimateriaaliaalia tai jotain internetistä löydettyä tekstiä vastaukseksi, **koesuorituksesti hylätään** kokonaisuudessaan. Sama koskee kokeessa tehtyä yhteistyötä.
