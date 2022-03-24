@@ -11,7 +11,7 @@ Kurssin kokeet
 - torstai 29.4.2022
 - perjantai 3.6.2022
 
-Kokeet pidetään [Moodlessa](https://moodle.helsinki.fi/course/view.php?id=46773) kokeet ovat tehtävissä koko vuorokauden ajan. Kokeen tekemiseen on aikaa 3 tuntia siitä hetkestä kun kokeen aloittaa. Koetta ei kannata aloittaa klo 21 jälkeen, koe sulkeutuu vuorokauden vaihtuessa.
+Kokeet pidetään [Moodlessa](https://moodle.helsinki.fi/course/view.php?id=46773) kokeet ovat tehtävissä koko vuorokauden ajan. Kokeen tekemiseen on aikaa 4 tuntia siitä hetkestä kun kokeen aloittaa. Koetta ei kannata aloittaa klo 20 jälkeen, koe sulkeutuu vuorokauden vaihtuessa.
 
 Huomaa, että yliopiston [plagiointiin ja vilppiin](https://studies.helsinki.fi/ohjeet/artikkeli/mita-ovat-vilppi-ja-plagiointi) liittyvät käytänteet ovat voimassa, ja niitä valvotaan erityisen tarkasti nyt kun koe on verkossa.
 
