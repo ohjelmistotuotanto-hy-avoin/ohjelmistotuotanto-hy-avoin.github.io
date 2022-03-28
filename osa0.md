@@ -83,7 +83,7 @@ Kurssilla on kolme koeajankohtaa
 - torstai 28.4.2022
 - TODO: x.6.2022
 
-Kokeen voi aloittaa mihin aikaan tahansa koepäivänä. Kokeessa on vastausaikaa 3 tuntia. Kokeen voi tehdä mistä tahansa riittävän hyvän internetyhteyden omaavasta paikasta.
+Kokeen voi aloittaa mihin aikaan tahansa koepäivänä. Kokeessa on vastausaikaa 4 tuntia. Kokeen voi tehdä mistä tahansa riittävän hyvän internetyhteyden omaavasta paikasta.
 
 Koe keskittyy kurssin teoriamateriaalissa käsiteltäviin asioihin. Kokeessa ei kysytä vierailuluentojen sisällöistä eikä niistä teknisistä aihepiireistä (mm. versionhallinta), joita kurssimateriaalin osat 0-5 eivät käsittele.
 
