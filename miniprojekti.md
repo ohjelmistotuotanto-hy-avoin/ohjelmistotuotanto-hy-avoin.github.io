@@ -53,7 +53,7 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
 
 #### Viikko 1 (28.3.-3.4.)
 
-- Ryhmä muodostuvat/muodostetaan
+- Ryhmä muodostetaan
 - Ryhmät tapaavat asiakkaan aloitustilaisuuksissa
 - Aloitustilaisuudessa pidettävän asiakastapaamisen pohjalta ryhmä tekee alustavan product backlogin ja sopii asiakkaan kanssa ensimmäisen sprintin tavoitteesta
 - Ryhmä suunnittelee ensimmäisen sprintin ja aloittaa työskentelyn
@@ -73,7 +73,7 @@ Seuraavien viikkojen asiakastapaaminen (sprintin katselmointi ja uuden sprintin 
   - Asiakastapaamisen aikataulu selviää palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
 - Sprintin 3 [arvosteluperusteet](/miniprojektin_arvosteluperusteet#kolmannen-sprintin-arvosteluperusteet) kannattaa lukea huolellisesti
 
-#### Viikko 4 (25.3.-1.5.)
+#### Viikko 4 (25.4.-1.5.)
 
 - Sprintin 3 katselmointi (eli loppudemot). Loppudemot järjestetään myöhemmin ilmoitettavana ajankohtana
 - Jokaisen ryhmäläisen tulee olla mukana loppudemossa. Zoom-linkki loppudemoon löytyy palautussovelluksen välilehdeltä [miniproject]({{site.stats_url}}/miniproject)
