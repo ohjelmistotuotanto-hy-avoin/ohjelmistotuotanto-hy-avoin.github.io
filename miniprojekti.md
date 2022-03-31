@@ -10,6 +10,7 @@ order: 2
 
 ### Ajankohtaista
 
+- Asiakastapaamisen ajankohta ja zoom-linkki löytyy palautussovelluksen [miniproject]({{site.stats_url}}/miniproject)-sivulta
 - Miniprojekti järjestetään kahtena eri ajankohtana 21.2.-14.3. ja 28.3.-25.4.
 
 ### Johdanto
@@ -42,7 +43,7 @@ order: 2
   - definition of done
 - Tämä dokumentti ja miniprojektin [arvosteluperusteet](/miniprojektin_arvosteluperusteet) on myös syytä lukea huolellisesti ennen aloitustilaisuutta
 - Ryhmä keksii itselleen nimen, luo Github-repositorion ja rekisteröi itsensä palautussovellukseen <{{site.stats_url}}>
-  - **Yksi ryhmäläinen** kirjautuu järjestelmään, menee välilehdelle _miniprojects_
+  - **Yksi ryhmäläinen** kirjautuu järjestelmään, menee välilehdelle _miniproject_
     - Luo projektin _create project_ -napista avautuvasta lomakkeesta
     - Ja jakaa muille ryhmäläisille luodun projektin id:n
   - **Muut ryhmäläiset** kirjautuvat järjestelmään ja liittyvät id:n avulla ryhmään _join project_ -napista avautuvasta lomakkeesta
