@@ -81,7 +81,7 @@ Kurssilla on kolme koeajankohtaa
 
 - perjantai 25.3.2022
 - torstai 28.4.2022
-- TODO: x.6.2022
+- perjantai: 3.6.2022
 
 Kokeen voi aloittaa mihin aikaan tahansa koepäivänä. Kokeessa on vastausaikaa 4 tuntia. Kokeen voi tehdä mistä tahansa riittävän hyvän internetyhteyden omaavasta paikasta.
 
