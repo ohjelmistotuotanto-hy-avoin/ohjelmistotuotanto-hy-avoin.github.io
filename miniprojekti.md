@@ -10,6 +10,7 @@ order: 2
 
 ### Ajankohtaista
 
+- Miniprojektin demotilaisuus järjestetään [zoomissa](https://helsinki.zoom.us/j/62663871651?pwd=OXl2MHZoQU5MUEdwMlE2T09wYmJnUT09) tiistaina 26.4. klo 15:00 - 17:00
 - Asiakastapaamisen ajankohta ja zoom-linkki löytyy palautussovelluksen [miniproject]({{site.stats_url}}/miniproject)-sivulta
 - Miniprojekti järjestetään kahtena eri ajankohtana 21.2.-14.3. ja 28.3.-25.4.
 
